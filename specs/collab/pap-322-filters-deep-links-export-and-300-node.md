@@ -17,6 +17,8 @@ key: "collab/canvas/filters-export-perf"
 url: "https://linear.app/paperos/issue/PAP-322/filters-deep-links-export-and-300-node-performance-run"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:27.539Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-322: Filters, deep links, export and 300-node performance run

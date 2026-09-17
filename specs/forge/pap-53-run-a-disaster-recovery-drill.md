@@ -17,6 +17,8 @@ key: "forge/dr-drill"
 url: "https://linear.app/paperos/issue/PAP-53/run-a-disaster-recovery-drill-rebuilding-all-repos-and-ci-from-forgejo"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:05:43.693Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-53: Run a disaster-recovery drill rebuilding all repos and CI from Forgejo backups with GitHub offline

@@ -17,6 +17,8 @@ key: "collab/collab-research"
 url: "https://linear.app/paperos/issue/PAP-127/evaluate-tldraw-vs-react-flow-for-the-canvas-and-tiptap-vs-blocknote"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:53:28.297Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-127: Evaluate tldraw vs React Flow for the canvas and Tiptap vs BlockNote for docs; write ADR

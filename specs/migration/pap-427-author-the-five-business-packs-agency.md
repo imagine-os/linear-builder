@@ -17,6 +17,8 @@ key: "child/PAP-207/1"
 url: "https://linear.app/paperos/issue/PAP-427/author-the-five-business-packs-agency-retail-saas-clinic-restaurant"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:53.416Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-427: Author the five business packs (agency, retail, SaaS, clinic, restaurant) with page specs, views, pipelines, charts of accounts, sample data and starter docs

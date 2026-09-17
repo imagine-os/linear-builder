@@ -17,6 +17,8 @@ key: "child/PAP-21/6"
 url: "https://linear.app/paperos/issue/PAP-261/container-query-breakpoints-and-layout-hooks-from-the-device-matrix"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:35.093Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-261: Container-query breakpoints and layout hooks from the device matrix

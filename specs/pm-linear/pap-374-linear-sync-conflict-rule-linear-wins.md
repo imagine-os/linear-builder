@@ -17,6 +17,8 @@ key: "pm-linear/linear-sync/conflicts"
 url: "https://linear.app/paperos/issue/PAP-374/linear-sync-conflict-rule-linear-wins-sync-status-page-and-runbook"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:03.690Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-374: Linear sync: conflict rule (Linear wins), sync status page and runbook

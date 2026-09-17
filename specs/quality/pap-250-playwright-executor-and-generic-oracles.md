@@ -17,6 +17,8 @@ key: "quality/edge-case-hunter/executor-oracles"
 url: "https://linear.app/paperos/issue/PAP-250/playwright-executor-and-generic-oracles"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:04:43.255Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-250: Playwright executor and generic oracles

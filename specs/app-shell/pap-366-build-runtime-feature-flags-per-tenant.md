@@ -17,6 +17,8 @@ key: "gap/app-shell/runtime-flags"
 url: "https://linear.app/paperos/issue/PAP-366/build-runtime-feature-flags-per-tenant-and-per-audience-flags-with"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:01:27.454Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-366: Build runtime feature flags: per-tenant and per-audience flags with kill switches, segment targeting and page-spec `flags:` guards

@@ -17,6 +17,8 @@ key: "agents/roster-v1/sub-prompts"
 url: "https://linear.app/paperos/issue/PAP-286/roster-write-the-28-sub-character-prompts-and-delegation-descriptions"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:08.628Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-286: Roster: write the 28 sub-character prompts and delegation descriptions

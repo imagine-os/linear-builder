@@ -17,6 +17,8 @@ key: "app-shell/i18n-l10n"
 url: "https://linear.app/paperos/issue/PAP-27/add-internationalisation-and-localisation-icu-message-catalogs-locale"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:04:58.278Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-27: Add internationalisation and localisation: ICU message catalogs, locale negotiation, Intl formatting helpers, RTL layout flip, pseudo-locale testing and an agent translation skill

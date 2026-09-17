@@ -17,6 +17,8 @@ key: "design-system/primitives/selection-navigation"
 url: "https://linear.app/paperos/issue/PAP-238/selection-and-navigation-components-select-combobox-tabs-avatar"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:04:38.909Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-238: Selection and navigation components: Select, Combobox, Tabs, Avatar, Separator

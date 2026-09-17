@@ -17,6 +17,8 @@ key: "collab/prompt-log-store"
 url: "https://linear.app/paperos/issue/PAP-129/create-the-promptresponse-log-store-session-character-issue-tokens"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:44.044Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-129: Create the prompt/response log store (session, character, issue, tokens, cost, tool calls) with redaction

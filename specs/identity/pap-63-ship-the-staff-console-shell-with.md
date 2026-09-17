@@ -17,6 +17,8 @@ key: "identity/staff-console-shell"
 url: "https://linear.app/paperos/issue/PAP-63/ship-the-staff-console-shell-with-tenant-switcher-audience-filters-and"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:18:10.492Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-63: Ship the staff console shell with tenant switcher, audience filters and admin navigation

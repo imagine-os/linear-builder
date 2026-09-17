@@ -17,6 +17,8 @@ key: "libraries/ui-landscape"
 url: "https://linear.app/paperos/issue/PAP-212/survey-ui-kits-and-headless-libraries-base-ui-radix-react-aria-shadcn"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T05:21:26.859Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-212: Survey UI kits and headless libraries (Base UI, Radix, React Aria, shadcn, Ark) and recommend

@@ -17,6 +17,8 @@ key: "business-core/payroll/adapter-contract"
 url: "https://linear.app/paperos/issue/PAP-398/finalised-payrollprovider-interface-first-adapter-with-idempotency"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:47.457Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-398: Finalised PayrollProvider interface, first adapter with idempotency keys, webhook route and the adapter contract test suite

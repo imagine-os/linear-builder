@@ -17,6 +17,8 @@ key: "child/PAP-20/5"
 url: "https://linear.app/paperos/issue/PAP-260/mobile-plugin-wiring-safe-areas-and-device-proofs-camera-haptics"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:35.093Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-260: Mobile plugin wiring, safe areas and device proofs (camera, haptics, biometrics, secure storage, share)

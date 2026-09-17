@@ -17,6 +17,8 @@ key: "quality/api-perf-budgets"
 url: "https://linear.app/paperos/issue/PAP-242/enforce-api-and-database-performance-budgets-k6-smoke-per-release"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:44.044Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-242: Enforce API and database performance budgets: k6 smoke per release candidate, p95 per procedure, slow-query gate, `apps/api` image size

@@ -17,6 +17,8 @@ key: "identity/threat-model"
 url: "https://linear.app/paperos/issue/PAP-219/write-the-security-threat-model-and-hardening-baseline-stride-per"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:04.007Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-219: Write the security threat model and hardening baseline: STRIDE per trust boundary, CSP and security headers, CSRF, secret rotation runbook, incident response playbook

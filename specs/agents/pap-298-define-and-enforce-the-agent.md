@@ -17,6 +17,8 @@ key: "security/agent-deny-list"
 url: "https://linear.app/paperos/issue/PAP-298/define-and-enforce-the-agent-destructive-action-deny-list-policy-file"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:08.408Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-298: Define and enforce the agent destructive-action deny list: policy file, PreToolUse hook, MCP destructive-scope interception with Needs Justin escalation, and server-side backstops

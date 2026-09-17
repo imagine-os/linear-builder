@@ -17,6 +17,8 @@ key: "tables/view-model-spec"
 url: "https://linear.app/paperos/issue/PAP-161/specify-the-view-model-data-source-fields-filters-sorts-groups"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:06.610Z"
+model: "claude-fable-5-1"
+effort: "high"
 ---
 
 # PAP-161: Specify the view model: data source, fields, filters, sorts, groups, aggregations, permissions and sharing as a superset of Airtable, Notion and ClickUp

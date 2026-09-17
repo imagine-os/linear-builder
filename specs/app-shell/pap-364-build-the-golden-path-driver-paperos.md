@@ -17,6 +17,8 @@ key: "gp/app-shell/driver"
 url: "https://linear.app/paperos/issue/PAP-364/build-the-golden-path-driver-paperos-create-idea-runs-interview-app"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:11.039Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-364: Build the golden path driver: `paperos create --idea` runs interview, app spec, generation, seed, push, provisioning and preview in one command with checkpoint stamps

@@ -1,0 +1,49 @@
+{
+ "inv": {
+  "M/Build": 198,
+  "S/Research": 8,
+  "S/Infra": 9,
+  "S/Build": 25,
+  "M/Docs": 4,
+  "M/Infra": 23,
+  "M/Review": 8,
+  "M/Research": 12,
+  "M/Spec": 19,
+  "S/Docs": 7,
+  "S/Spec": 11,
+  "L/Spec": 1,
+  "S/Review": 1
+ },
+ "sched": {
+  "1": 32155,
+  "8": 4050,
+  "16": 2245,
+  "32": 2205,
+  "1000000": 2205
+ },
+ "serial": 32155,
+ "cp": 2205,
+ "chain": [
+  "PAP-422",
+  "PAP-421",
+  "PAP-420",
+  "PAP-201",
+  "PAP-349",
+  "PAP-348",
+  "PAP-347",
+  "PAP-334",
+  "PAP-343",
+  "PAP-342",
+  "PAP-341",
+  "PAP-337",
+  "PAP-336",
+  "PAP-335",
+  "PAP-229",
+  "PAP-227",
+  "PAP-34",
+  "PAP-33",
+  "PAP-32",
+  "PAP-42",
+  "PAP-13"
+ ]
+}

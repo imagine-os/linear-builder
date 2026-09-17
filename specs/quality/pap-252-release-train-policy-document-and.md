@@ -17,6 +17,8 @@ key: "quality/release-train/policy-environments"
 url: "https://linear.app/paperos/issue/PAP-252/release-train-policy-document-and-environments-config"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:42.056Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-252: Release train policy document and environments config

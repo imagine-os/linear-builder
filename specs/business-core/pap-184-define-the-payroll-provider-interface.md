@@ -17,6 +17,8 @@ key: "business-core/payroll-adapter"
 url: "https://linear.app/paperos/issue/PAP-184/define-the-payroll-provider-interface-and-implement-the-first-adapter"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:11.850Z"
+model: null
+effort: null
 ---
 
 # PAP-184: Define the payroll provider interface and implement the first adapter (Check or Gusto Embedded)

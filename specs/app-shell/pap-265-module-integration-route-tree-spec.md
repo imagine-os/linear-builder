@@ -17,6 +17,8 @@ key: "child/PAP-28/10"
 url: "https://linear.app/paperos/issue/PAP-265/module-integration-route-tree-spec-validator-permissions-jobs-and-per"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:12:02.402Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-265: Module integration: route tree, spec validator, permissions, jobs and per-module migrations

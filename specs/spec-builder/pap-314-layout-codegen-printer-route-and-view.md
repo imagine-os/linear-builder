@@ -17,6 +17,8 @@ key: "spec-builder/layout-codegen/templates"
 url: "https://linear.app/paperos/issue/PAP-314/layout-codegen-printer-route-and-view-templates-two-file-ownership-and"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:06.727Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-314: Layout codegen: Printer, route and view templates, two-file ownership and determinism

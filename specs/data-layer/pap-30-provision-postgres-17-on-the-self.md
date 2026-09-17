@@ -17,6 +17,8 @@ key: "data-layer/postgres-provision"
 url: "https://linear.app/paperos/issue/PAP-30/provision-postgres-17-on-the-self-hosted-vps-with-automated-backups"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:05:37.974Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-30: Provision Postgres 17 on the self-hosted VPS with automated backups and point-in-time recovery

@@ -17,6 +17,8 @@ key: "libraries/license-policy"
 url: "https://linear.app/paperos/issue/PAP-211/set-the-license-policy-allow-mitapachebsd-review-agpl-block-sspl"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T05:19:20.893Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-211: Set the license policy (allow MIT/Apache/BSD, review AGPL, block SSPL) enforced by a CI license check

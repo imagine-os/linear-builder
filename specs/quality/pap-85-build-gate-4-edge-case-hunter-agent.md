@@ -17,6 +17,8 @@ key: "quality/edge-case-hunter"
 url: "https://linear.app/paperos/issue/PAP-85/build-gate-4-edge-case-hunter-agent-generating-adversarial-inputs"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:12.479Z"
+model: null
+effort: null
 ---
 
 # PAP-85: Build gate 4: edge-case hunter agent generating adversarial inputs, empty/huge/unicode states, network failure and slow-device scenarios from page specs

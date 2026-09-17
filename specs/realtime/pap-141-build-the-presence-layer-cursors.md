@@ -17,6 +17,8 @@ key: "realtime/presence"
 url: "https://linear.app/paperos/issue/PAP-141/build-the-presence-layer-cursors-avatars-selections-and-who-is-viewing"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:53:30.425Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-141: Build the presence layer: cursors, avatars, selections and 'who is viewing' across pages

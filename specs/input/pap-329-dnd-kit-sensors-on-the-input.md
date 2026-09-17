@@ -17,6 +17,8 @@ key: "input/dnd/sensors-sortable-list"
 url: "https://linear.app/paperos/issue/PAP-329/dnd-kit-sensors-on-the-input-abstraction-and-sortablelist"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:30.221Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-329: dnd-kit sensors on the input abstraction and SortableList

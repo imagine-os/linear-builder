@@ -17,6 +17,8 @@ key: "spec-builder/validator"
 url: "https://linear.app/paperos/issue/PAP-115/build-the-spec-validator-cli-and-ci-check-that-fails-prs-whose-pages"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:16.611Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-115: Build the spec validator CLI and CI check that fails PRs whose pages lack or violate specs

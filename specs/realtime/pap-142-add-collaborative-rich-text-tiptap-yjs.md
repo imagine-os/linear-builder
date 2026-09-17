@@ -17,6 +17,8 @@ key: "realtime/collab-text"
 url: "https://linear.app/paperos/issue/PAP-142/add-collaborative-rich-text-tiptap-yjs-as-the-shared-editor-for-docs"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:53:30.558Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-142: Add collaborative rich text (Tiptap + Yjs) as the shared editor for docs and comments

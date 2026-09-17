@@ -17,6 +17,8 @@ key: "business-core/invoicing"
 url: "https://linear.app/paperos/issue/PAP-180/implement-invoices-quotes-and-receipts-with-pdf-generation-and-stripe"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:12.321Z"
+model: null
+effort: null
 ---
 
 # PAP-180: Implement invoices, quotes and receipts with PDF generation and Stripe payment links

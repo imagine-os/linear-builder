@@ -17,6 +17,8 @@ key: "spec-builder/spec-to-canvas"
 url: "https://linear.app/paperos/issue/PAP-123/emit-the-ux-flow-graph-pages-transitions-roles-from-specs-for-the"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:51:37.964Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-123: Emit the UX-flow graph (pages, transitions, roles) from specs for the canvas view

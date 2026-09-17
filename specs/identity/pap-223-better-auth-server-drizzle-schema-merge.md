@@ -17,6 +17,8 @@ key: "identity/better-auth/server-schema-session"
 url: "https://linear.app/paperos/issue/PAP-223/better-auth-server-drizzle-schema-merge-and-session-helpers"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:39.016Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-223: Better Auth server, Drizzle schema merge and session helpers

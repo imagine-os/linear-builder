@@ -17,6 +17,8 @@ key: "tables/compiler/core"
 url: "https://linear.app/paperos/issue/PAP-335/compiler-core-dataset-resolution-per-type-filter-ops-sorts-and-signed"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:32.030Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-335: Compiler core: dataset resolution, per-type filter ops, sorts and signed keyset cursors

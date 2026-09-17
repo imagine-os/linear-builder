@@ -17,6 +17,8 @@ key: "quality/review-agents/harness"
 url: "https://linear.app/paperos/issue/PAP-243/review-harness-sdk-runner-input-assembly-finding-validation-and"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:42.056Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-243: Review harness: SDK runner, input assembly, finding validation and posting

@@ -17,6 +17,8 @@ key: "app-shell/vps-coolify-bootstrap"
 url: "https://linear.app/paperos/issue/PAP-25/provision-the-hetzner-vps-with-coolify-caddy-dns-for-the-paperos"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:04.435Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-25: Provision the Hetzner VPS with Coolify, Caddy, DNS for the PaperOS domain, object storage, sops keys and the paperos-infra repo

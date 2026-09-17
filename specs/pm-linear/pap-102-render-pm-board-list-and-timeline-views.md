@@ -17,6 +17,8 @@ key: "pm-linear/board-views"
 url: "https://linear.app/paperos/issue/PAP-102/render-pm-board-list-and-timeline-views-using-the-tablesviews-engine"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:18.155Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-102: Render PM board, list and timeline views using the tables/views engine

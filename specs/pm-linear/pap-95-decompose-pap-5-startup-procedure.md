@@ -17,6 +17,8 @@ key: "pm-linear/pap5-decompose"
 url: "https://linear.app/paperos/issue/PAP-95/decompose-pap-5-startup-procedure-inefficiency-into-this-master-plans"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:50:23.494Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-95: Decompose PAP-5 (startup procedure inefficiency) into this master plan's projects and close it with a summary comment

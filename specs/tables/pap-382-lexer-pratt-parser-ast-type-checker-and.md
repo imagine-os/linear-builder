@@ -17,6 +17,8 @@ key: "tables/formula/parser-typecheck"
 url: "https://linear.app/paperos/issue/PAP-382/lexer-pratt-parser-ast-type-checker-and-the-definefunction-catalogue"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:42.311Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-382: Lexer, Pratt parser, AST, type checker and the defineFunction catalogue

@@ -17,6 +17,8 @@ key: "agents/memory"
 url: "https://linear.app/paperos/issue/PAP-109/give-characters-persistent-memory-project-notes-decisions-gotchas"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:19.840Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-109: Give characters persistent memory (project notes, decisions, gotchas) stored in the docs system and loaded at session start

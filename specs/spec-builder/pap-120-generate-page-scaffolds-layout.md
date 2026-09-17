@@ -17,6 +17,8 @@ key: "spec-builder/layout-codegen"
 url: "https://linear.app/paperos/issue/PAP-120/generate-page-scaffolds-layout-component-tree-loadingemptyerror-states"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:16.285Z"
+model: null
+effort: null
 ---
 
 # PAP-120: Generate page scaffolds (layout, component tree, loading/empty/error states) from specs

@@ -17,6 +17,8 @@ key: "data-layer/sync-research"
 url: "https://linear.app/paperos/issue/PAP-31/evaluate-zero-electricsql-powersync-and-replicache-for-local-first"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:05:38.096Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-31: Evaluate Zero, ElectricSQL, PowerSync and Replicache for local-first sync and write an ADR

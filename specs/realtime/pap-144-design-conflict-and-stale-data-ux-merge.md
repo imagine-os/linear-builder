@@ -17,6 +17,8 @@ key: "realtime/conflict-ux"
 url: "https://linear.app/paperos/issue/PAP-144/design-conflict-and-stale-data-ux-merge-banners-last-writer-indicators"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:30.221Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-144: Design conflict and stale-data UX: merge banners, last-writer indicators, undo

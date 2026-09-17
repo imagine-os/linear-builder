@@ -17,6 +17,8 @@ key: "spec-builder/layout-codegen/wiring"
 url: "https://linear.app/paperos/issue/PAP-315/layout-codegen-state-switch-layout-slot-mapping-action-binding-and"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:06.650Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-315: Layout codegen: state switch, layout slot mapping, action binding and search-param schema

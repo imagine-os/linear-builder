@@ -17,6 +17,8 @@ key: "child/PAP-214/2"
 url: "https://linear.app/paperos/issue/PAP-297/confirm-validation-and-runtime-cross-link-confirmed-choices"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:24.319Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-297: Confirm validation and runtime, cross-link confirmed choices, consolidate ADRs, compose files and registry entries

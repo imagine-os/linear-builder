@@ -17,6 +17,8 @@ key: "gp/spec-builder/app-interview"
 url: "https://linear.app/paperos/issue/PAP-360/write-the-app-interview-skill-one-paragraph-idea-to-appspecyaml"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:10.040Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-360: Write the app interview skill: one paragraph idea to `app.spec.yaml` (business profile, audiences, entities, navigation, modules) in at most six questions with `--yes` defaults

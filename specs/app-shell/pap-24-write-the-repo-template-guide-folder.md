@@ -17,6 +17,8 @@ key: "app-shell/template-docs"
 url: "https://linear.app/paperos/issue/PAP-24/write-the-repo-template-guide-folder-conventions-how-an-agent-adds-a"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:01.144Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-24: Write the repo template guide: folder conventions, how an agent adds a page, how to ship each target

@@ -17,6 +17,8 @@ key: "data-layer/api-layer"
 url: "https://linear.app/paperos/issue/PAP-35/expose-a-typed-api-via-orpc-with-zod-schemas-generated-from-drizzle"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:05.865Z"
+model: null
+effort: null
 ---
 
 # PAP-35: Expose a typed API via oRPC with Zod schemas generated from Drizzle

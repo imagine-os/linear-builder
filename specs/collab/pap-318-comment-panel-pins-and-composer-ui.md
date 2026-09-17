@@ -17,6 +17,8 @@ key: "collab/comments/panel-pins-composer"
 url: "https://linear.app/paperos/issue/PAP-318/comment-panel-pins-and-composer-ui"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:26.414Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-318: Comment panel, pins and composer UI

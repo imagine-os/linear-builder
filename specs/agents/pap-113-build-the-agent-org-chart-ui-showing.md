@@ -17,6 +17,8 @@ key: "agents/org-chart-ui"
 url: "https://linear.app/paperos/issue/PAP-113/build-the-agent-org-chart-ui-showing-characters-sub-agents-current"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:16.883Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-113: Build the agent org chart UI showing characters, sub-agents, current tasks, tools and access

@@ -17,6 +17,8 @@ key: "pm-linear/orchestrator"
 url: "https://linear.app/paperos/issue/PAP-96/build-the-orchestrator-that-polls-ready-for-claude-spawns-one-claude"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:19.348Z"
+model: null
+effort: null
 ---
 
 # PAP-96: Build the orchestrator that polls Ready for Claude, spawns one Claude Code session per issue in a git worktree and moves states

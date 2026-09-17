@@ -17,6 +17,8 @@ key: "agents/tool-scopes"
 url: "https://linear.app/paperos/issue/PAP-106/implement-per-character-mcp-allowlists-and-permission-modes-and-verify"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:17.918Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-106: Implement per-character MCP allowlists and permission modes and verify least privilege with an automated test

@@ -17,6 +17,8 @@ key: "quality/ci-gate1"
 url: "https://linear.app/paperos/issue/PAP-78/set-up-ci-gate-1-typecheck-biome-lint-vitest-unit-tests-and-web-build"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:10.625Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-78: Set up CI gate 1: typecheck, Biome lint, Vitest unit tests and web build on every PR

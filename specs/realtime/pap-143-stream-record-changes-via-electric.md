@@ -17,6 +17,8 @@ key: "realtime/record-sync"
 url: "https://linear.app/paperos/issue/PAP-143/stream-record-changes-via-electric-shapes-to-all-connected-clients-and"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:03:48.140Z"
+model: null
+effort: null
 ---
 
 # PAP-143: Stream record changes via Electric shapes to all connected clients and reconcile with local writes

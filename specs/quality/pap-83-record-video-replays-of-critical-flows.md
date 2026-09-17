@@ -17,6 +17,8 @@ key: "quality/video-replays"
 url: "https://linear.app/paperos/issue/PAP-83/record-video-replays-of-critical-flows-per-pr-at-each-responsive-size"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:11.078Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-83: Record video replays of critical flows per PR at each responsive size and attach them to the PR

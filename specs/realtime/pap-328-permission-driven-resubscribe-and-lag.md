@@ -17,6 +17,8 @@ key: "realtime/record-sync/resubscribe-lag"
 url: "https://linear.app/paperos/issue/PAP-328/permission-driven-resubscribe-and-lag-measurement"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:28.589Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-328: Permission-driven resubscribe and lag measurement

@@ -17,6 +17,8 @@ key: "child/PAP-205/2"
 url: "https://linear.app/paperos/issue/PAP-422/round-trip-paperos-connector-import-a-paperos-archive-into-an-empty"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:51.916Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-422: Round-trip `paperos` connector: import a PaperOS archive into an empty tenant and verify counts and hashes table by table

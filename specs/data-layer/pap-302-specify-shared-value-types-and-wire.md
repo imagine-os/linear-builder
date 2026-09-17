@@ -17,6 +17,8 @@ key: "contracts/shared-value-types"
 url: "https://linear.app/paperos/issue/PAP-302/specify-shared-value-types-and-wire-encodings-in-packagescoretypes"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:00:52.035Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-302: Specify shared value types and wire encodings in `packages/core/types`: `Money` (bigint minor units, string on the wire), `ActorRef`, `EntityRef`, UUIDv7 ids, timestamps, signed cursors and the `ApiError` body

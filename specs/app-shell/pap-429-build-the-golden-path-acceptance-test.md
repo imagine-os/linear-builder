@@ -17,6 +17,8 @@ key: "gp/app-shell/acceptance"
 url: "https://linear.app/paperos/issue/PAP-429/build-the-golden-path-acceptance-test-nightly-ci-runs-three-canned"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:17.930Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-429: Build the golden path acceptance test: nightly CI runs three canned ideas from paragraph to preview URL, asserts gates 1 to 4 and under ten minutes, publishes `golden-path.json`, badge and friction issues

@@ -17,6 +17,8 @@ key: "child/PAP-54/21"
 url: "https://linear.app/paperos/issue/PAP-276/forge-client-orpc-forge-procedures-and-forgeread-permission-checks"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:23:19.554Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-276: Forge client, oRPC forge.* procedures and forge.read permission checks

@@ -17,6 +17,8 @@ key: "forge/actions-runner"
 url: "https://linear.app/paperos/issue/PAP-50/run-forgejo-actions-runners-so-ci-works-even-when-github-is"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:45.357Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-50: Run Forgejo Actions runners so CI works even when GitHub is unavailable

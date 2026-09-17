@@ -17,6 +17,8 @@ key: "spec-builder/data-section"
 url: "https://linear.app/paperos/issue/PAP-119/specify-the-data-section-entities-queries-mutations-sync-mode-and"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:16.403Z"
+model: null
+effort: null
 ---
 
 # PAP-119: Specify the data section (entities, queries, mutations, sync mode) and generate typed hooks from it

@@ -17,6 +17,8 @@ key: "contracts/domain-events"
 url: "https://linear.app/paperos/issue/PAP-303/specify-the-domain-event-contract-envelope-topic-catalogue-definetopic"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:00:52.035Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-303: Specify the domain event contract: envelope, topic catalogue, `defineTopic` registry, transactional outbox and subscriber delivery (`packages/core/events`)

@@ -17,6 +17,8 @@ key: "pm-linear/configure-workspace"
 url: "https://linear.app/paperos/issue/PAP-91/add-pipeline-states-ready-for-claude-in-review-needs-justin-label"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:55.994Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-91: Add pipeline states (Ready for Claude, In Review, Needs Justin), label groups and project templates to Linear team PAP

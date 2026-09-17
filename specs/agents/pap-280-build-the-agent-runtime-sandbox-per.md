@@ -17,6 +17,8 @@ key: "agents/runtime-sandbox"
 url: "https://linear.app/paperos/issue/PAP-280/build-the-agent-runtime-sandbox-per-session-container-worktree-mount"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:09.917Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-280: Build the agent runtime sandbox: per-session container, worktree mount, CPU/RAM/time limits and network isolation with the credential broker's egress proxy as the only route

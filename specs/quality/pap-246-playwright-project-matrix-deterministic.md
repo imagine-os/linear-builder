@@ -17,6 +17,8 @@ key: "quality/playwright-matrix/projects-fixtures-stories"
 url: "https://linear.app/paperos/issue/PAP-246/playwright-project-matrix-deterministic-fixtures-and-storybook-story"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:42.056Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-246: Playwright project matrix, deterministic fixtures and Storybook story capture

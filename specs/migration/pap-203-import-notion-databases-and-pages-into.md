@@ -17,6 +17,8 @@ key: "migration/notion"
 url: "https://linear.app/paperos/issue/PAP-203/import-notion-databases-and-pages-into-tables-and-docs"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:41.073Z"
+model: null
+effort: null
 ---
 
 # PAP-203: Import Notion databases and pages into tables and docs

@@ -17,6 +17,8 @@ key: "growth/content-agent"
 url: "https://linear.app/paperos/issue/PAP-192/create-the-content-agent-character-that-drafts-posts-and-emails-from"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:19.840Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-192: Create the content agent character that drafts posts and emails from changelogs and specs for human approval

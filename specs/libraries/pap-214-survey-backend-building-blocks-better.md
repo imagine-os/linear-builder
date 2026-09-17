@@ -17,6 +17,8 @@ key: "libraries/backend-landscape"
 url: "https://linear.app/paperos/issue/PAP-214/survey-backend-building-blocks-better-auth-drizzle-electric-hocuspocus"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:03:43.751Z"
+model: null
+effort: null
 ---
 
 # PAP-214: Survey backend building blocks (Better Auth, Drizzle, Electric, Hocuspocus, Inngest, Resend) and recommend

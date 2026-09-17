@@ -17,6 +17,8 @@ key: "data-layer/local-first-sync"
 url: "https://linear.app/paperos/issue/PAP-36/integrate-pglite-and-electricsql-shapes-for-local-first-reads-with-an"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:45.357Z"
+model: null
+effort: null
 ---
 
 # PAP-36: Integrate PGlite and ElectricSQL shapes for local-first reads with an offline write queue

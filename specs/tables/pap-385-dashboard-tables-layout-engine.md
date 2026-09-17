@@ -17,6 +17,8 @@ key: "tables/dashboard/model-grid"
 url: "https://linear.app/paperos/issue/PAP-385/dashboard-tables-layout-engine-breakpoint-layouts-and-drag-or-resize"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:42.311Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-385: Dashboard tables, layout engine, breakpoint layouts and drag or resize with keyboard moves

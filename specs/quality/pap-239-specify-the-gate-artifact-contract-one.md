@@ -17,6 +17,8 @@ key: "quality/gate-artifact-contract"
 url: "https://linear.app/paperos/issue/PAP-239/specify-the-gate-artifact-contract-one-schema-package-for-gate1json"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:12.833Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-239: Specify the gate artifact contract: one schema package for gate1.json, security.json, visual.json, videos.json, vision.json, edgecases.json, finding IDs and artifact paths

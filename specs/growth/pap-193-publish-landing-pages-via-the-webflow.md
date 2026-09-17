@@ -17,6 +17,8 @@ key: "growth/landing-forms"
 url: "https://linear.app/paperos/issue/PAP-193/publish-landing-pages-via-the-webflow-api-and-capture-forms-into-the"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:04.815Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-193: Publish landing pages via the Webflow API and capture forms into the CRM

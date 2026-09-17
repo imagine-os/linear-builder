@@ -17,6 +17,8 @@ key: "identity/customer-portal-shell"
 url: "https://linear.app/paperos/issue/PAP-62/ship-the-customer-facing-portal-shell-login-profile-billing-entry"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:18:09.804Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-62: Ship the customer-facing portal shell (login, profile, billing entry) separate from the staff console

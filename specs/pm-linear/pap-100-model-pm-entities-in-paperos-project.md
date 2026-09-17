@@ -17,6 +17,8 @@ key: "pm-linear/pm-data-model"
 url: "https://linear.app/paperos/issue/PAP-100/model-pm-entities-in-paperos-project-issue-cycle-milestone-comment"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:01.144Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-100: Model PM entities in PaperOS (project, issue, cycle, milestone, comment, label) mirroring Linear's schema

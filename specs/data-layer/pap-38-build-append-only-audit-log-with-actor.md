@@ -17,6 +17,8 @@ key: "data-layer/audit-log"
 url: "https://linear.app/paperos/issue/PAP-38/build-append-only-audit-log-with-actor-human-or-agent-diff-and-reason"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:05:40.025Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-38: Build append-only audit log with actor (human or agent), diff and reason fields

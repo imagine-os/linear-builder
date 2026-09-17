@@ -17,6 +17,8 @@ key: "data-layer/data-dictionary"
 url: "https://linear.app/paperos/issue/PAP-41/generate-a-living-data-dictionary-from-the-drizzle-schema-into-the"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:05:40.307Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-41: Generate a living data dictionary from the Drizzle schema into the docs system

@@ -17,6 +17,8 @@ key: "child/PAP-215/0"
 url: "https://linear.app/paperos/issue/PAP-350/spike-tables-and-pm-products-nocodb-baserow-and-plane-with-compose"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:41.073Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-350: Spike tables and PM products: NocoDB, Baserow and Plane with compose, seeded flows, metrics and scorecards

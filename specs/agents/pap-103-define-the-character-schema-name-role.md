@@ -17,6 +17,8 @@ key: "agents/character-schema"
 url: "https://linear.app/paperos/issue/PAP-103/define-the-character-schema-name-role-reportsto-tools-mcp-servers"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:03.703Z"
+model: "claude-fable-5-1"
+effort: "high"
 ---
 
 # PAP-103: Define the character schema: name, role, reportsTo, tools, MCP servers, access scopes, plugins, skills, memory, escalation rules

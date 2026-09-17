@@ -17,6 +17,8 @@ key: "contracts/package-boundaries"
 url: "https://linear.app/paperos/issue/PAP-305/specify-the-monorepo-package-boundary-map-package-ownership-table"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:01.144Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-305: Specify the monorepo package boundary map: package ownership table, allowed dependency graph, `packages/core` sub-folder owners, dependency-cruiser lint in Gate 1 and the `packages/pm` move

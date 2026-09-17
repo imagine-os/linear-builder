@@ -17,6 +17,8 @@ key: "growth/referral-program"
 url: "https://linear.app/paperos/issue/PAP-196/implement-a-referral-and-affiliate-program-with-stripe-connect-payouts"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:11.312Z"
+model: null
+effort: null
 ---
 
 # PAP-196: Implement a referral and affiliate program with Stripe Connect payouts

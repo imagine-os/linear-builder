@@ -17,6 +17,8 @@ key: "tables/automations/model-triggers"
 url: "https://linear.app/paperos/issue/PAP-388/automation-schema-trigger-sources-and-the-run-runtime-with-idempotency"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:44.007Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-388: Automation schema, trigger sources and the run runtime with idempotency, loop guard, limits and circuit breaker

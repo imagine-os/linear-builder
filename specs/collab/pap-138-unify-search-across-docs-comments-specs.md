@@ -17,6 +17,8 @@ key: "collab/knowledge-search"
 url: "https://linear.app/paperos/issue/PAP-138/unify-search-across-docs-comments-specs-prompt-logs-and-issues"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:53:30.141Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-138: Unify search across docs, comments, specs, prompt logs and issues

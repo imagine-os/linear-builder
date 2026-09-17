@@ -17,6 +17,8 @@ key: "forge/repo-bootstrap"
 url: "https://linear.app/paperos/issue/PAP-51/script-forge-bootstrap-repo-to-configure-imagine-os-repos-with-mirrors"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:05:42.934Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-51: Script `forge bootstrap <repo>` to configure imagine-os repos with mirrors, secrets, labels and webhooks

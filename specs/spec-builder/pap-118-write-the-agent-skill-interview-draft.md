@@ -17,6 +17,8 @@ key: "spec-builder/spec-authoring-skill"
 url: "https://linear.app/paperos/issue/PAP-118/write-the-agent-skill-interview-draft-page-spec-validate-open-linear"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:16.505Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-118: Write the agent skill: interview -> draft page spec -> validate -> open Linear issue

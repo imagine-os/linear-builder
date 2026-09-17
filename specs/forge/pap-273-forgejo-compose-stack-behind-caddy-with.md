@@ -17,6 +17,8 @@ key: "child/PAP-45/18"
 url: "https://linear.app/paperos/issue/PAP-273/forgejo-compose-stack-behind-caddy-with-hardened-appini-accounts-and"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:36.535Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-273: Forgejo compose stack behind Caddy with hardened app.ini, accounts and org

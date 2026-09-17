@@ -17,6 +17,8 @@ key: "security/supply-chain"
 url: "https://linear.app/paperos/issue/PAP-358/add-supply-chain-integrity-lockfile-and-minimum-release-age-policy"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:03.990Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-358: Add supply-chain integrity: lockfile and minimum-release-age policy, pinned actions by digest, SLSA provenance attestations and cosign signatures for container images and Tauri artifacts, verified before deploy and update

@@ -17,6 +17,8 @@ key: "input/commands/palette-help-ui"
 url: "https://linear.app/paperos/issue/PAP-290/command-palette-and-help-sheet-ui"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:22.997Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-290: Command palette and help sheet UI

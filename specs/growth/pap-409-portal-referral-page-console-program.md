@@ -17,6 +17,8 @@ key: "growth/referral/portal-console-ui"
 url: "https://linear.app/paperos/issue/PAP-409/portal-referral-page-console-program-and-referral-grids-and-the"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:48.727Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-409: Portal referral page, console program and referral grids and the rewards approval queue

@@ -17,6 +17,8 @@ key: "identity/privacy-dsar"
 url: "https://linear.app/paperos/issue/PAP-221/build-privacy-tooling-per-user-data-export-and-erasure-dsar-consent"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:05.970Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-221: Build privacy tooling: per-user data export and erasure (DSAR), consent records, privacy/terms/cookie pages in the portal

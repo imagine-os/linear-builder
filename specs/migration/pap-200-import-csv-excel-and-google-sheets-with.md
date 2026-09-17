@@ -17,6 +17,8 @@ key: "migration/csv-excel"
 url: "https://linear.app/paperos/issue/PAP-200/import-csv-excel-and-google-sheets-with-type-inference"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:10.220Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-200: Import CSV, Excel and Google Sheets with type inference

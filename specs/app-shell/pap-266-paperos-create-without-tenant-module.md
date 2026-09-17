@@ -17,6 +17,8 @@ key: "child/PAP-28/11"
 url: "https://linear.app/paperos/issue/PAP-266/paperos-create-without-tenant-module-toggles-and-the-ci-removal-matrix"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:36.535Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-266: `paperos create --without`, tenant module toggles and the CI removal matrix

@@ -17,6 +17,8 @@ key: "collab/rules-skills-registry"
 url: "https://linear.app/paperos/issue/PAP-134/surface-rules-claudemd-policies-and-skills-as-browsable-editable"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:53:29.085Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-134: Surface rules (CLAUDE.md, policies) and skills as browsable, editable objects in-app with version history

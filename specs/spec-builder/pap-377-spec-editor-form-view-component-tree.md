@@ -17,6 +17,8 @@ key: "spec-builder/spec-editor-ui/form"
 url: "https://linear.app/paperos/issue/PAP-377/spec-editor-form-view-component-tree-editor-and-two-way-sync-with-yaml"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:03.334Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-377: Spec editor: form view, component tree editor and two-way sync with YAML preserving comments

@@ -17,6 +17,8 @@ key: "realtime/push-transport"
 url: "https://linear.app/paperos/issue/PAP-381/build-the-push-transport-server-to-client-notification-and-job"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:14.622Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-381: Build the push transport: server-to-client notification and job-progress channel (Electric shape or SSE) plus Web Push and Tauri mobile push (APNs/FCM)

@@ -17,6 +17,8 @@ key: "design-system/guidelines-docs"
 url: "https://linear.app/paperos/issue/PAP-76/write-design-system-guidelines-voice-density-spacing-when-to-use-what"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:18:13.004Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-76: Write design system guidelines (voice, density, spacing, when to use what) into the docs system

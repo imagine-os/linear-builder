@@ -17,6 +17,8 @@ key: "quality/flake-quarantine"
 url: "https://linear.app/paperos/issue/PAP-90/build-flaky-test-detection-and-quarantine-so-agents-are-not-blocked-by"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:18:16.864Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-90: Build flaky-test detection and quarantine so agents are not blocked by nondeterminism

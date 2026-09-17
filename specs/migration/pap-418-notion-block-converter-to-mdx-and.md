@@ -17,6 +17,8 @@ key: "child/PAP-203/1"
 url: "https://linear.app/paperos/issue/PAP-418/notion-block-converter-to-mdx-and-tiptap-json-all-block-types-media"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:50.203Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-418: Notion block converter to MDX and Tiptap JSON: all block types, media upload before URL expiry, internal link rewriting

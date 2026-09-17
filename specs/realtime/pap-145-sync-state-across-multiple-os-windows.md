@@ -17,6 +17,8 @@ key: "realtime/multi-window-sync"
 url: "https://linear.app/paperos/issue/PAP-145/sync-state-across-multiple-os-windows-and-tabs-of-the-same-user-via"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:44.044Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-145: Sync state across multiple OS windows and tabs of the same user via BroadcastChannel and Yjs

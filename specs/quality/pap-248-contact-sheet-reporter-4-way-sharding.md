@@ -17,6 +17,8 @@ key: "quality/playwright-matrix/reporter-sharding"
 url: "https://linear.app/paperos/issue/PAP-248/contact-sheet-reporter-4-way-sharding-and-the-visualjson-artifact"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:04:43.255Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-248: Contact-sheet reporter, 4-way sharding and the visual.json artifact

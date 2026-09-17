@@ -17,6 +17,8 @@ key: "libraries/data-landscape"
 url: "https://linear.app/paperos/issue/PAP-213/survey-table-canvas-editor-and-chart-libraries-tanstack-ag-grid-tldraw"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:03:42.832Z"
+model: null
+effort: null
 ---
 
 # PAP-213: Survey table, canvas, editor and chart libraries (TanStack, AG Grid, tldraw, Tiptap, ECharts, visx) and recommend

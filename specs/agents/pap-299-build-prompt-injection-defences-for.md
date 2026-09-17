@@ -17,6 +17,8 @@ key: "security/prompt-injection"
 url: "https://linear.app/paperos/issue/PAP-299/build-prompt-injection-defences-for-agent-sessions-trust-tiers-for"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:08.503Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-299: Build prompt-injection defences for agent sessions: trust tiers for issues, comments and PRs, untrusted-content wrapping, actor-verified instructions, canary tokens and an injection eval suite

@@ -17,6 +17,8 @@ key: "identity/rbac-abac/model-evaluator"
 url: "https://linear.app/paperos/issue/PAP-227/policy-model-evaluator-and-explain-mode"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:39.016Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-227: Policy model, evaluator and explain mode

@@ -17,6 +17,8 @@ key: "business-core/finance-data-model"
 url: "https://linear.app/paperos/issue/PAP-175/specify-the-finance-data-model-customers-vendors-employees-accounts"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:04:58.278Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-175: Specify the finance data model: customers, vendors, employees, accounts, transactions and periods across all business types

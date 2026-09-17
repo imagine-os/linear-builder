@@ -17,6 +17,8 @@ key: "tables/formula-engine"
 url: "https://linear.app/paperos/issue/PAP-171/build-a-formula-engine-compatible-with-common-airtable-and-notion"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:14.275Z"
+model: null
+effort: null
 ---
 
 # PAP-171: Build a formula engine compatible with common Airtable and Notion functions

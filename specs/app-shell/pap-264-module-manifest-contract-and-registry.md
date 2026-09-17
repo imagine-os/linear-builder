@@ -17,6 +17,8 @@ key: "child/PAP-28/9"
 url: "https://linear.app/paperos/issue/PAP-264/module-manifest-contract-and-registry-packagescoremodules"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:01.144Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-264: Module manifest contract and registry (packages/core/modules)

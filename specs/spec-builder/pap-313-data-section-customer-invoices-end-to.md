@@ -17,6 +17,8 @@ key: "spec-builder/data-section/example"
 url: "https://linear.app/paperos/issue/PAP-313/data-section-customer-invoices-end-to-end-with-live-sync-second"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:05.712Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-313: Data section: `customer-invoices` end to end with live sync, second-context and offline tests

@@ -17,6 +17,8 @@ key: "growth/support/console-ui"
 url: "https://linear.app/paperos/issue/PAP-412/three-pane-inbox-on-a-saved-list-view-conversation-view-contact"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:48.727Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-412: Three-pane inbox on a saved list view, conversation view, contact sidebar, assignment, snooze, macros, shortcuts and metrics

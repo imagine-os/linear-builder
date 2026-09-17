@@ -17,6 +17,8 @@ key: "spec-builder/app-level-spec"
 url: "https://linear.app/paperos/issue/PAP-117/define-appspecyaml-audiences-navigation-entities-integrations-that"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:50:29.345Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-117: Define app.spec.yaml (audiences, navigation, entities, integrations) that page specs inherit from

@@ -17,6 +17,8 @@ key: "data-layer/local-dev-stack"
 url: "https://linear.app/paperos/issue/PAP-42/ship-the-local-dev-stack-docker-compose-with-postgres-17-minio-mailpit"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:05:40.395Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-42: Ship the local dev stack: docker compose with Postgres 17, MinIO, Mailpit and Hocuspocus, per-worktree databases and a SessionStart hook so parallel Claude sessions never share state

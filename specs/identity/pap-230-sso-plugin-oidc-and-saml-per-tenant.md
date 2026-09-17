@@ -17,6 +17,8 @@ key: "identity/sso-scim/sso-plugin-domains"
 url: "https://linear.app/paperos/issue/PAP-230/sso-plugin-oidc-and-saml-per-tenant-with-domain-verification"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:04.815Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-230: SSO plugin: OIDC and SAML per tenant with domain verification

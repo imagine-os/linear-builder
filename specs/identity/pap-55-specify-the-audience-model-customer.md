@@ -17,6 +17,8 @@ key: "identity/audience-model"
 url: "https://linear.app/paperos/issue/PAP-55/specify-the-audience-model-customer-tiers-staff-roles-partners-admins"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:04.563Z"
+model: "claude-fable-5-1"
+effort: "high"
 ---
 
 # PAP-55: Specify the audience model: customer tiers, staff roles, partners, admins, agents and composable segments in between

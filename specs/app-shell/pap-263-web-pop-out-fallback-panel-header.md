@@ -17,6 +17,8 @@ key: "child/PAP-21/8"
 url: "https://linear.app/paperos/issue/PAP-263/web-pop-out-fallback-panel-header-affordances-and-windows"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:12:02.402Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-263: Web pop-out fallback, panel header affordances and windows documentation

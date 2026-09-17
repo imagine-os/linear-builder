@@ -17,6 +17,8 @@ key: "identity/sso-scim"
 url: "https://linear.app/paperos/issue/PAP-65/add-samloidc-sso-and-scim-provisioning-for-enterprise-tenants"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:18:10.686Z"
+model: null
+effort: null
 ---
 
 # PAP-65: Add SAML/OIDC SSO and SCIM provisioning for enterprise tenants

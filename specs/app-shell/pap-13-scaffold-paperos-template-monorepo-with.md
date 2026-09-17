@@ -17,6 +17,8 @@ key: "app-shell/monorepo-scaffold"
 url: "https://linear.app/paperos/issue/PAP-13/scaffold-paperos-template-monorepo-with-pnpm-turborepo-strict"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:03.283Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-13: Scaffold paperos-template monorepo with pnpm, Turborepo, strict TypeScript and a Vite React 19 web app

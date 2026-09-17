@@ -17,6 +17,8 @@ key: "agents/eval-harness/tasks"
 url: "https://linear.app/paperos/issue/PAP-309/eval-harness-golden-task-set-three-per-lead-one-per-sub-with-fixture"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:07.237Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-309: Eval harness: golden task set (three per lead, one per sub) with fixture repos and answer keys

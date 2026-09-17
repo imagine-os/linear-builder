@@ -17,6 +17,8 @@ key: "tables/dashboard-blocks"
 url: "https://linear.app/paperos/issue/PAP-173/compose-views-into-dashboard-pages-with-drag-arranged-blocks-and-cross"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:14.115Z"
+model: null
+effort: null
 ---
 
 # PAP-173: Compose views into dashboard pages with drag-arranged blocks and cross-filters

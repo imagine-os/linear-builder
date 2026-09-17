@@ -17,6 +17,8 @@ key: "design-system/storybook"
 url: "https://linear.app/paperos/issue/PAP-69/set-up-storybook-with-a11y-viewport-and-interaction-test-addons"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:49.395Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-69: Set up Storybook with a11y, viewport and interaction-test addons deployed to GitHub Pages

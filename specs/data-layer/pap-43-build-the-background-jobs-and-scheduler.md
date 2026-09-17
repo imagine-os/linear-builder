@@ -17,6 +17,8 @@ key: "data-layer/jobs-queue"
 url: "https://linear.app/paperos/issue/PAP-43/build-the-background-jobs-and-scheduler-package-pg-boss-with-retries"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:24.319Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-43: Build the background jobs and scheduler package (pg-boss) with retries, idempotency keys, cron, dead-letter queue and an admin view

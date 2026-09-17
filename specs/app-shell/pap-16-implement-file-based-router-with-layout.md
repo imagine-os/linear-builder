@@ -17,6 +17,8 @@ key: "app-shell/router-layouts"
 url: "https://linear.app/paperos/issue/PAP-16/implement-file-based-router-with-layout-slots-nav-sidebar-inspector"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:05:33.665Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-16: Implement file-based router with layout slots (nav, sidebar, inspector, command bar) driven by page specs

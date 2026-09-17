@@ -17,6 +17,8 @@ key: "migration/migration-agent"
 url: "https://linear.app/paperos/issue/PAP-208/create-the-migration-agent-character-that-interviews-users-about"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:10.135Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-208: Create the migration agent character that interviews users about current tools and runs the imports

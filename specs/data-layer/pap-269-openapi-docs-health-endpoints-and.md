@@ -17,6 +17,8 @@ key: "child/PAP-35/14"
 url: "https://linear.app/paperos/issue/PAP-269/openapi-docs-health-endpoints-and-staging-deploy-of-appsapi"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:12:03.752Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-269: OpenAPI docs, health endpoints and staging deploy of apps/api

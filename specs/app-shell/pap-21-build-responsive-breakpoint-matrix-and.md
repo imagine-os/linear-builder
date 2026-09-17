@@ -17,6 +17,8 @@ key: "app-shell/breakpoints-windows"
 url: "https://linear.app/paperos/issue/PAP-21/build-responsive-breakpoint-matrix-and-multi-monitor-window-manager"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:43.005Z"
+model: null
+effort: null
 ---
 
 # PAP-21: Build responsive breakpoint matrix and multi-monitor window manager that detaches panels into OS windows

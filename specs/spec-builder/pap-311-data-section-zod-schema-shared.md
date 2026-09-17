@@ -17,6 +17,8 @@ key: "spec-builder/data-section/schema"
 url: "https://linear.app/paperos/issue/PAP-311/data-section-zod-schema-shared-filtertree-import-and-validator-rules"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:06.860Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-311: Data section: Zod schema, shared FilterTree import and validator rules

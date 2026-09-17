@@ -17,6 +17,8 @@ key: "growth/support/email-threading"
 url: "https://linear.app/paperos/issue/PAP-410/support-schema-inbound-email-parsing-threading-heuristics-html"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:50.203Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-410: Support schema, inbound email parsing, threading heuristics, HTML sanitising, contact matching and outbound replies

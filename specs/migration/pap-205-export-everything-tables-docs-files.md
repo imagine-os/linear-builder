@@ -17,6 +17,8 @@ key: "migration/export"
 url: "https://linear.app/paperos/issue/PAP-205/export-everything-tables-docs-files-ledger-to-open-formats"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:39.257Z"
+model: null
+effort: null
 ---
 
 # PAP-205: Export everything (tables, docs, files, ledger) to open formats

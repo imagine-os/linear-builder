@@ -17,6 +17,8 @@ key: "gap/data-layer/tenant-lifecycle"
 url: "https://linear.app/paperos/issue/PAP-432/build-the-tenant-lifecycle-tenant-states-deletion-request-and-cancel"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:01:57.775Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-432: Build the tenant lifecycle: tenant states, deletion request and cancel flow with grace period, archive metadata, per-tenant storage and row quotas (the purge job itself is `security/retention-pii`)

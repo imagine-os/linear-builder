@@ -17,6 +17,8 @@ key: "tables/time/engine-calendar"
 url: "https://linear.app/paperos/issue/PAP-344/timescale-engine-range-compilation-overlap-packing-and-the-calendar"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:37.290Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-344: TimeScale engine, range compilation, overlap packing and the calendar view (month, week, day, agenda)

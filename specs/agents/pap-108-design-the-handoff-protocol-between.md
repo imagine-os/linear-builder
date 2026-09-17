@@ -17,6 +17,8 @@ key: "agents/handoffs"
 url: "https://linear.app/paperos/issue/PAP-108/design-the-handoff-protocol-between-characters-artifact-contract"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:19.840Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-108: Design the handoff protocol between characters: artifact contract, Linear comment format, escalation to Needs Justin

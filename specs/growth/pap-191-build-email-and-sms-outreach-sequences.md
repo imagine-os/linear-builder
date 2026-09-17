@@ -17,6 +17,8 @@ key: "growth/outreach-sequences"
 url: "https://linear.app/paperos/issue/PAP-191/build-email-and-sms-outreach-sequences-resend-twilio-with-warmup-and"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:11.462Z"
+model: null
+effort: null
 ---
 
 # PAP-191: Build email and SMS outreach sequences (Resend, Twilio) with warmup and reply detection

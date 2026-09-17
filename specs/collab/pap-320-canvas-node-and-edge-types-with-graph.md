@@ -17,6 +17,8 @@ key: "collab/canvas/nodes-edges-loader"
 url: "https://linear.app/paperos/issue/PAP-320/canvas-node-and-edge-types-with-graph-loader"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:27.539Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-320: Canvas node and edge types with graph loader

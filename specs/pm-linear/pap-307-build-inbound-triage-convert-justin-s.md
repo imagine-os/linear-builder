@@ -17,6 +17,8 @@ key: "pm-linear/inbound-triage"
 url: "https://linear.app/paperos/issue/PAP-307/build-inbound-triage-convert-justins-freeform-issues-and-comments-into"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:07.130Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-307: Build inbound triage: convert Justin's freeform issues and comments into contract-valid issues via the Decomposer sub-agent, wired to the Triage view

@@ -17,6 +17,8 @@ key: "security/dast"
 url: "https://linear.app/paperos/issue/PAP-357/add-dynamic-security-testing-nightly-zap-baseline-and-authenticated"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:05.363Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-357: Add dynamic security testing: nightly ZAP baseline and authenticated scan of staging plus a security regression suite (CSRF, IDOR across tenants, headers, rate limits, upload abuse, webhook replay) that blocks the release candidate

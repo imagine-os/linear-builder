@@ -17,6 +17,8 @@ key: "design-system/primitives/infra-form-controls"
 url: "https://linear.app/paperos/issue/PAP-236/component-infrastructure-and-form-controls"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:42.056Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-236: Component infrastructure and form controls

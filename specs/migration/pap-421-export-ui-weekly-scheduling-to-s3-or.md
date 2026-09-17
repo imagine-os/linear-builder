@@ -17,6 +17,8 @@ key: "child/PAP-205/1"
 url: "https://linear.app/paperos/issue/PAP-421/export-ui-weekly-scheduling-to-s3-or-google-drive-with-encryption"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:51.916Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-421: Export UI, weekly scheduling to S3 or Google Drive with encryption, signed download links, history and audit

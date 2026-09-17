@@ -17,6 +17,8 @@ key: "identity/rbac-abac"
 url: "https://linear.app/paperos/issue/PAP-59/build-permission-engine-combining-role-based-grants-with-attribute"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:06.061Z"
+model: null
+effort: null
 ---
 
 # PAP-59: Build permission engine combining role-based grants with attribute policies declared in page specs

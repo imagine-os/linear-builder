@@ -17,6 +17,8 @@ key: "design-system/state-components"
 url: "https://linear.app/paperos/issue/PAP-234/build-the-state-components-codegen-emits-errorstate-deniedstate"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:04:37.897Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-234: Build the state components codegen emits: ErrorState, DeniedState, OfflineBanner, IntegrationUnavailable, LoadingPage as spec-mapped `ui.*` components

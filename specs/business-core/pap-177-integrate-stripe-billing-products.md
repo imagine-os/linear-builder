@@ -17,6 +17,8 @@ key: "business-core/stripe-billing"
 url: "https://linear.app/paperos/issue/PAP-177/integrate-stripe-billing-products-prices-subscriptions-customer-portal"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:13.547Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-177: Integrate Stripe Billing: products, prices, subscriptions, customer portal and webhooks

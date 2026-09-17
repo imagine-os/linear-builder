@@ -17,6 +17,8 @@ key: "child/PAP-21/7"
 url: "https://linear.app/paperos/issue/PAP-262/tauri-windowmanager-detach-dock-list-displays-and-topology-hash"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:35.093Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-262: Tauri WindowManager: detach, dock, list_displays and topology-hash persistence

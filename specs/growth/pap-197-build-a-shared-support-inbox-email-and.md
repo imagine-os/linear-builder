@@ -17,6 +17,8 @@ key: "growth/support-inbox"
 url: "https://linear.app/paperos/issue/PAP-197/build-a-shared-support-inbox-email-and-in-app-chat-linked-to-crm"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:10.373Z"
+model: null
+effort: null
 ---
 
 # PAP-197: Build a shared support inbox (email and in-app chat) linked to CRM contacts

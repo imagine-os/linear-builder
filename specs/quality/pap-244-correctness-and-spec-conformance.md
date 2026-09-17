@@ -17,6 +17,8 @@ key: "quality/review-agents/correctness-spec"
 url: "https://linear.app/paperos/issue/PAP-244/correctness-and-spec-conformance-reviewer-definitions"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:04:40.934Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-244: Correctness and spec-conformance reviewer definitions

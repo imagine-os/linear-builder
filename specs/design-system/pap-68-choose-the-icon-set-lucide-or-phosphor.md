@@ -17,6 +17,8 @@ key: "design-system/icons-illustrations"
 url: "https://linear.app/paperos/issue/PAP-68/choose-the-icon-set-lucide-or-phosphor-and-illustration-style-build-a"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:18:11.201Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-68: Choose the icon set (Lucide or Phosphor) and illustration style; build a tree-shaken Icon component

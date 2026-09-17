@@ -17,6 +17,8 @@ key: "spec-builder/data-section/generator"
 url: "https://linear.app/paperos/issue/PAP-312/data-section-typed-hook-generator-for-server-live-and-local-sync-modes"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:06.928Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-312: Data section: typed hook generator for server, live and local sync modes

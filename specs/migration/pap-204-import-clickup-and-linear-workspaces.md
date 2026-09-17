@@ -17,6 +17,8 @@ key: "migration/clickup-linear"
 url: "https://linear.app/paperos/issue/PAP-204/import-clickup-and-linear-workspaces-into-the-pm-module"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:41.073Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-204: Import ClickUp and Linear workspaces into the PM module

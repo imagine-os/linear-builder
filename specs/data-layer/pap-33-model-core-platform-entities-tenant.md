@@ -17,6 +17,8 @@ key: "data-layer/core-entities"
 url: "https://linear.app/paperos/issue/PAP-33/model-core-platform-entities-tenant-workspace-user-membership-role"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:05:38.875Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-33: Model core platform entities: tenant, workspace, user, membership, role, audit_event, file

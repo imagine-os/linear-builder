@@ -17,6 +17,8 @@ key: "business-core/cash-dashboard"
 url: "https://linear.app/paperos/issue/PAP-186/build-the-cash-flow-dashboard-in-out-runway-upcoming-payroll-as-the"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:44.007Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-186: Build the cash-flow dashboard (in, out, runway, upcoming payroll) as the first dashboard-blocks consumer

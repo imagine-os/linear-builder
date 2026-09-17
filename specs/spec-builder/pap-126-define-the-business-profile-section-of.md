@@ -17,6 +17,8 @@ key: "spec-builder/business-profile"
 url: "https://linear.app/paperos/issue/PAP-126/define-the-business-profile-section-of-appspecyaml-industry-audiences"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:44.044Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-126: Define the business profile section of app.spec.yaml: industry, audiences, terminology map, locale, currency and tax regime, enabled modules; codegen, templates and the migration agent read it

@@ -17,6 +17,8 @@ key: "input/input-abstraction"
 url: "https://linear.app/paperos/issue/PAP-150/design-a-unified-input-event-abstraction-so-components-handle-mouse"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:53:32.024Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-150: Design a unified input event abstraction so components handle mouse, touch, pen and gamepad uniformly

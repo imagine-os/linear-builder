@@ -17,6 +17,8 @@ key: "child/PAP-45/19"
 url: "https://linear.app/paperos/issue/PAP-274/forgejo-backups-with-restic-and-a-timed-restore-drill-into-a-scratch"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:36.535Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-274: Forgejo backups with restic and a timed restore drill into a scratch stack

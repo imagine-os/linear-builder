@@ -17,6 +17,8 @@ key: "collab/notifications/digests-quiet-hours"
 url: "https://linear.app/paperos/issue/PAP-324/digests-quiet-hours-and-burst-collapse"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:28.589Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-324: Digests, quiet hours and burst collapse

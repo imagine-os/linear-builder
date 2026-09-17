@@ -17,6 +17,8 @@ key: "child/PAP-54/22"
 url: "https://linear.app/paperos/issue/PAP-277/repo-list-file-tree-file-view-and-commit-list-pages-with-specs"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:23:19.632Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-277: Repo list, file tree, file view and commit-list pages with specs

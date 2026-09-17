@@ -17,6 +17,8 @@ key: "business-core/invoicing/pdf-paypage"
 url: "https://linear.app/paperos/issue/PAP-396/branded-pdf-rendering-public-pay-and-doc-pages-stripe-checkout-on"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:46.284Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-396: Branded PDF rendering, public /pay and /doc pages, Stripe Checkout on platform or connected account, receipts

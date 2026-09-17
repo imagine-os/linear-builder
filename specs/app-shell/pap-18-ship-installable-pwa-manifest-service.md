@@ -17,6 +17,8 @@ key: "app-shell/pwa"
 url: "https://linear.app/paperos/issue/PAP-18/ship-installable-pwa-manifest-service-worker-and-offline-app-shell"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:11:09.870Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-18: Ship installable PWA manifest, service worker and offline app shell

@@ -17,6 +17,8 @@ key: "child/PAP-19/2"
 url: "https://linear.app/paperos/issue/PAP-257/desktop-updater-single-instance-guard-and-paperos-deep-links"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:12:02.402Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-257: Desktop updater, single-instance guard and paperos:// deep links

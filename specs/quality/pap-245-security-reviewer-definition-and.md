@@ -17,6 +17,8 @@ key: "quality/review-agents/security"
 url: "https://linear.app/paperos/issue/PAP-245/security-reviewer-definition-and-securityjson-ingestion"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:04:40.934Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-245: Security reviewer definition and security.json ingestion

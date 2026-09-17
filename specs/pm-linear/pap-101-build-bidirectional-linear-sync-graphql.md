@@ -17,6 +17,8 @@ key: "pm-linear/linear-sync"
 url: "https://linear.app/paperos/issue/PAP-101/build-bidirectional-linear-sync-graphql-webhooks-with-conflict-rule"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:18.239Z"
+model: null
+effort: null
 ---
 
 # PAP-101: Build bidirectional Linear sync (GraphQL + webhooks) with conflict rule: Linear wins until cutover

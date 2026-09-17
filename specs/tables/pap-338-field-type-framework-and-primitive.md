@@ -17,6 +17,8 @@ key: "tables/fields/framework-primitives"
 url: "https://linear.app/paperos/issue/PAP-338/field-type-framework-and-primitive-types-text-number-currency-percent"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:35.594Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-338: Field type framework and primitive types (text, number, currency, percent, date, checkbox, rating, url, email, phone)

@@ -17,6 +17,8 @@ key: "quality/perf-budgets"
 url: "https://linear.app/paperos/issue/PAP-87/enforce-performance-budgets-lcp-inp-bundle-size-with-lighthouse-ci"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:18:16.568Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-87: Enforce performance budgets (LCP, INP, bundle size) with Lighthouse CI

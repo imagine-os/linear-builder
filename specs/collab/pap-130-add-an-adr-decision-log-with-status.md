@@ -17,6 +17,8 @@ key: "collab/decision-log"
 url: "https://linear.app/paperos/issue/PAP-130/add-an-adrdecision-log-with-status-alternatives-and-links-to-issues"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:53:28.676Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-130: Add an ADR/decision log with status, alternatives and links to issues

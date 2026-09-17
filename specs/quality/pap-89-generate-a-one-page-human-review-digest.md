@@ -17,6 +17,8 @@ key: "quality/review-report"
 url: "https://linear.app/paperos/issue/PAP-89/generate-a-one-page-human-review-digest-per-release-candidate-what"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:05.970Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-89: Generate a one-page human review digest per release candidate: what changed, risks, screenshots, open questions

@@ -17,6 +17,8 @@ key: "child/PAP-199/1"
 url: "https://linear.app/paperos/issue/PAP-348/dry-run-commit-and-rollback-semantics-transaction-rolled-dry-run"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:39.257Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-348: Dry run, commit and rollback semantics: transaction-rolled dry run, `import_run_item` before-state, exact rollback with conflict listing

@@ -17,6 +17,8 @@ key: "agents/eval-harness/runner"
 url: "https://linear.app/paperos/issue/PAP-308/eval-harness-task-format-sdk-runner-deterministic-graders-and-results"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:08.299Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-308: Eval harness: task format, SDK runner, deterministic graders and results table

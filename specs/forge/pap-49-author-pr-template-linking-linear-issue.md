@@ -17,6 +17,8 @@ key: "forge/pr-templates"
 url: "https://linear.app/paperos/issue/PAP-49/author-pr-template-linking-linear-issue-page-spec-screenshots-and-the"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:05:42.663Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-49: Author PR template linking Linear issue, page spec, screenshots and the review-gate checklist

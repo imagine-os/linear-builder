@@ -17,6 +17,8 @@ key: "data-layer/rls-tenancy"
 url: "https://linear.app/paperos/issue/PAP-34/implement-postgres-row-level-security-policies-for-multi-tenant"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:05:39.036Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-34: Implement Postgres row-level security policies for multi-tenant isolation with a cross-tenant test harness

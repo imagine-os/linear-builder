@@ -17,6 +17,8 @@ key: "collab/comments/schema-rls-rpc"
 url: "https://linear.app/paperos/issue/PAP-317/comment-schema-anchors-rls-and-orpc-procedures"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:27.539Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-317: Comment schema, anchors, RLS and oRPC procedures

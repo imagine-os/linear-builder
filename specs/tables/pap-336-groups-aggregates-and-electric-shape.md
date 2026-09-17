@@ -17,6 +17,8 @@ key: "tables/compiler/groups-shapes"
 url: "https://linear.app/paperos/issue/PAP-336/groups-aggregates-and-electric-shape-eligibility"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:30.221Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-336: Groups, aggregates and Electric shape eligibility

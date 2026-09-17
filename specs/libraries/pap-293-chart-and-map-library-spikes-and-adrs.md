@@ -17,6 +17,8 @@ key: "child/PAP-213/1"
 url: "https://linear.app/paperos/issue/PAP-293/chart-and-map-library-spikes-and-adrs-echarts-visx-recharts-observable"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:22.997Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-293: Chart and map library spikes and ADRs: ECharts, visx, Recharts, Observable Plot, Nivo, Chart.js; MapLibre GL and Leaflet with self-hosted tiles

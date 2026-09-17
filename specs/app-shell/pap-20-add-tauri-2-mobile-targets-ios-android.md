@@ -17,6 +17,8 @@ key: "app-shell/tauri-mobile"
 url: "https://linear.app/paperos/issue/PAP-20/add-tauri-2-mobile-targets-ios-android-with-platform-capability-shims"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:43.005Z"
+model: null
+effort: null
 ---
 
 # PAP-20: Add Tauri 2 mobile targets (iOS, Android) with platform capability shims

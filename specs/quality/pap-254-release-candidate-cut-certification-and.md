@@ -17,6 +17,8 @@ key: "quality/release-train/rc-certify-approve"
 url: "https://linear.app/paperos/issue/PAP-254/release-candidate-cut-certification-and-justin-approval-flow"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:08.152Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-254: Release candidate cut, certification and Justin approval flow

@@ -17,6 +17,8 @@ key: "child/PAP-36/16"
 url: "https://linear.app/paperos/issue/PAP-271/pglite-client-schema-generation-and-read-hooks-useshape-uselivequery"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:36.535Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-271: PGlite client, schema generation and read hooks (useShape, useLiveQuery)

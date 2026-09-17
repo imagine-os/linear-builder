@@ -17,6 +17,8 @@ key: "identity/org-tenancy"
 url: "https://linear.app/paperos/issue/PAP-58/implement-organizations-workspaces-invitations-and-tenant-switching"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:46.762Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-58: Implement organizations, workspaces, invitations and tenant switching

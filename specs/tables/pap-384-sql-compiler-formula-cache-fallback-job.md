@@ -17,6 +17,8 @@ key: "tables/formula/sql-cache"
 url: "https://linear.app/paperos/issue/PAP-384/sql-compiler-formula-cache-fallback-job-and-the-dependency-graph"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:42.311Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-384: SQL compiler, formula_cache fallback job and the dependency graph

@@ -17,6 +17,8 @@ key: "tables/automations"
 url: "https://linear.app/paperos/issue/PAP-174/build-table-automations-triggers-record-change-schedule-form-inbound"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:13.975Z"
+model: null
+effort: null
 ---
 
 # PAP-174: Build table automations: triggers (record change, schedule, form, inbound webhook), filter-tree conditions and actions (update record, notify, outbound webhook, connector call, create Linear issue) with a run log

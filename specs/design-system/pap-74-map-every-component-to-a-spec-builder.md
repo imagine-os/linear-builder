@@ -17,6 +17,8 @@ key: "design-system/component-spec-mapping"
 url: "https://linear.app/paperos/issue/PAP-74/map-every-component-to-a-spec-builder-component-id-with-props-schema"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:47.788Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-74: Map every component to a spec-builder component ID with props schema so page specs reference real components

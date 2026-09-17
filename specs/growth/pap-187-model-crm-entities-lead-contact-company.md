@@ -17,6 +17,8 @@ key: "growth/crm-model"
 url: "https://linear.app/paperos/issue/PAP-187/model-crm-entities-lead-contact-company-deal-pipeline-stage-activity"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:06.524Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-187: Model CRM entities: lead, contact, company, deal, pipeline stage, activity, segment

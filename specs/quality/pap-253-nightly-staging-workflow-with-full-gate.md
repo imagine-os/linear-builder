@@ -17,6 +17,8 @@ key: "quality/release-train/nightly-staging"
 url: "https://linear.app/paperos/issue/PAP-253/nightly-staging-workflow-with-full-gate-run"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:43.005Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-253: Nightly staging workflow with full gate run

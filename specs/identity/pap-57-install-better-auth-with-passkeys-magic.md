@@ -17,6 +17,8 @@ key: "identity/better-auth"
 url: "https://linear.app/paperos/issue/PAP-57/install-better-auth-with-passkeys-magic-link-googlegithub-oauth-and"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:18:09.223Z"
+model: null
+effort: null
 ---
 
 # PAP-57: Install Better Auth with passkeys, magic link, Google/GitHub OAuth and sessions for web and Tauri

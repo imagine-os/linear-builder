@@ -17,6 +17,8 @@ key: "gap/tables/schema-editor"
 url: "https://linear.app/paperos/issue/PAP-332/build-the-custom-dataset-schema-editor-create-tables-and-fields-in-app"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:03.569Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-332: Build the custom dataset schema editor: create tables and fields in-app, reorder, field type conversion with a lossiness report and background backfill

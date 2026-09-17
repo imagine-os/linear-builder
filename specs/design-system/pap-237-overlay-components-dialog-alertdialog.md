@@ -17,6 +17,8 @@ key: "design-system/primitives/overlays"
 url: "https://linear.app/paperos/issue/PAP-237/overlay-components-dialog-alertdialog-popover-tooltip-menu-toast"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:04:37.897Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-237: Overlay components: Dialog, AlertDialog, Popover, Tooltip, Menu, Toast

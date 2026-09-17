@@ -17,6 +17,8 @@ key: "design-system/layout-components"
 url: "https://linear.app/paperos/issue/PAP-70/build-layout-components-appframe-splitpane-inspector-commandbar"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:49.395Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-70: Build layout components: AppFrame, SplitPane, Inspector, CommandBar, ResponsiveGrid

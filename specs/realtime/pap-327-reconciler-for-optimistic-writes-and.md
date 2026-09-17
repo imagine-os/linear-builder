@@ -17,6 +17,8 @@ key: "realtime/record-sync/reconciler"
 url: "https://linear.app/paperos/issue/PAP-327/reconciler-for-optimistic-writes-and-conflict-events"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:28.589Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-327: Reconciler for optimistic writes and conflict events

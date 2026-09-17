@@ -17,6 +17,8 @@ key: "tables/feature-parity-audit"
 url: "https://linear.app/paperos/issue/PAP-162/audit-airtable-notion-clickup-baserow-and-nocodb-view-features-into-a"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:15.903Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-162: Audit Airtable, Notion, ClickUp, Baserow and NocoDB view features into a parity checklist

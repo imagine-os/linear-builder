@@ -17,6 +17,8 @@ key: "migration/import-framework"
 url: "https://linear.app/paperos/issue/PAP-199/build-the-import-framework-source-connector-schema-mapping-ui-dry-run"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:35.594Z"
+model: null
+effort: null
 ---
 
 # PAP-199: Build the import framework: source connector, schema-mapping UI, dry run, validation, rollback

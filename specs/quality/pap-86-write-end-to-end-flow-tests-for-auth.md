@@ -17,6 +17,8 @@ key: "quality/e2e-flows"
 url: "https://linear.app/paperos/issue/PAP-86/write-end-to-end-flow-tests-for-auth-tenant-switch-crud-and-realtime"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:45.357Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-86: Write end-to-end flow tests for auth, tenant switch, CRUD and realtime presence

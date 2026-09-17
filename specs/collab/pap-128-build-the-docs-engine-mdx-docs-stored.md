@@ -17,6 +17,8 @@ key: "collab/docs-engine"
 url: "https://linear.app/paperos/issue/PAP-128/build-the-docs-engine-mdx-docs-stored-in-the-repo-rendered-in-app"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:53:28.407Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-128: Build the docs engine: MDX docs stored in the repo, rendered in-app, searchable and versioned with git

@@ -17,6 +17,8 @@ key: "migration/stripe-quickbooks"
 url: "https://linear.app/paperos/issue/PAP-206/import-stripe-customers-and-subscriptions-and-quickbooksxero-charts-of"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:45.105Z"
+model: null
+effort: null
 ---
 
 # PAP-206: Import Stripe customers and subscriptions and QuickBooks/Xero charts of accounts into the ledger

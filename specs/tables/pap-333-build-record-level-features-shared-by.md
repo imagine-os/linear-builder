@@ -17,6 +17,8 @@ key: "gap/tables/record-detail"
 url: "https://linear.app/paperos/issue/PAP-333/build-record-level-features-shared-by-every-module-record-detail-page"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:05.600Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-333: Build record-level features shared by every module: record detail page and panel routing, activity timeline, attachments tab, per-record comments and field history with undo

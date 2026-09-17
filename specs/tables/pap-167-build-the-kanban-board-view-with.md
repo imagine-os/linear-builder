@@ -17,6 +17,8 @@ key: "tables/kanban-view"
 url: "https://linear.app/paperos/issue/PAP-167/build-the-kanban-board-view-with-swimlanes-wip-limits-and-drag-and"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:34.130Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-167: Build the kanban board view with swimlanes, WIP limits and drag-and-drop

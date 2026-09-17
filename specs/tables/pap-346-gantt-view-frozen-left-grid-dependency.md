@@ -17,6 +17,8 @@ key: "tables/time/gantt"
 url: "https://linear.app/paperos/issue/PAP-346/gantt-view-frozen-left-grid-dependency-arrows-critical-path-progress"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:37.290Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-346: Gantt view: frozen left grid, dependency arrows, critical path, progress and working days

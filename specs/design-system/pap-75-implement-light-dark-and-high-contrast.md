@@ -17,6 +17,8 @@ key: "design-system/theming"
 url: "https://linear.app/paperos/issue/PAP-75/implement-light-dark-and-high-contrast-themes-plus-per-tenant-brand"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:18:12.905Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-75: Implement light, dark and high-contrast themes plus per-tenant brand theming with runtime token override

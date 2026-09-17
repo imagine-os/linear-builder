@@ -17,6 +17,8 @@ key: "gap/app-shell/onboarding-wizard"
 url: "https://linear.app/paperos/issue/PAP-367/build-the-first-run-tenant-onboarding-wizard-create-organisation"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:01:27.454Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-367: Build the first-run tenant onboarding wizard: create organisation, choose business template, invite team, connect billing, land on a seeded dashboard

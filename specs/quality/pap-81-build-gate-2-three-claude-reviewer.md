@@ -17,6 +17,8 @@ key: "quality/review-agents"
 url: "https://linear.app/paperos/issue/PAP-81/build-gate-2-three-claude-reviewer-agents-correctness-security-spec"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:04:56.488Z"
+model: null
+effort: null
 ---
 
 # PAP-81: Build gate 2: three Claude reviewer agents (correctness, security, spec-conformance) posting structured PR reviews

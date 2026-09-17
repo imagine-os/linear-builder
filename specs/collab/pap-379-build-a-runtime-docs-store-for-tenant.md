@@ -17,6 +17,8 @@ key: "collab/runtime-docs-store"
 url: "https://linear.app/paperos/issue/PAP-379/build-a-runtime-docs-store-for-tenant-authored-documents-yjs-backed"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:14.622Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-379: Build a runtime docs store for tenant-authored documents: Yjs-backed pages in Postgres with the same routes, search registration and comment anchors as repo MDX

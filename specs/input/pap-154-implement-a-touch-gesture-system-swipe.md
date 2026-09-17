@@ -17,6 +17,8 @@ key: "input/touch-gestures"
 url: "https://linear.app/paperos/issue/PAP-154/implement-a-touch-gesture-system-swipe-pinch-long-press-with-haptics"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:43.005Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-154: Implement a touch gesture system (swipe, pinch, long-press) with haptics on mobile targets

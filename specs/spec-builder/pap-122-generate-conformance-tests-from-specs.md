@@ -17,6 +17,8 @@ key: "spec-builder/conformance-tests"
 url: "https://linear.app/paperos/issue/PAP-122/generate-conformance-tests-from-specs-access-matrix-required"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:50:47.792Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-122: Generate conformance tests from specs (access matrix, required components, states) into CI gate 1

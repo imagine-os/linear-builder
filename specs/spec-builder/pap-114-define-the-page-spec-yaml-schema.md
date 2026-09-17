@@ -17,6 +17,8 @@ key: "spec-builder/schema"
 url: "https://linear.app/paperos/issue/PAP-114/define-the-pagespecyaml-schema-purpose-logic-access-data-integrations"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:16.745Z"
+model: "claude-fable-5-1"
+effort: "high"
 ---
 
 # PAP-114: Define the page.spec.yaml schema: purpose, logic, access, data, integrations, layout, components, states, events, edge cases

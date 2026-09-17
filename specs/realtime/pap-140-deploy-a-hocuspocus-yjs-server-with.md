@@ -17,6 +17,8 @@ key: "realtime/yjs-server"
 url: "https://linear.app/paperos/issue/PAP-140/deploy-a-hocuspocus-yjs-server-with-auth-hook-postgres-persistence-and"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:46.762Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-140: Deploy a Hocuspocus (Yjs) server with auth hook, Postgres persistence and room-per-document

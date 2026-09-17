@@ -17,6 +17,8 @@ key: "pm-linear/weekly-reaudit"
 url: "https://linear.app/paperos/issue/PAP-306/run-a-weekly-plan-re-audit-snapshot-linear-detect-dependency-drift"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:01.144Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-306: Run a weekly plan re-audit: snapshot Linear, detect dependency drift, cycles, stale In Progress sessions, issues without specs; post the report to Linear

@@ -17,6 +17,8 @@ key: "agents/skills-library"
 url: "https://linear.app/paperos/issue/PAP-105/build-the-shared-skills-library-page-from-spec-review-pr-screenshot"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:17.986Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-105: Build the shared skills library (page-from-spec, review-pr, screenshot-audit, write-adr, linear-update) as .claude/skills

@@ -17,6 +17,8 @@ key: "child/PAP-206/1"
 url: "https://linear.app/paperos/issue/PAP-424/quickbooks-online-and-xero-connectors-chart-of-accounts-opening"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:51.916Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-424: QuickBooks Online and Xero connectors: chart of accounts, opening balances on a conversion date, optional journal and invoice history

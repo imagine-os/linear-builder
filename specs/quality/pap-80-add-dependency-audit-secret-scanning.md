@@ -17,6 +17,8 @@ key: "quality/security-scans"
 url: "https://linear.app/paperos/issue/PAP-80/add-dependency-audit-secret-scanning-semgrep-sast-and-container"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:10.757Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-80: Add dependency audit, secret scanning, Semgrep SAST and container scanning to CI

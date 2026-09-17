@@ -17,6 +17,8 @@ key: "child/PAP-205/0"
 url: "https://linear.app/paperos/issue/PAP-420/export-archive-format-v10-and-streaming-export-job-manifest-json"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:51.916Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-420: Export archive format v1.0 and streaming export job: manifest, JSON Schemas, table, docs, files, comments, PM, CRM, ledger and audit writers

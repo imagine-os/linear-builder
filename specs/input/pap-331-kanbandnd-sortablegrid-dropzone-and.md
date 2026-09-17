@@ -17,6 +17,8 @@ key: "input/dnd/kanban-grid-dropzone-crosswindow"
 url: "https://linear.app/paperos/issue/PAP-331/kanbandnd-sortablegrid-dropzone-and-cross-window-drag"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:30.221Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-331: KanbanDnd, SortableGrid, DropZone and cross-window drag

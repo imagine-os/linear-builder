@@ -17,6 +17,8 @@ key: "libraries/scout-agent"
 url: "https://linear.app/paperos/issue/PAP-218/create-the-scout-character-routine-weekly-scan-for-new-libraries"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:19.840Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-218: Create the Scout character routine: weekly scan for new libraries relevant to open issues

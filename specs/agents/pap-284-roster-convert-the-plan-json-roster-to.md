@@ -17,6 +17,8 @@ key: "agents/roster-v1/yaml"
 url: "https://linear.app/paperos/issue/PAP-284/roster-convert-the-planjson-roster-to-37-validated-character-yaml"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:09.762Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-284: Roster: convert the plan.json roster to 37 validated character YAML files

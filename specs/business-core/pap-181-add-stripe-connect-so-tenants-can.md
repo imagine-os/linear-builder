@@ -17,6 +17,8 @@ key: "business-core/stripe-connect"
 url: "https://linear.app/paperos/issue/PAP-181/add-stripe-connect-so-tenants-can-accept-payments-and-receive-payouts"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:45.105Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-181: Add Stripe Connect so tenants can accept payments and receive payouts

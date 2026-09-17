@@ -17,6 +17,8 @@ key: "design-system/figma-sync"
 url: "https://linear.app/paperos/issue/PAP-77/export-tokens-to-figma-variables-and-document-the-round-trip-or-record"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:18:13.107Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-77: Export tokens to Figma variables and document the round-trip, or record the decision to skip Figma

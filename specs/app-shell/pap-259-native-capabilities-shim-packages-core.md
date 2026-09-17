@@ -17,6 +17,8 @@ key: "child/PAP-20/4"
 url: "https://linear.app/paperos/issue/PAP-259/native-capabilities-shim-packagescorenative-with-web-fallbacks"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:35.093Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-259: Native capabilities shim (packages/core/native) with web fallbacks

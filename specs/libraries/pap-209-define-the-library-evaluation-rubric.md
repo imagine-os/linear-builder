@@ -17,6 +17,8 @@ key: "libraries/eval-rubric"
 url: "https://linear.app/paperos/issue/PAP-209/define-the-library-evaluation-rubric-license-maintenance-bundle-size"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T05:19:20.671Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-209: Define the library evaluation rubric (license, maintenance, bundle size, a11y, TS quality, agent-friendliness) and ADR template

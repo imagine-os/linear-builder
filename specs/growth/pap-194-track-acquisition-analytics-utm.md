@@ -17,6 +17,8 @@ key: "growth/attribution"
 url: "https://linear.app/paperos/issue/PAP-194/track-acquisition-analytics-utm-referral-funnel-with-a-privacy-first"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:32.030Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-194: Track acquisition analytics (UTM, referral, funnel) with a privacy-first event pipeline

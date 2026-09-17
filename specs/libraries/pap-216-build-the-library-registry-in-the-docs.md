@@ -17,6 +17,8 @@ key: "libraries/registry"
 url: "https://linear.app/paperos/issue/PAP-216/build-the-library-registry-in-the-docs-system-adopted-trialing"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T05:21:25.145Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-216: Build the library registry in the docs system: adopted, trialing, rejected with reasons and owners

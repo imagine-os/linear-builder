@@ -17,6 +17,8 @@ key: "gap/data-layer/filter-grammar"
 url: "https://linear.app/paperos/issue/PAP-279/specify-the-shared-filter-and-condition-grammar-packagescorefilter-one"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:04.181Z"
+model: "claude-fable-5-1"
+effort: "high"
 ---
 
 # PAP-279: Specify the shared filter and condition grammar (`packages/core/filter`): one Zod FilterTree with SQL and in-memory evaluators

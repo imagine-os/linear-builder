@@ -17,6 +17,8 @@ key: "gap/forge/non-linux-runners"
 url: "https://linear.app/paperos/issue/PAP-371/provision-non-linux-ci-capacity-hosted-macos-runners-xcode-voiceover"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:01:30.840Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-371: Provision non-Linux CI capacity: hosted macOS runners (Xcode, VoiceOver) and a Windows VM runner (NVDA, MSI signing) with cost caps and secrets

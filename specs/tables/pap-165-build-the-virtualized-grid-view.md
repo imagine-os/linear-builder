@@ -17,6 +17,8 @@ key: "tables/grid-view"
 url: "https://linear.app/paperos/issue/PAP-165/build-the-virtualized-grid-view-tanstack-table-with-inline-edit-column"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:14.604Z"
+model: null
+effort: null
 ---
 
 # PAP-165: Build the virtualized grid view (TanStack Table) with inline edit, column resize/reorder, freeze and cell types

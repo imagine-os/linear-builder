@@ -17,6 +17,8 @@ key: "collab/notifications"
 url: "https://linear.app/paperos/issue/PAP-136/build-a-notification-center-in-app-email-slack-with-per-audience"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:27.539Z"
+model: null
+effort: null
 ---
 
 # PAP-136: Build a notification center (in-app, email, Slack) with per-audience preferences

@@ -17,6 +17,8 @@ key: "design-system/date-pickers-forms"
 url: "https://linear.app/paperos/issue/PAP-233/build-date-time-date-range-and-calendar-pickers-plus-form-state"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:47.788Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-233: Build date, time, date-range and calendar pickers plus form-state adapters (react-hook-form Field, arrays, async validation)

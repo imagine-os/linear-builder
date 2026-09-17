@@ -17,6 +17,8 @@ key: "agents/roster-v1"
 url: "https://linear.app/paperos/issue/PAP-104/write-the-nine-lead-characters-and-their-sub-characters-as"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:18.064Z"
+model: null
+effort: null
 ---
 
 # PAP-104: Write the nine lead characters and their sub-characters as .claude/agents definitions with system prompts

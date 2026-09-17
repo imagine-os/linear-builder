@@ -17,6 +17,8 @@ key: "agents/roster-v1/build"
 url: "https://linear.app/paperos/issue/PAP-287/roster-build-claudeagents-generation-ci-drift-check-and-smoke-tasks"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:10.016Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-287: Roster: build `.claude/agents` generation, CI drift check and smoke tasks per lead

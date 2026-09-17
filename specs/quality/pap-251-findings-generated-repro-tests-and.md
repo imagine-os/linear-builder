@@ -17,6 +17,8 @@ key: "quality/edge-case-hunter/findings-repros-nightly"
 url: "https://linear.app/paperos/issue/PAP-251/findings-generated-repro-tests-and-nightly-library-run"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:04:42.069Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-251: Findings, generated repro tests and nightly library run

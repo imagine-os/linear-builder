@@ -17,6 +17,8 @@ key: "forge/mirror"
 url: "https://linear.app/paperos/issue/PAP-47/configure-bidirectional-push-mirroring-between-forgejo-and-the-github"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:45.357Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-47: Configure bidirectional push mirroring between Forgejo and the GitHub org imagine-os for all repos

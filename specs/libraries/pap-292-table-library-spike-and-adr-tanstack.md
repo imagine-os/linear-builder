@@ -17,6 +17,8 @@ key: "child/PAP-213/0"
 url: "https://linear.app/paperos/issue/PAP-292/table-library-spike-and-adr-tanstack-table-plus-virtual-ag-grid"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:24.319Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-292: Table library spike and ADR: TanStack Table plus Virtual, AG Grid Community, Glide Data Grid and react-data-grid at 100k rows

@@ -17,6 +17,8 @@ key: "business-core/entitlements"
 url: "https://linear.app/paperos/issue/PAP-178/map-plans-to-feature-entitlements-enforced-by-the-permission-engine"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:12.599Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-178: Map plans to feature entitlements enforced by the permission engine

@@ -17,6 +17,8 @@ key: "app-shell/create-cli"
 url: "https://linear.app/paperos/issue/PAP-22/write-paperos-create-app-cli-that-clones-the-template-into-an-imagine"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:05:36.074Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-22: Write `paperos create <app>` CLI that clones the template into an imagine-os repo and wires Forgejo mirror, CI, Pages and a Linear project

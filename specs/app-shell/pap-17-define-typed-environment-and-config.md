@@ -17,6 +17,8 @@ key: "app-shell/env-config"
 url: "https://linear.app/paperos/issue/PAP-17/define-typed-environment-and-config-layer-with-per-target-secret"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:05:33.805Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-17: Define typed environment and config layer with per-target secret storage (web, desktop keychain, mobile secure storage)

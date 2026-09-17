@@ -17,6 +17,8 @@ key: "app-shell/device-matrix-research"
 url: "https://linear.app/paperos/issue/PAP-14/research-and-document-the-target-device-matrix-phone-tablet-laptop"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:05:33.425Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-14: Research and document the target device matrix (phone, tablet, laptop, desktop, TV/kiosk, foldable) with breakpoints and test devices

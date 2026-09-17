@@ -17,6 +17,8 @@ key: "business-core/ledger/hashchain-reversal-close"
 url: "https://linear.app/paperos/issue/PAP-393/hash-chain-with-nightly-verification-ledgerreverse-and-the-period"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:45.105Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-393: Hash chain with nightly verification, ledger.reverse and the period close and lock workflow

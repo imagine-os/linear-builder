@@ -17,6 +17,8 @@ key: "forge/in-app-git"
 url: "https://linear.app/paperos/issue/PAP-54/expose-repo-browsing-diffs-and-commit-history-inside-paperos-via-the"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:45.357Z"
+model: null
+effort: null
 ---
 
 # PAP-54: Expose repo browsing, diffs and commit history inside PaperOS via the Forgejo API

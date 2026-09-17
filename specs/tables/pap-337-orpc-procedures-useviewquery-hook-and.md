@@ -17,6 +17,8 @@ key: "tables/compiler/api-hook-bench"
 url: "https://linear.app/paperos/issue/PAP-337/orpc-procedures-useviewquery-hook-and-the-100k-row-benchmark"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:32.030Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-337: oRPC procedures, useViewQuery hook and the 100k-row benchmark

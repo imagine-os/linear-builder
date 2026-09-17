@@ -17,6 +17,8 @@ key: "migration/format-research"
 url: "https://linear.app/paperos/issue/PAP-198/catalog-export-formats-and-api-limits-of-airtable-notion-clickup"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:10.298Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-198: Catalog export formats and API limits of Airtable, Notion, ClickUp, Monday, HubSpot and QuickBooks

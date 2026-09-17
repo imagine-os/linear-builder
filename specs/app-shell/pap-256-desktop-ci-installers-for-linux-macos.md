@@ -17,6 +17,8 @@ key: "child/PAP-19/1"
 url: "https://linear.app/paperos/issue/PAP-256/desktop-ci-installers-for-linux-macos-and-windows-via-tauri-action"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:12:02.402Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-256: Desktop CI installers for Linux, macOS and Windows via tauri-action with draft release

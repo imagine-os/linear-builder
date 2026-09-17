@@ -17,6 +17,8 @@ key: "identity/better-auth/oidc-provider"
 url: "https://linear.app/paperos/issue/PAP-226/oidc-provider-endpoints-for-forgejo-sso"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:04:36.750Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-226: OIDC provider endpoints for Forgejo SSO

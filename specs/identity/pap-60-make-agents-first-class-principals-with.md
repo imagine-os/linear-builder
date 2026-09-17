@@ -17,6 +17,8 @@ key: "identity/agent-principals"
 url: "https://linear.app/paperos/issue/PAP-60/make-agents-first-class-principals-with-scoped-api-keys-rate-limits"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:47.788Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-60: Make agents first-class principals with scoped API keys, rate limits and visible attribution

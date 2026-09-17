@@ -17,6 +17,8 @@ key: "agents/session-observability"
 url: "https://linear.app/paperos/issue/PAP-288/add-agent-session-observability-heartbeats-stuck-session-detection-per"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:09.833Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-288: Add agent session observability: heartbeats, stuck-session detection, per-session OTel spans and a `/status` contract shared by the org chart, board cards and cost controls

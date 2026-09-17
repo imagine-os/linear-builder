@@ -17,6 +17,8 @@ key: "input/drag-drop"
 url: "https://linear.app/paperos/issue/PAP-155/build-accessible-drag-and-drop-dnd-kit-for-tables-kanban-and-canvas"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:03:48.820Z"
+model: null
+effort: null
 ---
 
 # PAP-155: Build accessible drag-and-drop (dnd-kit) for tables, kanban and canvas with a keyboard alternative

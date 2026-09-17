@@ -17,6 +17,8 @@ key: "tables/fields/choice-people-attachment"
 url: "https://linear.app/paperos/issue/PAP-339/choice-people-and-attachment-types-select-multiselect-user-attachment"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:34.130Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-339: Choice, people and attachment types (select, multiSelect, user, attachment) with FieldSettingsPanel

@@ -17,6 +17,8 @@ key: "quality/playwright-matrix"
 url: "https://linear.app/paperos/issue/PAP-82/build-gate-3-playwright-screenshot-suite-across-the-7-width-breakpoint"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:10.905Z"
+model: null
+effort: null
 ---
 
 # PAP-82: Build gate 3: Playwright screenshot suite across the 7-width breakpoint matrix, all themes and key pages with baseline diffs

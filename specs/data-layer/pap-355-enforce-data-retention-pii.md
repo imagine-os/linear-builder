@@ -17,6 +17,8 @@ key: "security/retention-pii"
 url: "https://linear.app/paperos/issue/PAP-355/enforce-data-retention-pii-classification-and-tenant-hard-purge-pii"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:05.485Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-355: Enforce data retention, PII classification and tenant hard-purge: `pii` column annotations driving redaction and OTel filters, per-table retention jobs, and the export-first purge after the grace period

@@ -17,6 +17,8 @@ key: "gap/app-shell/client-errors"
 url: "https://linear.app/paperos/issue/PAP-368/define-the-client-error-handling-and-crash-reporting-contract-error"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:01:27.454Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-368: Define the client error handling and crash reporting contract: error boundaries, error code catalogue, user-facing copy, browser and Tauri crash reports into observability

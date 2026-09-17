@@ -17,6 +17,8 @@ key: "identity/auth-research"
 url: "https://linear.app/paperos/issue/PAP-56/compare-better-auth-lucia-clerk-and-authjs-for-self-hosting"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:18:09.134Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-56: Compare Better Auth, Lucia, Clerk and Auth.js for self-hosting, organizations and passkeys; write ADR

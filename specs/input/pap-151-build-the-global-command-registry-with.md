@@ -17,6 +17,8 @@ key: "input/command-registry"
 url: "https://linear.app/paperos/issue/PAP-151/build-the-global-command-registry-with-keyboard-shortcuts-command"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:03:42.162Z"
+model: null
+effort: null
 ---
 
 # PAP-151: Build the global command registry with keyboard shortcuts, command palette and per-page scoping

@@ -17,6 +17,8 @@ key: "agents/eval-harness"
 url: "https://linear.app/paperos/issue/PAP-110/create-an-eval-harness-with-golden-tasks-per-character-scored-nightly"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:17.696Z"
+model: null
+effort: null
 ---
 
 # PAP-110: Create an eval harness with golden tasks per character, scored nightly, regressions flagged in Linear

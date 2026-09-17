@@ -17,6 +17,8 @@ key: "security/credential-broker"
 url: "https://linear.app/paperos/issue/PAP-300/build-the-credential-broker-sessions-hold-no-raw-secrets-an-egress"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:07.065Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-300: Build the credential broker: sessions hold no raw secrets; an egress proxy injects short-lived per-session tokens (GitHub App, Forgejo, Linear proxy, PaperOS agent keys, Anthropic) with usage logs and one-command revoke-all

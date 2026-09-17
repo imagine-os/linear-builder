@@ -17,6 +17,8 @@ key: "tables/filter-sort-group-ui"
 url: "https://linear.app/paperos/issue/PAP-166/build-the-filter-builder-andor-groups-multi-sort-and-multi-level"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:37.290Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-166: Build the filter builder (AND/OR groups), multi-sort and multi-level grouping UI with aggregates

@@ -17,6 +17,8 @@ key: "growth/social/model-queue-calendar"
 url: "https://linear.app/paperos/issue/PAP-401/social-schema-approval-state-machine-composer-with-per-platform"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:47.457Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-401: Social schema, approval state machine, composer with per-platform variants, approval queue and calendar

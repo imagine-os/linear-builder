@@ -17,6 +17,8 @@ key: "app-shell/feature-modules"
 url: "https://linear.app/paperos/issue/PAP-28/make-every-platform-capability-a-removable-module-module-manifests"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:01.144Z"
+model: null
+effort: null
 ---
 
 # PAP-28: Make every platform capability a removable module: module manifests, `modules:` in app.spec.yaml, `paperos create --without`, per-tenant module toggles and dead-code checks

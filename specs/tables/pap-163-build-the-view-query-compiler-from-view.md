@@ -17,6 +17,8 @@ key: "tables/query-compiler"
 url: "https://linear.app/paperos/issue/PAP-163/build-the-view-query-compiler-from-view-model-to-sql-and-electric"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:15.060Z"
+model: null
+effort: null
 ---
 
 # PAP-163: Build the view query compiler from view model to SQL and Electric shapes with server-side pagination

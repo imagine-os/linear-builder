@@ -17,6 +17,8 @@ key: "business-core/finance-reports"
 url: "https://linear.app/paperos/issue/PAP-183/generate-pandl-balance-sheet-cash-flow-and-arap-aging-as-table-views"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:46.284Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-183: Generate P&L, balance sheet, cash flow and AR/AP aging as table views

@@ -17,6 +17,8 @@ key: "business-core/ledger/rules-ui-trialbalance"
 url: "https://linear.app/paperos/issue/PAP-394/posting-rule-registry-with-the-first-five-rules-financejournal-ui"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:45.105Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-394: Posting rule registry with the first five rules, /finance/journal UI, trial balance and rebuildBalances

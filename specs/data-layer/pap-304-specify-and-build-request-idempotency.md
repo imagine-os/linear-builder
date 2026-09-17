@@ -17,6 +17,8 @@ key: "contracts/idempotency-rate-limits"
 url: "https://linear.app/paperos/issue/PAP-304/specify-and-build-request-idempotency-and-rate-limiting-idempotency"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:04:59.942Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-304: Specify and build request idempotency and rate limiting: `Idempotency-Key` header, `idempotency_keys` table with replay semantics, `POST /api/v1/rpc/batch`, Postgres-backed token buckets per actor, API key and IP

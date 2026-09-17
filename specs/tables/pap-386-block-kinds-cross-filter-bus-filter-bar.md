@@ -17,6 +17,8 @@ key: "tables/dashboard/blocks-crossfilter"
 url: "https://linear.app/paperos/issue/PAP-386/block-kinds-cross-filter-bus-filter-bar-params-and-deep-links"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:44.007Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-386: Block kinds, cross-filter bus, filter bar, params and deep links

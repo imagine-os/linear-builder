@@ -17,6 +17,8 @@ key: "security/founder-break-glass"
 url: "https://linear.app/paperos/issue/PAP-301/harden-the-founder-root-of-trust-hardware-key-mfa-on-every-external"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:06.989Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-301: Harden the founder root of trust: hardware-key MFA on every external account, an offline recovery age key with escrow, a one-command revoke-all, and the break-glass runbook filed as a single Needs Justin checklist

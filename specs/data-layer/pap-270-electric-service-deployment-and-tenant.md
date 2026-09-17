@@ -17,6 +17,8 @@ key: "child/PAP-36/15"
 url: "https://linear.app/paperos/issue/PAP-270/electric-service-deployment-and-tenant-scoped-shape-proxy-apisyncshape"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:36.535Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-270: Electric service deployment and tenant-scoped shape proxy (/api/sync/shape)

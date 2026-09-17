@@ -17,6 +17,8 @@ key: "collab/notifications/inbox-preferences"
 url: "https://linear.app/paperos/issue/PAP-323/inbox-ui-bell-badge-and-preferences-page"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:28.589Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-323: Inbox UI, bell badge and preferences page

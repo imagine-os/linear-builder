@@ -17,6 +17,8 @@ key: "quality/test-mode-seed"
 url: "https://linear.app/paperos/issue/PAP-240/build-test-mode-seed-and-reset-endpoints-testseed-testreset-with"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:45.357Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-240: Build test-mode seed and reset endpoints (`/__test/seed`, `/__test/reset`) with deterministic fixtures per audience, before Gate 3

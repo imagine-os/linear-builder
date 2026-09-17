@@ -17,6 +17,8 @@ key: "libraries/upgrade-bot"
 url: "https://linear.app/paperos/issue/PAP-217/set-up-renovate-with-grouped-upgrades-and-agent-reviewed-changelog"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T05:21:25.145Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-217: Set up Renovate with grouped upgrades and agent-reviewed changelog summaries

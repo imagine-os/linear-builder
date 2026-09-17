@@ -17,6 +17,8 @@ key: "pm-linear/credit-metering"
 url: "https://linear.app/paperos/issue/PAP-98/track-claude-credit-spend-per-issue-and-project-and-post-a-daily-burn"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:19.146Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-98: Track Claude credit spend per issue and project and post a daily burn report to Linear

@@ -17,6 +17,8 @@ key: "child/PAP-214/0"
 url: "https://linear.app/paperos/issue/PAP-295/decide-jobs-transactional-email-and-pdf-generation-with-docker"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:24.319Z"
+model: "claude-opus-5"
+effort: "medium"
 ---
 
 # PAP-295: Decide jobs, transactional email and PDF generation with Docker measurements: Inngest, Trigger.dev, BullMQ, pg-boss, Graphile Worker; Resend, Postmark, SES, Postal; Playwright PDF, react-pdf, Typst

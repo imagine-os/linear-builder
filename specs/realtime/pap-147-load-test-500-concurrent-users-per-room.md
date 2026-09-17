@@ -17,6 +17,8 @@ key: "realtime/load-test"
 url: "https://linear.app/paperos/issue/PAP-147/load-test-500-concurrent-users-per-room-and-10k-rooms-tune-persistence"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:30.221Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-147: Load test 500 concurrent users per room and 10k rooms; tune persistence and scaling

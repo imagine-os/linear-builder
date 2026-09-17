@@ -17,6 +17,8 @@ key: "collab/canvas/yjs-overlay"
 url: "https://linear.app/paperos/issue/PAP-321/collaborative-overlay-notes-regions-overrides-in-yjs"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:27.539Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-321: Collaborative overlay: notes, regions, overrides in Yjs

@@ -17,6 +17,8 @@ key: "spec-builder/access-section"
 url: "https://linear.app/paperos/issue/PAP-116/specify-the-access-section-format-that-compiles-to-permission-engine"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:06.702Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-116: Specify the access section format that compiles to permission-engine policies

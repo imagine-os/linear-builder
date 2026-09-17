@@ -17,6 +17,8 @@ key: "identity/session-device-management"
 url: "https://linear.app/paperos/issue/PAP-220/build-session-and-device-management-list-and-revoke-sessions-totp"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:46.762Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-220: Build session and device management: list and revoke sessions, TOTP fallback for passkeys, account recovery codes

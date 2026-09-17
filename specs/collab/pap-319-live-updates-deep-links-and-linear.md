@@ -17,6 +17,8 @@ key: "collab/comments/live-deeplinks-linear"
 url: "https://linear.app/paperos/issue/PAP-319/live-updates-deep-links-and-linear-escalation"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:26.414Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-319: Live updates, deep links and Linear escalation

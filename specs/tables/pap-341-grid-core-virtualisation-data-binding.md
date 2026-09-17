@@ -17,6 +17,8 @@ key: "tables/grid/core"
 url: "https://linear.app/paperos/issue/PAP-341/grid-core-virtualisation-data-binding-selection-model-and-keyboard"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:37.290Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-341: Grid core: virtualisation, data binding, selection model and keyboard navigation

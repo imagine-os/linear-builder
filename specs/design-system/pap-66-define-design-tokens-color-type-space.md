@@ -17,6 +17,8 @@ key: "design-system/tokens"
 url: "https://linear.app/paperos/issue/PAP-66/define-design-tokens-color-type-space-radius-motion-elevation-in-dtcg"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:18:10.797Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-66: Define design tokens (color, type, space, radius, motion, elevation) in DTCG JSON compiled to CSS variables

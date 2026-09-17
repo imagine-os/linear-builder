@@ -17,6 +17,8 @@ key: "input/dnd/keyboard-announcements"
 url: "https://linear.app/paperos/issue/PAP-330/keyboard-alternative-announcements-and-focus-restore"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:30.221Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-330: Keyboard alternative, announcements and focus restore

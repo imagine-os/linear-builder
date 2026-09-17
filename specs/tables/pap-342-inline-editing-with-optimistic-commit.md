@@ -17,6 +17,8 @@ key: "tables/grid/editing-clipboard-bulk"
 url: "https://linear.app/paperos/issue/PAP-342/inline-editing-with-optimistic-commit-tsv-clipboard-ranges-and-the"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:35.594Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-342: Inline editing with optimistic commit, TSV clipboard ranges and the bulk actions bar

@@ -17,6 +17,8 @@ key: "data-layer/search"
 url: "https://linear.app/paperos/issue/PAP-39/add-full-text-and-vector-search-tsvector-pgvector-over-any-entity"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:22:46.762Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-39: Add full-text and vector search (tsvector + pgvector) over any entity through a search registry

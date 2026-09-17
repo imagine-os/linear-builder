@@ -17,6 +17,8 @@ key: "growth/social-scheduler"
 url: "https://linear.app/paperos/issue/PAP-190/build-a-social-media-scheduler-with-adapters-x-linkedin-instagram"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:11.592Z"
+model: null
+effort: null
 ---
 
 # PAP-190: Build a social media scheduler with adapters (X, LinkedIn, Instagram, TikTok, YouTube) and an approval queue

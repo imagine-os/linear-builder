@@ -17,6 +17,8 @@ key: "app-shell/new-app-drill"
 url: "https://linear.app/paperos/issue/PAP-29/run-the-blank-screen-to-running-app-drill-time-paperos-create-through"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:26.414Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-29: Run the blank-screen-to-running-app drill: time `paperos create` through first spec'd page, deploy and desktop build; record it; answer PAP-5 with numbers

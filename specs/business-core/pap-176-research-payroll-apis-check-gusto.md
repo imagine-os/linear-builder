@@ -17,6 +17,8 @@ key: "business-core/payroll-research"
 url: "https://linear.app/paperos/issue/PAP-176/research-payroll-apis-check-gusto-embedded-deel-rippling-for"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T05:24:42.837Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-176: Research payroll APIs (Check, Gusto Embedded, Deel, Rippling) for embeddability and pricing; write ADR

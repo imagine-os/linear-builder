@@ -17,6 +17,8 @@ key: "collab/prompt-log-ui"
 url: "https://linear.app/paperos/issue/PAP-135/build-the-prompt-log-browser-filter-by-issue-or-character-replay-a"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:37.290Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-135: Build the prompt log browser: filter by issue or character, replay a session, link to the PR

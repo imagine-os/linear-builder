@@ -17,6 +17,8 @@ key: "pm-linear/orchestrator/deploy"
 url: "https://linear.app/paperos/issue/PAP-283/orchestrator-deployment-on-coolify-status-endpoint-and-runbook"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:08.980Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-283: Orchestrator: deployment on Coolify, `/status` endpoint and runbook

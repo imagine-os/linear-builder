@@ -17,6 +17,8 @@ key: "tables/grid/columns-groups-panel"
 url: "https://linear.app/paperos/issue/PAP-343/column-operations-grouping-headers-aggregate-footer-and-recordpanel"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:35.594Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-343: Column operations, grouping headers, aggregate footer and RecordPanel

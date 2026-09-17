@@ -17,6 +17,8 @@ key: "design-system/primitives"
 url: "https://linear.app/paperos/issue/PAP-67/adopt-base-uiradix-primitives-with-tailwind-v4-and-build-20-core"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:18:10.888Z"
+model: null
+effort: null
 ---
 
 # PAP-67: Adopt Base UI/Radix primitives with Tailwind v4 and build 20 core components (Button, Input, Select, Dialog, Menu, Tabs, Toast, Tooltip, Popover...)

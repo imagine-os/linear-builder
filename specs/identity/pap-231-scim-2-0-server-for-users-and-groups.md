@@ -17,6 +17,8 @@ key: "identity/sso-scim/scim-server"
 url: "https://linear.app/paperos/issue/PAP-231/scim-20-server-for-users-and-groups"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:23:19.310Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-231: SCIM 2.0 server for Users and Groups

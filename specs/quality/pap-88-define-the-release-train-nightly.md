@@ -17,6 +17,8 @@ key: "quality/release-train"
 url: "https://linear.app/paperos/issue/PAP-88/define-the-release-train-nightly-staging-deploy-weekly-release"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:05.970Z"
+model: null
+effort: null
 ---
 
 # PAP-88: Define the release train: nightly staging deploy, weekly release candidate to Needs Justin with consolidated review report

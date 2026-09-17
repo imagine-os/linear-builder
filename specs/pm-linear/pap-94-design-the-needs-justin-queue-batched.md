@@ -17,6 +17,8 @@ key: "pm-linear/justin-queue"
 url: "https://linear.app/paperos/issue/PAP-94/design-the-needs-justin-queue-batched-decisions-one-click"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:19.435Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-94: Design the Needs Justin queue: batched decisions, one-click approve/reject comments, max five open items rule

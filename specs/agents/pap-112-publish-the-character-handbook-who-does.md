@@ -17,6 +17,8 @@ key: "agents/character-docs"
 url: "https://linear.app/paperos/issue/PAP-112/publish-the-character-handbook-who-does-what-how-to-summon-them-what"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:19.840Z"
+model: "claude-sonnet-5"
+effort: "medium"
 ---
 
 # PAP-112: Publish the character handbook: who does what, how to summon them, what they may not do

@@ -17,6 +17,8 @@ key: "gp/app-shell/starter-surfaces"
 url: "https://linear.app/paperos/issue/PAP-363/build-the-default-surfaces-starter-kit-customer-portal-and-staff"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:11.039Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-363: Build the default surfaces starter kit: customer portal and staff console page specs, a seeded demo tenant per audience and a first-run checklist for every generated app

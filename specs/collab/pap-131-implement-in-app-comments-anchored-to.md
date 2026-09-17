@@ -17,6 +17,8 @@ key: "collab/comments"
 url: "https://linear.app/paperos/issue/PAP-131/implement-in-app-comments-anchored-to-any-entity-page-element-or-doc"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:04:58.278Z"
+model: null
+effort: null
 ---
 
 # PAP-131: Implement in-app comments anchored to any entity, page element or doc block with mentions and resolve

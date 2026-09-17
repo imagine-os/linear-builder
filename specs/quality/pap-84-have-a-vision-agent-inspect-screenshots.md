@@ -17,6 +17,8 @@ key: "quality/screenshot-annotation"
 url: "https://linear.app/paperos/issue/PAP-84/have-a-vision-agent-inspect-screenshots-for-overflow-misalignment"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T06:43:12.350Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-84: Have a vision agent inspect screenshots for overflow, misalignment, contrast and truncation and post annotated findings

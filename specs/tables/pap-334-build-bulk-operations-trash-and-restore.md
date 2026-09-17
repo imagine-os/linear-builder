@@ -17,6 +17,8 @@ key: "gap/tables/bulk-trash"
 url: "https://linear.app/paperos/issue/PAP-334/build-bulk-operations-trash-and-restore-multi-row-edit-and-delete-with"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:03.569Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-334: Build bulk operations, trash and restore: multi-row edit and delete with server batching, soft-delete trash with 30-day restore, undo toast

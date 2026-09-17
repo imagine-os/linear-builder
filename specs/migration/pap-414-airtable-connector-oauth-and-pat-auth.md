@@ -17,6 +17,8 @@ key: "child/PAP-202/0"
 url: "https://linear.app/paperos/issue/PAP-414/airtable-connector-oauth-and-pat-auth-metadata-discovery-record"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:50.203Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-414: Airtable connector: OAuth and PAT auth, metadata discovery, record streaming with 5 rps token bucket and expiring-attachment fetch

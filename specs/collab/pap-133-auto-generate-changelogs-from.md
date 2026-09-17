@@ -17,6 +17,8 @@ key: "collab/changelog"
 url: "https://linear.app/paperos/issue/PAP-133/auto-generate-changelogs-from-conventional-commits-and-pr-summaries"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:53:28.970Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-133: Auto-generate changelogs from conventional commits and PR summaries, rendered per app and per tenant

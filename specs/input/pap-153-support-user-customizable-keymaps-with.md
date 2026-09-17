@@ -17,6 +17,8 @@ key: "input/keymaps"
 url: "https://linear.app/paperos/issue/PAP-153/support-user-customizable-keymaps-with-presets-default-vim-style"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:22.997Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-153: Support user-customizable keymaps with presets (default, Vim-style, Linear-like) synced per user

@@ -17,6 +17,8 @@ key: "tables/view-sharing"
 url: "https://linear.app/paperos/issue/PAP-172/add-saved-views-personal-vs-shared-views-public-embeds-and-per"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:37.290Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-172: Add saved views, personal vs shared views, public embeds and per-audience defaults

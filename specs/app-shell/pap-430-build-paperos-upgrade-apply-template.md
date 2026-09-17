@@ -17,6 +17,8 @@ key: "gp/app-shell/upgrade"
 url: "https://linear.app/paperos/issue/PAP-430/build-paperos-upgrade-apply-template-updates-to-generated-apps-with"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:17.930Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-430: Build `paperos upgrade`: apply template updates to generated apps with three-way merge, codemods, regeneration and an upgrade pull request

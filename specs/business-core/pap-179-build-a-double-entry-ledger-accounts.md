@@ -17,6 +17,8 @@ key: "business-core/ledger"
 url: "https://linear.app/paperos/issue/PAP-179/build-a-double-entry-ledger-accounts-journal-entries-periods-in"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:12.458Z"
+model: null
+effort: null
 ---
 
 # PAP-179: Build a double-entry ledger (accounts, journal entries, periods) in Postgres with immutability guarantees

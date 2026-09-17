@@ -17,6 +17,8 @@ key: "collab/screenshot-annotations"
 url: "https://linear.app/paperos/issue/PAP-137/allow-annotating-screenshots-and-video-frames-with-comments-that"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:27.539Z"
+model: "claude-sonnet-5"
+effort: "low"
 ---
 
 # PAP-137: Allow annotating screenshots and video frames with comments that create Linear issues

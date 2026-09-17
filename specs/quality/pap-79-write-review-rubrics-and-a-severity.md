@@ -17,6 +17,8 @@ key: "quality/review-rubrics"
 url: "https://linear.app/paperos/issue/PAP-79/write-review-rubrics-and-a-severity-taxonomy-shared-by-all-reviewer"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T04:18:15.177Z"
+model: "claude-fable-5-1"
+effort: "high"
 ---
 
 # PAP-79: Write review rubrics and a severity taxonomy shared by all reviewer agents and humans

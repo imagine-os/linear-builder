@@ -17,6 +17,8 @@ key: "security/security-telemetry"
 url: "https://linear.app/paperos/issue/PAP-356/build-security-telemetry-and-alerting-auth-anomalies-rls-denials-agent"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:06:03.842Z"
+model: "claude-opus-5"
+effort: "high"
 ---
 
 # PAP-356: Build security telemetry and alerting: auth anomalies, RLS denials, agent policy and egress denials, canary hits, webhook signature failures and backup age routed to Linear with a weekly security digest

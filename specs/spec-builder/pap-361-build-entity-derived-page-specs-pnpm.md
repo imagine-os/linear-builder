@@ -17,6 +17,8 @@ key: "gp/spec-builder/entity-pages"
 url: "https://linear.app/paperos/issue/PAP-361/build-entity-derived-page-specs-pnpm-spec-genentity-pages-derives-list"
 source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:05:10.040Z"
+model: "claude-sonnet-5"
+effort: "high"
 ---
 
 # PAP-361: Build entity-derived page specs: `pnpm spec gen:entity-pages` derives list, detail, form and settings pages per entity and audience with view specs, comment anchors and access rules
