@@ -14,7 +14,9 @@ blockedBy: ["PAP-30", "PAP-37", "PAP-140", "PAP-96"]
 blocks: ["PAP-88"]
 source: "round2/agent6/pending-issues.json (Security & Threat Model)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
-status: "pending"
+identifier: "PAP-354"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Add object-storage, Yjs, orchestrator and sops-key backups and a monthly platform-wide disaster-recovery drill restoring everything on a fresh host against RPO 1 h and RTO 4 h

@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/gaps-pending-0.json (agent0/gaps.py)"
 linearDocument: null
-status: "pending"
+identifier: "PAP-368"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Define the client error handling and crash reporting contract: error boundaries, error code catalogue, user-facing copy, browser and Tauri crash reports into observability

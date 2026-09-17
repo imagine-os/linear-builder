@@ -14,7 +14,9 @@ blockedBy: ["agents/roster-v1/yaml", "agents/roster-v1/lead-prompts", "agents/ro
 blocks: []
 source: "round2/agent2/new_agents.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
-status: "pending"
+identifier: "PAP-287"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Roster: build `.claude/agents` generation, CI drift check and smoke tasks per lead

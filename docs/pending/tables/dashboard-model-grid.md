@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent4/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
-status: "pending"
+identifier: "PAP-385"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Dashboard tables, layout engine, breakpoint layouts and drag or resize with keyboard moves

@@ -14,7 +14,9 @@ blockedBy: ["PAP-22", "PAP-26", "PAP-15"]
 blocks: []
 source: "round2/pending-issues-golden-path.json (Golden Path)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
-status: "pending"
+identifier: "PAP-365"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build golden path provisioning: parallel idempotent steps, warm pools for preview slots, databases and mirror repos, `--resume` and per-step time budgets in `paperos create`

@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent5/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
-status: "pending"
+identifier: "PAP-297"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Confirm validation and runtime, cross-link confirmed choices, consolidate ADRs, compose files and registry entries

@@ -14,7 +14,9 @@ blockedBy: ["PAP-93", "PAP-105", "PAP-99"]
 blocks: []
 source: "round2/agent2/new_pm.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
-status: "pending"
+identifier: "PAP-306"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Run a weekly plan re-audit: snapshot Linear, detect dependency drift, cycles, stale In Progress sessions, issues without specs; post the report to Linear

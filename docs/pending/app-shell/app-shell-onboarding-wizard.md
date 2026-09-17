@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/gaps-pending-0.json (agent0/gaps.py)"
 linearDocument: null
-status: "pending"
+identifier: "PAP-367"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build the first-run tenant onboarding wizard: create organisation, choose business template, invite team, connect billing, land on a seeded dashboard

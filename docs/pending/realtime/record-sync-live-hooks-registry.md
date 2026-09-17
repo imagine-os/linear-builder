@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent3/pending-issues.json"
 linearDocument: null
-status: "pending"
+identifier: "PAP-326"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Live record hooks and shape registry additions

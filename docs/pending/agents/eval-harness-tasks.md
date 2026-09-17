@@ -14,7 +14,9 @@ blockedBy: ["agents/eval-harness/runner"]
 blocks: ["agents/eval-harness/judge"]
 source: "round2/agent2/new_agents.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
-status: "pending"
+identifier: "PAP-309"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Eval harness: golden task set (three per lead, one per sub) with fixture repos and answer keys

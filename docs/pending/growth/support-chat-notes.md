@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent4/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
-status: "pending"
+identifier: "PAP-411"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Portal SupportChat widget with live sync and presence, unauthenticated email capture and internal notes on comment threads

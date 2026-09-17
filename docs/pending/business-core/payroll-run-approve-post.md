@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent4/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
-status: "pending"
+identifier: "PAP-400"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Payroll run flow, typed-total approval, webhook status transitions, ledger posting and the paystub portal page

@@ -14,7 +14,9 @@ blockedBy: ["agents/roster-v1/yaml"]
 blocks: ["agents/roster-v1/build"]
 source: "round2/agent2/new_agents.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
-status: "pending"
+identifier: "PAP-286"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Roster: write the 28 sub-character prompts and delegation descriptions

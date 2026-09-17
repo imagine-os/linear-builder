@@ -14,7 +14,9 @@ blockedBy: ["gp/app-shell/driver", "gp/app-shell/provisioning", "PAP-239"]
 blocks: ["PAP-29"]
 source: "round2/pending-issues-golden-path.json (Golden Path)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
-status: "pending"
+identifier: "PAP-429"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build the golden path acceptance test: nightly CI runs three canned ideas from paragraph to preview URL, asserts gates 1 to 4 and under ten minutes, publishes `golden-path.json`, badge and friction issues

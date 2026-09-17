@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent3/pending-issues.json"
 linearDocument: null
-status: "pending"
+identifier: "PAP-320"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Canvas node and edge types with graph loader

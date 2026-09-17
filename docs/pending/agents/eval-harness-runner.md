@@ -14,7 +14,9 @@ blockedBy: []
 blocks: ["agents/eval-harness/tasks", "agents/eval-harness/judge"]
 source: "round2/agent2/new_agents.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
-status: "pending"
+identifier: "PAP-308"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Eval harness: task format, SDK runner, deterministic graders and results table

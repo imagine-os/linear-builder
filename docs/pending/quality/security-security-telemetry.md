@@ -14,7 +14,9 @@ blockedBy: ["PAP-40", "PAP-97", "PAP-38"]
 blocks: ["PAP-89"]
 source: "round2/agent6/pending-issues.json (Security & Threat Model)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
-status: "pending"
+identifier: "PAP-356"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build security telemetry and alerting: auth anomalies, RLS denials, agent policy and egress denials, canary hits, webhook signature failures and backup age routed to Linear with a weekly security digest

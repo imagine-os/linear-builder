@@ -14,7 +14,9 @@ blockedBy: ["PAP-93", "PAP-97", "PAP-118"]
 blocks: []
 source: "round2/agent2/new_pm.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
-status: "pending"
+identifier: "PAP-307"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build inbound triage: convert Justin's freeform issues and comments into contract-valid issues via the Decomposer sub-agent, wired to the Triage view

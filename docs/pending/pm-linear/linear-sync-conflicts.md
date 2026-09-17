@@ -14,7 +14,9 @@ blockedBy: ["pm-linear/linear-sync/inbound", "pm-linear/linear-sync/outbound"]
 blocks: []
 source: "round2/agent2/new_pm.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
-status: "pending"
+identifier: "PAP-374"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Linear sync: conflict rule (Linear wins), sync status page and runbook

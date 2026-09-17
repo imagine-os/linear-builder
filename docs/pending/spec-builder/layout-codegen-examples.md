@@ -14,7 +14,9 @@ blockedBy: ["spec-builder/layout-codegen/templates", "spec-builder/layout-codege
 blocks: []
 source: "round2/agent2/new_spec.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
-status: "pending"
+identifier: "PAP-316"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Layout codegen: generate the three example specs, screenshot seven widths and pass conformance with zero manual edits

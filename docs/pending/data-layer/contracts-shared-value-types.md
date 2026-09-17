@@ -14,7 +14,9 @@ blockedBy: []
 blocks: ["PAP-71", "PAP-164", "PAP-175", "PAP-27", "PAP-268", "PAP-131", "PAP-136"]
 source: "round2/pending-issues-contracts.json (Interface & Data Contracts)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59"
-status: "pending"
+identifier: "PAP-302"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Specify shared value types and wire encodings in `packages/core/types`: `Money` (bigint minor units, string on the wire), `ActorRef`, `EntityRef`, UUIDv7 ids, timestamps, signed cursors and the `ApiError` body

@@ -14,7 +14,9 @@ blockedBy: ["PAP-80", "PAP-240", "PAP-26"]
 blocks: ["PAP-254"]
 source: "round2/agent6/pending-issues.json (Security & Threat Model)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
-status: "pending"
+identifier: "PAP-357"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Add dynamic security testing: nightly ZAP baseline and authenticated scan of staging plus a security regression suite (CSRF, IDOR across tenants, headers, rate limits, upload abuse, webhook replay) that blocks the release candidate

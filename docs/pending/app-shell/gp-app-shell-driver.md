@@ -14,7 +14,9 @@ blockedBy: ["PAP-22", "gp/spec-builder/app-interview", "gp/spec-builder/gen-pipe
 blocks: []
 source: "round2/pending-issues-golden-path.json (Golden Path)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
-status: "pending"
+identifier: "PAP-364"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build the golden path driver: `paperos create --idea` runs interview, app spec, generation, seed, push, provisioning and preview in one command with checkpoint stamps

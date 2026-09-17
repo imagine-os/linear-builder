@@ -14,7 +14,9 @@ blockedBy: ["spec-builder/data-section/schema", "spec-builder/data-section/gener
 blocks: []
 source: "round2/agent2/new_spec.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
-status: "pending"
+identifier: "PAP-313"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Data section: `customer-invoices` end to end with live sync, second-context and offline tests

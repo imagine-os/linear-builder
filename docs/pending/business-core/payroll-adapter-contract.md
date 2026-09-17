@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent4/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
-status: "pending"
+identifier: "PAP-398"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Finalised PayrollProvider interface, first adapter with idempotency keys, webhook route and the adapter contract test suite

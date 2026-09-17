@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent5/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
-status: "pending"
+identifier: "PAP-292"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Table library spike and ADR: TanStack Table plus Virtual, AG Grid Community, Glide Data Grid and react-data-grid at 100k rows

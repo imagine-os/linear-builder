@@ -14,7 +14,9 @@ blockedBy: []
 blocks: ["PAP-28", "PAP-97", "PAP-136", "PAP-174", "PAP-179", "PAP-195", "PAP-222", "PAP-177"]
 source: "round2/pending-issues-contracts.json (Interface & Data Contracts)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59"
-status: "pending"
+identifier: "PAP-303"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Specify the domain event contract: envelope, topic catalogue, `defineTopic` registry, transactional outbox and subscriber delivery (`packages/core/events`)

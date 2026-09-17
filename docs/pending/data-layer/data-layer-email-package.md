@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/gaps-pending-0.json (agent0/gaps.py)"
 linearDocument: null
-status: "pending"
+identifier: "PAP-370"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build the transactional email package (`packages/email`): React Email templates, provider adapter, sandbox allowlist mode, suppression list, DKIM/SPF/DMARC check, Mailpit in dev

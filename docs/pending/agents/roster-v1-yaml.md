@@ -14,7 +14,9 @@ blockedBy: []
 blocks: ["agents/roster-v1/lead-prompts", "agents/roster-v1/sub-prompts", "agents/roster-v1/build"]
 source: "round2/agent2/new_agents.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
-status: "pending"
+identifier: "PAP-284"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Roster: convert the plan.json roster to 37 validated character YAML files

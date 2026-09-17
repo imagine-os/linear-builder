@@ -14,7 +14,9 @@ blockedBy: ["PAP-22", "gp/spec-builder/gen-pipeline"]
 blocks: []
 source: "round2/pending-issues-golden-path.json (Golden Path)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
-status: "pending"
+identifier: "PAP-430"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build `paperos upgrade`: apply template updates to generated apps with three-way merge, codemods, regeneration and an upgrade pull request

@@ -14,7 +14,9 @@ blockedBy: ["PAP-117", "PAP-116", "PAP-161"]
 blocks: []
 source: "round2/pending-issues-golden-path.json (Golden Path)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
-status: "pending"
+identifier: "PAP-361"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build entity-derived page specs: `pnpm spec gen:entity-pages` derives list, detail, form and settings pages per entity and audience with view specs, comment anchors and access rules

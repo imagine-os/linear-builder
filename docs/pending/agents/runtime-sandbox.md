@@ -14,7 +14,9 @@ blockedBy: ["PAP-25", "security/credential-broker", "security/agent-deny-list"]
 blocks: []
 source: "round2/agent2/new_agents.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
-status: "pending"
+identifier: "PAP-280"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build the agent runtime sandbox: per-session container, worktree mount, CPU/RAM/time limits and network isolation with the credential broker's egress proxy as the only route

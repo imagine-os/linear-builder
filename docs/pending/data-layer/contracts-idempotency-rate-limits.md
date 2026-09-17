@@ -14,7 +14,9 @@ blockedBy: ["PAP-267"]
 blocks: ["PAP-148", "PAP-222", "PAP-172", "PAP-193", "PAP-194"]
 source: "round2/pending-issues-contracts.json (Interface & Data Contracts)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59"
-status: "pending"
+identifier: "PAP-304"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Specify and build request idempotency and rate limiting: `Idempotency-Key` header, `idempotency_keys` table with replay semantics, `POST /api/v1/rpc/batch`, Postgres-backed token buckets per actor, API key and IP

@@ -14,7 +14,9 @@ blockedBy: ["PAP-177"]
 blocks: ["PAP-181", "PAP-184"]
 source: "round2/agent6/pending-issues.json (Security & Threat Model)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
-status: "pending"
+identifier: "PAP-359"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Document and enforce the PCI SAQ-A posture: Stripe-hosted card entry only, a Semgrep rule against card-data fields, restricted Stripe keys per service, live-key custody through Needs Justin, and the quarterly SAQ-A checklist

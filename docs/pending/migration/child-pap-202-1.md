@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent5/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
-status: "pending"
+identifier: "PAP-415"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Airtable field mapping: every field type to PaperOS types, relations two-pass, lookups and rollups third pass, formula translation report

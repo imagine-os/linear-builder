@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent5/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
-status: "pending"
+identifier: "PAP-351"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Spike growth products: Twenty CRM, Chatwoot, Listmonk and Postiz with compose, seeded flows, metrics and scorecards

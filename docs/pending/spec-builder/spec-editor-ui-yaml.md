@@ -14,7 +14,9 @@ blockedBy: []
 blocks: ["spec-builder/spec-editor-ui/form", "spec-builder/spec-editor-ui/preview"]
 source: "round2/agent2/new_spec.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
-status: "pending"
+identifier: "PAP-376"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Spec editor: spec list, CodeMirror YAML editor with worker validation and save-to-PR flow

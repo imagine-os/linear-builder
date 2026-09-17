@@ -14,7 +14,9 @@ blockedBy: ["PAP-117", "PAP-240", "PAP-55", "gp/spec-builder/entity-pages"]
 blocks: []
 source: "round2/pending-issues-golden-path.json (Golden Path)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
-status: "pending"
+identifier: "PAP-363"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build the default surfaces starter kit: customer portal and staff console page specs, a seeded demo tenant per audience and a first-run checklist for every generated app

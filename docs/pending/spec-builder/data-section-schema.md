@@ -14,7 +14,9 @@ blockedBy: []
 blocks: ["spec-builder/data-section/generator", "spec-builder/data-section/example"]
 source: "round2/agent2/new_spec.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
-status: "pending"
+identifier: "PAP-311"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Data section: Zod schema, shared FilterTree import and validator rules

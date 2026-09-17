@@ -14,7 +14,9 @@ blockedBy: ["PAP-128", "PAP-142"]
 blocks: []
 source: "round2/agent3/pending-issues.json"
 linearDocument: null
-status: "pending"
+identifier: "PAP-379"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build a runtime docs store for tenant-authored documents: Yjs-backed pages in Postgres with the same routes, search registration and comment anchors as repo MDX

@@ -14,7 +14,9 @@ blockedBy: ["PAP-117", "PAP-118"]
 blocks: []
 source: "round2/pending-issues-golden-path.json (Golden Path)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
-status: "pending"
+identifier: "PAP-360"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Write the app interview skill: one paragraph idea to `app.spec.yaml` (business profile, audiences, entities, navigation, modules) in at most six questions with `--yes` defaults

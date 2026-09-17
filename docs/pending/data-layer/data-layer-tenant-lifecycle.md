@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/gaps-pending-0.json (agent0/gaps.py)"
 linearDocument: null
-status: "pending"
+identifier: "PAP-432"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build the tenant lifecycle: tenant states, deletion request and cancel flow with grace period, archive metadata, per-tenant storage and row quotas (the purge job itself is `security/retention-pii`)

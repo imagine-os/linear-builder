@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent5/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
-status: "pending"
+identifier: "PAP-422"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Round-trip `paperos` connector: import a PaperOS archive into an empty tenant and verify counts and hashes table by table

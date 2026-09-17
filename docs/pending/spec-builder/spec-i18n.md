@@ -14,7 +14,9 @@ blockedBy: ["PAP-27", "PAP-120"]
 blocks: []
 source: "round2/agent2/new_spec.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
-status: "pending"
+identifier: "PAP-375"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Add spec-level internationalisation: message IDs for spec copy fields, extraction into catalogs, pseudo-locale validation rule

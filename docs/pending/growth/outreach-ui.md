@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent4/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
-status: "pending"
+identifier: "PAP-406"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Sequence builder, template editor with preview and test send, enrolments grid and domain setup wizard

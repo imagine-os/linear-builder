@@ -14,7 +14,9 @@ blockedBy: ["PAP-165", "PAP-32"]
 blocks: ["PAP-199", "PAP-208"]
 source: "round2/agent4/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
-status: "pending"
+identifier: "PAP-334"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build bulk operations, trash and restore: multi-row edit and delete with server batching, soft-delete trash with 30-day restore, undo toast

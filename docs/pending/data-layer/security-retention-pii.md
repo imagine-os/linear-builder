@@ -14,7 +14,9 @@ blockedBy: ["PAP-33", "PAP-43", "PAP-38"]
 blocks: ["PAP-221"]
 source: "round2/agent6/pending-issues.json (Security & Threat Model)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
-status: "pending"
+identifier: "PAP-355"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Enforce data retention, PII classification and tenant hard-purge: `pii` column annotations driving redaction and OTel filters, per-table retention jobs, and the export-first purge after the grace period

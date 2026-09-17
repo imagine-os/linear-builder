@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/gaps-pending-0.json (agent0/gaps.py)"
 linearDocument: null
-status: "pending"
+identifier: "PAP-369"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Set up desktop and mobile code signing and notarisation (Apple Developer, Windows certificate, Android keystore) with one Needs Justin credential ask

@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent5/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
-status: "pending"
+identifier: "PAP-350"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Spike tables and PM products: NocoDB, Baserow and Plane with compose, seeded flows, metrics and scorecards

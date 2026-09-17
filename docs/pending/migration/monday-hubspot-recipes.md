@@ -14,7 +14,9 @@ blockedBy: ["PAP-198", "PAP-200"]
 blocks: []
 source: "round2/agent5/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
-status: "pending"
+identifier: "PAP-413"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Import Monday and HubSpot through guided CSV export recipes with preset mappings (no API connector in this build)

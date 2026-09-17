@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent4/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
-status: "pending"
+identifier: "PAP-402"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Adapter interface, mock adapter, X API v2 adapter and the pg-boss publishing worker

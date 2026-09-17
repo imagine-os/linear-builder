@@ -14,7 +14,9 @@ blockedBy: ["spec-builder/spec-editor-ui/yaml"]
 blocks: []
 source: "round2/agent2/new_spec.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
-status: "pending"
+identifier: "PAP-377"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Spec editor: form view, component tree editor and two-way sync with YAML preserving comments

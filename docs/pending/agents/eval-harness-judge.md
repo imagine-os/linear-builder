@@ -14,7 +14,9 @@ blockedBy: ["agents/eval-harness/runner", "agents/eval-harness/tasks"]
 blocks: []
 source: "round2/agent2/new_agents.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
-status: "pending"
+identifier: "PAP-310"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Eval harness: LLM judge, trend, regression issues, nightly schedule and report page

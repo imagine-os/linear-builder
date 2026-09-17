@@ -14,7 +14,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-366"
  },
  {
   "key": "gap/app-shell/onboarding-wizard",
@@ -31,7 +33,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-367"
  },
  {
   "key": "gap/app-shell/client-errors",
@@ -48,7 +52,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-368"
  },
  {
   "key": "gap/app-shell/code-signing",
@@ -65,7 +71,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-369"
  },
  {
   "key": "gap/app-shell/custom-domains",
@@ -82,7 +90,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-431"
  },
  {
   "key": "gap/data-layer/email-package",
@@ -99,7 +109,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-370"
  },
  {
   "key": "gap/data-layer/tenant-lifecycle",
@@ -116,7 +128,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-432"
  },
  {
   "key": "gap/forge/non-linux-runners",
@@ -133,7 +147,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-371"
  },
  {
   "key": "collab/runtime-docs-store",
@@ -156,7 +172,9 @@
   ],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-379"
  },
  {
   "key": "collab/in-app-help",
@@ -178,7 +196,9 @@
   ],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-380"
  },
  {
   "key": "realtime/push-transport",
@@ -200,7 +220,9 @@
   ],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-381"
  },
  {
   "key": "collab/comments/schema-rls-rpc",
@@ -220,7 +242,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-317"
  },
  {
   "key": "collab/comments/panel-pins-composer",
@@ -240,7 +264,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-318"
  },
  {
   "key": "collab/comments/live-deeplinks-linear",
@@ -260,7 +286,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-319"
  },
  {
   "key": "collab/canvas/nodes-edges-loader",
@@ -280,7 +308,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-320"
  },
  {
   "key": "collab/canvas/yjs-overlay",
@@ -300,7 +330,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-321"
  },
  {
   "key": "collab/canvas/filters-export-perf",
@@ -320,7 +352,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-322"
  },
  {
   "key": "collab/notifications/inbox-preferences",
@@ -340,7 +374,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-323"
  },
  {
   "key": "collab/notifications/digests-quiet-hours",
@@ -360,7 +396,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-324"
  },
  {
   "key": "collab/notifications/slack-channel",
@@ -380,7 +418,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-325"
  },
  {
   "key": "realtime/record-sync/live-hooks-registry",
@@ -399,7 +439,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-326"
  },
  {
   "key": "realtime/record-sync/reconciler",
@@ -418,7 +460,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-327"
  },
  {
   "key": "realtime/record-sync/resubscribe-lag",
@@ -437,7 +481,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-328"
  },
  {
   "key": "input/commands/registry-core",
@@ -457,7 +503,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-289"
  },
  {
   "key": "input/commands/palette-help-ui",
@@ -477,7 +525,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-290"
  },
  {
   "key": "input/commands/agent-endpoint-defaults",
@@ -497,7 +547,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-291"
  },
  {
   "key": "input/dnd/sensors-sortable-list",
@@ -517,7 +569,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-329"
  },
  {
   "key": "input/dnd/keyboard-announcements",
@@ -537,7 +591,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-330"
  },
  {
   "key": "input/dnd/kanban-grid-dropzone-crosswindow",
@@ -557,7 +613,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent3/pending-issues.json",
-  "linearDocument": null
+  "linearDocument": null,
+  "status": "created",
+  "identifier": "PAP-331"
  },
  {
   "key": "gap/tables/schema-editor",
@@ -580,7 +638,9 @@
    "PAP-208"
   ],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-332"
  },
  {
   "key": "gap/tables/record-detail",
@@ -603,7 +663,9 @@
    "PAP-102"
   ],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-333"
  },
  {
   "key": "gap/tables/bulk-trash",
@@ -626,7 +688,9 @@
    "PAP-208"
   ],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-334"
  },
  {
   "key": "tables/compiler/core",
@@ -643,7 +707,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-335"
  },
  {
   "key": "tables/compiler/groups-shapes",
@@ -660,7 +726,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-336"
  },
  {
   "key": "tables/compiler/api-hook-bench",
@@ -677,7 +745,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-337"
  },
  {
   "key": "tables/fields/framework-primitives",
@@ -694,7 +764,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-338"
  },
  {
   "key": "tables/fields/choice-people-attachment",
@@ -711,7 +783,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-339"
  },
  {
   "key": "tables/fields/relational-computed",
@@ -728,7 +802,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-340"
  },
  {
   "key": "tables/grid/core",
@@ -745,7 +821,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-341"
  },
  {
   "key": "tables/grid/editing-clipboard-bulk",
@@ -762,7 +840,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-342"
  },
  {
   "key": "tables/grid/columns-groups-panel",
@@ -779,7 +859,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-343"
  },
  {
   "key": "tables/time/engine-calendar",
@@ -796,7 +878,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-344"
  },
  {
   "key": "tables/time/timeline",
@@ -813,7 +897,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-345"
  },
  {
   "key": "tables/time/gantt",
@@ -830,7 +916,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-346"
  },
  {
   "key": "tables/formula/parser-typecheck",
@@ -847,7 +935,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-382"
  },
  {
   "key": "tables/formula/evaluator-editor",
@@ -864,7 +954,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-383"
  },
  {
   "key": "tables/formula/sql-cache",
@@ -881,7 +973,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-384"
  },
  {
   "key": "tables/dashboard/model-grid",
@@ -898,7 +992,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-385"
  },
  {
   "key": "tables/dashboard/blocks-crossfilter",
@@ -915,7 +1011,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-386"
  },
  {
   "key": "tables/dashboard/print-perf-spec",
@@ -932,7 +1030,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-387"
  },
  {
   "key": "tables/automations/model-triggers",
@@ -949,7 +1049,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-388"
  },
  {
   "key": "tables/automations/actions",
@@ -966,7 +1068,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-389"
  },
  {
   "key": "tables/automations/builder-log-templates",
@@ -983,7 +1087,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc",
+  "status": "created",
+  "identifier": "PAP-390"
  },
  {
   "key": "gap/business-core/usage-metering",
@@ -1006,7 +1112,9 @@
    "PAP-99"
   ],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9",
+  "status": "created",
+  "identifier": "PAP-391"
  },
  {
   "key": "gap/business-core/recurring-dunning",
@@ -1026,7 +1134,10 @@
   ],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9",
+  "status": "folded",
+  "identifier": null,
+  "into": "PAP-180"
  },
  {
   "key": "business-core/ledger/journal-constraints",
@@ -1043,7 +1154,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9",
+  "status": "created",
+  "identifier": "PAP-392"
  },
  {
   "key": "business-core/ledger/hashchain-reversal-close",
@@ -1060,7 +1173,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9",
+  "status": "created",
+  "identifier": "PAP-393"
  },
  {
   "key": "business-core/ledger/rules-ui-trialbalance",
@@ -1077,7 +1192,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9",
+  "status": "created",
+  "identifier": "PAP-394"
  },
  {
   "key": "business-core/invoicing/model-statemachine",
@@ -1094,7 +1211,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9",
+  "status": "created",
+  "identifier": "PAP-395"
  },
  {
   "key": "business-core/invoicing/pdf-paypage",
@@ -1111,7 +1230,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9",
+  "status": "created",
+  "identifier": "PAP-396"
  },
  {
   "key": "business-core/invoicing/postings-portal-emails",
@@ -1128,7 +1249,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9",
+  "status": "created",
+  "identifier": "PAP-397"
  },
  {
   "key": "business-core/payroll/adapter-contract",
@@ -1145,7 +1268,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9",
+  "status": "created",
+  "identifier": "PAP-398"
  },
  {
   "key": "business-core/payroll/onboarding-sync",
@@ -1162,7 +1287,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9",
+  "status": "created",
+  "identifier": "PAP-399"
  },
  {
   "key": "business-core/payroll/run-approve-post",
@@ -1179,7 +1306,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9",
+  "status": "created",
+  "identifier": "PAP-400"
  },
  {
   "key": "gap/growth/consent-centre",
@@ -1202,7 +1331,10 @@
    "PAP-193"
   ],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012",
+  "status": "folded",
+  "identifier": null,
+  "into": "PAP-187"
  },
  {
   "key": "growth/social/model-queue-calendar",
@@ -1219,7 +1351,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012",
+  "status": "created",
+  "identifier": "PAP-401"
  },
  {
   "key": "growth/social/adapter-mock-x",
@@ -1236,7 +1370,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012",
+  "status": "created",
+  "identifier": "PAP-402"
  },
  {
   "key": "growth/social/adapters-review-gated",
@@ -1253,7 +1389,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012",
+  "status": "created",
+  "identifier": "PAP-403"
  },
  {
   "key": "growth/outreach/model-worker",
@@ -1270,7 +1408,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012",
+  "status": "created",
+  "identifier": "PAP-404"
  },
  {
   "key": "growth/outreach/compliance-warmup-replies",
@@ -1287,7 +1427,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012",
+  "status": "created",
+  "identifier": "PAP-405"
  },
  {
   "key": "growth/outreach/ui",
@@ -1304,7 +1446,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012",
+  "status": "created",
+  "identifier": "PAP-406"
  },
  {
   "key": "growth/referral/codes-attribution",
@@ -1321,7 +1465,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012",
+  "status": "created",
+  "identifier": "PAP-407"
  },
  {
   "key": "growth/referral/rewards-payouts-ledger",
@@ -1338,7 +1484,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012",
+  "status": "created",
+  "identifier": "PAP-408"
  },
  {
   "key": "growth/referral/portal-console-ui",
@@ -1355,7 +1503,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012",
+  "status": "created",
+  "identifier": "PAP-409"
  },
  {
   "key": "growth/support/email-threading",
@@ -1372,7 +1522,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012",
+  "status": "created",
+  "identifier": "PAP-410"
  },
  {
   "key": "growth/support/chat-notes",
@@ -1389,7 +1541,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012",
+  "status": "created",
+  "identifier": "PAP-411"
  },
  {
   "key": "growth/support/console-ui",
@@ -1406,7 +1560,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent4/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012",
+  "status": "created",
+  "identifier": "PAP-412"
  },
  {
   "key": "migration/test-accounts",
@@ -1434,7 +1590,10 @@
    "PAP-206"
   ],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "folded",
+  "identifier": null,
+  "into": "PAP-198"
  },
  {
   "key": "migration/monday-hubspot-recipes",
@@ -1456,7 +1615,9 @@
   ],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-413"
  },
  {
   "key": "child/PAP-199/0",
@@ -1476,7 +1637,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-347"
  },
  {
   "key": "child/PAP-199/1",
@@ -1496,7 +1659,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-348"
  },
  {
   "key": "child/PAP-199/2",
@@ -1516,7 +1681,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-349"
  },
  {
   "key": "child/PAP-202/0",
@@ -1535,7 +1702,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-414"
  },
  {
   "key": "child/PAP-202/1",
@@ -1554,7 +1723,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-415"
  },
  {
   "key": "child/PAP-202/2",
@@ -1573,7 +1744,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-416"
  },
  {
   "key": "child/PAP-203/0",
@@ -1592,7 +1765,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-417"
  },
  {
   "key": "child/PAP-203/1",
@@ -1611,7 +1786,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-418"
  },
  {
   "key": "child/PAP-203/2",
@@ -1630,7 +1807,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-419"
  },
  {
   "key": "child/PAP-205/0",
@@ -1649,7 +1828,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-420"
  },
  {
   "key": "child/PAP-205/1",
@@ -1668,7 +1849,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-421"
  },
  {
   "key": "child/PAP-205/2",
@@ -1687,7 +1870,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-422"
  },
  {
   "key": "child/PAP-206/0",
@@ -1706,7 +1891,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-423"
  },
  {
   "key": "child/PAP-206/1",
@@ -1725,7 +1912,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-424"
  },
  {
   "key": "child/PAP-206/2",
@@ -1744,7 +1933,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-425"
  },
  {
   "key": "child/PAP-207/0",
@@ -1764,7 +1955,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-426"
  },
  {
   "key": "child/PAP-207/1",
@@ -1784,7 +1977,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-427"
  },
  {
   "key": "child/PAP-207/2",
@@ -1804,7 +1999,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+  "status": "created",
+  "identifier": "PAP-428"
  },
  {
   "key": "child/PAP-213/0",
@@ -1823,7 +2020,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d",
+  "status": "created",
+  "identifier": "PAP-292"
  },
  {
   "key": "child/PAP-213/1",
@@ -1842,7 +2041,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d",
+  "status": "created",
+  "identifier": "PAP-293"
  },
  {
   "key": "child/PAP-213/2",
@@ -1861,7 +2062,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d",
+  "status": "created",
+  "identifier": "PAP-294"
  },
  {
   "key": "child/PAP-214/0",
@@ -1880,7 +2083,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d",
+  "status": "created",
+  "identifier": "PAP-295"
  },
  {
   "key": "child/PAP-214/1",
@@ -1899,7 +2104,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d",
+  "status": "created",
+  "identifier": "PAP-296"
  },
  {
   "key": "child/PAP-214/2",
@@ -1918,7 +2125,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d",
+  "status": "created",
+  "identifier": "PAP-297"
  },
  {
   "key": "child/PAP-215/0",
@@ -1938,7 +2147,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d",
+  "status": "created",
+  "identifier": "PAP-350"
  },
  {
   "key": "child/PAP-215/1",
@@ -1958,7 +2169,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d",
+  "status": "created",
+  "identifier": "PAP-351"
  },
  {
   "key": "child/PAP-215/2",
@@ -1978,7 +2191,9 @@
   "blockedBy": [],
   "blocks": [],
   "source": "round2/agent5/pending-issues.json",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d",
+  "status": "created",
+  "identifier": "PAP-352"
  },
  {
   "key": "security/agent-deny-list",
@@ -2005,7 +2220,9 @@
    "agents/runtime-sandbox"
   ],
   "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0",
+  "status": "created",
+  "identifier": "PAP-298"
  },
  {
   "key": "security/prompt-injection",
@@ -2031,7 +2248,9 @@
    "PAP-109"
   ],
   "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0",
+  "status": "created",
+  "identifier": "PAP-299"
  },
  {
   "key": "security/credential-broker",
@@ -2058,7 +2277,9 @@
    "agents/runtime-sandbox"
   ],
   "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0",
+  "status": "created",
+  "identifier": "PAP-300"
  },
  {
   "key": "security/field-encryption",
@@ -2086,7 +2307,9 @@
    "PAP-230"
   ],
   "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0",
+  "status": "created",
+  "identifier": "PAP-353"
  },
  {
   "key": "security/platform-dr",
@@ -2112,7 +2335,9 @@
    "PAP-88"
   ],
   "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0",
+  "status": "created",
+  "identifier": "PAP-354"
  },
  {
   "key": "security/retention-pii",
@@ -2138,7 +2363,9 @@
    "PAP-221"
   ],
   "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0",
+  "status": "created",
+  "identifier": "PAP-355"
  },
  {
   "key": "security/security-telemetry",
@@ -2165,7 +2392,9 @@
    "PAP-89"
   ],
   "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0",
+  "status": "created",
+  "identifier": "PAP-356"
  },
  {
   "key": "security/dast",
@@ -2191,7 +2420,9 @@
    "PAP-254"
   ],
   "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0",
+  "status": "created",
+  "identifier": "PAP-357"
  },
  {
   "key": "security/founder-break-glass",
@@ -2215,7 +2446,9 @@
    "PAP-48"
   ],
   "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0",
+  "status": "created",
+  "identifier": "PAP-301"
  },
  {
   "key": "security/supply-chain",
@@ -2240,7 +2473,9 @@
    "PAP-254"
   ],
   "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0",
+  "status": "created",
+  "identifier": "PAP-358"
  },
  {
   "key": "security/pci-posture",
@@ -2265,7 +2500,9 @@
    "PAP-184"
   ],
   "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0",
+  "status": "created",
+  "identifier": "PAP-359"
  },
  {
   "key": "contracts/shared-value-types",
@@ -2292,7 +2529,9 @@
    "PAP-136"
   ],
   "source": "round2/pending-issues-contracts.json (Interface & Data Contracts)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59",
+  "status": "created",
+  "identifier": "PAP-302"
  },
  {
   "key": "contracts/domain-events",
@@ -2321,7 +2560,9 @@
    "PAP-177"
   ],
   "source": "round2/pending-issues-contracts.json (Interface & Data Contracts)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59",
+  "status": "created",
+  "identifier": "PAP-303"
  },
  {
   "key": "contracts/idempotency-rate-limits",
@@ -2349,7 +2590,9 @@
    "PAP-194"
   ],
   "source": "round2/pending-issues-contracts.json (Interface & Data Contracts)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59",
+  "status": "created",
+  "identifier": "PAP-304"
  },
  {
   "key": "contracts/package-boundaries",
@@ -2376,7 +2619,9 @@
    "PAP-264"
   ],
   "source": "round2/pending-issues-contracts.json (Interface & Data Contracts)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59",
+  "status": "created",
+  "identifier": "PAP-305"
  },
  {
   "key": "gp/spec-builder/app-interview",
@@ -2399,7 +2644,9 @@
   ],
   "blocks": [],
   "source": "round2/pending-issues-golden-path.json (Golden Path)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f",
+  "status": "created",
+  "identifier": "PAP-360"
  },
  {
   "key": "gp/spec-builder/entity-pages",
@@ -2424,7 +2671,9 @@
   ],
   "blocks": [],
   "source": "round2/pending-issues-golden-path.json (Golden Path)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f",
+  "status": "created",
+  "identifier": "PAP-361"
  },
  {
   "key": "gp/spec-builder/gen-pipeline",
@@ -2450,7 +2699,9 @@
   ],
   "blocks": [],
   "source": "round2/pending-issues-golden-path.json (Golden Path)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f",
+  "status": "created",
+  "identifier": "PAP-362"
  },
  {
   "key": "gp/app-shell/starter-surfaces",
@@ -2476,7 +2727,9 @@
   ],
   "blocks": [],
   "source": "round2/pending-issues-golden-path.json (Golden Path)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f",
+  "status": "created",
+  "identifier": "PAP-363"
  },
  {
   "key": "gp/app-shell/driver",
@@ -2501,7 +2754,9 @@
   ],
   "blocks": [],
   "source": "round2/pending-issues-golden-path.json (Golden Path)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f",
+  "status": "created",
+  "identifier": "PAP-364"
  },
  {
   "key": "gp/app-shell/provisioning",
@@ -2524,7 +2779,9 @@
   ],
   "blocks": [],
   "source": "round2/pending-issues-golden-path.json (Golden Path)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f",
+  "status": "created",
+  "identifier": "PAP-365"
  },
  {
   "key": "gp/app-shell/acceptance",
@@ -2550,7 +2807,9 @@
    "PAP-29"
   ],
   "source": "round2/pending-issues-golden-path.json (Golden Path)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f",
+  "status": "created",
+  "identifier": "PAP-429"
  },
  {
   "key": "gp/app-shell/upgrade",
@@ -2573,7 +2832,9 @@
   ],
   "blocks": [],
   "source": "round2/pending-issues-golden-path.json (Golden Path)",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f",
+  "status": "created",
+  "identifier": "PAP-430"
  },
  {
   "key": "pm-linear/weekly-reaudit",
@@ -2597,7 +2858,9 @@
   ],
   "blocks": [],
   "source": "round2/agent2/new_pm.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859",
+  "status": "created",
+  "identifier": "PAP-306"
  },
  {
   "key": "pm-linear/inbound-triage",
@@ -2621,7 +2884,9 @@
   ],
   "blocks": [],
   "source": "round2/agent2/new_pm.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859",
+  "status": "created",
+  "identifier": "PAP-307"
  },
  {
   "key": "pm-linear/orchestrator/claims",
@@ -2643,7 +2908,9 @@
    "pm-linear/orchestrator/deploy"
   ],
   "source": "round2/agent2/new_pm.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859",
+  "status": "created",
+  "identifier": "PAP-281"
  },
  {
   "key": "pm-linear/orchestrator/sessions",
@@ -2666,7 +2933,9 @@
    "pm-linear/orchestrator/deploy"
   ],
   "source": "round2/agent2/new_pm.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859",
+  "status": "created",
+  "identifier": "PAP-282"
  },
  {
   "key": "pm-linear/orchestrator/deploy",
@@ -2689,7 +2958,9 @@
   ],
   "blocks": [],
   "source": "round2/agent2/new_pm.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859",
+  "status": "created",
+  "identifier": "PAP-283"
  },
  {
   "key": "pm-linear/linear-sync/inbound",
@@ -2711,7 +2982,9 @@
    "pm-linear/linear-sync/conflicts"
   ],
   "source": "round2/agent2/new_pm.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859",
+  "status": "created",
+  "identifier": "PAP-372"
  },
  {
   "key": "pm-linear/linear-sync/outbound",
@@ -2734,7 +3007,9 @@
    "pm-linear/linear-sync/conflicts"
   ],
   "source": "round2/agent2/new_pm.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859",
+  "status": "created",
+  "identifier": "PAP-373"
  },
  {
   "key": "pm-linear/linear-sync/conflicts",
@@ -2756,7 +3031,9 @@
   ],
   "blocks": [],
   "source": "round2/agent2/new_pm.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859",
+  "status": "created",
+  "identifier": "PAP-374"
  },
  {
   "key": "agents/runtime-sandbox",
@@ -2780,7 +3057,9 @@
   ],
   "blocks": [],
   "source": "round2/agent2/new_agents.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d",
+  "status": "created",
+  "identifier": "PAP-280"
  },
  {
   "key": "agents/session-observability",
@@ -2806,7 +3085,9 @@
    "PAP-102"
   ],
   "source": "round2/agent2/new_agents.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d",
+  "status": "created",
+  "identifier": "PAP-288"
  },
  {
   "key": "agents/roster-v1/yaml",
@@ -2829,7 +3110,9 @@
    "agents/roster-v1/build"
   ],
   "source": "round2/agent2/new_agents.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d",
+  "status": "created",
+  "identifier": "PAP-284"
  },
  {
   "key": "agents/roster-v1/lead-prompts",
@@ -2852,7 +3135,9 @@
    "agents/roster-v1/build"
   ],
   "source": "round2/agent2/new_agents.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d",
+  "status": "created",
+  "identifier": "PAP-285"
  },
  {
   "key": "agents/roster-v1/sub-prompts",
@@ -2875,7 +3160,9 @@
    "agents/roster-v1/build"
   ],
   "source": "round2/agent2/new_agents.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d",
+  "status": "created",
+  "identifier": "PAP-286"
  },
  {
   "key": "agents/roster-v1/build",
@@ -2898,7 +3185,9 @@
   ],
   "blocks": [],
   "source": "round2/agent2/new_agents.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d",
+  "status": "created",
+  "identifier": "PAP-287"
  },
  {
   "key": "agents/eval-harness/runner",
@@ -2920,7 +3209,9 @@
    "agents/eval-harness/judge"
   ],
   "source": "round2/agent2/new_agents.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d",
+  "status": "created",
+  "identifier": "PAP-308"
  },
  {
   "key": "agents/eval-harness/tasks",
@@ -2943,7 +3234,9 @@
    "agents/eval-harness/judge"
   ],
   "source": "round2/agent2/new_agents.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d",
+  "status": "created",
+  "identifier": "PAP-309"
  },
  {
   "key": "agents/eval-harness/judge",
@@ -2965,7 +3258,9 @@
   ],
   "blocks": [],
   "source": "round2/agent2/new_agents.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d",
+  "status": "created",
+  "identifier": "PAP-310"
  },
  {
   "key": "spec-builder/spec-i18n",
@@ -2987,7 +3282,9 @@
   ],
   "blocks": [],
   "source": "round2/agent2/new_spec.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b",
+  "status": "created",
+  "identifier": "PAP-375"
  },
  {
   "key": "spec-builder/data-section/schema",
@@ -3009,7 +3306,9 @@
    "spec-builder/data-section/example"
   ],
   "source": "round2/agent2/new_spec.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b",
+  "status": "created",
+  "identifier": "PAP-311"
  },
  {
   "key": "spec-builder/data-section/generator",
@@ -3032,7 +3331,9 @@
    "spec-builder/data-section/example"
   ],
   "source": "round2/agent2/new_spec.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b",
+  "status": "created",
+  "identifier": "PAP-312"
  },
  {
   "key": "spec-builder/data-section/example",
@@ -3054,7 +3355,9 @@
   ],
   "blocks": [],
   "source": "round2/agent2/new_spec.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b",
+  "status": "created",
+  "identifier": "PAP-313"
  },
  {
   "key": "spec-builder/layout-codegen/templates",
@@ -3076,7 +3379,9 @@
    "spec-builder/layout-codegen/examples"
   ],
   "source": "round2/agent2/new_spec.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b",
+  "status": "created",
+  "identifier": "PAP-314"
  },
  {
   "key": "spec-builder/layout-codegen/wiring",
@@ -3099,7 +3404,9 @@
    "spec-builder/layout-codegen/examples"
   ],
   "source": "round2/agent2/new_spec.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b",
+  "status": "created",
+  "identifier": "PAP-315"
  },
  {
   "key": "spec-builder/layout-codegen/examples",
@@ -3121,7 +3428,9 @@
   ],
   "blocks": [],
   "source": "round2/agent2/new_spec.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b",
+  "status": "created",
+  "identifier": "PAP-316"
  },
  {
   "key": "spec-builder/spec-editor-ui/yaml",
@@ -3144,7 +3453,9 @@
    "spec-builder/spec-editor-ui/preview"
   ],
   "source": "round2/agent2/new_spec.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b",
+  "status": "created",
+  "identifier": "PAP-376"
  },
  {
   "key": "spec-builder/spec-editor-ui/form",
@@ -3166,7 +3477,9 @@
   ],
   "blocks": [],
   "source": "round2/agent2/new_spec.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b",
+  "status": "created",
+  "identifier": "PAP-377"
  },
  {
   "key": "spec-builder/spec-editor-ui/preview",
@@ -3188,6 +3501,8 @@
   ],
   "blocks": [],
   "source": "round2/agent2/new_spec.py",
-  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b",
+  "status": "created",
+  "identifier": "PAP-378"
  }
 ]

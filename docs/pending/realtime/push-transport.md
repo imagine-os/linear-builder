@@ -14,7 +14,9 @@ blockedBy: ["PAP-143"]
 blocks: []
 source: "round2/agent3/pending-issues.json"
 linearDocument: null
-status: "pending"
+identifier: "PAP-381"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build the push transport: server-to-client notification and job-progress channel (Electric shape or SSE) plus Web Push and Tauri mobile push (APNs/FCM)

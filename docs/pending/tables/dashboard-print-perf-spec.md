@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent4/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
-status: "pending"
+identifier: "PAP-387"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Lazy loading, error boundaries, print route, page-spec hook and permission tiles

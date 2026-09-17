@@ -14,7 +14,9 @@ blockedBy: ["PAP-13"]
 blocks: ["PAP-24", "PAP-28", "PAP-100", "PAP-264"]
 source: "round2/pending-issues-contracts.json (Interface & Data Contracts)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59"
-status: "pending"
+identifier: "PAP-305"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Specify the monorepo package boundary map: package ownership table, allowed dependency graph, `packages/core` sub-folder owners, dependency-cruiser lint in Gate 1 and the `packages/pm` move

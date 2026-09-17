@@ -14,7 +14,9 @@ blockedBy: ["PAP-115", "PAP-119", "PAP-120", "PAP-122", "PAP-123"]
 blocks: []
 source: "round2/pending-issues-golden-path.json (Golden Path)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
-status: "pending"
+identifier: "PAP-362"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build `paperos gen`: the whole-app generation pipeline that runs every generator in dependency order with a manifest, incremental cache, deterministic output and a `--check` drift mode

@@ -14,7 +14,9 @@ blockedBy: ["PAP-96", "PAP-48", "PAP-25"]
 blocks: ["PAP-111", "agents/runtime-sandbox"]
 source: "round2/agent6/pending-issues.json (Security & Threat Model)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
-status: "pending"
+identifier: "PAP-300"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build the credential broker: sessions hold no raw secrets; an egress proxy injects short-lived per-session tokens (GitHub App, Forgejo, Linear proxy, PaperOS agent keys, Anthropic) with usage logs and one-command revoke-all

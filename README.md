@@ -27,19 +27,20 @@ In this order, before touching an issue:
 | `plan/linear-ids.json` | Linear ids and URLs for the team, states, labels, projects, milestones and every round-1 issue. |
 | `plan/specs/` | Canonical round-1 spec JSON (`bucket-*.json`, `gaps.json`): the source text of `specs/`. |
 | `plan/critique-round1.md`, `plan/linear-summary-round1.md` | Round-1 self-critique and Linear build log. |
-| `plan/round2/` | Round-2 audit, critique, gap analysis, per-project digests, schedule model outputs, the final Linear snapshot, and `changes/` (one log per agent and per fix FIX-1..FIX-8, with every Linear mutation). |
-| `specs/` | One markdown file per canonical PAP issue (268), grouped by project key, with frontmatter (identifier, project, phase, type, priority, state, relations, URL). Index in `specs/README.md`. |
+| `plan/round2/` | Round-2 audit, critique, gap analysis, per-project digests, schedule model outputs, and `changes/` (one log per agent and per fix FIX-1..FIX-8, with every Linear mutation). |
+| `plan/linear-snapshot-live.json` | The latest full snapshot of team PAP (every non-archived issue with description, state, labels, project, milestone, parent, children, blockedBy, blocks, URL, updatedAt); `specs/` is generated from it. |
+| `specs/` | One markdown file per canonical PAP issue (420: PAP-13..PAP-432 minus duplicates), grouped by project key, with frontmatter (identifier, project, phase, type, priority, state, relations, URL, updatedAt) and the live Linear description as body. Index in `specs/README.md`. |
 | `docs/` | The platform documents as published to Linear: Blueprint, Contracts, Security, Schedule, Roster, nine character sheets, Golden Path. Index with Linear URLs in `docs/README.md`. |
-| `docs/pending/` | The 156 specified issues Linear could not hold yet (Free plan cap), one file each, with the create order from PAP-91. |
+| `docs/pending/` | Historical spec text of the 156 round-2 issues held back by the Free plan cap; all 153 were created as PAP-280..PAP-432 on 2026-09-17 (3 folded into live issues). Key-to-identifier table in `docs/pending/README.md`. |
 | `site/` | The blueprint page (`index.html`), served by GitHub Pages from the `gh-pages` branch. |
 | `tools/linear/` | The Python scripts that built and fixed the plan in Linear (idempotent, `LINEAR_API_KEY` via the proxy). `tools/blueprint/` builds the page. |
 | `.github/workflows/pages.yml` | Publishes `site/` to `gh-pages` on every push to `main`. |
 
 ## Status (2026-09-17)
 
-* **267 spec-complete issues** in Linear team PAP (275 issues minus 7 duplicates and PAP-5, Justin's original brief), across 17 projects and 3 phases, deadline 2026-10-01.
-* **25 Ready for Claude** and unblocked; the rest are Backlog behind dependency edges. PAP-91 sits in Needs Justin (NJ-1, the Linear plan upgrade).
-* **156 pending issues** fully specified in `docs/pending/` (153 to create, 3 folded into live issues as work packages), held until the Linear plan upgrade requested in [PAP-91](https://linear.app/paperos/issue/PAP-91).
+* **428 issues** in Linear team PAP (420 canonical, PAP-13..PAP-432, plus PAP-5, Justin's original brief, and 7 duplicates), across 17 projects and 3 phases, deadline 2026-10-01. The workspace is on **Linear Basic** (upgraded 2026-09-17, NJ-1 / [PAP-91](https://linear.app/paperos/issue/PAP-91) approved).
+* **28 Ready for Claude** with zero open blockers; the rest are Backlog behind dependency edges. PAP-91 is back in Ready for Claude.
+* **All 153 pending issues created on 2026-09-17** as PAP-280..PAP-432 (109 children of existing umbrellas, 36 new umbrellas, 379 new `blocks` relations); the 3 folded entries stay work packages of their live issues. `docs/pending/` keeps the historical text with a key-to-identifier table; `specs/` holds the live spec of every issue.
 * Round 2 (audit, contracts, security, schedule, characters, golden path, fixes FIX-1..FIX-8) is complete; the change logs are in `plan/round2/changes/`.
 
 Linear is the system of record. Where this repository and Linear disagree, Linear wins and the file here is a snapshot to be refreshed.

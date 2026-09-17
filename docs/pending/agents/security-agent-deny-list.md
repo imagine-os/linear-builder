@@ -14,7 +14,9 @@ blockedBy: ["PAP-106", "PAP-210"]
 blocks: ["PAP-96", "PAP-111", "agents/runtime-sandbox"]
 source: "round2/agent6/pending-issues.json (Security & Threat Model)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
-status: "pending"
+identifier: "PAP-298"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Define and enforce the agent destructive-action deny list: policy file, PreToolUse hook, MCP destructive-scope interception with Needs Justin escalation, and server-side backstops

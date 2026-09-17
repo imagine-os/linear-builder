@@ -14,7 +14,9 @@ blockedBy: ["spec-builder/layout-codegen/templates"]
 blocks: ["spec-builder/layout-codegen/examples"]
 source: "round2/agent2/new_spec.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
-status: "pending"
+identifier: "PAP-315"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Layout codegen: state switch, layout slot mapping, action binding and search-param schema

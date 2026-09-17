@@ -14,7 +14,9 @@ blockedBy: ["PAP-80", "PAP-52", "PAP-26"]
 blocks: ["PAP-254"]
 source: "round2/agent6/pending-issues.json (Security & Threat Model)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
-status: "pending"
+identifier: "PAP-358"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Add supply-chain integrity: lockfile and minimum-release-age policy, pinned actions by digest, SLSA provenance attestations and cosign signatures for container images and Tauri artifacts, verified before deploy and update

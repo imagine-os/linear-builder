@@ -14,7 +14,9 @@ blockedBy: ["PAP-92", "PAP-97"]
 blocks: ["PAP-81", "PAP-109"]
 source: "round2/agent6/pending-issues.json (Security & Threat Model)"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
-status: "pending"
+identifier: "PAP-299"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build prompt-injection defences for agent sessions: trust tiers for issues, comments and PRs, untrusted-content wrapping, actor-verified instructions, canary tokens and an injection eval suite

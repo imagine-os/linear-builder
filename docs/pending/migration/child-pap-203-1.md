@@ -14,7 +14,9 @@ blockedBy: []
 blocks: []
 source: "round2/agent5/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
-status: "pending"
+identifier: "PAP-418"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Notion block converter to MDX and Tiptap JSON: all block types, media upload before URL expiry, internal link rewriting

@@ -14,7 +14,9 @@ blockedBy: ["PAP-96", "PAP-40"]
 blocks: ["PAP-113", "PAP-102"]
 source: "round2/agent2/new_agents.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
-status: "pending"
+identifier: "PAP-288"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Add agent session observability: heartbeats, stuck-session detection, per-session OTel spans and a `/status` contract shared by the org chart, board cards and cost controls

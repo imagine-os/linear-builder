@@ -14,7 +14,9 @@ blockedBy: ["PAP-128"]
 blocks: []
 source: "round2/agent3/pending-issues.json"
 linearDocument: null
-status: "pending"
+identifier: "PAP-380"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Add contextual in-app help: help panel bound to page spec `purpose` and docs deep links, first-visit product tour, keyboard hint overlay

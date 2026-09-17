@@ -14,7 +14,9 @@ blockedBy: ["PAP-164", "PAP-165"]
 blocks: ["PAP-199", "PAP-208"]
 source: "round2/agent4/pending-issues.json"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
-status: "pending"
+identifier: "PAP-332"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Build the custom dataset schema editor: create tables and fields in-app, reorder, field type conversion with a lossiness report and background backfill

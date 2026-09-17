@@ -14,7 +14,9 @@ blockedBy: ["spec-builder/spec-editor-ui/yaml"]
 blocks: []
 source: "round2/agent2/new_spec.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
-status: "pending"
+identifier: "PAP-378"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Spec editor: live preview at selectable widths, flow-graph tab, keyboard shortcuts and accessibility polish

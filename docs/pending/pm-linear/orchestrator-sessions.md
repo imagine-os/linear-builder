@@ -14,7 +14,9 @@ blockedBy: ["pm-linear/orchestrator/claims"]
 blocks: ["pm-linear/orchestrator/deploy"]
 source: "round2/agent2/new_pm.py"
 linearDocument: "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
-status: "pending"
+identifier: "PAP-282"
+status: "created"
+createdAt: "2026-09-17"
 ---
 
 # Orchestrator: worktree lifecycle and Claude session launch
