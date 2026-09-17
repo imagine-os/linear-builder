@@ -28,7 +28,7 @@ Markdown sources of the documents published to Linear (workspace `paperos`). Rea
 
 ## Pending-issue documents
 
-`pending/` holds one file per pending issue; Linear holds the same text as eleven "Round 2 pending issues" documents:
+`pending/` holds one file per round-2 pending issue. All of them were created in Linear on 2026-09-17 as PAP-280..PAP-432 (team PAP now holds 428 issues); the key-to-identifier table in [`pending/README.md`](pending/README.md) maps each `[project/key]` citation to its PAP identifier, and the live Linear description (mirrored in `../specs/`) wins over the historical text here. Linear also holds the same text as eleven "Round 2 pending issues" documents:
 
 | Project(s) | Linear document |
 |---|---|
@@ -44,4 +44,4 @@ Markdown sources of the documents published to Linear (workspace `paperos`). Rea
 | golden path (8, app-shell and spec-builder) | https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f |
 | security (11) | https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0 |
 
-The app-shell/data-layer/forge gap issues and the collab/realtime/input pending issues have no Linear document; their only copies are the files here and the source JSON in `../plan/round2/`.
+The app-shell/data-layer/forge gap issues and the collab/realtime/input pending issues have no Linear document; their historical copies are the files here and the source JSON in `../plan/round2/`, and their live text is the PAP issue named in [`pending/README.md`](pending/README.md).

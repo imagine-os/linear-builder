@@ -3,7 +3,7 @@ import json, time, sys
 sys.path.insert(0, os.environ.get("PAPEROS_PLAN_DIR", ".") + "")
 from lin import gql
 TEAM="0ee78894-89f8-4376-a829-f8685dbc1868"
-OUT=os.environ.get("PAPEROS_PLAN_DIR", ".") + "/round2/linear-snapshot-3.json"
+OUT=os.environ.get("PAPEROS_PLAN_DIR", ".") + "/linear-snapshot-live.json"
 snap={"takenAt":time.strftime("%Y-%m-%dT%H:%MZ",time.gmtime()),"team":{"id":TEAM,"key":"PAP"}}
 ISSUE_Q='''query($cursor:String,$team:ID!){ issues(first:100, after:$cursor, orderBy:createdAt, filter:{team:{id:{eq:$team}}}){
  pageInfo{hasNextPage endCursor}

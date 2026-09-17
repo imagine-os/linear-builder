@@ -19,7 +19,7 @@ Then read your issue in Linear end to end, including its Dependencies section an
 ## Where specs live
 
 * `specs/<project-key>/<slug>.md`: one file per canonical PAP issue with frontmatter (identifier, project, phase, type, priority, state, blockedBy, blocks, URL). Index: `specs/README.md`. Every spec has the eight contract sections: Goal, Scope, Spec, Interface contract, Definition of done, Test plan, Demo, Dependencies (plus Size).
-* `docs/pending/<project-key>/<slug>.md`: 156 specified issues that Linear cannot hold until the plan upgrade (PAP-91 / NJ-1). Live issues cite them as `[project/key]`. They are not claimable; where a live issue folded one in as a work package, build the work package on a branch `<parent>/wp<n>-<slug>`.
+* `docs/pending/<project-key>/<slug>.md`: historical spec text of the 156 round-2 pending issues. All of them were created in Linear on 2026-09-17 as PAP-280..PAP-432 (153 issues; the other 3 stayed folded into live issues as work packages) and are normal issues now, claimable like any other. The live Linear description (mirrored in `specs/`) wins over the pending file; `docs/pending/README.md` maps each `[project/key]` citation to its identifier. Team PAP holds 428 issues, 28 of them in Ready for Claude. For a folded work package, build it on a branch `<parent>/wp<n>-<slug>`.
 * `plan/round2/changes/`: every Linear mutation made while planning, one log per agent and per fix. Use them to understand why a relation or paragraph exists.
 
 ## Pipeline states
