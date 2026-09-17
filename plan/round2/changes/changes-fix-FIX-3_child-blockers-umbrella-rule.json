@@ -1,0 +1,688 @@
+{
+ "fix": "FIX-3 child-blockers-umbrella-rule",
+ "startedAt": "2026-09-17T06:40Z",
+ "relationsCreated": [
+  {
+   "id": "280bf2a4-203f-47ba-a41c-6d306ce5e8c3",
+   "relation": "PAP-13 blocks PAP-255",
+   "rule": "rule1",
+   "why": "PAP-255 Dependencies names PAP-13 (hard)"
+  },
+  {
+   "id": "07838250-b315-4908-8fb9-b98502b18e6e",
+   "relation": "PAP-255 blocks PAP-258",
+   "rule": "rule1",
+   "why": "PAP-258 names 'PAP-19 child 1' -> finer edge to PAP-255 instead of umbrella PAP-19"
+  },
+  {
+   "id": "6583c9c8-6394-4f41-9267-152aacc8373a",
+   "relation": "PAP-14 blocks PAP-258",
+   "rule": "rule1",
+   "why": "PAP-14 blocks PAP-20; no child names it -> first child"
+  },
+  {
+   "id": "a6307860-d13c-4c7a-96b5-4f6904621dbf",
+   "relation": "PAP-17 blocks PAP-259",
+   "rule": "rule1",
+   "why": "PAP-259 names PAP-17 (hard)"
+  },
+  {
+   "id": "06e9d6e3-4300-446d-ac68-7c29102f7044",
+   "relation": "PAP-17 blocks PAP-260",
+   "rule": "rule1",
+   "why": "PAP-260 names PAP-17"
+  },
+  {
+   "id": "4ddafa4b-8981-4dca-9625-6305bed65d74",
+   "relation": "PAP-14 blocks PAP-261",
+   "rule": "rule1",
+   "why": "PAP-261 names PAP-14 (hard)"
+  },
+  {
+   "id": "4c82af1f-fdb5-4663-9ca6-8cf8b40713cb",
+   "relation": "PAP-16 blocks PAP-261",
+   "rule": "rule1",
+   "why": "PAP-261 names PAP-16 (hard)"
+  },
+  {
+   "id": "5703cd07-fb72-4c08-82e5-0ca2e96c378f",
+   "relation": "PAP-19 blocks PAP-262",
+   "rule": "rule1",
+   "why": "PAP-262 names PAP-19 (hard)"
+  },
+  {
+   "id": "4638f91b-8696-4c43-b350-3420981112f1",
+   "relation": "PAP-16 blocks PAP-262",
+   "rule": "rule1",
+   "why": "PAP-262 names PAP-16"
+  },
+  {
+   "id": "ec8d873e-57d5-4cae-b49a-2bca132a77aa",
+   "relation": "PAP-117 blocks PAP-264",
+   "rule": "rule1",
+   "why": "PAP-264 names PAP-117"
+  },
+  {
+   "id": "a22ca582-751d-4734-8f68-42cea96dc24e",
+   "relation": "PAP-22 blocks PAP-266",
+   "rule": "rule1",
+   "why": "PAP-266 names PAP-22"
+  },
+  {
+   "id": "20cd4150-d6f5-421c-a983-49255efc8a14",
+   "relation": "PAP-33 blocks PAP-267",
+   "rule": "rule1",
+   "why": "PAP-267 names PAP-33 (hard)"
+  },
+  {
+   "id": "c45728b3-5c94-49b9-b97a-b8ae05a6ab6f",
+   "relation": "PAP-33 blocks PAP-268",
+   "rule": "rule1",
+   "why": "PAP-268 names PAP-33"
+  },
+  {
+   "id": "59f0eaa3-fd81-41b2-8907-4535b8e850f5",
+   "relation": "PAP-267 blocks PAP-270",
+   "rule": "rule1",
+   "why": "PAP-270 names 'PAP-35 child 1' -> finer edge to PAP-267"
+  },
+  {
+   "id": "0a48b242-a337-4c84-8784-0100122ff31c",
+   "relation": "PAP-30 blocks PAP-270",
+   "rule": "rule1",
+   "why": "PAP-270 names PAP-30 (hard)"
+  },
+  {
+   "id": "9c4d40f3-88e7-40ce-960c-91a34c7749cf",
+   "relation": "PAP-34 blocks PAP-270",
+   "rule": "rule1",
+   "why": "PAP-270 names PAP-34 (hard)"
+  },
+  {
+   "id": "e373c678-2eeb-47a2-9a02-b5b9d0f5ad78",
+   "relation": "PAP-31 blocks PAP-271",
+   "rule": "rule1",
+   "why": "PAP-271 names PAP-31"
+  },
+  {
+   "id": "75282d7e-6fa0-4aef-9c34-cef60a28bb1f",
+   "relation": "PAP-268 blocks PAP-272",
+   "rule": "rule1",
+   "why": "PAP-272 names 'PAP-35 child 2' -> finer edge to PAP-268"
+  },
+  {
+   "id": "b5c35208-deec-42ea-915d-bbf3c74e8dc9",
+   "relation": "PAP-25 blocks PAP-273",
+   "rule": "rule1",
+   "why": "PAP-273 names PAP-25 (hard)"
+  },
+  {
+   "id": "767e79c9-fd1e-43db-a4fe-ba7c9eaa58be",
+   "relation": "PAP-25 blocks PAP-274",
+   "rule": "rule1",
+   "why": "PAP-274 names PAP-25"
+  },
+  {
+   "id": "089d3aa6-d214-4d56-8b17-c578f141c80a",
+   "relation": "PAP-45 blocks PAP-276",
+   "rule": "rule1",
+   "why": "PAP-276 names PAP-45 (hard)"
+  },
+  {
+   "id": "a4d82e62-003e-4599-9ecc-9d49b475f8a8",
+   "relation": "PAP-16 blocks PAP-277",
+   "rule": "rule1",
+   "why": "PAP-277 names PAP-16 (hard)"
+  },
+  {
+   "id": "7ede2eb2-62a5-4d87-8dee-441ab53d30aa",
+   "relation": "PAP-56 blocks PAP-223",
+   "rule": "rule1",
+   "why": "PAP-223 names PAP-56 (hard)"
+  },
+  {
+   "id": "6fdad59f-7d87-4eec-80ff-0d6b208ba94c",
+   "relation": "PAP-33 blocks PAP-223",
+   "rule": "rule1",
+   "why": "PAP-223 names PAP-33 (hard)"
+  },
+  {
+   "id": "f0ac569c-12bd-4769-a888-c3816701418f",
+   "relation": "PAP-55 blocks PAP-227",
+   "rule": "rule1",
+   "why": "PAP-227 names PAP-55 (hard)"
+  },
+  {
+   "id": "b7cf6f55-301c-418c-9ac1-ed39ef65d374",
+   "relation": "PAP-279 blocks PAP-227",
+   "rule": "rule1",
+   "why": "PAP-279 blocks PAP-59; no child names it -> first child (Condition imports FilterTree)"
+  },
+  {
+   "id": "4b39730f-9b34-4e16-b556-6bc7d03433be",
+   "relation": "PAP-34 blocks PAP-228",
+   "rule": "rule1",
+   "why": "PAP-228 names PAP-34 (hard for the harness)"
+  },
+  {
+   "id": "9bf98eab-c0d0-4211-9d66-34df830edc00",
+   "relation": "PAP-58 blocks PAP-230",
+   "rule": "rule1",
+   "why": "PAP-230 names PAP-58 (hard)"
+  },
+  {
+   "id": "d27c2669-9bcf-457b-bf48-cdfe4738e623",
+   "relation": "PAP-58 blocks PAP-231",
+   "rule": "rule1",
+   "why": "PAP-231 names PAP-58 (hard)"
+  },
+  {
+   "id": "556ff72c-9791-42f0-a2f0-07c60730356f",
+   "relation": "PAP-66 blocks PAP-236",
+   "rule": "rule1",
+   "why": "PAP-236 names PAP-66 (hard)"
+  },
+  {
+   "id": "4a2b507b-bdec-4ba5-a23b-658bf9ca7f54",
+   "relation": "PAP-212 blocks PAP-236",
+   "rule": "rule1",
+   "why": "PAP-212 blocks PAP-67; no child names it -> first child"
+  },
+  {
+   "id": "a8afedd3-74e0-42d2-984c-ea2ea3888094",
+   "relation": "PAP-78 blocks PAP-243",
+   "rule": "rule1",
+   "why": "PAP-243 names PAP-78 (hard)"
+  },
+  {
+   "id": "bf323bdd-c001-4396-bde0-4b354b7f801c",
+   "relation": "PAP-79 blocks PAP-243",
+   "rule": "rule1",
+   "why": "PAP-243 names PAP-79 (hard)"
+  },
+  {
+   "id": "e4268731-fc80-459b-9c33-0d8c499d9d72",
+   "relation": "PAP-78 blocks PAP-246",
+   "rule": "rule1",
+   "why": "PAP-246 names PAP-78 (hard)"
+  },
+  {
+   "id": "a7060d56-340c-4ac2-b1f3-010559da9239",
+   "relation": "PAP-14 blocks PAP-246",
+   "rule": "rule1",
+   "why": "PAP-246 names PAP-14 (hard)"
+  },
+  {
+   "id": "a0daa671-55d4-460d-8fa6-963311664156",
+   "relation": "PAP-114 blocks PAP-249",
+   "rule": "rule1",
+   "why": "PAP-249 names PAP-114 (hard)"
+  },
+  {
+   "id": "fd49445c-f26d-4742-a0c6-cadcc6aaf046",
+   "relation": "PAP-243 blocks PAP-249",
+   "rule": "rule1",
+   "why": "PAP-249 names 'PAP-81 harness child' -> finer edge to PAP-243"
+  },
+  {
+   "id": "3666bbfe-18e2-4e47-98e4-bb4523c9fbf2",
+   "relation": "PAP-239 blocks PAP-249",
+   "rule": "rule1",
+   "why": "PAP-239 blocks PAP-85; no child names it -> first child"
+  },
+  {
+   "id": "5e7d1959-472f-4b28-9e46-9b7322ec42e6",
+   "relation": "PAP-94 blocks PAP-252",
+   "rule": "rule1",
+   "why": "PAP-252 names PAP-94 (hard)"
+  },
+  {
+   "id": "b7c0f676-6462-4ca3-91df-c9ad65802ab8",
+   "relation": "PAP-94 blocks PAP-254",
+   "rule": "rule1",
+   "why": "PAP-254 names PAP-94 (hard)"
+  },
+  {
+   "id": "d9884020-77a4-4fe3-a524-b38d412af566",
+   "relation": "PAP-26 blocks PAP-253",
+   "rule": "rule1",
+   "why": "PAP-253 names PAP-26 (hard)"
+  },
+  {
+   "id": "91b36841-c869-4a31-8f23-504c1912b3fe",
+   "relation": "PAP-82 blocks PAP-253",
+   "rule": "rule1",
+   "why": "PAP-253 names PAP-82 (full gate run)"
+  },
+  {
+   "id": "54ace6e4-5679-43ab-ba3d-dbe70bc33909",
+   "relation": "PAP-81 blocks PAP-253",
+   "rule": "rule1",
+   "why": "PAP-81 blocks PAP-88; routed to the nightly full-gate-run child, not the policy document"
+  },
+  {
+   "id": "9cb53ada-da8c-448d-862d-89d21a73f17d",
+   "relation": "PAP-242 blocks PAP-253",
+   "rule": "rule1",
+   "why": "PAP-242 blocks PAP-88; routed to the nightly full-gate-run child (k6 smoke runs there)"
+  },
+  {
+   "id": "4f957722-419f-41aa-85bb-f773b0124806",
+   "relation": "PAP-268 blocks PAP-276",
+   "rule": "extra",
+   "why": "PAP-276 names PAP-35 (hard); PAP-268 is the routers/typed-client child of PAP-35"
+  },
+  {
+   "id": "b80f8240-56e9-430c-91e7-cf7c6409db15",
+   "relation": "PAP-51 blocks PAP-276",
+   "rule": "extra",
+   "why": "PAP-276 names PAP-51 (hard)"
+  },
+  {
+   "id": "7f0b0988-c6a6-4ba9-8e5a-007bcf7575d0",
+   "relation": "PAP-257 blocks PAP-24",
+   "rule": "rule2",
+   "why": "last child of PAP-19"
+  },
+  {
+   "id": "e89bd6ee-bd76-464a-8458-83d16b7ef60d",
+   "relation": "PAP-257 blocks PAP-21",
+   "rule": "rule2",
+   "why": "last child of PAP-19"
+  },
+  {
+   "id": "78eaf542-5c4b-4f8a-a0a8-cb39315a929a",
+   "relation": "PAP-257 blocks PAP-20",
+   "rule": "rule2",
+   "why": "last child of PAP-19"
+  },
+  {
+   "id": "7e241eb6-ab00-4e0b-b0b0-93d52322edf7",
+   "relation": "PAP-260 blocks PAP-154",
+   "rule": "rule2",
+   "why": "last child of PAP-20"
+  },
+  {
+   "id": "75599203-f8cb-4537-9f74-d73bbe83d5ee",
+   "relation": "PAP-263 blocks PAP-145",
+   "rule": "rule2",
+   "why": "last child of PAP-21"
+  },
+  {
+   "id": "85196c7b-a4a3-4a56-bc19-ea87ac0f2075",
+   "relation": "PAP-263 blocks PAP-23",
+   "rule": "rule2",
+   "why": "last child of PAP-21"
+  },
+  {
+   "id": "ca5b8492-4593-4755-b5a1-21272bb1ada8",
+   "relation": "PAP-266 blocks PAP-29",
+   "rule": "rule2",
+   "why": "last child of PAP-28"
+  },
+  {
+   "id": "badcef53-bf93-40c7-ae05-fd036c13e112",
+   "relation": "PAP-266 blocks PAP-126",
+   "rule": "rule2",
+   "why": "last child of PAP-28"
+  },
+  {
+   "id": "29a7406c-0206-4803-8065-4a2bdbe1ce8c",
+   "relation": "PAP-269 blocks PAP-193",
+   "rule": "rule2",
+   "why": "last child of PAP-35"
+  },
+  {
+   "id": "5434c51d-c388-4348-9dcc-958a301f32ec",
+   "relation": "PAP-269 blocks PAP-39",
+   "rule": "rule2",
+   "why": "last child of PAP-35"
+  },
+  {
+   "id": "4482cf03-344c-4ae4-9f2f-eba35cb1bcc0",
+   "relation": "PAP-269 blocks PAP-129",
+   "rule": "rule2",
+   "why": "last child of PAP-35"
+  },
+  {
+   "id": "9784e310-258f-4b3c-987f-fb07d2a342c1",
+   "relation": "PAP-269 blocks PAP-242",
+   "rule": "rule2",
+   "why": "last child of PAP-35"
+  },
+  {
+   "id": "69a6a994-22f1-4e30-b0ce-09a6b89b85ee",
+   "relation": "PAP-269 blocks PAP-222",
+   "rule": "rule2",
+   "why": "last child of PAP-35"
+  },
+  {
+   "id": "c340fad3-5ad8-4a38-bd21-7bd666663e26",
+   "relation": "PAP-269 blocks PAP-163",
+   "rule": "rule2",
+   "why": "last child of PAP-35"
+  },
+  {
+   "id": "a9725b55-5e1a-41b5-9ffd-aa0b772f741f",
+   "relation": "PAP-269 blocks PAP-119",
+   "rule": "rule2",
+   "why": "last child of PAP-35"
+  },
+  {
+   "id": "60675133-4221-41f1-ab49-fb48ac4dfb62",
+   "relation": "PAP-269 blocks PAP-40",
+   "rule": "rule2",
+   "why": "last child of PAP-35"
+  },
+  {
+   "id": "4b014ff7-e3e6-44fd-bb24-f39b55f93e46",
+   "relation": "PAP-269 blocks PAP-36",
+   "rule": "rule2",
+   "why": "last child of PAP-35"
+  },
+  {
+   "id": "a5b9a69c-e4a5-46e9-aa49-baf4a88bf4bc",
+   "relation": "PAP-272 blocks PAP-143",
+   "rule": "rule2",
+   "why": "last child of PAP-36"
+  },
+  {
+   "id": "256ea2fa-c516-45c5-b94e-0f5d7525ab8c",
+   "relation": "PAP-273 blocks PAP-50",
+   "rule": "rule2",
+   "why": "PAP-273 text: 'Blocks PAP-47, PAP-48, PAP-50' (compose stack is the real dependency, not the last child)"
+  },
+  {
+   "id": "1e067d76-f77d-4b5d-8d7e-f31cc9b2cc6a",
+   "relation": "PAP-273 blocks PAP-48",
+   "rule": "rule2",
+   "why": "PAP-273 text: 'Blocks PAP-47, PAP-48, PAP-50' (compose stack is the real dependency, not the last child)"
+  },
+  {
+   "id": "5137cc3e-4537-42bc-b741-c2190abcbb5b",
+   "relation": "PAP-273 blocks PAP-47",
+   "rule": "rule2",
+   "why": "PAP-273 text: 'Blocks PAP-47, PAP-48, PAP-50' (compose stack is the real dependency, not the last child)"
+  },
+  {
+   "id": "c2acaf40-ccc5-4381-8f4e-c7c641465446",
+   "relation": "PAP-275 blocks PAP-54",
+   "rule": "rule2",
+   "why": "last child of PAP-45"
+  },
+  {
+   "id": "3dee568d-751b-4b0c-bc56-a7c7a14ace38",
+   "relation": "PAP-224 blocks PAP-86",
+   "rule": "rule2",
+   "why": "PAP-57 has three leaf children; the auth UI child is the one that completes end-to-end login, which each dependent needs"
+  },
+  {
+   "id": "4dac98cd-da08-41e9-abc2-37bf6452a4f4",
+   "relation": "PAP-224 blocks PAP-240",
+   "rule": "rule2",
+   "why": "PAP-57 has three leaf children; the auth UI child is the one that completes end-to-end login, which each dependent needs"
+  },
+  {
+   "id": "daf75a69-1f06-4552-a5f5-aaf8291f2216",
+   "relation": "PAP-224 blocks PAP-220",
+   "rule": "rule2",
+   "why": "PAP-57 has three leaf children; the auth UI child is the one that completes end-to-end login, which each dependent needs"
+  },
+  {
+   "id": "ed8a7ba1-7147-4f57-8c8e-6227c38a68a9",
+   "relation": "PAP-224 blocks PAP-140",
+   "rule": "rule2",
+   "why": "PAP-57 has three leaf children; the auth UI child is the one that completes end-to-end login, which each dependent needs"
+  },
+  {
+   "id": "0e8cbc15-b480-4417-9706-a003117659c7",
+   "relation": "PAP-224 blocks PAP-58",
+   "rule": "rule2",
+   "why": "PAP-57 has three leaf children; the auth UI child is the one that completes end-to-end login, which each dependent needs"
+  },
+  {
+   "id": "a646bf22-672a-46b5-9d0a-82a7286732b3",
+   "relation": "PAP-228 blocks PAP-39",
+   "rule": "rule2",
+   "why": "PAP-59 leaf: SQL predicate compiler feeds search and the view compiler"
+  },
+  {
+   "id": "4715c19a-935c-4bea-931a-384a6958e6c1",
+   "relation": "PAP-228 blocks PAP-163",
+   "rule": "rule2",
+   "why": "PAP-59 leaf: SQL predicate compiler feeds search and the view compiler"
+  },
+  {
+   "id": "0bb096a8-db78-47f4-a2e2-0a313ef18845",
+   "relation": "PAP-229 blocks PAP-163",
+   "rule": "rule2",
+   "why": "PAP-59 leaf: spec adapter, oRPC middleware and useCan are the integration surface"
+  },
+  {
+   "id": "46831f8f-6ae2-4571-a1d7-e51014bb2fc5",
+   "relation": "PAP-229 blocks PAP-140",
+   "rule": "rule2",
+   "why": "PAP-59 leaf: spec adapter, oRPC middleware and useCan are the integration surface"
+  },
+  {
+   "id": "2f1f6fe1-7b18-44c3-a599-265ce992fd23",
+   "relation": "PAP-229 blocks PAP-116",
+   "rule": "rule2",
+   "why": "PAP-59 leaf: spec adapter, oRPC middleware and useCan are the integration surface"
+  },
+  {
+   "id": "209c6453-514c-4c83-93e5-1ef8019d43a2",
+   "relation": "PAP-229 blocks PAP-222",
+   "rule": "rule2",
+   "why": "PAP-59 leaf: spec adapter, oRPC middleware and useCan are the integration surface"
+  },
+  {
+   "id": "cb3bb545-9b8a-4779-92d4-39cf67643f6f",
+   "relation": "PAP-229 blocks PAP-178",
+   "rule": "rule2",
+   "why": "PAP-59 leaf: spec adapter, oRPC middleware and useCan are the integration surface"
+  },
+  {
+   "id": "4d0ded56-29a1-4de7-b978-d754691d1e8c",
+   "relation": "PAP-229 blocks PAP-172",
+   "rule": "rule2",
+   "why": "PAP-59 leaf: spec adapter, oRPC middleware and useCan are the integration surface"
+  },
+  {
+   "id": "fce426f3-5e12-458a-9556-fbd3b94efd8b",
+   "relation": "PAP-229 blocks PAP-131",
+   "rule": "rule2",
+   "why": "PAP-59 leaf: spec adapter, oRPC middleware and useCan are the integration surface"
+  },
+  {
+   "id": "7012e7f5-eba7-4835-b435-a7fe563527d7",
+   "relation": "PAP-229 blocks PAP-64",
+   "rule": "rule2",
+   "why": "PAP-59 leaf: spec adapter, oRPC middleware and useCan are the integration surface"
+  },
+  {
+   "id": "7ad6d8b3-0e1d-4740-b21a-126c52e5b1a1",
+   "relation": "PAP-229 blocks PAP-61",
+   "rule": "rule2",
+   "why": "PAP-59 leaf: spec adapter, oRPC middleware and useCan are the integration surface"
+  },
+  {
+   "id": "fceeb72d-665d-45b7-a663-307b4334c7f9",
+   "relation": "PAP-229 blocks PAP-60",
+   "rule": "rule2",
+   "why": "PAP-59 leaf: spec adapter, oRPC middleware and useCan are the integration surface"
+  },
+  {
+   "id": "9f504203-e32d-4f96-8c63-bbb0effc10d0",
+   "relation": "PAP-238 blocks PAP-164",
+   "rule": "rule2",
+   "why": "last child of PAP-67"
+  },
+  {
+   "id": "de99ae67-c18b-4ef3-a18b-f132e1953626",
+   "relation": "PAP-238 blocks PAP-233",
+   "rule": "rule2",
+   "why": "last child of PAP-67"
+  },
+  {
+   "id": "f8a7528b-7a83-4a6c-9864-9f84b036ccd4",
+   "relation": "PAP-238 blocks PAP-151",
+   "rule": "rule2",
+   "why": "last child of PAP-67"
+  },
+  {
+   "id": "caa47998-8855-4da6-83a0-92bc8934eba4",
+   "relation": "PAP-238 blocks PAP-74",
+   "rule": "rule2",
+   "why": "last child of PAP-67"
+  },
+  {
+   "id": "ec2e1fec-713b-4110-baef-f9d58c3ac065",
+   "relation": "PAP-238 blocks PAP-73",
+   "rule": "rule2",
+   "why": "last child of PAP-67"
+  },
+  {
+   "id": "d5816842-f5c5-4c92-918a-1bc4820b0561",
+   "relation": "PAP-238 blocks PAP-71",
+   "rule": "rule2",
+   "why": "last child of PAP-67"
+  },
+  {
+   "id": "d4d96554-2d4a-441b-9227-80a09aca35fa",
+   "relation": "PAP-238 blocks PAP-70",
+   "rule": "rule2",
+   "why": "last child of PAP-67"
+  },
+  {
+   "id": "d96e1be3-1cc7-47be-8e71-157d52f6058d",
+   "relation": "PAP-238 blocks PAP-69",
+   "rule": "rule2",
+   "why": "last child of PAP-67"
+  },
+  {
+   "id": "581e3a8e-2ffb-47c0-a174-d1592230fe88",
+   "relation": "PAP-244 blocks PAP-241",
+   "rule": "rule2",
+   "why": "PAP-81 leaf (correctness and spec reviewers); gate 2 is complete only with both reviewer children"
+  },
+  {
+   "id": "f5b7a7e9-10e0-456c-a48b-67f4d4fa0fa0",
+   "relation": "PAP-244 blocks PAP-88",
+   "rule": "rule2",
+   "why": "PAP-81 leaf (correctness and spec reviewers); gate 2 is complete only with both reviewer children"
+  },
+  {
+   "id": "41d58320-d8a7-4a96-8e34-8ffa8d1ccf89",
+   "relation": "PAP-244 blocks PAP-85",
+   "rule": "rule2",
+   "why": "PAP-81 leaf (correctness and spec reviewers); gate 2 is complete only with both reviewer children"
+  },
+  {
+   "id": "bf87b48d-f88d-4a2d-8d4a-927fca0a2c29",
+   "relation": "PAP-245 blocks PAP-241",
+   "rule": "rule2",
+   "why": "PAP-81 leaf (security reviewer)"
+  },
+  {
+   "id": "d12bd637-7ceb-4ea7-9629-091d9ef9f6cb",
+   "relation": "PAP-245 blocks PAP-88",
+   "rule": "rule2",
+   "why": "PAP-81 leaf (security reviewer)"
+  },
+  {
+   "id": "1c45648a-b632-4c1c-b968-81be49130d77",
+   "relation": "PAP-245 blocks PAP-85",
+   "rule": "rule2",
+   "why": "PAP-81 leaf (security reviewer)"
+  },
+  {
+   "id": "1f19ceb0-71e3-4b54-92e4-178477fb5a66",
+   "relation": "PAP-248 blocks PAP-88",
+   "rule": "rule2",
+   "why": "last child of PAP-82"
+  },
+  {
+   "id": "bb9252a6-37af-4881-a941-58f668197d22",
+   "relation": "PAP-248 blocks PAP-84",
+   "rule": "rule2",
+   "why": "last child of PAP-82"
+  },
+  {
+   "id": "8f45fe0e-0bfd-4182-aaee-9e440ab3571b",
+   "relation": "PAP-248 blocks PAP-83",
+   "rule": "rule2",
+   "why": "last child of PAP-82"
+  },
+  {
+   "id": "d70d728c-7372-4880-8e49-a4ab4639f1ba",
+   "relation": "PAP-254 blocks PAP-89",
+   "rule": "rule2",
+   "why": "last child of PAP-88 (PAP-254 Dependencies text softened: PAP-89 is a consumer)"
+  }
+ ],
+ "relationsSkipped": [
+  {
+   "relation": "PAP-257 blocks PAP-225",
+   "why": "would create a new milestone inversion (09-24 -> 09-23); PAP-225 keeps 'PAP-19 hard' in text only, for FIX-1 to place"
+  },
+  {
+   "relation": "PAP-254 blocks PAP-29",
+   "why": "FIX-1 softens and deletes PAP-88 -> PAP-29 (inversion 09-30 -> 09-29); recreating it at child level would undo that"
+  }
+ ],
+ "issuesUpdated": [
+  {
+   "id": "740f3b4d-7660-407a-aaf6-d77ca4f4fb3e",
+   "identifier": "PAP-92",
+   "fields": [
+    "description"
+   ],
+   "chars": 4941
+  },
+  {
+   "id": "1d0587c5-145c-4de1-9ef1-871ab6881041",
+   "identifier": "PAP-93",
+   "fields": [
+    "description"
+   ],
+   "chars": 7248
+  },
+  {
+   "id": "da321a3c-f968-47af-ae78-51f42700965a",
+   "identifier": "PAP-96",
+   "fields": [
+    "description"
+   ],
+   "chars": 6924
+  },
+  {
+   "id": "0d47c408-49f0-42f6-b940-ca7ef3b7c394",
+   "identifier": "PAP-254",
+   "fields": [
+    "description"
+   ],
+   "chars": 3824
+  }
+ ],
+ "created": [],
+ "notes": [
+  "Rule 1: 44 'B blocks child' relations. Child chosen by its Dependencies text naming B; when the text named a specific child of another split parent ('PAP-19 child 1', 'PAP-35 child 1/2', 'PAP-81 harness child') the finer child-to-child edge was created instead of the umbrella edge (PAP-255->258, PAP-267->270, PAP-268->272, PAP-243->249). Silent blockers went to the first child in build order (PAP-14->258, PAP-279->227, PAP-212->236, PAP-239->249) except for PAP-88, where PAP-81/PAP-82/PAP-242 were routed to PAP-253 (the nightly full-gate-run child) because the policy-document child PAP-252 does not need the gates.",
+  "Pre-existing child edges that already satisfied rule 1 and were left alone: PAP-239->243, PAP-240->247, PAP-239->248, PAP-240->250.",
+  "Extras (2): PAP-268->276 and PAP-51->276 encode hard dependencies PAP-276 names in text (PAP-35, PAP-51) that were not parent blockers. PAP-257->225 was planned and dropped (see relationsSkipped).",
+  "Rule 2: 57 'last child blocks D' relations. Where a parent has several leaf children the leaf was chosen by relevance and recorded in 'why': PAP-57 -> PAP-224 (auth UI completes end-to-end login); PAP-59 -> PAP-229 for the 10 UI/API dependents and PAP-228 for PAP-39 and PAP-163 (SQL predicates); PAP-81 -> both PAP-244 and PAP-245 (gate 2 needs all three reviewers); PAP-45 -> PAP-273 for PAP-47/48/50 because PAP-273's text says it blocks them (the compose stack is the real dependency), PAP-275 -> PAP-54.",
+  "PAP-88 -> PAP-29 was NOT mirrored at child level because FIX-1 deletes it as a softened, inverted edge (09-30 -> 09-29). Parent relations were all kept, as instructed.",
+  "Checks after creation (live): 49 children, 0 with zero inbound blockers (was 16); 18 second/third children carry only sibling blockers by design (the first child holds the external ones); no cycle in the full blocks graph; 0 milestone inversions among the 103 new edges.",
+  "PAP-254 Dependencies text softened: PAP-89 is a consumer (PAP-88/PAP-254 block PAP-89), removing a text-vs-relation contradiction that would otherwise deadlock the umbrella close.",
+  "PAP-92 (Spec + DoD), PAP-93 (codes list, Spec definition of UMBRELLA_NOT_CLAIMABLE, Test plan) and PAP-96 (Spec claims bullet with UMBRELLA_CLOSE prompt and umbrella-close re-queue, Test plan) carry the Umbrella rule paragraph verbatim. FIX-8 agent: keep these bullets when redefining BLOCKED_BY_OPEN / adding the Promotion package; the promotion rule's condition (b) 'has no sub-issues' is the same rule.",
+  "No issues, labels, states, documents or views were created or changed beyond the four issueUpdate description edits and 103 issueRelationCreate calls. Scripts: round2/fix3_plan.py (plan + checks), fix3_apply_relations.py (idempotent by relation string), fix3_apply_text.py (idempotent by marker text)."
+ ],
+ "verification": {
+  "checkedAt": "2026-09-17T06:50Z",
+  "children": 49,
+  "childrenWithZeroBlockers": 0,
+  "cycle": null,
+  "newEdgeMilestoneInversions": 0,
+  "newEdgesPresentLive": 103
+ }
+}

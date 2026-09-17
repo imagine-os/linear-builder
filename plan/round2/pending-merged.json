@@ -1,0 +1,83 @@
+{
+ "fix": "FIX-6",
+ "at": "2026-09-17",
+ "rule": "Before creating any pending issue, skip keys listed here; the kept spec owns the deliverable.",
+ "merges": [
+  {
+   "dropped": "gap/data-layer/field-encryption",
+   "keptKey": "security/field-encryption",
+   "source": "gaps-pending-0.json / agent0/gaps.py",
+   "reason": "same deliverable; security version cites the Threat Model and adds the leak scanner and AAD binding"
+  },
+  {
+   "dropped": "gap/data-layer/platform-dr",
+   "keptKey": "security/platform-dr",
+   "source": "gaps-pending-0.json / agent0/gaps.py",
+   "reason": "same drill; security version adds key escrow, monitoring and measured RPO/RTO"
+  },
+  {
+   "dropped": "gap/data-layer/retention-pii",
+   "keptKey": "security/retention-pii",
+   "source": "gaps-pending-0.json / agent0/gaps.py",
+   "reason": "same deliverable; security version owns pii() annotations, retention.yaml and the purge job"
+  },
+  {
+   "dropped": "gap/data-layer/tenant-lifecycle (purge half)",
+   "keptKey": "security/retention-pii",
+   "source": "gaps-pending-0.json / agent0/gaps.py",
+   "reason": "hard purge moved; tenant-lifecycle keeps states, quotas and the deletion request flow"
+  },
+  {
+   "dropped": "gap/data-layer/event-bus",
+   "keptKey": "contracts/domain-events",
+   "source": "gaps-pending-0.json / agent0/gaps.py",
+   "reason": "contracts version already declares it supersedes the gap"
+  },
+  {
+   "dropped": "gap/data-layer/rate-limit-idempotency",
+   "keptKey": "contracts/idempotency-rate-limits",
+   "source": "gaps-pending-0.json / agent0/gaps.py",
+   "reason": "contracts version already declares it supersedes the gap"
+  },
+  {
+   "dropped": "gap/forge/template-upgrade",
+   "keptKey": "gp/app-shell/upgrade",
+   "source": "gaps-pending-0.json / agent0/gaps.py",
+   "reason": "both build `paperos upgrade`; golden-path version is richer (ownership manifest, codemods, fleet mode); registry publishing folded in"
+  },
+  {
+   "dropped": "collab/notification-core",
+   "keptKey": "PAP-136 (work package 1)",
+   "source": "agent3/pending-issues.json / agent3/new_collab.py",
+   "reason": "PAP-136 owns the notification core as work package 1 after its P1 re-phase; children collab/notifications/* stay parented to PAP-136"
+  },
+  {
+   "dropped": "pm-linear/workspace-reconcile",
+   "keptKey": "PAP-91",
+   "source": "agent2/new_pm.py / pm-linear pending document",
+   "reason": "obsolete: PAP-91 and PAP-93 already treat the live workspace as correct"
+  },
+  {
+   "dropped": "agents/runtime-sandbox (egress proxy, allowlist, secret injection)",
+   "keptKey": "security/credential-broker; hook policy -> security/agent-deny-list",
+   "source": "agent2/new_agents.py / agents pending document / agent6",
+   "reason": "trio overlap: sandbox keeps container, worktree, CPU/RAM; now blocked by broker and deny list"
+  }
+ ],
+ "droppedKeys": [
+  "collab/notification-core",
+  "gap/data-layer/event-bus",
+  "gap/data-layer/field-encryption",
+  "gap/data-layer/platform-dr",
+  "gap/data-layer/rate-limit-idempotency",
+  "gap/data-layer/retention-pii",
+  "gap/forge/template-upgrade",
+  "pm-linear/workspace-reconcile"
+ ],
+ "narrowed": [
+  "gap/data-layer/tenant-lifecycle"
+ ],
+ "rewritten": [
+  "agents/runtime-sandbox"
+ ]
+}

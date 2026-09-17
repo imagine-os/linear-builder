@@ -1,0 +1,51 @@
+{
+ "fix": "FIX-2 ready-but-blocked",
+ "startedAt": "2026-09-17T06:20Z",
+ "relationsDeleted": [
+  {
+   "id": "9ebc6c89-8ef5-4a4f-a00b-2be17fefc6d3",
+   "relation": "PAP-13 blocks PAP-279"
+  },
+  {
+   "id": "7e8faf6d-5852-4b60-87eb-41932a0b2538",
+   "relation": "PAP-279 blocks PAP-161"
+  }
+ ],
+ "issuesUpdated": [
+  {
+   "id": "98cd2929-525b-4866-995c-54926ffc6c08",
+   "identifier": "PAP-279",
+   "fields": [
+    "description"
+   ],
+   "chars": 4314
+  },
+  {
+   "id": "29407c9a-e5c2-41da-ab3b-b64724690944",
+   "identifier": "PAP-161",
+   "fields": [
+    "description"
+   ],
+   "chars": 6230
+  },
+  {
+   "id": "1d0587c5-145c-4de1-9ef1-871ab6881041",
+   "identifier": "PAP-93",
+   "fields": [
+    "description"
+   ],
+   "chars": 5917
+  }
+ ],
+ "created": [],
+ "notes": [
+  "Relations deleted as instructed by FIX-2 (no issues, documents or states touched).",
+  "PAP-161 Dependencies also softens PAP-33/PAP-34 to work package 2 so the Ready state is not contradicted by text; no relation existed for them.",
+  "FIX-8 agent: keep READY_BUT_BLOCKED (error) when redefining BLOCKED_BY_OPEN in PAP-93."
+ ],
+ "verification": {
+  "readyCount": 26,
+  "readyButBlocked": [],
+  "checkedAt": "2026-09-17T06:16:06Z"
+ }
+}

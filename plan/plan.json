@@ -1,0 +1,4497 @@
+{
+ "vision": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop (Linux/macOS/Windows) and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, and business plumbing (payments, ledger, payroll, CRM) already wired. It is built and reviewed primarily by a roster of Claude agent characters working from Linear, behind a four-gate automated quality pipeline, so that by 2026-10-01 a new app goes from blank screen to running product in hours, and Justin only ever reviews release candidates, not pull requests.",
+ "decisions": [
+  {
+   "title": "Stack: TypeScript monorepo, React 19 + Vite, Tauri 2 for native",
+   "decision": "One pnpm + Turborepo monorepo. Web is React 19 + Vite + TanStack Router. Desktop (Linux, macOS, Windows) and mobile (iOS, Android) are Tauri 2 wrapping the same web bundle. PWA is the zero-install baseline.",
+   "why": "A single codebase reaches every device class the brief lists; Tauri gives real multi-window (multi-monitor) and OS integration with a tiny Rust core, and Claude agents are strongest in TypeScript, which maximizes credit efficiency."
+  },
+  {
+   "title": "Hosting: self-hosted VPS via Coolify, GitHub Pages for demos",
+   "decision": "Postgres, Forgejo, the API, the Yjs server and MinIO run in Docker on a Hetzner VPS managed by Coolify. Static demos and Storybook deploy to GitHub Pages. Vercel is not used for deploys (read-only).",
+   "why": "Owns the data and the forge, costs tens of dollars a month, and avoids depending on a platform we cannot write to; Pages already exists as the public demo convention."
+  },
+  {
+   "title": "Data: Postgres as source of truth, Drizzle schema-as-code, local-first sync",
+   "decision": "Postgres 17 with row-level security for tenancy, Drizzle ORM for typed schema and migrations, ElectricSQL shapes + PGlite for local-first reads and an offline write queue. Yjs handles document/canvas CRDTs; records stay relational.",
+   "why": "Relational data with RLS is the safest multi-tenant model for agent-written code; local-first sync gives instant UI on every device; separating documents (CRDT) from records (SQL) avoids reinventing either."
+  },
+  {
+   "title": "Realtime: Yjs via Hocuspocus for documents and presence, Electric for records",
+   "decision": "Self-hosted Hocuspocus server persists Yjs docs to Postgres and provides presence/awareness; Electric streams record changes. One WebSocket transport, auth via Better Auth session tokens.",
+   "why": "Both are mature open-source pieces the brief's multiplayer, comments, canvas and multi-window requirements map onto directly; no custom sync protocol in two weeks."
+  },
+  {
+   "title": "Auth and audiences: Better Auth, agents as first-class principals",
+   "decision": "Better Auth (self-hosted, TypeScript) with passkeys, magic links and OAuth, organization/tenant plugin, plus a permission engine combining roles with attribute policies declared in page specs. Audiences are composable segments (customer tiers, staff roles, partners, admins, agents). Every agent gets a scoped API key and visible attribution.",
+   "why": "Covers customer vs staff vs everything between without a vendor lock-in, and making agents principals is what makes audit logs, permissions and presence honest when most contributors are Claude."
+  },
+  {
+   "title": "Repo template shape",
+   "decision": "paperos-template contains apps/web, apps/desktop, apps/mobile, packages/{ui,core,spec,views,agents}, specs/ (app.spec.yaml + page specs), docs/, .claude/ (CLAUDE.md, agents, skills, rules), ops/ (compose, CI). `paperos create <app>` clones it into a pre-provisioned imagine-os repo and wires Forgejo mirror, CI, Pages and a Linear project.",
+   "why": "Agents need a predictable place for everything; the template is the product, apps are instances."
+  },
+  {
+   "title": "Version control: Git as the format, Forgejo as our forge, GitHub mirrored",
+   "decision": "Do not build a VCS. Self-host Forgejo as the primary forge with bidirectional push mirroring to the GitHub org imagine-os, Forgejo Actions runners as CI fallback, and a disaster-recovery drill that rebuilds everything with GitHub offline.",
+   "why": "The intent is independence from GitHub, not a new data format; Git + Forgejo delivers that in two days, while a custom VCS would eat the whole budget and break every tool agents rely on."
+  },
+  {
+   "title": "Project management: Linear stays system of record, thin PM module syncs to it",
+   "decision": "Linear is the queue through Oct 1 with states Backlog -> Ready for Claude -> In Progress -> In Review -> Needs Justin -> Done. PaperOS ships a PM data model mirroring Linear and a bidirectional sync; boards are rendered by the views engine. Rebuilding Linear is explicitly out of scope for this build.",
+   "why": "The orchestrator needs a stable queue today; a mirrored data model preserves the option to cut over later at low cost."
+  },
+  {
+   "title": "Spec-first: every page has a page.spec.yaml",
+   "decision": "Each page declares purpose, logic, access, data, integrations, layout, components, states and edge cases. A validator blocks PRs without specs; codegen scaffolds pages; conformance and permission tests are derived from specs; the canvas UX-flow view is generated from them.",
+   "why": "Specs are the contract between Justin and agents: they let many parallel sessions build consistently and let review be mechanical."
+  },
+  {
+   "title": "Design system: DTCG tokens, Base UI/Radix primitives, Tailwind v4, Storybook",
+   "decision": "Tokens in W3C DTCG JSON compile to CSS variables; components built on headless primitives with Tailwind v4; Storybook with a11y and interaction tests is the living doc; runtime theming per tenant.",
+   "why": "Headless primitives give accessibility for free, tokens make per-tenant branding trivial, and Storybook gives the quality pipeline something to screenshot."
+  },
+  {
+   "title": "Quality pipeline: four automated gates before anything reaches Justin",
+   "decision": "Gate 1 static (typecheck, Biome, Vitest, build). Gate 2 three Claude reviewer agents (correctness, security, spec-conformance). Gate 3 Playwright screenshots + video replays across a 7-width breakpoint matrix and themes, inspected by a vision agent. Gate 4 edge-case hunter. Weekly release candidates land in Needs Justin with a one-page digest.",
+   "why": "Justin is the only human reviewer; the budget is spent on machines reviewing machines so his queue stays under five items."
+  },
+  {
+   "title": "Agent runtime: Claude Code sessions orchestrated from Linear",
+   "decision": "An orchestrator polls Ready for Claude, spawns one Claude Code session per issue in its own git worktree, with the character's .claude/agents definition, skills and MCP allowlist, and moves the issue through states. Every prompt, response and tool call is logged to the prompt-log store.",
+   "why": "Matches how the credits are spent (many parallel sessions) and makes the agent org observable, budgetable and auditable."
+  },
+  {
+   "title": "Business core: Stripe for money movement, our own ledger, payroll via adapters",
+   "decision": "Stripe Billing + Connect + Tax for payments; a double-entry ledger in Postgres we own; payroll behind a provider interface with Check or Gusto Embedded as the first adapter.",
+   "why": "Money movement and payroll are regulated and not worth building; the ledger is the one finance primitive every business type shares and must be ours to report on."
+  },
+  {
+   "title": "Libraries: borrow before build, ADR per adoption, license policy in CI",
+   "decision": "A Scout character evaluates libraries and whole OSS products against a rubric; every adoption gets an ADR in the decision log; a CI license check blocks disallowed licenses.",
+   "why": "The brief asks to find and factor in libraries; making that a governed, logged process keeps 20 parallel agents from importing 20 different table libraries."
+  },
+  {
+   "title": "Credit stance: 30% of spend on automated review and QA",
+   "decision": "Roughly 12% planning/specs, 45% building, 30% automated review/QA, 8% docs/knowledge, 5% research; per-character budgets and a kill switch enforce it.",
+   "why": "Unreviewed agent code is the fastest way to waste the remaining 55%; review spend is what keeps Justin's queue small."
+  }
+ ],
+ "phases": [
+  {
+   "key": "P0",
+   "name": "Foundation",
+   "dates": "2026-09-17 to 2026-09-20",
+   "goal": "Linear pipeline, orchestrator and agent roster live; template monorepo runs on web + desktop; Postgres, Forgejo mirror, auth, tokens, spec schema and CI gates 1-3 exist so parallel sessions can start safely."
+  },
+  {
+   "key": "P1",
+   "name": "Core systems",
+   "dates": "2026-09-21 to 2026-09-26",
+   "goal": "Spec builder, design system components, multiplayer, table/views engine, collaboration (comments, canvas, docs, prompt logs), multi-input and permission engine reach usable v1 with conformance tests."
+  },
+  {
+   "key": "P2",
+   "name": "Business layer + hardening",
+   "dates": "2026-09-27 to 2026-10-01",
+   "goal": "Payments, ledger, payroll adapter, CRM/growth, migration/import tools ship; load, DR and accessibility drills pass; first release candidate and handbook delivered to Justin."
+  }
+ ],
+ "budget": [
+  {
+   "area": "Planning, specs and ADRs",
+   "share_pct": 12,
+   "why": "Every page and system gets a spec before code; specs are what make parallel agent work coherent and reviewable."
+  },
+  {
+   "area": "Building (code, infra, integrations)",
+   "share_pct": 45,
+   "why": "Seventeen projects and ~200 issues in two weeks; the bulk of tokens go to implementation sessions in worktrees."
+  },
+  {
+   "area": "Automated review and QA",
+   "share_pct": 30,
+   "why": "Three reviewer agents, vision screenshot inspection, video replays, edge-case hunting and evals on every PR replace the human review Justin cannot supply."
+  },
+  {
+   "area": "Docs, changelogs, prompt logs and handbooks",
+   "share_pct": 8,
+   "why": "Documentation is the memory of the agent org and the onboarding path for every future app."
+  },
+  {
+   "area": "Research and library scouting",
+   "share_pct": 5,
+   "why": "Borrow-before-build saves far more than it costs, but research must be time-boxed and ADR-bound."
+  }
+ ],
+ "agents": [
+  {
+   "name": "Atlas",
+   "role": "Chief Architect and Orchestrator: owns the master plan, decomposes work, dispatches Ready for Claude issues to characters, guards dependencies and budget",
+   "reportsTo": "Justin",
+   "tools": [
+    "Linear API",
+    "GitHub/Forgejo API",
+    "Claude Agent SDK",
+    "credit-metering",
+    "decision-log"
+   ],
+   "access": [
+    "linear:admin",
+    "forgejo:org-admin",
+    "github:imagine-os admin",
+    "budget:read-write",
+    "prod:read-only"
+   ],
+   "plugins": [
+    "linear-api",
+    "github",
+    "workflow-authoring"
+   ],
+   "subAgents": [
+    {
+     "name": "Dispatcher",
+     "role": "Claims issues, spawns sessions in worktrees, moves Linear states"
+    },
+    {
+     "name": "Decomposer",
+     "role": "Splits epics into spec-complete issues with acceptance criteria"
+    },
+    {
+     "name": "Merger",
+     "role": "Rebases, resolves conflicts, merges green PRs, tags releases"
+    }
+   ]
+  },
+  {
+   "name": "Forge",
+   "role": "Platform Engineer: app shell, Tauri targets, data layer, forge/mirroring, hosting and CI infrastructure",
+   "reportsTo": "Atlas",
+   "tools": [
+    "Bash",
+    "pnpm/Turborepo",
+    "Tauri CLI",
+    "Drizzle",
+    "Docker/Coolify",
+    "Forgejo API"
+   ],
+   "access": [
+    "repo:write (all)",
+    "vps:deploy",
+    "postgres:migrate (staging)",
+    "secrets:infra"
+   ],
+   "plugins": [
+    "github",
+    "session-start-hook"
+   ],
+   "subAgents": [
+    {
+     "name": "Tauri Smith",
+     "role": "Desktop and mobile targets, multi-window, OS integration"
+    },
+    {
+     "name": "Schema Wright",
+     "role": "Drizzle schema, migrations, RLS policies, seeds"
+    },
+    {
+     "name": "Ops Runner",
+     "role": "VPS, Docker, backups, runners, observability"
+    }
+   ]
+  },
+  {
+   "name": "Iris",
+   "role": "Design Systems Lead: tokens, components, theming, motion, Storybook and accessibility of the component library",
+   "reportsTo": "Atlas",
+   "tools": [
+    "Storybook",
+    "Tailwind v4",
+    "axe-core",
+    "Playwright screenshots",
+    "Figma tokens export"
+   ],
+   "access": [
+    "repo:write packages/ui",
+    "storybook:deploy",
+    "design-tokens:write"
+   ],
+   "plugins": [
+    "artifact-design",
+    "dataviz"
+   ],
+   "subAgents": [
+    {
+     "name": "Token Keeper",
+     "role": "DTCG tokens, themes, per-tenant branding"
+    },
+    {
+     "name": "Component Crafter",
+     "role": "Headless primitives to production components with stories"
+    },
+    {
+     "name": "Motion and Input Stylist",
+     "role": "Transitions, reduced motion, focus and input-state styling"
+    }
+   ]
+  },
+  {
+   "name": "Quill",
+   "role": "Spec and Documentation Lead: page/app specs, docs engine content, changelogs, ADRs and prompt-log curation",
+   "reportsTo": "Atlas",
+   "tools": [
+    "spec validator CLI",
+    "docs engine",
+    "Notion API",
+    "Google Drive API",
+    "Linear API"
+   ],
+   "access": [
+    "repo:write specs/ docs/",
+    "notion:read-write",
+    "drive:read",
+    "linear:comment"
+   ],
+   "plugins": [
+    "notion-api",
+    "linear-api"
+   ],
+   "subAgents": [
+    {
+     "name": "Page Spec Writer",
+     "role": "Interviews, drafts and validates page.spec.yaml files"
+    },
+    {
+     "name": "Changelog Scribe",
+     "role": "Turns merged PRs into human and tenant changelogs"
+    },
+    {
+     "name": "Prompt Logger",
+     "role": "Curates and redacts session logs into searchable knowledge"
+    }
+   ]
+  },
+  {
+   "name": "Sentinel",
+   "role": "Quality Lead: owns the four review gates, reviewer agents, visual and video inspection, edge-case discovery and release digests",
+   "reportsTo": "Atlas",
+   "tools": [
+    "Playwright",
+    "Vitest",
+    "Biome",
+    "Semgrep",
+    "vision model screenshot inspection",
+    "Lighthouse CI"
+   ],
+   "access": [
+    "repo:review + request-changes",
+    "ci:admin",
+    "artifacts:write",
+    "linear:comment",
+    "no merge rights"
+   ],
+   "plugins": [
+    "code-review",
+    "security-review",
+    "simplify"
+   ],
+   "subAgents": [
+    {
+     "name": "Code Reviewer",
+     "role": "Correctness and simplification review on every PR"
+    },
+    {
+     "name": "Security Auditor",
+     "role": "Auth, RLS, secrets, dependency and injection review"
+    },
+    {
+     "name": "Visual Inspector",
+     "role": "Screenshot and video-replay inspection across the breakpoint matrix"
+    },
+    {
+     "name": "Edge Case Hunter",
+     "role": "Adversarial inputs, empty/huge states, offline and slow-device scenarios"
+    }
+   ]
+  },
+  {
+   "name": "Nova",
+   "role": "Product Systems Engineer: multiplayer, collaboration surfaces, canvas, tables and views engine, multi-input control",
+   "reportsTo": "Atlas",
+   "tools": [
+    "Yjs/Hocuspocus",
+    "ElectricSQL",
+    "TanStack Table",
+    "tldraw/React Flow",
+    "Tiptap",
+    "dnd-kit"
+   ],
+   "access": [
+    "repo:write packages/views packages/collab apps/web",
+    "yjs-server:deploy (staging)"
+   ],
+   "plugins": [
+    "github"
+   ],
+   "subAgents": [
+    {
+     "name": "CRDT Engineer",
+     "role": "Yjs rooms, presence, offline queue, conflict UX"
+    },
+    {
+     "name": "Views Engineer",
+     "role": "Grid, kanban, calendar, gallery, chart views and the query compiler"
+    },
+    {
+     "name": "Canvas Cartographer",
+     "role": "UX-flow canvas generated from specs, comments anchored to elements"
+    }
+   ]
+  },
+  {
+   "name": "Ledger",
+   "role": "Business Systems Lead: Stripe billing and Connect, double-entry ledger, invoicing, finance reports, payroll adapters",
+   "reportsTo": "Atlas",
+   "tools": [
+    "Stripe API (test mode)",
+    "ledger service",
+    "PDF generation",
+    "payroll provider sandboxes"
+   ],
+   "access": [
+    "stripe:test-mode write",
+    "stripe:live read-only",
+    "repo:write packages/finance",
+    "ledger:post (staging)"
+   ],
+   "plugins": [
+    "github"
+   ],
+   "subAgents": [
+    {
+     "name": "Payments Integrator",
+     "role": "Stripe products, subscriptions, Connect, Tax, webhooks"
+    },
+    {
+     "name": "Bookkeeper",
+     "role": "Ledger, journal posting rules, P&L and cash-flow reports"
+    },
+    {
+     "name": "Payroll Adapter",
+     "role": "Provider interface and first Check/Gusto Embedded adapter"
+    }
+   ]
+  },
+  {
+   "name": "Beacon",
+   "role": "Growth Lead: CRM, outreach sequences, social scheduling, landing pages, attribution and support inbox",
+   "reportsTo": "Atlas",
+   "tools": [
+    "Webflow API",
+    "Resend/Twilio",
+    "social platform APIs",
+    "Gamma",
+    "Miro"
+   ],
+   "access": [
+    "webflow:write",
+    "crm:write",
+    "email:send (sandbox until approved)",
+    "repo:write packages/growth"
+   ],
+   "plugins": [
+    "github"
+   ],
+   "subAgents": [
+    {
+     "name": "Campaign Composer",
+     "role": "Drafts posts, emails and landing copy from changelogs and specs for approval"
+    },
+    {
+     "name": "CRM Builder",
+     "role": "Lead, contact, deal and segment models and views"
+    },
+    {
+     "name": "Outreach Sequencer",
+     "role": "Sequences, warmup, reply detection, compliance"
+    }
+   ]
+  },
+  {
+   "name": "Scout",
+   "role": "Library and Migration Researcher: evaluates libraries and OSS products, maintains the registry, builds importers and business templates",
+   "reportsTo": "Atlas",
+   "tools": [
+    "WebSearch/WebFetch",
+    "npm/GitHub search",
+    "license checker",
+    "import framework",
+    "Airtable/Notion/ClickUp/QuickBooks APIs"
+   ],
+   "access": [
+    "repo:write docs/registry packages/import",
+    "external-apis:read",
+    "no prod write"
+   ],
+   "plugins": [
+    "github"
+   ],
+   "subAgents": [
+    {
+     "name": "Library Evaluator",
+     "role": "Rubric scoring, ADR drafts, license checks"
+    },
+    {
+     "name": "Import Mapper",
+     "role": "Schema mapping, dry runs, ID mapping for migrations"
+    },
+    {
+     "name": "Template Packager",
+     "role": "Business-type seed packs and demo data"
+    }
+   ]
+  }
+ ],
+ "labels": {
+  "groups": [
+   {
+    "name": "Phase",
+    "labels": [
+     {
+      "name": "P0",
+      "color": "#EB5757"
+     },
+     {
+      "name": "P1",
+      "color": "#F2994A"
+     },
+     {
+      "name": "P2",
+      "color": "#F2C94C"
+     }
+    ]
+   },
+   {
+    "name": "Type",
+    "labels": [
+     {
+      "name": "Research",
+      "color": "#9B51E0"
+     },
+     {
+      "name": "Spec",
+      "color": "#5E6AD2"
+     },
+     {
+      "name": "Build",
+      "color": "#2F80ED"
+     },
+     {
+      "name": "Review",
+      "color": "#27AE60"
+     },
+     {
+      "name": "Infra",
+      "color": "#6B7280"
+     },
+     {
+      "name": "Docs",
+      "color": "#56CCF2"
+     }
+    ]
+   },
+   {
+    "name": "Surface",
+    "labels": [
+     {
+      "name": "Customer",
+      "color": "#26B5CE"
+     },
+     {
+      "name": "Staff",
+      "color": "#BB87FC"
+     },
+     {
+      "name": "Developer",
+      "color": "#4CB782"
+     },
+     {
+      "name": "Agent",
+      "color": "#F7C8E0"
+     }
+    ]
+   }
+  ]
+ },
+ "states": [
+  {
+   "name": "Ready for Claude",
+   "type": "unstarted",
+   "description": "Spec-complete and unblocked; the orchestrator may claim it and spawn a Claude Code session."
+  },
+  {
+   "name": "In Review",
+   "type": "started",
+   "description": "PR open; automated gates (static, reviewer agents, visual/video, edge cases) running or awaiting merge."
+  },
+  {
+   "name": "Needs Justin",
+   "type": "started",
+   "description": "Blocked on a human decision or release approval; kept under five open items at a time."
+  }
+ ],
+ "projects": [
+  {
+   "key": "app-shell",
+   "name": "Universal App Shell & Repo Template",
+   "color": "#2F80ED",
+   "icon": "Rocket",
+   "summary": "The paperos-template monorepo that runs the same app on web, PWA, Linux/macOS/Windows desktop and iOS/Android with multi-window support.",
+   "description": "Goal: a single template repository that any new PaperOS app is generated from and that ships to every device class from day one. It is a pnpm + Turborepo monorepo with a React 19 + Vite web app, Tauri 2 desktop and mobile targets, an installable PWA, and a file-based router whose layouts are driven by page specs. It owns the responsive breakpoint matrix and a window manager that lets panels detach into separate OS windows across monitors, plus a Linux kiosk mode that launches synced windows on several displays. The `paperos create` CLI clones the template into a pre-provisioned imagine-os repo and wires the Forgejo mirror, CI, GitHub Pages demo and a Linear project. Non-goals: native Swift/Kotlin UI, Electron, or a custom bundler. It consumes the design system, data layer and identity packages and is the host for every other project's UI.",
+   "phase": "P0",
+   "priority": 1,
+   "dependsOn": [
+    "design-system",
+    "data-layer"
+   ],
+   "milestones": [
+    {
+     "name": "Template scaffolds and runs on web",
+     "targetDate": "2026-09-19",
+     "goal": "Monorepo builds, routes render, Pages demo live"
+    },
+    {
+     "name": "Desktop and mobile shells build",
+     "targetDate": "2026-09-23",
+     "goal": "Tauri desktop + mobile targets build from the same bundle"
+    },
+    {
+     "name": "Multi-monitor and PWA polish",
+     "targetDate": "2026-09-29",
+     "goal": "Window manager, kiosk mode, offline shell, template guide"
+    }
+   ],
+   "issues": [
+    {
+     "key": "app-shell/monorepo-scaffold",
+     "title": "Scaffold paperos-template monorepo with pnpm, Turborepo, strict TypeScript and a Vite React 19 web app",
+     "oneLine": "Create the root workspace, apps/web, packages/*, shared tsconfig and lint config.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Template scaffolds and runs on web",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "app-shell/device-matrix-research",
+     "title": "Research and document the target device matrix (phone, tablet, laptop, desktop, TV/kiosk, foldable) with breakpoints and test devices",
+     "oneLine": "Produces the 7-width breakpoint list the quality pipeline screenshots against.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Research",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Template scaffolds and runs on web",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "app-shell/gh-pages-demo",
+     "title": "Set up GitHub Pages demo deploy for every app with per-PR preview URLs",
+     "oneLine": "Static build of apps/web published on merge and on PR branches.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Template scaffolds and runs on web",
+     "dependsOn": [
+      "app-shell/monorepo-scaffold"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "app-shell/router-layouts",
+     "title": "Implement file-based router with layout slots (nav, sidebar, inspector, command bar) driven by page specs",
+     "oneLine": "TanStack Router with typed routes and slot-based layouts that page specs fill.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Template scaffolds and runs on web",
+     "dependsOn": [
+      "app-shell/monorepo-scaffold"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "app-shell/env-config",
+     "title": "Define typed environment and config layer with per-target secret storage (web, desktop keychain, mobile secure storage)",
+     "oneLine": "Zod-validated config with target-specific secret backends.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Template scaffolds and runs on web",
+     "dependsOn": [
+      "app-shell/monorepo-scaffold"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "app-shell/pwa",
+     "title": "Ship installable PWA manifest, service worker and offline app shell",
+     "oneLine": "Workbox-based caching so the shell loads offline and installs on any browser.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Template scaffolds and runs on web",
+     "dependsOn": [
+      "app-shell/monorepo-scaffold"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "app-shell/tauri-desktop",
+     "title": "Add Tauri 2 desktop target for Linux, macOS and Windows sharing the web bundle",
+     "oneLine": "Cargo workspace, capability config, auto-update, signed builds in CI.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Desktop and mobile shells build",
+     "dependsOn": [
+      "app-shell/monorepo-scaffold"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "app-shell/tauri-mobile",
+     "title": "Add Tauri 2 mobile targets (iOS, Android) with platform capability shims",
+     "oneLine": "Mobile builds plus shims for camera, haptics, secure storage.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Developer"
+     ],
+     "milestone": "Desktop and mobile shells build",
+     "dependsOn": [
+      "app-shell/tauri-desktop"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "app-shell/breakpoints-windows",
+     "title": "Build responsive breakpoint matrix and multi-monitor window manager that detaches panels into OS windows",
+     "oneLine": "Container queries per breakpoint; panels pop out into Tauri windows and remember placement.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Desktop and mobile shells build",
+     "dependsOn": [
+      "app-shell/tauri-desktop",
+      "app-shell/device-matrix-research"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "app-shell/create-cli",
+     "title": "Write `paperos create <app>` CLI that clones the template into an imagine-os repo and wires Forgejo mirror, CI, Pages and a Linear project",
+     "oneLine": "One command from blank screen to a running, tracked app.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer",
+      "Agent"
+     ],
+     "milestone": "Desktop and mobile shells build",
+     "dependsOn": [
+      "app-shell/router-layouts",
+      "forge/mirror",
+      "pm-linear/configure-workspace"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "app-shell/linux-kiosk",
+     "title": "Support Linux kiosk and parallel-browser mode launching synced windows across displays from one CLI flag",
+     "oneLine": "Multi-display staff dashboards and signage from the same build.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Multi-monitor and PWA polish",
+     "dependsOn": [
+      "app-shell/breakpoints-windows",
+      "realtime/multi-window-sync"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "app-shell/template-docs",
+     "title": "Write the repo template guide: folder conventions, how an agent adds a page, how to ship each target",
+     "oneLine": "The first document every new session reads.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Docs",
+     "surface": [
+      "Developer",
+      "Agent"
+     ],
+     "milestone": "Multi-monitor and PWA polish",
+     "dependsOn": [
+      "app-shell/router-layouts",
+      "app-shell/tauri-desktop"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "app-shell/vps-coolify-bootstrap",
+     "title": "Provision the Hetzner VPS with Coolify, Caddy, DNS for the PaperOS domain, object storage, sops keys and the paperos-infra repo",
+     "oneLine": "The one host every other infra issue assumes: Coolify installed, domain wired, secrets store and backup bucket ready.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Template scaffolds and runs on web",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "app-shell/app-deploy-pipeline",
+     "title": "Build the app deploy pipeline: Docker images for apps/web and apps/api, staging on merge to main, production on tag, per-PR previews and rollback via Coolify",
+     "oneLine": "The staging and production deploys that the release train, e2e suite and every demo assume.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Template scaffolds and runs on web",
+     "dependsOn": [
+      "app-shell/monorepo-scaffold",
+      "app-shell/vps-coolify-bootstrap",
+      "data-layer/postgres-provision"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "app-shell/i18n-l10n",
+     "title": "Add internationalisation and localisation: ICU message catalogs, locale negotiation, Intl formatting helpers, RTL layout flip, pseudo-locale testing and an agent translation skill",
+     "oneLine": "Every string, number, date and currency goes through one locale layer so an app can serve any business in any country.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff",
+      "Developer"
+     ],
+     "milestone": "Desktop and mobile shells build",
+     "dependsOn": [
+      "app-shell/monorepo-scaffold",
+      "design-system/tokens"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "app-shell/feature-modules",
+     "title": "Make every platform capability a removable module: module manifests, `modules:` in app.spec.yaml, `paperos create --without`, per-tenant module toggles and dead-code checks",
+     "oneLine": "The mechanism behind 'we can always remove features': turn payroll, CRM, canvas or tables off per app or per tenant without forking the template.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Developer",
+      "Staff"
+     ],
+     "milestone": "Multi-monitor and PWA polish",
+     "dependsOn": [
+      "app-shell/create-cli",
+      "spec-builder/app-level-spec"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "app-shell/new-app-drill",
+     "title": "Run the blank-screen-to-running-app drill: time `paperos create` through first spec'd page, deploy and desktop build; record it; answer PAP-5 with numbers",
+     "oneLine": "The end-to-end acceptance test of the whole platform, measured in minutes, repeated until it is boring.",
+     "phase": "P2",
+     "priority": 1,
+     "type": "Review",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Multi-monitor and PWA polish",
+     "dependsOn": [
+      "app-shell/create-cli",
+      "app-shell/app-deploy-pipeline",
+      "quality/release-train",
+      "spec-builder/layout-codegen",
+      "app-shell/feature-modules"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "data-layer",
+   "name": "Data Layer & Database",
+   "color": "#27AE60",
+   "icon": "Database",
+   "summary": "Postgres 17 with row-level security, Drizzle schema-as-code, a typed API, local-first sync, files, search and audit.",
+   "description": "Goal: every app gets a production-grade, multi-tenant data foundation without writing infrastructure. Postgres is the single source of truth, Drizzle defines the schema and migrations in TypeScript, and RLS policies enforce tenant isolation even against buggy agent-written queries. A typed RPC layer generates Zod schemas from the database so front-end hooks are always in sync. ElectricSQL shapes and PGlite give local-first reads and an offline write queue on every target. Core entities (tenant, workspace, user, membership, role, audit event, file) are shared by all other projects. Object storage, full-text plus vector search, an append-only audit log and OpenTelemetry observability round it out. Non-goals: multi-database support or a custom query language.",
+   "phase": "P0",
+   "priority": 1,
+   "dependsOn": [],
+   "milestones": [
+    {
+     "name": "Postgres + Drizzle baseline",
+     "targetDate": "2026-09-19",
+     "goal": "Database provisioned, schema and migrations flowing, core entities modelled"
+    },
+    {
+     "name": "Local-first sync working",
+     "targetDate": "2026-09-24",
+     "goal": "Electric shapes and PGlite deliver offline reads and queued writes"
+    },
+    {
+     "name": "Tenant-safe and observable",
+     "targetDate": "2026-09-30",
+     "goal": "RLS tested, audit log, search, tracing and data dictionary live"
+    }
+   ],
+   "issues": [
+    {
+     "key": "data-layer/postgres-provision",
+     "title": "Provision Postgres 17 on the self-hosted VPS with automated backups and point-in-time recovery",
+     "oneLine": "Coolify-managed Postgres with WAL archiving to object storage.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Postgres + Drizzle baseline",
+     "dependsOn": [
+      "app-shell/vps-coolify-bootstrap"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "data-layer/sync-research",
+     "title": "Evaluate Zero, ElectricSQL, PowerSync and Replicache for local-first sync and write an ADR",
+     "oneLine": "Benchmark on the core entities and decide the sync engine.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Research",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Postgres + Drizzle baseline",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "data-layer/drizzle-schema",
+     "title": "Set up Drizzle ORM schema-as-code with migration workflow and seed scripts",
+     "oneLine": "drizzle-kit migrations run in CI and on deploy; seeds for local dev.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Postgres + Drizzle baseline",
+     "dependsOn": [
+      "data-layer/local-dev-stack"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "data-layer/core-entities",
+     "title": "Model core platform entities: tenant, workspace, user, membership, role, audit_event, file",
+     "oneLine": "The shared tables every other project extends.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Postgres + Drizzle baseline",
+     "dependsOn": [
+      "data-layer/drizzle-schema"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "data-layer/rls-tenancy",
+     "title": "Implement Postgres row-level security policies for multi-tenant isolation with a cross-tenant test harness",
+     "oneLine": "Every table gets tenant_id policies; tests attempt cross-tenant reads and must fail.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer",
+      "Staff"
+     ],
+     "milestone": "Postgres + Drizzle baseline",
+     "dependsOn": [
+      "data-layer/core-entities"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "data-layer/api-layer",
+     "title": "Expose a typed API via oRPC with Zod schemas generated from Drizzle",
+     "oneLine": "End-to-end types from database to React hooks.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Postgres + Drizzle baseline",
+     "dependsOn": [
+      "data-layer/core-entities"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "data-layer/local-first-sync",
+     "title": "Integrate PGlite and ElectricSQL shapes for local-first reads with an offline write queue",
+     "oneLine": "Instant UI on every device; writes replay when online.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Developer"
+     ],
+     "milestone": "Local-first sync working",
+     "dependsOn": [
+      "data-layer/api-layer",
+      "data-layer/sync-research"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "data-layer/file-storage",
+     "title": "Add S3-compatible object storage (MinIO) with signed uploads and image variants",
+     "oneLine": "Files table plus presigned upload flow and thumbnail generation.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Local-first sync working",
+     "dependsOn": [
+      "data-layer/core-entities",
+      "data-layer/jobs-queue"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "data-layer/audit-log",
+     "title": "Build append-only audit log with actor (human or agent), diff and reason fields",
+     "oneLine": "Every mutation records who, what changed and why.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff",
+      "Agent"
+     ],
+     "milestone": "Local-first sync working",
+     "dependsOn": [
+      "data-layer/core-entities"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "data-layer/search",
+     "title": "Add full-text and vector search (tsvector + pgvector) over any entity through a search registry",
+     "oneLine": "Entities register searchable fields; one search API.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Local-first sync working",
+     "dependsOn": [
+      "data-layer/core-entities",
+      "data-layer/jobs-queue"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "data-layer/observability",
+     "title": "Wire OpenTelemetry tracing, slow-query logging and Grafana dashboards for API and sync",
+     "oneLine": "See latency and errors per route and per tenant.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Tenant-safe and observable",
+     "dependsOn": [
+      "data-layer/api-layer"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "data-layer/data-dictionary",
+     "title": "Generate a living data dictionary from the Drizzle schema into the docs system",
+     "oneLine": "Tables, columns, relations and policies rendered in-app.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Docs",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Tenant-safe and observable",
+     "dependsOn": [
+      "data-layer/drizzle-schema",
+      "collab/docs-engine"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "data-layer/local-dev-stack",
+     "title": "Ship the local dev stack: docker compose with Postgres 17, MinIO, Mailpit and Hocuspocus, per-worktree databases and a SessionStart hook so parallel Claude sessions never share state",
+     "oneLine": "ops/compose/dev.yml plus per-branch database naming and CI service containers; every session gets an isolated stack.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Postgres + Drizzle baseline",
+     "dependsOn": [
+      "app-shell/monorepo-scaffold"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "data-layer/jobs-queue",
+     "title": "Build the background jobs and scheduler package (pg-boss) with retries, idempotency keys, cron, dead-letter queue and an admin view",
+     "oneLine": "One worker runtime that file variants, search indexing, notifications, imports, exports, outreach and social scheduling all queue into.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer",
+      "Staff"
+     ],
+     "milestone": "Local-first sync working",
+     "dependsOn": [
+      "data-layer/drizzle-schema",
+      "libraries/backend-landscape"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "forge",
+   "name": "Version Control & Forge Independence",
+   "color": "#6B7280",
+   "icon": "GitBranch",
+   "summary": "Git stays the format; a self-hosted Forgejo becomes our forge, mirrored both ways with GitHub, with its own CI runners and a proven recovery drill.",
+   "description": "Goal: PaperOS is never hostage to GitHub while keeping every Git-based tool agents rely on. We deploy Forgejo on our VPS behind Caddy with SSO, mirror every imagine-os repo bidirectionally, run Forgejo Actions runners so CI survives a GitHub outage, and script repo bootstrap so pre-provisioned repos get mirrors, secrets, labels and webhooks automatically. Branch protection, conventional commits and worktree-per-issue conventions make parallel agent work safe. A disaster-recovery drill rebuilds everything from Forgejo backups with GitHub offline. Non-goal: a from-scratch version control system; the ADR records why. Later, repo browsing and diffs surface inside PaperOS via the Forgejo API.",
+   "phase": "P0",
+   "priority": 1,
+   "dependsOn": [],
+   "milestones": [
+    {
+     "name": "Forgejo live and mirrored",
+     "targetDate": "2026-09-19",
+     "goal": "Forgejo deployed, all repos mirrored, bot accounts and branch policy in place"
+    },
+    {
+     "name": "CI runs on both forges",
+     "targetDate": "2026-09-24",
+     "goal": "Actions runners, bootstrap script and release automation"
+    },
+    {
+     "name": "Disaster recovery proven",
+     "targetDate": "2026-09-30",
+     "goal": "Drill passes; in-app git browsing"
+    }
+   ],
+   "issues": [
+    {
+     "key": "forge/vcs-decision-adr",
+     "title": "Write ADR: keep Git as the format, self-host Forgejo, mirror GitHub, defer any custom VCS",
+     "oneLine": "Records the pragmatic route and the criteria that would reopen the decision.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Forgejo live and mirrored",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "forge/forgejo-deploy",
+     "title": "Deploy Forgejo on the VPS behind Caddy with SSO from Better Auth and nightly backups",
+     "oneLine": "Our own forge with TLS, backups and org structure mirroring imagine-os.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Forgejo live and mirrored",
+     "dependsOn": [
+      "app-shell/vps-coolify-bootstrap"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "forge/branch-policy",
+     "title": "Define branch protection, conventional commits and worktree-per-issue conventions for parallel agents",
+     "oneLine": "Rules that let 20 sessions commit without stepping on each other.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Developer",
+      "Agent"
+     ],
+     "milestone": "Forgejo live and mirrored",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "forge/mirror",
+     "title": "Configure bidirectional push mirroring between Forgejo and the GitHub org imagine-os for all repos",
+     "oneLine": "Either forge can be primary; commits land on both within a minute.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Forgejo live and mirrored",
+     "dependsOn": [
+      "forge/forgejo-deploy"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "forge/bot-accounts",
+     "title": "Create scoped bot accounts and deploy keys for each agent character on both forges",
+     "oneLine": "Least-privilege identities so commits are attributable to characters.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Infra",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Forgejo live and mirrored",
+     "dependsOn": [
+      "forge/forgejo-deploy"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "forge/pr-templates",
+     "title": "Author PR template linking Linear issue, page spec, screenshots and the review-gate checklist",
+     "oneLine": "Every PR carries what reviewers and Justin need.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Docs",
+     "surface": [
+      "Developer",
+      "Agent"
+     ],
+     "milestone": "Forgejo live and mirrored",
+     "dependsOn": [
+      "forge/branch-policy"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "forge/actions-runner",
+     "title": "Run Forgejo Actions runners so CI works even when GitHub is unavailable",
+     "oneLine": "Same workflow files run on either forge.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "CI runs on both forges",
+     "dependsOn": [
+      "forge/forgejo-deploy"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "forge/repo-bootstrap",
+     "title": "Script `forge bootstrap <repo>` to configure imagine-os repos with mirrors, secrets, labels and webhooks",
+     "oneLine": "Turns pre-provisioned empty repos into ready ones in one command.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Developer",
+      "Agent"
+     ],
+     "milestone": "CI runs on both forges",
+     "dependsOn": [
+      "forge/mirror",
+      "forge/bot-accounts"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "forge/release-tags",
+     "title": "Automate semantic release tags and changelog generation on merge to main",
+     "oneLine": "Conventional commits produce versions and release notes.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "CI runs on both forges",
+     "dependsOn": [
+      "forge/branch-policy",
+      "collab/changelog"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "forge/dr-drill",
+     "title": "Run a disaster-recovery drill rebuilding all repos and CI from Forgejo backups with GitHub offline",
+     "oneLine": "Proves independence; documents recovery time.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Review",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Disaster recovery proven",
+     "dependsOn": [
+      "forge/mirror",
+      "forge/actions-runner"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "forge/in-app-git",
+     "title": "Expose repo browsing, diffs and commit history inside PaperOS via the Forgejo API",
+     "oneLine": "Developers and agents see code history next to specs and issues.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Disaster recovery proven",
+     "dependsOn": [
+      "forge/forgejo-deploy",
+      "app-shell/router-layouts"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "identity",
+   "name": "Identity, Roles & Audiences",
+   "color": "#BB87FC",
+   "icon": "Shield",
+   "summary": "Better Auth with passkeys and organizations, a role+attribute permission engine driven by page specs, and audiences from customer tiers to staff to agents.",
+   "description": "Goal: any app knows exactly who is acting, which tenant they belong to and what they may do, whether they are a customer, a staff member, a partner, an admin or a Claude agent. Better Auth provides passkeys, magic links, OAuth and organizations across web and Tauri. The audience model treats segments as composable so 'everything in between' is a configuration, not a rewrite. The permission engine combines roles with attribute policies declared in page specs, backed by Postgres RLS, and permission matrix tests are generated from those specs. Agents are first-class principals with scoped keys and visible attribution. Separate customer portal and staff console shells demonstrate the split. Non-goals: building our own auth protocol or password storage.",
+   "phase": "P0",
+   "priority": 1,
+   "dependsOn": [
+    "data-layer"
+   ],
+   "milestones": [
+    {
+     "name": "Auth works across web and desktop",
+     "targetDate": "2026-09-20",
+     "goal": "Sign-in, sessions, organizations and audience model defined"
+    },
+    {
+     "name": "Roles and audiences enforced end to end",
+     "targetDate": "2026-09-25",
+     "goal": "Permission engine, impersonation, portal and console shells"
+    },
+    {
+     "name": "Agent principals and enterprise",
+     "targetDate": "2026-09-30",
+     "goal": "Agent keys, permission tests, SSO/SCIM"
+    }
+   ],
+   "issues": [
+    {
+     "key": "identity/audience-model",
+     "title": "Specify the audience model: customer tiers, staff roles, partners, admins, agents and composable segments in between",
+     "oneLine": "The vocabulary every spec and policy uses for who.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Customer",
+      "Staff",
+      "Agent"
+     ],
+     "milestone": "Auth works across web and desktop",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "identity/auth-research",
+     "title": "Compare Better Auth, Lucia, Clerk and Auth.js for self-hosting, organizations and passkeys; write ADR",
+     "oneLine": "Confirms the auth choice before wiring it everywhere.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Research",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Auth works across web and desktop",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "identity/better-auth",
+     "title": "Install Better Auth with passkeys, magic link, Google/GitHub OAuth and sessions for web and Tauri",
+     "oneLine": "One auth server, cookie sessions on web, secure token storage on native.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Auth works across web and desktop",
+     "dependsOn": [
+      "data-layer/core-entities",
+      "identity/auth-research"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "identity/org-tenancy",
+     "title": "Implement organizations, workspaces, invitations and tenant switching",
+     "oneLine": "Multi-tenant membership flows on top of Better Auth.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Auth works across web and desktop",
+     "dependsOn": [
+      "identity/better-auth"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "identity/rbac-abac",
+     "title": "Build permission engine combining role-based grants with attribute policies declared in page specs",
+     "oneLine": "One `can(actor, action, resource)` used by API, RLS and UI.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Auth works across web and desktop",
+     "dependsOn": [
+      "identity/audience-model",
+      "data-layer/rls-tenancy"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "identity/agent-principals",
+     "title": "Make agents first-class principals with scoped API keys, rate limits and visible attribution",
+     "oneLine": "Agent actions are permissioned and attributed like any user.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Agent principals and enterprise",
+     "dependsOn": [
+      "identity/rbac-abac"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "identity/impersonation",
+     "title": "Add staff 'view as customer' impersonation with full audit trail",
+     "oneLine": "Support and QA see exactly what a customer sees.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Roles and audiences enforced end to end",
+     "dependsOn": [
+      "identity/rbac-abac",
+      "data-layer/audit-log"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "identity/customer-portal-shell",
+     "title": "Ship the customer-facing portal shell (login, profile, billing entry) separate from the staff console",
+     "oneLine": "Reference customer surface every app inherits.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Roles and audiences enforced end to end",
+     "dependsOn": [
+      "identity/org-tenancy",
+      "app-shell/router-layouts"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "identity/staff-console-shell",
+     "title": "Ship the staff console shell with tenant switcher, audience filters and admin navigation",
+     "oneLine": "Reference staff surface every app inherits.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Roles and audiences enforced end to end",
+     "dependsOn": [
+      "identity/org-tenancy",
+      "app-shell/router-layouts"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "identity/permission-tests",
+     "title": "Generate permission matrix tests from page specs covering who can see and do what on every page",
+     "oneLine": "Turns access sections into failing tests when policies drift.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Review",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Agent principals and enterprise",
+     "dependsOn": [
+      "identity/rbac-abac",
+      "spec-builder/access-section",
+      "spec-builder/conformance-tests"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "identity/sso-scim",
+     "title": "Add SAML/OIDC SSO and SCIM provisioning for enterprise tenants",
+     "oneLine": "Enterprise readiness without touching app code.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Agent principals and enterprise",
+     "dependsOn": [
+      "identity/org-tenancy"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "design-system",
+   "name": "Design System",
+   "color": "#F2994A",
+   "icon": "Palette",
+   "summary": "DTCG tokens compiled to CSS variables, accessible components on headless primitives with Tailwind v4, themes per tenant, and Storybook as the living document.",
+   "description": "Goal: every page an agent generates looks like one product and passes accessibility by default. Tokens for color, type, space, radius, motion and elevation live in W3C DTCG JSON and compile to CSS variables, enabling light, dark, high-contrast and per-tenant brand themes at runtime. Components are built on Base UI/Radix primitives with Tailwind v4, covering primitives, layout (AppFrame, SplitPane, Inspector, CommandBar) and data display. Storybook with a11y, viewport and interaction addons deploys to GitHub Pages and is what the quality pipeline screenshots. Every component maps to a spec-builder component ID so page specs reference real parts. Non-goals: a bespoke CSS-in-JS runtime or pixel-perfect Figma parity on day one.",
+   "phase": "P0",
+   "priority": 1,
+   "dependsOn": [],
+   "milestones": [
+    {
+     "name": "Tokens and primitives",
+     "targetDate": "2026-09-20",
+     "goal": "Token pipeline, 20 core components, icons, Storybook live"
+    },
+    {
+     "name": "Component library covers app shell needs",
+     "targetDate": "2026-09-25",
+     "goal": "Layout and data-display components, motion, a11y audit"
+    },
+    {
+     "name": "Themable per tenant with docs",
+     "targetDate": "2026-09-30",
+     "goal": "Runtime theming, guidelines, spec mapping, Figma decision"
+    }
+   ],
+   "issues": [
+    {
+     "key": "design-system/tokens",
+     "title": "Define design tokens (color, type, space, radius, motion, elevation) in DTCG JSON compiled to CSS variables",
+     "oneLine": "Style Dictionary build feeding Tailwind v4 theme.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Tokens and primitives",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "design-system/primitives",
+     "title": "Adopt Base UI/Radix primitives with Tailwind v4 and build 20 core components (Button, Input, Select, Dialog, Menu, Tabs, Toast, Tooltip, Popover...)",
+     "oneLine": "Accessible, themable building blocks with stories and tests.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Tokens and primitives",
+     "dependsOn": [
+      "design-system/tokens",
+      "libraries/ui-landscape"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "design-system/icons-illustrations",
+     "title": "Choose the icon set (Lucide or Phosphor) and illustration style; build a tree-shaken Icon component",
+     "oneLine": "Consistent iconography across all surfaces.",
+     "phase": "P0",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Tokens and primitives",
+     "dependsOn": [
+      "design-system/tokens"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "design-system/storybook",
+     "title": "Set up Storybook with a11y, viewport and interaction-test addons deployed to GitHub Pages",
+     "oneLine": "Living documentation and screenshot target.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Tokens and primitives",
+     "dependsOn": [
+      "design-system/primitives"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "design-system/layout-components",
+     "title": "Build layout components: AppFrame, SplitPane, Inspector, CommandBar, ResponsiveGrid",
+     "oneLine": "The frames page specs place components into.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Component library covers app shell needs",
+     "dependsOn": [
+      "design-system/primitives",
+      "app-shell/router-layouts"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "design-system/data-display",
+     "title": "Build data display components: cell renderers, Badge, AvatarStack, Timeline, EmptyState, Skeleton",
+     "oneLine": "Shared visuals for tables, dashboards and feeds.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Component library covers app shell needs",
+     "dependsOn": [
+      "design-system/primitives"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "design-system/motion",
+     "title": "Define the motion system (durations, easings, reduced-motion) and shared transition components",
+     "oneLine": "Consistent, accessible animation.",
+     "phase": "P1",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Component library covers app shell needs",
+     "dependsOn": [
+      "design-system/tokens"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "design-system/a11y-audit",
+     "title": "Run axe and manual screen-reader audit on every component and fix to WCAG 2.2 AA",
+     "oneLine": "No component ships below AA.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Review",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Component library covers app shell needs",
+     "dependsOn": [
+      "design-system/primitives",
+      "design-system/storybook"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "design-system/component-spec-mapping",
+     "title": "Map every component to a spec-builder component ID with props schema so page specs reference real components",
+     "oneLine": "Bridges design system and codegen.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Developer",
+      "Agent"
+     ],
+     "milestone": "Component library covers app shell needs",
+     "dependsOn": [
+      "design-system/primitives",
+      "spec-builder/schema"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "design-system/theming",
+     "title": "Implement light, dark and high-contrast themes plus per-tenant brand theming with runtime token override",
+     "oneLine": "Tenants upload a logo and palette; the whole app rethemes.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Themable per tenant with docs",
+     "dependsOn": [
+      "design-system/tokens"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "design-system/guidelines-docs",
+     "title": "Write design system guidelines (voice, density, spacing, when to use what) into the docs system",
+     "oneLine": "Rules agents follow when specs leave room.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Docs",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Themable per tenant with docs",
+     "dependsOn": [
+      "design-system/storybook",
+      "collab/docs-engine"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "design-system/figma-sync",
+     "title": "Export tokens to Figma variables and document the round-trip, or record the decision to skip Figma",
+     "oneLine": "Decide whether a design tool is in the loop.",
+     "phase": "P2",
+     "priority": 4,
+     "type": "Research",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Themable per tenant with docs",
+     "dependsOn": [
+      "design-system/tokens"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "quality",
+   "name": "Quality Pipeline",
+   "color": "#EB5757",
+   "icon": "CheckCircle",
+   "summary": "Four automated gates: static checks, three Claude reviewer agents, screenshot and video replay across the breakpoint matrix, and edge-case hunting; weekly release digests for Justin.",
+   "description": "Goal: nothing reaches Justin unless machines have already reviewed it several ways. Gate 1 runs typecheck, Biome, Vitest and builds. Gate 2 runs three Claude reviewer agents (correctness, security, spec-conformance) against shared rubrics and posts structured reviews. Gate 3 captures Playwright screenshots and video replays of key flows across seven widths and all themes, diffs them against baselines and has a vision agent annotate layout defects. Gate 4 is an edge-case hunter that derives adversarial scenarios from page specs. Performance budgets, security scans and flake quarantine keep the pipeline trustworthy. A release train produces weekly candidates with a one-page digest into Needs Justin. Non-goal: manual QA as a routine step.",
+   "phase": "P0",
+   "priority": 1,
+   "dependsOn": [
+    "app-shell"
+   ],
+   "milestones": [
+    {
+     "name": "Gates 1 and 2 on every PR",
+     "targetDate": "2026-09-20",
+     "goal": "Static checks, reviewer agents, rubrics, security scans, screenshot matrix"
+    },
+    {
+     "name": "Visual and video gates",
+     "targetDate": "2026-09-25",
+     "goal": "Video replays, vision inspection, edge-case hunter, e2e flows, perf budgets"
+    },
+    {
+     "name": "Edge-case hunting and release trains",
+     "targetDate": "2026-09-30",
+     "goal": "Release train, review digest, flake quarantine"
+    }
+   ],
+   "issues": [
+    {
+     "key": "quality/ci-gate1",
+     "title": "Set up CI gate 1: typecheck, Biome lint, Vitest unit tests and web build on every PR",
+     "oneLine": "The fast gate that runs in under 3 minutes.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Gates 1 and 2 on every PR",
+     "dependsOn": [
+      "app-shell/monorepo-scaffold"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "quality/review-rubrics",
+     "title": "Write review rubrics and a severity taxonomy shared by all reviewer agents and humans",
+     "oneLine": "Blocker/major/minor definitions and per-domain checklists.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Gates 1 and 2 on every PR",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "quality/security-scans",
+     "title": "Add dependency audit, secret scanning, Semgrep SAST and container scanning to CI",
+     "oneLine": "Catch leaked keys and vulnerable packages before review.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Gates 1 and 2 on every PR",
+     "dependsOn": [
+      "quality/ci-gate1"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "quality/review-agents",
+     "title": "Build gate 2: three Claude reviewer agents (correctness, security, spec-conformance) posting structured PR reviews",
+     "oneLine": "Agents review every PR against the rubrics and block on blockers.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Agent",
+      "Developer"
+     ],
+     "milestone": "Gates 1 and 2 on every PR",
+     "dependsOn": [
+      "quality/ci-gate1",
+      "quality/review-rubrics"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "quality/playwright-matrix",
+     "title": "Build gate 3: Playwright screenshot suite across the 7-width breakpoint matrix, all themes and key pages with baseline diffs",
+     "oneLine": "Visual regression on every PR.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Gates 1 and 2 on every PR",
+     "dependsOn": [
+      "quality/ci-gate1",
+      "app-shell/device-matrix-research"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "quality/video-replays",
+     "title": "Record video replays of critical flows per PR at each responsive size and attach them to the PR",
+     "oneLine": "Reviewers and Justin watch, not read.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Visual and video gates",
+     "dependsOn": [
+      "quality/playwright-matrix"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "quality/screenshot-annotation",
+     "title": "Have a vision agent inspect screenshots for overflow, misalignment, contrast and truncation and post annotated findings",
+     "oneLine": "Turns pixels into review comments.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Visual and video gates",
+     "dependsOn": [
+      "quality/playwright-matrix"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "quality/edge-case-hunter",
+     "title": "Build gate 4: edge-case hunter agent generating adversarial inputs, empty/huge/unicode states, network failure and slow-device scenarios from page specs",
+     "oneLine": "Finds what happy-path tests miss.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Visual and video gates",
+     "dependsOn": [
+      "spec-builder/schema",
+      "quality/review-agents"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "quality/e2e-flows",
+     "title": "Write end-to-end flow tests for auth, tenant switch, CRUD and realtime presence",
+     "oneLine": "Smoke coverage for the core platform.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Visual and video gates",
+     "dependsOn": [
+      "identity/org-tenancy",
+      "app-shell/app-deploy-pipeline"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "quality/perf-budgets",
+     "title": "Enforce performance budgets (LCP, INP, bundle size) with Lighthouse CI",
+     "oneLine": "Regressions in speed fail the PR.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Visual and video gates",
+     "dependsOn": [
+      "quality/ci-gate1"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "quality/release-train",
+     "title": "Define the release train: nightly staging deploy, weekly release candidate to Needs Justin with consolidated review report",
+     "oneLine": "Justin reviews releases, not PRs.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Developer",
+      "Agent"
+     ],
+     "milestone": "Edge-case hunting and release trains",
+     "dependsOn": [
+      "quality/review-agents",
+      "quality/playwright-matrix",
+      "app-shell/app-deploy-pipeline"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "quality/review-report",
+     "title": "Generate a one-page human review digest per release candidate: what changed, risks, screenshots, open questions",
+     "oneLine": "The single artifact Justin reads.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Staff",
+      "Agent"
+     ],
+     "milestone": "Edge-case hunting and release trains",
+     "dependsOn": [
+      "quality/release-train"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "quality/flake-quarantine",
+     "title": "Build flaky-test detection and quarantine so agents are not blocked by nondeterminism",
+     "oneLine": "Retries, flake scoring, auto-quarantine with an issue.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Edge-case hunting and release trains",
+     "dependsOn": [
+      "quality/e2e-flows"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "pm-linear",
+   "name": "Project Management & Claude Pipeline",
+   "color": "#5E6AD2",
+   "icon": "Kanban",
+   "summary": "Linear configured as the agent queue, an orchestrator that turns Ready for Claude issues into sessions and PRs, and a thin PM module that syncs with Linear.",
+   "description": "Goal: Linear becomes the queue many parallel Claude Code sessions build from, and Justin's own queue stays tiny. We add the pipeline states, label groups and project templates to team PAP, define an issue contract enforced by a webhook validator, and build an orchestrator that claims issues, spawns sessions in git worktrees, posts PR status and screenshots back, and meters credit spend. Concurrency controls respect dependencies and file-lock hints. Inside PaperOS a PM data model mirrors Linear and a bidirectional sync keeps both in step, with boards rendered by the views engine. Non-goal: replacing Linear before Oct 1; the sync preserves the option. PAP-5 is decomposed into this plan and closed.",
+   "phase": "P0",
+   "priority": 1,
+   "dependsOn": [],
+   "milestones": [
+    {
+     "name": "Linear configured for the pipeline",
+     "targetDate": "2026-09-18",
+     "goal": "States, labels, projects, issue contract, Justin queue design, playbook"
+    },
+    {
+     "name": "Orchestrator claims and ships issues",
+     "targetDate": "2026-09-22",
+     "goal": "Sessions spawn from Linear, webhooks round-trip, credits metered"
+    },
+    {
+     "name": "PM module syncs both ways",
+     "targetDate": "2026-09-30",
+     "goal": "PM entities, Linear sync, board views"
+    }
+   ],
+   "issues": [
+    {
+     "key": "pm-linear/configure-workspace",
+     "title": "Add pipeline states (Ready for Claude, In Review, Needs Justin), label groups and project templates to Linear team PAP",
+     "oneLine": "The Linear setup this plan assumes.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Infra",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Linear configured for the pipeline",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "pm-linear/session-playbook",
+     "title": "Write the session playbook: how a Claude session picks up an issue, what it must read, how it reports and ends",
+     "oneLine": "The contract every character follows.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Docs",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Linear configured for the pipeline",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "pm-linear/issue-contract",
+     "title": "Define the issue contract (spec link, acceptance criteria, surfaces, definition of done) enforced by a Linear webhook validator",
+     "oneLine": "Issues cannot enter Ready for Claude without it.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Linear configured for the pipeline",
+     "dependsOn": [
+      "pm-linear/configure-workspace"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "pm-linear/justin-queue",
+     "title": "Design the Needs Justin queue: batched decisions, one-click approve/reject comments, max five open items rule",
+     "oneLine": "Protects the single human reviewer.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Linear configured for the pipeline",
+     "dependsOn": [
+      "pm-linear/configure-workspace"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "pm-linear/pap5-decompose",
+     "title": "Decompose PAP-5 (startup procedure inefficiency) into this master plan's projects and close it with a summary comment",
+     "oneLine": "Links the origin issue to the plan.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Docs",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Linear configured for the pipeline",
+     "dependsOn": [
+      "pm-linear/configure-workspace"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "pm-linear/orchestrator",
+     "title": "Build the orchestrator that polls Ready for Claude, spawns one Claude Code session per issue in a git worktree and moves states",
+     "oneLine": "The engine that turns Linear into running agents.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Orchestrator claims and ships issues",
+     "dependsOn": [
+      "pm-linear/configure-workspace",
+      "forge/branch-policy",
+      "pm-linear/session-playbook",
+      "app-shell/vps-coolify-bootstrap"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "pm-linear/webhooks",
+     "title": "Set up Linear webhooks into the orchestrator and PR status back to Linear as comments with screenshots and review verdicts",
+     "oneLine": "Two-way visibility without opening GitHub.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Orchestrator claims and ships issues",
+     "dependsOn": [
+      "pm-linear/orchestrator"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "pm-linear/credit-metering",
+     "title": "Track Claude credit spend per issue and project and post a daily burn report to Linear",
+     "oneLine": "Keeps the $10K on plan.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Orchestrator claims and ships issues",
+     "dependsOn": [
+      "pm-linear/orchestrator"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "pm-linear/concurrency",
+     "title": "Implement concurrency controls: max parallel sessions, file-lock hints and dependency-aware scheduling from dependsOn",
+     "oneLine": "Avoid merge storms and blocked work.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Orchestrator claims and ships issues",
+     "dependsOn": [
+      "pm-linear/orchestrator"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "pm-linear/pm-data-model",
+     "title": "Model PM entities in PaperOS (project, issue, cycle, milestone, comment, label) mirroring Linear's schema",
+     "oneLine": "The thin PM layer's tables.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Spec",
+     "surface": [
+      "Staff",
+      "Developer"
+     ],
+     "milestone": "PM module syncs both ways",
+     "dependsOn": [
+      "data-layer/core-entities"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "pm-linear/linear-sync",
+     "title": "Build bidirectional Linear sync (GraphQL + webhooks) with conflict rule: Linear wins until cutover",
+     "oneLine": "Same issues visible in both tools.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "PM module syncs both ways",
+     "dependsOn": [
+      "pm-linear/pm-data-model",
+      "pm-linear/webhooks"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "pm-linear/board-views",
+     "title": "Render PM board, list and timeline views using the tables/views engine",
+     "oneLine": "Project management inside the product.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "PM module syncs both ways",
+     "dependsOn": [
+      "pm-linear/pm-data-model",
+      "tables/kanban-view"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "agents",
+   "name": "Agent Characters & Orgs",
+   "color": "#F7C8E0",
+   "icon": "Bot",
+   "summary": "The character roster: lead agents with sub-characters, each with explicit tools, access, plugins, skills, memory, budgets and handoff rules, visible as an org chart in-app.",
+   "description": "Goal: the people building PaperOS are Claude characters, and they must be as legible as human staff. A character schema defines name, role, reportsTo, tools, MCP servers, access scopes, plugins, skills, memory and escalation rules. Nine leads and their sub-characters are installed as .claude/agents definitions with a shared skills library. Per-character MCP allowlists and permission modes are verified for least privilege. Persistent memory, a handoff protocol, an eval harness with golden tasks, budgets with a kill switch and prompt logging make the org safe to run unattended. An org chart UI shows who is doing what with which access. Non-goal: autonomous hiring of new characters without a Needs Justin approval.",
+   "phase": "P0",
+   "priority": 1,
+   "dependsOn": [
+    "pm-linear"
+   ],
+   "milestones": [
+    {
+     "name": "Roster defined and installed",
+     "targetDate": "2026-09-20",
+     "goal": "Schema, nine leads with sub-characters, skills library, tool scopes, logging hook"
+    },
+    {
+     "name": "Sub-agents, skills and evals live",
+     "targetDate": "2026-09-25",
+     "goal": "Memory, handoffs, eval harness, cost controls, handbook"
+    },
+    {
+     "name": "Agent org visible in app",
+     "targetDate": "2026-09-30",
+     "goal": "Org chart UI with live tasks and access"
+    }
+   ],
+   "issues": [
+    {
+     "key": "agents/character-schema",
+     "title": "Define the character schema: name, role, reportsTo, tools, MCP servers, access scopes, plugins, skills, memory, escalation rules",
+     "oneLine": "The typed shape of an agent.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Roster defined and installed",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "agents/roster-v1",
+     "title": "Write the nine lead characters and their sub-characters as .claude/agents definitions with system prompts",
+     "oneLine": "Atlas, Forge, Iris, Quill, Sentinel, Nova, Ledger, Beacon, Scout.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Roster defined and installed",
+     "dependsOn": [
+      "agents/character-schema"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "agents/skills-library",
+     "title": "Build the shared skills library (page-from-spec, review-pr, screenshot-audit, write-adr, linear-update) as .claude/skills",
+     "oneLine": "Reusable procedures every character can invoke.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Roster defined and installed",
+     "dependsOn": [
+      "agents/character-schema"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "agents/tool-scopes",
+     "title": "Implement per-character MCP allowlists and permission modes and verify least privilege with an automated test",
+     "oneLine": "No character can do more than its schema says.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Roster defined and installed",
+     "dependsOn": [
+      "agents/roster-v1",
+      "forge/bot-accounts"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "agents/prompt-logging-hook",
+     "title": "Hook every session's prompts, responses and tool calls into the prompt-log store",
+     "oneLine": "Complete record of how the product was built.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Roster defined and installed",
+     "dependsOn": [
+      "collab/prompt-log-store"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "agents/handoffs",
+     "title": "Design the handoff protocol between characters: artifact contract, Linear comment format, escalation to Needs Justin",
+     "oneLine": "Clean baton passes between sessions.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Sub-agents, skills and evals live",
+     "dependsOn": [
+      "agents/roster-v1"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "agents/memory",
+     "title": "Give characters persistent memory (project notes, decisions, gotchas) stored in the docs system and loaded at session start",
+     "oneLine": "Characters stop repeating mistakes.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Sub-agents, skills and evals live",
+     "dependsOn": [
+      "agents/roster-v1",
+      "collab/docs-engine"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "agents/eval-harness",
+     "title": "Create an eval harness with golden tasks per character, scored nightly, regressions flagged in Linear",
+     "oneLine": "Quality of the agents themselves is measured.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Review",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Sub-agents, skills and evals live",
+     "dependsOn": [
+      "agents/roster-v1",
+      "agents/skills-library"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "agents/cost-controls",
+     "title": "Add per-character budgets, max-turn limits and a kill switch",
+     "oneLine": "Spend is bounded per character and per issue.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Sub-agents, skills and evals live",
+     "dependsOn": [
+      "pm-linear/credit-metering"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "agents/character-docs",
+     "title": "Publish the character handbook: who does what, how to summon them, what they may not do",
+     "oneLine": "Reference for Justin and future humans.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Docs",
+     "surface": [
+      "Agent",
+      "Staff"
+     ],
+     "milestone": "Sub-agents, skills and evals live",
+     "dependsOn": [
+      "agents/roster-v1"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "agents/org-chart-ui",
+     "title": "Build the agent org chart UI showing characters, sub-agents, current tasks, tools and access",
+     "oneLine": "The agent org as a first-class page.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff",
+      "Agent"
+     ],
+     "milestone": "Agent org visible in app",
+     "dependsOn": [
+      "agents/roster-v1",
+      "collab/canvas-view"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "spec-builder",
+   "name": "Spec Builder",
+   "color": "#9B51E0",
+   "icon": "FileText",
+   "summary": "A page.spec.yaml schema describing logic, access, data, integrations, layout, components and edge cases, with a validator, codegen, conformance tests and an editor UI.",
+   "description": "Goal: every page in every app is specified before it is built, and the spec drives code, tests and diagrams. The schema captures purpose, logic, access rules, data queries and mutations, integrations, layout, component tree, states, events and edge cases; an app.spec.yaml holds shared audiences, navigation and entities. A validator CLI and CI check block unspecified pages. Codegen scaffolds layouts and typed data hooks from specs; conformance and permission tests are derived automatically; the canvas view is generated from spec transitions. A spec editor UI with form and YAML views lets Justin and agents edit specs in-app, and an authoring skill lets agents interview and draft specs. Non-goal: a full visual app builder.",
+   "phase": "P1",
+   "priority": 1,
+   "dependsOn": [
+    "design-system",
+    "data-layer"
+   ],
+   "milestones": [
+    {
+     "name": "Spec schema and validator",
+     "targetDate": "2026-09-22",
+     "goal": "Schema, validator, access and app-level spec, authoring skill"
+    },
+    {
+     "name": "Codegen and conformance tests",
+     "targetDate": "2026-09-26",
+     "goal": "Data hooks, layout codegen, integrations registry, conformance tests, canvas emit"
+    },
+    {
+     "name": "Spec editor UI",
+     "targetDate": "2026-09-30",
+     "goal": "In-app editor and worked examples"
+    }
+   ],
+   "issues": [
+    {
+     "key": "spec-builder/schema",
+     "title": "Define the page.spec.yaml schema: purpose, logic, access, data, integrations, layout, components, states, events, edge cases",
+     "oneLine": "JSON Schema plus TypeScript types.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Developer",
+      "Agent"
+     ],
+     "milestone": "Spec schema and validator",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "spec-builder/validator",
+     "title": "Build the spec validator CLI and CI check that fails PRs whose pages lack or violate specs",
+     "oneLine": "Specs become mandatory.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Spec schema and validator",
+     "dependsOn": [
+      "spec-builder/schema"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "spec-builder/access-section",
+     "title": "Specify the access section format that compiles to permission-engine policies",
+     "oneLine": "Who can see and do what, per page, machine-readable.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Spec schema and validator",
+     "dependsOn": [
+      "spec-builder/schema"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "spec-builder/app-level-spec",
+     "title": "Define app.spec.yaml (audiences, navigation, entities, integrations) that page specs inherit from",
+     "oneLine": "App-wide context so page specs stay short.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Spec schema and validator",
+     "dependsOn": [
+      "spec-builder/schema"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "spec-builder/spec-authoring-skill",
+     "title": "Write the agent skill: interview -> draft page spec -> validate -> open Linear issue",
+     "oneLine": "How specs get written at scale.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Spec schema and validator",
+     "dependsOn": [
+      "spec-builder/validator",
+      "agents/skills-library"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "spec-builder/data-section",
+     "title": "Specify the data section (entities, queries, mutations, sync mode) and generate typed hooks from it",
+     "oneLine": "Pages declare data; hooks are generated.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Codegen and conformance tests",
+     "dependsOn": [
+      "spec-builder/schema",
+      "data-layer/api-layer"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "spec-builder/layout-codegen",
+     "title": "Generate page scaffolds (layout, component tree, loading/empty/error states) from specs",
+     "oneLine": "Spec in, working page skeleton out.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Codegen and conformance tests",
+     "dependsOn": [
+      "spec-builder/schema",
+      "design-system/component-spec-mapping"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "spec-builder/integrations-section",
+     "title": "Specify the integrations section (Stripe, Linear, Notion, Drive, Webflow, Miro, Gamma) backed by a connector registry",
+     "oneLine": "Pages declare which external systems they touch.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Spec",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Codegen and conformance tests",
+     "dependsOn": [
+      "spec-builder/schema",
+      "libraries/mcp-servers"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "spec-builder/conformance-tests",
+     "title": "Generate conformance tests from specs (access matrix, required components, states) into CI gate 1",
+     "oneLine": "Spec drift fails the build.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Codegen and conformance tests",
+     "dependsOn": [
+      "spec-builder/validator",
+      "quality/ci-gate1"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "spec-builder/spec-to-canvas",
+     "title": "Emit the UX-flow graph (pages, transitions, roles) from specs for the canvas view",
+     "oneLine": "Specs draw the map of the app.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Codegen and conformance tests",
+     "dependsOn": [
+      "spec-builder/schema",
+      "collab/canvas-view"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "spec-builder/spec-editor-ui",
+     "title": "Build the spec editor UI with form and YAML views and live preview",
+     "oneLine": "Edit specs in-app without touching files.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Developer",
+      "Staff"
+     ],
+     "milestone": "Spec editor UI",
+     "dependsOn": [
+      "spec-builder/schema",
+      "design-system/layout-components"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "spec-builder/spec-docs",
+     "title": "Document the spec builder with three fully specified example pages (customer list, staff dashboard, agent console)",
+     "oneLine": "Worked examples agents copy.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Docs",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Spec editor UI",
+     "dependsOn": [
+      "spec-builder/validator"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "spec-builder/business-profile",
+     "title": "Define the business profile section of app.spec.yaml: industry, audiences, terminology map, locale, currency and tax regime, enabled modules; codegen, templates and the migration agent read it",
+     "oneLine": "The one place that says what kind of business this app serves, so pages, vocabulary, modules and seed data adapt without forking.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Spec",
+     "surface": [
+      "Developer",
+      "Staff",
+      "Customer"
+     ],
+     "milestone": "Spec editor UI",
+     "dependsOn": [
+      "spec-builder/app-level-spec",
+      "app-shell/feature-modules",
+      "app-shell/i18n-l10n"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "collab",
+   "name": "In-App Collaboration & Knowledge",
+   "color": "#56CCF2",
+   "icon": "MessageSquare",
+   "summary": "Comments anchored anywhere, a canvas UX-flow view, an in-app docs engine, changelogs, a prompt/response log and browsable rules and skills.",
+   "description": "Goal: the product contains its own documentation, discussion and memory. A docs engine renders repo-stored MDX in-app with search and git versioning. A prompt-log store records every agent session (prompts, responses, tool calls, tokens, cost) with redaction, and a browser lets Justin replay any session and jump to its PR. Comments anchor to entities, page elements, doc blocks and screenshots and can spawn Linear issues. The canvas view shows the UX flow of the whole app generated from specs and editable in realtime. Changelogs are generated per app and per tenant; rules and skills are browsable and versioned objects. A decision log holds ADRs. Non-goal: replacing Notion for external documents; the docs engine can import from it.",
+   "phase": "P1",
+   "priority": 1,
+   "dependsOn": [
+    "realtime",
+    "data-layer"
+   ],
+   "milestones": [
+    {
+     "name": "Docs and prompt log stores",
+     "targetDate": "2026-09-21",
+     "goal": "Docs engine, prompt-log store, decision log, canvas/editor research"
+    },
+    {
+     "name": "Comments and canvas",
+     "targetDate": "2026-09-26",
+     "goal": "Comments, canvas view, changelog, rules/skills registry, prompt log UI"
+    },
+    {
+     "name": "Knowledge surfaced everywhere",
+     "targetDate": "2026-09-30",
+     "goal": "Notifications, screenshot annotations, unified search"
+    }
+   ],
+   "issues": [
+    {
+     "key": "collab/collab-research",
+     "title": "Evaluate tldraw vs React Flow for the canvas and Tiptap vs BlockNote for docs; write ADR",
+     "oneLine": "Pick the canvas and editor foundations.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Research",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Docs and prompt log stores",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "collab/docs-engine",
+     "title": "Build the docs engine: MDX docs stored in the repo, rendered in-app, searchable and versioned with git",
+     "oneLine": "Documentation lives in the product.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer",
+      "Staff"
+     ],
+     "milestone": "Docs and prompt log stores",
+     "dependsOn": [
+      "app-shell/router-layouts"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "collab/prompt-log-store",
+     "title": "Create the prompt/response log store (session, character, issue, tokens, cost, tool calls) with redaction",
+     "oneLine": "The system of record for how agents built the product.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Docs and prompt log stores",
+     "dependsOn": [
+      "data-layer/core-entities"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "collab/decision-log",
+     "title": "Add an ADR/decision log with status, alternatives and links to issues",
+     "oneLine": "Every big choice is recorded and findable.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Docs and prompt log stores",
+     "dependsOn": [
+      "collab/docs-engine"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "collab/comments",
+     "title": "Implement in-app comments anchored to any entity, page element or doc block with mentions and resolve",
+     "oneLine": "Discussion lives next to the thing.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Comments and canvas",
+     "dependsOn": [
+      "realtime/yjs-server",
+      "identity/rbac-abac"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "collab/canvas-view",
+     "title": "Build the canvas view (tldraw or React Flow) showing the UX flow of the whole app, generated from specs and editable",
+     "oneLine": "The map of the system.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Staff",
+      "Developer"
+     ],
+     "milestone": "Comments and canvas",
+     "dependsOn": [
+      "spec-builder/schema",
+      "realtime/yjs-server",
+      "collab/collab-research"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "collab/changelog",
+     "title": "Auto-generate changelogs from conventional commits and PR summaries, rendered per app and per tenant",
+     "oneLine": "Users and staff see what changed.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Comments and canvas",
+     "dependsOn": [
+      "forge/branch-policy"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "collab/rules-skills-registry",
+     "title": "Surface rules (CLAUDE.md, policies) and skills as browsable, editable objects in-app with version history",
+     "oneLine": "Rules and skills are product objects.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Agent",
+      "Developer"
+     ],
+     "milestone": "Comments and canvas",
+     "dependsOn": [
+      "collab/docs-engine",
+      "agents/skills-library"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "collab/prompt-log-ui",
+     "title": "Build the prompt log browser: filter by issue or character, replay a session, link to the PR",
+     "oneLine": "Justin can audit any agent decision.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff",
+      "Agent"
+     ],
+     "milestone": "Comments and canvas",
+     "dependsOn": [
+      "collab/prompt-log-store",
+      "tables/grid-view"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "collab/notifications",
+     "title": "Build a notification center (in-app, email, Slack) with per-audience preferences",
+     "oneLine": "Mentions and changes reach people where they are.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Knowledge surfaced everywhere",
+     "dependsOn": [
+      "collab/comments",
+      "data-layer/jobs-queue"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "collab/screenshot-annotations",
+     "title": "Allow annotating screenshots and video frames with comments that create Linear issues",
+     "oneLine": "Bugs go from picture to ticket in one step.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Knowledge surfaced everywhere",
+     "dependsOn": [
+      "collab/comments",
+      "quality/video-replays"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "collab/knowledge-search",
+     "title": "Unify search across docs, comments, specs, prompt logs and issues",
+     "oneLine": "One search box for all knowledge.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Knowledge surfaced everywhere",
+     "dependsOn": [
+      "data-layer/search",
+      "collab/docs-engine"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "realtime",
+   "name": "Multiplayer & Realtime",
+   "color": "#26B5CE",
+   "icon": "Users",
+   "summary": "Yjs via Hocuspocus for documents, presence and multi-window sync; Electric shapes for live records; conflict and offline UX.",
+   "description": "Goal: every PaperOS app is multiplayer by default, for humans and agents. A self-hosted Hocuspocus server persists Yjs documents to Postgres with auth hooks, powering collaborative rich text, canvas and presence (cursors, avatars, selections, who is viewing). Record changes stream through Electric shapes and reconcile with local writes; a conflict UX handles stale data and merges. State syncs across multiple OS windows and tabs, agents appear as live participants, and follow mode supports support and pair review. Load tests and an offline write queue harden it. Non-goal: a custom CRDT or peer-to-peer transport.",
+   "phase": "P1",
+   "priority": 1,
+   "dependsOn": [
+    "identity",
+    "data-layer"
+   ],
+   "milestones": [
+    {
+     "name": "Yjs server and presence",
+     "targetDate": "2026-09-22",
+     "goal": "Hocuspocus deployed, CRDT ADR, presence, collaborative text"
+    },
+    {
+     "name": "Record sync and conflict UX",
+     "targetDate": "2026-09-26",
+     "goal": "Electric record streaming, conflict UX, multi-window sync"
+    },
+    {
+     "name": "Scale and offline tested",
+     "targetDate": "2026-09-30",
+     "goal": "Agent presence, load test, offline queue, follow mode"
+    }
+   ],
+   "issues": [
+    {
+     "key": "realtime/realtime-research",
+     "title": "Benchmark Yjs vs Automerge vs Loro for document CRDT and write an ADR",
+     "oneLine": "Confirms the CRDT choice with numbers.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Research",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Yjs server and presence",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "realtime/yjs-server",
+     "title": "Deploy a Hocuspocus (Yjs) server with auth hook, Postgres persistence and room-per-document",
+     "oneLine": "The multiplayer backbone.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Yjs server and presence",
+     "dependsOn": [
+      "identity/better-auth",
+      "app-shell/vps-coolify-bootstrap"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "realtime/presence",
+     "title": "Build the presence layer: cursors, avatars, selections and 'who is viewing' across pages",
+     "oneLine": "See who is here, everywhere.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Yjs server and presence",
+     "dependsOn": [
+      "realtime/yjs-server"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "realtime/collab-text",
+     "title": "Add collaborative rich text (Tiptap + Yjs) as the shared editor for docs and comments",
+     "oneLine": "One editor everywhere.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Yjs server and presence",
+     "dependsOn": [
+      "realtime/yjs-server",
+      "collab/collab-research"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "realtime/record-sync",
+     "title": "Stream record changes via Electric shapes to all connected clients and reconcile with local writes",
+     "oneLine": "Tables and lists update live.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Record sync and conflict UX",
+     "dependsOn": [
+      "data-layer/local-first-sync"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "realtime/conflict-ux",
+     "title": "Design conflict and stale-data UX: merge banners, last-writer indicators, undo",
+     "oneLine": "Users understand what happened when edits collide.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Spec",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Record sync and conflict UX",
+     "dependsOn": [
+      "realtime/record-sync"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "realtime/multi-window-sync",
+     "title": "Sync state across multiple OS windows and tabs of the same user via BroadcastChannel and Yjs",
+     "oneLine": "Multi-monitor setups stay coherent.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Record sync and conflict UX",
+     "dependsOn": [
+      "realtime/yjs-server",
+      "app-shell/breakpoints-windows"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "realtime/agent-presence",
+     "title": "Show agents as live participants (typing, editing, reviewing) with distinct visual identity",
+     "oneLine": "Agents are visible collaborators.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Agent",
+      "Staff"
+     ],
+     "milestone": "Scale and offline tested",
+     "dependsOn": [
+      "realtime/presence",
+      "identity/agent-principals"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "realtime/load-test",
+     "title": "Load test 500 concurrent users per room and 10k rooms; tune persistence and scaling",
+     "oneLine": "Know the limits before customers do.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Review",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Scale and offline tested",
+     "dependsOn": [
+      "realtime/yjs-server"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "realtime/offline-queue",
+     "title": "Implement the offline write queue with retry, ordering and user-visible sync status",
+     "oneLine": "Work continues without a connection.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Scale and offline tested",
+     "dependsOn": [
+      "realtime/record-sync"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "realtime/followmode",
+     "title": "Add follow mode and shared cursor sessions for support and pair review",
+     "oneLine": "Support can guide a customer live.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Scale and offline tested",
+     "dependsOn": [
+      "realtime/presence"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "input",
+   "name": "Multi-Input Control & Accessibility",
+   "color": "#F2C94C",
+   "icon": "Keyboard",
+   "summary": "Keyboard, mouse, touch, pen, gamepad and voice through one command registry and input abstraction, with focus management and screen-reader conformance.",
+   "description": "Goal: every app is controllable by every input method and usable by every person. A global command registry powers keyboard shortcuts, a command palette and per-page scoping, with user-customizable keymaps. A unified input abstraction lets components handle mouse, touch, pen and gamepad uniformly; touch gestures and haptics work on mobile, pen pressure on the canvas, spatial focus for TV and kiosk. Voice commands and dictation route through the same registry. Focus management, accessible drag-and-drop and screen-reader testing across NVDA, VoiceOver and TalkBack complete it, with an accessibility statement per app. Non-goal: eye tracking or BCI in this build.",
+   "phase": "P1",
+   "priority": 2,
+   "dependsOn": [
+    "design-system"
+   ],
+   "milestones": [
+    {
+     "name": "Keyboard and command system",
+     "targetDate": "2026-09-23",
+     "goal": "Command registry, input abstraction, focus management"
+    },
+    {
+     "name": "Touch, pen, gamepad",
+     "targetDate": "2026-09-27",
+     "goal": "Keymaps, touch gestures, drag-and-drop, screen reader fixes"
+    },
+    {
+     "name": "Voice and accessibility certification",
+     "targetDate": "2026-09-30",
+     "goal": "Voice, pen, gamepad, accessibility statement"
+    }
+   ],
+   "issues": [
+    {
+     "key": "input/input-abstraction",
+     "title": "Design a unified input event abstraction so components handle mouse, touch, pen and gamepad uniformly",
+     "oneLine": "One pointer/press model across devices.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Spec",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Keyboard and command system",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "input/command-registry",
+     "title": "Build the global command registry with keyboard shortcuts, command palette and per-page scoping",
+     "oneLine": "Everything is a command; commands are discoverable.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Keyboard and command system",
+     "dependsOn": [
+      "design-system/primitives"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "input/focus-management",
+     "title": "Implement robust focus management, roving tabindex and skip links across all layouts",
+     "oneLine": "Keyboard users never get lost.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Keyboard and command system",
+     "dependsOn": [
+      "design-system/layout-components"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "input/keymaps",
+     "title": "Support user-customizable keymaps with presets (default, Vim-style, Linear-like) synced per user",
+     "oneLine": "Power users bring their habits.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Touch, pen, gamepad",
+     "dependsOn": [
+      "input/command-registry"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "input/touch-gestures",
+     "title": "Implement a touch gesture system (swipe, pinch, long-press) with haptics on mobile targets",
+     "oneLine": "Mobile feels native.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Touch, pen, gamepad",
+     "dependsOn": [
+      "app-shell/tauri-mobile",
+      "input/input-abstraction"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "input/drag-drop",
+     "title": "Build accessible drag-and-drop (dnd-kit) for tables, kanban and canvas with a keyboard alternative",
+     "oneLine": "Reordering works for everyone.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Touch, pen, gamepad",
+     "dependsOn": [
+      "input/input-abstraction"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "input/screen-reader",
+     "title": "Test and fix the screen reader experience (NVDA, VoiceOver, TalkBack) for core flows",
+     "oneLine": "Real assistive tech, not just axe.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Review",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Touch, pen, gamepad",
+     "dependsOn": [
+      "input/focus-management"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "input/pen",
+     "title": "Support pen and stylus input with pressure for canvas and annotation",
+     "oneLine": "Sketch and mark up on tablets.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Voice and accessibility certification",
+     "dependsOn": [
+      "collab/canvas-view",
+      "input/input-abstraction"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "input/gamepad",
+     "title": "Add gamepad and TV-remote navigation for kiosk and TV modes with spatial focus",
+     "oneLine": "10-foot UI works.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Voice and accessibility certification",
+     "dependsOn": [
+      "input/focus-management"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "input/voice",
+     "title": "Integrate voice commands and dictation (Web Speech with Whisper fallback) routed through the command registry",
+     "oneLine": "Talk to the app.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Voice and accessibility certification",
+     "dependsOn": [
+      "input/command-registry"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "input/a11y-statement",
+     "title": "Publish an accessibility statement and conformance report template per app",
+     "oneLine": "Compliance evidence out of the box.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Docs",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Voice and accessibility certification",
+     "dependsOn": [
+      "input/screen-reader"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "tables",
+   "name": "Table & Views Engine",
+   "color": "#4CB782",
+   "icon": "Table",
+   "summary": "A view model that is a superset of Airtable, Notion and ClickUp views, compiled to SQL, with grid, kanban, calendar, timeline, Gantt, gallery, list, form, map and chart views, rich field types and formulas.",
+   "description": "Goal: any dataset in any app can be viewed, sorted, filtered, grouped and edited as well as in Airtable, Notion or ClickUp, and those views compose into dashboards. A view model spec defines data source, fields, filters, sorts, groups, aggregations, permissions and sharing; a query compiler turns it into SQL and Electric shapes with server-side pagination. Views include a virtualized editable grid, kanban with swimlanes, calendar/timeline/Gantt, gallery/list/form, map and chart. Field types cover text through relations, lookups, rollups and formulas with a formula engine. Saved, shared and public views plus dashboard blocks with cross-filters complete it. A parity audit against Airtable, Notion, ClickUp, Baserow and NocoDB tracks coverage. Non-goal: a spreadsheet grid with arbitrary cell formulas.",
+   "phase": "P1",
+   "priority": 1,
+   "dependsOn": [
+    "data-layer",
+    "design-system",
+    "input"
+   ],
+   "milestones": [
+    {
+     "name": "Grid with sort, filter, group",
+     "targetDate": "2026-09-23",
+     "goal": "View model, parity audit, query compiler, field types, grid, filter UI"
+    },
+    {
+     "name": "All view types",
+     "targetDate": "2026-09-27",
+     "goal": "Kanban, calendar/timeline/Gantt, gallery/list/form, map/chart"
+    },
+    {
+     "name": "View sharing, formulas, dashboards",
+     "targetDate": "2026-09-30",
+     "goal": "Formula engine, saved and public views, dashboard blocks"
+    }
+   ],
+   "issues": [
+    {
+     "key": "tables/view-model-spec",
+     "title": "Specify the view model: data source, fields, filters, sorts, groups, aggregations, permissions and sharing as a superset of Airtable, Notion and ClickUp",
+     "oneLine": "The schema all views render from.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Staff",
+      "Developer"
+     ],
+     "milestone": "Grid with sort, filter, group",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "tables/feature-parity-audit",
+     "title": "Audit Airtable, Notion, ClickUp, Baserow and NocoDB view features into a parity checklist",
+     "oneLine": "Know exactly what 'every feature' means.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Research",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Grid with sort, filter, group",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "tables/query-compiler",
+     "title": "Build the view query compiler from view model to SQL and Electric shapes with server-side pagination",
+     "oneLine": "Views become efficient queries.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Grid with sort, filter, group",
+     "dependsOn": [
+      "tables/view-model-spec",
+      "data-layer/api-layer"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "tables/field-types",
+     "title": "Implement field types: text, number, currency, date, select, multi-select, relation, lookup, rollup, formula, attachment, user, checkbox, rating, URL, email, phone",
+     "oneLine": "Rich cells with validation and renderers.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Grid with sort, filter, group",
+     "dependsOn": [
+      "tables/view-model-spec"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "tables/grid-view",
+     "title": "Build the virtualized grid view (TanStack Table) with inline edit, column resize/reorder, freeze and cell types",
+     "oneLine": "The workhorse view.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Grid with sort, filter, group",
+     "dependsOn": [
+      "tables/query-compiler",
+      "tables/field-types",
+      "design-system/data-display"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "tables/filter-sort-group-ui",
+     "title": "Build the filter builder (AND/OR groups), multi-sort and multi-level grouping UI with aggregates",
+     "oneLine": "Airtable-class controls.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Grid with sort, filter, group",
+     "dependsOn": [
+      "tables/grid-view"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "tables/kanban-view",
+     "title": "Build the kanban board view with swimlanes, WIP limits and drag-and-drop",
+     "oneLine": "Boards for any entity.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "All view types",
+     "dependsOn": [
+      "tables/query-compiler",
+      "input/drag-drop"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "tables/calendar-timeline-gantt",
+     "title": "Build calendar, timeline and Gantt views with dependencies",
+     "oneLine": "Time-based views for scheduling.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "All view types",
+     "dependsOn": [
+      "tables/query-compiler"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "tables/gallery-list-form",
+     "title": "Build gallery, list and form views",
+     "oneLine": "Card, feed and data-entry presentations.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "All view types",
+     "dependsOn": [
+      "tables/query-compiler"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "tables/map-chart-views",
+     "title": "Build map view and chart view (bar, line, pie, number) bound to view aggregations",
+     "oneLine": "Geo and analytics views.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "All view types",
+     "dependsOn": [
+      "tables/query-compiler"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "tables/formula-engine",
+     "title": "Build a formula engine compatible with common Airtable and Notion functions",
+     "oneLine": "Computed fields users already know.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "View sharing, formulas, dashboards",
+     "dependsOn": [
+      "tables/field-types"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "tables/view-sharing",
+     "title": "Add saved views, personal vs shared views, public embeds and per-audience defaults",
+     "oneLine": "Views are permissioned objects.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "View sharing, formulas, dashboards",
+     "dependsOn": [
+      "tables/grid-view",
+      "identity/rbac-abac"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "tables/dashboard-blocks",
+     "title": "Compose views into dashboard pages with drag-arranged blocks and cross-filters",
+     "oneLine": "Incredible ways to view data, on one page.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "View sharing, formulas, dashboards",
+     "dependsOn": [
+      "tables/map-chart-views",
+      "tables/grid-view",
+      "input/drag-drop"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "tables/automations",
+     "title": "Build table automations: triggers (record change, schedule, form, inbound webhook), filter-tree conditions and actions (update record, notify, outbound webhook, connector call, create Linear issue) with a run log",
+     "oneLine": "The Airtable Automations, Notion database automations and ClickUp Automations parity piece that the views engine lacks.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff",
+      "Customer"
+     ],
+     "milestone": "View sharing, formulas, dashboards",
+     "dependsOn": [
+      "tables/filter-sort-group-ui",
+      "data-layer/jobs-queue",
+      "spec-builder/integrations-section"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "business-core",
+   "name": "Business Core: Payments, Finance & Payroll",
+   "color": "#219653",
+   "icon": "DollarSign",
+   "summary": "Stripe Billing, Connect and Tax for money movement, a double-entry ledger we own, invoicing and finance reports, and a payroll provider adapter.",
+   "description": "Goal: every business built on PaperOS can take payments, keep books and run payroll from day one. Stripe Billing handles plans, subscriptions and the customer portal; Connect lets tenants accept payments and receive payouts; Stripe Tax handles sales tax. A double-entry ledger in Postgres is the finance primitive we own, feeding invoices, quotes, receipts, P&L, balance sheet, cash flow and aging reports rendered by the views engine. Payroll sits behind a provider interface with Check or Gusto Embedded as the first adapter. Plan entitlements are enforced by the permission engine. Non-goals: being a payment processor or a payroll provider ourselves.",
+   "phase": "P2",
+   "priority": 1,
+   "dependsOn": [
+    "identity",
+    "tables"
+   ],
+   "milestones": [
+    {
+     "name": "Stripe billing live",
+     "targetDate": "2026-09-27",
+     "goal": "Finance data model, payroll ADR, Stripe Billing, entitlements"
+    },
+    {
+     "name": "Ledger and reports",
+     "targetDate": "2026-09-29",
+     "goal": "Ledger, invoicing, Connect, Tax, finance reports"
+    },
+    {
+     "name": "Payroll adapter and cash dashboard",
+     "targetDate": "2026-10-01",
+     "goal": "Payroll adapter, expenses, cash-flow dashboard"
+    }
+   ],
+   "issues": [
+    {
+     "key": "business-core/finance-data-model",
+     "title": "Specify the finance data model: customers, vendors, employees, accounts, transactions and periods across all business types",
+     "oneLine": "The entities payments, ledger and payroll share.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Stripe billing live",
+     "dependsOn": [
+      "data-layer/core-entities"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "business-core/payroll-research",
+     "title": "Research payroll APIs (Check, Gusto Embedded, Deel, Rippling) for embeddability and pricing; write ADR",
+     "oneLine": "Choose the first payroll provider.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Research",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Stripe billing live",
+     "dependsOn": [],
+     "readyNow": false
+    },
+    {
+     "key": "business-core/stripe-billing",
+     "title": "Integrate Stripe Billing: products, prices, subscriptions, customer portal and webhooks",
+     "oneLine": "Charge customers for plans.",
+     "phase": "P1",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Stripe billing live",
+     "dependsOn": [
+      "identity/org-tenancy",
+      "business-core/finance-data-model"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "business-core/entitlements",
+     "title": "Map plans to feature entitlements enforced by the permission engine",
+     "oneLine": "Paid features gate themselves.",
+     "phase": "P2",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Developer"
+     ],
+     "milestone": "Stripe billing live",
+     "dependsOn": [
+      "business-core/stripe-billing",
+      "identity/rbac-abac"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "business-core/ledger",
+     "title": "Build a double-entry ledger (accounts, journal entries, periods) in Postgres with immutability guarantees",
+     "oneLine": "The finance primitive we own.",
+     "phase": "P2",
+     "priority": 1,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Ledger and reports",
+     "dependsOn": [
+      "business-core/finance-data-model"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "business-core/invoicing",
+     "title": "Implement invoices, quotes and receipts with PDF generation and Stripe payment links",
+     "oneLine": "Bill anyone for anything.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Ledger and reports",
+     "dependsOn": [
+      "business-core/stripe-billing",
+      "business-core/ledger"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "business-core/stripe-connect",
+     "title": "Add Stripe Connect so tenants can accept payments and receive payouts",
+     "oneLine": "Marketplace-ready money movement.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Ledger and reports",
+     "dependsOn": [
+      "business-core/stripe-billing"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "business-core/tax-compliance",
+     "title": "Handle sales tax and VAT via Stripe Tax and store tax evidence",
+     "oneLine": "Compliance without spreadsheets.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Ledger and reports",
+     "dependsOn": [
+      "business-core/stripe-billing"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "business-core/finance-reports",
+     "title": "Generate P&L, balance sheet, cash flow and AR/AP aging as table views",
+     "oneLine": "Books you can read.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Ledger and reports",
+     "dependsOn": [
+      "business-core/ledger",
+      "tables/grid-view"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "business-core/payroll-adapter",
+     "title": "Define the payroll provider interface and implement the first adapter (Check or Gusto Embedded)",
+     "oneLine": "Run payroll from inside the app.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Payroll adapter and cash dashboard",
+     "dependsOn": [
+      "business-core/ledger",
+      "business-core/payroll-research"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "business-core/expense-capture",
+     "title": "Add expense capture with receipt OCR and ledger posting",
+     "oneLine": "Receipts become journal entries.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Payroll adapter and cash dashboard",
+     "dependsOn": [
+      "business-core/ledger",
+      "data-layer/file-storage"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "business-core/cash-dashboard",
+     "title": "Build the cash-flow dashboard (in, out, runway, upcoming payroll) as the first dashboard-blocks consumer",
+     "oneLine": "The founder's one screen.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Payroll adapter and cash dashboard",
+     "dependsOn": [
+      "business-core/finance-reports",
+      "tables/dashboard-blocks"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "growth",
+   "name": "Growth: Marketing, Outreach & CRM",
+   "color": "#EB5757",
+   "icon": "Megaphone",
+   "summary": "A CRM on the tables engine, social scheduling, outreach sequences, landing pages via Webflow, attribution and a support inbox, with a content agent drafting for approval.",
+   "description": "Goal: every business gets customer acquisition machinery, not just an app. CRM entities (lead, contact, company, deal, activity, segment) live on the tables engine with pipeline and contact views. A social scheduler with platform adapters and an approval queue, outreach sequences over email and SMS with reply detection, Webflow-published landing pages capturing forms, and a privacy-first attribution pipeline cover acquisition. Segments from CRM plus product usage drive campaigns and in-app targeting; a referral program pays out through Stripe Connect; a support inbox links conversations to contacts. A content agent drafts posts and emails from changelogs and specs for human approval. Non-goal: sending anything without approval in this build.",
+   "phase": "P2",
+   "priority": 2,
+   "dependsOn": [
+    "tables",
+    "business-core"
+   ],
+   "milestones": [
+    {
+     "name": "CRM core",
+     "targetDate": "2026-09-28",
+     "goal": "CRM model, OSS research, pipeline and contact views"
+    },
+    {
+     "name": "Campaigns and social",
+     "targetDate": "2026-09-30",
+     "goal": "Social scheduler, outreach sequences, content agent, landing forms"
+    },
+    {
+     "name": "Acquisition analytics",
+     "targetDate": "2026-10-01",
+     "goal": "Attribution, segments, referrals, support inbox"
+    }
+   ],
+   "issues": [
+    {
+     "key": "growth/crm-model",
+     "title": "Model CRM entities: lead, contact, company, deal, pipeline stage, activity, segment",
+     "oneLine": "The customer graph.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Spec",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "CRM core",
+     "dependsOn": [
+      "data-layer/core-entities"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "growth/growth-research",
+     "title": "Survey open-source CRM and marketing stacks (Twenty, Postiz, Listmonk, Dub) for reuse vs build; write ADR",
+     "oneLine": "Borrow what exists.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Research",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "CRM core",
+     "dependsOn": [],
+     "readyNow": false
+    },
+    {
+     "key": "growth/crm-views",
+     "title": "Build CRM pipeline (kanban), contact list and company views on the tables engine",
+     "oneLine": "Sales workflow out of the box.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "CRM core",
+     "dependsOn": [
+      "growth/crm-model",
+      "tables/kanban-view"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "growth/social-scheduler",
+     "title": "Build a social media scheduler with adapters (X, LinkedIn, Instagram, TikTok, YouTube) and an approval queue",
+     "oneLine": "Post everywhere from one place.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Campaigns and social",
+     "dependsOn": [
+      "growth/crm-model",
+      "growth/growth-research",
+      "data-layer/jobs-queue"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "growth/outreach-sequences",
+     "title": "Build email and SMS outreach sequences (Resend, Twilio) with warmup and reply detection",
+     "oneLine": "Automated, compliant outreach.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Campaigns and social",
+     "dependsOn": [
+      "growth/crm-model",
+      "data-layer/jobs-queue"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "growth/content-agent",
+     "title": "Create the content agent character that drafts posts and emails from changelogs and specs for human approval",
+     "oneLine": "Marketing that writes itself, approved by humans.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Campaigns and social",
+     "dependsOn": [
+      "growth/social-scheduler",
+      "agents/roster-v1"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "growth/landing-forms",
+     "title": "Publish landing pages via the Webflow API and capture forms into the CRM",
+     "oneLine": "Pages to leads in one flow.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Campaigns and social",
+     "dependsOn": [
+      "growth/crm-model"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "growth/attribution",
+     "title": "Track acquisition analytics (UTM, referral, funnel) with a privacy-first event pipeline",
+     "oneLine": "Know what works.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Acquisition analytics",
+     "dependsOn": [
+      "growth/crm-model",
+      "data-layer/jobs-queue"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "growth/segments",
+     "title": "Build audience segments from CRM and product usage that feed campaigns and in-app targeting",
+     "oneLine": "Right message, right people.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Acquisition analytics",
+     "dependsOn": [
+      "growth/crm-model",
+      "tables/filter-sort-group-ui"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "growth/referral-program",
+     "title": "Implement a referral and affiliate program with Stripe Connect payouts",
+     "oneLine": "Customers recruit customers.",
+     "phase": "P2",
+     "priority": 4,
+     "type": "Build",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Acquisition analytics",
+     "dependsOn": [
+      "business-core/stripe-connect"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "growth/support-inbox",
+     "title": "Build a shared support inbox (email and in-app chat) linked to CRM contacts",
+     "oneLine": "Support conversations in context.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Acquisition analytics",
+     "dependsOn": [
+      "growth/crm-model",
+      "collab/comments"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "migration",
+   "name": "Migration & Import Tools",
+   "color": "#F2994A",
+   "icon": "Download",
+   "summary": "An import framework with schema mapping, dry runs and rollback; importers for CSV, Airtable, Notion, ClickUp, Linear, Stripe and QuickBooks; full export; business templates.",
+   "description": "Goal: any business can move into a PaperOS app without losing data or lock-in. The import framework provides source connectors, a schema-mapping UI, dry runs, validation, rollback and persistent external-ID mappings for incremental re-sync. Importers cover spreadsheets, Airtable bases, Notion databases and pages, ClickUp and Linear workspaces, Stripe customers and QuickBooks/Xero charts of accounts. Full export to open formats guarantees no lock-in. Business-type seed packs (agency, retail, SaaS, clinic, restaurant) make a new app useful in minutes, and a migration agent interviews users and runs the imports. Non-goal: live two-way sync with every source.",
+   "phase": "P2",
+   "priority": 2,
+   "dependsOn": [
+    "tables",
+    "collab"
+   ],
+   "milestones": [
+    {
+     "name": "Import framework and CSV",
+     "targetDate": "2026-09-28",
+     "goal": "Format research, framework, CSV/Excel, ID mapping"
+    },
+    {
+     "name": "Airtable, Notion, ClickUp importers",
+     "targetDate": "2026-09-30",
+     "goal": "Table and PM importers, export"
+    },
+    {
+     "name": "Business migrations",
+     "targetDate": "2026-10-01",
+     "goal": "Stripe/QuickBooks import, templates, migration agent"
+    }
+   ],
+   "issues": [
+    {
+     "key": "migration/format-research",
+     "title": "Catalog export formats and API limits of Airtable, Notion, ClickUp, Monday, HubSpot and QuickBooks",
+     "oneLine": "Know what can be pulled and how fast.",
+     "phase": "P1",
+     "priority": 3,
+     "type": "Research",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Import framework and CSV",
+     "dependsOn": [],
+     "readyNow": false
+    },
+    {
+     "key": "migration/import-framework",
+     "title": "Build the import framework: source connector, schema-mapping UI, dry run, validation, rollback",
+     "oneLine": "One pipeline every importer uses.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff",
+      "Developer"
+     ],
+     "milestone": "Import framework and CSV",
+     "dependsOn": [
+      "tables/field-types",
+      "data-layer/jobs-queue"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "migration/csv-excel",
+     "title": "Import CSV, Excel and Google Sheets with type inference",
+     "oneLine": "The universal on-ramp.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Import framework and CSV",
+     "dependsOn": [
+      "migration/import-framework"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "migration/id-mapping",
+     "title": "Persist external ID mappings for re-sync and incremental imports",
+     "oneLine": "Import twice without duplicates.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Import framework and CSV",
+     "dependsOn": [
+      "migration/import-framework"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "migration/airtable",
+     "title": "Import Airtable bases (tables, views, relations, attachments)",
+     "oneLine": "Airtable users move in whole.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Airtable, Notion, ClickUp importers",
+     "dependsOn": [
+      "migration/import-framework"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "migration/notion",
+     "title": "Import Notion databases and pages into tables and docs",
+     "oneLine": "Notion content and data preserved.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Airtable, Notion, ClickUp importers",
+     "dependsOn": [
+      "migration/import-framework",
+      "collab/docs-engine"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "migration/clickup-linear",
+     "title": "Import ClickUp and Linear workspaces into the PM module",
+     "oneLine": "Bring project history along.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Airtable, Notion, ClickUp importers",
+     "dependsOn": [
+      "migration/import-framework",
+      "pm-linear/pm-data-model"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "migration/export",
+     "title": "Export everything (tables, docs, files, ledger) to open formats",
+     "oneLine": "No lock-in, ever.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Customer"
+     ],
+     "milestone": "Airtable, Notion, ClickUp importers",
+     "dependsOn": [
+      "migration/import-framework",
+      "data-layer/jobs-queue"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "migration/stripe-quickbooks",
+     "title": "Import Stripe customers and subscriptions and QuickBooks/Xero charts of accounts into the ledger",
+     "oneLine": "Finance history arrives intact.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Staff"
+     ],
+     "milestone": "Business migrations",
+     "dependsOn": [
+      "migration/import-framework",
+      "business-core/ledger"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "migration/business-templates",
+     "title": "Ship business-type templates (agency, retail, SaaS, clinic, restaurant) as importable seed packs",
+     "oneLine": "One-size-fits-all adapts on day one.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Customer",
+      "Staff"
+     ],
+     "milestone": "Business migrations",
+     "dependsOn": [
+      "tables/view-model-spec",
+      "migration/import-framework"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "migration/migration-agent",
+     "title": "Create the migration agent character that interviews users about current tools and runs the imports",
+     "oneLine": "Migration as a conversation.",
+     "phase": "P2",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Business migrations",
+     "dependsOn": [
+      "migration/import-framework",
+      "agents/roster-v1"
+     ],
+     "readyNow": false
+    }
+   ]
+  },
+  {
+   "key": "libraries",
+   "name": "Library Discovery & Integration",
+   "color": "#9B51E0",
+   "icon": "Package",
+   "summary": "A governed borrow-before-build process: evaluation rubric, landscape surveys, OSS product evaluation, a registry with ADRs, license policy in CI, MCP connector catalog and a Scout routine.",
+   "description": "Goal: the platform is assembled from the best existing libraries and products, chosen deliberately and recorded. A rubric (license, maintenance, bundle size, accessibility, TypeScript quality, agent-friendliness) and ADR template govern every adoption. Landscape surveys cover UI kits, data/canvas/editor/chart libraries and backend building blocks; whole OSS products (Twenty, NocoDB, Baserow, Plane, Cal.com, Formbricks, Postiz) are evaluated for embedding or forking. A registry in the docs system tracks adopted, trialing and rejected libraries; a license policy is enforced in CI; MCP servers and connectors are cataloged for agents; Renovate keeps dependencies fresh; a weekly Scout routine scans for new options. Non-goal: adopting anything without an ADR.",
+   "phase": "P0",
+   "priority": 2,
+   "dependsOn": [],
+   "milestones": [
+    {
+     "name": "Evaluation process",
+     "targetDate": "2026-09-19",
+     "goal": "Rubric, license policy, MCP catalog"
+    },
+    {
+     "name": "Core adoptions decided",
+     "targetDate": "2026-09-24",
+     "goal": "UI, data and backend landscape ADRs, OSS product evaluation"
+    },
+    {
+     "name": "Registry live",
+     "targetDate": "2026-09-30",
+     "goal": "Registry, Renovate, Scout routine"
+    }
+   ],
+   "issues": [
+    {
+     "key": "libraries/eval-rubric",
+     "title": "Define the library evaluation rubric (license, maintenance, bundle size, a11y, TS quality, agent-friendliness) and ADR template",
+     "oneLine": "How we decide what to borrow.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Spec",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Evaluation process",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "libraries/mcp-servers",
+     "title": "Catalog and configure MCP servers and connectors (Linear, GitHub, Stripe, Notion, Drive, Webflow, Miro, Gamma) for agents",
+     "oneLine": "Every integration agents can reach, documented and scoped.",
+     "phase": "P0",
+     "priority": 1,
+     "type": "Infra",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Evaluation process",
+     "dependsOn": [],
+     "readyNow": true
+    },
+    {
+     "key": "libraries/license-policy",
+     "title": "Set the license policy (allow MIT/Apache/BSD, review AGPL, block SSPL) enforced by a CI license check",
+     "oneLine": "No surprise licenses.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Evaluation process",
+     "dependsOn": [
+      "libraries/eval-rubric"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "libraries/ui-landscape",
+     "title": "Survey UI kits and headless libraries (Base UI, Radix, React Aria, shadcn, Ark) and recommend",
+     "oneLine": "Pick the component foundation.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Research",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Core adoptions decided",
+     "dependsOn": [
+      "libraries/eval-rubric"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "libraries/data-landscape",
+     "title": "Survey table, canvas, editor and chart libraries (TanStack, AG Grid, tldraw, Tiptap, ECharts, visx) and recommend",
+     "oneLine": "Pick the data and canvas foundations.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Research",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Core adoptions decided",
+     "dependsOn": [
+      "libraries/eval-rubric"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "libraries/backend-landscape",
+     "title": "Survey backend building blocks (Better Auth, Drizzle, Electric, Hocuspocus, Inngest, Resend) and recommend",
+     "oneLine": "Pick the server foundations.",
+     "phase": "P0",
+     "priority": 2,
+     "type": "Research",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Core adoptions decided",
+     "dependsOn": [
+      "libraries/eval-rubric"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "libraries/oss-products",
+     "title": "Evaluate whole OSS products to embed or fork (Twenty CRM, NocoDB, Baserow, Plane, Cal.com, Formbricks, Postiz)",
+     "oneLine": "Sometimes borrow a product, not a library.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Research",
+     "surface": [
+      "Developer",
+      "Staff"
+     ],
+     "milestone": "Core adoptions decided",
+     "dependsOn": [
+      "libraries/eval-rubric"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "libraries/registry",
+     "title": "Build the library registry in the docs system: adopted, trialing, rejected with reasons and owners",
+     "oneLine": "One place to see what we use and why.",
+     "phase": "P1",
+     "priority": 2,
+     "type": "Build",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Registry live",
+     "dependsOn": [
+      "libraries/eval-rubric",
+      "collab/docs-engine"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "libraries/upgrade-bot",
+     "title": "Set up Renovate with grouped upgrades and agent-reviewed changelog summaries",
+     "oneLine": "Dependencies stay current safely.",
+     "phase": "P1",
+     "priority": 3,
+     "type": "Infra",
+     "surface": [
+      "Developer"
+     ],
+     "milestone": "Registry live",
+     "dependsOn": [
+      "quality/ci-gate1"
+     ],
+     "readyNow": false
+    },
+    {
+     "key": "libraries/scout-agent",
+     "title": "Create the Scout character routine: weekly scan for new libraries relevant to open issues",
+     "oneLine": "Discovery never stops.",
+     "phase": "P2",
+     "priority": 3,
+     "type": "Build",
+     "surface": [
+      "Agent"
+     ],
+     "milestone": "Registry live",
+     "dependsOn": [
+      "libraries/registry",
+      "agents/roster-v1"
+     ],
+     "readyNow": false
+    }
+   ]
+  }
+ ]
+}

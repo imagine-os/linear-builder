@@ -1,0 +1,36 @@
+{
+ "documents": [
+  {
+   "key": "pending-doc",
+   "pendingKeys": [
+    "contracts/shared-value-types",
+    "contracts/domain-events",
+    "contracts/idempotency-rate-limits",
+    "contracts/package-boundaries"
+   ],
+   "id": "787ef55b-f178-46ee-904e-0c1525fd34cb",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59",
+   "title": "Round 2 pending issues: contracts (4)"
+  },
+  {
+   "key": "contracts-doc",
+   "id": "936ffb9c-0ca5-4101-8c80-32926dab7b5e",
+   "url": "https://linear.app/paperos/document/paperos-interface-and-data-contracts-d40e6a4d227c",
+   "title": "PaperOS Interface & Data Contracts"
+  }
+ ],
+ "created": [],
+ "relations": [],
+ "pendingIssues": [
+  "contracts/shared-value-types",
+  "contracts/domain-events",
+  "contracts/idempotency-rate-limits",
+  "contracts/package-boundaries"
+ ],
+ "notes": [
+  "issueCreate failed for contracts/shared-value-types: [{\"message\": \"usage limit exceeded\", \"path\": [\"issueCreate\"], \"locations\": [{\"line\": 1, \"column\": 33}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"",
+  "All four contract issues refused by Linear with USAGE_LIMIT_EXCEEDED (workspace issue cap); full specs published as document 'Round 2 pending issues: contracts (4)' and saved in round2/pending-issues-contracts.json for creation once the cap lifts. contracts/domain-events supersedes agent0 pending gap/data-layer/event-bus; contracts/idempotency-rate-limits supersedes gap/data-layer/rate-limit-idempotency (both in round2/gaps-pending-0.json, never created).",
+  "No existing issue states, labels, relations or views were changed. Requests used this session: 1 read, 1 failed issueCreate, 2 documentCreate."
+ ],
+ "pendingIssuesFile": "round2/pending-issues-contracts.json"
+}

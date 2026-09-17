@@ -1,0 +1,151 @@
+{
+ "updated": [
+  "5c29533f-530c-4526-92bd-0348846f276f",
+  "700d6066-f325-4c69-96b7-37d046b40793",
+  "528db3ad-243b-49c4-aacf-50a22929a01a",
+  "7cdf403a-af37-4e50-b77f-ed327a9744df",
+  "16aefa0b-02ca-4f36-83f9-c646d4b6b156",
+  "b6162d2b-5bbd-4636-a16d-35c614225a0b",
+  "f769cdf7-eab4-4e4b-8314-f89d4dcb0d3e",
+  "8f861e50-29d3-4df0-b618-d5a698a21f9c",
+  "613001a7-a727-4940-9c07-7935f2130d7e",
+  "cbf19ea6-b4bb-4c3c-ae45-5f43cc5cbf6d",
+  "8851056f-e456-4947-aa35-2b8d86f4ff4a",
+  "570697ee-d7ad-466f-951a-edbb53898d34",
+  "07d07e7b-5029-40d0-a99d-cc2fd7c23c33",
+  "8a361077-2cbd-4e1f-b646-f5a6cb9b68f6",
+  "972831a5-100e-4c53-874c-b0943ad75ad7",
+  "5148e604-e87f-4af5-9aff-b6a67cc208fc",
+  "cea972a5-185c-4dcd-a2a0-6fbbdb3fb459",
+  "67009dc8-1249-4384-b452-49661dcf3f23",
+  "e5284b01-c1b0-4765-9868-5fa42f34b617",
+  "9b6f6b4d-0984-4b67-a446-58363b599c23",
+  "484182bf-a829-43ef-91be-debc496ae8cb",
+  "08936b1b-d828-470d-9865-d2169d0bb4b5",
+  "3292af7d-f91e-491a-aaef-3af09c843cc3",
+  "9b7aaaae-73f9-4c37-a252-220fc9e95d46",
+  "7492ea48-cd23-419c-a321-2dabcf7efe44",
+  "4ce82e40-e60c-4001-8588-5a8c0e836f9f",
+  "fe3c0540-0a65-48ec-9876-aa447c200642",
+  "eb8bc7c3-c835-4450-ba14-8c12e8ce1244",
+  "ca2e7418-fdd1-43af-b43e-f60910cd6744",
+  "4848863c-09c9-4447-9c8c-7145d0fb04bc",
+  "40d87175-21b5-432c-b316-e09d9f1c9e60",
+  "acaeea13-93ec-45d5-88bb-c878d80c46d1",
+  "0c47e913-5821-4a3e-a61f-fb1e206e839f",
+  "00cf88bc-eab9-4253-a735-9df7d653f97e"
+ ],
+ "created": [],
+ "relations": [
+  {
+   "id": "a73bc8df-0ba4-48e0-b010-1d3ebc583e67",
+   "from": "PAP-139",
+   "to": "PAP-140"
+  },
+  {
+   "id": "cff688eb-2559-4a50-bebb-114b1d1ca2b9",
+   "from": "PAP-142",
+   "to": "PAP-131"
+  },
+  {
+   "id": "97eba871-f3a9-4651-ae24-b4273c7cb617",
+   "from": "PAP-144",
+   "to": "PAP-148"
+  },
+  {
+   "id": "1d40e06c-8377-4315-99b8-8f5f66671ec9",
+   "from": "PAP-143",
+   "to": "PAP-147"
+  },
+  {
+   "id": "c1ce664c-fa00-4572-9e65-495b4fab0f79",
+   "from": "PAP-150",
+   "to": "PAP-151"
+  },
+  {
+   "id": "41b12c0b-0e6e-4907-8a5e-095fe9d1c1d4",
+   "from": "PAP-150",
+   "to": "PAP-158"
+  },
+  {
+   "id": "1c106060-817b-4c4a-a40e-dc75f2b73775",
+   "from": "PAP-152",
+   "to": "PAP-155"
+  },
+  {
+   "id": "f3b203ea-ee65-4610-a5d8-7a2a75c14fa3",
+   "from": "PAP-86",
+   "to": "PAP-156"
+  },
+  {
+   "id": "8d70aa4b-3e0d-4c07-abe2-ba59203dfe47",
+   "from": "PAP-73",
+   "to": "PAP-156"
+  },
+  {
+   "id": "9d87db1e-e3a7-41ca-87c1-b0c5b3601d0b",
+   "from": "PAP-117",
+   "to": "PAP-160"
+  }
+ ],
+ "projectsUpdated": [
+  "0a92662d-a088-42ef-b847-bf22b63582fc",
+  "fa82de86-f88a-41d0-953f-a6253c2460fd",
+  "bcfb9178-60fb-48f1-9c91-3c2d2d4aa080"
+ ],
+ "milestoneChanges": [
+  {
+   "issue": "PAP-133",
+   "milestone": "Docs and prompt log stores",
+   "labels": null,
+   "priority": null
+  },
+  {
+   "issue": "PAP-136",
+   "milestone": "Comments and canvas",
+   "labels": [
+    "562d6a37-6bd0-4680-a1a6-6bc55e642d21",
+    "9526e961-186c-4ebb-8c10-102d588a1bb6",
+    "d043f950-f433-45c4-9bfe-65b9813369f8",
+    "09af3067-2c65-4ab5-a915-f553a4931ec1"
+   ],
+   "priority": 1
+  },
+  {
+   "milestoneId": "117ac846-7963-4a17-ae47-316e46a45f81",
+   "name": "Docs and prompt log stores",
+   "targetDate": "2026-09-20",
+   "was": "2026-09-21"
+  }
+ ],
+ "notes": [
+  "Linear returned USAGE_LIMIT_EXCEEDED (free-plan issue cap) for every issueCreate; 22 fully specified issues (4 gaps, 18 children) are saved in round2/agent3/pending-issues.json for creation once the plan is upgraded or issues are archived. Parents describe them as work packages."
+ ],
+ "pendingIssuesFile": "round2/agent3/pending-issues.json",
+ "comments": [
+  {
+   "issue": "PAP-131",
+   "id": "37dc9af5-1d3c-4617-a745-1d9ccd8c7909"
+  },
+  {
+   "issue": "PAP-132",
+   "id": "1526ffe4-2a4d-4594-8c09-71c422b191ef"
+  },
+  {
+   "issue": "PAP-136",
+   "id": "0efb7629-d458-4571-b2d3-b022b7815f14"
+  },
+  {
+   "issue": "PAP-143",
+   "id": "36e24a14-6dd3-4af3-8be3-52447c607c78"
+  },
+  {
+   "issue": "PAP-151",
+   "id": "cbfd9c74-b19f-4017-8fee-6589213d5998"
+  },
+  {
+   "issue": "PAP-155",
+   "id": "30f568f0-e73d-4083-b892-6d353509230a"
+  }
+ ]
+}

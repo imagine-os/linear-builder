@@ -1,0 +1,54 @@
+{
+ "documents": [
+  {
+   "key": "golden-path-doc",
+   "project": "Universal App Shell & Repo Template",
+   "id": "2d009708-69c9-4e53-9ecd-b02086d0a69d",
+   "url": "https://linear.app/paperos/document/new-app-in-ten-minutes-the-golden-path-0f49429f566e",
+   "title": "New App in Ten Minutes: the golden path"
+  },
+  {
+   "key": "pending-doc",
+   "project": "Universal App Shell & Repo Template",
+   "pendingKeys": [
+    "gp/spec-builder/app-interview",
+    "gp/spec-builder/entity-pages",
+    "gp/spec-builder/gen-pipeline",
+    "gp/app-shell/starter-surfaces",
+    "gp/app-shell/driver",
+    "gp/app-shell/provisioning",
+    "gp/app-shell/acceptance",
+    "gp/app-shell/upgrade"
+   ],
+   "id": "2d418b68-84be-46b4-9039-0d5c5ff52c97",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f",
+   "title": "Round 2 pending issues: golden path (8)"
+  }
+ ],
+ "created": [],
+ "relations": [],
+ "comments": [
+  {
+   "issue": "PAP-5",
+   "id": "c5b2f137-f789-47d6-b6e2-e40f57c54be1",
+   "url": "https://linear.app/paperos/issue/PAP-5/my-issue-is-that-the-startup-procedure-for-creating-new-apps-on-the#comment-c5b2f137"
+  }
+ ],
+ "pendingIssues": [
+  "gp/spec-builder/app-interview",
+  "gp/spec-builder/entity-pages",
+  "gp/spec-builder/gen-pipeline",
+  "gp/app-shell/starter-surfaces",
+  "gp/app-shell/driver",
+  "gp/app-shell/provisioning",
+  "gp/app-shell/acceptance",
+  "gp/app-shell/upgrade"
+ ],
+ "notes": [
+  "issueCreate failed for gp/spec-builder/app-interview: [{\"message\": \"usage limit exceeded\", \"path\": [\"issueCreate\"], \"locations\": [{\"line\": 1, \"column\": 33}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400",
+  "golden-path-doc section 8 updated with issue identifiers",
+  "All 8 golden path issues (5 app-shell, 3 spec-builder) refused by Linear with USAGE_LIMIT_EXCEEDED (workspace issue cap) on 2026-09-17; full specs (Goal, Scope, Spec, Interface contract, Test plan, Definition of done, Edge cases, Dependencies, Agent, Size, Demo), labels, milestones, priorities and blocks relations are in pending-issues-golden-path.json and the document 'Round 2 pending issues: golden path (8)'. Rerun `python3 apply_golden_path.py issues && ... relations && ... docfix` once the cap lifts; the script is idempotent and checks titles against the snapshot.",
+  "No existing issue titles, states, labels, relations or views were changed. PAP-5 received one comment linking the golden path document. Requests used: 1 read, 2 documentCreate, 1 documentUpdate, 1 failed issueCreate, 1 commentCreate."
+ ],
+ "pendingIssuesFile": "<plan-dir>/round2/pending-issues-golden-path.json"
+}

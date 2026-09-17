@@ -1,0 +1,292 @@
+{
+ "fix": "FIX-5 issue-cap-needs-justin-plan-b",
+ "startedAt": "2026-09-17T06:40Z",
+ "issuesUpdated": [
+  {
+   "id": "0d1d8ef8-381f-4b0e-9fec-cbbb1a261891",
+   "identifier": "PAP-91",
+   "fields": [
+    "description",
+    "stateId"
+   ],
+   "chars": 7740
+  },
+  {
+   "id": "a0677d67-4bed-46a9-9ddc-01fb69d1ca0b",
+   "identifier": "PAP-198",
+   "fields": [
+    "description"
+   ],
+   "chars": 10765
+  },
+  {
+   "id": "b4aa9823-54ae-452c-ad3a-cf44631a9018",
+   "identifier": "PAP-200",
+   "fields": [
+    "description"
+   ],
+   "chars": 4384
+  },
+  {
+   "id": "335be1f7-f58a-4ed3-ab9d-bdf2a05a110b",
+   "identifier": "PAP-202",
+   "fields": [
+    "description"
+   ],
+   "chars": 4251
+  },
+  {
+   "id": "23307d66-7948-486f-b98d-4f59469e6fec",
+   "identifier": "PAP-203",
+   "fields": [
+    "description"
+   ],
+   "chars": 4511
+  },
+  {
+   "id": "bce7c8bf-8dd0-49ab-a4b7-8932e08b524e",
+   "identifier": "PAP-204",
+   "fields": [
+    "description"
+   ],
+   "chars": 4846
+  },
+  {
+   "id": "46e7dd8c-845f-455e-87fd-667f37968cf1",
+   "identifier": "PAP-206",
+   "fields": [
+    "description"
+   ],
+   "chars": 4947
+  },
+  {
+   "id": "f82267c3-6dbe-4dc2-8590-2fe7db751c00",
+   "identifier": "PAP-187",
+   "fields": [
+    "description"
+   ],
+   "chars": 11110
+  },
+  {
+   "id": "251ffea7-db95-40f6-b334-dcd6927a369c",
+   "identifier": "PAP-191",
+   "fields": [
+    "description"
+   ],
+   "chars": 5765
+  },
+  {
+   "id": "d46e24df-7d27-4aa9-8fd8-ae10d40e1dfe",
+   "identifier": "PAP-193",
+   "fields": [
+    "description"
+   ],
+   "chars": 5105
+  },
+  {
+   "id": "0bcc9871-bc3f-49d0-a9cd-e8027451fc21",
+   "identifier": "PAP-180",
+   "fields": [
+    "description"
+   ],
+   "chars": 9831
+  },
+  {
+   "id": "c2b9c3d2-cf7b-4c16-be55-9b68cee55fb8",
+   "identifier": "PAP-174",
+   "fields": [
+    "description"
+   ],
+   "chars": 5199
+  },
+  {
+   "id": "9072eb75-d95d-462b-8e96-328a1ff71b9e",
+   "identifier": "PAP-114",
+   "fields": [
+    "description"
+   ],
+   "chars": 5991
+  }
+ ],
+ "stateChanges": [
+  {
+   "id": "0d1d8ef8-381f-4b0e-9fec-cbbb1a261891",
+   "identifier": "PAP-91",
+   "from": "Ready for Claude",
+   "to": "Needs Justin"
+  }
+ ],
+ "comments": [
+  {
+   "issue": "PAP-5",
+   "issueId": "8468d71c-8653-434a-ba55-469056f2c243",
+   "id": "7b4a5cd8-16f3-411d-b157-31f44505419c",
+   "url": "https://linear.app/paperos/issue/PAP-5/my-issue-is-that-the-startup-procedure-for-creating-new-apps-on-the#comment-7b4a5cd8",
+   "subject": "NJ-1"
+  }
+ ],
+ "documentsUpdated": [
+  {
+   "key": "migration",
+   "id": "aa066789-71cf-4151-ab4b-4086d2ffcd97",
+   "title": "Round 2 pending issues: migration (20)",
+   "chars": 69071,
+   "change": "folded note"
+  },
+  {
+   "key": "growth",
+   "id": "af3fad99-b12b-46a3-b9df-0b9ec64c28be",
+   "title": "Round 2 pending issues: growth (13)",
+   "chars": 31763,
+   "change": "folded note"
+  },
+  {
+   "key": "business",
+   "id": "d770abbf-5405-4a7a-8c7c-668920391c1a",
+   "title": "Round 2 pending issues: business-core (11)",
+   "chars": 32668,
+   "change": "folded note"
+  },
+  {
+   "key": "spec",
+   "id": "a4b4ef35-c6f5-4746-82bd-83dca1cb3112",
+   "title": "Round 2 pending issues: spec-builder (11)",
+   "chars": 45959,
+   "change": "folded note"
+  },
+  {
+   "key": "sched",
+   "id": "1623cb9d-9ed5-4af1-aa62-f520948fc21c",
+   "title": "PaperOS Execution Schedule",
+   "chars": 15982,
+   "change": "NJ-1 row: ~165, filed on PAP-91, Plan B, create order"
+  }
+ ],
+ "relationsCreated": [],
+ "created": [],
+ "localFilesEdited": [
+  "round2/folded-into-live-issues.json (new)",
+  "round2/agent4/pending-issues.json (foldedInto on 2 entries)",
+  "round2/agent5/pending-issues.json (foldedInto on 1 entry)",
+  "round2/agent5/new_gaps.py, agent4/new_biz.py, agent4/new_growth.py, agent2/new_spec.py (GAPS filtered by folded-into-live-issues.json)",
+  "round2/fix5_apply.py (the idempotent apply script)",
+  "round2/_fix5_preview/*.md (final descriptions and the PAP-5 comment)"
+ ],
+ "notes": [
+  "PAP-91 moved Ready for Claude -> Needs Justin as FIX-5 instructs; NJ-1 section at the top names the ask, Plan B, and the create order on /approve (agents/runtime-sandbox, PAP-96 children, PAP-104 children, agents/session-observability, then by phase, after FIX-6). Either reply returns it to Ready for Claude.",
+  "Plan B folded: migration/test-accounts -> PAP-198 work package 2 with an NJ-13 sign-up list (posted by the builder on claim; PAP-198 stays Ready for Claude); gap/growth/consent-centre -> PAP-187 work package 0 (PAP-191 hard, PAP-193 soft now cite it); gap/business-core/recurring-dunning -> PAP-180 work package 4 (PAP-174 dropped it); spec-builder/spec-versioning -> explicit non-goal of PAP-114 with a migrate/ skeleton.",
+  "PAP-200/202/203/204/206 Dependencies now cite PAP-198 work package 2 and skip live tests with `skipped: no-credentials`; no live issue or project content cites the four folded keys in brackets any more (growth, business-core and spec-builder project content rewritten too).",
+  "Pending-issues footers removed from PAP-187 and PAP-193 (no bracket keys left); PAP-174's garbled footer (listed template expressions as documents) rewritten to the tables document only.",
+  "Four pending documents carry a 'Folded into ... do not create' note at the Contents entry and under the heading; the Execution Schedule NJ-1 row now says ~165, filed on PAP-91, Plan B and the create order.",
+  "No issues created, no relations created or deleted (all four folded specs' relations were pending, and PAP-187 blocks PAP-191/PAP-193 already existed). No labels, milestones, views or PAP-1..12 touched (PAP-5 got a comment only).",
+  "FIX-6 agent: the four folded keys are already removed from the create scripts' GAPS via the tail filter; leave the folded notes in the documents and also delete these four from any duplicate handling.",
+  "Size labels: PAP-187 and PAP-180 texts now say L (work package added); estimates are not used on this team so no field changed."
+ ],
+ "verification": {
+  "checkedAt": "2026-09-17T06:34:04Z",
+  "needsJustin": [
+   "PAP-91"
+  ],
+  "issues": {
+   "PAP-91": {
+    "state": "Needs Justin",
+    "chars": 7741,
+    "bracketedFoldedKeysLeft": [],
+    "markerPresent": true
+   },
+   "PAP-198": {
+    "state": "Ready for Claude",
+    "chars": 10768,
+    "bracketedFoldedKeysLeft": [],
+    "markerPresent": true
+   },
+   "PAP-187": {
+    "state": "Backlog",
+    "chars": 11113,
+    "bracketedFoldedKeysLeft": [],
+    "markerPresent": true
+   },
+   "PAP-180": {
+    "state": "Backlog",
+    "chars": 9835,
+    "bracketedFoldedKeysLeft": [],
+    "markerPresent": true
+   },
+   "PAP-174": {
+    "state": "Backlog",
+    "chars": 5199,
+    "bracketedFoldedKeysLeft": [],
+    "markerPresent": true
+   },
+   "PAP-114": {
+    "state": "Ready for Claude",
+    "chars": 5991,
+    "bracketedFoldedKeysLeft": [],
+    "markerPresent": true
+   },
+   "PAP-200": {
+    "state": "Backlog",
+    "chars": 4384,
+    "bracketedFoldedKeysLeft": [],
+    "markerPresent": true
+   },
+   "PAP-202": {
+    "state": "Backlog",
+    "chars": 4251,
+    "bracketedFoldedKeysLeft": [],
+    "markerPresent": true
+   },
+   "PAP-203": {
+    "state": "Backlog",
+    "chars": 4511,
+    "bracketedFoldedKeysLeft": [],
+    "markerPresent": true
+   },
+   "PAP-204": {
+    "state": "Backlog",
+    "chars": 4846,
+    "bracketedFoldedKeysLeft": [],
+    "markerPresent": true
+   },
+   "PAP-206": {
+    "state": "Backlog",
+    "chars": 4947,
+    "bracketedFoldedKeysLeft": [],
+    "markerPresent": true
+   },
+   "PAP-191": {
+    "state": "Backlog",
+    "chars": 5765,
+    "bracketedFoldedKeysLeft": [],
+    "markerPresent": true
+   },
+   "PAP-193": {
+    "state": "Backlog",
+    "chars": 5104,
+    "bracketedFoldedKeysLeft": [],
+    "markerPresent": true
+   }
+  }
+ },
+ "finishedAt": "2026-09-17T06:34:04Z",
+ "projectsUpdated": [
+  {
+   "id": "9eba0335-55a2-42e4-af3f-21d61516b790",
+   "name": "Growth: Marketing, Outreach & CRM",
+   "field": "content",
+   "change": "folded key reference rewritten to the live work package"
+  },
+  {
+   "id": "789f25c0-d006-4f6c-bd12-7f21866d8bc0",
+   "name": "Business Core: Payments, Finance & Payroll",
+   "field": "content",
+   "change": "folded key reference rewritten to the live work package"
+  },
+  {
+   "id": "2751f85d-339c-4b19-868d-eae91b31334c",
+   "name": "Spec Builder",
+   "field": "content",
+   "change": "folded key reference rewritten to the live work package"
+  }
+ ]
+}

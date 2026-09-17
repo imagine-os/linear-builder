@@ -1,0 +1,102 @@
+{
+ "fix": "FIX-8 promotion-rule",
+ "startedAt": "2026-09-17T06:49Z",
+ "issuesCreated": [],
+ "relationsCreated": [],
+ "labelsCreated": [],
+ "issuesUpdated": [
+  {
+   "id": "da321a3c-f968-47af-ae78-51f42700965a",
+   "identifier": "PAP-96",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "promotion-work-package",
+    "spec-promotion",
+    "cli-linear-promote",
+    "dod",
+    "fixture-graph-test",
+    "edge-cases",
+    "soft-dep-PAP-93"
+   ],
+   "chars": 15631,
+   "previousUpdatedAt": "2026-09-17T06:43:04.297Z",
+   "updatedAt": "2026-09-17T06:49:47.847Z",
+   "at": "2026-09-17T06:49:47Z",
+   "verified": true
+  },
+  {
+   "id": "1d0587c5-145c-4de1-9ef1-871ab6881041",
+   "identifier": "PAP-93",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "BLOCKED_BY_OPEN-error-defined",
+    "READY_BUT_BLOCKED-relation",
+    "consumers",
+    "dod",
+    "test-plan",
+    "edge-cases",
+    "deps"
+   ],
+   "chars": 10179,
+   "previousUpdatedAt": "2026-09-17T06:39:57.859Z",
+   "updatedAt": "2026-09-17T06:49:47.942Z",
+   "at": "2026-09-17T06:49:47Z",
+   "verified": true
+  },
+  {
+   "id": "740f3b4d-7660-407a-aaf6-d77ca4f4fb3e",
+   "identifier": "PAP-92",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "how-your-issue-got-to-ready",
+    "manual-fallback-09-17..09-20",
+    "BASE_BRANCHES-orient-step",
+    "footer-baseBranches",
+    "dod",
+    "test",
+    "edge"
+   ],
+   "chars": 11108,
+   "previousUpdatedAt": "2026-09-17T06:43:03.020Z",
+   "updatedAt": "2026-09-17T06:49:48.032Z",
+   "at": "2026-09-17T06:49:47Z",
+   "verified": true
+  }
+ ],
+ "documentsUpdated": [
+  {
+   "id": "1623cb9d-9ed5-4af1-aa62-f520948fc21c",
+   "title": "PaperOS Execution Schedule",
+   "url": "https://linear.app/paperos/document/paperos-execution-schedule-1fa3d38d6795",
+   "change": "branch-start rule now names PAP-96 promotion package and PAP-93 BLOCKED_BY_OPEN (error); claim-order bullet documents the 09-17..09-20 `pnpm linear:promote --dry-run` manual fallback",
+   "chars": 17066,
+   "previousUpdatedAt": "2026-09-17T06:33:27.055Z",
+   "updatedAt": "2026-09-17T06:49:51.461Z",
+   "at": "2026-09-17T06:49:47Z",
+   "verified": true
+  },
+  {
+   "id": "929a59dd-0cd1-47ba-9c12-7bf4ddb4ae9f",
+   "title": "Round 2 pending issues: pm-linear (9)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859",
+   "change": "claims child (pm-linear/orchestrator/claims) now owns promote(), pnpm linear:promote, promotions table, issue.promoted and the fixture-graph DoD",
+   "chars": 35779,
+   "previousUpdatedAt": "2026-09-17T06:39:51.021Z",
+   "updatedAt": "2026-09-17T06:49:51.394Z",
+   "at": "2026-09-17T06:49:47Z",
+   "verified": true
+  }
+ ],
+ "notes": [
+  "No issues, relations or labels created: the Deferred label (beea2f68-dbc8-4a56-8213-1aeb46d24355) already existed; the promotion package lives inside PAP-96 / pm-linear/orchestrator/claims, so no new issue was needed.",
+  "No state changes. Edits were anchor-based insertions on freshly fetched content, so concurrent FIX-9/FIX-12 edits to the same issues are preserved."
+ ],
+ "finishedAt": "2026-09-17T06:49:47Z",
+ "verifiedAt": "2026-09-17T06:50Z"
+}

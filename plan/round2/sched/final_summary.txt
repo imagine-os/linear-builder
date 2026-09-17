@@ -1,0 +1,68 @@
+unscheduled 0 []
+finish after 10-01: []
+2026-09-17 start 10 {'P0': 10} peak 8 done 9 {'build': 66, 'plan': 54, 'research': 64}
+2026-09-18 start 17 {'P0': 17} peak 12 done 13 {'build': 174, 'plan': 86, 'docs': 10, 'research': 60}
+2026-09-19 start 19 {'P0': 19} peak 16 done 15 {'build': 274, 'plan': 98, 'research': 60, 'docs': 10}
+2026-09-20 start 21 {'P0': 17, 'P1': 4} peak 20 done 21 {'build': 294, 'plan': 64, 'docs': 20}
+2026-09-21 start 21 {'P1': 8, 'P0': 13} peak 20 done 21 {'build': 422, 'research': 44}
+2026-09-22 start 20 {'P1': 13, 'P0': 6, 'P2': 1} peak 20 done 18 {'build': 422, 'plan': 44, 'research': 50}
+2026-09-23 start 17 {'P1': 13, 'P0': 4} peak 20 done 18 {'build': 390, 'qa': 22, 'plan': 22}
+2026-09-24 start 17 {'P1': 14, 'P0': 2, 'P2': 1} peak 20 done 18 {'build': 464, 'plan': 22}
+2026-09-25 start 20 {'P1': 18, 'P0': 1, 'P2': 1} peak 20 done 18 {'build': 400, 'docs': 22, 'research': 10, 'qa': 32}
+2026-09-26 start 19 {'P1': 15, 'P2': 4} peak 20 done 17 {'build': 362, 'plan': 54, 'research': 22}
+2026-09-27 start 16 {'P2': 10, 'P1': 6} peak 18 done 14 {'build': 476, 'docs': 22, 'qa': 22}
+2026-09-28 start 11 {'P1': 5, 'P2': 6} peak 16 done 13 {'plan': 10, 'build': 210, 'qa': 44, 'docs': 22}
+2026-09-29 start 12 {'P2': 11, 'P1': 1} peak 14 done 15 {'build': 142, 'docs': 42, 'qa': 22, 'plan': 22}
+2026-09-30 start 3 {'P2': 3} peak 10 done 11 {'research': 10, 'build': 44}
+2026-10-01 start 0 {} peak 2 done 2 {}
+('agents', 'Agent org visible in app') 2026-09-30 -> 2026-09-29 
+('agents', 'Roster defined and installed') 2026-09-20 -> 2026-09-24 LATE
+('agents', 'Sub-agents, skills and evals live') 2026-09-25 -> 2026-09-25 
+('app-shell', 'Desktop and mobile shells build') 2026-09-23 -> 2026-09-24 LATE
+('app-shell', 'Multi-monitor and PWA polish') 2026-09-29 -> 2026-09-29 
+('app-shell', 'Template scaffolds and runs on web') 2026-09-19 -> 2026-09-20 LATE
+('business-core', 'Ledger and reports') 2026-09-29 -> 2026-09-28 
+('business-core', 'Payroll adapter and cash dashboard') 2026-10-01 -> 2026-10-01 
+('business-core', 'Stripe billing live') 2026-09-27 -> 2026-09-26 
+('collab', 'Comments and canvas') 2026-09-26 -> 2026-09-29 LATE
+('collab', 'Docs and prompt log stores') 2026-09-20 -> 2026-09-23 LATE
+('collab', 'Knowledge surfaced everywhere') 2026-09-30 -> 2026-09-29 
+('data-layer', 'Local-first sync working') 2026-09-24 -> 2026-09-25 LATE
+('data-layer', 'Postgres + Drizzle baseline') 2026-09-19 -> 2026-09-22 LATE
+('data-layer', 'Tenant-safe and observable') 2026-09-30 -> 2026-09-30 
+('design-system', 'Component library covers app shell needs') 2026-09-25 -> 2026-09-25 
+('design-system', 'Themable per tenant with docs') 2026-09-30 -> 2026-09-30 
+('design-system', 'Tokens and primitives') 2026-09-20 -> 2026-09-22 LATE
+('forge', 'CI runs on both forges') 2026-09-24 -> 2026-09-23 
+('forge', 'Disaster recovery proven') 2026-09-30 -> 2026-09-30 
+('forge', 'Forgejo live and mirrored') 2026-09-19 -> 2026-09-20 LATE
+('growth', 'CRM core') 2026-09-28 -> 2026-09-28 
+('growth', 'Campaigns and social') 2026-09-30 -> 2026-09-29 
+('identity', 'Agent principals and enterprise') 2026-09-30 -> 2026-09-28 
+('identity', 'Auth works across web and desktop') 2026-09-20 -> 2026-09-23 LATE
+('identity', 'Roles and audiences enforced end to end') 2026-09-25 -> 2026-09-25 
+('input', 'Keyboard and command system') 2026-09-23 -> 2026-09-23 
+('input', 'Touch, pen, gamepad') 2026-09-27 -> 2026-09-27 
+('input', 'Voice and accessibility certification') 2026-09-30 -> 2026-09-30 
+('libraries', 'Core adoptions decided') 2026-09-24 -> 2026-09-23 
+('libraries', 'Evaluation process') 2026-09-19 -> 2026-09-20 LATE
+('libraries', 'Registry live') 2026-09-30 -> 2026-09-30 
+('migration', 'Airtable, Notion, ClickUp importers') 2026-09-30 -> 2026-09-28 
+('migration', 'Business migrations') 2026-10-01 -> 2026-10-01 
+('migration', 'Import framework and CSV') 2026-09-28 -> 2026-09-27 
+('pm-linear', 'Linear configured for the pipeline') 2026-09-18 -> 2026-09-20 LATE
+('pm-linear', 'Orchestrator claims and ships issues') 2026-09-22 -> 2026-09-21 
+('pm-linear', 'PM module syncs both ways') 2026-09-30 -> 2026-09-29 
+('quality', 'Edge-case hunting and release trains') 2026-09-30 -> 2026-09-30 
+('quality', 'Gates 1 and 2 on every PR') 2026-09-20 -> 2026-09-25 LATE
+('quality', 'Visual and video gates') 2026-09-25 -> 2026-09-26 LATE
+('realtime', 'Record sync and conflict UX') 2026-09-26 -> 2026-09-28 LATE
+('realtime', 'Scale and offline tested') 2026-09-30 -> 2026-09-30 
+('realtime', 'Yjs server and presence') 2026-09-22 -> 2026-09-25 LATE
+('spec-builder', 'Codegen and conformance tests') 2026-09-26 -> 2026-09-26 
+('spec-builder', 'Spec editor UI') 2026-09-30 -> 2026-09-30 
+('spec-builder', 'Spec schema and validator') 2026-09-22 -> 2026-09-24 LATE
+('tables', 'All view types') 2026-09-27 -> 2026-09-27 
+('tables', 'Grid with sort, filter, group') 2026-09-23 -> 2026-09-28 LATE
+('tables', 'View sharing, formulas, dashboards') 2026-09-30 -> 2026-09-30 
+{'build': 4140, 'plan': 476, 'research': 320, 'docs': 148, 'qa': 142}

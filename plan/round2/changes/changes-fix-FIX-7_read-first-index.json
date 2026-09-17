@@ -1,0 +1,463 @@
+{
+ "fix": "FIX-7 read-first-index",
+ "startedAt": "2026-09-17T06:45Z",
+ "documentsUpdated": [
+  {
+   "id": "91be37cd-6998-490c-8309-31817f4859c0",
+   "title": "PaperOS Core Platform Blueprint",
+   "url": "https://linear.app/paperos/document/paperos-core-platform-blueprint-0c2115fe48f1",
+   "change": "added 'Documents (read in this order)' section: 7 documents + 9 character sheets + 11 pending-issue documents",
+   "chars": 21195,
+   "previousUpdatedAt": "2026-09-17T02:26:06.243Z"
+  }
+ ],
+ "issuesUpdated": [
+  {
+   "id": "740f3b4d-7660-407a-aaf6-d77ca4f4fb3e",
+   "identifier": "PAP-92",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "read-first",
+    "reading-order",
+    "dod-links"
+   ],
+   "chars": 7473,
+   "previousUpdatedAt": "2026-09-17T06:23:37.834Z"
+  },
+  {
+   "id": "7319bc5e-bf85-4cdb-a203-2dc31513a688",
+   "identifier": "PAP-13",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "read-first"
+   ],
+   "chars": 5973,
+   "previousUpdatedAt": "2026-09-17T06:16:04.102Z"
+  },
+  {
+   "id": "0d1d8ef8-381f-4b0e-9fec-cbbb1a261891",
+   "identifier": "PAP-91",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "read-first"
+   ],
+   "chars": 8691,
+   "previousUpdatedAt": "2026-09-17T06:39:56.630Z"
+  },
+  {
+   "id": "d5e001bb-de69-4cfc-a9a3-2c88c1bc68ca",
+   "identifier": "PAP-103",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "read-first"
+   ],
+   "chars": 4972,
+   "previousUpdatedAt": "2026-09-17T04:50:25.462Z"
+  },
+  {
+   "id": "9072eb75-d95d-462b-8e96-328a1ff71b9e",
+   "identifier": "PAP-114",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "read-first"
+   ],
+   "chars": 6904,
+   "previousUpdatedAt": "2026-09-17T06:32:26.226Z"
+  },
+  {
+   "id": "857d025e-81fe-45a4-9c95-b08b3d7d677f",
+   "identifier": "PAP-219",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "read-first",
+    "contract-source"
+   ],
+   "chars": 6874,
+   "previousUpdatedAt": "2026-09-17T04:03:28.482Z"
+  },
+  {
+   "id": "98cd2929-525b-4866-995c-54926ffc6c08",
+   "identifier": "PAP-279",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "read-first",
+    "contract-source"
+   ],
+   "chars": 5734,
+   "previousUpdatedAt": "2026-09-17T06:16:05.340Z"
+  },
+  {
+   "id": "da321a3c-f968-47af-ae78-51f42700965a",
+   "identifier": "PAP-96",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "read-first"
+   ],
+   "chars": 8067,
+   "previousUpdatedAt": "2026-09-17T06:23:38.058Z"
+  },
+  {
+   "id": "6760bac0-4836-4da6-9e59-1377bde0d238",
+   "identifier": "PAP-25",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "read-first"
+   ],
+   "chars": 5331,
+   "previousUpdatedAt": "2026-09-17T04:05:36.926Z"
+  },
+  {
+   "id": "44001a65-1398-40d0-9d03-db353417d08c",
+   "identifier": "PAP-55",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 5625,
+   "previousUpdatedAt": "2026-09-17T04:18:08.982Z"
+  },
+  {
+   "id": "09c51375-ae7b-408c-8903-308991a477d0",
+   "identifier": "PAP-35",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 5172,
+   "previousUpdatedAt": "2026-09-17T04:12:07.429Z"
+  },
+  {
+   "id": "5ed9573f-1f5f-4f2f-b3d4-2b881f502cf4",
+   "identifier": "PAP-267",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 3140,
+   "previousUpdatedAt": "2026-09-17T06:22:36.535Z"
+  },
+  {
+   "id": "43ae36d2-ac73-481a-a639-54f2cf0662b0",
+   "identifier": "PAP-59",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 4658,
+   "previousUpdatedAt": "2026-09-17T04:21:22.599Z"
+  },
+  {
+   "id": "a2bfa003-4056-485a-9bc0-fd3f51385e3c",
+   "identifier": "PAP-71",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 5175,
+   "previousUpdatedAt": "2026-09-17T06:22:49.395Z"
+  },
+  {
+   "id": "39c21bb0-1d60-461d-afd1-e19aca502bb4",
+   "identifier": "PAP-164",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 5381,
+   "previousUpdatedAt": "2026-09-17T06:22:47.788Z"
+  },
+  {
+   "id": "896873a6-fc38-4caa-8b85-f9ff6a8aa10d",
+   "identifier": "PAP-175",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 6015,
+   "previousUpdatedAt": "2026-09-17T05:24:42.163Z"
+  },
+  {
+   "id": "0bcc9871-bc3f-49d0-a9cd-e8027451fc21",
+   "identifier": "PAP-180",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 10555,
+   "previousUpdatedAt": "2026-09-17T06:32:25.563Z"
+  },
+  {
+   "id": "f82267c3-6dbe-4dc2-8590-2fe7db751c00",
+   "identifier": "PAP-187",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 11747,
+   "previousUpdatedAt": "2026-09-17T06:32:24.763Z"
+  },
+  {
+   "id": "29407c9a-e5c2-41da-ab3b-b64724690944",
+   "identifier": "PAP-161",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 6852,
+   "previousUpdatedAt": "2026-09-17T06:16:05.547Z"
+  },
+  {
+   "id": "1873c6a7-727e-4c28-a6e9-2ea60891bf18",
+   "identifier": "PAP-116",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 4708,
+   "previousUpdatedAt": "2026-09-17T06:22:46.762Z"
+  },
+  {
+   "id": "17f0dfc6-8418-4b7f-849c-6251c241d8ab",
+   "identifier": "PAP-119",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 4887,
+   "previousUpdatedAt": "2026-09-17T06:22:45.357Z"
+  },
+  {
+   "id": "ca468134-1759-41ac-bf74-218b10f3b09e",
+   "identifier": "PAP-28",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 5186,
+   "previousUpdatedAt": "2026-09-17T04:12:06.795Z"
+  },
+  {
+   "id": "3b4c007c-4002-4240-ad84-c1bfe127588d",
+   "identifier": "PAP-97",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 5366,
+   "previousUpdatedAt": "2026-09-17T06:18:47.496Z"
+  },
+  {
+   "id": "cbf19ea6-b4bb-4c3c-ae45-5f43cc5cbf6d",
+   "identifier": "PAP-136",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 6262,
+   "previousUpdatedAt": "2026-09-17T04:55:29.694Z"
+  },
+  {
+   "id": "c2b9c3d2-cf7b-4c16-be55-9b68cee55fb8",
+   "identifier": "PAP-174",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 5886,
+   "previousUpdatedAt": "2026-09-17T06:32:25.634Z"
+  },
+  {
+   "id": "54b9472b-f414-4483-bc11-711db18105f6",
+   "identifier": "PAP-177",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 6266,
+   "previousUpdatedAt": "2026-09-17T05:24:42.957Z"
+  },
+  {
+   "id": "3e427087-7542-49d8-b86c-3e3eed0c3702",
+   "identifier": "PAP-78",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 5550,
+   "previousUpdatedAt": "2026-09-17T04:18:13.219Z"
+  },
+  {
+   "id": "6089c982-222f-44a3-90a9-097b6745e8e9",
+   "identifier": "PAP-80",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 5780,
+   "previousUpdatedAt": "2026-09-17T04:18:15.287Z"
+  },
+  {
+   "id": "5bbe5fee-95e7-4640-8c48-4d48f48b8539",
+   "identifier": "PAP-82",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 4920,
+   "previousUpdatedAt": "2026-09-17T04:18:15.509Z"
+  },
+  {
+   "id": "8ac49161-37c1-4135-b2f1-1ea16539c6b8",
+   "identifier": "PAP-83",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 4983,
+   "previousUpdatedAt": "2026-09-17T06:22:50.826Z"
+  },
+  {
+   "id": "a386d1c9-7a9d-4be9-be15-831a78c01ceb",
+   "identifier": "PAP-84",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 5514,
+   "previousUpdatedAt": "2026-09-17T06:22:50.826Z"
+  },
+  {
+   "id": "9c8179db-8220-42af-aa4b-a3e84821daf4",
+   "identifier": "PAP-85",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 4781,
+   "previousUpdatedAt": "2026-09-17T06:22:49.395Z"
+  },
+  {
+   "id": "27719b83-5814-4532-8d35-e25aebbb9018",
+   "identifier": "PAP-89",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 5812,
+   "previousUpdatedAt": "2026-09-17T06:22:50.826Z"
+  },
+  {
+   "id": "9ff9bb9e-5c89-43a0-b5e4-2b2a97e4fb85",
+   "identifier": "PAP-239",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 5105,
+   "previousUpdatedAt": "2026-09-17T06:18:47.405Z"
+  },
+  {
+   "id": "8cf6ed89-72d6-4f73-aefd-2739bc45da7d",
+   "identifier": "PAP-81",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 5125,
+   "previousUpdatedAt": "2026-09-17T04:18:15.375Z"
+  },
+  {
+   "id": "87a5ec58-4ee0-4b3e-b2a1-57be52230623",
+   "identifier": "PAP-106",
+   "fields": [
+    "description"
+   ],
+   "changes": [
+    "contract-source"
+   ],
+   "chars": 5703,
+   "previousUpdatedAt": "2026-09-17T04:50:25.767Z"
+  }
+ ],
+ "created": [],
+ "relationsCreated": [],
+ "notes": [
+  "Blueprint (91be37cd) documentUpdate: inserted '## Documents (read in this order)' before the final artifact-link line: Blueprint, Contracts, project Contract section, Roster + 9 character sheets, Threat Model, Execution Schedule, Golden Path, then 'Waiting on the issue cap' with all 11 live pending-issue documents (the critique said 12; only 11 exist) and the FIX-5 folded-spec note. No other Blueprint text changed.",
+  "Read-first paragraph appended to the Goal section of PAP-92, PAP-13, PAP-91, PAP-103, PAP-114, PAP-219, PAP-279, PAP-96, PAP-25 (marker '**Read first.**'), each with an issue-specific pointer (e.g. Contracts \u00a75 for PAP-13, Threat Model \u00a74-6 for PAP-96, NJ-2 for PAP-25).",
+  "'Contract source:' bullet appended to the Interface contract of 29 issues citing Contracts sections by number and \u00a76 matrix row: Principal PAP-55/35/267/59; Money PAP-71/164/175/180/187; FilterTree PAP-279/161/116/119; event envelope PAP-28/97/136/174/177; gate artifacts PAP-78/80/82/83/84/85/89/239; Threat Model PAP-219/80/81/106 (and PAP-177 \u00a78 PCI). PAP-219 and PAP-279 got both a read-first and a contract-source.",
+  "PAP-92: 'Required reading order' Spec bullet rewritten to list the documents first; DoD gained the line 'links every document ... and states the umbrella, promotion and deferred rules'. FIX-8 agent: PAP-92 now names the promotion rule (PAP-96 promotion package, PAP-93 BLOCKED_BY_OPEN, branch-start rule) in its DoD; put the rule text itself under a Spec heading 'How your issue got to Ready'.",
+  "All edits are read-modify-write on live descriptions fetched in the same batch (10 issues per request, 4 requests + 1 read + 1 documentUpdate + verification); idempotent via markers, safe to re-run. No issues created, no relations, no states, no labels, no views, no PAP-1..12 touched.",
+  "Verification 06:44Z: 36/36 target issues link interface-and-data-contracts; Blueprint has 11 pending-doc links and 9 character-sheet links; PAP-92 links Blueprint, Contracts, Threat Model, Roster, Schedule, Golden Path."
+ ],
+ "finishedAt": "2026-09-17T06:44Z"
+}

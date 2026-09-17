@@ -1,0 +1,193 @@
+{
+ "updated": [
+  "a0677d67-4bed-46a9-9ddc-01fb69d1ca0b",
+  "9fc663e7-a30b-4be5-aed4-99a9d17f1cb7",
+  "b4aa9823-54ae-452c-ad3a-cf44631a9018",
+  "4bb9e146-dafb-491e-8310-70d0b854295e",
+  "335be1f7-f58a-4ed3-ab9d-bdf2a05a110b",
+  "23307d66-7948-486f-b98d-4f59469e6fec",
+  "bce7c8bf-8dd0-49ab-a4b7-8932e08b524e",
+  "8bdf9438-c2e5-4a1b-8119-94862508c5c4",
+  "46e7dd8c-845f-455e-87fd-667f37968cf1",
+  "e060ed3a-ef1a-4aaf-b8b6-0e496a4c0bf0",
+  "83317bd0-de2e-46d0-892a-48f10039f2c0",
+  "41e4cd32-594f-466b-a183-92f0c68a49c8",
+  "b5e7ed00-9e7b-4c17-94eb-315b72188def",
+  "b54cdf94-7b57-496b-8d8b-98b12c32589b",
+  "0ec7ab66-196a-460d-8831-4a06d9260a08",
+  "def0c7c8-c4fb-41e5-9058-f38a4aadd6c7",
+  "75cd83a8-333f-4119-8803-380b4efa35f7",
+  "6f25ae7e-b277-4248-95f5-240344d1dfee",
+  "f88d4098-ee55-4b92-bab2-f7bdfff2bedd",
+  "670915b9-d580-4b31-9160-351b036f8b7d",
+  "e3b1aef2-e4b7-4a1a-a875-afc3cdc8b10a"
+ ],
+ "created": [],
+ "relations": [
+  {
+   "id": "0c957c08-b17a-4346-8cf6-659bbcf99ddf",
+   "from": "PAP-198",
+   "to": "PAP-199"
+  },
+  {
+   "id": "95788f43-7542-4fbe-bb13-801fae51ecc1",
+   "from": "PAP-37",
+   "to": "PAP-199"
+  },
+  {
+   "id": "2f17d2f1-2b83-410f-aaab-fb3269689822",
+   "from": "PAP-201",
+   "to": "PAP-202"
+  },
+  {
+   "id": "e8975aaf-462f-4714-9a44-74a2e00f52b2",
+   "from": "PAP-201",
+   "to": "PAP-203"
+  },
+  {
+   "id": "6840679f-b890-45cb-9aa4-7e2e5694ea9b",
+   "from": "PAP-201",
+   "to": "PAP-204"
+  },
+  {
+   "id": "53d63056-a76a-48da-8573-a719f13969d4",
+   "from": "PAP-201",
+   "to": "PAP-205"
+  },
+  {
+   "id": "3f5a68ea-33ca-4bce-85d4-8a25c4a06ff7",
+   "from": "PAP-201",
+   "to": "PAP-206"
+  },
+  {
+   "id": "6789821d-f648-462d-8f12-e266d09fe311",
+   "from": "PAP-128",
+   "to": "PAP-205"
+  },
+  {
+   "id": "04334eef-6944-4122-8dd1-975fb744ce34",
+   "from": "PAP-114",
+   "to": "PAP-207"
+  },
+  {
+   "id": "000a349b-db19-4274-8e6c-b732d1156057",
+   "from": "PAP-211",
+   "to": "PAP-216"
+  },
+  {
+   "id": "36c805b7-884f-4fae-af33-96f154899ace",
+   "from": "PAP-48",
+   "to": "PAP-217"
+  },
+  {
+   "id": "6feefb42-399f-4d69-b9e7-647f19bf2a43",
+   "from": "PAP-213",
+   "to": "PAP-170"
+  }
+ ],
+ "projectsUpdated": [
+  "89399ed0-8543-45f0-b824-b91916874b68",
+  "8cf0f6a7-ccd4-4d77-a190-783a80cd1131"
+ ],
+ "fieldChanges": [
+  {
+   "what": "PAP-198:state",
+   "issue": "PAP-198",
+   "note": "state Backlog -> Ready for Claude (audit: unblocked Research issue)"
+  },
+  {
+   "what": "PAP-212:milestone",
+   "issue": "PAP-212",
+   "note": "milestone Core adoptions decided -> Evaluation process (blocks PAP-67 due 09-20)"
+  }
+ ],
+ "notes": [
+  "Linear returned USAGE_LIMIT_EXCEEDED (free-plan issue cap) for every issueCreate on 2026-09-17; 29 fully specified issues (2 gaps, 27 children of PAP-199/202/203/205/206/207/213/214/215) are saved in round2/agent5/pending-issues.json for creation once the plan is upgraded or issues are archived. Parents describe them as work packages; full specs also published as Linear project documents."
+ ],
+ "pendingIssuesFile": "round2/agent5/pending-issues.json",
+ "documents": [
+  {
+   "project": "migration",
+   "id": "aa066789-71cf-4151-ab4b-4086d2ffcd97",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6",
+   "title": "Round 2 pending issues: migration (20)",
+   "pendingKeys": [
+    "migration/test-accounts",
+    "migration/monday-hubspot-recipes",
+    "child/PAP-199/0",
+    "child/PAP-199/1",
+    "child/PAP-199/2",
+    "child/PAP-202/0",
+    "child/PAP-202/1",
+    "child/PAP-202/2",
+    "child/PAP-203/0",
+    "child/PAP-203/1",
+    "child/PAP-203/2",
+    "child/PAP-205/0",
+    "child/PAP-205/1",
+    "child/PAP-205/2",
+    "child/PAP-206/0",
+    "child/PAP-206/1",
+    "child/PAP-206/2",
+    "child/PAP-207/0",
+    "child/PAP-207/1",
+    "child/PAP-207/2"
+   ]
+  },
+  {
+   "project": "libraries",
+   "id": "4933c6b5-fe96-4206-8b86-4e3a2f5c3712",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d",
+   "title": "Round 2 pending issues: libraries (9)",
+   "pendingKeys": [
+    "child/PAP-213/0",
+    "child/PAP-213/1",
+    "child/PAP-213/2",
+    "child/PAP-214/0",
+    "child/PAP-214/1",
+    "child/PAP-214/2",
+    "child/PAP-215/0",
+    "child/PAP-215/1",
+    "child/PAP-215/2"
+   ]
+  }
+ ],
+ "comments": [
+  {
+   "issue": "PAP-199",
+   "id": "b5c9e5d6-1652-457e-b7ae-24f143d84e96"
+  },
+  {
+   "issue": "PAP-202",
+   "id": "d8f1f89d-fabe-4952-ac05-54fbebb64516"
+  },
+  {
+   "issue": "PAP-203",
+   "id": "6782634d-c39f-4d1f-bf2a-d81c281f3d2e"
+  },
+  {
+   "issue": "PAP-205",
+   "id": "a55849e2-66e7-48e8-9552-c49773700206"
+  },
+  {
+   "issue": "PAP-206",
+   "id": "b42501fb-c47a-4616-ae6c-4740ca9252b7"
+  },
+  {
+   "issue": "PAP-207",
+   "id": "9dde7c6a-24e8-45d1-b180-7833a3dbc237"
+  },
+  {
+   "issue": "PAP-213",
+   "id": "5d658973-f1ff-4aae-8924-3252191cc007"
+  },
+  {
+   "issue": "PAP-214",
+   "id": "6f670e3d-02c1-4f17-bd4a-59c1b2c3f9c3"
+  },
+  {
+   "issue": "PAP-215",
+   "id": "cf382785-66c6-4b7e-ad85-88c38a24f606"
+  }
+ ]
+}

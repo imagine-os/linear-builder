@@ -1,0 +1,146 @@
+[
+ {
+  "milestoneId": "a05f90f4-e98e-4de5-a04c-0fce85eb2d79",
+  "project": "agents",
+  "name": "Roster defined and installed",
+  "before": "2026-09-20",
+  "after": "2026-09-24",
+  "lastIssue": "PAP-107"
+ },
+ {
+  "milestoneId": "d701b501-bd3e-4bac-8ae8-ab50ed28d67b",
+  "project": "app-shell",
+  "name": "Desktop and mobile shells build",
+  "before": "2026-09-23",
+  "after": "2026-09-24",
+  "lastIssue": "PAP-263"
+ },
+ {
+  "milestoneId": "c48b2fa3-aebc-4520-877d-7f301322bcc9",
+  "project": "app-shell",
+  "name": "Template scaffolds and runs on web",
+  "before": "2026-09-19",
+  "after": "2026-09-20",
+  "lastIssue": "PAP-18"
+ },
+ {
+  "milestoneId": "bb928bce-f8e1-40b9-b932-5fb8e5c9c356",
+  "project": "collab",
+  "name": "Comments and canvas",
+  "before": "2026-09-26",
+  "after": "2026-09-29",
+  "lastIssue": "PAP-136"
+ },
+ {
+  "milestoneId": "117ac846-7963-4a17-ae47-316e46a45f81",
+  "project": "collab",
+  "name": "Docs and prompt log stores",
+  "before": "2026-09-20",
+  "after": "2026-09-23",
+  "lastIssue": "PAP-129"
+ },
+ {
+  "milestoneId": "ff634ac4-d62f-474c-abad-0b8f5842d5d9",
+  "project": "data-layer",
+  "name": "Local-first sync working",
+  "before": "2026-09-24",
+  "after": "2026-09-25",
+  "lastIssue": "PAP-272"
+ },
+ {
+  "milestoneId": "fe9ae139-9a2d-452b-a6a7-eb4ae0228659",
+  "project": "data-layer",
+  "name": "Postgres + Drizzle baseline",
+  "before": "2026-09-19",
+  "after": "2026-09-22",
+  "lastIssue": "PAP-269"
+ },
+ {
+  "milestoneId": "5ed2fb29-7d3d-43f1-b8c5-f4802973fa33",
+  "project": "design-system",
+  "name": "Tokens and primitives",
+  "before": "2026-09-20",
+  "after": "2026-09-22",
+  "lastIssue": "PAP-71"
+ },
+ {
+  "milestoneId": "0bdc070f-763c-492b-8bcb-1807d8c7e018",
+  "project": "forge",
+  "name": "Forgejo live and mirrored",
+  "before": "2026-09-19",
+  "after": "2026-09-20",
+  "lastIssue": "PAP-49"
+ },
+ {
+  "milestoneId": "47fcf101-11ed-4a15-98dd-e0a6345f14b1",
+  "project": "identity",
+  "name": "Auth works across web and desktop",
+  "before": "2026-09-20",
+  "after": "2026-09-23",
+  "lastIssue": "PAP-58"
+ },
+ {
+  "milestoneId": "25428773-7513-4fbf-b5c4-32b76f4cbade",
+  "project": "libraries",
+  "name": "Evaluation process",
+  "before": "2026-09-19",
+  "after": "2026-09-20",
+  "lastIssue": "PAP-211"
+ },
+ {
+  "milestoneId": "373b00ca-f555-4bed-b93b-60ade699d328",
+  "project": "pm-linear",
+  "name": "Linear configured for the pipeline",
+  "before": "2026-09-18",
+  "after": "2026-09-20",
+  "lastIssue": "PAP-93"
+ },
+ {
+  "milestoneId": "dca11ba1-d758-4ad9-a1cb-c7866cc2eb8c",
+  "project": "quality",
+  "name": "Gates 1 and 2 on every PR",
+  "before": "2026-09-20",
+  "after": "2026-09-25",
+  "lastIssue": "PAP-248"
+ },
+ {
+  "milestoneId": "e8e22ff1-a540-4b28-95e7-e4f7b65f02ba",
+  "project": "quality",
+  "name": "Visual and video gates",
+  "before": "2026-09-25",
+  "after": "2026-09-26",
+  "lastIssue": "PAP-84"
+ },
+ {
+  "milestoneId": "931f3d71-b7b3-40d4-9782-e12495bccc46",
+  "project": "realtime",
+  "name": "Record sync and conflict UX",
+  "before": "2026-09-26",
+  "after": "2026-09-28",
+  "lastIssue": "PAP-144"
+ },
+ {
+  "milestoneId": "52ad874e-01d1-4bcf-a074-69739f9bd665",
+  "project": "realtime",
+  "name": "Yjs server and presence",
+  "before": "2026-09-22",
+  "after": "2026-09-25",
+  "lastIssue": "PAP-142"
+ },
+ {
+  "milestoneId": "3ca6223a-d2d4-497d-93e7-960c77943e70",
+  "project": "spec-builder",
+  "name": "Spec schema and validator",
+  "before": "2026-09-22",
+  "after": "2026-09-24",
+  "lastIssue": "PAP-116"
+ },
+ {
+  "milestoneId": "06d9484b-ddc1-466a-bd89-a495a8fe2ba7",
+  "project": "tables",
+  "name": "Grid with sort, filter, group",
+  "before": "2026-09-23",
+  "after": "2026-09-28",
+  "lastIssue": "PAP-166"
+ }
+]

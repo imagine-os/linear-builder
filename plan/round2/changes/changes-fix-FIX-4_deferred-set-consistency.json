@@ -1,0 +1,532 @@
+{
+ "fix": "FIX-4 deferred-set-consistency",
+ "startedAt": "2026-09-17T06:25Z",
+ "labelsCreated": [
+  {
+   "id": "beea2f68-dbc8-4a56-8213-1aeb46d24355",
+   "name": "Deferred"
+  }
+ ],
+ "relationsDeleted": [
+  {
+   "id": "8e549412-cd75-437f-a21e-c1c16f02d1e4",
+   "relation": "PAP-190 blocks PAP-192",
+   "nowSoft": true
+  }
+ ],
+ "issuesUpdated": [
+  {
+   "id": "1a191a9d-68ba-46fd-8002-b7f2507a1c1c",
+   "identifier": "PAP-23",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "8851056f-e456-4947-aa35-2b8d86f4ff4a",
+   "identifier": "PAP-137",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "3292af7d-f91e-491a-aaef-3af09c843cc3",
+   "identifier": "PAP-149",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "40d87175-21b5-432c-b316-e09d9f1c9e60",
+   "identifier": "PAP-157",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "acaeea13-93ec-45d5-88bb-c878d80c46d1",
+   "identifier": "PAP-158",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Customer",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "14be5f24-bd68-46a7-9040-2d06784ea10c",
+   "identifier": "PAP-182",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "c7a44fe0-7119-4f63-9b8e-2edd4dcabf85",
+   "identifier": "PAP-185",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "5972b27f-5051-481b-b27f-0be141f2c63c",
+   "identifier": "PAP-190",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "251ffea7-db95-40f6-b334-dcd6927a369c",
+   "identifier": "PAP-191",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "d46e24df-7d27-4aa9-8fd8-ae10d40e1dfe",
+   "identifier": "PAP-193",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Customer",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "eee417cd-3c9d-40d0-8a82-f907f47e212c",
+   "identifier": "PAP-194",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "76255acb-a296-484c-af3d-f22b7e5d448d",
+   "identifier": "PAP-195",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "9b821dff-b509-4160-bdf7-5d22d42635e5",
+   "identifier": "PAP-196",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Customer",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "c823edb8-aa18-41de-9b79-bb5f436aaf53",
+   "identifier": "PAP-197",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "23307d66-7948-486f-b98d-4f59469e6fec",
+   "identifier": "PAP-203",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "bce7c8bf-8dd0-49ab-a4b7-8932e08b524e",
+   "identifier": "PAP-204",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "46e7dd8c-845f-455e-87fd-667f37968cf1",
+   "identifier": "PAP-206",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "e060ed3a-ef1a-4aaf-b8b6-0e496a4c0bf0",
+   "identifier": "PAP-207",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Customer",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "e3b1aef2-e4b7-4a1a-a875-afc3cdc8b10a",
+   "identifier": "PAP-218",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Agent",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "db3c87d2-3878-4105-ab75-0d4c30564fdb",
+   "identifier": "PAP-221",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Customer",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "095991a8-2286-4529-919e-7d3eeb32489e",
+   "identifier": "PAP-222",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Developer",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "10a1763b-66ee-44a5-af46-7ec130eb325e",
+   "identifier": "PAP-230",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "09d8a706-3599-4677-a3d1-d9da2a35476f",
+   "identifier": "PAP-231",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "252e95c4-5da0-4130-a781-ede987df9d8a",
+   "identifier": "PAP-232",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "e4963923-82f4-4655-b8a8-5d079758d554",
+   "identifier": "PAP-235",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Customer",
+    "Staff",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "ae1cdb5d-a8f8-466d-83d2-21efda4b2c1d",
+   "identifier": "PAP-276",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Developer",
+    "Agent",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "36a6166d-5498-4da7-b2b6-2847d6e1e4c1",
+   "identifier": "PAP-277",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Developer",
+    "Agent",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "543adec6-b71b-44b2-8b74-9faa36426738",
+   "identifier": "PAP-278",
+   "fields": [
+    "addedLabelIds",
+    "description",
+    "priority"
+   ],
+   "priorityAfter": 4,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Developer",
+    "Agent",
+    "Deferred"
+   ]
+  },
+  {
+   "id": "5dbfdb3e-efd0-4092-9f54-09c469563141",
+   "identifier": "PAP-192",
+   "fields": [
+    "description"
+   ],
+   "priorityAfter": 2,
+   "labelsAfter": [
+    "P2",
+    "Build",
+    "Agent"
+   ]
+  },
+  {
+   "id": "da321a3c-f968-47af-ae78-51f42700965a",
+   "identifier": "PAP-96",
+   "fields": [
+    "description"
+   ],
+   "priorityAfter": 1,
+   "labelsAfter": [
+    "P0",
+    "Build",
+    "Agent"
+   ]
+  }
+ ],
+ "documentUpdates": [
+  {
+   "documentId": "1623cb9d-9ed5-4af1-aa62-f520948fc21c",
+   "title": "PaperOS Execution Schedule",
+   "section": "1. Deferred to v0.2 bullet; 5. Stretch pool",
+   "success": true,
+   "verifiedUpdatedAt": "2026-09-17T06:18:48.748Z"
+  }
+ ],
+ "created": [],
+ "notes": [
+  "Label `Deferred` created ungrouped on team PAP (color #8A8F98) with a description naming NJ-14 as the reinstatement path.",
+  "Labels were added with `addedLabelIds`, so existing Phase/Type/surface labels are untouched; priority set to 4 on all 28.",
+  "PAP-235 -> PAP-180 was already made soft by FIX-1 (relation 39a47916 deleted, both Dependencies rewritten); FIX-4 only names it in the schedule document.",
+  "PAP-190 -> PAP-192 softened: relation deleted, PAP-192 given a `campaign_draft` fallback queue and `platformLimits` constant so it is buildable on 09-28 without PAP-190; PAP-190 Dependencies say publishing waits for it.",
+  "PAP-96 Spec gained the claim filter (never claim `Deferred`, Linear filter + pre-claim re-check, skip with one comment, PAP-93 bounces) and one Edge case; FIX-8 promotion rule should reuse the same exclusion.",
+  "Remaining outbound edges from the deferred set (230/231 -> 232, 276 -> 277 -> 278) stay inside the set and were left in place.",
+  "No issues created, no states changed, no views or PAP-1..12 touched."
+ ],
+ "requestsUsed": 12,
+ "verification": {
+  "checkedAt": "2026-09-17T06:30Z",
+  "deferredLabelled": 28,
+  "listMatches": true,
+  "edgesFromDeferredToScheduled": [],
+  "allPriority4": true,
+  "allHaveDeferralLine": true,
+  "pap192InboundBlockers": [
+   "PAP-104"
+  ],
+  "schedDocSentenceReplaced": true,
+  "schedDocUpdatedAt": "2026-09-17T06:23:22.022Z"
+ }
+}

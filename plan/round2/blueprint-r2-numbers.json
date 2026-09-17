@@ -1,0 +1,81 @@
+{
+ "issues": 267,
+ "ready": 25,
+ "needsJustin": 1,
+ "children": 49,
+ "parents": 16,
+ "blocks": 534,
+ "deferred": 28,
+ "documents": 26,
+ "milestones": 51,
+ "movedMilestones": 20,
+ "pending": 156,
+ "scoreBefore": 289,
+ "scoreAfter": 304,
+ "takenAt": "2026-09-17T06:53Z",
+ "docs": {
+  "blueprint": "https://linear.app/paperos/document/paperos-core-platform-blueprint-0c2115fe48f1",
+  "contracts": "https://linear.app/paperos/document/paperos-interface-and-data-contracts-d40e6a4d227c",
+  "threat": "https://linear.app/paperos/document/paperos-security-and-threat-model-51fd5fd8929c",
+  "schedule": "https://linear.app/paperos/document/paperos-execution-schedule-1fa3d38d6795",
+  "roster": "https://linear.app/paperos/document/paperos-agent-roster-org-chart-and-character-index-fc7ea7f41ff3",
+  "golden": "https://linear.app/paperos/document/new-app-in-ten-minutes-the-golden-path-0f49429f566e"
+ },
+ "charSheets": {
+  "Scout": "https://linear.app/paperos/document/character-sheet-scout-library-and-migration-researcher-44cef400dbbc",
+  "Beacon": "https://linear.app/paperos/document/character-sheet-beacon-growth-lead-12b0b4eda18b",
+  "Ledger": "https://linear.app/paperos/document/character-sheet-ledger-business-systems-lead-b876b4a0d809",
+  "Nova": "https://linear.app/paperos/document/character-sheet-nova-product-systems-engineer-a736fa0dc023",
+  "Sentinel": "https://linear.app/paperos/document/character-sheet-sentinel-quality-lead-fc3ada07f9e3",
+  "Quill": "https://linear.app/paperos/document/character-sheet-quill-spec-and-documentation-lead-1ba00329d4c8",
+  "Iris": "https://linear.app/paperos/document/character-sheet-iris-design-systems-lead-43ca4e29d4a9",
+  "Forge": "https://linear.app/paperos/document/character-sheet-forge-platform-engineer-6b19c5679dd0",
+  "Atlas": "https://linear.app/paperos/document/character-sheet-atlas-chief-architect-and-orchestrator-b4725358adc1"
+ },
+ "pendingDocs": [
+  {
+   "title": "Round 2 pending issues: tables (24)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+  },
+  {
+   "title": "Round 2 pending issues: migration (20)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+  },
+  {
+   "title": "Round 2 pending issues: growth (13)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+  },
+  {
+   "title": "Round 2 pending issues: security (11)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+  },
+  {
+   "title": "Round 2 pending issues: business-core (11)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+  },
+  {
+   "title": "Round 2 pending issues: spec-builder (11)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+  },
+  {
+   "title": "Round 2 pending issues: libraries (9)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+  },
+  {
+   "title": "Round 2 pending issues: agents (9)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+  },
+  {
+   "title": "Round 2 pending issues: pm-linear (9)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+  },
+  {
+   "title": "Round 2 pending issues: golden path (8)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+  },
+  {
+   "title": "Round 2 pending issues: contracts (4)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59"
+  }
+ ]
+}

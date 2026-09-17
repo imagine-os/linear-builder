@@ -1,0 +1,594 @@
+{
+ "updated": [
+  "7319bc5e-bf85-4cdb-a203-2dc31513a688",
+  "589bb21e-cd11-427e-b18e-ceb94b6ce534",
+  "1aa0d8a5-3bbe-4d68-ba40-aa5c14390f1f",
+  "c3a69b0d-4143-4896-8bd7-5e96bd7a8dd5",
+  "1da1382a-fd23-4f68-a21c-f8abad46c0d2",
+  "9762f1bf-11f5-4355-b38a-69c90cb2e640",
+  "e73dde97-250e-4b32-9149-3e867e346b07",
+  "76a85d0b-01c0-4c09-a58c-9c7b96d7daf7",
+  "b093e029-2e30-434c-8545-a050ccd2606e",
+  "30eacc1b-88b4-4dac-9ad4-cf4dc21c3301",
+  "1a191a9d-68ba-46fd-8002-b7f2507a1c1c",
+  "4d94db4e-e628-4e49-89e3-9f2bb28310b5",
+  "6760bac0-4836-4da6-9e59-1377bde0d238",
+  "3e86bdd7-76a8-4910-ac29-c7e42270ab70",
+  "55a2fdfe-82db-493e-8195-0dceb3fab7e4",
+  "ca468134-1759-41ac-bf74-218b10f3b09e",
+  "be03b427-c35e-4c50-9817-655c5af3d7c0",
+  "87925f52-c572-458c-9e7a-b894e3627222",
+  "983b757f-1b61-42bb-86b8-cf41407823dd",
+  "01026597-dfff-4b0e-83d0-99f1788e7bdf",
+  "6da56906-07c4-4c07-951b-d89d1cd0b205",
+  "5d76e00a-724a-432b-9195-c3b38dbb5907",
+  "09c51375-ae7b-408c-8903-308991a477d0",
+  "84ef90d4-d85f-4820-8206-b0e1928a45d0",
+  "3cafb94c-0dbb-42df-8dea-8cbf91229021",
+  "52f1324b-4a19-4a1f-925a-d29fb9afc94e",
+  "a4ff9195-a9ea-4f3a-9b27-4271cb30133b",
+  "db8eeef1-9410-4b1d-a7c0-7213c843bbf5",
+  "6383c062-cce2-4977-afc2-006eecdd5de6",
+  "acc18d01-b1bc-4866-aa62-6f6772964879",
+  "e488b9fe-e748-421e-aec6-7530558dead9",
+  "4feebd4f-4cd7-4229-bf79-682543e9ad22",
+  "926edf4a-abb4-44c3-ae87-b8245c19c59d",
+  "5bf890ab-1095-4ea8-be77-58f91c9987ca",
+  "70b67345-8dfe-4fad-b44e-bacd28a47275",
+  "c27a2f2e-5b88-4d13-aaf2-a0772b426228",
+  "2c82432f-18df-45a9-9037-ac4b00fbbf61",
+  "63de23da-a0ff-43f5-9e7c-d16676c334e5",
+  "9f0d1a23-5699-44c1-8dad-aa75d291135a",
+  "e8056a32-35c3-4320-90c3-d780bc32b731",
+  "4a382e9b-75e9-40b1-8bfa-10d3b76babb6",
+  "be70ff86-bee5-40b1-bea1-87ee644daea3"
+ ],
+ "created": [
+  {
+   "key": "child/PAP-19/0",
+   "identifier": "PAP-255",
+   "id": "716ee433-ca80-4aea-834e-e145a3329212",
+   "url": "https://linear.app/paperos/issue/PAP-255/tauri-desktop-scaffold-capabilities-and-plugins-appsdesktop-menu-tray",
+   "parent": "PAP-19",
+   "title": "Tauri desktop scaffold, capabilities and plugins (apps/desktop, menu, tray, dev scripts)",
+   "projectName": "Universal App Shell & Repo Template"
+  },
+  {
+   "key": "child/PAP-19/1",
+   "identifier": "PAP-256",
+   "id": "12dfd72e-b585-49b6-b872-61216c92a317",
+   "url": "https://linear.app/paperos/issue/PAP-256/desktop-ci-installers-for-linux-macos-and-windows-via-tauri-action",
+   "parent": "PAP-19",
+   "title": "Desktop CI installers for Linux, macOS and Windows via tauri-action with draft release",
+   "projectName": "Universal App Shell & Repo Template"
+  },
+  {
+   "key": "child/PAP-19/2",
+   "identifier": "PAP-257",
+   "id": "5ecbed36-7cd4-4d01-97cc-28f5ed1986ba",
+   "url": "https://linear.app/paperos/issue/PAP-257/desktop-updater-single-instance-guard-and-paperos-deep-links",
+   "parent": "PAP-19",
+   "title": "Desktop updater, single-instance guard and paperos:// deep links",
+   "projectName": "Universal App Shell & Repo Template"
+  },
+  {
+   "key": "child/PAP-20/3",
+   "identifier": "PAP-258",
+   "id": "93cd9928-23fc-4ff2-a1f4-e06ca8a5d402",
+   "url": "https://linear.app/paperos/issue/PAP-258/tauri-mobile-project-init-and-ci-builds-android-debug-apk-ios",
+   "parent": "PAP-20",
+   "title": "Tauri mobile project init and CI builds (Android debug APK, iOS simulator app)",
+   "projectName": "Universal App Shell & Repo Template"
+  },
+  {
+   "key": "child/PAP-20/4",
+   "identifier": "PAP-259",
+   "id": "46970cf1-f318-47e6-a37f-88418b45330b",
+   "url": "https://linear.app/paperos/issue/PAP-259/native-capabilities-shim-packagescorenative-with-web-fallbacks",
+   "parent": "PAP-20",
+   "title": "Native capabilities shim (packages/core/native) with web fallbacks",
+   "projectName": "Universal App Shell & Repo Template"
+  },
+  {
+   "key": "child/PAP-20/5",
+   "identifier": "PAP-260",
+   "id": "7647e085-6433-4c8f-bd83-d0e256a051f4",
+   "url": "https://linear.app/paperos/issue/PAP-260/mobile-plugin-wiring-safe-areas-and-device-proofs-camera-haptics",
+   "parent": "PAP-20",
+   "title": "Mobile plugin wiring, safe areas and device proofs (camera, haptics, biometrics, secure storage, share)",
+   "projectName": "Universal App Shell & Repo Template"
+  },
+  {
+   "key": "child/PAP-21/6",
+   "identifier": "PAP-261",
+   "id": "599703c2-90b3-4e49-97ae-f55b42a1ea44",
+   "url": "https://linear.app/paperos/issue/PAP-261/container-query-breakpoints-and-layout-hooks-from-the-device-matrix",
+   "parent": "PAP-21",
+   "title": "Container-query breakpoints and layout hooks from the device matrix",
+   "projectName": "Universal App Shell & Repo Template"
+  },
+  {
+   "key": "child/PAP-21/7",
+   "identifier": "PAP-262",
+   "id": "39cc01f4-a14b-4c7c-94f9-fa0f391f4b26",
+   "url": "https://linear.app/paperos/issue/PAP-262/tauri-windowmanager-detach-dock-list-displays-and-topology-hash",
+   "parent": "PAP-21",
+   "title": "Tauri WindowManager: detach, dock, list_displays and topology-hash persistence",
+   "projectName": "Universal App Shell & Repo Template"
+  },
+  {
+   "key": "child/PAP-21/8",
+   "identifier": "PAP-263",
+   "id": "9cf161ca-9e36-4dec-827d-cf98c5ae533d",
+   "url": "https://linear.app/paperos/issue/PAP-263/web-pop-out-fallback-panel-header-affordances-and-windows",
+   "parent": "PAP-21",
+   "title": "Web pop-out fallback, panel header affordances and windows documentation",
+   "projectName": "Universal App Shell & Repo Template"
+  },
+  {
+   "key": "child/PAP-28/9",
+   "identifier": "PAP-264",
+   "id": "e03764a3-17a9-4ea3-8313-e3312d0a502d",
+   "url": "https://linear.app/paperos/issue/PAP-264/module-manifest-contract-and-registry-packagescoremodules",
+   "parent": "PAP-28",
+   "title": "Module manifest contract and registry (packages/core/modules)",
+   "projectName": "Universal App Shell & Repo Template"
+  },
+  {
+   "key": "child/PAP-28/10",
+   "identifier": "PAP-265",
+   "id": "a557efa1-d756-4c3e-92d8-597b0d04403f",
+   "url": "https://linear.app/paperos/issue/PAP-265/module-integration-route-tree-spec-validator-permissions-jobs-and-per",
+   "parent": "PAP-28",
+   "title": "Module integration: route tree, spec validator, permissions, jobs and per-module migrations",
+   "projectName": "Universal App Shell & Repo Template"
+  },
+  {
+   "key": "child/PAP-28/11",
+   "identifier": "PAP-266",
+   "id": "52dcb1e2-2995-4b3a-9d78-3d1737b56b27",
+   "url": "https://linear.app/paperos/issue/PAP-266/paperos-create-without-tenant-module-toggles-and-the-ci-removal-matrix",
+   "parent": "PAP-28",
+   "title": "`paperos create --without`, tenant module toggles and the CI removal matrix",
+   "projectName": "Universal App Shell & Repo Template"
+  },
+  {
+   "key": "child/PAP-35/12",
+   "identifier": "PAP-267",
+   "id": "5ed9573f-1f5f-4f2f-b3d4-2b881f502cf4",
+   "url": "https://linear.app/paperos/issue/PAP-267/api-server-middleware-chain-and-error-mapping-appsapi-on-hono-4",
+   "parent": "PAP-35",
+   "title": "API server, middleware chain and error mapping (apps/api on Hono 4)",
+   "projectName": "Data Layer & Database"
+  },
+  {
+   "key": "child/PAP-35/13",
+   "identifier": "PAP-268",
+   "id": "d64bd8d8-488f-49a2-bad2-eae6b127ca7f",
+   "url": "https://linear.app/paperos/issue/PAP-268/api-contract-package-core-routers-and-typed-client-with-callas-test",
+   "parent": "PAP-35",
+   "title": "API contract package, core routers and typed client with callAs test utility",
+   "projectName": "Data Layer & Database"
+  },
+  {
+   "key": "child/PAP-35/14",
+   "identifier": "PAP-269",
+   "id": "4fd04c20-eaed-4930-91e7-7256b53acbf2",
+   "url": "https://linear.app/paperos/issue/PAP-269/openapi-docs-health-endpoints-and-staging-deploy-of-appsapi",
+   "parent": "PAP-35",
+   "title": "OpenAPI docs, health endpoints and staging deploy of apps/api",
+   "projectName": "Data Layer & Database"
+  },
+  {
+   "key": "child/PAP-36/15",
+   "identifier": "PAP-270",
+   "id": "b1fc9d99-b62e-40e1-93e7-fd887a49a223",
+   "url": "https://linear.app/paperos/issue/PAP-270/electric-service-deployment-and-tenant-scoped-shape-proxy-apisyncshape",
+   "parent": "PAP-36",
+   "title": "Electric service deployment and tenant-scoped shape proxy (/api/sync/shape)",
+   "projectName": "Data Layer & Database"
+  },
+  {
+   "key": "child/PAP-36/16",
+   "identifier": "PAP-271",
+   "id": "1c77a539-c1c4-4ac6-893f-02859f983c3c",
+   "url": "https://linear.app/paperos/issue/PAP-271/pglite-client-schema-generation-and-read-hooks-useshape-uselivequery",
+   "parent": "PAP-36",
+   "title": "PGlite client, schema generation and read hooks (useShape, useLiveQuery)",
+   "projectName": "Data Layer & Database"
+  },
+  {
+   "key": "child/PAP-36/17",
+   "identifier": "PAP-272",
+   "id": "434a118c-5502-4fe0-87f2-ba1cb6f012f8",
+   "url": "https://linear.app/paperos/issue/PAP-272/offline-write-outbox-replay-with-backoff-leader-election-and",
+   "parent": "PAP-36",
+   "title": "Offline write outbox, replay with backoff, leader election and SyncIndicator",
+   "projectName": "Data Layer & Database"
+  },
+  {
+   "key": "child/PAP-45/18",
+   "identifier": "PAP-273",
+   "id": "3dbc2c73-759a-426a-b8ad-c0e239314451",
+   "url": "https://linear.app/paperos/issue/PAP-273/forgejo-compose-stack-behind-caddy-with-hardened-appini-accounts-and",
+   "parent": "PAP-45",
+   "title": "Forgejo compose stack behind Caddy with hardened app.ini, accounts and org",
+   "projectName": "Version Control & Forge Independence"
+  },
+  {
+   "key": "child/PAP-45/19",
+   "identifier": "PAP-274",
+   "id": "ec2d4dcb-771b-4262-b937-4fdce7cac9b6",
+   "url": "https://linear.app/paperos/issue/PAP-274/forgejo-backups-with-restic-and-a-timed-restore-drill-into-a-scratch",
+   "parent": "PAP-45",
+   "title": "Forgejo backups with restic and a timed restore drill into a scratch stack",
+   "projectName": "Version Control & Forge Independence"
+  },
+  {
+   "key": "child/PAP-45/20",
+   "identifier": "PAP-275",
+   "id": "0cf2e4b5-93f1-4c46-9d10-0da8888dc9c1",
+   "url": "https://linear.app/paperos/issue/PAP-275/oidc-auth-source-preparation-upgrade-procedure-and-forgejo-runbook",
+   "parent": "PAP-45",
+   "title": "OIDC auth source preparation, upgrade procedure and Forgejo runbook",
+   "projectName": "Version Control & Forge Independence"
+  },
+  {
+   "key": "child/PAP-54/21",
+   "identifier": "PAP-276",
+   "id": "ae1cdb5d-a8f8-466d-83d2-21efda4b2c1d",
+   "url": "https://linear.app/paperos/issue/PAP-276/forge-client-orpc-forge-procedures-and-forgeread-permission-checks",
+   "parent": "PAP-54",
+   "title": "Forge client, oRPC forge.* procedures and forge.read permission checks",
+   "projectName": "Version Control & Forge Independence"
+  },
+  {
+   "key": "child/PAP-54/22",
+   "identifier": "PAP-277",
+   "id": "36a6166d-5498-4da7-b2b6-2847d6e1e4c1",
+   "url": "https://linear.app/paperos/issue/PAP-277/repo-list-file-tree-file-view-and-commit-list-pages-with-specs",
+   "parent": "PAP-54",
+   "title": "Repo list, file tree, file view and commit-list pages with specs",
+   "projectName": "Version Control & Forge Independence"
+  },
+  {
+   "key": "child/PAP-54/23",
+   "identifier": "PAP-278",
+   "id": "543adec6-b71b-44b2-8b74-9faa36426738",
+   "url": "https://linear.app/paperos/issue/PAP-278/commit-diff-view-pull-request-pages-and-linear-trailer-links",
+   "parent": "PAP-54",
+   "title": "Commit diff view, pull request pages and Linear trailer links",
+   "projectName": "Version Control & Forge Independence"
+  },
+  {
+   "key": "gap/data-layer/filter-grammar",
+   "identifier": "PAP-279",
+   "id": "98cd2929-525b-4866-995c-54926ffc6c08",
+   "url": "https://linear.app/paperos/issue/PAP-279/specify-the-shared-filter-and-condition-grammar-packagescorefilter-one",
+   "parent": null,
+   "title": "Specify the shared filter and condition grammar (`packages/core/filter`): one Zod FilterTree with SQL and in-memory evaluators",
+   "projectName": "Data Layer & Database"
+  }
+ ],
+ "relations": [
+  "f1bab024-5557-4ccf-8de6-c934fc8f6fc2",
+  "25d707fd-deee-43a3-bca6-a2c759ac7461",
+  "94ee7a05-9668-4b6e-b0a4-8f21c7c74b59",
+  "91d95702-9680-4527-b2f7-1409f927870f",
+  "ade6d5e4-b5af-442b-9663-c70d1d46dca2",
+  "3659e677-0369-49b4-9e5f-df64d448c8e7",
+  "cab64896-57bf-47fb-a5b3-fa8c8ba70c12",
+  "6ec35a0d-83a2-4fd0-a508-66fb6cdf9517",
+  "91bbba32-d498-4caa-af55-38abb10f3f8d",
+  "f0ae4071-74c1-4cc9-9eee-a965b64a9521",
+  "5da89b87-519f-43a7-9dc8-63207a6dc172",
+  "b7e4ba39-bebc-4add-86da-8178cbdc78b1",
+  "2c30ca2b-466a-43b2-b326-1030b37a836e",
+  "9e8d4908-3841-4b9d-8628-6bcf5e4ae92b",
+  "ee0f4f05-b557-4088-b8c1-a8f794b4e7af",
+  "038cfe48-ffbf-4858-a6cb-b2f3b4e60d84",
+  "69a8a6a6-049f-42d1-ae91-d8e8927ee66d",
+  "b4915426-05e3-4d2a-b1cb-8da2278510a0",
+  "273c62ac-4591-44e6-b3df-03551ef8d505",
+  "65e66580-03d4-4d8a-9a3b-6f8f382cf9f4",
+  "6a6f1dc9-6d95-40b4-9e98-576e216c33bf",
+  "077f34ae-a827-499e-89fe-a3ba30300f88",
+  "755dc00f-5e0e-4387-968e-2d6cad6382bb",
+  "ad680101-c1ca-4ada-8d68-8a5384237ed3",
+  "86c33bca-6e5e-4679-a229-c84384b28ae7",
+  "06e57951-8097-4b00-b9ae-38a8ad58d5c2",
+  "a62ecd4b-38de-44d8-9c27-ee7c0fa111dc",
+  "a8e61819-fdcd-48d4-94d8-8a741136dcef",
+  "73662e8f-a843-4943-95f3-01e8ea86c331",
+  "739fb4ef-ae91-475f-a519-65f3899607c8",
+  "7925cef3-b8ba-4a97-b74a-6d1263207d11",
+  "007299ff-3623-4d90-b7ff-bad27f838a76",
+  "e9cf0593-d4aa-4432-9cdd-b6a2609414d8",
+  "7e8faf6d-5852-4b60-87eb-41932a0b2538",
+  "6d4bf72c-b0eb-4a35-8c01-716ff8645a79",
+  "01ac79ea-3753-43e9-9106-a069aa0dd236",
+  "be253f94-5673-43b1-8a1e-436d701f7a2c",
+  "9efd6ca8-42bc-4f99-a19a-f4c31a59b0e0",
+  "9ebc6c89-8ef5-4a4f-a00b-2be17fefc6d3"
+ ],
+ "projectsUpdated": [
+  "9358cbfb-37a6-4636-be1d-a055e9e39ba9",
+  "64e49138-b979-4650-b5f9-1987134231f8",
+  "2a6f5b81-95bd-4d6f-9ff4-e74aa3ee2c7c"
+ ],
+ "relationPairs": [
+  {
+   "pair": [
+    "PAP-25",
+    "PAP-96"
+   ],
+   "id": "f1bab024-5557-4ccf-8de6-c934fc8f6fc2"
+  },
+  {
+   "pair": [
+    "PAP-120",
+    "PAP-29"
+   ],
+   "id": "25d707fd-deee-43a3-bca6-a2c759ac7461"
+  },
+  {
+   "pair": [
+    "PAP-28",
+    "PAP-29"
+   ],
+   "id": "94ee7a05-9668-4b6e-b0a4-8f21c7c74b59"
+  },
+  {
+   "pair": [
+    "PAP-35",
+    "PAP-129"
+   ],
+   "id": "91d95702-9680-4527-b2f7-1409f927870f"
+  },
+  {
+   "pair": [
+    "PAP-32",
+    "PAP-129"
+   ],
+   "id": "ade6d5e4-b5af-442b-9663-c70d1d46dca2"
+  },
+  {
+   "pair": [
+    "PAP-34",
+    "PAP-36"
+   ],
+   "id": "3659e677-0369-49b4-9e5f-df64d448c8e7"
+  },
+  {
+   "pair": [
+    "PAP-30",
+    "PAP-36"
+   ],
+   "id": "cab64896-57bf-47fb-a5b3-fa8c8ba70c12"
+  },
+  {
+   "pair": [
+    "PAP-34",
+    "PAP-39"
+   ],
+   "id": "6ec35a0d-83a2-4fd0-a508-66fb6cdf9517"
+  },
+  {
+   "pair": [
+    "PAP-35",
+    "PAP-39"
+   ],
+   "id": "91bbba32-d498-4caa-af55-38abb10f3f8d"
+  },
+  {
+   "pair": [
+    "PAP-59",
+    "PAP-39"
+   ],
+   "id": "f0ae4071-74c1-4cc9-9eee-a965b64a9521"
+  },
+  {
+   "pair": [
+    "PAP-30",
+    "PAP-40"
+   ],
+   "id": "5da89b87-519f-43a7-9dc8-63207a6dc172"
+  },
+  {
+   "pair": [
+    "PAP-15",
+    "PAP-18"
+   ],
+   "id": "b7e4ba39-bebc-4add-86da-8178cbdc78b1"
+  },
+  {
+   "pair": [
+    "PAP-14",
+    "PAP-20"
+   ],
+   "id": "2c30ca2b-466a-43b2-b326-1030b37a836e"
+  },
+  {
+   "pair": [
+    "PAP-17",
+    "PAP-20"
+   ],
+   "id": "9e8d4908-3841-4b9d-8628-6bcf5e4ae92b"
+  },
+  {
+   "pair": [
+    "PAP-16",
+    "PAP-21"
+   ],
+   "id": "ee0f4f05-b557-4088-b8c1-a8f794b4e7af"
+  },
+  {
+   "pair": [
+    "PAP-33",
+    "PAP-205"
+   ],
+   "id": "038cfe48-ffbf-4858-a6cb-b2f3b4e60d84"
+  },
+  {
+   "pair": [
+    "PAP-255",
+    "PAP-256"
+   ],
+   "id": "69a8a6a6-049f-42d1-ae91-d8e8927ee66d"
+  },
+  {
+   "pair": [
+    "PAP-256",
+    "PAP-257"
+   ],
+   "id": "b4915426-05e3-4d2a-b1cb-8da2278510a0"
+  },
+  {
+   "pair": [
+    "PAP-258",
+    "PAP-259"
+   ],
+   "id": "273c62ac-4591-44e6-b3df-03551ef8d505"
+  },
+  {
+   "pair": [
+    "PAP-259",
+    "PAP-260"
+   ],
+   "id": "65e66580-03d4-4d8a-9a3b-6f8f382cf9f4"
+  },
+  {
+   "pair": [
+    "PAP-261",
+    "PAP-262"
+   ],
+   "id": "6a6f1dc9-6d95-40b4-9e98-576e216c33bf"
+  },
+  {
+   "pair": [
+    "PAP-262",
+    "PAP-263"
+   ],
+   "id": "077f34ae-a827-499e-89fe-a3ba30300f88"
+  },
+  {
+   "pair": [
+    "PAP-264",
+    "PAP-265"
+   ],
+   "id": "755dc00f-5e0e-4387-968e-2d6cad6382bb"
+  },
+  {
+   "pair": [
+    "PAP-265",
+    "PAP-266"
+   ],
+   "id": "ad680101-c1ca-4ada-8d68-8a5384237ed3"
+  },
+  {
+   "pair": [
+    "PAP-267",
+    "PAP-268"
+   ],
+   "id": "86c33bca-6e5e-4679-a229-c84384b28ae7"
+  },
+  {
+   "pair": [
+    "PAP-268",
+    "PAP-269"
+   ],
+   "id": "06e57951-8097-4b00-b9ae-38a8ad58d5c2"
+  },
+  {
+   "pair": [
+    "PAP-270",
+    "PAP-271"
+   ],
+   "id": "a62ecd4b-38de-44d8-9c27-ee7c0fa111dc"
+  },
+  {
+   "pair": [
+    "PAP-271",
+    "PAP-272"
+   ],
+   "id": "a8e61819-fdcd-48d4-94d8-8a741136dcef"
+  },
+  {
+   "pair": [
+    "PAP-273",
+    "PAP-274"
+   ],
+   "id": "73662e8f-a843-4943-95f3-01e8ea86c331"
+  },
+  {
+   "pair": [
+    "PAP-274",
+    "PAP-275"
+   ],
+   "id": "739fb4ef-ae91-475f-a519-65f3899607c8"
+  },
+  {
+   "pair": [
+    "PAP-276",
+    "PAP-277"
+   ],
+   "id": "7925cef3-b8ba-4a97-b74a-6d1263207d11"
+  },
+  {
+   "pair": [
+    "PAP-277",
+    "PAP-278"
+   ],
+   "id": "007299ff-3623-4d90-b7ff-bad27f838a76"
+  },
+  {
+   "pair": [
+    "PAP-279",
+    "PAP-59"
+   ],
+   "id": "e9cf0593-d4aa-4432-9cdd-b6a2609414d8"
+  },
+  {
+   "pair": [
+    "PAP-279",
+    "PAP-161"
+   ],
+   "id": "7e8faf6d-5852-4b60-87eb-41932a0b2538"
+  },
+  {
+   "pair": [
+    "PAP-279",
+    "PAP-119"
+   ],
+   "id": "6d4bf72c-b0eb-4a35-8c01-716ff8645a79"
+  },
+  {
+   "pair": [
+    "PAP-279",
+    "PAP-166"
+   ],
+   "id": "01ac79ea-3753-43e9-9106-a069aa0dd236"
+  },
+  {
+   "pair": [
+    "PAP-279",
+    "PAP-174"
+   ],
+   "id": "be253f94-5673-43b1-8a1e-436d701f7a2c"
+  },
+  {
+   "pair": [
+    "PAP-279",
+    "PAP-195"
+   ],
+   "id": "9efd6ca8-42bc-4f99-a19a-f4c31a59b0e0"
+  },
+  {
+   "pair": [
+    "PAP-13",
+    "PAP-279"
+   ],
+   "id": "9ebc6c89-8ef5-4a4f-a00b-2be17fefc6d3"
+  }
+ ]
+}

@@ -1,0 +1,2189 @@
+{
+ "team": {
+  "key": "PAP",
+  "id": "0ee78894-89f8-4376-a829-f8685dbc1868",
+  "name": "PaperOS"
+ },
+ "states": {
+  "Todo": {
+   "id": "f3cf0bbf-e4a5-4593-9148-f8ec6ea2d575",
+   "created": false
+  },
+  "Done": {
+   "id": "cd5b3745-c3c2-440f-a04c-15de771467ba",
+   "created": false
+  },
+  "Duplicate": {
+   "id": "b9c3b711-0ffb-4dd3-acf5-4082e18dca87",
+   "created": false
+  },
+  "Canceled": {
+   "id": "51c3888d-92a0-44bf-a94f-74ec4c3a0766",
+   "created": false
+  },
+  "In Progress": {
+   "id": "0efe97be-429e-42b9-8c63-213a89f06914",
+   "created": false
+  },
+  "Backlog": {
+   "id": "0aed245d-f842-423f-bb5c-246061bf9b1b",
+   "created": false
+  },
+  "Ready for Claude": {
+   "id": "9f24c1d6-b544-4d67-be55-6a1da5323ee2",
+   "created": true
+  },
+  "In Review": {
+   "id": "38a800c6-7918-4032-9e06-61cbd8adefd0",
+   "created": true
+  },
+  "Needs Justin": {
+   "id": "b8037cb1-0718-412f-b913-82b5e4f19555",
+   "created": true
+  }
+ },
+ "labels": {
+  "Improvement": {
+   "id": "f72aad2b-dcac-4213-9243-587e355e3122",
+   "created": false
+  },
+  "Feature": {
+   "id": "aeff2a9a-e768-41d8-9253-c9f0e1f0068e",
+   "created": false
+  },
+  "Bug": {
+   "id": "1b2a2665-6f6a-45c4-a5ce-ceaf978966e2",
+   "created": false
+  },
+  "Phase/P0": {
+   "id": "7c4369ee-8fca-4ed1-b4c7-4a0ecae0324e",
+   "created": true
+  },
+  "Phase/P1": {
+   "id": "09af3067-2c65-4ab5-a915-f553a4931ec1",
+   "created": true
+  },
+  "Phase/P2": {
+   "id": "7fb0186c-e615-4588-a9d5-7f1031791e82",
+   "created": true
+  },
+  "Type/Research": {
+   "id": "6fbe3c0c-2641-44ae-a660-863a633297ac",
+   "created": true
+  },
+  "Type/Spec": {
+   "id": "c08922b7-13bb-4a44-ac15-14943d22c8d1",
+   "created": true
+  },
+  "Type/Build": {
+   "id": "562d6a37-6bd0-4680-a1a6-6bc55e642d21",
+   "created": true
+  },
+  "Type/Review": {
+   "id": "827147a3-27e2-4225-a4ca-d6a1b4b7d5a8",
+   "created": true
+  },
+  "Type/Infra": {
+   "id": "9b3bfd13-b0ab-415e-aad7-e8d351c5750e",
+   "created": true
+  },
+  "Type/Docs": {
+   "id": "b03b6d66-4bad-4021-9f20-4f39df1d290a",
+   "created": true
+  },
+  "Surface/Customer": {
+   "id": "9526e961-186c-4ebb-8c10-102d588a1bb6",
+   "created": true
+  },
+  "Surface/Staff": {
+   "id": "d043f950-f433-45c4-9bfe-65b9813369f8",
+   "created": true
+  },
+  "Surface/Developer": {
+   "id": "ff4b5d8d-f236-4d15-a75a-0eacc09e988e",
+   "created": true
+  },
+  "Surface/Agent": {
+   "id": "bb6ce0ab-cc34-4fc2-9973-ade330d2af8f",
+   "created": true
+  }
+ },
+ "labelGroups": {
+  "Phase": {
+   "id": "bd5d8fb4-f9b8-4c2b-ad55-291f515c192c",
+   "created": true
+  },
+  "Type": {
+   "id": "1f5e6be9-18f8-4777-a9e7-ee2ab8aec9ea",
+   "created": true
+  },
+  "Surface": {
+   "id": "086b098d-a94f-4bae-815c-3e6d56d514dc",
+   "created": true
+  }
+ },
+ "projects": {
+  "app-shell": {
+   "id": "9358cbfb-37a6-4636-be1d-a055e9e39ba9",
+   "name": "Universal App Shell & Repo Template",
+   "url": "https://linear.app/paperos/project/universal-app-shell-and-repo-template-2a1a63307c48",
+   "phase": "P0",
+   "issueCount": 17
+  },
+  "data-layer": {
+   "id": "64e49138-b979-4650-b5f9-1987134231f8",
+   "name": "Data Layer & Database",
+   "url": "https://linear.app/paperos/project/data-layer-and-database-1eaa26bb2fa7",
+   "phase": "P0",
+   "issueCount": 14
+  },
+  "forge": {
+   "id": "2a6f5b81-95bd-4d6f-9ff4-e74aa3ee2c7c",
+   "name": "Version Control & Forge Independence",
+   "url": "https://linear.app/paperos/project/version-control-and-forge-independence-b51cbdae5753",
+   "phase": "P0",
+   "issueCount": 11
+  },
+  "identity": {
+   "id": "b590e463-5980-47f8-9d74-889addb9434c",
+   "name": "Identity, Roles & Audiences",
+   "url": "https://linear.app/paperos/project/identity-roles-and-audiences-f5b42bf49c6f",
+   "phase": "P0",
+   "issueCount": 11
+  },
+  "design-system": {
+   "id": "0e067722-38f0-4e4c-88a5-54158acc56fd",
+   "name": "Design System",
+   "url": "https://linear.app/paperos/project/design-system-b50d53802313",
+   "phase": "P0",
+   "issueCount": 12
+  },
+  "quality": {
+   "id": "32967d75-af65-43a0-8dc9-b906f28ed2b4",
+   "name": "Quality Pipeline",
+   "url": "https://linear.app/paperos/project/quality-pipeline-bafa1891cb31",
+   "phase": "P0",
+   "issueCount": 13
+  },
+  "pm-linear": {
+   "id": "62374841-346c-46fe-9d20-5d65252227f2",
+   "name": "Project Management & Claude Pipeline",
+   "url": "https://linear.app/paperos/project/project-management-and-claude-pipeline-cf56ba15c065",
+   "phase": "P0",
+   "issueCount": 12
+  },
+  "agents": {
+   "id": "c7b318e7-840a-4aca-99dd-2b5aed3fc26b",
+   "name": "Agent Characters & Orgs",
+   "url": "https://linear.app/paperos/project/agent-characters-and-orgs-0e471ec523e4",
+   "phase": "P0",
+   "issueCount": 11
+  },
+  "spec-builder": {
+   "id": "2751f85d-339c-4b19-868d-eae91b31334c",
+   "name": "Spec Builder",
+   "url": "https://linear.app/paperos/project/spec-builder-4271fae6c995",
+   "phase": "P1",
+   "issueCount": 13
+  },
+  "collab": {
+   "id": "0a92662d-a088-42ef-b847-bf22b63582fc",
+   "name": "In-App Collaboration & Knowledge",
+   "url": "https://linear.app/paperos/project/in-app-collaboration-and-knowledge-1c66a61637ca",
+   "phase": "P1",
+   "issueCount": 12
+  },
+  "realtime": {
+   "id": "fa82de86-f88a-41d0-953f-a6253c2460fd",
+   "name": "Multiplayer & Realtime",
+   "url": "https://linear.app/paperos/project/multiplayer-and-realtime-256a6078be1e",
+   "phase": "P1",
+   "issueCount": 11
+  },
+  "input": {
+   "id": "bcfb9178-60fb-48f1-9c91-3c2d2d4aa080",
+   "name": "Multi-Input Control & Accessibility",
+   "url": "https://linear.app/paperos/project/multi-input-control-and-accessibility-59ffd5906c81",
+   "phase": "P1",
+   "issueCount": 11
+  },
+  "tables": {
+   "id": "cb945472-3eb1-4669-9883-0e49008a2b68",
+   "name": "Table & Views Engine",
+   "url": "https://linear.app/paperos/project/table-and-views-engine-85325cbcfbf2",
+   "phase": "P1",
+   "issueCount": 14
+  },
+  "business-core": {
+   "id": "789f25c0-d006-4f6c-bd12-7f21866d8bc0",
+   "name": "Business Core: Payments, Finance & Payroll",
+   "url": "https://linear.app/paperos/project/business-core-payments-finance-and-payroll-4edd57501af9",
+   "phase": "P2",
+   "issueCount": 12
+  },
+  "growth": {
+   "id": "9eba0335-55a2-42e4-af3f-21d61516b790",
+   "name": "Growth: Marketing, Outreach & CRM",
+   "url": "https://linear.app/paperos/project/growth-marketing-outreach-and-crm-5de8143467be",
+   "phase": "P2",
+   "issueCount": 11
+  },
+  "migration": {
+   "id": "89399ed0-8543-45f0-b824-b91916874b68",
+   "name": "Migration & Import Tools",
+   "url": "https://linear.app/paperos/project/migration-and-import-tools-8736648f9a4e",
+   "phase": "P2",
+   "issueCount": 11
+  },
+  "libraries": {
+   "id": "8cf0f6a7-ccd4-4d77-a190-783a80cd1131",
+   "name": "Library Discovery & Integration",
+   "url": "https://linear.app/paperos/project/library-discovery-and-integration-cad7e8dc6954",
+   "phase": "P0",
+   "issueCount": 10
+  }
+ },
+ "milestones": {
+  "app-shell/Template scaffolds and runs on web": {
+   "id": "c48b2fa3-aebc-4520-877d-7f301322bcc9"
+  },
+  "app-shell/Desktop and mobile shells build": {
+   "id": "d701b501-bd3e-4bac-8ae8-ab50ed28d67b"
+  },
+  "app-shell/Multi-monitor and PWA polish": {
+   "id": "b0c6dcc4-327d-4a5b-a0c2-5f3a31dd90cc"
+  },
+  "data-layer/Postgres + Drizzle baseline": {
+   "id": "fe9ae139-9a2d-452b-a6a7-eb4ae0228659"
+  },
+  "data-layer/Local-first sync working": {
+   "id": "ff634ac4-d62f-474c-abad-0b8f5842d5d9"
+  },
+  "data-layer/Tenant-safe and observable": {
+   "id": "479794f3-2f1c-4a51-ad36-3c90acff7bf1"
+  },
+  "forge/Forgejo live and mirrored": {
+   "id": "0bdc070f-763c-492b-8bcb-1807d8c7e018"
+  },
+  "forge/CI runs on both forges": {
+   "id": "5d41eca0-8627-4075-a997-dc5f97fc0344"
+  },
+  "forge/Disaster recovery proven": {
+   "id": "e6bcf643-d4a6-4267-96e3-4b7aa9755bc8"
+  },
+  "identity/Auth works across web and desktop": {
+   "id": "47fcf101-11ed-4a15-98dd-e0a6345f14b1"
+  },
+  "identity/Roles and audiences enforced end to end": {
+   "id": "320fbd3e-2386-4394-b949-47fa7728c50e"
+  },
+  "identity/Agent principals and enterprise": {
+   "id": "37ed49e7-3ad4-47d7-8cc1-41a00ebca0f7"
+  },
+  "design-system/Tokens and primitives": {
+   "id": "5ed2fb29-7d3d-43f1-b8c5-f4802973fa33"
+  },
+  "design-system/Component library covers app shell needs": {
+   "id": "c1c2ad0b-24ef-44ca-b308-4580eb82c0cd"
+  },
+  "design-system/Themable per tenant with docs": {
+   "id": "7d440138-220d-4cfe-880e-2a730b9b48b8"
+  },
+  "quality/Gates 1 and 2 on every PR": {
+   "id": "dca11ba1-d758-4ad9-a1cb-c7866cc2eb8c"
+  },
+  "quality/Visual and video gates": {
+   "id": "e8e22ff1-a540-4b28-95e7-e4f7b65f02ba"
+  },
+  "quality/Edge-case hunting and release trains": {
+   "id": "bb66381f-7ab8-49c9-9d16-17228415b9a7"
+  },
+  "pm-linear/Linear configured for the pipeline": {
+   "id": "373b00ca-f555-4bed-b93b-60ade699d328"
+  },
+  "pm-linear/Orchestrator claims and ships issues": {
+   "id": "e4d2e930-eff5-4744-a638-a95490ad8619"
+  },
+  "pm-linear/PM module syncs both ways": {
+   "id": "4591e6dc-11a0-49f3-b2bf-5d644f17f7b9"
+  },
+  "agents/Roster defined and installed": {
+   "id": "a05f90f4-e98e-4de5-a04c-0fce85eb2d79"
+  },
+  "agents/Sub-agents, skills and evals live": {
+   "id": "ba23187b-76e7-4efb-8d46-c1cbd5012159"
+  },
+  "agents/Agent org visible in app": {
+   "id": "85c45cf7-cbc4-4125-9faf-6c570871ec61"
+  },
+  "spec-builder/Spec schema and validator": {
+   "id": "3ca6223a-d2d4-497d-93e7-960c77943e70"
+  },
+  "spec-builder/Codegen and conformance tests": {
+   "id": "1d3f21ec-ea83-4f8a-9ff5-af9848a1cabc"
+  },
+  "spec-builder/Spec editor UI": {
+   "id": "1482f0e8-cb83-4590-b821-5a2eb2313615"
+  },
+  "collab/Docs and prompt log stores": {
+   "id": "117ac846-7963-4a17-ae47-316e46a45f81"
+  },
+  "collab/Comments and canvas": {
+   "id": "bb928bce-f8e1-40b9-b932-5fb8e5c9c356"
+  },
+  "collab/Knowledge surfaced everywhere": {
+   "id": "bc4252fd-3eda-4b80-bf63-778b5a82c43b"
+  },
+  "realtime/Yjs server and presence": {
+   "id": "52ad874e-01d1-4bcf-a074-69739f9bd665"
+  },
+  "realtime/Record sync and conflict UX": {
+   "id": "931f3d71-b7b3-40d4-9782-e12495bccc46"
+  },
+  "realtime/Scale and offline tested": {
+   "id": "e9b0246b-94ca-4ee3-80ac-a961cb183051"
+  },
+  "input/Keyboard and command system": {
+   "id": "dcd4d6c6-3046-467b-a985-dcab6f6523d7"
+  },
+  "input/Touch, pen, gamepad": {
+   "id": "6484db1e-f328-46a9-b396-f87f6aa69cc3"
+  },
+  "input/Voice and accessibility certification": {
+   "id": "02dc7876-e7d7-4a38-a0d5-21dc42cd75dd"
+  },
+  "tables/Grid with sort, filter, group": {
+   "id": "06d9484b-ddc1-466a-bd89-a495a8fe2ba7"
+  },
+  "tables/All view types": {
+   "id": "5a6ecd45-07b7-40e2-80d5-fbbba5c9c0f8"
+  },
+  "tables/View sharing, formulas, dashboards": {
+   "id": "5cabe71a-d4d3-48ab-8d28-b932bd22d1f6"
+  },
+  "business-core/Stripe billing live": {
+   "id": "6f96fc82-91c3-493e-92b3-9f1757975d26"
+  },
+  "business-core/Ledger and reports": {
+   "id": "74770a0b-fe65-42b9-8146-5283d7c8381d"
+  },
+  "business-core/Payroll adapter and cash dashboard": {
+   "id": "dc747ffb-e48a-4738-9d94-f7a19adc7de8"
+  },
+  "growth/CRM core": {
+   "id": "36cd250f-6366-42cc-b85e-499bf122bd3d"
+  },
+  "growth/Campaigns and social": {
+   "id": "47037b80-d6c0-476d-8304-ea2cd62a5fce"
+  },
+  "growth/Acquisition analytics": {
+   "id": "21d3232e-94e0-4b23-8529-184da5128996"
+  },
+  "migration/Import framework and CSV": {
+   "id": "c2f0f5d3-fa3d-45ac-b343-3686b7b9aee2"
+  },
+  "migration/Airtable, Notion, ClickUp importers": {
+   "id": "fbd5d395-371e-4d87-8aaf-b779a33d6a6f"
+  },
+  "migration/Business migrations": {
+   "id": "561de576-b7e8-4c91-9057-e80c7ad85bda"
+  },
+  "libraries/Evaluation process": {
+   "id": "25428773-7513-4fbf-b5c4-32b76f4cbade"
+  },
+  "libraries/Core adoptions decided": {
+   "id": "28e3af7c-69ad-4c1b-aed0-91df2fba56e1"
+  },
+  "libraries/Registry live": {
+   "id": "a805645c-0bbe-4bfd-a688-7ce4f8140aed"
+  }
+ },
+ "issues": {
+  "app-shell/monorepo-scaffold": {
+   "id": "7319bc5e-bf85-4cdb-a203-2dc31513a688",
+   "identifier": "PAP-13",
+   "url": "https://linear.app/paperos/issue/PAP-13/scaffold-paperos-template-monorepo-with-pnpm-turborepo-strict",
+   "title": "Scaffold paperos-template monorepo with pnpm, Turborepo, strict TypeScript and a Vite React 19 web app",
+   "readyNow": true
+  },
+  "app-shell/device-matrix-research": {
+   "id": "589bb21e-cd11-427e-b18e-ceb94b6ce534",
+   "identifier": "PAP-14",
+   "url": "https://linear.app/paperos/issue/PAP-14/research-and-document-the-target-device-matrix-phone-tablet-laptop",
+   "title": "Research and document the target device matrix (phone, tablet, laptop, desktop, TV/kiosk, foldable) with breakpoints and test devices",
+   "readyNow": true
+  },
+  "app-shell/gh-pages-demo": {
+   "id": "1aa0d8a5-3bbe-4d68-ba40-aa5c14390f1f",
+   "identifier": "PAP-15",
+   "url": "https://linear.app/paperos/issue/PAP-15/set-up-github-pages-demo-deploy-for-every-app-with-per-pr-preview-urls",
+   "title": "Set up GitHub Pages demo deploy for every app with per-PR preview URLs",
+   "readyNow": false
+  },
+  "app-shell/router-layouts": {
+   "id": "c3a69b0d-4143-4896-8bd7-5e96bd7a8dd5",
+   "identifier": "PAP-16",
+   "url": "https://linear.app/paperos/issue/PAP-16/implement-file-based-router-with-layout-slots-nav-sidebar-inspector",
+   "title": "Implement file-based router with layout slots (nav, sidebar, inspector, command bar) driven by page specs",
+   "readyNow": false
+  },
+  "app-shell/env-config": {
+   "id": "1da1382a-fd23-4f68-a21c-f8abad46c0d2",
+   "identifier": "PAP-17",
+   "url": "https://linear.app/paperos/issue/PAP-17/define-typed-environment-and-config-layer-with-per-target-secret",
+   "title": "Define typed environment and config layer with per-target secret storage (web, desktop keychain, mobile secure storage)",
+   "readyNow": false
+  },
+  "app-shell/pwa": {
+   "id": "9762f1bf-11f5-4355-b38a-69c90cb2e640",
+   "identifier": "PAP-18",
+   "url": "https://linear.app/paperos/issue/PAP-18/ship-installable-pwa-manifest-service-worker-and-offline-app-shell",
+   "title": "Ship installable PWA manifest, service worker and offline app shell",
+   "readyNow": false
+  },
+  "app-shell/tauri-desktop": {
+   "id": "e73dde97-250e-4b32-9149-3e867e346b07",
+   "identifier": "PAP-19",
+   "url": "https://linear.app/paperos/issue/PAP-19/add-tauri-2-desktop-target-for-linux-macos-and-windows-sharing-the-web",
+   "title": "Add Tauri 2 desktop target for Linux, macOS and Windows sharing the web bundle",
+   "readyNow": false
+  },
+  "app-shell/tauri-mobile": {
+   "id": "76a85d0b-01c0-4c09-a58c-9c7b96d7daf7",
+   "identifier": "PAP-20",
+   "url": "https://linear.app/paperos/issue/PAP-20/add-tauri-2-mobile-targets-ios-android-with-platform-capability-shims",
+   "title": "Add Tauri 2 mobile targets (iOS, Android) with platform capability shims",
+   "readyNow": false
+  },
+  "app-shell/breakpoints-windows": {
+   "id": "b093e029-2e30-434c-8545-a050ccd2606e",
+   "identifier": "PAP-21",
+   "url": "https://linear.app/paperos/issue/PAP-21/build-responsive-breakpoint-matrix-and-multi-monitor-window-manager",
+   "title": "Build responsive breakpoint matrix and multi-monitor window manager that detaches panels into OS windows",
+   "readyNow": false
+  },
+  "app-shell/create-cli": {
+   "id": "30eacc1b-88b4-4dac-9ad4-cf4dc21c3301",
+   "identifier": "PAP-22",
+   "url": "https://linear.app/paperos/issue/PAP-22/write-paperos-create-app-cli-that-clones-the-template-into-an-imagine",
+   "title": "Write `paperos create <app>` CLI that clones the template into an imagine-os repo and wires Forgejo mirror, CI, Pages and a Linear project",
+   "readyNow": false
+  },
+  "app-shell/linux-kiosk": {
+   "id": "1a191a9d-68ba-46fd-8002-b7f2507a1c1c",
+   "identifier": "PAP-23",
+   "url": "https://linear.app/paperos/issue/PAP-23/support-linux-kiosk-and-parallel-browser-mode-launching-synced-windows",
+   "title": "Support Linux kiosk and parallel-browser mode launching synced windows across displays from one CLI flag",
+   "readyNow": false
+  },
+  "app-shell/template-docs": {
+   "id": "4d94db4e-e628-4e49-89e3-9f2bb28310b5",
+   "identifier": "PAP-24",
+   "url": "https://linear.app/paperos/issue/PAP-24/write-the-repo-template-guide-folder-conventions-how-an-agent-adds-a",
+   "title": "Write the repo template guide: folder conventions, how an agent adds a page, how to ship each target",
+   "readyNow": false
+  },
+  "app-shell/vps-coolify-bootstrap": {
+   "id": "6760bac0-4836-4da6-9e59-1377bde0d238",
+   "identifier": "PAP-25",
+   "url": "https://linear.app/paperos/issue/PAP-25/provision-the-hetzner-vps-with-coolify-caddy-dns-for-the-paperos",
+   "title": "Provision the Hetzner VPS with Coolify, Caddy, DNS for the PaperOS domain, object storage, sops keys and the paperos-infra repo",
+   "readyNow": true
+  },
+  "app-shell/app-deploy-pipeline": {
+   "id": "3e86bdd7-76a8-4910-ac29-c7e42270ab70",
+   "identifier": "PAP-26",
+   "url": "https://linear.app/paperos/issue/PAP-26/build-the-app-deploy-pipeline-docker-images-for-appsweb-and-appsapi",
+   "title": "Build the app deploy pipeline: Docker images for apps/web and apps/api, staging on merge to main, production on tag, per-PR previews and rollback via Coolify",
+   "readyNow": false
+  },
+  "app-shell/i18n-l10n": {
+   "id": "55a2fdfe-82db-493e-8195-0dceb3fab7e4",
+   "identifier": "PAP-27",
+   "url": "https://linear.app/paperos/issue/PAP-27/add-internationalisation-and-localisation-icu-message-catalogs-locale",
+   "title": "Add internationalisation and localisation: ICU message catalogs, locale negotiation, Intl formatting helpers, RTL layout flip, pseudo-locale testing and an agent translation skill",
+   "readyNow": false
+  },
+  "app-shell/feature-modules": {
+   "id": "ca468134-1759-41ac-bf74-218b10f3b09e",
+   "identifier": "PAP-28",
+   "url": "https://linear.app/paperos/issue/PAP-28/make-every-platform-capability-a-removable-module-module-manifests",
+   "title": "Make every platform capability a removable module: module manifests, `modules:` in app.spec.yaml, `paperos create --without`, per-tenant module toggles and dead-code checks",
+   "readyNow": false
+  },
+  "app-shell/new-app-drill": {
+   "id": "be03b427-c35e-4c50-9817-655c5af3d7c0",
+   "identifier": "PAP-29",
+   "url": "https://linear.app/paperos/issue/PAP-29/run-the-blank-screen-to-running-app-drill-time-paperos-create-through",
+   "title": "Run the blank-screen-to-running-app drill: time `paperos create` through first spec'd page, deploy and desktop build; record it; answer PAP-5 with numbers",
+   "readyNow": false
+  },
+  "data-layer/postgres-provision": {
+   "id": "87925f52-c572-458c-9e7a-b894e3627222",
+   "identifier": "PAP-30",
+   "url": "https://linear.app/paperos/issue/PAP-30/provision-postgres-17-on-the-self-hosted-vps-with-automated-backups",
+   "title": "Provision Postgres 17 on the self-hosted VPS with automated backups and point-in-time recovery",
+   "readyNow": false
+  },
+  "data-layer/sync-research": {
+   "id": "983b757f-1b61-42bb-86b8-cf41407823dd",
+   "identifier": "PAP-31",
+   "url": "https://linear.app/paperos/issue/PAP-31/evaluate-zero-electricsql-powersync-and-replicache-for-local-first",
+   "title": "Evaluate Zero, ElectricSQL, PowerSync and Replicache for local-first sync and write an ADR",
+   "readyNow": true
+  },
+  "data-layer/drizzle-schema": {
+   "id": "01026597-dfff-4b0e-83d0-99f1788e7bdf",
+   "identifier": "PAP-32",
+   "url": "https://linear.app/paperos/issue/PAP-32/set-up-drizzle-orm-schema-as-code-with-migration-workflow-and-seed",
+   "title": "Set up Drizzle ORM schema-as-code with migration workflow and seed scripts",
+   "readyNow": false
+  },
+  "data-layer/core-entities": {
+   "id": "6da56906-07c4-4c07-951b-d89d1cd0b205",
+   "identifier": "PAP-33",
+   "url": "https://linear.app/paperos/issue/PAP-33/model-core-platform-entities-tenant-workspace-user-membership-role",
+   "title": "Model core platform entities: tenant, workspace, user, membership, role, audit_event, file",
+   "readyNow": false
+  },
+  "data-layer/rls-tenancy": {
+   "id": "5d76e00a-724a-432b-9195-c3b38dbb5907",
+   "identifier": "PAP-34",
+   "url": "https://linear.app/paperos/issue/PAP-34/implement-postgres-row-level-security-policies-for-multi-tenant",
+   "title": "Implement Postgres row-level security policies for multi-tenant isolation with a cross-tenant test harness",
+   "readyNow": false
+  },
+  "data-layer/api-layer": {
+   "id": "09c51375-ae7b-408c-8903-308991a477d0",
+   "identifier": "PAP-35",
+   "url": "https://linear.app/paperos/issue/PAP-35/expose-a-typed-api-via-orpc-with-zod-schemas-generated-from-drizzle",
+   "title": "Expose a typed API via oRPC with Zod schemas generated from Drizzle",
+   "readyNow": false
+  },
+  "data-layer/local-first-sync": {
+   "id": "84ef90d4-d85f-4820-8206-b0e1928a45d0",
+   "identifier": "PAP-36",
+   "url": "https://linear.app/paperos/issue/PAP-36/integrate-pglite-and-electricsql-shapes-for-local-first-reads-with-an",
+   "title": "Integrate PGlite and ElectricSQL shapes for local-first reads with an offline write queue",
+   "readyNow": false
+  },
+  "data-layer/file-storage": {
+   "id": "3cafb94c-0dbb-42df-8dea-8cbf91229021",
+   "identifier": "PAP-37",
+   "url": "https://linear.app/paperos/issue/PAP-37/add-s3-compatible-object-storage-minio-with-signed-uploads-and-image",
+   "title": "Add S3-compatible object storage (MinIO) with signed uploads and image variants",
+   "readyNow": false
+  },
+  "data-layer/audit-log": {
+   "id": "52f1324b-4a19-4a1f-925a-d29fb9afc94e",
+   "identifier": "PAP-38",
+   "url": "https://linear.app/paperos/issue/PAP-38/build-append-only-audit-log-with-actor-human-or-agent-diff-and-reason",
+   "title": "Build append-only audit log with actor (human or agent), diff and reason fields",
+   "readyNow": false
+  },
+  "data-layer/search": {
+   "id": "a4ff9195-a9ea-4f3a-9b27-4271cb30133b",
+   "identifier": "PAP-39",
+   "url": "https://linear.app/paperos/issue/PAP-39/add-full-text-and-vector-search-tsvector-pgvector-over-any-entity",
+   "title": "Add full-text and vector search (tsvector + pgvector) over any entity through a search registry",
+   "readyNow": false
+  },
+  "data-layer/observability": {
+   "id": "db8eeef1-9410-4b1d-a7c0-7213c843bbf5",
+   "identifier": "PAP-40",
+   "url": "https://linear.app/paperos/issue/PAP-40/wire-opentelemetry-tracing-slow-query-logging-and-grafana-dashboards",
+   "title": "Wire OpenTelemetry tracing, slow-query logging and Grafana dashboards for API and sync",
+   "readyNow": false
+  },
+  "data-layer/data-dictionary": {
+   "id": "6383c062-cce2-4977-afc2-006eecdd5de6",
+   "identifier": "PAP-41",
+   "url": "https://linear.app/paperos/issue/PAP-41/generate-a-living-data-dictionary-from-the-drizzle-schema-into-the",
+   "title": "Generate a living data dictionary from the Drizzle schema into the docs system",
+   "readyNow": false
+  },
+  "data-layer/local-dev-stack": {
+   "id": "acc18d01-b1bc-4866-aa62-6f6772964879",
+   "identifier": "PAP-42",
+   "url": "https://linear.app/paperos/issue/PAP-42/ship-the-local-dev-stack-docker-compose-with-postgres-17-minio-mailpit",
+   "title": "Ship the local dev stack: docker compose with Postgres 17, MinIO, Mailpit and Hocuspocus, per-worktree databases and a SessionStart hook so parallel Claude sessions never share state",
+   "readyNow": false
+  },
+  "data-layer/jobs-queue": {
+   "id": "e488b9fe-e748-421e-aec6-7530558dead9",
+   "identifier": "PAP-43",
+   "url": "https://linear.app/paperos/issue/PAP-43/build-the-background-jobs-and-scheduler-package-pg-boss-with-retries",
+   "title": "Build the background jobs and scheduler package (pg-boss) with retries, idempotency keys, cron, dead-letter queue and an admin view",
+   "readyNow": false
+  },
+  "forge/vcs-decision-adr": {
+   "id": "4feebd4f-4cd7-4229-bf79-682543e9ad22",
+   "identifier": "PAP-44",
+   "url": "https://linear.app/paperos/issue/PAP-44/write-adr-keep-git-as-the-format-self-host-forgejo-mirror-github-defer",
+   "title": "Write ADR: keep Git as the format, self-host Forgejo, mirror GitHub, defer any custom VCS",
+   "readyNow": true
+  },
+  "forge/forgejo-deploy": {
+   "id": "926edf4a-abb4-44c3-ae87-b8245c19c59d",
+   "identifier": "PAP-45",
+   "url": "https://linear.app/paperos/issue/PAP-45/deploy-forgejo-on-the-vps-behind-caddy-with-sso-from-better-auth-and",
+   "title": "Deploy Forgejo on the VPS behind Caddy with SSO from Better Auth and nightly backups",
+   "readyNow": false
+  },
+  "forge/branch-policy": {
+   "id": "5bf890ab-1095-4ea8-be77-58f91c9987ca",
+   "identifier": "PAP-46",
+   "url": "https://linear.app/paperos/issue/PAP-46/define-branch-protection-conventional-commits-and-worktree-per-issue",
+   "title": "Define branch protection, conventional commits and worktree-per-issue conventions for parallel agents",
+   "readyNow": true
+  },
+  "forge/mirror": {
+   "id": "70b67345-8dfe-4fad-b44e-bacd28a47275",
+   "identifier": "PAP-47",
+   "url": "https://linear.app/paperos/issue/PAP-47/configure-bidirectional-push-mirroring-between-forgejo-and-the-github",
+   "title": "Configure bidirectional push mirroring between Forgejo and the GitHub org imagine-os for all repos",
+   "readyNow": false
+  },
+  "forge/bot-accounts": {
+   "id": "c27a2f2e-5b88-4d13-aaf2-a0772b426228",
+   "identifier": "PAP-48",
+   "url": "https://linear.app/paperos/issue/PAP-48/create-scoped-bot-accounts-and-deploy-keys-for-each-agent-character-on",
+   "title": "Create scoped bot accounts and deploy keys for each agent character on both forges",
+   "readyNow": false
+  },
+  "forge/pr-templates": {
+   "id": "2c82432f-18df-45a9-9037-ac4b00fbbf61",
+   "identifier": "PAP-49",
+   "url": "https://linear.app/paperos/issue/PAP-49/author-pr-template-linking-linear-issue-page-spec-screenshots-and-the",
+   "title": "Author PR template linking Linear issue, page spec, screenshots and the review-gate checklist",
+   "readyNow": false
+  },
+  "forge/actions-runner": {
+   "id": "63de23da-a0ff-43f5-9e7c-d16676c334e5",
+   "identifier": "PAP-50",
+   "url": "https://linear.app/paperos/issue/PAP-50/run-forgejo-actions-runners-so-ci-works-even-when-github-is",
+   "title": "Run Forgejo Actions runners so CI works even when GitHub is unavailable",
+   "readyNow": false
+  },
+  "forge/repo-bootstrap": {
+   "id": "9f0d1a23-5699-44c1-8dad-aa75d291135a",
+   "identifier": "PAP-51",
+   "url": "https://linear.app/paperos/issue/PAP-51/script-forge-bootstrap-repo-to-configure-imagine-os-repos-with-mirrors",
+   "title": "Script `forge bootstrap <repo>` to configure imagine-os repos with mirrors, secrets, labels and webhooks",
+   "readyNow": false
+  },
+  "forge/release-tags": {
+   "id": "e8056a32-35c3-4320-90c3-d780bc32b731",
+   "identifier": "PAP-52",
+   "url": "https://linear.app/paperos/issue/PAP-52/automate-semantic-release-tags-and-changelog-generation-on-merge-to",
+   "title": "Automate semantic release tags and changelog generation on merge to main",
+   "readyNow": false
+  },
+  "forge/dr-drill": {
+   "id": "4a382e9b-75e9-40b1-8bfa-10d3b76babb6",
+   "identifier": "PAP-53",
+   "url": "https://linear.app/paperos/issue/PAP-53/run-a-disaster-recovery-drill-rebuilding-all-repos-and-ci-from-forgejo",
+   "title": "Run a disaster-recovery drill rebuilding all repos and CI from Forgejo backups with GitHub offline",
+   "readyNow": false
+  },
+  "forge/in-app-git": {
+   "id": "be70ff86-bee5-40b1-bea1-87ee644daea3",
+   "identifier": "PAP-54",
+   "url": "https://linear.app/paperos/issue/PAP-54/expose-repo-browsing-diffs-and-commit-history-inside-paperos-via-the",
+   "title": "Expose repo browsing, diffs and commit history inside PaperOS via the Forgejo API",
+   "readyNow": false
+  },
+  "identity/audience-model": {
+   "id": "44001a65-1398-40d0-9d03-db353417d08c",
+   "identifier": "PAP-55",
+   "url": "https://linear.app/paperos/issue/PAP-55/specify-the-audience-model-customer-tiers-staff-roles-partners-admins",
+   "title": "Specify the audience model: customer tiers, staff roles, partners, admins, agents and composable segments in between",
+   "readyNow": true
+  },
+  "identity/auth-research": {
+   "id": "07ea48b0-ea35-4d16-9aec-f3bd312b3aba",
+   "identifier": "PAP-56",
+   "url": "https://linear.app/paperos/issue/PAP-56/compare-better-auth-lucia-clerk-and-authjs-for-self-hosting",
+   "title": "Compare Better Auth, Lucia, Clerk and Auth.js for self-hosting, organizations and passkeys; write ADR",
+   "readyNow": true
+  },
+  "identity/better-auth": {
+   "id": "8dc7b5fe-5481-48f9-aac3-91657c61daec",
+   "identifier": "PAP-57",
+   "url": "https://linear.app/paperos/issue/PAP-57/install-better-auth-with-passkeys-magic-link-googlegithub-oauth-and",
+   "title": "Install Better Auth with passkeys, magic link, Google/GitHub OAuth and sessions for web and Tauri",
+   "readyNow": false
+  },
+  "identity/org-tenancy": {
+   "id": "449319a1-9f83-47b2-8077-57392958cbf2",
+   "identifier": "PAP-58",
+   "url": "https://linear.app/paperos/issue/PAP-58/implement-organizations-workspaces-invitations-and-tenant-switching",
+   "title": "Implement organizations, workspaces, invitations and tenant switching",
+   "readyNow": false
+  },
+  "identity/rbac-abac": {
+   "id": "43ae36d2-ac73-481a-a639-54f2cf0662b0",
+   "identifier": "PAP-59",
+   "url": "https://linear.app/paperos/issue/PAP-59/build-permission-engine-combining-role-based-grants-with-attribute",
+   "title": "Build permission engine combining role-based grants with attribute policies declared in page specs",
+   "readyNow": false
+  },
+  "identity/agent-principals": {
+   "id": "ae8b8a42-107b-4c17-ae32-6c6454f67d86",
+   "identifier": "PAP-60",
+   "url": "https://linear.app/paperos/issue/PAP-60/make-agents-first-class-principals-with-scoped-api-keys-rate-limits",
+   "title": "Make agents first-class principals with scoped API keys, rate limits and visible attribution",
+   "readyNow": false
+  },
+  "identity/impersonation": {
+   "id": "902d4f7c-1021-4049-ad2e-28d11d6b001f",
+   "identifier": "PAP-61",
+   "url": "https://linear.app/paperos/issue/PAP-61/add-staff-view-as-customer-impersonation-with-full-audit-trail",
+   "title": "Add staff 'view as customer' impersonation with full audit trail",
+   "readyNow": false
+  },
+  "identity/customer-portal-shell": {
+   "id": "13a53f0c-2bf8-48fc-898d-8f4e0f846876",
+   "identifier": "PAP-62",
+   "url": "https://linear.app/paperos/issue/PAP-62/ship-the-customer-facing-portal-shell-login-profile-billing-entry",
+   "title": "Ship the customer-facing portal shell (login, profile, billing entry) separate from the staff console",
+   "readyNow": false
+  },
+  "identity/staff-console-shell": {
+   "id": "222da10a-17b8-40a2-ab99-ff3babc8986d",
+   "identifier": "PAP-63",
+   "url": "https://linear.app/paperos/issue/PAP-63/ship-the-staff-console-shell-with-tenant-switcher-audience-filters-and",
+   "title": "Ship the staff console shell with tenant switcher, audience filters and admin navigation",
+   "readyNow": false
+  },
+  "identity/permission-tests": {
+   "id": "528d76ba-45d8-4539-960e-3822742072f5",
+   "identifier": "PAP-64",
+   "url": "https://linear.app/paperos/issue/PAP-64/generate-permission-matrix-tests-from-page-specs-covering-who-can-see",
+   "title": "Generate permission matrix tests from page specs covering who can see and do what on every page",
+   "readyNow": false
+  },
+  "identity/sso-scim": {
+   "id": "024c6260-2cc3-427b-823b-5fe13096142b",
+   "identifier": "PAP-65",
+   "url": "https://linear.app/paperos/issue/PAP-65/add-samloidc-sso-and-scim-provisioning-for-enterprise-tenants",
+   "title": "Add SAML/OIDC SSO and SCIM provisioning for enterprise tenants",
+   "readyNow": false
+  },
+  "design-system/tokens": {
+   "id": "c1837fd8-bacd-4851-add0-414c02a4b06a",
+   "identifier": "PAP-66",
+   "url": "https://linear.app/paperos/issue/PAP-66/define-design-tokens-color-type-space-radius-motion-elevation-in-dtcg",
+   "title": "Define design tokens (color, type, space, radius, motion, elevation) in DTCG JSON compiled to CSS variables",
+   "readyNow": true
+  },
+  "design-system/primitives": {
+   "id": "e22800a7-4c0d-42bb-9602-30b6eecbb11a",
+   "identifier": "PAP-67",
+   "url": "https://linear.app/paperos/issue/PAP-67/adopt-base-uiradix-primitives-with-tailwind-v4-and-build-20-core",
+   "title": "Adopt Base UI/Radix primitives with Tailwind v4 and build 20 core components (Button, Input, Select, Dialog, Menu, Tabs, Toast, Tooltip, Popover...)",
+   "readyNow": false
+  },
+  "design-system/icons-illustrations": {
+   "id": "1e56a284-a453-4800-9798-4662fd2b412f",
+   "identifier": "PAP-68",
+   "url": "https://linear.app/paperos/issue/PAP-68/choose-the-icon-set-lucide-or-phosphor-and-illustration-style-build-a",
+   "title": "Choose the icon set (Lucide or Phosphor) and illustration style; build a tree-shaken Icon component",
+   "readyNow": false
+  },
+  "design-system/storybook": {
+   "id": "7c30f13c-8524-494c-a813-871777181a67",
+   "identifier": "PAP-69",
+   "url": "https://linear.app/paperos/issue/PAP-69/set-up-storybook-with-a11y-viewport-and-interaction-test-addons",
+   "title": "Set up Storybook with a11y, viewport and interaction-test addons deployed to GitHub Pages",
+   "readyNow": false
+  },
+  "design-system/layout-components": {
+   "id": "83821eec-68f8-4067-a77d-779b2c6d15ad",
+   "identifier": "PAP-70",
+   "url": "https://linear.app/paperos/issue/PAP-70/build-layout-components-appframe-splitpane-inspector-commandbar",
+   "title": "Build layout components: AppFrame, SplitPane, Inspector, CommandBar, ResponsiveGrid",
+   "readyNow": false
+  },
+  "design-system/data-display": {
+   "id": "a2bfa003-4056-485a-9bc0-fd3f51385e3c",
+   "identifier": "PAP-71",
+   "url": "https://linear.app/paperos/issue/PAP-71/build-data-display-components-cell-renderers-badge-avatarstack",
+   "title": "Build data display components: cell renderers, Badge, AvatarStack, Timeline, EmptyState, Skeleton",
+   "readyNow": false
+  },
+  "design-system/motion": {
+   "id": "a4d5b4ab-171c-49ef-9121-f4b9f9fdb8e7",
+   "identifier": "PAP-72",
+   "url": "https://linear.app/paperos/issue/PAP-72/define-the-motion-system-durations-easings-reduced-motion-and-shared",
+   "title": "Define the motion system (durations, easings, reduced-motion) and shared transition components",
+   "readyNow": false
+  },
+  "design-system/a11y-audit": {
+   "id": "09a354fd-b767-44b9-a0b0-1ad2f3cfb108",
+   "identifier": "PAP-73",
+   "url": "https://linear.app/paperos/issue/PAP-73/run-axe-and-manual-screen-reader-audit-on-every-component-and-fix-to",
+   "title": "Run axe and manual screen-reader audit on every component and fix to WCAG 2.2 AA",
+   "readyNow": false
+  },
+  "design-system/component-spec-mapping": {
+   "id": "d9789625-d4f3-4a5e-b59e-4739424c81e5",
+   "identifier": "PAP-74",
+   "url": "https://linear.app/paperos/issue/PAP-74/map-every-component-to-a-spec-builder-component-id-with-props-schema",
+   "title": "Map every component to a spec-builder component ID with props schema so page specs reference real components",
+   "readyNow": false
+  },
+  "design-system/theming": {
+   "id": "d980df4f-7ff9-41f3-8df2-a0b816e2db78",
+   "identifier": "PAP-75",
+   "url": "https://linear.app/paperos/issue/PAP-75/implement-light-dark-and-high-contrast-themes-plus-per-tenant-brand",
+   "title": "Implement light, dark and high-contrast themes plus per-tenant brand theming with runtime token override",
+   "readyNow": false
+  },
+  "design-system/guidelines-docs": {
+   "id": "c9da7611-6e9d-4e2d-97e2-a8fe2790e654",
+   "identifier": "PAP-76",
+   "url": "https://linear.app/paperos/issue/PAP-76/write-design-system-guidelines-voice-density-spacing-when-to-use-what",
+   "title": "Write design system guidelines (voice, density, spacing, when to use what) into the docs system",
+   "readyNow": false
+  },
+  "design-system/figma-sync": {
+   "id": "ecb82238-c886-4381-9299-e9a9a6ca7b11",
+   "identifier": "PAP-77",
+   "url": "https://linear.app/paperos/issue/PAP-77/export-tokens-to-figma-variables-and-document-the-round-trip-or-record",
+   "title": "Export tokens to Figma variables and document the round-trip, or record the decision to skip Figma",
+   "readyNow": false
+  },
+  "quality/ci-gate1": {
+   "id": "3e427087-7542-49d8-b86c-3e3eed0c3702",
+   "identifier": "PAP-78",
+   "url": "https://linear.app/paperos/issue/PAP-78/set-up-ci-gate-1-typecheck-biome-lint-vitest-unit-tests-and-web-build",
+   "title": "Set up CI gate 1: typecheck, Biome lint, Vitest unit tests and web build on every PR",
+   "readyNow": false
+  },
+  "quality/review-rubrics": {
+   "id": "241d01d2-fa5c-4818-9063-d0cd0a29322c",
+   "identifier": "PAP-79",
+   "url": "https://linear.app/paperos/issue/PAP-79/write-review-rubrics-and-a-severity-taxonomy-shared-by-all-reviewer",
+   "title": "Write review rubrics and a severity taxonomy shared by all reviewer agents and humans",
+   "readyNow": true
+  },
+  "quality/security-scans": {
+   "id": "6089c982-222f-44a3-90a9-097b6745e8e9",
+   "identifier": "PAP-80",
+   "url": "https://linear.app/paperos/issue/PAP-80/add-dependency-audit-secret-scanning-semgrep-sast-and-container",
+   "title": "Add dependency audit, secret scanning, Semgrep SAST and container scanning to CI",
+   "readyNow": false
+  },
+  "quality/review-agents": {
+   "id": "8cf6ed89-72d6-4f73-aefd-2739bc45da7d",
+   "identifier": "PAP-81",
+   "url": "https://linear.app/paperos/issue/PAP-81/build-gate-2-three-claude-reviewer-agents-correctness-security-spec",
+   "title": "Build gate 2: three Claude reviewer agents (correctness, security, spec-conformance) posting structured PR reviews",
+   "readyNow": false
+  },
+  "quality/playwright-matrix": {
+   "id": "5bbe5fee-95e7-4640-8c48-4d48f48b8539",
+   "identifier": "PAP-82",
+   "url": "https://linear.app/paperos/issue/PAP-82/build-gate-3-playwright-screenshot-suite-across-the-7-width-breakpoint",
+   "title": "Build gate 3: Playwright screenshot suite across the 7-width breakpoint matrix, all themes and key pages with baseline diffs",
+   "readyNow": false
+  },
+  "quality/video-replays": {
+   "id": "8ac49161-37c1-4135-b2f1-1ea16539c6b8",
+   "identifier": "PAP-83",
+   "url": "https://linear.app/paperos/issue/PAP-83/record-video-replays-of-critical-flows-per-pr-at-each-responsive-size",
+   "title": "Record video replays of critical flows per PR at each responsive size and attach them to the PR",
+   "readyNow": false
+  },
+  "quality/screenshot-annotation": {
+   "id": "a386d1c9-7a9d-4be9-be15-831a78c01ceb",
+   "identifier": "PAP-84",
+   "url": "https://linear.app/paperos/issue/PAP-84/have-a-vision-agent-inspect-screenshots-for-overflow-misalignment",
+   "title": "Have a vision agent inspect screenshots for overflow, misalignment, contrast and truncation and post annotated findings",
+   "readyNow": false
+  },
+  "quality/edge-case-hunter": {
+   "id": "9c8179db-8220-42af-aa4b-a3e84821daf4",
+   "identifier": "PAP-85",
+   "url": "https://linear.app/paperos/issue/PAP-85/build-gate-4-edge-case-hunter-agent-generating-adversarial-inputs",
+   "title": "Build gate 4: edge-case hunter agent generating adversarial inputs, empty/huge/unicode states, network failure and slow-device scenarios from page specs",
+   "readyNow": false
+  },
+  "quality/e2e-flows": {
+   "id": "9eb4a871-511d-4a37-8864-407ca72cfbd7",
+   "identifier": "PAP-86",
+   "url": "https://linear.app/paperos/issue/PAP-86/write-end-to-end-flow-tests-for-auth-tenant-switch-crud-and-realtime",
+   "title": "Write end-to-end flow tests for auth, tenant switch, CRUD and realtime presence",
+   "readyNow": false
+  },
+  "quality/perf-budgets": {
+   "id": "5df87511-ce7b-421b-9206-df9ecaaa9e15",
+   "identifier": "PAP-87",
+   "url": "https://linear.app/paperos/issue/PAP-87/enforce-performance-budgets-lcp-inp-bundle-size-with-lighthouse-ci",
+   "title": "Enforce performance budgets (LCP, INP, bundle size) with Lighthouse CI",
+   "readyNow": false
+  },
+  "quality/release-train": {
+   "id": "e8583eb7-35b1-47c8-8503-a508004b63ee",
+   "identifier": "PAP-88",
+   "url": "https://linear.app/paperos/issue/PAP-88/define-the-release-train-nightly-staging-deploy-weekly-release",
+   "title": "Define the release train: nightly staging deploy, weekly release candidate to Needs Justin with consolidated review report",
+   "readyNow": false
+  },
+  "quality/review-report": {
+   "id": "27719b83-5814-4532-8d35-e25aebbb9018",
+   "identifier": "PAP-89",
+   "url": "https://linear.app/paperos/issue/PAP-89/generate-a-one-page-human-review-digest-per-release-candidate-what",
+   "title": "Generate a one-page human review digest per release candidate: what changed, risks, screenshots, open questions",
+   "readyNow": false
+  },
+  "quality/flake-quarantine": {
+   "id": "db360168-68f7-44f0-b468-e0ec4723f9a3",
+   "identifier": "PAP-90",
+   "url": "https://linear.app/paperos/issue/PAP-90/build-flaky-test-detection-and-quarantine-so-agents-are-not-blocked-by",
+   "title": "Build flaky-test detection and quarantine so agents are not blocked by nondeterminism",
+   "readyNow": false
+  },
+  "pm-linear/configure-workspace": {
+   "id": "0d1d8ef8-381f-4b0e-9fec-cbbb1a261891",
+   "identifier": "PAP-91",
+   "url": "https://linear.app/paperos/issue/PAP-91/add-pipeline-states-ready-for-claude-in-review-needs-justin-label",
+   "title": "Add pipeline states (Ready for Claude, In Review, Needs Justin), label groups and project templates to Linear team PAP",
+   "readyNow": true
+  },
+  "pm-linear/session-playbook": {
+   "id": "740f3b4d-7660-407a-aaf6-d77ca4f4fb3e",
+   "identifier": "PAP-92",
+   "url": "https://linear.app/paperos/issue/PAP-92/write-the-session-playbook-how-a-claude-session-picks-up-an-issue-what",
+   "title": "Write the session playbook: how a Claude session picks up an issue, what it must read, how it reports and ends",
+   "readyNow": true
+  },
+  "pm-linear/issue-contract": {
+   "id": "1d0587c5-145c-4de1-9ef1-871ab6881041",
+   "identifier": "PAP-93",
+   "url": "https://linear.app/paperos/issue/PAP-93/define-the-issue-contract-spec-link-acceptance-criteria-surfaces",
+   "title": "Define the issue contract (spec link, acceptance criteria, surfaces, definition of done) enforced by a Linear webhook validator",
+   "readyNow": false
+  },
+  "pm-linear/justin-queue": {
+   "id": "e5a36bc1-cd62-41a2-bd6a-8a561b373114",
+   "identifier": "PAP-94",
+   "url": "https://linear.app/paperos/issue/PAP-94/design-the-needs-justin-queue-batched-decisions-one-click",
+   "title": "Design the Needs Justin queue: batched decisions, one-click approve/reject comments, max five open items rule",
+   "readyNow": false
+  },
+  "pm-linear/pap5-decompose": {
+   "id": "e04e29ab-66b0-4e66-b8b2-5d81322a46cb",
+   "identifier": "PAP-95",
+   "url": "https://linear.app/paperos/issue/PAP-95/decompose-pap-5-startup-procedure-inefficiency-into-this-master-plans",
+   "title": "Decompose PAP-5 (startup procedure inefficiency) into this master plan's projects and close it with a summary comment",
+   "readyNow": false
+  },
+  "pm-linear/orchestrator": {
+   "id": "da321a3c-f968-47af-ae78-51f42700965a",
+   "identifier": "PAP-96",
+   "url": "https://linear.app/paperos/issue/PAP-96/build-the-orchestrator-that-polls-ready-for-claude-spawns-one-claude",
+   "title": "Build the orchestrator that polls Ready for Claude, spawns one Claude Code session per issue in a git worktree and moves states",
+   "readyNow": false
+  },
+  "pm-linear/webhooks": {
+   "id": "3b4c007c-4002-4240-ad84-c1bfe127588d",
+   "identifier": "PAP-97",
+   "url": "https://linear.app/paperos/issue/PAP-97/set-up-linear-webhooks-into-the-orchestrator-and-pr-status-back-to",
+   "title": "Set up Linear webhooks into the orchestrator and PR status back to Linear as comments with screenshots and review verdicts",
+   "readyNow": false
+  },
+  "pm-linear/credit-metering": {
+   "id": "f3e73b01-5912-4ca6-af75-dda7e8c65fbb",
+   "identifier": "PAP-98",
+   "url": "https://linear.app/paperos/issue/PAP-98/track-claude-credit-spend-per-issue-and-project-and-post-a-daily-burn",
+   "title": "Track Claude credit spend per issue and project and post a daily burn report to Linear",
+   "readyNow": false
+  },
+  "pm-linear/concurrency": {
+   "id": "983f671f-9dd4-420c-91a4-6986dbf0d9ee",
+   "identifier": "PAP-99",
+   "url": "https://linear.app/paperos/issue/PAP-99/implement-concurrency-controls-max-parallel-sessions-file-lock-hints",
+   "title": "Implement concurrency controls: max parallel sessions, file-lock hints and dependency-aware scheduling from dependsOn",
+   "readyNow": false
+  },
+  "pm-linear/pm-data-model": {
+   "id": "69c7aa7d-0532-4f85-a7df-bb26e6a21887",
+   "identifier": "PAP-100",
+   "url": "https://linear.app/paperos/issue/PAP-100/model-pm-entities-in-paperos-project-issue-cycle-milestone-comment",
+   "title": "Model PM entities in PaperOS (project, issue, cycle, milestone, comment, label) mirroring Linear's schema",
+   "readyNow": false
+  },
+  "pm-linear/linear-sync": {
+   "id": "0ad6d9fa-b0fc-47e0-be3e-ca28c55937ae",
+   "identifier": "PAP-101",
+   "url": "https://linear.app/paperos/issue/PAP-101/build-bidirectional-linear-sync-graphql-webhooks-with-conflict-rule",
+   "title": "Build bidirectional Linear sync (GraphQL + webhooks) with conflict rule: Linear wins until cutover",
+   "readyNow": false
+  },
+  "pm-linear/board-views": {
+   "id": "2fc13ce7-e58b-40be-a72f-cccd83ea3c2f",
+   "identifier": "PAP-102",
+   "url": "https://linear.app/paperos/issue/PAP-102/render-pm-board-list-and-timeline-views-using-the-tablesviews-engine",
+   "title": "Render PM board, list and timeline views using the tables/views engine",
+   "readyNow": false
+  },
+  "agents/character-schema": {
+   "id": "d5e001bb-de69-4cfc-a9a3-2c88c1bc68ca",
+   "identifier": "PAP-103",
+   "url": "https://linear.app/paperos/issue/PAP-103/define-the-character-schema-name-role-reportsto-tools-mcp-servers",
+   "title": "Define the character schema: name, role, reportsTo, tools, MCP servers, access scopes, plugins, skills, memory, escalation rules",
+   "readyNow": true
+  },
+  "agents/roster-v1": {
+   "id": "1ea5cf02-4357-41c1-b0dd-292eab776d77",
+   "identifier": "PAP-104",
+   "url": "https://linear.app/paperos/issue/PAP-104/write-the-nine-lead-characters-and-their-sub-characters-as",
+   "title": "Write the nine lead characters and their sub-characters as .claude/agents definitions with system prompts",
+   "readyNow": false
+  },
+  "agents/skills-library": {
+   "id": "e148985f-592f-4aad-a6b3-957683e353f9",
+   "identifier": "PAP-105",
+   "url": "https://linear.app/paperos/issue/PAP-105/build-the-shared-skills-library-page-from-spec-review-pr-screenshot",
+   "title": "Build the shared skills library (page-from-spec, review-pr, screenshot-audit, write-adr, linear-update) as .claude/skills",
+   "readyNow": false
+  },
+  "agents/tool-scopes": {
+   "id": "87a5ec58-4ee0-4b3e-b2a1-57be52230623",
+   "identifier": "PAP-106",
+   "url": "https://linear.app/paperos/issue/PAP-106/implement-per-character-mcp-allowlists-and-permission-modes-and-verify",
+   "title": "Implement per-character MCP allowlists and permission modes and verify least privilege with an automated test",
+   "readyNow": false
+  },
+  "agents/prompt-logging-hook": {
+   "id": "62666ed2-9ce4-4ece-8fb6-61a0314e560f",
+   "identifier": "PAP-107",
+   "url": "https://linear.app/paperos/issue/PAP-107/hook-every-sessions-prompts-responses-and-tool-calls-into-the-prompt",
+   "title": "Hook every session's prompts, responses and tool calls into the prompt-log store",
+   "readyNow": false
+  },
+  "agents/handoffs": {
+   "id": "5d4072bf-5890-42f0-92e6-9061f49576f9",
+   "identifier": "PAP-108",
+   "url": "https://linear.app/paperos/issue/PAP-108/design-the-handoff-protocol-between-characters-artifact-contract",
+   "title": "Design the handoff protocol between characters: artifact contract, Linear comment format, escalation to Needs Justin",
+   "readyNow": false
+  },
+  "agents/memory": {
+   "id": "38d2138b-2e50-439d-8fb3-782b664e0eeb",
+   "identifier": "PAP-109",
+   "url": "https://linear.app/paperos/issue/PAP-109/give-characters-persistent-memory-project-notes-decisions-gotchas",
+   "title": "Give characters persistent memory (project notes, decisions, gotchas) stored in the docs system and loaded at session start",
+   "readyNow": false
+  },
+  "agents/eval-harness": {
+   "id": "4af51fc3-3598-41b1-a2f0-efe75d77b957",
+   "identifier": "PAP-110",
+   "url": "https://linear.app/paperos/issue/PAP-110/create-an-eval-harness-with-golden-tasks-per-character-scored-nightly",
+   "title": "Create an eval harness with golden tasks per character, scored nightly, regressions flagged in Linear",
+   "readyNow": false
+  },
+  "agents/cost-controls": {
+   "id": "a6b45fbd-3ef3-467d-903e-40a3a8bbf218",
+   "identifier": "PAP-111",
+   "url": "https://linear.app/paperos/issue/PAP-111/add-per-character-budgets-max-turn-limits-and-a-kill-switch",
+   "title": "Add per-character budgets, max-turn limits and a kill switch",
+   "readyNow": false
+  },
+  "agents/character-docs": {
+   "id": "e0e341fc-afa2-4306-a5de-4c8663d16c58",
+   "identifier": "PAP-112",
+   "url": "https://linear.app/paperos/issue/PAP-112/publish-the-character-handbook-who-does-what-how-to-summon-them-what",
+   "title": "Publish the character handbook: who does what, how to summon them, what they may not do",
+   "readyNow": false
+  },
+  "agents/org-chart-ui": {
+   "id": "1cdf6b88-0705-42e3-b2c5-2569cdaa8bd1",
+   "identifier": "PAP-113",
+   "url": "https://linear.app/paperos/issue/PAP-113/build-the-agent-org-chart-ui-showing-characters-sub-agents-current",
+   "title": "Build the agent org chart UI showing characters, sub-agents, current tasks, tools and access",
+   "readyNow": false
+  },
+  "spec-builder/schema": {
+   "id": "9072eb75-d95d-462b-8e96-328a1ff71b9e",
+   "identifier": "PAP-114",
+   "url": "https://linear.app/paperos/issue/PAP-114/define-the-pagespecyaml-schema-purpose-logic-access-data-integrations",
+   "title": "Define the page.spec.yaml schema: purpose, logic, access, data, integrations, layout, components, states, events, edge cases",
+   "readyNow": true
+  },
+  "spec-builder/validator": {
+   "id": "21c84a7d-b540-4f17-a820-feee59b6a191",
+   "identifier": "PAP-115",
+   "url": "https://linear.app/paperos/issue/PAP-115/build-the-spec-validator-cli-and-ci-check-that-fails-prs-whose-pages",
+   "title": "Build the spec validator CLI and CI check that fails PRs whose pages lack or violate specs",
+   "readyNow": false
+  },
+  "spec-builder/access-section": {
+   "id": "1873c6a7-727e-4c28-a6e9-2ea60891bf18",
+   "identifier": "PAP-116",
+   "url": "https://linear.app/paperos/issue/PAP-116/specify-the-access-section-format-that-compiles-to-permission-engine",
+   "title": "Specify the access section format that compiles to permission-engine policies",
+   "readyNow": false
+  },
+  "spec-builder/app-level-spec": {
+   "id": "ad65c266-02b5-4a5a-b456-07f65a848bd7",
+   "identifier": "PAP-117",
+   "url": "https://linear.app/paperos/issue/PAP-117/define-appspecyaml-audiences-navigation-entities-integrations-that",
+   "title": "Define app.spec.yaml (audiences, navigation, entities, integrations) that page specs inherit from",
+   "readyNow": false
+  },
+  "spec-builder/spec-authoring-skill": {
+   "id": "7763b622-b683-45db-acaa-f7f868bb7d5e",
+   "identifier": "PAP-118",
+   "url": "https://linear.app/paperos/issue/PAP-118/write-the-agent-skill-interview-draft-page-spec-validate-open-linear",
+   "title": "Write the agent skill: interview -> draft page spec -> validate -> open Linear issue",
+   "readyNow": false
+  },
+  "spec-builder/data-section": {
+   "id": "17f0dfc6-8418-4b7f-849c-6251c241d8ab",
+   "identifier": "PAP-119",
+   "url": "https://linear.app/paperos/issue/PAP-119/specify-the-data-section-entities-queries-mutations-sync-mode-and",
+   "title": "Specify the data section (entities, queries, mutations, sync mode) and generate typed hooks from it",
+   "readyNow": false
+  },
+  "spec-builder/layout-codegen": {
+   "id": "7e89b2d5-13f4-4a8e-bdd5-f2476948d69b",
+   "identifier": "PAP-120",
+   "url": "https://linear.app/paperos/issue/PAP-120/generate-page-scaffolds-layout-component-tree-loadingemptyerror-states",
+   "title": "Generate page scaffolds (layout, component tree, loading/empty/error states) from specs",
+   "readyNow": false
+  },
+  "spec-builder/integrations-section": {
+   "id": "856e0243-820f-442f-92bc-0ad6eb96fa69",
+   "identifier": "PAP-121",
+   "url": "https://linear.app/paperos/issue/PAP-121/specify-the-integrations-section-stripe-linear-notion-drive-webflow",
+   "title": "Specify the integrations section (Stripe, Linear, Notion, Drive, Webflow, Miro, Gamma) backed by a connector registry",
+   "readyNow": false
+  },
+  "spec-builder/conformance-tests": {
+   "id": "32c15392-99f1-421b-8ebd-ea611170a894",
+   "identifier": "PAP-122",
+   "url": "https://linear.app/paperos/issue/PAP-122/generate-conformance-tests-from-specs-access-matrix-required",
+   "title": "Generate conformance tests from specs (access matrix, required components, states) into CI gate 1",
+   "readyNow": false
+  },
+  "spec-builder/spec-to-canvas": {
+   "id": "2e05d47a-7c02-46e5-a961-ecc3561955d8",
+   "identifier": "PAP-123",
+   "url": "https://linear.app/paperos/issue/PAP-123/emit-the-ux-flow-graph-pages-transitions-roles-from-specs-for-the",
+   "title": "Emit the UX-flow graph (pages, transitions, roles) from specs for the canvas view",
+   "readyNow": false
+  },
+  "spec-builder/spec-editor-ui": {
+   "id": "f40136d1-1345-4b2c-ab15-d039df3f9a52",
+   "identifier": "PAP-124",
+   "url": "https://linear.app/paperos/issue/PAP-124/build-the-spec-editor-ui-with-form-and-yaml-views-and-live-preview",
+   "title": "Build the spec editor UI with form and YAML views and live preview",
+   "readyNow": false
+  },
+  "spec-builder/spec-docs": {
+   "id": "2ca2475e-523f-40f1-805f-39ba5b4f5fd2",
+   "identifier": "PAP-125",
+   "url": "https://linear.app/paperos/issue/PAP-125/document-the-spec-builder-with-three-fully-specified-example-pages",
+   "title": "Document the spec builder with three fully specified example pages (customer list, staff dashboard, agent console)",
+   "readyNow": false
+  },
+  "spec-builder/business-profile": {
+   "id": "a8799f53-e2ab-4e89-8b9d-53aeab307e27",
+   "identifier": "PAP-126",
+   "url": "https://linear.app/paperos/issue/PAP-126/define-the-business-profile-section-of-appspecyaml-industry-audiences",
+   "title": "Define the business profile section of app.spec.yaml: industry, audiences, terminology map, locale, currency and tax regime, enabled modules; codegen, templates and the migration agent read it",
+   "readyNow": false
+  },
+  "collab/collab-research": {
+   "id": "5c29533f-530c-4526-92bd-0348846f276f",
+   "identifier": "PAP-127",
+   "url": "https://linear.app/paperos/issue/PAP-127/evaluate-tldraw-vs-react-flow-for-the-canvas-and-tiptap-vs-blocknote",
+   "title": "Evaluate tldraw vs React Flow for the canvas and Tiptap vs BlockNote for docs; write ADR",
+   "readyNow": true
+  },
+  "collab/docs-engine": {
+   "id": "700d6066-f325-4c69-96b7-37d046b40793",
+   "identifier": "PAP-128",
+   "url": "https://linear.app/paperos/issue/PAP-128/build-the-docs-engine-mdx-docs-stored-in-the-repo-rendered-in-app",
+   "title": "Build the docs engine: MDX docs stored in the repo, rendered in-app, searchable and versioned with git",
+   "readyNow": false
+  },
+  "collab/prompt-log-store": {
+   "id": "528db3ad-243b-49c4-aacf-50a22929a01a",
+   "identifier": "PAP-129",
+   "url": "https://linear.app/paperos/issue/PAP-129/create-the-promptresponse-log-store-session-character-issue-tokens",
+   "title": "Create the prompt/response log store (session, character, issue, tokens, cost, tool calls) with redaction",
+   "readyNow": false
+  },
+  "collab/decision-log": {
+   "id": "7cdf403a-af37-4e50-b77f-ed327a9744df",
+   "identifier": "PAP-130",
+   "url": "https://linear.app/paperos/issue/PAP-130/add-an-adrdecision-log-with-status-alternatives-and-links-to-issues",
+   "title": "Add an ADR/decision log with status, alternatives and links to issues",
+   "readyNow": false
+  },
+  "collab/comments": {
+   "id": "16aefa0b-02ca-4f36-83f9-c646d4b6b156",
+   "identifier": "PAP-131",
+   "url": "https://linear.app/paperos/issue/PAP-131/implement-in-app-comments-anchored-to-any-entity-page-element-or-doc",
+   "title": "Implement in-app comments anchored to any entity, page element or doc block with mentions and resolve",
+   "readyNow": false
+  },
+  "collab/canvas-view": {
+   "id": "b6162d2b-5bbd-4636-a16d-35c614225a0b",
+   "identifier": "PAP-132",
+   "url": "https://linear.app/paperos/issue/PAP-132/build-the-canvas-view-tldraw-or-react-flow-showing-the-ux-flow-of-the",
+   "title": "Build the canvas view (tldraw or React Flow) showing the UX flow of the whole app, generated from specs and editable",
+   "readyNow": false
+  },
+  "collab/changelog": {
+   "id": "f769cdf7-eab4-4e4b-8314-f89d4dcb0d3e",
+   "identifier": "PAP-133",
+   "url": "https://linear.app/paperos/issue/PAP-133/auto-generate-changelogs-from-conventional-commits-and-pr-summaries",
+   "title": "Auto-generate changelogs from conventional commits and PR summaries, rendered per app and per tenant",
+   "readyNow": false
+  },
+  "collab/rules-skills-registry": {
+   "id": "8f861e50-29d3-4df0-b618-d5a698a21f9c",
+   "identifier": "PAP-134",
+   "url": "https://linear.app/paperos/issue/PAP-134/surface-rules-claudemd-policies-and-skills-as-browsable-editable",
+   "title": "Surface rules (CLAUDE.md, policies) and skills as browsable, editable objects in-app with version history",
+   "readyNow": false
+  },
+  "collab/prompt-log-ui": {
+   "id": "613001a7-a727-4940-9c07-7935f2130d7e",
+   "identifier": "PAP-135",
+   "url": "https://linear.app/paperos/issue/PAP-135/build-the-prompt-log-browser-filter-by-issue-or-character-replay-a",
+   "title": "Build the prompt log browser: filter by issue or character, replay a session, link to the PR",
+   "readyNow": false
+  },
+  "collab/notifications": {
+   "id": "cbf19ea6-b4bb-4c3c-ae45-5f43cc5cbf6d",
+   "identifier": "PAP-136",
+   "url": "https://linear.app/paperos/issue/PAP-136/build-a-notification-center-in-app-email-slack-with-per-audience",
+   "title": "Build a notification center (in-app, email, Slack) with per-audience preferences",
+   "readyNow": false
+  },
+  "collab/screenshot-annotations": {
+   "id": "8851056f-e456-4947-aa35-2b8d86f4ff4a",
+   "identifier": "PAP-137",
+   "url": "https://linear.app/paperos/issue/PAP-137/allow-annotating-screenshots-and-video-frames-with-comments-that",
+   "title": "Allow annotating screenshots and video frames with comments that create Linear issues",
+   "readyNow": false
+  },
+  "collab/knowledge-search": {
+   "id": "570697ee-d7ad-466f-951a-edbb53898d34",
+   "identifier": "PAP-138",
+   "url": "https://linear.app/paperos/issue/PAP-138/unify-search-across-docs-comments-specs-prompt-logs-and-issues",
+   "title": "Unify search across docs, comments, specs, prompt logs and issues",
+   "readyNow": false
+  },
+  "realtime/realtime-research": {
+   "id": "07d07e7b-5029-40d0-a99d-cc2fd7c23c33",
+   "identifier": "PAP-139",
+   "url": "https://linear.app/paperos/issue/PAP-139/benchmark-yjs-vs-automerge-vs-loro-for-document-crdt-and-write-an-adr",
+   "title": "Benchmark Yjs vs Automerge vs Loro for document CRDT and write an ADR",
+   "readyNow": true
+  },
+  "realtime/yjs-server": {
+   "id": "8a361077-2cbd-4e1f-b646-f5a6cb9b68f6",
+   "identifier": "PAP-140",
+   "url": "https://linear.app/paperos/issue/PAP-140/deploy-a-hocuspocus-yjs-server-with-auth-hook-postgres-persistence-and",
+   "title": "Deploy a Hocuspocus (Yjs) server with auth hook, Postgres persistence and room-per-document",
+   "readyNow": false
+  },
+  "realtime/presence": {
+   "id": "972831a5-100e-4c53-874c-b0943ad75ad7",
+   "identifier": "PAP-141",
+   "url": "https://linear.app/paperos/issue/PAP-141/build-the-presence-layer-cursors-avatars-selections-and-who-is-viewing",
+   "title": "Build the presence layer: cursors, avatars, selections and 'who is viewing' across pages",
+   "readyNow": false
+  },
+  "realtime/collab-text": {
+   "id": "5148e604-e87f-4af5-9aff-b6a67cc208fc",
+   "identifier": "PAP-142",
+   "url": "https://linear.app/paperos/issue/PAP-142/add-collaborative-rich-text-tiptap-yjs-as-the-shared-editor-for-docs",
+   "title": "Add collaborative rich text (Tiptap + Yjs) as the shared editor for docs and comments",
+   "readyNow": false
+  },
+  "realtime/record-sync": {
+   "id": "cea972a5-185c-4dcd-a2a0-6fbbdb3fb459",
+   "identifier": "PAP-143",
+   "url": "https://linear.app/paperos/issue/PAP-143/stream-record-changes-via-electric-shapes-to-all-connected-clients-and",
+   "title": "Stream record changes via Electric shapes to all connected clients and reconcile with local writes",
+   "readyNow": false
+  },
+  "realtime/conflict-ux": {
+   "id": "67009dc8-1249-4384-b452-49661dcf3f23",
+   "identifier": "PAP-144",
+   "url": "https://linear.app/paperos/issue/PAP-144/design-conflict-and-stale-data-ux-merge-banners-last-writer-indicators",
+   "title": "Design conflict and stale-data UX: merge banners, last-writer indicators, undo",
+   "readyNow": false
+  },
+  "realtime/multi-window-sync": {
+   "id": "e5284b01-c1b0-4765-9868-5fa42f34b617",
+   "identifier": "PAP-145",
+   "url": "https://linear.app/paperos/issue/PAP-145/sync-state-across-multiple-os-windows-and-tabs-of-the-same-user-via",
+   "title": "Sync state across multiple OS windows and tabs of the same user via BroadcastChannel and Yjs",
+   "readyNow": false
+  },
+  "realtime/agent-presence": {
+   "id": "9b6f6b4d-0984-4b67-a446-58363b599c23",
+   "identifier": "PAP-146",
+   "url": "https://linear.app/paperos/issue/PAP-146/show-agents-as-live-participants-typing-editing-reviewing-with",
+   "title": "Show agents as live participants (typing, editing, reviewing) with distinct visual identity",
+   "readyNow": false
+  },
+  "realtime/load-test": {
+   "id": "484182bf-a829-43ef-91be-debc496ae8cb",
+   "identifier": "PAP-147",
+   "url": "https://linear.app/paperos/issue/PAP-147/load-test-500-concurrent-users-per-room-and-10k-rooms-tune-persistence",
+   "title": "Load test 500 concurrent users per room and 10k rooms; tune persistence and scaling",
+   "readyNow": false
+  },
+  "realtime/offline-queue": {
+   "id": "08936b1b-d828-470d-9865-d2169d0bb4b5",
+   "identifier": "PAP-148",
+   "url": "https://linear.app/paperos/issue/PAP-148/implement-the-offline-write-queue-with-retry-ordering-and-user-visible",
+   "title": "Implement the offline write queue with retry, ordering and user-visible sync status",
+   "readyNow": false
+  },
+  "realtime/followmode": {
+   "id": "3292af7d-f91e-491a-aaef-3af09c843cc3",
+   "identifier": "PAP-149",
+   "url": "https://linear.app/paperos/issue/PAP-149/add-follow-mode-and-shared-cursor-sessions-for-support-and-pair-review",
+   "title": "Add follow mode and shared cursor sessions for support and pair review",
+   "readyNow": false
+  },
+  "input/input-abstraction": {
+   "id": "9b7aaaae-73f9-4c37-a252-220fc9e95d46",
+   "identifier": "PAP-150",
+   "url": "https://linear.app/paperos/issue/PAP-150/design-a-unified-input-event-abstraction-so-components-handle-mouse",
+   "title": "Design a unified input event abstraction so components handle mouse, touch, pen and gamepad uniformly",
+   "readyNow": true
+  },
+  "input/command-registry": {
+   "id": "7492ea48-cd23-419c-a321-2dabcf7efe44",
+   "identifier": "PAP-151",
+   "url": "https://linear.app/paperos/issue/PAP-151/build-the-global-command-registry-with-keyboard-shortcuts-command",
+   "title": "Build the global command registry with keyboard shortcuts, command palette and per-page scoping",
+   "readyNow": false
+  },
+  "input/focus-management": {
+   "id": "4ce82e40-e60c-4001-8588-5a8c0e836f9f",
+   "identifier": "PAP-152",
+   "url": "https://linear.app/paperos/issue/PAP-152/implement-robust-focus-management-roving-tabindex-and-skip-links",
+   "title": "Implement robust focus management, roving tabindex and skip links across all layouts",
+   "readyNow": false
+  },
+  "input/keymaps": {
+   "id": "fe3c0540-0a65-48ec-9876-aa447c200642",
+   "identifier": "PAP-153",
+   "url": "https://linear.app/paperos/issue/PAP-153/support-user-customizable-keymaps-with-presets-default-vim-style",
+   "title": "Support user-customizable keymaps with presets (default, Vim-style, Linear-like) synced per user",
+   "readyNow": false
+  },
+  "input/touch-gestures": {
+   "id": "eb8bc7c3-c835-4450-ba14-8c12e8ce1244",
+   "identifier": "PAP-154",
+   "url": "https://linear.app/paperos/issue/PAP-154/implement-a-touch-gesture-system-swipe-pinch-long-press-with-haptics",
+   "title": "Implement a touch gesture system (swipe, pinch, long-press) with haptics on mobile targets",
+   "readyNow": false
+  },
+  "input/drag-drop": {
+   "id": "ca2e7418-fdd1-43af-b43e-f60910cd6744",
+   "identifier": "PAP-155",
+   "url": "https://linear.app/paperos/issue/PAP-155/build-accessible-drag-and-drop-dnd-kit-for-tables-kanban-and-canvas",
+   "title": "Build accessible drag-and-drop (dnd-kit) for tables, kanban and canvas with a keyboard alternative",
+   "readyNow": false
+  },
+  "input/screen-reader": {
+   "id": "4848863c-09c9-4447-9c8c-7145d0fb04bc",
+   "identifier": "PAP-156",
+   "url": "https://linear.app/paperos/issue/PAP-156/test-and-fix-the-screen-reader-experience-nvda-voiceover-talkback-for",
+   "title": "Test and fix the screen reader experience (NVDA, VoiceOver, TalkBack) for core flows",
+   "readyNow": false
+  },
+  "input/pen": {
+   "id": "40d87175-21b5-432c-b316-e09d9f1c9e60",
+   "identifier": "PAP-157",
+   "url": "https://linear.app/paperos/issue/PAP-157/support-pen-and-stylus-input-with-pressure-for-canvas-and-annotation",
+   "title": "Support pen and stylus input with pressure for canvas and annotation",
+   "readyNow": false
+  },
+  "input/gamepad": {
+   "id": "acaeea13-93ec-45d5-88bb-c878d80c46d1",
+   "identifier": "PAP-158",
+   "url": "https://linear.app/paperos/issue/PAP-158/add-gamepad-and-tv-remote-navigation-for-kiosk-and-tv-modes-with",
+   "title": "Add gamepad and TV-remote navigation for kiosk and TV modes with spatial focus",
+   "readyNow": false
+  },
+  "input/voice": {
+   "id": "0c47e913-5821-4a3e-a61f-fb1e206e839f",
+   "identifier": "PAP-159",
+   "url": "https://linear.app/paperos/issue/PAP-159/integrate-voice-commands-and-dictation-web-speech-with-whisper",
+   "title": "Integrate voice commands and dictation (Web Speech with Whisper fallback) routed through the command registry",
+   "readyNow": false
+  },
+  "input/a11y-statement": {
+   "id": "00cf88bc-eab9-4253-a735-9df7d653f97e",
+   "identifier": "PAP-160",
+   "url": "https://linear.app/paperos/issue/PAP-160/publish-an-accessibility-statement-and-conformance-report-template-per",
+   "title": "Publish an accessibility statement and conformance report template per app",
+   "readyNow": false
+  },
+  "tables/view-model-spec": {
+   "id": "29407c9a-e5c2-41da-ab3b-b64724690944",
+   "identifier": "PAP-161",
+   "url": "https://linear.app/paperos/issue/PAP-161/specify-the-view-model-data-source-fields-filters-sorts-groups",
+   "title": "Specify the view model: data source, fields, filters, sorts, groups, aggregations, permissions and sharing as a superset of Airtable, Notion and ClickUp",
+   "readyNow": true
+  },
+  "tables/feature-parity-audit": {
+   "id": "d57e6540-2eec-49ec-8bc2-8c9d34bc7190",
+   "identifier": "PAP-162",
+   "url": "https://linear.app/paperos/issue/PAP-162/audit-airtable-notion-clickup-baserow-and-nocodb-view-features-into-a",
+   "title": "Audit Airtable, Notion, ClickUp, Baserow and NocoDB view features into a parity checklist",
+   "readyNow": true
+  },
+  "tables/query-compiler": {
+   "id": "15a56fb5-9b1c-404c-8f3e-8752d4c5296f",
+   "identifier": "PAP-163",
+   "url": "https://linear.app/paperos/issue/PAP-163/build-the-view-query-compiler-from-view-model-to-sql-and-electric",
+   "title": "Build the view query compiler from view model to SQL and Electric shapes with server-side pagination",
+   "readyNow": false
+  },
+  "tables/field-types": {
+   "id": "39c21bb0-1d60-461d-afd1-e19aca502bb4",
+   "identifier": "PAP-164",
+   "url": "https://linear.app/paperos/issue/PAP-164/implement-field-types-text-number-currency-date-select-multi-select",
+   "title": "Implement field types: text, number, currency, date, select, multi-select, relation, lookup, rollup, formula, attachment, user, checkbox, rating, URL, email, phone",
+   "readyNow": false
+  },
+  "tables/grid-view": {
+   "id": "1d1da1e6-f8b0-4de6-b7d0-902c88cb1977",
+   "identifier": "PAP-165",
+   "url": "https://linear.app/paperos/issue/PAP-165/build-the-virtualized-grid-view-tanstack-table-with-inline-edit-column",
+   "title": "Build the virtualized grid view (TanStack Table) with inline edit, column resize/reorder, freeze and cell types",
+   "readyNow": false
+  },
+  "tables/filter-sort-group-ui": {
+   "id": "0391f612-4f25-4813-87be-03091ff96264",
+   "identifier": "PAP-166",
+   "url": "https://linear.app/paperos/issue/PAP-166/build-the-filter-builder-andor-groups-multi-sort-and-multi-level",
+   "title": "Build the filter builder (AND/OR groups), multi-sort and multi-level grouping UI with aggregates",
+   "readyNow": false
+  },
+  "tables/kanban-view": {
+   "id": "18a4dda1-2f4e-45e3-8cd3-9650c3fd9ffa",
+   "identifier": "PAP-167",
+   "url": "https://linear.app/paperos/issue/PAP-167/build-the-kanban-board-view-with-swimlanes-wip-limits-and-drag-and",
+   "title": "Build the kanban board view with swimlanes, WIP limits and drag-and-drop",
+   "readyNow": false
+  },
+  "tables/calendar-timeline-gantt": {
+   "id": "698166ed-2366-480a-9d89-96c48248df5e",
+   "identifier": "PAP-168",
+   "url": "https://linear.app/paperos/issue/PAP-168/build-calendar-timeline-and-gantt-views-with-dependencies",
+   "title": "Build calendar, timeline and Gantt views with dependencies",
+   "readyNow": false
+  },
+  "tables/gallery-list-form": {
+   "id": "8857ad07-ff4e-459e-a7e2-7a89470acb1d",
+   "identifier": "PAP-169",
+   "url": "https://linear.app/paperos/issue/PAP-169/build-gallery-list-and-form-views",
+   "title": "Build gallery, list and form views",
+   "readyNow": false
+  },
+  "tables/map-chart-views": {
+   "id": "4e6905aa-6b75-40a0-9953-24520a586110",
+   "identifier": "PAP-170",
+   "url": "https://linear.app/paperos/issue/PAP-170/build-map-view-and-chart-view-bar-line-pie-number-bound-to-view",
+   "title": "Build map view and chart view (bar, line, pie, number) bound to view aggregations",
+   "readyNow": false
+  },
+  "tables/formula-engine": {
+   "id": "271dc866-3e6c-4d81-9349-431078c46c82",
+   "identifier": "PAP-171",
+   "url": "https://linear.app/paperos/issue/PAP-171/build-a-formula-engine-compatible-with-common-airtable-and-notion",
+   "title": "Build a formula engine compatible with common Airtable and Notion functions",
+   "readyNow": false
+  },
+  "tables/view-sharing": {
+   "id": "d01dd88b-e31a-48b6-892d-5383cc5404f2",
+   "identifier": "PAP-172",
+   "url": "https://linear.app/paperos/issue/PAP-172/add-saved-views-personal-vs-shared-views-public-embeds-and-per",
+   "title": "Add saved views, personal vs shared views, public embeds and per-audience defaults",
+   "readyNow": false
+  },
+  "tables/dashboard-blocks": {
+   "id": "d57e432f-d493-4084-9d4b-7c25d4d49b43",
+   "identifier": "PAP-173",
+   "url": "https://linear.app/paperos/issue/PAP-173/compose-views-into-dashboard-pages-with-drag-arranged-blocks-and-cross",
+   "title": "Compose views into dashboard pages with drag-arranged blocks and cross-filters",
+   "readyNow": false
+  },
+  "tables/automations": {
+   "id": "c2b9c3d2-cf7b-4c16-be55-9b68cee55fb8",
+   "identifier": "PAP-174",
+   "url": "https://linear.app/paperos/issue/PAP-174/build-table-automations-triggers-record-change-schedule-form-inbound",
+   "title": "Build table automations: triggers (record change, schedule, form, inbound webhook), filter-tree conditions and actions (update record, notify, outbound webhook, connector call, create Linear issue) with a run log",
+   "readyNow": false
+  },
+  "business-core/finance-data-model": {
+   "id": "896873a6-fc38-4caa-8b85-f9ff6a8aa10d",
+   "identifier": "PAP-175",
+   "url": "https://linear.app/paperos/issue/PAP-175/specify-the-finance-data-model-customers-vendors-employees-accounts",
+   "title": "Specify the finance data model: customers, vendors, employees, accounts, transactions and periods across all business types",
+   "readyNow": false
+  },
+  "business-core/payroll-research": {
+   "id": "ef34707c-ea53-4fcf-9a30-4c6a4b06618b",
+   "identifier": "PAP-176",
+   "url": "https://linear.app/paperos/issue/PAP-176/research-payroll-apis-check-gusto-embedded-deel-rippling-for",
+   "title": "Research payroll APIs (Check, Gusto Embedded, Deel, Rippling) for embeddability and pricing; write ADR",
+   "readyNow": false
+  },
+  "business-core/stripe-billing": {
+   "id": "54b9472b-f414-4483-bc11-711db18105f6",
+   "identifier": "PAP-177",
+   "url": "https://linear.app/paperos/issue/PAP-177/integrate-stripe-billing-products-prices-subscriptions-customer-portal",
+   "title": "Integrate Stripe Billing: products, prices, subscriptions, customer portal and webhooks",
+   "readyNow": false
+  },
+  "business-core/entitlements": {
+   "id": "a912fb01-9af3-4fa6-9d25-76e4aa07952e",
+   "identifier": "PAP-178",
+   "url": "https://linear.app/paperos/issue/PAP-178/map-plans-to-feature-entitlements-enforced-by-the-permission-engine",
+   "title": "Map plans to feature entitlements enforced by the permission engine",
+   "readyNow": false
+  },
+  "business-core/ledger": {
+   "id": "32e5181c-c716-4e77-9aae-dcb592fca150",
+   "identifier": "PAP-179",
+   "url": "https://linear.app/paperos/issue/PAP-179/build-a-double-entry-ledger-accounts-journal-entries-periods-in",
+   "title": "Build a double-entry ledger (accounts, journal entries, periods) in Postgres with immutability guarantees",
+   "readyNow": false
+  },
+  "business-core/invoicing": {
+   "id": "0bcc9871-bc3f-49d0-a9cd-e8027451fc21",
+   "identifier": "PAP-180",
+   "url": "https://linear.app/paperos/issue/PAP-180/implement-invoices-quotes-and-receipts-with-pdf-generation-and-stripe",
+   "title": "Implement invoices, quotes and receipts with PDF generation and Stripe payment links",
+   "readyNow": false
+  },
+  "business-core/stripe-connect": {
+   "id": "60978eb0-e39c-4d6d-a471-fe36f0a32b53",
+   "identifier": "PAP-181",
+   "url": "https://linear.app/paperos/issue/PAP-181/add-stripe-connect-so-tenants-can-accept-payments-and-receive-payouts",
+   "title": "Add Stripe Connect so tenants can accept payments and receive payouts",
+   "readyNow": false
+  },
+  "business-core/tax-compliance": {
+   "id": "14be5f24-bd68-46a7-9040-2d06784ea10c",
+   "identifier": "PAP-182",
+   "url": "https://linear.app/paperos/issue/PAP-182/handle-sales-tax-and-vat-via-stripe-tax-and-store-tax-evidence",
+   "title": "Handle sales tax and VAT via Stripe Tax and store tax evidence",
+   "readyNow": false
+  },
+  "business-core/finance-reports": {
+   "id": "241b5ff2-3ba3-430a-9127-0565edc986ce",
+   "identifier": "PAP-183",
+   "url": "https://linear.app/paperos/issue/PAP-183/generate-pandl-balance-sheet-cash-flow-and-arap-aging-as-table-views",
+   "title": "Generate P&L, balance sheet, cash flow and AR/AP aging as table views",
+   "readyNow": false
+  },
+  "business-core/payroll-adapter": {
+   "id": "59a20396-69b7-4535-9332-1eba1ad2d891",
+   "identifier": "PAP-184",
+   "url": "https://linear.app/paperos/issue/PAP-184/define-the-payroll-provider-interface-and-implement-the-first-adapter",
+   "title": "Define the payroll provider interface and implement the first adapter (Check or Gusto Embedded)",
+   "readyNow": false
+  },
+  "business-core/expense-capture": {
+   "id": "c7a44fe0-7119-4f63-9b8e-2edd4dcabf85",
+   "identifier": "PAP-185",
+   "url": "https://linear.app/paperos/issue/PAP-185/add-expense-capture-with-receipt-ocr-and-ledger-posting",
+   "title": "Add expense capture with receipt OCR and ledger posting",
+   "readyNow": false
+  },
+  "business-core/cash-dashboard": {
+   "id": "f572eb58-13cf-4cfe-a6c8-67c265bd891f",
+   "identifier": "PAP-186",
+   "url": "https://linear.app/paperos/issue/PAP-186/build-the-cash-flow-dashboard-in-out-runway-upcoming-payroll-as-the",
+   "title": "Build the cash-flow dashboard (in, out, runway, upcoming payroll) as the first dashboard-blocks consumer",
+   "readyNow": false
+  },
+  "growth/crm-model": {
+   "id": "f82267c3-6dbe-4dc2-8590-2fe7db751c00",
+   "identifier": "PAP-187",
+   "url": "https://linear.app/paperos/issue/PAP-187/model-crm-entities-lead-contact-company-deal-pipeline-stage-activity",
+   "title": "Model CRM entities: lead, contact, company, deal, pipeline stage, activity, segment",
+   "readyNow": false
+  },
+  "growth/growth-research": {
+   "id": "7ef215d7-2ff4-46b0-b09c-82b0223f9436",
+   "identifier": "PAP-188",
+   "url": "https://linear.app/paperos/issue/PAP-188/survey-open-source-crm-and-marketing-stacks-twenty-postiz-listmonk-dub",
+   "title": "Survey open-source CRM and marketing stacks (Twenty, Postiz, Listmonk, Dub) for reuse vs build; write ADR",
+   "readyNow": false
+  },
+  "growth/crm-views": {
+   "id": "89096dbd-1079-4f3b-ba11-36a185718412",
+   "identifier": "PAP-189",
+   "url": "https://linear.app/paperos/issue/PAP-189/build-crm-pipeline-kanban-contact-list-and-company-views-on-the-tables",
+   "title": "Build CRM pipeline (kanban), contact list and company views on the tables engine",
+   "readyNow": false
+  },
+  "growth/social-scheduler": {
+   "id": "5972b27f-5051-481b-b27f-0be141f2c63c",
+   "identifier": "PAP-190",
+   "url": "https://linear.app/paperos/issue/PAP-190/build-a-social-media-scheduler-with-adapters-x-linkedin-instagram",
+   "title": "Build a social media scheduler with adapters (X, LinkedIn, Instagram, TikTok, YouTube) and an approval queue",
+   "readyNow": false
+  },
+  "growth/outreach-sequences": {
+   "id": "251ffea7-db95-40f6-b334-dcd6927a369c",
+   "identifier": "PAP-191",
+   "url": "https://linear.app/paperos/issue/PAP-191/build-email-and-sms-outreach-sequences-resend-twilio-with-warmup-and",
+   "title": "Build email and SMS outreach sequences (Resend, Twilio) with warmup and reply detection",
+   "readyNow": false
+  },
+  "growth/content-agent": {
+   "id": "5dbfdb3e-efd0-4092-9f54-09c469563141",
+   "identifier": "PAP-192",
+   "url": "https://linear.app/paperos/issue/PAP-192/create-the-content-agent-character-that-drafts-posts-and-emails-from",
+   "title": "Create the content agent character that drafts posts and emails from changelogs and specs for human approval",
+   "readyNow": false
+  },
+  "growth/landing-forms": {
+   "id": "d46e24df-7d27-4aa9-8fd8-ae10d40e1dfe",
+   "identifier": "PAP-193",
+   "url": "https://linear.app/paperos/issue/PAP-193/publish-landing-pages-via-the-webflow-api-and-capture-forms-into-the",
+   "title": "Publish landing pages via the Webflow API and capture forms into the CRM",
+   "readyNow": false
+  },
+  "growth/attribution": {
+   "id": "eee417cd-3c9d-40d0-8a82-f907f47e212c",
+   "identifier": "PAP-194",
+   "url": "https://linear.app/paperos/issue/PAP-194/track-acquisition-analytics-utm-referral-funnel-with-a-privacy-first",
+   "title": "Track acquisition analytics (UTM, referral, funnel) with a privacy-first event pipeline",
+   "readyNow": false
+  },
+  "growth/segments": {
+   "id": "76255acb-a296-484c-af3d-f22b7e5d448d",
+   "identifier": "PAP-195",
+   "url": "https://linear.app/paperos/issue/PAP-195/build-audience-segments-from-crm-and-product-usage-that-feed-campaigns",
+   "title": "Build audience segments from CRM and product usage that feed campaigns and in-app targeting",
+   "readyNow": false
+  },
+  "growth/referral-program": {
+   "id": "9b821dff-b509-4160-bdf7-5d22d42635e5",
+   "identifier": "PAP-196",
+   "url": "https://linear.app/paperos/issue/PAP-196/implement-a-referral-and-affiliate-program-with-stripe-connect-payouts",
+   "title": "Implement a referral and affiliate program with Stripe Connect payouts",
+   "readyNow": false
+  },
+  "growth/support-inbox": {
+   "id": "c823edb8-aa18-41de-9b79-bb5f436aaf53",
+   "identifier": "PAP-197",
+   "url": "https://linear.app/paperos/issue/PAP-197/build-a-shared-support-inbox-email-and-in-app-chat-linked-to-crm",
+   "title": "Build a shared support inbox (email and in-app chat) linked to CRM contacts",
+   "readyNow": false
+  },
+  "migration/format-research": {
+   "id": "a0677d67-4bed-46a9-9ddc-01fb69d1ca0b",
+   "identifier": "PAP-198",
+   "url": "https://linear.app/paperos/issue/PAP-198/catalog-export-formats-and-api-limits-of-airtable-notion-clickup",
+   "title": "Catalog export formats and API limits of Airtable, Notion, ClickUp, Monday, HubSpot and QuickBooks",
+   "readyNow": false
+  },
+  "migration/import-framework": {
+   "id": "9fc663e7-a30b-4be5-aed4-99a9d17f1cb7",
+   "identifier": "PAP-199",
+   "url": "https://linear.app/paperos/issue/PAP-199/build-the-import-framework-source-connector-schema-mapping-ui-dry-run",
+   "title": "Build the import framework: source connector, schema-mapping UI, dry run, validation, rollback",
+   "readyNow": false
+  },
+  "migration/csv-excel": {
+   "id": "b4aa9823-54ae-452c-ad3a-cf44631a9018",
+   "identifier": "PAP-200",
+   "url": "https://linear.app/paperos/issue/PAP-200/import-csv-excel-and-google-sheets-with-type-inference",
+   "title": "Import CSV, Excel and Google Sheets with type inference",
+   "readyNow": false
+  },
+  "migration/id-mapping": {
+   "id": "4bb9e146-dafb-491e-8310-70d0b854295e",
+   "identifier": "PAP-201",
+   "url": "https://linear.app/paperos/issue/PAP-201/persist-external-id-mappings-for-re-sync-and-incremental-imports",
+   "title": "Persist external ID mappings for re-sync and incremental imports",
+   "readyNow": false
+  },
+  "migration/airtable": {
+   "id": "335be1f7-f58a-4ed3-ab9d-bdf2a05a110b",
+   "identifier": "PAP-202",
+   "url": "https://linear.app/paperos/issue/PAP-202/import-airtable-bases-tables-views-relations-attachments",
+   "title": "Import Airtable bases (tables, views, relations, attachments)",
+   "readyNow": false
+  },
+  "migration/notion": {
+   "id": "23307d66-7948-486f-b98d-4f59469e6fec",
+   "identifier": "PAP-203",
+   "url": "https://linear.app/paperos/issue/PAP-203/import-notion-databases-and-pages-into-tables-and-docs",
+   "title": "Import Notion databases and pages into tables and docs",
+   "readyNow": false
+  },
+  "migration/clickup-linear": {
+   "id": "bce7c8bf-8dd0-49ab-a4b7-8932e08b524e",
+   "identifier": "PAP-204",
+   "url": "https://linear.app/paperos/issue/PAP-204/import-clickup-and-linear-workspaces-into-the-pm-module",
+   "title": "Import ClickUp and Linear workspaces into the PM module",
+   "readyNow": false
+  },
+  "migration/export": {
+   "id": "8bdf9438-c2e5-4a1b-8119-94862508c5c4",
+   "identifier": "PAP-205",
+   "url": "https://linear.app/paperos/issue/PAP-205/export-everything-tables-docs-files-ledger-to-open-formats",
+   "title": "Export everything (tables, docs, files, ledger) to open formats",
+   "readyNow": false
+  },
+  "migration/stripe-quickbooks": {
+   "id": "46e7dd8c-845f-455e-87fd-667f37968cf1",
+   "identifier": "PAP-206",
+   "url": "https://linear.app/paperos/issue/PAP-206/import-stripe-customers-and-subscriptions-and-quickbooksxero-charts-of",
+   "title": "Import Stripe customers and subscriptions and QuickBooks/Xero charts of accounts into the ledger",
+   "readyNow": false
+  },
+  "migration/business-templates": {
+   "id": "e060ed3a-ef1a-4aaf-b8b6-0e496a4c0bf0",
+   "identifier": "PAP-207",
+   "url": "https://linear.app/paperos/issue/PAP-207/ship-business-type-templates-agency-retail-saas-clinic-restaurant-as",
+   "title": "Ship business-type templates (agency, retail, SaaS, clinic, restaurant) as importable seed packs",
+   "readyNow": false
+  },
+  "migration/migration-agent": {
+   "id": "83317bd0-de2e-46d0-892a-48f10039f2c0",
+   "identifier": "PAP-208",
+   "url": "https://linear.app/paperos/issue/PAP-208/create-the-migration-agent-character-that-interviews-users-about",
+   "title": "Create the migration agent character that interviews users about current tools and runs the imports",
+   "readyNow": false
+  },
+  "libraries/eval-rubric": {
+   "id": "41e4cd32-594f-466b-a183-92f0c68a49c8",
+   "identifier": "PAP-209",
+   "url": "https://linear.app/paperos/issue/PAP-209/define-the-library-evaluation-rubric-license-maintenance-bundle-size",
+   "title": "Define the library evaluation rubric (license, maintenance, bundle size, a11y, TS quality, agent-friendliness) and ADR template",
+   "readyNow": true
+  },
+  "libraries/mcp-servers": {
+   "id": "b5e7ed00-9e7b-4c17-94eb-315b72188def",
+   "identifier": "PAP-210",
+   "url": "https://linear.app/paperos/issue/PAP-210/catalog-and-configure-mcp-servers-and-connectors-linear-github-stripe",
+   "title": "Catalog and configure MCP servers and connectors (Linear, GitHub, Stripe, Notion, Drive, Webflow, Miro, Gamma) for agents",
+   "readyNow": true
+  },
+  "libraries/license-policy": {
+   "id": "b54cdf94-7b57-496b-8d8b-98b12c32589b",
+   "identifier": "PAP-211",
+   "url": "https://linear.app/paperos/issue/PAP-211/set-the-license-policy-allow-mitapachebsd-review-agpl-block-sspl",
+   "title": "Set the license policy (allow MIT/Apache/BSD, review AGPL, block SSPL) enforced by a CI license check",
+   "readyNow": false
+  },
+  "libraries/ui-landscape": {
+   "id": "0ec7ab66-196a-460d-8831-4a06d9260a08",
+   "identifier": "PAP-212",
+   "url": "https://linear.app/paperos/issue/PAP-212/survey-ui-kits-and-headless-libraries-base-ui-radix-react-aria-shadcn",
+   "title": "Survey UI kits and headless libraries (Base UI, Radix, React Aria, shadcn, Ark) and recommend",
+   "readyNow": false
+  },
+  "libraries/data-landscape": {
+   "id": "def0c7c8-c4fb-41e5-9058-f38a4aadd6c7",
+   "identifier": "PAP-213",
+   "url": "https://linear.app/paperos/issue/PAP-213/survey-table-canvas-editor-and-chart-libraries-tanstack-ag-grid-tldraw",
+   "title": "Survey table, canvas, editor and chart libraries (TanStack, AG Grid, tldraw, Tiptap, ECharts, visx) and recommend",
+   "readyNow": false
+  },
+  "libraries/backend-landscape": {
+   "id": "75cd83a8-333f-4119-8803-380b4efa35f7",
+   "identifier": "PAP-214",
+   "url": "https://linear.app/paperos/issue/PAP-214/survey-backend-building-blocks-better-auth-drizzle-electric-hocuspocus",
+   "title": "Survey backend building blocks (Better Auth, Drizzle, Electric, Hocuspocus, Inngest, Resend) and recommend",
+   "readyNow": false
+  },
+  "libraries/oss-products": {
+   "id": "6f25ae7e-b277-4248-95f5-240344d1dfee",
+   "identifier": "PAP-215",
+   "url": "https://linear.app/paperos/issue/PAP-215/evaluate-whole-oss-products-to-embed-or-fork-twenty-crm-nocodb-baserow",
+   "title": "Evaluate whole OSS products to embed or fork (Twenty CRM, NocoDB, Baserow, Plane, Cal.com, Formbricks, Postiz)",
+   "readyNow": false
+  },
+  "libraries/registry": {
+   "id": "f88d4098-ee55-4b92-bab2-f7bdfff2bedd",
+   "identifier": "PAP-216",
+   "url": "https://linear.app/paperos/issue/PAP-216/build-the-library-registry-in-the-docs-system-adopted-trialing",
+   "title": "Build the library registry in the docs system: adopted, trialing, rejected with reasons and owners",
+   "readyNow": false
+  },
+  "libraries/upgrade-bot": {
+   "id": "670915b9-d580-4b31-9160-351b036f8b7d",
+   "identifier": "PAP-217",
+   "url": "https://linear.app/paperos/issue/PAP-217/set-up-renovate-with-grouped-upgrades-and-agent-reviewed-changelog",
+   "title": "Set up Renovate with grouped upgrades and agent-reviewed changelog summaries",
+   "readyNow": false
+  },
+  "libraries/scout-agent": {
+   "id": "e3b1aef2-e4b7-4a1a-a875-afc3cdc8b10a",
+   "identifier": "PAP-218",
+   "url": "https://linear.app/paperos/issue/PAP-218/create-the-scout-character-routine-weekly-scan-for-new-libraries",
+   "title": "Create the Scout character routine: weekly scan for new libraries relevant to open issues",
+   "readyNow": false
+  }
+ },
+ "relations": [
+  "agents/character-schema>>agents/roster-v1",
+  "agents/character-schema>>agents/skills-library",
+  "agents/roster-v1>>agents/character-docs",
+  "agents/roster-v1>>agents/eval-harness",
+  "agents/roster-v1>>agents/handoffs",
+  "agents/roster-v1>>agents/memory",
+  "agents/roster-v1>>agents/org-chart-ui",
+  "agents/roster-v1>>agents/tool-scopes",
+  "agents/roster-v1>>growth/content-agent",
+  "agents/roster-v1>>libraries/scout-agent",
+  "agents/roster-v1>>migration/migration-agent",
+  "agents/skills-library>>agents/eval-harness",
+  "agents/skills-library>>collab/rules-skills-registry",
+  "agents/skills-library>>spec-builder/spec-authoring-skill",
+  "app-shell/app-deploy-pipeline>>app-shell/new-app-drill",
+  "app-shell/app-deploy-pipeline>>quality/e2e-flows",
+  "app-shell/app-deploy-pipeline>>quality/release-train",
+  "app-shell/breakpoints-windows>>app-shell/linux-kiosk",
+  "app-shell/breakpoints-windows>>realtime/multi-window-sync",
+  "app-shell/create-cli>>app-shell/feature-modules",
+  "app-shell/create-cli>>app-shell/new-app-drill",
+  "app-shell/device-matrix-research>>app-shell/breakpoints-windows",
+  "app-shell/device-matrix-research>>quality/playwright-matrix",
+  "app-shell/feature-modules>>spec-builder/business-profile",
+  "app-shell/i18n-l10n>>spec-builder/business-profile",
+  "app-shell/monorepo-scaffold>>app-shell/app-deploy-pipeline",
+  "app-shell/monorepo-scaffold>>app-shell/env-config",
+  "app-shell/monorepo-scaffold>>app-shell/gh-pages-demo",
+  "app-shell/monorepo-scaffold>>app-shell/i18n-l10n",
+  "app-shell/monorepo-scaffold>>app-shell/pwa",
+  "app-shell/monorepo-scaffold>>app-shell/router-layouts",
+  "app-shell/monorepo-scaffold>>app-shell/tauri-desktop",
+  "app-shell/monorepo-scaffold>>data-layer/local-dev-stack",
+  "app-shell/monorepo-scaffold>>quality/ci-gate1",
+  "app-shell/router-layouts>>app-shell/create-cli",
+  "app-shell/router-layouts>>app-shell/template-docs",
+  "app-shell/router-layouts>>collab/docs-engine",
+  "app-shell/router-layouts>>design-system/layout-components",
+  "app-shell/router-layouts>>forge/in-app-git",
+  "app-shell/router-layouts>>identity/customer-portal-shell",
+  "app-shell/router-layouts>>identity/staff-console-shell",
+  "app-shell/tauri-desktop>>app-shell/breakpoints-windows",
+  "app-shell/tauri-desktop>>app-shell/tauri-mobile",
+  "app-shell/tauri-desktop>>app-shell/template-docs",
+  "app-shell/tauri-mobile>>input/touch-gestures",
+  "app-shell/vps-coolify-bootstrap>>app-shell/app-deploy-pipeline",
+  "app-shell/vps-coolify-bootstrap>>data-layer/postgres-provision",
+  "app-shell/vps-coolify-bootstrap>>forge/forgejo-deploy",
+  "app-shell/vps-coolify-bootstrap>>realtime/yjs-server",
+  "business-core/finance-data-model>>business-core/ledger",
+  "business-core/finance-data-model>>business-core/stripe-billing",
+  "business-core/finance-reports>>business-core/cash-dashboard",
+  "business-core/ledger>>business-core/expense-capture",
+  "business-core/ledger>>business-core/finance-reports",
+  "business-core/ledger>>business-core/invoicing",
+  "business-core/ledger>>business-core/payroll-adapter",
+  "business-core/ledger>>migration/stripe-quickbooks",
+  "business-core/payroll-research>>business-core/payroll-adapter",
+  "business-core/stripe-billing>>business-core/entitlements",
+  "business-core/stripe-billing>>business-core/invoicing",
+  "business-core/stripe-billing>>business-core/stripe-connect",
+  "business-core/stripe-billing>>business-core/tax-compliance",
+  "business-core/stripe-connect>>growth/referral-program",
+  "collab/canvas-view>>agents/org-chart-ui",
+  "collab/canvas-view>>input/pen",
+  "collab/canvas-view>>spec-builder/spec-to-canvas",
+  "collab/changelog>>forge/release-tags",
+  "collab/collab-research>>collab/canvas-view",
+  "collab/collab-research>>realtime/collab-text",
+  "collab/comments>>collab/notifications",
+  "collab/comments>>collab/screenshot-annotations",
+  "collab/comments>>growth/support-inbox",
+  "collab/docs-engine>>agents/memory",
+  "collab/docs-engine>>collab/decision-log",
+  "collab/docs-engine>>collab/knowledge-search",
+  "collab/docs-engine>>collab/rules-skills-registry",
+  "collab/docs-engine>>data-layer/data-dictionary",
+  "collab/docs-engine>>design-system/guidelines-docs",
+  "collab/docs-engine>>libraries/registry",
+  "collab/docs-engine>>migration/notion",
+  "collab/prompt-log-store>>agents/prompt-logging-hook",
+  "collab/prompt-log-store>>collab/prompt-log-ui",
+  "data-layer/api-layer>>data-layer/local-first-sync",
+  "data-layer/api-layer>>data-layer/observability",
+  "data-layer/api-layer>>spec-builder/data-section",
+  "data-layer/api-layer>>tables/query-compiler",
+  "data-layer/audit-log>>identity/impersonation",
+  "data-layer/core-entities>>business-core/finance-data-model",
+  "data-layer/core-entities>>collab/prompt-log-store",
+  "data-layer/core-entities>>data-layer/api-layer",
+  "data-layer/core-entities>>data-layer/audit-log",
+  "data-layer/core-entities>>data-layer/file-storage",
+  "data-layer/core-entities>>data-layer/rls-tenancy",
+  "data-layer/core-entities>>data-layer/search",
+  "data-layer/core-entities>>growth/crm-model",
+  "data-layer/core-entities>>identity/better-auth",
+  "data-layer/core-entities>>pm-linear/pm-data-model",
+  "data-layer/drizzle-schema>>data-layer/core-entities",
+  "data-layer/drizzle-schema>>data-layer/data-dictionary",
+  "data-layer/drizzle-schema>>data-layer/jobs-queue",
+  "data-layer/file-storage>>business-core/expense-capture",
+  "data-layer/jobs-queue>>collab/notifications",
+  "data-layer/jobs-queue>>data-layer/file-storage",
+  "data-layer/jobs-queue>>data-layer/search",
+  "data-layer/jobs-queue>>growth/attribution",
+  "data-layer/jobs-queue>>growth/outreach-sequences",
+  "data-layer/jobs-queue>>growth/social-scheduler",
+  "data-layer/jobs-queue>>migration/export",
+  "data-layer/jobs-queue>>migration/import-framework",
+  "data-layer/jobs-queue>>tables/automations",
+  "data-layer/local-dev-stack>>data-layer/drizzle-schema",
+  "data-layer/local-first-sync>>realtime/record-sync",
+  "data-layer/postgres-provision>>app-shell/app-deploy-pipeline",
+  "data-layer/rls-tenancy>>identity/rbac-abac",
+  "data-layer/search>>collab/knowledge-search",
+  "data-layer/sync-research>>data-layer/local-first-sync",
+  "design-system/component-spec-mapping>>spec-builder/layout-codegen",
+  "design-system/data-display>>tables/grid-view",
+  "design-system/layout-components>>input/focus-management",
+  "design-system/layout-components>>spec-builder/spec-editor-ui",
+  "design-system/primitives>>design-system/a11y-audit",
+  "design-system/primitives>>design-system/component-spec-mapping",
+  "design-system/primitives>>design-system/data-display",
+  "design-system/primitives>>design-system/layout-components",
+  "design-system/primitives>>design-system/storybook",
+  "design-system/primitives>>input/command-registry",
+  "design-system/storybook>>design-system/a11y-audit",
+  "design-system/storybook>>design-system/guidelines-docs",
+  "design-system/tokens>>app-shell/i18n-l10n",
+  "design-system/tokens>>design-system/figma-sync",
+  "design-system/tokens>>design-system/icons-illustrations",
+  "design-system/tokens>>design-system/motion",
+  "design-system/tokens>>design-system/primitives",
+  "design-system/tokens>>design-system/theming",
+  "forge/actions-runner>>forge/dr-drill",
+  "forge/bot-accounts>>agents/tool-scopes",
+  "forge/bot-accounts>>forge/repo-bootstrap",
+  "forge/branch-policy>>collab/changelog",
+  "forge/branch-policy>>forge/pr-templates",
+  "forge/branch-policy>>forge/release-tags",
+  "forge/branch-policy>>pm-linear/orchestrator",
+  "forge/forgejo-deploy>>forge/actions-runner",
+  "forge/forgejo-deploy>>forge/bot-accounts",
+  "forge/forgejo-deploy>>forge/in-app-git",
+  "forge/forgejo-deploy>>forge/mirror",
+  "forge/mirror>>app-shell/create-cli",
+  "forge/mirror>>forge/dr-drill",
+  "forge/mirror>>forge/repo-bootstrap",
+  "growth/crm-model>>growth/attribution",
+  "growth/crm-model>>growth/crm-views",
+  "growth/crm-model>>growth/landing-forms",
+  "growth/crm-model>>growth/outreach-sequences",
+  "growth/crm-model>>growth/segments",
+  "growth/crm-model>>growth/social-scheduler",
+  "growth/crm-model>>growth/support-inbox",
+  "growth/growth-research>>growth/social-scheduler",
+  "growth/social-scheduler>>growth/content-agent",
+  "identity/agent-principals>>realtime/agent-presence",
+  "identity/audience-model>>identity/rbac-abac",
+  "identity/auth-research>>identity/better-auth",
+  "identity/better-auth>>identity/org-tenancy",
+  "identity/better-auth>>realtime/yjs-server",
+  "identity/org-tenancy>>business-core/stripe-billing",
+  "identity/org-tenancy>>identity/customer-portal-shell",
+  "identity/org-tenancy>>identity/sso-scim",
+  "identity/org-tenancy>>identity/staff-console-shell",
+  "identity/org-tenancy>>quality/e2e-flows",
+  "identity/rbac-abac>>business-core/entitlements",
+  "identity/rbac-abac>>collab/comments",
+  "identity/rbac-abac>>identity/agent-principals",
+  "identity/rbac-abac>>identity/impersonation",
+  "identity/rbac-abac>>identity/permission-tests",
+  "identity/rbac-abac>>tables/view-sharing",
+  "input/command-registry>>input/keymaps",
+  "input/command-registry>>input/voice",
+  "input/drag-drop>>tables/dashboard-blocks",
+  "input/drag-drop>>tables/kanban-view",
+  "input/focus-management>>input/gamepad",
+  "input/focus-management>>input/screen-reader",
+  "input/input-abstraction>>input/drag-drop",
+  "input/input-abstraction>>input/pen",
+  "input/input-abstraction>>input/touch-gestures",
+  "input/screen-reader>>input/a11y-statement",
+  "libraries/backend-landscape>>data-layer/jobs-queue",
+  "libraries/eval-rubric>>libraries/backend-landscape",
+  "libraries/eval-rubric>>libraries/data-landscape",
+  "libraries/eval-rubric>>libraries/license-policy",
+  "libraries/eval-rubric>>libraries/oss-products",
+  "libraries/eval-rubric>>libraries/registry",
+  "libraries/eval-rubric>>libraries/ui-landscape",
+  "libraries/mcp-servers>>spec-builder/integrations-section",
+  "libraries/registry>>libraries/scout-agent",
+  "libraries/ui-landscape>>design-system/primitives",
+  "migration/import-framework>>migration/airtable",
+  "migration/import-framework>>migration/business-templates",
+  "migration/import-framework>>migration/clickup-linear",
+  "migration/import-framework>>migration/csv-excel",
+  "migration/import-framework>>migration/export",
+  "migration/import-framework>>migration/id-mapping",
+  "migration/import-framework>>migration/migration-agent",
+  "migration/import-framework>>migration/notion",
+  "migration/import-framework>>migration/stripe-quickbooks",
+  "pm-linear/configure-workspace>>app-shell/create-cli",
+  "pm-linear/configure-workspace>>pm-linear/issue-contract",
+  "pm-linear/configure-workspace>>pm-linear/justin-queue",
+  "pm-linear/configure-workspace>>pm-linear/orchestrator",
+  "pm-linear/configure-workspace>>pm-linear/pap5-decompose",
+  "pm-linear/credit-metering>>agents/cost-controls",
+  "pm-linear/orchestrator>>pm-linear/concurrency",
+  "pm-linear/orchestrator>>pm-linear/credit-metering",
+  "pm-linear/orchestrator>>pm-linear/webhooks",
+  "pm-linear/pm-data-model>>migration/clickup-linear",
+  "pm-linear/pm-data-model>>pm-linear/board-views",
+  "pm-linear/pm-data-model>>pm-linear/linear-sync",
+  "pm-linear/session-playbook>>pm-linear/orchestrator",
+  "pm-linear/webhooks>>pm-linear/linear-sync",
+  "quality/ci-gate1>>libraries/upgrade-bot",
+  "quality/ci-gate1>>quality/perf-budgets",
+  "quality/ci-gate1>>quality/playwright-matrix",
+  "quality/ci-gate1>>quality/review-agents",
+  "quality/ci-gate1>>quality/security-scans",
+  "quality/ci-gate1>>spec-builder/conformance-tests",
+  "quality/e2e-flows>>quality/flake-quarantine",
+  "quality/playwright-matrix>>quality/release-train",
+  "quality/playwright-matrix>>quality/screenshot-annotation",
+  "quality/playwright-matrix>>quality/video-replays",
+  "quality/release-train>>app-shell/new-app-drill",
+  "quality/release-train>>quality/review-report",
+  "quality/review-agents>>quality/edge-case-hunter",
+  "quality/review-agents>>quality/release-train",
+  "quality/review-rubrics>>quality/review-agents",
+  "quality/video-replays>>collab/screenshot-annotations",
+  "realtime/multi-window-sync>>app-shell/linux-kiosk",
+  "realtime/presence>>realtime/agent-presence",
+  "realtime/presence>>realtime/followmode",
+  "realtime/record-sync>>realtime/conflict-ux",
+  "realtime/record-sync>>realtime/offline-queue",
+  "realtime/yjs-server>>collab/canvas-view",
+  "realtime/yjs-server>>collab/comments",
+  "realtime/yjs-server>>realtime/collab-text",
+  "realtime/yjs-server>>realtime/load-test",
+  "realtime/yjs-server>>realtime/multi-window-sync",
+  "realtime/yjs-server>>realtime/presence",
+  "spec-builder/access-section>>identity/permission-tests",
+  "spec-builder/app-level-spec>>app-shell/feature-modules",
+  "spec-builder/app-level-spec>>spec-builder/business-profile",
+  "spec-builder/conformance-tests>>identity/permission-tests",
+  "spec-builder/integrations-section>>tables/automations",
+  "spec-builder/schema>>collab/canvas-view",
+  "spec-builder/schema>>design-system/component-spec-mapping",
+  "spec-builder/schema>>quality/edge-case-hunter",
+  "spec-builder/schema>>spec-builder/access-section",
+  "spec-builder/schema>>spec-builder/app-level-spec",
+  "spec-builder/schema>>spec-builder/data-section",
+  "spec-builder/schema>>spec-builder/integrations-section",
+  "spec-builder/schema>>spec-builder/layout-codegen",
+  "spec-builder/schema>>spec-builder/spec-editor-ui",
+  "spec-builder/schema>>spec-builder/spec-to-canvas",
+  "spec-builder/schema>>spec-builder/validator",
+  "spec-builder/validator>>spec-builder/conformance-tests",
+  "spec-builder/validator>>spec-builder/spec-authoring-skill",
+  "spec-builder/validator>>spec-builder/spec-docs",
+  "tables/dashboard-blocks>>business-core/cash-dashboard",
+  "tables/field-types>>migration/import-framework",
+  "tables/field-types>>tables/formula-engine",
+  "tables/field-types>>tables/grid-view",
+  "tables/filter-sort-group-ui>>growth/segments",
+  "tables/filter-sort-group-ui>>tables/automations",
+  "tables/grid-view>>business-core/finance-reports",
+  "tables/grid-view>>collab/prompt-log-ui",
+  "tables/grid-view>>tables/dashboard-blocks",
+  "tables/grid-view>>tables/filter-sort-group-ui",
+  "tables/grid-view>>tables/view-sharing",
+  "tables/kanban-view>>growth/crm-views",
+  "tables/kanban-view>>pm-linear/board-views",
+  "tables/map-chart-views>>tables/dashboard-blocks",
+  "tables/query-compiler>>tables/calendar-timeline-gantt",
+  "tables/query-compiler>>tables/gallery-list-form",
+  "tables/query-compiler>>tables/grid-view",
+  "tables/query-compiler>>tables/kanban-view",
+  "tables/query-compiler>>tables/map-chart-views",
+  "tables/view-model-spec>>migration/business-templates",
+  "tables/view-model-spec>>tables/field-types",
+  "tables/view-model-spec>>tables/query-compiler"
+ ],
+ "notes": [
+  "Surface labels (Customer/Staff/Developer/Agent) were moved out of the 'Surface' group to top level: Linear enforces one-label-per-group, and 53 issues legitimately span two or three surfaces. The empty 'Surface' group label remains (nothing is ever deleted).",
+  "An interrupted first import run created 7 partial issues (PAP-6..PAP-12) before the Surface-label error. They were not deleted (per instruction): each was marked state Duplicate and linked as a duplicate of its canonical issue (PAP-13..PAP-19).",
+  "12 project icons from plan.json (GitBranch, Palette, CheckCircle, Kanban, Bot, FileText, MessageSquare, Keyboard, Table, DollarSign, Download, Package) are not in Linear's icon set. Projects were created without an icon, then updated with the nearest valid Linear icon: Server, Paint, Wrench, Calendar, Robot, Search, Chat, Cursor, Spreadsheet, Dollar, Cube, Box."
+ ],
+ "template": {
+  "id": "591f7807-8322-4bda-935e-9a73d221eec3",
+  "name": "PaperOS Spec"
+ },
+ "counts": {
+  "statesCreated": 3,
+  "labelsCreated": 16,
+  "projectsCreated": 17,
+  "milestonesCreated": 51,
+  "issuesCreated": 206,
+  "relationsCreated": 284
+ },
+ "pap5": {
+  "identifier": "PAP-5",
+  "url": "https://linear.app/paperos/issue/PAP-5/my-issue-is-that-the-startup-procedure-for-creating-new-apps-on-the",
+  "title": "My issue is that the startup procedure for creating new apps on the fly. Is inefficient. How quickly do we get from blank screen down the layers of abstraction to the electrons flowing through the circuits???",
+  "state": {
+   "name": "Backlog"
+  },
+  "project": {
+   "name": "Universal App Shell & Repo Template"
+  }
+ },
+ "duplicatesResolved": [
+  {
+   "orphan": "PAP-10",
+   "canonical": "PAP-17"
+  },
+  {
+   "orphan": "PAP-11",
+   "canonical": "PAP-18"
+  },
+  {
+   "orphan": "PAP-12",
+   "canonical": "PAP-19"
+  },
+  {
+   "orphan": "PAP-6",
+   "canonical": "PAP-13"
+  },
+  {
+   "orphan": "PAP-7",
+   "canonical": "PAP-14"
+  },
+  {
+   "orphan": "PAP-8",
+   "canonical": "PAP-15"
+  },
+  {
+   "orphan": "PAP-9",
+   "canonical": "PAP-16"
+  }
+ ]
+}

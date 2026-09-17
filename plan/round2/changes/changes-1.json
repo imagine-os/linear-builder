@@ -1,0 +1,675 @@
+{
+ "updated": [
+  "44001a65-1398-40d0-9d03-db353417d08c",
+  "07ea48b0-ea35-4d16-9aec-f3bd312b3aba",
+  "8dc7b5fe-5481-48f9-aac3-91657c61daec",
+  "449319a1-9f83-47b2-8077-57392958cbf2",
+  "43ae36d2-ac73-481a-a639-54f2cf0662b0",
+  "ae8b8a42-107b-4c17-ae32-6c6454f67d86",
+  "902d4f7c-1021-4049-ad2e-28d11d6b001f",
+  "13a53f0c-2bf8-48fc-898d-8f4e0f846876",
+  "222da10a-17b8-40a2-ab99-ff3babc8986d",
+  "528d76ba-45d8-4539-960e-3822742072f5",
+  "024c6260-2cc3-427b-823b-5fe13096142b",
+  "c1837fd8-bacd-4851-add0-414c02a4b06a",
+  "e22800a7-4c0d-42bb-9602-30b6eecbb11a",
+  "1e56a284-a453-4800-9798-4662fd2b412f",
+  "7c30f13c-8524-494c-a813-871777181a67",
+  "83821eec-68f8-4067-a77d-779b2c6d15ad",
+  "a2bfa003-4056-485a-9bc0-fd3f51385e3c",
+  "a4d5b4ab-171c-49ef-9121-f4b9f9fdb8e7",
+  "09a354fd-b767-44b9-a0b0-1ad2f3cfb108",
+  "d9789625-d4f3-4a5e-b59e-4739424c81e5",
+  "d980df4f-7ff9-41f3-8df2-a0b816e2db78",
+  "c9da7611-6e9d-4e2d-97e2-a8fe2790e654",
+  "ecb82238-c886-4381-9299-e9a9a6ca7b11",
+  "3e427087-7542-49d8-b86c-3e3eed0c3702",
+  "241d01d2-fa5c-4818-9063-d0cd0a29322c",
+  "6089c982-222f-44a3-90a9-097b6745e8e9",
+  "8cf6ed89-72d6-4f73-aefd-2739bc45da7d",
+  "5bbe5fee-95e7-4640-8c48-4d48f48b8539",
+  "8ac49161-37c1-4135-b2f1-1ea16539c6b8",
+  "a386d1c9-7a9d-4be9-be15-831a78c01ceb",
+  "9c8179db-8220-42af-aa4b-a3e84821daf4",
+  "9eb4a871-511d-4a37-8864-407ca72cfbd7",
+  "5df87511-ce7b-421b-9206-df9ecaaa9e15",
+  "e8583eb7-35b1-47c8-8503-a508004b63ee",
+  "27719b83-5814-4532-8d35-e25aebbb9018",
+  "db360168-68f7-44f0-b468-e0ec4723f9a3"
+ ],
+ "created": [
+  {
+   "key": "identity/threat-model",
+   "identifier": "PAP-219",
+   "id": "857d025e-81fe-45a4-9c95-b08b3d7d677f",
+   "url": "https://linear.app/paperos/issue/PAP-219/write-the-security-threat-model-and-hardening-baseline-stride-per",
+   "parent": null,
+   "title": "Write the security threat model and hardening baseline: STRIDE per trust boundary, CSP and security headers, CSRF, secret rotation runbook, incident response playbook"
+  },
+  {
+   "key": "identity/session-device-management",
+   "identifier": "PAP-220",
+   "id": "1f247784-4c94-4848-b9db-a9956c22dd8e",
+   "url": "https://linear.app/paperos/issue/PAP-220/build-session-and-device-management-list-and-revoke-sessions-totp",
+   "parent": null,
+   "title": "Build session and device management: list and revoke sessions, TOTP fallback for passkeys, account recovery codes"
+  },
+  {
+   "key": "identity/privacy-dsar",
+   "identifier": "PAP-221",
+   "id": "db3c87d2-3878-4105-ab75-0d4c30564fdb",
+   "url": "https://linear.app/paperos/issue/PAP-221/build-privacy-tooling-per-user-data-export-and-erasure-dsar-consent",
+   "parent": null,
+   "title": "Build privacy tooling: per-user data export and erasure (DSAR), consent records, privacy/terms/cookie pages in the portal"
+  },
+  {
+   "key": "identity/tenant-api-keys-webhooks",
+   "identifier": "PAP-222",
+   "id": "095991a8-2286-4529-919e-7d3eeb32489e",
+   "url": "https://linear.app/paperos/issue/PAP-222/build-tenant-api-keys-and-outbound-webhooks-for-developers-scoped-keys",
+   "parent": null,
+   "title": "Build tenant API keys and outbound webhooks for developers: scoped keys, per-key limits, signed webhook deliveries with retries, developer settings page and generated TypeScript SDK"
+  },
+  {
+   "key": "identity/better-auth/server-schema-session",
+   "identifier": "PAP-223",
+   "id": "0a04595b-6762-4fb9-8cb1-2ca53e878146",
+   "url": "https://linear.app/paperos/issue/PAP-223/better-auth-server-drizzle-schema-merge-and-session-helpers",
+   "parent": "PAP-57",
+   "title": "Better Auth server, Drizzle schema merge and session helpers"
+  },
+  {
+   "key": "identity/better-auth/ui-pages-email",
+   "identifier": "PAP-224",
+   "id": "c12c3a80-8945-48de-b112-29b2fd90031e",
+   "url": "https://linear.app/paperos/issue/PAP-224/auth-ui-pages-and-magic-link-email-delivery",
+   "parent": "PAP-57",
+   "title": "Auth UI pages and magic-link email delivery"
+  },
+  {
+   "key": "identity/better-auth/tauri-session",
+   "identifier": "PAP-225",
+   "id": "5ec7de12-55a7-4ff1-bf4f-cb982e053ac1",
+   "url": "https://linear.app/paperos/issue/PAP-225/tauri-deep-link-and-secure-token-session-flow",
+   "parent": "PAP-57",
+   "title": "Tauri deep-link and secure-token session flow"
+  },
+  {
+   "key": "identity/better-auth/oidc-provider",
+   "identifier": "PAP-226",
+   "id": "24e8198a-fe41-4b43-b6b3-369f4aefed75",
+   "url": "https://linear.app/paperos/issue/PAP-226/oidc-provider-endpoints-for-forgejo-sso",
+   "parent": "PAP-57",
+   "title": "OIDC provider endpoints for Forgejo SSO"
+  },
+  {
+   "key": "identity/rbac-abac/model-evaluator",
+   "identifier": "PAP-227",
+   "id": "d8336437-1925-4985-b532-afb3cb5ae8d3",
+   "url": "https://linear.app/paperos/issue/PAP-227/policy-model-evaluator-and-explain-mode",
+   "parent": "PAP-59",
+   "title": "Policy model, evaluator and explain mode"
+  },
+  {
+   "key": "identity/rbac-abac/sql-compiler-rls",
+   "identifier": "PAP-228",
+   "id": "70ad1573-f137-4e56-a7fa-5afc2527c59a",
+   "url": "https://linear.app/paperos/issue/PAP-228/sql-predicate-compiler-and-rls-helpers",
+   "parent": "PAP-59",
+   "title": "SQL predicate compiler and RLS helpers"
+  },
+  {
+   "key": "identity/rbac-abac/adapter-middleware-hook",
+   "identifier": "PAP-229",
+   "id": "590c8742-384f-478b-937f-3c8457a55778",
+   "url": "https://linear.app/paperos/issue/PAP-229/spec-adapter-orpc-middleware-and-usecan-hook",
+   "parent": "PAP-59",
+   "title": "Spec adapter, oRPC middleware and useCan hook"
+  },
+  {
+   "key": "identity/sso-scim/sso-plugin-domains",
+   "identifier": "PAP-230",
+   "id": "10a1763b-66ee-44a5-af46-7ec130eb325e",
+   "url": "https://linear.app/paperos/issue/PAP-230/sso-plugin-oidc-and-saml-per-tenant-with-domain-verification",
+   "parent": "PAP-65",
+   "title": "SSO plugin: OIDC and SAML per tenant with domain verification"
+  },
+  {
+   "key": "identity/sso-scim/scim-server",
+   "identifier": "PAP-231",
+   "id": "09d8a706-3599-4677-a3d1-d9da2a35476f",
+   "url": "https://linear.app/paperos/issue/PAP-231/scim-20-server-for-users-and-groups",
+   "parent": "PAP-65",
+   "title": "SCIM 2.0 server for Users and Groups"
+  },
+  {
+   "key": "identity/sso-scim/console-enforcement-docs",
+   "identifier": "PAP-232",
+   "id": "252e95c4-5da0-4130-a781-ede987df9d8a",
+   "url": "https://linear.app/paperos/issue/PAP-232/console-sso-and-scim-settings-pages-enforcement-and-enterprise-docs",
+   "parent": "PAP-65",
+   "title": "Console SSO and SCIM settings pages, enforcement and enterprise docs"
+  },
+  {
+   "key": "design-system/date-pickers-forms",
+   "identifier": "PAP-233",
+   "id": "2c30cda0-dce0-4c03-b632-bef191323e08",
+   "url": "https://linear.app/paperos/issue/PAP-233/build-date-time-date-range-and-calendar-pickers-plus-form-state",
+   "parent": null,
+   "title": "Build date, time, date-range and calendar pickers plus form-state adapters (react-hook-form Field, arrays, async validation)"
+  },
+  {
+   "key": "design-system/state-components",
+   "identifier": "PAP-234",
+   "id": "0c0b4000-7011-4971-9dde-6064f8038f24",
+   "url": "https://linear.app/paperos/issue/PAP-234/build-the-state-components-codegen-emits-errorstate-deniedstate",
+   "parent": null,
+   "title": "Build the state components codegen emits: ErrorState, DeniedState, OfflineBanner, IntegrationUnavailable, LoadingPage as spec-mapped `ui.*` components"
+  },
+  {
+   "key": "design-system/email-pdf-theme",
+   "identifier": "PAP-235",
+   "id": "e4963923-82f4-4655-b8a8-5d079758d554",
+   "url": "https://linear.app/paperos/issue/PAP-235/build-the-email-and-pdf-rendering-theme-brandingtoinlinecss-print",
+   "parent": null,
+   "title": "Build the email and PDF rendering theme: `brandingToInlineCss`, print stylesheet and a template kit shared by invoices, receipts, digests and the ACR export"
+  },
+  {
+   "key": "design-system/primitives/infra-form-controls",
+   "identifier": "PAP-236",
+   "id": "ce113199-29d4-4c33-9a39-3a6bf8098282",
+   "url": "https://linear.app/paperos/issue/PAP-236/component-infrastructure-and-form-controls",
+   "parent": "PAP-67",
+   "title": "Component infrastructure and form controls"
+  },
+  {
+   "key": "design-system/primitives/overlays",
+   "identifier": "PAP-237",
+   "id": "e322a85d-19da-4818-9bbe-1fbadf887586",
+   "url": "https://linear.app/paperos/issue/PAP-237/overlay-components-dialog-alertdialog-popover-tooltip-menu-toast",
+   "parent": "PAP-67",
+   "title": "Overlay components: Dialog, AlertDialog, Popover, Tooltip, Menu, Toast"
+  },
+  {
+   "key": "design-system/primitives/selection-navigation",
+   "identifier": "PAP-238",
+   "id": "c463eb45-3153-4b05-8a6c-760362b66073",
+   "url": "https://linear.app/paperos/issue/PAP-238/selection-and-navigation-components-select-combobox-tabs-avatar",
+   "parent": "PAP-67",
+   "title": "Selection and navigation components: Select, Combobox, Tabs, Avatar, Separator"
+  },
+  {
+   "key": "quality/gate-artifact-contract",
+   "identifier": "PAP-239",
+   "id": "9ff9bb9e-5c89-43a0-b5e4-2b2a97e4fb85",
+   "url": "https://linear.app/paperos/issue/PAP-239/specify-the-gate-artifact-contract-one-schema-package-for-gate1json",
+   "parent": null,
+   "title": "Specify the gate artifact contract: one schema package for gate1.json, security.json, visual.json, videos.json, vision.json, edgecases.json, finding IDs and artifact paths"
+  },
+  {
+   "key": "quality/test-mode-seed",
+   "identifier": "PAP-240",
+   "id": "565afa81-edd9-4000-b6a8-582f2d325de9",
+   "url": "https://linear.app/paperos/issue/PAP-240/build-test-mode-seed-and-reset-endpoints-testseed-testreset-with",
+   "parent": null,
+   "title": "Build test-mode seed and reset endpoints (`/__test/seed`, `/__test/reset`) with deterministic fixtures per audience, before Gate 3"
+  },
+  {
+   "key": "quality/gate2-calibration",
+   "identifier": "PAP-241",
+   "id": "9b3b141f-f4f3-4eb3-bdca-f6bf35a20569",
+   "url": "https://linear.app/paperos/issue/PAP-241/run-gate-2-calibration-and-false-negative-tracking-weekly-manual-spot",
+   "parent": null,
+   "title": "Run Gate 2 calibration and false-negative tracking: weekly manual spot check of five verdicts, precision and recall trend, reviewer prompt tuning loop"
+  },
+  {
+   "key": "quality/api-perf-budgets",
+   "identifier": "PAP-242",
+   "id": "c6524444-44c1-485e-8bec-e893cda466bf",
+   "url": "https://linear.app/paperos/issue/PAP-242/enforce-api-and-database-performance-budgets-k6-smoke-per-release",
+   "parent": null,
+   "title": "Enforce API and database performance budgets: k6 smoke per release candidate, p95 per procedure, slow-query gate, `apps/api` image size"
+  },
+  {
+   "key": "quality/review-agents/harness",
+   "identifier": "PAP-243",
+   "id": "b3c57b93-1db3-4bb5-b6eb-03696e25a93f",
+   "url": "https://linear.app/paperos/issue/PAP-243/review-harness-sdk-runner-input-assembly-finding-validation-and",
+   "parent": "PAP-81",
+   "title": "Review harness: SDK runner, input assembly, finding validation and posting"
+  },
+  {
+   "key": "quality/review-agents/correctness-spec",
+   "identifier": "PAP-244",
+   "id": "5deee820-08d4-4aed-bd82-0c579c8352bf",
+   "url": "https://linear.app/paperos/issue/PAP-244/correctness-and-spec-conformance-reviewer-definitions",
+   "parent": "PAP-81",
+   "title": "Correctness and spec-conformance reviewer definitions"
+  },
+  {
+   "key": "quality/review-agents/security",
+   "identifier": "PAP-245",
+   "id": "08e067e6-c87a-4993-8453-3054568521af",
+   "url": "https://linear.app/paperos/issue/PAP-245/security-reviewer-definition-and-securityjson-ingestion",
+   "parent": "PAP-81",
+   "title": "Security reviewer definition and security.json ingestion"
+  },
+  {
+   "key": "quality/playwright-matrix/projects-fixtures-stories",
+   "identifier": "PAP-246",
+   "id": "b03e33fb-48c7-4389-94b4-72e0f0837169",
+   "url": "https://linear.app/paperos/issue/PAP-246/playwright-project-matrix-deterministic-fixtures-and-storybook-story",
+   "parent": "PAP-82",
+   "title": "Playwright project matrix, deterministic fixtures and Storybook story capture"
+  },
+  {
+   "key": "quality/playwright-matrix/pages-auth-baselines",
+   "identifier": "PAP-247",
+   "id": "87d97f9f-0fb0-4b44-a5c3-17287a32f33b",
+   "url": "https://linear.app/paperos/issue/PAP-247/page-capture-with-authenticated-audiences-and-baseline-update-workflow",
+   "parent": "PAP-82",
+   "title": "Page capture with authenticated audiences and baseline update workflow"
+  },
+  {
+   "key": "quality/playwright-matrix/reporter-sharding",
+   "identifier": "PAP-248",
+   "id": "a2b7dd6b-975f-44e0-a3c8-940201350735",
+   "url": "https://linear.app/paperos/issue/PAP-248/contact-sheet-reporter-4-way-sharding-and-the-visualjson-artifact",
+   "parent": "PAP-82",
+   "title": "Contact-sheet reporter, 4-way sharding and the visual.json artifact"
+  },
+  {
+   "key": "quality/edge-case-hunter/planner",
+   "identifier": "PAP-249",
+   "id": "56832ab4-5c36-4858-bb05-8d3da79959bd",
+   "url": "https://linear.app/paperos/issue/PAP-249/scenario-planner-from-specs-with-fixture-catalogue",
+   "parent": "PAP-85",
+   "title": "Scenario planner from specs with fixture catalogue"
+  },
+  {
+   "key": "quality/edge-case-hunter/executor-oracles",
+   "identifier": "PAP-250",
+   "id": "42f85100-a395-47fe-b342-a6386f687ea2",
+   "url": "https://linear.app/paperos/issue/PAP-250/playwright-executor-and-generic-oracles",
+   "parent": "PAP-85",
+   "title": "Playwright executor and generic oracles"
+  },
+  {
+   "key": "quality/edge-case-hunter/findings-repros-nightly",
+   "identifier": "PAP-251",
+   "id": "7e040b11-7369-4a28-8986-2a94521095c5",
+   "url": "https://linear.app/paperos/issue/PAP-251/findings-generated-repro-tests-and-nightly-library-run",
+   "parent": "PAP-85",
+   "title": "Findings, generated repro tests and nightly library run"
+  },
+  {
+   "key": "quality/release-train/policy-environments",
+   "identifier": "PAP-252",
+   "id": "ac20eb5a-2457-4790-accb-130b775da072",
+   "url": "https://linear.app/paperos/issue/PAP-252/release-train-policy-document-and-environments-config",
+   "parent": "PAP-88",
+   "title": "Release train policy document and environments config"
+  },
+  {
+   "key": "quality/release-train/nightly-staging",
+   "identifier": "PAP-253",
+   "id": "1e0eb8f7-8604-47e8-aace-8b90d6519283",
+   "url": "https://linear.app/paperos/issue/PAP-253/nightly-staging-workflow-with-full-gate-run",
+   "parent": "PAP-88",
+   "title": "Nightly staging workflow with full gate run"
+  },
+  {
+   "key": "quality/release-train/rc-certify-approve",
+   "identifier": "PAP-254",
+   "id": "0d47c408-49f0-42f6-b940-ca7ef3b7c394",
+   "url": "https://linear.app/paperos/issue/PAP-254/release-candidate-cut-certification-and-justin-approval-flow",
+   "parent": "PAP-88",
+   "title": "Release candidate cut, certification and Justin approval flow"
+  }
+ ],
+ "relations": [
+  {
+   "id": "347e9ca9-f904-4740-9119-9b91b6d1038e",
+   "from": "PAP-219",
+   "to": "PAP-80"
+  },
+  {
+   "id": "eb9fe4bb-9482-41e5-aee0-43deef327a32",
+   "from": "PAP-219",
+   "to": "PAP-60"
+  },
+  {
+   "id": "36edb42b-a3be-47a9-8d36-f405f74db847",
+   "from": "PAP-57",
+   "to": "PAP-220"
+  },
+  {
+   "id": "71ced7d2-fe62-4555-a37a-360a0c999b10",
+   "from": "PAP-58",
+   "to": "PAP-221"
+  },
+  {
+   "id": "c8f63772-986d-4709-9c3e-a3010e122e4f",
+   "from": "PAP-43",
+   "to": "PAP-221"
+  },
+  {
+   "id": "b3316765-9d30-4a6f-8bc6-9562ead90086",
+   "from": "PAP-35",
+   "to": "PAP-222"
+  },
+  {
+   "id": "9f012f3b-4fd0-45a7-ba2e-c4d51f96bc35",
+   "from": "PAP-59",
+   "to": "PAP-222"
+  },
+  {
+   "id": "8a93779f-9a4f-4050-ad3f-ad74ed357274",
+   "from": "PAP-43",
+   "to": "PAP-222"
+  },
+  {
+   "id": "4e5ac278-cbf2-4218-8d97-d69844fbcef3",
+   "from": "PAP-223",
+   "to": "PAP-224"
+  },
+  {
+   "id": "555b1e58-f0eb-4312-9f0c-61da8c35f5b3",
+   "from": "PAP-223",
+   "to": "PAP-225"
+  },
+  {
+   "id": "e56dcaff-7138-4bac-aed0-237021204dd5",
+   "from": "PAP-223",
+   "to": "PAP-226"
+  },
+  {
+   "id": "ad2c74a7-553b-48c1-af0c-a1e60fe495de",
+   "from": "PAP-227",
+   "to": "PAP-228"
+  },
+  {
+   "id": "559e357e-9a83-4ed2-b8f8-4b0c0b6a8925",
+   "from": "PAP-227",
+   "to": "PAP-229"
+  },
+  {
+   "id": "dee74506-aaf6-401f-af2c-98a0bc8cd7ed",
+   "from": "PAP-230",
+   "to": "PAP-232"
+  },
+  {
+   "id": "6d267264-1199-4774-8628-b0ec21e85087",
+   "from": "PAP-231",
+   "to": "PAP-232"
+  },
+  {
+   "id": "4d12e2d6-729a-42e3-86ca-bbf257664e1c",
+   "from": "PAP-67",
+   "to": "PAP-233"
+  },
+  {
+   "id": "7029f5d4-87b6-4dbd-af2a-615dcbae7111",
+   "from": "PAP-233",
+   "to": "PAP-164"
+  },
+  {
+   "id": "6d1ef140-5561-4155-951e-0fa80fc48d15",
+   "from": "PAP-233",
+   "to": "PAP-166"
+  },
+  {
+   "id": "83012adb-3359-4b11-847d-ae9bed205e7d",
+   "from": "PAP-71",
+   "to": "PAP-234"
+  },
+  {
+   "id": "4388fbc5-4654-4e04-9bb3-866788058d8b",
+   "from": "PAP-68",
+   "to": "PAP-234"
+  },
+  {
+   "id": "501a2e6a-7fc9-4eb7-a530-918e97086b65",
+   "from": "PAP-234",
+   "to": "PAP-120"
+  },
+  {
+   "id": "2ee196d1-2830-4d81-b1a2-ca0906b6bee5",
+   "from": "PAP-75",
+   "to": "PAP-235"
+  },
+  {
+   "id": "39a47916-5c90-4e90-9665-da1705aac569",
+   "from": "PAP-235",
+   "to": "PAP-180"
+  },
+  {
+   "id": "50cf3124-6d2e-487f-bb33-1c332715ed18",
+   "from": "PAP-236",
+   "to": "PAP-237"
+  },
+  {
+   "id": "f5940a8b-0438-4fea-bc2c-18515e10b918",
+   "from": "PAP-236",
+   "to": "PAP-238"
+  },
+  {
+   "id": "5b80127d-76db-48f4-8378-1fc0fbb15a42",
+   "from": "PAP-237",
+   "to": "PAP-238"
+  },
+  {
+   "id": "1f1cf7d5-7336-4639-be05-bfbb07b3e85f",
+   "from": "PAP-79",
+   "to": "PAP-239"
+  },
+  {
+   "id": "0294b28c-fd36-4461-90bf-1e063a9e4366",
+   "from": "PAP-239",
+   "to": "PAP-80"
+  },
+  {
+   "id": "4ee1b030-7a68-45e8-adcf-c7b48ccbfd1d",
+   "from": "PAP-239",
+   "to": "PAP-81"
+  },
+  {
+   "id": "0ba47f84-6f2e-41be-8189-e71a060c0209",
+   "from": "PAP-239",
+   "to": "PAP-82"
+  },
+  {
+   "id": "46592f7e-8b50-4342-92a6-e496dd4ea081",
+   "from": "PAP-239",
+   "to": "PAP-83"
+  },
+  {
+   "id": "60fb5f77-afad-4c4f-bb60-f99e980eeecd",
+   "from": "PAP-239",
+   "to": "PAP-84"
+  },
+  {
+   "id": "91d5595d-44de-4d25-8e14-236587b0c243",
+   "from": "PAP-239",
+   "to": "PAP-85"
+  },
+  {
+   "id": "e3ca7525-af39-48fe-82ad-95b2281fc089",
+   "from": "PAP-239",
+   "to": "PAP-89"
+  },
+  {
+   "id": "9bca098e-a8ed-4fe9-884d-4fb51c689c36",
+   "from": "PAP-32",
+   "to": "PAP-240"
+  },
+  {
+   "id": "413339e8-91c7-4e3f-b881-28cdfa7352fb",
+   "from": "PAP-57",
+   "to": "PAP-240"
+  },
+  {
+   "id": "91637be0-fde3-4878-99c1-7c06ad8e26b0",
+   "from": "PAP-240",
+   "to": "PAP-82"
+  },
+  {
+   "id": "fc28e86f-ac65-4862-9dc8-c66f773520fb",
+   "from": "PAP-240",
+   "to": "PAP-85"
+  },
+  {
+   "id": "33827baa-33a8-46a0-b95f-5918657fb9da",
+   "from": "PAP-240",
+   "to": "PAP-86"
+  },
+  {
+   "id": "49c1dc1e-aad0-49b7-9aea-1bb322eb3d71",
+   "from": "PAP-240",
+   "to": "PAP-87"
+  },
+  {
+   "id": "d1f9f04d-9860-415b-a033-3c00b13f8733",
+   "from": "PAP-240",
+   "to": "PAP-64"
+  },
+  {
+   "id": "6669cbfb-7189-4939-aad0-666efa5632a4",
+   "from": "PAP-81",
+   "to": "PAP-241"
+  },
+  {
+   "id": "16ca73dc-4e6c-4b9f-ba42-319806cc845f",
+   "from": "PAP-87",
+   "to": "PAP-242"
+  },
+  {
+   "id": "b598218a-cda4-412d-9992-9d95015b0715",
+   "from": "PAP-35",
+   "to": "PAP-242"
+  },
+  {
+   "id": "ed215d05-2869-4db5-a1d4-49612e35fbab",
+   "from": "PAP-242",
+   "to": "PAP-88"
+  },
+  {
+   "id": "c928cfef-28e0-4bff-831e-0d80c6ca7c48",
+   "from": "PAP-243",
+   "to": "PAP-244"
+  },
+  {
+   "id": "f396345f-3672-4e6a-989e-8542f3b993fa",
+   "from": "PAP-243",
+   "to": "PAP-245"
+  },
+  {
+   "id": "f74fd946-6aff-49dd-bbba-2409673c2403",
+   "from": "PAP-246",
+   "to": "PAP-247"
+  },
+  {
+   "id": "6ee645b6-bb84-4c50-b94e-ace9d2e4f95f",
+   "from": "PAP-246",
+   "to": "PAP-248"
+  },
+  {
+   "id": "76cdc87a-e54d-4c3f-9d0b-2d653dc9c7b2",
+   "from": "PAP-247",
+   "to": "PAP-248"
+  },
+  {
+   "id": "e1dc5edf-95c9-4c45-ba90-bbfc5087d8b7",
+   "from": "PAP-249",
+   "to": "PAP-250"
+  },
+  {
+   "id": "1ee8b4fa-1816-4013-bce8-250f1113de7b",
+   "from": "PAP-250",
+   "to": "PAP-251"
+  },
+  {
+   "id": "2cbe4074-6ed5-46b8-bc4a-8a65d2d6f0c7",
+   "from": "PAP-252",
+   "to": "PAP-253"
+  },
+  {
+   "id": "d7405014-aa60-45da-8cab-b2848b6ec4ae",
+   "from": "PAP-252",
+   "to": "PAP-254"
+  },
+  {
+   "id": "328f88d4-a9fb-4996-b604-19a3a5ae18fc",
+   "from": "PAP-253",
+   "to": "PAP-254"
+  },
+  {
+   "id": "e649fa72-9c5a-4ed0-8733-aea9c812023b",
+   "from": "PAP-240",
+   "to": "PAP-247"
+  },
+  {
+   "id": "8acc73fc-36a4-4ff3-9fee-6c76e88221f6",
+   "from": "PAP-240",
+   "to": "PAP-250"
+  },
+  {
+   "id": "15dba984-d98b-44b9-a29b-e54fa1b275cf",
+   "from": "PAP-239",
+   "to": "PAP-243"
+  },
+  {
+   "id": "21296dc5-92ba-401f-9d3f-fdb59ac38209",
+   "from": "PAP-239",
+   "to": "PAP-248"
+  },
+  {
+   "id": "69d68df3-8c8d-4f7d-b870-ecedd1fcdcb1",
+   "from": "PAP-94",
+   "to": "PAP-88"
+  },
+  {
+   "id": "fb230c6e-352d-4de1-93fa-9200b12506ea",
+   "from": "PAP-59",
+   "to": "PAP-140"
+  },
+  {
+   "id": "f0ae4071-74c1-4cc9-9eee-a965b64a9521",
+   "from": "PAP-59",
+   "to": "PAP-39"
+  },
+  {
+   "id": "b7266634-0e46-4bd7-a0a8-ae44055ac33f",
+   "from": "PAP-59",
+   "to": "PAP-116"
+  },
+  {
+   "id": "3d2e432e-8aa4-487c-9365-1474c58eb0f5",
+   "from": "PAP-57",
+   "to": "PAP-86"
+  }
+ ],
+ "projectsUpdated": [
+  "b590e463-5980-47f8-9d74-889addb9434c",
+  "0e067722-38f0-4e4c-88a5-54158acc56fd",
+  "32967d75-af65-43a0-8dc9-b906f28ed2b4"
+ ],
+ "labelChanges": [
+  {
+   "what": "PAP-88:labels",
+   "issue": "PAP-88",
+   "note": "labels ['Phase/P1', 'Type/Spec', 'Developer', 'Agent'] -> ['Phase/P1', 'Type/Build', 'Developer', 'Agent']"
+  },
+  {
+   "what": "PAP-70:milestone",
+   "issue": "PAP-70",
+   "note": "milestone Component library covers app shell needs -> Tokens and primitives"
+  },
+  {
+   "what": "PAP-71:milestone",
+   "issue": "PAP-71",
+   "note": "milestone Component library covers app shell needs -> Tokens and primitives"
+  }
+ ],
+ "notes": []
+}

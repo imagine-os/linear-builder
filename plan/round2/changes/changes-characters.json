@@ -1,0 +1,90 @@
+{
+ "created": [],
+ "relations": [],
+ "documents": [
+  {
+   "key": "character/atlas",
+   "id": "330f93a7-3ba9-4692-8644-67c115ccdf1c",
+   "url": "https://linear.app/paperos/document/character-sheet-atlas-chief-architect-and-orchestrator-b4725358adc1",
+   "title": "Character sheet: Atlas \u2014 Chief Architect and Orchestrator",
+   "project": "Agent Characters & Orgs"
+  },
+  {
+   "key": "character/forge",
+   "id": "7416bbf5-d852-4405-9733-4091848dbd44",
+   "url": "https://linear.app/paperos/document/character-sheet-forge-platform-engineer-6b19c5679dd0",
+   "title": "Character sheet: Forge \u2014 Platform Engineer",
+   "project": "Agent Characters & Orgs"
+  },
+  {
+   "key": "character/iris",
+   "id": "2e667399-3c00-4899-b06d-cf2a878f3dcd",
+   "url": "https://linear.app/paperos/document/character-sheet-iris-design-systems-lead-43ca4e29d4a9",
+   "title": "Character sheet: Iris \u2014 Design Systems Lead",
+   "project": "Agent Characters & Orgs"
+  },
+  {
+   "key": "character/quill",
+   "id": "ec26ba7b-755a-4765-824a-38d404a320bd",
+   "url": "https://linear.app/paperos/document/character-sheet-quill-spec-and-documentation-lead-1ba00329d4c8",
+   "title": "Character sheet: Quill \u2014 Spec and Documentation Lead",
+   "project": "Agent Characters & Orgs"
+  },
+  {
+   "key": "character/sentinel",
+   "id": "69cae5a8-b0bd-4923-952a-6b307ad6804b",
+   "url": "https://linear.app/paperos/document/character-sheet-sentinel-quality-lead-fc3ada07f9e3",
+   "title": "Character sheet: Sentinel \u2014 Quality Lead",
+   "project": "Agent Characters & Orgs"
+  },
+  {
+   "key": "character/nova",
+   "id": "bc93ce4a-5c9c-4393-9c51-52668edaa578",
+   "url": "https://linear.app/paperos/document/character-sheet-nova-product-systems-engineer-a736fa0dc023",
+   "title": "Character sheet: Nova \u2014 Product Systems Engineer",
+   "project": "Agent Characters & Orgs"
+  },
+  {
+   "key": "character/ledger",
+   "id": "970e5303-610f-443c-952d-a464e7162671",
+   "url": "https://linear.app/paperos/document/character-sheet-ledger-business-systems-lead-b876b4a0d809",
+   "title": "Character sheet: Ledger \u2014 Business Systems Lead",
+   "project": "Agent Characters & Orgs"
+  },
+  {
+   "key": "character/beacon",
+   "id": "4f86239a-4a71-44c4-b2b6-e76bf9844434",
+   "url": "https://linear.app/paperos/document/character-sheet-beacon-growth-lead-12b0b4eda18b",
+   "title": "Character sheet: Beacon \u2014 Growth Lead",
+   "project": "Agent Characters & Orgs"
+  },
+  {
+   "key": "character/scout",
+   "id": "67494017-80ac-440c-a386-42bc5c7d5ec6",
+   "url": "https://linear.app/paperos/document/character-sheet-scout-library-and-migration-researcher-44cef400dbbc",
+   "title": "Character sheet: Scout \u2014 Library and Migration Researcher",
+   "project": "Agent Characters & Orgs"
+  },
+  {
+   "key": "roster",
+   "id": "194b5057-160e-43d4-9986-efb8e28c49e9",
+   "url": "https://linear.app/paperos/document/paperos-agent-roster-org-chart-and-character-index-fc7ea7f41ff3",
+   "title": "PaperOS Agent Roster (org chart and character index)",
+   "project": "Agent Characters & Orgs"
+  }
+ ],
+ "updated": [
+  {
+   "project": "c7b318e7-840a-4aca-99dd-2b5aed3fc26b",
+   "what": "project-content-character-sheets",
+   "url": "https://linear.app/paperos/project/agent-characters-and-orgs-0e471ec523e4",
+   "success": true
+  }
+ ],
+ "notes": [
+  "No issues created: team PAP is at the free-plan issue cap (275 issues; every round-2 issueCreate returned USAGE_LIMIT_EXCEEDED), and the character sheets surfaced no gap that is not already specified in the pending-issues documents (agents, security, pm-linear).",
+  "Ownership computed from the Agent line of every canonical issue PAP-13..PAP-279; table in round2/_ownership.txt and _ownership.json.",
+  "No issue states, labels, relations, views or PAP-1..PAP-12 touched."
+ ],
+ "requests": 12
+}

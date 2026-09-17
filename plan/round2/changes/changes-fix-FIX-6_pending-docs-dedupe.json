@@ -1,0 +1,247 @@
+{
+ "fix": "FIX-6 pending-docs-dedupe",
+ "startedAt": "2026-09-17T06:30Z",
+ "documentsUpdated": [
+  {
+   "id": "929a59dd-0cd1-47ba-9c12-7bf4ddb4ae9f",
+   "title": "Round 2 pending issues: pm-linear (9)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859",
+   "chars": 34385,
+   "updatedAt": "2026-09-17T06:39:51.021Z"
+  },
+  {
+   "id": "e0f093fb-c393-4143-a395-b0a8ccecd948",
+   "title": "Round 2 pending issues: agents (9)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d",
+   "chars": 40815,
+   "updatedAt": "2026-09-17T06:39:52.433Z"
+  },
+  {
+   "id": "ec89fab6-b54c-4e5c-93b2-7b6d1d79a8c8",
+   "title": "Round 2 pending issues: security (11)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0",
+   "chars": 80795,
+   "updatedAt": "2026-09-17T06:39:52.570Z"
+  },
+  {
+   "id": "787ef55b-f178-46ee-904e-0c1525fd34cb",
+   "title": "Round 2 pending issues: contracts (4)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59",
+   "chars": 29937,
+   "updatedAt": "2026-09-17T06:39:51.900Z"
+  },
+  {
+   "id": "2d418b68-84be-46b4-9039-0d5c5ff52c97",
+   "title": "Round 2 pending issues: golden path (8)",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f",
+   "chars": 56790,
+   "updatedAt": "2026-09-17T06:39:52.752Z"
+  },
+  {
+   "id": "194b5057-160e-43d4-9986-efb8e28c49e9",
+   "title": "PaperOS Agent Roster (org chart and character index)",
+   "url": "https://linear.app/paperos/document/paperos-agent-roster-org-chart-and-character-index-fc7ea7f41ff3",
+   "chars": 16459,
+   "updatedAt": "2026-09-17T06:42:41.199Z",
+   "followUp": "second workspace-reconcile mention in the pending-key list reworded"
+  },
+  {
+   "id": "330f93a7-3ba9-4692-8644-67c115ccdf1c",
+   "title": "Character sheet: Atlas \u2014 Chief Architect and Orchestrator",
+   "url": "https://linear.app/paperos/document/character-sheet-atlas-chief-architect-and-orchestrator-b4725358adc1",
+   "chars": 9387,
+   "updatedAt": "2026-09-17T06:39:54.024Z"
+  },
+  {
+   "id": "f06d1261-c44d-42ec-a2c2-a69f0fe12912",
+   "title": "PaperOS Security & Threat Model",
+   "url": "https://linear.app/paperos/document/paperos-security-and-threat-model-51fd5fd8929c",
+   "chars": 18428,
+   "updatedAt": "2026-09-17T06:39:54.794Z"
+  },
+  {
+   "id": "936ffb9c-0ca5-4101-8c80-32926dab7b5e",
+   "title": "PaperOS Interface & Data Contracts",
+   "url": "https://linear.app/paperos/document/paperos-interface-and-data-contracts-d40e6a4d227c",
+   "chars": 19266,
+   "updatedAt": "2026-09-17T06:42:42.118Z",
+   "followUp": "closing paragraph notification-core reworded"
+  }
+ ],
+ "issuesUpdated": [
+  {
+   "id": "0d1d8ef8-381f-4b0e-9fec-cbbb1a261891",
+   "identifier": "PAP-91",
+   "fields": [
+    "description"
+   ],
+   "basedOnUpdatedAt": "2026-09-17T06:32:22.927Z",
+   "updatedAt": "2026-09-17T06:39:56.630Z",
+   "change": "workspace-reconcile references removed"
+  },
+  {
+   "id": "1d0587c5-145c-4de1-9ef1-871ab6881041",
+   "identifier": "PAP-93",
+   "fields": [
+    "description"
+   ],
+   "basedOnUpdatedAt": "2026-09-17T06:23:37.939Z",
+   "updatedAt": "2026-09-17T06:39:57.859Z",
+   "change": "workspace-reconcile references removed"
+  },
+  {
+   "id": "5972b27f-5051-481b-b27f-0be141f2c63c",
+   "identifier": "PAP-190",
+   "fields": [
+    "description"
+   ],
+   "basedOnUpdatedAt": "2026-09-17T06:23:14.657Z",
+   "updatedAt": "2026-09-17T06:39:58.975Z",
+   "change": "[gap/data-layer/field-encryption] -> [security/field-encryption]"
+  }
+ ],
+ "projectsUpdated": [
+  {
+   "id": "62374841-346c-46fe-9d20-5d65252227f2",
+   "name": "Project Management & Claude Pipeline",
+   "fields": [
+    "content"
+   ],
+   "basedOnUpdatedAt": "2026-09-17T04:52:50.388Z",
+   "updatedAt": "2026-09-17T06:42:42.728Z",
+   "followUp": "unbracketed the merged key so no [pm-linear/workspace-reconcile] reference remains"
+  },
+  {
+   "id": "64e49138-b979-4650-b5f9-1987134231f8",
+   "name": "Data Layer & Database",
+   "fields": [
+    "content"
+   ],
+   "basedOnUpdatedAt": "2026-09-17T04:22:27.475Z",
+   "updatedAt": "2026-09-17T06:40:01.204Z"
+  },
+  {
+   "id": "2a6f5b81-95bd-4d6f-9ff4-e74aa3ee2c7c",
+   "name": "Version Control & Forge Independence",
+   "fields": [
+    "content"
+   ],
+   "basedOnUpdatedAt": "2026-09-17T04:22:28.049Z",
+   "updatedAt": "2026-09-17T06:40:02.341Z"
+  }
+ ],
+ "filesEdited": [
+  "<plan-dir>/round2/gaps-pending-0.json",
+  "<plan-dir>/round2/agent0/gaps.py",
+  "<plan-dir>/round2/agent3/pending-issues.json",
+  "<plan-dir>/round2/agent3/new_collab.py",
+  "<plan-dir>/round2/agent3/new_rt_input.py",
+  "<plan-dir>/round2/agent2/new_pm.py",
+  "<plan-dir>/round2/agent2/rw_pm.py",
+  "<plan-dir>/round2/agent2/new_agents.py",
+  "<plan-dir>/round2/agent6/pending-issues.json",
+  "<plan-dir>/round2/agent6/specs.py",
+  "<plan-dir>/round2/contracts-issues.json",
+  "<plan-dir>/round2/pending-issues-contracts.json",
+  "<plan-dir>/round2/golden-path-issues.json",
+  "<plan-dir>/round2/pending-issues-golden-path.json",
+  "<plan-dir>/round2/golden_path_specs.py",
+  "<plan-dir>/round2/agent4/pending-issues.json",
+  "<plan-dir>/round2/agent4/new_growth.py",
+  "<plan-dir>/round2/pending-merged.json"
+ ],
+ "merges": [
+  {
+   "dropped": "gap/data-layer/field-encryption",
+   "keptKey": "security/field-encryption",
+   "source": "gaps-pending-0.json / agent0/gaps.py",
+   "reason": "same deliverable; security version cites the Threat Model and adds the leak scanner and AAD binding"
+  },
+  {
+   "dropped": "gap/data-layer/platform-dr",
+   "keptKey": "security/platform-dr",
+   "source": "gaps-pending-0.json / agent0/gaps.py",
+   "reason": "same drill; security version adds key escrow, monitoring and measured RPO/RTO"
+  },
+  {
+   "dropped": "gap/data-layer/retention-pii",
+   "keptKey": "security/retention-pii",
+   "source": "gaps-pending-0.json / agent0/gaps.py",
+   "reason": "same deliverable; security version owns pii() annotations, retention.yaml and the purge job"
+  },
+  {
+   "dropped": "gap/data-layer/tenant-lifecycle (purge half)",
+   "keptKey": "security/retention-pii",
+   "source": "gaps-pending-0.json / agent0/gaps.py",
+   "reason": "hard purge moved; tenant-lifecycle keeps states, quotas and the deletion request flow"
+  },
+  {
+   "dropped": "gap/data-layer/event-bus",
+   "keptKey": "contracts/domain-events",
+   "source": "gaps-pending-0.json / agent0/gaps.py",
+   "reason": "contracts version already declares it supersedes the gap"
+  },
+  {
+   "dropped": "gap/data-layer/rate-limit-idempotency",
+   "keptKey": "contracts/idempotency-rate-limits",
+   "source": "gaps-pending-0.json / agent0/gaps.py",
+   "reason": "contracts version already declares it supersedes the gap"
+  },
+  {
+   "dropped": "gap/forge/template-upgrade",
+   "keptKey": "gp/app-shell/upgrade",
+   "source": "gaps-pending-0.json / agent0/gaps.py",
+   "reason": "both build `paperos upgrade`; golden-path version is richer (ownership manifest, codemods, fleet mode); registry publishing folded in"
+  },
+  {
+   "dropped": "collab/notification-core",
+   "keptKey": "PAP-136 (work package 1)",
+   "source": "agent3/pending-issues.json / agent3/new_collab.py",
+   "reason": "PAP-136 owns the notification core as work package 1 after its P1 re-phase; children collab/notifications/* stay parented to PAP-136"
+  },
+  {
+   "dropped": "pm-linear/workspace-reconcile",
+   "keptKey": "PAP-91",
+   "source": "agent2/new_pm.py / pm-linear pending document",
+   "reason": "obsolete: PAP-91 and PAP-93 already treat the live workspace as correct"
+  },
+  {
+   "dropped": "agents/runtime-sandbox (egress proxy, allowlist, secret injection)",
+   "keptKey": "security/credential-broker; hook policy -> security/agent-deny-list",
+   "source": "agent2/new_agents.py / agents pending document / agent6",
+   "reason": "trio overlap: sandbox keeps container, worktree, CPU/RAM; now blocked by broker and deny list"
+  }
+ ],
+ "notes": [
+  "Kept specs: security/field-encryption, security/platform-dr, security/retention-pii, contracts/domain-events, contracts/idempotency-rate-limits, gp/app-shell/upgrade; each gained a 'Merges ...' paragraph carrying the unique details of the dropped twin.",
+  "gap/data-layer/tenant-lifecycle narrowed (states, quotas, requestDeletion/cancelDeletion, archive metadata); the purge job and tombstone now live only in security/retention-pii.",
+  "agents/runtime-sandbox rewritten: container, worktree, limits, network isolation; blockedBy PAP-25 + security/credential-broker + security/agent-deny-list; its former 'blocks PAP-106' made soft to avoid the cycle runtime-sandbox -> PAP-106 -> agent-deny-list -> runtime-sandbox. FIX-5 create order still starts with agents/runtime-sandbox; it will simply be Backlog until the broker and deny list exist. agent2/relations.py must resolve the security/* keys from changes-security.json when the cap lifts.",
+  "collab/notification-core removed; collab/notifications/* were already parented to PAP-136 in agent3/new_collab.py CHILDREN['PAP-136'] (verified); prose in push-transport, comments and inbox children now says 'PAP-136 work package 1'.",
+  "pm-linear/workspace-reconcile removed from agent2/new_pm.py (GAPS filter) and the pm-linear document; the four bracket references in PAP-91 (2), PAP-93 (2) and the two in the pm-linear project content are gone. agent2/rw_pm.py sources updated to match.",
+  "Create scripts read Python modules, not the JSON files, so filters were added at the end of agent0/gaps.py, agent2/new_pm.py and agent3/new_collab.py; agent6/specs.py, golden_path_specs.py, agent4/new_growth.py edited in place. round2/pending-merged.json is the machine-readable merge list.",
+  "Document titles (counts in parentheses) left unchanged so existing links keep working; each doc states its live count in the intro or Contents.",
+  "No states changed, nothing deleted or archived, no issue created, PAP-1..12 and views untouched.",
+  "spec-builder/spec-versioning, migration/test-accounts, gap/growth/consent-centre and gap/business-core/recurring-dunning are no longer pending because the parallel FIX-5 agent folded them into live issues (round2/folded-into-live-issues.json filters them in the create scripts); FIX-6 did not touch them. Pending entries after both fixes: 156."
+ ],
+ "verification": {
+  "at": "2026-09-17T06:50Z",
+  "pendingEntries": 156,
+  "bracketKeysInLiveIssues": 81,
+  "unresolvedBracketKeys": {},
+  "multiResolvingBracketKeys": {},
+  "docsUntouchedSinceUpdate": false,
+  "residualWorkspaceReconcileRefs": {
+   "PAP-91": 1,
+   "PAP-93": 0,
+   "pm-linear project bracketed": 1
+  },
+  "residualAfterFollowUp": {
+   "pm-linear project bracketed": 0,
+   "roster": "one mention, in the sentence saying it is merged into PAP-91",
+   "contracts doc": "none"
+  },
+  "PAP-114 bracketed spec-versioning refs (FIX-5 domain)": 0
+ },
+ "requestsUsed": 22,
+ "finishedAt": "2026-09-17T06:55Z"
+}

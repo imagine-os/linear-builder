@@ -1,0 +1,256 @@
+{
+ "updated": [
+  "0d1d8ef8-381f-4b0e-9fec-cbbb1a261891",
+  "740f3b4d-7660-407a-aaf6-d77ca4f4fb3e",
+  "1d0587c5-145c-4de1-9ef1-871ab6881041",
+  "e5a36bc1-cd62-41a2-bd6a-8a561b373114",
+  "e04e29ab-66b0-4e66-b8b2-5d81322a46cb",
+  "da321a3c-f968-47af-ae78-51f42700965a",
+  "3b4c007c-4002-4240-ad84-c1bfe127588d",
+  "f3e73b01-5912-4ca6-af75-dda7e8c65fbb",
+  "983f671f-9dd4-420c-91a4-6986dbf0d9ee",
+  "69c7aa7d-0532-4f85-a7df-bb26e6a21887",
+  "0ad6d9fa-b0fc-47e0-be3e-ca28c55937ae",
+  "2fc13ce7-e58b-40be-a72f-cccd83ea3c2f",
+  "d5e001bb-de69-4cfc-a9a3-2c88c1bc68ca",
+  "1ea5cf02-4357-41c1-b0dd-292eab776d77",
+  "e148985f-592f-4aad-a6b3-957683e353f9",
+  "87a5ec58-4ee0-4b3e-b2a1-57be52230623",
+  "62666ed2-9ce4-4ece-8fb6-61a0314e560f",
+  "5d4072bf-5890-42f0-92e6-9061f49576f9",
+  "38d2138b-2e50-439d-8fb3-782b664e0eeb",
+  "4af51fc3-3598-41b1-a2f0-efe75d77b957",
+  "a6b45fbd-3ef3-467d-903e-40a3a8bbf218",
+  "e0e341fc-afa2-4306-a5de-4c8663d16c58",
+  "1cdf6b88-0705-42e3-b2c5-2569cdaa8bd1",
+  "9072eb75-d95d-462b-8e96-328a1ff71b9e",
+  "21c84a7d-b540-4f17-a820-feee59b6a191",
+  "1873c6a7-727e-4c28-a6e9-2ea60891bf18",
+  "ad65c266-02b5-4a5a-b456-07f65a848bd7",
+  "7763b622-b683-45db-acaa-f7f868bb7d5e",
+  "17f0dfc6-8418-4b7f-849c-6251c241d8ab",
+  "7e89b2d5-13f4-4a8e-bdd5-f2476948d69b",
+  "856e0243-820f-442f-92bc-0ad6eb96fa69",
+  "32c15392-99f1-421b-8ebd-ea611170a894",
+  "f40136d1-1345-4b2c-ab15-d039df3f9a52",
+  "2ca2475e-523f-40f1-805f-39ba5b4f5fd2",
+  "a8799f53-e2ab-4e89-8b9d-53aeab307e27",
+  "2e05d47a-7c02-46e5-a961-ecc3561955d8"
+ ],
+ "created": [],
+ "relations": [
+  {
+   "id": "f1bab024-5557-4ccf-8de6-c934fc8f6fc2",
+   "from": "PAP-25",
+   "to": "PAP-96"
+  },
+  {
+   "id": "ece95cca-d128-4d9b-81b4-f0d017258c94",
+   "from": "PAP-117",
+   "to": "PAP-123"
+  },
+  {
+   "id": "b21af5ed-eb7e-41c6-8295-562e2864f7d1",
+   "from": "PAP-279",
+   "to": "PAP-116"
+  },
+  {
+   "id": "6d4bf72c-b0eb-4a35-8c01-716ff8645a79",
+   "from": "PAP-279",
+   "to": "PAP-119"
+  },
+  {
+   "id": "91a62d5d-16b3-47ea-91c6-e5bf4fe9e74c",
+   "from": "PAP-239",
+   "to": "PAP-97"
+  },
+  {
+   "id": "303e956b-9c5a-4dd1-9a12-a5c2f25e6999",
+   "from": "PAP-240",
+   "to": "PAP-122"
+  },
+  {
+   "id": "25d707fd-deee-43a3-bca6-a2c759ac7461",
+   "from": "PAP-120",
+   "to": "PAP-29"
+  },
+  {
+   "id": "392757db-58e7-4afe-9507-414db57df2a6",
+   "from": "PAP-94",
+   "to": "PAP-108"
+  },
+  {
+   "id": "794935ea-9e78-4962-8f85-6f0574b03441",
+   "from": "PAP-105",
+   "to": "PAP-108"
+  },
+  {
+   "id": "17f59ae3-cdc9-4880-afd7-abba79eb4a9a",
+   "from": "PAP-98",
+   "to": "PAP-113"
+  }
+ ],
+ "projectsUpdated": [
+  "62374841-346c-46fe-9d20-5d65252227f2",
+  "c7b318e7-840a-4aca-99dd-2b5aed3fc26b",
+  "2751f85d-339c-4b19-868d-eae91b31334c"
+ ],
+ "labelChanges": [
+  {
+   "what": "PAP-110:labels",
+   "issue": "PAP-110",
+   "note": "Type/Review -> Type/Build (audit: Review-typed issue builds a harness)"
+  }
+ ],
+ "notes": [
+  "create failed pm-linear/workspace-reconcile: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed pm-linear/weekly-reaudit: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed pm-linear/inbound-triage: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed pm-linear/orchestrator/claims: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed pm-linear/orchestrator/sessions: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed pm-linear/orchestrator/deploy: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed pm-linear/linear-sync/inbound: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed pm-linear/linear-sync/outbound: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed pm-linear/linear-sync/conflicts: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed agents/runtime-sandbox: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed agents/session-observability: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed agents/roster-v1/yaml: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed agents/roster-v1/lead-prompts: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed agents/roster-v1/sub-prompts: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed agents/roster-v1/build: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed agents/eval-harness/runner: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed agents/eval-harness/tasks: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed agents/eval-harness/judge: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed spec-builder/spec-i18n: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed spec-builder/spec-versioning: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed spec-builder/data-section/schema: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed spec-builder/data-section/generator: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed spec-builder/data-section/example: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed spec-builder/layout-codegen/templates: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed spec-builder/layout-codegen/wiring: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed spec-builder/layout-codegen/examples: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed spec-builder/spec-editor-ui/yaml: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed spec-builder/spec-editor-ui/form: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "create failed spec-builder/spec-editor-ui/preview: [{\"message\": \"usage limit exceeded\", \"path\": [\"c\"], \"locations\": [{\"line\": 1, \"column\": 35}], \"extensions\": {\"type\": \"usage limit exceeded\", \"code\": \"USAGE_LIMIT_EXCEEDED\", \"statusCode\": 400, \"userErr",
+  "Undid own relation PAP-123 blocks PAP-132 (created minutes earlier this session): the plan already encodes PAP-132 blocks PAP-123, so the new edge closed a cycle. The audit's suggested direction (PAP-123 -> PAP-132) would require flipping the existing plan edge, which is left for the coordinator/Justin."
+ ],
+ "documents": [
+  {
+   "project": "pm-linear",
+   "id": "929a59dd-0cd1-47ba-9c12-7bf4ddb4ae9f",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859",
+   "title": "Round 2 pending issues: pm-linear (9)",
+   "pendingKeys": [
+    "pm-linear/workspace-reconcile",
+    "pm-linear/weekly-reaudit",
+    "pm-linear/inbound-triage",
+    "pm-linear/orchestrator/claims",
+    "pm-linear/orchestrator/sessions",
+    "pm-linear/orchestrator/deploy",
+    "pm-linear/linear-sync/inbound",
+    "pm-linear/linear-sync/outbound",
+    "pm-linear/linear-sync/conflicts"
+   ]
+  },
+  {
+   "project": "agents",
+   "id": "e0f093fb-c393-4143-a395-b0a8ccecd948",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d",
+   "title": "Round 2 pending issues: agents (9)",
+   "pendingKeys": [
+    "agents/runtime-sandbox",
+    "agents/session-observability",
+    "agents/roster-v1/yaml",
+    "agents/roster-v1/lead-prompts",
+    "agents/roster-v1/sub-prompts",
+    "agents/roster-v1/build",
+    "agents/eval-harness/runner",
+    "agents/eval-harness/tasks",
+    "agents/eval-harness/judge"
+   ]
+  },
+  {
+   "project": "spec-builder",
+   "id": "a4b4ef35-c6f5-4746-82bd-83dca1cb3112",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b",
+   "title": "Round 2 pending issues: spec-builder (11)",
+   "pendingKeys": [
+    "spec-builder/spec-i18n",
+    "spec-builder/spec-versioning",
+    "spec-builder/data-section/schema",
+    "spec-builder/data-section/generator",
+    "spec-builder/data-section/example",
+    "spec-builder/layout-codegen/templates",
+    "spec-builder/layout-codegen/wiring",
+    "spec-builder/layout-codegen/examples",
+    "spec-builder/spec-editor-ui/yaml",
+    "spec-builder/spec-editor-ui/form",
+    "spec-builder/spec-editor-ui/preview"
+   ]
+  }
+ ],
+ "pendingRelations": [
+  "pm-linear/workspace-reconcile -> PAP-93",
+  "PAP-93 -> pm-linear/weekly-reaudit",
+  "PAP-105 -> pm-linear/weekly-reaudit",
+  "PAP-99 -> pm-linear/weekly-reaudit",
+  "PAP-93 -> pm-linear/inbound-triage",
+  "PAP-97 -> pm-linear/inbound-triage",
+  "PAP-118 -> pm-linear/inbound-triage",
+  "pm-linear/orchestrator/claims -> pm-linear/orchestrator/sessions",
+  "pm-linear/orchestrator/claims -> pm-linear/orchestrator/deploy",
+  "pm-linear/orchestrator/claims -> pm-linear/orchestrator/sessions",
+  "pm-linear/orchestrator/sessions -> pm-linear/orchestrator/deploy",
+  "pm-linear/orchestrator/claims -> pm-linear/orchestrator/deploy",
+  "pm-linear/orchestrator/sessions -> pm-linear/orchestrator/deploy",
+  "PAP-25 -> pm-linear/orchestrator/deploy",
+  "pm-linear/linear-sync/inbound -> pm-linear/linear-sync/outbound",
+  "pm-linear/linear-sync/inbound -> pm-linear/linear-sync/conflicts",
+  "pm-linear/linear-sync/inbound -> pm-linear/linear-sync/outbound",
+  "pm-linear/linear-sync/outbound -> pm-linear/linear-sync/conflicts",
+  "pm-linear/linear-sync/inbound -> pm-linear/linear-sync/conflicts",
+  "pm-linear/linear-sync/outbound -> pm-linear/linear-sync/conflicts",
+  "PAP-25 -> agents/runtime-sandbox",
+  "agents/runtime-sandbox -> PAP-106",
+  "PAP-96 -> agents/session-observability",
+  "PAP-40 -> agents/session-observability",
+  "agents/session-observability -> PAP-113",
+  "agents/session-observability -> PAP-102",
+  "agents/roster-v1/yaml -> agents/roster-v1/lead-prompts",
+  "agents/roster-v1/yaml -> agents/roster-v1/sub-prompts",
+  "agents/roster-v1/yaml -> agents/roster-v1/build",
+  "agents/roster-v1/yaml -> agents/roster-v1/lead-prompts",
+  "agents/roster-v1/lead-prompts -> agents/roster-v1/build",
+  "agents/roster-v1/yaml -> agents/roster-v1/sub-prompts",
+  "agents/roster-v1/sub-prompts -> agents/roster-v1/build",
+  "agents/roster-v1/yaml -> agents/roster-v1/build",
+  "agents/roster-v1/lead-prompts -> agents/roster-v1/build",
+  "agents/roster-v1/sub-prompts -> agents/roster-v1/build",
+  "agents/eval-harness/runner -> agents/eval-harness/tasks",
+  "agents/eval-harness/runner -> agents/eval-harness/judge",
+  "agents/eval-harness/runner -> agents/eval-harness/tasks",
+  "agents/eval-harness/tasks -> agents/eval-harness/judge",
+  "agents/eval-harness/runner -> agents/eval-harness/judge",
+  "agents/eval-harness/tasks -> agents/eval-harness/judge",
+  "PAP-27 -> spec-builder/spec-i18n",
+  "PAP-120 -> spec-builder/spec-i18n",
+  "PAP-114 -> spec-builder/spec-versioning",
+  "PAP-74 -> spec-builder/spec-versioning",
+  "spec-builder/data-section/schema -> spec-builder/data-section/generator",
+  "spec-builder/data-section/schema -> spec-builder/data-section/example",
+  "spec-builder/data-section/schema -> spec-builder/data-section/generator",
+  "spec-builder/data-section/generator -> spec-builder/data-section/example",
+  "spec-builder/data-section/schema -> spec-builder/data-section/example",
+  "spec-builder/data-section/generator -> spec-builder/data-section/example",
+  "spec-builder/layout-codegen/templates -> spec-builder/layout-codegen/wiring",
+  "spec-builder/layout-codegen/templates -> spec-builder/layout-codegen/examples",
+  "spec-builder/layout-codegen/templates -> spec-builder/layout-codegen/wiring",
+  "spec-builder/layout-codegen/wiring -> spec-builder/layout-codegen/examples",
+  "spec-builder/layout-codegen/templates -> spec-builder/layout-codegen/examples",
+  "spec-builder/layout-codegen/wiring -> spec-builder/layout-codegen/examples",
+  "spec-builder/spec-editor-ui/yaml -> spec-builder/spec-editor-ui/form",
+  "spec-builder/spec-editor-ui/yaml -> spec-builder/spec-editor-ui/preview",
+  "spec-builder/spec-editor-ui/yaml -> spec-builder/spec-editor-ui/form",
+  "spec-builder/spec-editor-ui/yaml -> spec-builder/spec-editor-ui/preview"
+ ]
+}

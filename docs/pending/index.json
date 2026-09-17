@@ -1,0 +1,3193 @@
+[
+ {
+  "key": "gap/app-shell/runtime-flags",
+  "title": "Build runtime feature flags: per-tenant and per-audience flags with kill switches, segment targeting and page-spec `flags:` guards",
+  "project": "app-shell",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
+  "linearDocument": null
+ },
+ {
+  "key": "gap/app-shell/onboarding-wizard",
+  "title": "Build the first-run tenant onboarding wizard: create organisation, choose business template, invite team, connect billing, land on a seeded dashboard",
+  "project": "app-shell",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
+  "linearDocument": null
+ },
+ {
+  "key": "gap/app-shell/client-errors",
+  "title": "Define the client error handling and crash reporting contract: error boundaries, error code catalogue, user-facing copy, browser and Tauri crash reports into observability",
+  "project": "app-shell",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
+  "linearDocument": null
+ },
+ {
+  "key": "gap/app-shell/code-signing",
+  "title": "Set up desktop and mobile code signing and notarisation (Apple Developer, Windows certificate, Android keystore) with one Needs Justin credential ask",
+  "project": "app-shell",
+  "parent": null,
+  "phase": "P1",
+  "type": "Infra",
+  "priority": 2,
+  "size": null,
+  "surfaces": [],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
+  "linearDocument": null
+ },
+ {
+  "key": "gap/app-shell/custom-domains",
+  "title": "Add per-tenant custom domains: on-demand TLS in Caddy, host-based tenant resolution in api-layer, DNS verification UI",
+  "project": "app-shell",
+  "parent": null,
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": null,
+  "surfaces": [],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
+  "linearDocument": null
+ },
+ {
+  "key": "gap/data-layer/email-package",
+  "title": "Build the transactional email package (`packages/email`): React Email templates, provider adapter, sandbox allowlist mode, suppression list, DKIM/SPF/DMARC check, Mailpit in dev",
+  "project": "data-layer",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
+  "linearDocument": null
+ },
+ {
+  "key": "gap/data-layer/tenant-lifecycle",
+  "title": "Build the tenant lifecycle: tenant states, deletion request and cancel flow with grace period, archive metadata, per-tenant storage and row quotas (the purge job itself is `security/retention-pii`)",
+  "project": "data-layer",
+  "parent": null,
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
+  "linearDocument": null
+ },
+ {
+  "key": "gap/forge/non-linux-runners",
+  "title": "Provision non-Linux CI capacity: hosted macOS runners (Xcode, VoiceOver) and a Windows VM runner (NVDA, MSI signing) with cost caps and secrets",
+  "project": "forge",
+  "parent": null,
+  "phase": "P1",
+  "type": "Infra",
+  "priority": 2,
+  "size": null,
+  "surfaces": [],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/gaps-pending-0.json (agent0/gaps.py)",
+  "linearDocument": null
+ },
+ {
+  "key": "collab/runtime-docs-store",
+  "title": "Build a runtime docs store for tenant-authored documents: Yjs-backed pages in Postgres with the same routes, search registration and comment anchors as repo MDX",
+  "project": "collab",
+  "parent": null,
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Knowledge surfaced everywhere",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-128",
+   "PAP-142"
+  ],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "collab/in-app-help",
+  "title": "Add contextual in-app help: help panel bound to page spec `purpose` and docs deep links, first-visit product tour, keyboard hint overlay",
+  "project": "collab",
+  "parent": null,
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Knowledge surfaced everywhere",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-128"
+  ],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "realtime/push-transport",
+  "title": "Build the push transport: server-to-client notification and job-progress channel (Electric shape or SSE) plus Web Push and Tauri mobile push (APNs/FCM)",
+  "project": "realtime",
+  "parent": null,
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Scale and offline tested",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-143"
+  ],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "collab/comments/schema-rls-rpc",
+  "title": "Comment schema, anchors, RLS and oRPC procedures",
+  "project": "collab",
+  "parent": "PAP-131",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Comments and canvas",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "collab/comments/panel-pins-composer",
+  "title": "Comment panel, pins and composer UI",
+  "project": "collab",
+  "parent": "PAP-131",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Comments and canvas",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "collab/comments/live-deeplinks-linear",
+  "title": "Live updates, deep links and Linear escalation",
+  "project": "collab",
+  "parent": "PAP-131",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Comments and canvas",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "collab/canvas/nodes-edges-loader",
+  "title": "Canvas node and edge types with graph loader",
+  "project": "collab",
+  "parent": "PAP-132",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [
+   "Staff",
+   "Developer"
+  ],
+  "milestone": "Comments and canvas",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "collab/canvas/yjs-overlay",
+  "title": "Collaborative overlay: notes, regions, overrides in Yjs",
+  "project": "collab",
+  "parent": "PAP-132",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [
+   "Staff",
+   "Developer"
+  ],
+  "milestone": "Comments and canvas",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "collab/canvas/filters-export-perf",
+  "title": "Filters, deep links, export and 300-node performance run",
+  "project": "collab",
+  "parent": "PAP-132",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [
+   "Staff",
+   "Developer"
+  ],
+  "milestone": "Comments and canvas",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "collab/notifications/inbox-preferences",
+  "title": "Inbox UI, bell badge and preferences page",
+  "project": "collab",
+  "parent": "PAP-136",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Knowledge surfaced everywhere",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "collab/notifications/digests-quiet-hours",
+  "title": "Digests, quiet hours and burst collapse",
+  "project": "collab",
+  "parent": "PAP-136",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Knowledge surfaced everywhere",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "collab/notifications/slack-channel",
+  "title": "Slack channel and tenant Slack configuration",
+  "project": "collab",
+  "parent": "PAP-136",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Knowledge surfaced everywhere",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "realtime/record-sync/live-hooks-registry",
+  "title": "Live record hooks and shape registry additions",
+  "project": "realtime",
+  "parent": "PAP-143",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": "Record sync and conflict UX",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "realtime/record-sync/reconciler",
+  "title": "Reconciler for optimistic writes and conflict events",
+  "project": "realtime",
+  "parent": "PAP-143",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": "Record sync and conflict UX",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "realtime/record-sync/resubscribe-lag",
+  "title": "Permission-driven resubscribe and lag measurement",
+  "project": "realtime",
+  "parent": "PAP-143",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": "Record sync and conflict UX",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "input/commands/registry-core",
+  "title": "Command registry core, scoping and chord matcher",
+  "project": "input",
+  "parent": "PAP-151",
+  "phase": "P0",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Keyboard and command system",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "input/commands/palette-help-ui",
+  "title": "Command palette and help sheet UI",
+  "project": "input",
+  "parent": "PAP-151",
+  "phase": "P0",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Keyboard and command system",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "input/commands/agent-endpoint-defaults",
+  "title": "Agent execution endpoint, telemetry and default commands",
+  "project": "input",
+  "parent": "PAP-151",
+  "phase": "P0",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Keyboard and command system",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "input/dnd/sensors-sortable-list",
+  "title": "dnd-kit sensors on the input abstraction and SortableList",
+  "project": "input",
+  "parent": "PAP-155",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Touch, pen, gamepad",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "input/dnd/keyboard-announcements",
+  "title": "Keyboard alternative, announcements and focus restore",
+  "project": "input",
+  "parent": "PAP-155",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Touch, pen, gamepad",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "input/dnd/kanban-grid-dropzone-crosswindow",
+  "title": "KanbanDnd, SortableGrid, DropZone and cross-window drag",
+  "project": "input",
+  "parent": "PAP-155",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Touch, pen, gamepad",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent3/pending-issues.json",
+  "linearDocument": null
+ },
+ {
+  "key": "gap/tables/schema-editor",
+  "title": "Build the custom dataset schema editor: create tables and fields in-app, reorder, field type conversion with a lossiness report and background backfill",
+  "project": "tables",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": null,
+  "surfaces": [],
+  "milestone": "All view types",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-164",
+   "PAP-165"
+  ],
+  "blocks": [
+   "PAP-199",
+   "PAP-208"
+  ],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "gap/tables/record-detail",
+  "title": "Build record-level features shared by every module: record detail page and panel routing, activity timeline, attachments tab, per-record comments and field history with undo",
+  "project": "tables",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [],
+  "milestone": "All view types",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-165",
+   "PAP-38"
+  ],
+  "blocks": [
+   "PAP-189",
+   "PAP-102"
+  ],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "gap/tables/bulk-trash",
+  "title": "Build bulk operations, trash and restore: multi-row edit and delete with server batching, soft-delete trash with 30-day restore, undo toast",
+  "project": "tables",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [],
+  "milestone": "All view types",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-165",
+   "PAP-32"
+  ],
+  "blocks": [
+   "PAP-199",
+   "PAP-208"
+  ],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/compiler/core",
+  "title": "Compiler core: dataset resolution, per-type filter ops, sorts and signed keyset cursors",
+  "project": "tables",
+  "parent": "PAP-163",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Grid with sort, filter, group",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/compiler/groups-shapes",
+  "title": "Groups, aggregates and Electric shape eligibility",
+  "project": "tables",
+  "parent": "PAP-163",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Grid with sort, filter, group",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/compiler/api-hook-bench",
+  "title": "oRPC procedures, useViewQuery hook and the 100k-row benchmark",
+  "project": "tables",
+  "parent": "PAP-163",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Grid with sort, filter, group",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/fields/framework-primitives",
+  "title": "Field type framework and primitive types (text, number, currency, percent, date, checkbox, rating, url, email, phone)",
+  "project": "tables",
+  "parent": "PAP-164",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Grid with sort, filter, group",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/fields/choice-people-attachment",
+  "title": "Choice, people and attachment types (select, multiSelect, user, attachment) with FieldSettingsPanel",
+  "project": "tables",
+  "parent": "PAP-164",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Grid with sort, filter, group",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/fields/relational-computed",
+  "title": "Relational and computed types (relation, lookup, rollup, formula storage) and convertFieldType with lossiness report",
+  "project": "tables",
+  "parent": "PAP-164",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Grid with sort, filter, group",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/grid/core",
+  "title": "Grid core: virtualisation, data binding, selection model and keyboard navigation",
+  "project": "tables",
+  "parent": "PAP-165",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Grid with sort, filter, group",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/grid/editing-clipboard-bulk",
+  "title": "Inline editing with optimistic commit, TSV clipboard ranges and the bulk actions bar",
+  "project": "tables",
+  "parent": "PAP-165",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Grid with sort, filter, group",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/grid/columns-groups-panel",
+  "title": "Column operations, grouping headers, aggregate footer and RecordPanel",
+  "project": "tables",
+  "parent": "PAP-165",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Grid with sort, filter, group",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/time/engine-calendar",
+  "title": "TimeScale engine, range compilation, overlap packing and the calendar view (month, week, day, agenda)",
+  "project": "tables",
+  "parent": "PAP-168",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "All view types",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/time/timeline",
+  "title": "Timeline view: two-axis virtualised canvas, lanes, zoom levels and bar editing",
+  "project": "tables",
+  "parent": "PAP-168",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "All view types",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/time/gantt",
+  "title": "Gantt view: frozen left grid, dependency arrows, critical path, progress and working days",
+  "project": "tables",
+  "parent": "PAP-168",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "All view types",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/formula/parser-typecheck",
+  "title": "Lexer, Pratt parser, AST, type checker and the defineFunction catalogue",
+  "project": "tables",
+  "parent": "PAP-171",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "View sharing, formulas, dashboards",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/formula/evaluator-editor",
+  "title": "TypeScript evaluator with function implementations and the CodeMirror formula editor",
+  "project": "tables",
+  "parent": "PAP-171",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "View sharing, formulas, dashboards",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/formula/sql-cache",
+  "title": "SQL compiler, formula_cache fallback job and the dependency graph",
+  "project": "tables",
+  "parent": "PAP-171",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "View sharing, formulas, dashboards",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/dashboard/model-grid",
+  "title": "Dashboard tables, layout engine, breakpoint layouts and drag or resize with keyboard moves",
+  "project": "tables",
+  "parent": "PAP-173",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "View sharing, formulas, dashboards",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/dashboard/blocks-crossfilter",
+  "title": "Block kinds, cross-filter bus, filter bar, params and deep links",
+  "project": "tables",
+  "parent": "PAP-173",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "View sharing, formulas, dashboards",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/dashboard/print-perf-spec",
+  "title": "Lazy loading, error boundaries, print route, page-spec hook and permission tiles",
+  "project": "tables",
+  "parent": "PAP-173",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "S",
+  "surfaces": [],
+  "milestone": "View sharing, formulas, dashboards",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/automations/model-triggers",
+  "title": "Automation schema, trigger sources and the run runtime with idempotency, loop guard, limits and circuit breaker",
+  "project": "tables",
+  "parent": "PAP-174",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "View sharing, formulas, dashboards",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/automations/actions",
+  "title": "Action catalogue with scope classes, template expressions, connector.call, agent.run, delay and branch",
+  "project": "tables",
+  "parent": "PAP-174",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "View sharing, formulas, dashboards",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "tables/automations/builder-log-templates",
+  "title": "Automation builder page, test run, run log with replay, five starter templates and import hooks",
+  "project": "tables",
+  "parent": "PAP-174",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "View sharing, formulas, dashboards",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc"
+ },
+ {
+  "key": "gap/business-core/usage-metering",
+  "title": "Build usage metering and metered billing: usage events (agent sessions, storage, seats, API calls) aggregated per tenant, Stripe usage records, limit warnings",
+  "project": "business-core",
+  "parent": null,
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [],
+  "milestone": "Stripe billing live",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-177",
+   "PAP-178",
+   "PAP-43"
+  ],
+  "blocks": [
+   "PAP-99"
+  ],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+ },
+ {
+  "key": "gap/business-core/recurring-dunning",
+  "title": "Build recurring tenant invoices and dunning: schedules, automatic reminders, late fees, payment retry for tenant-to-customer billing",
+  "project": "business-core",
+  "parent": null,
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": null,
+  "surfaces": [],
+  "milestone": "Payroll adapter and cash dashboard",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-180",
+   "PAP-43"
+  ],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+ },
+ {
+  "key": "business-core/ledger/journal-constraints",
+  "title": "Journal tables, balance trigger, immutability trigger, gapless numbering and account balances",
+  "project": "business-core",
+  "parent": "PAP-179",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Ledger and reports",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+ },
+ {
+  "key": "business-core/ledger/hashchain-reversal-close",
+  "title": "Hash chain with nightly verification, ledger.reverse and the period close and lock workflow",
+  "project": "business-core",
+  "parent": "PAP-179",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Ledger and reports",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+ },
+ {
+  "key": "business-core/ledger/rules-ui-trialbalance",
+  "title": "Posting rule registry with the first five rules, /finance/journal UI, trial balance and rebuildBalances",
+  "project": "business-core",
+  "parent": "PAP-179",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Ledger and reports",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+ },
+ {
+  "key": "business-core/invoicing/model-statemachine",
+  "title": "Document model, lines, sequences, server-side totals, state machine, quote conversion, void and credit notes",
+  "project": "business-core",
+  "parent": "PAP-180",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Ledger and reports",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+ },
+ {
+  "key": "business-core/invoicing/pdf-paypage",
+  "title": "Branded PDF rendering, public /pay and /doc pages, Stripe Checkout on platform or connected account, receipts",
+  "project": "business-core",
+  "parent": "PAP-180",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Ledger and reports",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+ },
+ {
+  "key": "business-core/invoicing/postings-portal-emails",
+  "title": "Posting rules invoice.*, manual payments, reminders job, customer portal invoice list and email templates",
+  "project": "business-core",
+  "parent": "PAP-180",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Ledger and reports",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+ },
+ {
+  "key": "business-core/payroll/adapter-contract",
+  "title": "Finalised PayrollProvider interface, first adapter with idempotency keys, webhook route and the adapter contract test suite",
+  "project": "business-core",
+  "parent": "PAP-184",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Payroll adapter and cash dashboard",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+ },
+ {
+  "key": "business-core/payroll/onboarding-sync",
+  "title": "Payroll tables, company and employee onboarding via provider links, employee sync from fin_employee and status polling",
+  "project": "business-core",
+  "parent": "PAP-184",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Payroll adapter and cash dashboard",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+ },
+ {
+  "key": "business-core/payroll/run-approve-post",
+  "title": "Payroll run flow, typed-total approval, webhook status transitions, ledger posting and the paystub portal page",
+  "project": "business-core",
+  "parent": "PAP-184",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Payroll adapter and cash dashboard",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9"
+ },
+ {
+  "key": "gap/growth/consent-centre",
+  "title": "Build the consent and marketing compliance centre: preference page, unsubscribe centre, double opt-in, suppression list shared by outreach, notifications and forms, GDPR/CAN-SPAM/TCPA rules",
+  "project": "growth",
+  "parent": null,
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [],
+  "milestone": "Campaigns and social",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-187",
+   "PAP-43"
+  ],
+  "blocks": [
+   "PAP-191",
+   "PAP-193"
+  ],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+ },
+ {
+  "key": "growth/social/model-queue-calendar",
+  "title": "Social schema, approval state machine, composer with per-platform variants, approval queue and calendar",
+  "project": "growth",
+  "parent": "PAP-190",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Campaigns and social",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+ },
+ {
+  "key": "growth/social/adapter-mock-x",
+  "title": "Adapter interface, mock adapter, X API v2 adapter and the pg-boss publishing worker",
+  "project": "growth",
+  "parent": "PAP-190",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Campaigns and social",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+ },
+ {
+  "key": "growth/social/adapters-review-gated",
+  "title": "LinkedIn, Instagram, TikTok and YouTube adapters in dryRun with payload snapshots, OAuth connect flows and re-auth banners",
+  "project": "growth",
+  "parent": "PAP-190",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Campaigns and social",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+ },
+ {
+  "key": "growth/outreach/model-worker",
+  "title": "Outreach schema, provider interface with Resend and Twilio adapters, scheduler worker, template rendering and idempotency",
+  "project": "growth",
+  "parent": "PAP-191",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Campaigns and social",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+ },
+ {
+  "key": "growth/outreach/compliance-warmup-replies",
+  "title": "Consent and suppression checks, quiet hours, unsubscribe and STOP handling, warmup stages, bounce handling and reply detection",
+  "project": "growth",
+  "parent": "PAP-191",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Campaigns and social",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+ },
+ {
+  "key": "growth/outreach/ui",
+  "title": "Sequence builder, template editor with preview and test send, enrolments grid and domain setup wizard",
+  "project": "growth",
+  "parent": "PAP-191",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Campaigns and social",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+ },
+ {
+  "key": "growth/referral/codes-attribution",
+  "title": "Referral programs, codes, /r/{code} route, attribution window and the qualification worker",
+  "project": "growth",
+  "parent": "PAP-196",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 4,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Acquisition analytics",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+ },
+ {
+  "key": "growth/referral/rewards-payouts-ledger",
+  "title": "Reward rules, fraud rules, approval, Stripe Connect transfers, ledger postings and monthly statements",
+  "project": "growth",
+  "parent": "PAP-196",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 4,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Acquisition analytics",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+ },
+ {
+  "key": "growth/referral/portal-console-ui",
+  "title": "Portal referral page, console program and referral grids and the rewards approval queue",
+  "project": "growth",
+  "parent": "PAP-196",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 4,
+  "size": "S",
+  "surfaces": [],
+  "milestone": "Acquisition analytics",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+ },
+ {
+  "key": "growth/support/email-threading",
+  "title": "Support schema, inbound email parsing, threading heuristics, HTML sanitising, contact matching and outbound replies",
+  "project": "growth",
+  "parent": "PAP-197",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Acquisition analytics",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+ },
+ {
+  "key": "growth/support/chat-notes",
+  "title": "Portal SupportChat widget with live sync and presence, unauthenticated email capture and internal notes on comment threads",
+  "project": "growth",
+  "parent": "PAP-197",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Acquisition analytics",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+ },
+ {
+  "key": "growth/support/console-ui",
+  "title": "Three-pane inbox on a saved list view, conversation view, contact sidebar, assignment, snooze, macros, shortcuts and metrics",
+  "project": "growth",
+  "parent": "PAP-197",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": "M",
+  "surfaces": [],
+  "milestone": "Acquisition analytics",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent4/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012"
+ },
+ {
+  "key": "migration/test-accounts",
+  "title": "Provision importer test accounts and fixture workspaces: Airtable demo base, Notion test workspace, ClickUp workspace, Stripe test account, QuickBooks sandbox, Xero demo, Google OAuth app; one Needs Justin item",
+  "project": "migration",
+  "parent": null,
+  "phase": "P1",
+  "type": "Infra",
+  "priority": 2,
+  "size": "S",
+  "surfaces": [
+   "Developer",
+   "Agent"
+  ],
+  "milestone": "Import framework and CSV",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-198"
+  ],
+  "blocks": [
+   "PAP-200",
+   "PAP-202",
+   "PAP-203",
+   "PAP-204",
+   "PAP-206"
+  ],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "migration/monday-hubspot-recipes",
+  "title": "Import Monday and HubSpot through guided CSV export recipes with preset mappings (no API connector in this build)",
+  "project": "migration",
+  "parent": null,
+  "phase": "P2",
+  "type": "Build",
+  "priority": 4,
+  "size": "S",
+  "surfaces": [
+   "Staff"
+  ],
+  "milestone": "Airtable, Notion, ClickUp importers",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-198",
+   "PAP-200"
+  ],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-199/0",
+  "title": "Connector interface, mapping model and import engine (`SourceConnector`, `import_mapping`, batching, resumability, fixture connector)",
+  "project": "migration",
+  "parent": "PAP-199",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Staff",
+   "Developer"
+  ],
+  "milestone": "Import framework and CSV",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-199/1",
+  "title": "Dry run, commit and rollback semantics: transaction-rolled dry run, `import_run_item` before-state, exact rollback with conflict listing",
+  "project": "migration",
+  "parent": "PAP-199",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Staff",
+   "Developer"
+  ],
+  "milestone": "Import framework and CSV",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-199/2",
+  "title": "Type inference, mapping wizard UI and run history with per-item drill-down and rollback button",
+  "project": "migration",
+  "parent": "PAP-199",
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Staff",
+   "Developer"
+  ],
+  "milestone": "Import framework and CSV",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-202/0",
+  "title": "Airtable connector: OAuth and PAT auth, metadata discovery, record streaming with 5 rps token bucket and expiring-attachment fetch",
+  "project": "migration",
+  "parent": "PAP-202",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Staff"
+  ],
+  "milestone": "Airtable, Notion, ClickUp importers",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-202/1",
+  "title": "Airtable field mapping: every field type to PaperOS types, relations two-pass, lookups and rollups third pass, formula translation report",
+  "project": "migration",
+  "parent": "PAP-202",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Staff"
+  ],
+  "milestone": "Airtable, Notion, ClickUp importers",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-202/2",
+  "title": "Airtable view mapping and wizard steps: filterByFormula parsing, kanban, calendar, gallery and form views, side-by-side review",
+  "project": "migration",
+  "parent": "PAP-202",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Staff"
+  ],
+  "milestone": "Airtable, Notion, ClickUp importers",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-203/0",
+  "title": "Notion connector and database property mapping to tables (OAuth, search discovery, databases.query streaming at 3 rps, relations and rollups)",
+  "project": "migration",
+  "parent": "PAP-203",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Staff"
+  ],
+  "milestone": "Airtable, Notion, ClickUp importers",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-203/1",
+  "title": "Notion block converter to MDX and Tiptap JSON: all block types, media upload before URL expiry, internal link rewriting",
+  "project": "migration",
+  "parent": "PAP-203",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Staff"
+  ],
+  "milestone": "Airtable, Notion, ClickUp importers",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-203/2",
+  "title": "Notion hierarchy, page tree picker, docs placement and conversion report",
+  "project": "migration",
+  "parent": "PAP-203",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "S",
+  "surfaces": [
+   "Staff"
+  ],
+  "milestone": "Airtable, Notion, ClickUp importers",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-205/0",
+  "title": "Export archive format v1.0 and streaming export job: manifest, JSON Schemas, table, docs, files, comments, PM, CRM, ledger and audit writers",
+  "project": "migration",
+  "parent": "PAP-205",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Customer"
+  ],
+  "milestone": "Airtable, Notion, ClickUp importers",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-205/1",
+  "title": "Export UI, weekly scheduling to S3 or Google Drive with encryption, signed download links, history and audit",
+  "project": "migration",
+  "parent": "PAP-205",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Customer"
+  ],
+  "milestone": "Airtable, Notion, ClickUp importers",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-205/2",
+  "title": "Round-trip `paperos` connector: import a PaperOS archive into an empty tenant and verify counts and hashes table by table",
+  "project": "migration",
+  "parent": "PAP-205",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Customer"
+  ],
+  "milestone": "Airtable, Notion, ClickUp importers",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-206/0",
+  "title": "Stripe connector and mapping: customers to CRM, catalog and subscriptions to billing, invoices, fees, tax, refunds and payouts to ledger postings",
+  "project": "migration",
+  "parent": "PAP-206",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": "M",
+  "surfaces": [
+   "Staff"
+  ],
+  "milestone": "Business migrations",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-206/1",
+  "title": "QuickBooks Online and Xero connectors: chart of accounts, opening balances on a conversion date, optional journal and invoice history",
+  "project": "migration",
+  "parent": "PAP-206",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": "M",
+  "surfaces": [
+   "Staff"
+  ],
+  "milestone": "Business migrations",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-206/2",
+  "title": "Finance import wizard: conversion date, account mapping review, duplicate customer resolution, trial balance gate and reversing rollback",
+  "project": "migration",
+  "parent": "PAP-206",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": "M",
+  "surfaces": [
+   "Staff"
+  ],
+  "milestone": "Business migrations",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-207/0",
+  "title": "Template pack format, Zod schema, lint, and the `template` applier connector with conflict strategies, composition and upgrade",
+  "project": "migration",
+  "parent": "PAP-207",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": "M",
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Business migrations",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-207/1",
+  "title": "Author the five business packs (agency, retail, SaaS, clinic, restaurant) with page specs, views, pipelines, charts of accounts, sample data and starter docs",
+  "project": "migration",
+  "parent": "PAP-207",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": "M",
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Business migrations",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-207/2",
+  "title": "Template gallery in onboarding and settings: cards with previews, dry-run diff, apply with or without sample data, remove sample data",
+  "project": "migration",
+  "parent": "PAP-207",
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": "S",
+  "surfaces": [
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Business migrations",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6"
+ },
+ {
+  "key": "child/PAP-213/0",
+  "title": "Table library spike and ADR: TanStack Table plus Virtual, AG Grid Community, Glide Data Grid and react-data-grid at 100k rows",
+  "project": "libraries",
+  "parent": "PAP-213",
+  "phase": "P0",
+  "type": "Research",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": "Core adoptions decided",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+ },
+ {
+  "key": "child/PAP-213/1",
+  "title": "Chart and map library spikes and ADRs: ECharts, visx, Recharts, Observable Plot, Nivo, Chart.js; MapLibre GL and Leaflet with self-hosted tiles",
+  "project": "libraries",
+  "parent": "PAP-213",
+  "phase": "P0",
+  "type": "Research",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": "Core adoptions decided",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+ },
+ {
+  "key": "child/PAP-213/2",
+  "title": "Canvas and editor shortlist: tldraw, React Flow, Excalidraw, Konva; Tiptap, BlockNote, Lexical, Plate, handed to collab research",
+  "project": "libraries",
+  "parent": "PAP-213",
+  "phase": "P0",
+  "type": "Research",
+  "priority": 2,
+  "size": "S",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": "Core adoptions decided",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+ },
+ {
+  "key": "child/PAP-214/0",
+  "title": "Decide jobs, transactional email and PDF generation with Docker measurements: Inngest, Trigger.dev, BullMQ, pg-boss, Graphile Worker; Resend, Postmark, SES, Postal; Playwright PDF, react-pdf, Typst",
+  "project": "libraries",
+  "parent": "PAP-214",
+  "phase": "P0",
+  "type": "Research",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": "Core adoptions decided",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+ },
+ {
+  "key": "child/PAP-214/1",
+  "title": "Decide search, observability, feature flags and object storage with a resource budget table under 6 GB",
+  "project": "libraries",
+  "parent": "PAP-214",
+  "phase": "P0",
+  "type": "Research",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": "Core adoptions decided",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+ },
+ {
+  "key": "child/PAP-214/2",
+  "title": "Confirm validation and runtime, cross-link confirmed choices, consolidate ADRs, compose files and registry entries",
+  "project": "libraries",
+  "parent": "PAP-214",
+  "phase": "P0",
+  "type": "Research",
+  "priority": 2,
+  "size": "S",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": "Core adoptions decided",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+ },
+ {
+  "key": "child/PAP-215/0",
+  "title": "Spike tables and PM products: NocoDB, Baserow and Plane with compose, seeded flows, metrics and scorecards",
+  "project": "libraries",
+  "parent": "PAP-215",
+  "phase": "P1",
+  "type": "Research",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Staff"
+  ],
+  "milestone": "Core adoptions decided",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+ },
+ {
+  "key": "child/PAP-215/1",
+  "title": "Spike growth products: Twenty CRM, Chatwoot, Listmonk and Postiz with compose, seeded flows, metrics and scorecards",
+  "project": "libraries",
+  "parent": "PAP-215",
+  "phase": "P1",
+  "type": "Research",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Staff"
+  ],
+  "milestone": "Core adoptions decided",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+ },
+ {
+  "key": "child/PAP-215/2",
+  "title": "Spike Cal.com and Formbricks, then write the OSS products mode ADR, borrow reference docs and embed integration contracts",
+  "project": "libraries",
+  "parent": "PAP-215",
+  "phase": "P1",
+  "type": "Research",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Staff"
+  ],
+  "milestone": "Core adoptions decided",
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [],
+  "source": "round2/agent5/pending-issues.json",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d"
+ },
+ {
+  "key": "security/agent-deny-list",
+  "title": "Define and enforce the agent destructive-action deny list: policy file, PreToolUse hook, MCP destructive-scope interception with Needs Justin escalation, and server-side backstops",
+  "project": "agents",
+  "parent": null,
+  "phase": "P0",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [
+   "Agent",
+   "Developer"
+  ],
+  "milestone": "Roster defined and installed",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-106",
+   "PAP-210"
+  ],
+  "blocks": [
+   "PAP-96",
+   "PAP-111",
+   "agents/runtime-sandbox"
+  ],
+  "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+ },
+ {
+  "key": "security/prompt-injection",
+  "title": "Build prompt-injection defences for agent sessions: trust tiers for issues, comments and PRs, untrusted-content wrapping, actor-verified instructions, canary tokens and an injection eval suite",
+  "project": "agents",
+  "parent": null,
+  "phase": "P0",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [
+   "Agent",
+   "Developer"
+  ],
+  "milestone": "Roster defined and installed",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-92",
+   "PAP-97"
+  ],
+  "blocks": [
+   "PAP-81",
+   "PAP-109"
+  ],
+  "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+ },
+ {
+  "key": "security/credential-broker",
+  "title": "Build the credential broker: sessions hold no raw secrets; an egress proxy injects short-lived per-session tokens (GitHub App, Forgejo, Linear proxy, PaperOS agent keys, Anthropic) with usage logs and one-command revoke-all",
+  "project": "pm-linear",
+  "parent": null,
+  "phase": "P0",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [
+   "Agent",
+   "Developer"
+  ],
+  "milestone": "Orchestrator claims and ships issues",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-96",
+   "PAP-48",
+   "PAP-25"
+  ],
+  "blocks": [
+   "PAP-111",
+   "agents/runtime-sandbox"
+  ],
+  "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+ },
+ {
+  "key": "security/field-encryption",
+  "title": "Build server-side field encryption for stored secrets (OAuth tokens, SCIM and webhook secrets, connector credentials, TOTP seeds) with envelope keys, key rotation and a leak scanner",
+  "project": "data-layer",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Staff"
+  ],
+  "milestone": "Tenant-safe and observable",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-32",
+   "PAP-17"
+  ],
+  "blocks": [
+   "PAP-222",
+   "PAP-190",
+   "PAP-193",
+   "PAP-230"
+  ],
+  "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+ },
+ {
+  "key": "security/platform-dr",
+  "title": "Add object-storage, Yjs, orchestrator and sops-key backups and a monthly platform-wide disaster-recovery drill restoring everything on a fresh host against RPO 1 h and RTO 4 h",
+  "project": "data-layer",
+  "parent": null,
+  "phase": "P1",
+  "type": "Infra",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": "Tenant-safe and observable",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-30",
+   "PAP-37",
+   "PAP-140",
+   "PAP-96"
+  ],
+  "blocks": [
+   "PAP-88"
+  ],
+  "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+ },
+ {
+  "key": "security/retention-pii",
+  "title": "Enforce data retention, PII classification and tenant hard-purge: `pii` column annotations driving redaction and OTel filters, per-table retention jobs, and the export-first purge after the grace period",
+  "project": "data-layer",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Staff"
+  ],
+  "milestone": "Tenant-safe and observable",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-33",
+   "PAP-43",
+   "PAP-38"
+  ],
+  "blocks": [
+   "PAP-221"
+  ],
+  "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+ },
+ {
+  "key": "security/security-telemetry",
+  "title": "Build security telemetry and alerting: auth anomalies, RLS denials, agent policy and egress denials, canary hits, webhook signature failures and backup age routed to Linear with a weekly security digest",
+  "project": "quality",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Agent",
+   "Staff",
+   "Developer"
+  ],
+  "milestone": "Edge-case hunting and release trains",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-40",
+   "PAP-97",
+   "PAP-38"
+  ],
+  "blocks": [
+   "PAP-89"
+  ],
+  "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+ },
+ {
+  "key": "security/dast",
+  "title": "Add dynamic security testing: nightly ZAP baseline and authenticated scan of staging plus a security regression suite (CSRF, IDOR across tenants, headers, rate limits, upload abuse, webhook replay) that blocks the release candidate",
+  "project": "quality",
+  "parent": null,
+  "phase": "P1",
+  "type": "Infra",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Agent"
+  ],
+  "milestone": "Edge-case hunting and release trains",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-80",
+   "PAP-240",
+   "PAP-26"
+  ],
+  "blocks": [
+   "PAP-254"
+  ],
+  "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+ },
+ {
+  "key": "security/founder-break-glass",
+  "title": "Harden the founder root of trust: hardware-key MFA on every external account, an offline recovery age key with escrow, a one-command revoke-all, and the break-glass runbook filed as a single Needs Justin checklist",
+  "project": "identity",
+  "parent": null,
+  "phase": "P0",
+  "type": "Infra",
+  "priority": 1,
+  "size": "S",
+  "surfaces": [
+   "Staff",
+   "Developer"
+  ],
+  "milestone": "Auth works across web and desktop",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-25"
+  ],
+  "blocks": [
+   "PAP-48"
+  ],
+  "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+ },
+ {
+  "key": "security/supply-chain",
+  "title": "Add supply-chain integrity: lockfile and minimum-release-age policy, pinned actions by digest, SLSA provenance attestations and cosign signatures for container images and Tauri artifacts, verified before deploy and update",
+  "project": "forge",
+  "parent": null,
+  "phase": "P1",
+  "type": "Infra",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": "CI runs on both forges",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-80",
+   "PAP-52",
+   "PAP-26"
+  ],
+  "blocks": [
+   "PAP-254"
+  ],
+  "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+ },
+ {
+  "key": "security/pci-posture",
+  "title": "Document and enforce the PCI SAQ-A posture: Stripe-hosted card entry only, a Semgrep rule against card-data fields, restricted Stripe keys per service, live-key custody through Needs Justin, and the quarterly SAQ-A checklist",
+  "project": "business-core",
+  "parent": null,
+  "phase": "P1",
+  "type": "Docs",
+  "priority": 2,
+  "size": "S",
+  "surfaces": [
+   "Staff",
+   "Developer"
+  ],
+  "milestone": "Stripe billing live",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-177"
+  ],
+  "blocks": [
+   "PAP-181",
+   "PAP-184"
+  ],
+  "source": "round2/agent6/pending-issues.json (Security & Threat Model)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0"
+ },
+ {
+  "key": "contracts/shared-value-types",
+  "title": "Specify shared value types and wire encodings in `packages/core/types`: `Money` (bigint minor units, string on the wire), `ActorRef`, `EntityRef`, UUIDv7 ids, timestamps, signed cursors and the `ApiError` body",
+  "project": "data-layer",
+  "parent": null,
+  "phase": "P0",
+  "type": "Spec",
+  "priority": 1,
+  "size": "S",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": "Postgres + Drizzle baseline",
+  "intendedState": "Ready for Claude",
+  "blockedBy": [],
+  "blocks": [
+   "PAP-71",
+   "PAP-164",
+   "PAP-175",
+   "PAP-27",
+   "PAP-268",
+   "PAP-131",
+   "PAP-136"
+  ],
+  "source": "round2/pending-issues-contracts.json (Interface & Data Contracts)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59"
+ },
+ {
+  "key": "contracts/domain-events",
+  "title": "Specify the domain event contract: envelope, topic catalogue, `defineTopic` registry, transactional outbox and subscriber delivery (`packages/core/events`)",
+  "project": "data-layer",
+  "parent": null,
+  "phase": "P0",
+  "type": "Spec",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Agent"
+  ],
+  "milestone": "Postgres + Drizzle baseline",
+  "intendedState": "Ready for Claude",
+  "blockedBy": [],
+  "blocks": [
+   "PAP-28",
+   "PAP-97",
+   "PAP-136",
+   "PAP-174",
+   "PAP-179",
+   "PAP-195",
+   "PAP-222",
+   "PAP-177"
+  ],
+  "source": "round2/pending-issues-contracts.json (Interface & Data Contracts)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59"
+ },
+ {
+  "key": "contracts/idempotency-rate-limits",
+  "title": "Specify and build request idempotency and rate limiting: `Idempotency-Key` header, `idempotency_keys` table with replay semantics, `POST /api/v1/rpc/batch`, Postgres-backed token buckets per actor, API key and IP",
+  "project": "data-layer",
+  "parent": null,
+  "phase": "P0",
+  "type": "Spec",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Customer"
+  ],
+  "milestone": "Postgres + Drizzle baseline",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-267"
+  ],
+  "blocks": [
+   "PAP-148",
+   "PAP-222",
+   "PAP-172",
+   "PAP-193",
+   "PAP-194"
+  ],
+  "source": "round2/pending-issues-contracts.json (Interface & Data Contracts)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59"
+ },
+ {
+  "key": "contracts/package-boundaries",
+  "title": "Specify the monorepo package boundary map: package ownership table, allowed dependency graph, `packages/core` sub-folder owners, dependency-cruiser lint in Gate 1 and the `packages/pm` move",
+  "project": "app-shell",
+  "parent": null,
+  "phase": "P0",
+  "type": "Spec",
+  "priority": 1,
+  "size": "S",
+  "surfaces": [
+   "Developer",
+   "Agent"
+  ],
+  "milestone": "Template scaffolds and runs on web",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-13"
+  ],
+  "blocks": [
+   "PAP-24",
+   "PAP-28",
+   "PAP-100",
+   "PAP-264"
+  ],
+  "source": "round2/pending-issues-contracts.json (Interface & Data Contracts)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-contracts-4-734961df9c59"
+ },
+ {
+  "key": "gp/spec-builder/app-interview",
+  "title": "Write the app interview skill: one paragraph idea to `app.spec.yaml` (business profile, audiences, entities, navigation, modules) in at most six questions with `--yes` defaults",
+  "project": "spec-builder",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Agent"
+  ],
+  "milestone": "Codegen and conformance tests",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-117",
+   "PAP-118"
+  ],
+  "blocks": [],
+  "source": "round2/pending-issues-golden-path.json (Golden Path)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+ },
+ {
+  "key": "gp/spec-builder/entity-pages",
+  "title": "Build entity-derived page specs: `pnpm spec gen:entity-pages` derives list, detail, form and settings pages per entity and audience with view specs, comment anchors and access rules",
+  "project": "spec-builder",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Customer",
+   "Staff"
+  ],
+  "milestone": "Codegen and conformance tests",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-117",
+   "PAP-116",
+   "PAP-161"
+  ],
+  "blocks": [],
+  "source": "round2/pending-issues-golden-path.json (Golden Path)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+ },
+ {
+  "key": "gp/spec-builder/gen-pipeline",
+  "title": "Build `paperos gen`: the whole-app generation pipeline that runs every generator in dependency order with a manifest, incremental cache, deterministic output and a `--check` drift mode",
+  "project": "spec-builder",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Agent"
+  ],
+  "milestone": "Codegen and conformance tests",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-115",
+   "PAP-119",
+   "PAP-120",
+   "PAP-122",
+   "PAP-123"
+  ],
+  "blocks": [],
+  "source": "round2/pending-issues-golden-path.json (Golden Path)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+ },
+ {
+  "key": "gp/app-shell/starter-surfaces",
+  "title": "Build the default surfaces starter kit: customer portal and staff console page specs, a seeded demo tenant per audience and a first-run checklist for every generated app",
+  "project": "app-shell",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [
+   "Customer",
+   "Staff",
+   "Developer"
+  ],
+  "milestone": "Multi-monitor and PWA polish",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-117",
+   "PAP-240",
+   "PAP-55",
+   "gp/spec-builder/entity-pages"
+  ],
+  "blocks": [],
+  "source": "round2/pending-issues-golden-path.json (Golden Path)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+ },
+ {
+  "key": "gp/app-shell/driver",
+  "title": "Build the golden path driver: `paperos create --idea` runs interview, app spec, generation, seed, push, provisioning and preview in one command with checkpoint stamps",
+  "project": "app-shell",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 1,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Agent"
+  ],
+  "milestone": "Multi-monitor and PWA polish",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-22",
+   "gp/spec-builder/app-interview",
+   "gp/spec-builder/gen-pipeline",
+   "gp/app-shell/starter-surfaces"
+  ],
+  "blocks": [],
+  "source": "round2/pending-issues-golden-path.json (Golden Path)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+ },
+ {
+  "key": "gp/app-shell/provisioning",
+  "title": "Build golden path provisioning: parallel idempotent steps, warm pools for preview slots, databases and mirror repos, `--resume` and per-step time budgets in `paperos create`",
+  "project": "app-shell",
+  "parent": null,
+  "phase": "P1",
+  "type": "Infra",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": "Multi-monitor and PWA polish",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-22",
+   "PAP-26",
+   "PAP-15"
+  ],
+  "blocks": [],
+  "source": "round2/pending-issues-golden-path.json (Golden Path)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+ },
+ {
+  "key": "gp/app-shell/acceptance",
+  "title": "Build the golden path acceptance test: nightly CI runs three canned ideas from paragraph to preview URL, asserts gates 1 to 4 and under ten minutes, publishes `golden-path.json`, badge and friction issues",
+  "project": "app-shell",
+  "parent": null,
+  "phase": "P2",
+  "type": "Review",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Agent"
+  ],
+  "milestone": "Multi-monitor and PWA polish",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "gp/app-shell/driver",
+   "gp/app-shell/provisioning",
+   "PAP-239"
+  ],
+  "blocks": [
+   "PAP-29"
+  ],
+  "source": "round2/pending-issues-golden-path.json (Golden Path)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+ },
+ {
+  "key": "gp/app-shell/upgrade",
+  "title": "Build `paperos upgrade`: apply template updates to generated apps with three-way merge, codemods, regeneration and an upgrade pull request",
+  "project": "app-shell",
+  "parent": null,
+  "phase": "P2",
+  "type": "Build",
+  "priority": 2,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Agent"
+  ],
+  "milestone": "Multi-monitor and PWA polish",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-22",
+   "gp/spec-builder/gen-pipeline"
+  ],
+  "blocks": [],
+  "source": "round2/pending-issues-golden-path.json (Golden Path)",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-golden-path-8-98e27ab16f4f"
+ },
+ {
+  "key": "pm-linear/weekly-reaudit",
+  "title": "Run a weekly plan re-audit: snapshot Linear, detect dependency drift, cycles, stale In Progress sessions, issues without specs; post the report to Linear",
+  "project": "pm-linear",
+  "parent": null,
+  "phase": "P1",
+  "type": "Review",
+  "priority": 2,
+  "size": null,
+  "surfaces": [
+   "Agent",
+   "Staff"
+  ],
+  "milestone": "Orchestrator claims and ships issues",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-93",
+   "PAP-105",
+   "PAP-99"
+  ],
+  "blocks": [],
+  "source": "round2/agent2/new_pm.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+ },
+ {
+  "key": "pm-linear/inbound-triage",
+  "title": "Build inbound triage: convert Justin's freeform issues and comments into contract-valid issues via the Decomposer sub-agent, wired to the Triage view",
+  "project": "pm-linear",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [
+   "Staff",
+   "Agent"
+  ],
+  "milestone": "Orchestrator claims and ships issues",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-93",
+   "PAP-97",
+   "PAP-118"
+  ],
+  "blocks": [],
+  "source": "round2/agent2/new_pm.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+ },
+ {
+  "key": "pm-linear/orchestrator/claims",
+  "title": "Orchestrator: Linear polling, atomic claim and state transitions",
+  "project": "pm-linear",
+  "parent": "PAP-96",
+  "phase": "P0",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Agent"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [
+   "pm-linear/orchestrator/sessions",
+   "pm-linear/orchestrator/deploy"
+  ],
+  "source": "round2/agent2/new_pm.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+ },
+ {
+  "key": "pm-linear/orchestrator/sessions",
+  "title": "Orchestrator: worktree lifecycle and Claude session launch",
+  "project": "pm-linear",
+  "parent": "PAP-96",
+  "phase": "P0",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Agent"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "pm-linear/orchestrator/claims"
+  ],
+  "blocks": [
+   "pm-linear/orchestrator/deploy"
+  ],
+  "source": "round2/agent2/new_pm.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+ },
+ {
+  "key": "pm-linear/orchestrator/deploy",
+  "title": "Orchestrator: deployment on Coolify, `/status` endpoint and runbook",
+  "project": "pm-linear",
+  "parent": "PAP-96",
+  "phase": "P0",
+  "type": "Infra",
+  "priority": null,
+  "size": "S",
+  "surfaces": [
+   "Agent"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "pm-linear/orchestrator/claims",
+   "pm-linear/orchestrator/sessions",
+   "PAP-25"
+  ],
+  "blocks": [],
+  "source": "round2/agent2/new_pm.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+ },
+ {
+  "key": "pm-linear/linear-sync/inbound",
+  "title": "Linear sync: backfill and inbound webhook upsert into pm_* tables",
+  "project": "pm-linear",
+  "parent": "PAP-101",
+  "phase": "P2",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Staff"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [
+   "pm-linear/linear-sync/outbound",
+   "pm-linear/linear-sync/conflicts"
+  ],
+  "source": "round2/agent2/new_pm.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+ },
+ {
+  "key": "pm-linear/linear-sync/outbound",
+  "title": "Linear sync: transactional outbox, outbound worker and loop prevention",
+  "project": "pm-linear",
+  "parent": "PAP-101",
+  "phase": "P2",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Staff"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "pm-linear/linear-sync/inbound"
+  ],
+  "blocks": [
+   "pm-linear/linear-sync/conflicts"
+  ],
+  "source": "round2/agent2/new_pm.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+ },
+ {
+  "key": "pm-linear/linear-sync/conflicts",
+  "title": "Linear sync: conflict rule (Linear wins), sync status page and runbook",
+  "project": "pm-linear",
+  "parent": "PAP-101",
+  "phase": "P2",
+  "type": "Build",
+  "priority": null,
+  "size": "S",
+  "surfaces": [
+   "Staff"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "pm-linear/linear-sync/inbound",
+   "pm-linear/linear-sync/outbound"
+  ],
+  "blocks": [],
+  "source": "round2/agent2/new_pm.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-pm-linear-9-d4829fc00859"
+ },
+ {
+  "key": "agents/runtime-sandbox",
+  "title": "Build the agent runtime sandbox: per-session container, worktree mount, CPU/RAM/time limits and network isolation with the credential broker's egress proxy as the only route",
+  "project": "agents",
+  "parent": null,
+  "phase": "P0",
+  "type": "Infra",
+  "priority": 1,
+  "size": null,
+  "surfaces": [
+   "Agent",
+   "Developer"
+  ],
+  "milestone": "Roster defined and installed",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-25",
+   "security/credential-broker",
+   "security/agent-deny-list"
+  ],
+  "blocks": [],
+  "source": "round2/agent2/new_agents.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+ },
+ {
+  "key": "agents/session-observability",
+  "title": "Add agent session observability: heartbeats, stuck-session detection, per-session OTel spans and a `/status` contract shared by the org chart, board cards and cost controls",
+  "project": "agents",
+  "parent": null,
+  "phase": "P1",
+  "type": "Build",
+  "priority": 2,
+  "size": null,
+  "surfaces": [
+   "Agent",
+   "Staff"
+  ],
+  "milestone": "Sub-agents, skills and evals live",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-96",
+   "PAP-40"
+  ],
+  "blocks": [
+   "PAP-113",
+   "PAP-102"
+  ],
+  "source": "round2/agent2/new_agents.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+ },
+ {
+  "key": "agents/roster-v1/yaml",
+  "title": "Roster: convert the plan.json roster to 37 validated character YAML files",
+  "project": "agents",
+  "parent": "PAP-104",
+  "phase": "P0",
+  "type": "Build",
+  "priority": null,
+  "size": "S",
+  "surfaces": [
+   "Agent"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [
+   "agents/roster-v1/lead-prompts",
+   "agents/roster-v1/sub-prompts",
+   "agents/roster-v1/build"
+  ],
+  "source": "round2/agent2/new_agents.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+ },
+ {
+  "key": "agents/roster-v1/lead-prompts",
+  "title": "Roster: write the nine lead system prompts with shared fragments",
+  "project": "agents",
+  "parent": "PAP-104",
+  "phase": "P0",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Agent"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "agents/roster-v1/yaml"
+  ],
+  "blocks": [
+   "agents/roster-v1/build"
+  ],
+  "source": "round2/agent2/new_agents.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+ },
+ {
+  "key": "agents/roster-v1/sub-prompts",
+  "title": "Roster: write the 28 sub-character prompts and delegation descriptions",
+  "project": "agents",
+  "parent": "PAP-104",
+  "phase": "P0",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Agent"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "agents/roster-v1/yaml"
+  ],
+  "blocks": [
+   "agents/roster-v1/build"
+  ],
+  "source": "round2/agent2/new_agents.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+ },
+ {
+  "key": "agents/roster-v1/build",
+  "title": "Roster: build `.claude/agents` generation, CI drift check and smoke tasks per lead",
+  "project": "agents",
+  "parent": "PAP-104",
+  "phase": "P0",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Agent"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "agents/roster-v1/yaml",
+   "agents/roster-v1/lead-prompts",
+   "agents/roster-v1/sub-prompts"
+  ],
+  "blocks": [],
+  "source": "round2/agent2/new_agents.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+ },
+ {
+  "key": "agents/eval-harness/runner",
+  "title": "Eval harness: task format, SDK runner, deterministic graders and results table",
+  "project": "agents",
+  "parent": "PAP-110",
+  "phase": "P1",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Agent"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [
+   "agents/eval-harness/tasks",
+   "agents/eval-harness/judge"
+  ],
+  "source": "round2/agent2/new_agents.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+ },
+ {
+  "key": "agents/eval-harness/tasks",
+  "title": "Eval harness: golden task set (three per lead, one per sub) with fixture repos and answer keys",
+  "project": "agents",
+  "parent": "PAP-110",
+  "phase": "P1",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Agent"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "agents/eval-harness/runner"
+  ],
+  "blocks": [
+   "agents/eval-harness/judge"
+  ],
+  "source": "round2/agent2/new_agents.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+ },
+ {
+  "key": "agents/eval-harness/judge",
+  "title": "Eval harness: LLM judge, trend, regression issues, nightly schedule and report page",
+  "project": "agents",
+  "parent": "PAP-110",
+  "phase": "P1",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Agent"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "agents/eval-harness/runner",
+   "agents/eval-harness/tasks"
+  ],
+  "blocks": [],
+  "source": "round2/agent2/new_agents.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-agents-9-85624b15630d"
+ },
+ {
+  "key": "spec-builder/spec-i18n",
+  "title": "Add spec-level internationalisation: message IDs for spec copy fields, extraction into catalogs, pseudo-locale validation rule",
+  "project": "spec-builder",
+  "parent": null,
+  "phase": "P2",
+  "type": "Build",
+  "priority": 3,
+  "size": null,
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": "Spec editor UI",
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "PAP-27",
+   "PAP-120"
+  ],
+  "blocks": [],
+  "source": "round2/agent2/new_spec.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+ },
+ {
+  "key": "spec-builder/data-section/schema",
+  "title": "Data section: Zod schema, shared FilterTree import and validator rules",
+  "project": "spec-builder",
+  "parent": "PAP-119",
+  "phase": "P1",
+  "type": "Spec",
+  "priority": null,
+  "size": "S",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [
+   "spec-builder/data-section/generator",
+   "spec-builder/data-section/example"
+  ],
+  "source": "round2/agent2/new_spec.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+ },
+ {
+  "key": "spec-builder/data-section/generator",
+  "title": "Data section: typed hook generator for server, live and local sync modes",
+  "project": "spec-builder",
+  "parent": "PAP-119",
+  "phase": "P1",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "spec-builder/data-section/schema"
+  ],
+  "blocks": [
+   "spec-builder/data-section/example"
+  ],
+  "source": "round2/agent2/new_spec.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+ },
+ {
+  "key": "spec-builder/data-section/example",
+  "title": "Data section: `customer-invoices` end to end with live sync, second-context and offline tests",
+  "project": "spec-builder",
+  "parent": "PAP-119",
+  "phase": "P1",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "spec-builder/data-section/schema",
+   "spec-builder/data-section/generator"
+  ],
+  "blocks": [],
+  "source": "round2/agent2/new_spec.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+ },
+ {
+  "key": "spec-builder/layout-codegen/templates",
+  "title": "Layout codegen: Printer, route and view templates, two-file ownership and determinism",
+  "project": "spec-builder",
+  "parent": "PAP-120",
+  "phase": "P1",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [
+   "spec-builder/layout-codegen/wiring",
+   "spec-builder/layout-codegen/examples"
+  ],
+  "source": "round2/agent2/new_spec.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+ },
+ {
+  "key": "spec-builder/layout-codegen/wiring",
+  "title": "Layout codegen: state switch, layout slot mapping, action binding and search-param schema",
+  "project": "spec-builder",
+  "parent": "PAP-120",
+  "phase": "P1",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "spec-builder/layout-codegen/templates"
+  ],
+  "blocks": [
+   "spec-builder/layout-codegen/examples"
+  ],
+  "source": "round2/agent2/new_spec.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+ },
+ {
+  "key": "spec-builder/layout-codegen/examples",
+  "title": "Layout codegen: generate the three example specs, screenshot seven widths and pass conformance with zero manual edits",
+  "project": "spec-builder",
+  "parent": "PAP-120",
+  "phase": "P1",
+  "type": "Build",
+  "priority": null,
+  "size": "S",
+  "surfaces": [
+   "Developer"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "spec-builder/layout-codegen/templates",
+   "spec-builder/layout-codegen/wiring"
+  ],
+  "blocks": [],
+  "source": "round2/agent2/new_spec.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+ },
+ {
+  "key": "spec-builder/spec-editor-ui/yaml",
+  "title": "Spec editor: spec list, CodeMirror YAML editor with worker validation and save-to-PR flow",
+  "project": "spec-builder",
+  "parent": "PAP-124",
+  "phase": "P2",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Staff"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [],
+  "blocks": [
+   "spec-builder/spec-editor-ui/form",
+   "spec-builder/spec-editor-ui/preview"
+  ],
+  "source": "round2/agent2/new_spec.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+ },
+ {
+  "key": "spec-builder/spec-editor-ui/form",
+  "title": "Spec editor: form view, component tree editor and two-way sync with YAML preserving comments",
+  "project": "spec-builder",
+  "parent": "PAP-124",
+  "phase": "P2",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Staff"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "spec-builder/spec-editor-ui/yaml"
+  ],
+  "blocks": [],
+  "source": "round2/agent2/new_spec.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+ },
+ {
+  "key": "spec-builder/spec-editor-ui/preview",
+  "title": "Spec editor: live preview at selectable widths, flow-graph tab, keyboard shortcuts and accessibility polish",
+  "project": "spec-builder",
+  "parent": "PAP-124",
+  "phase": "P2",
+  "type": "Build",
+  "priority": null,
+  "size": "M",
+  "surfaces": [
+   "Developer",
+   "Staff"
+  ],
+  "milestone": null,
+  "intendedState": "Backlog",
+  "blockedBy": [
+   "spec-builder/spec-editor-ui/yaml"
+  ],
+  "blocks": [],
+  "source": "round2/agent2/new_spec.py",
+  "linearDocument": "https://linear.app/paperos/document/round-2-pending-issues-spec-builder-11-c314e290076b"
+ }
+]

@@ -1,0 +1,36 @@
+{
+ "created": [],
+ "relations": [],
+ "documents": [
+  {
+   "project": "Quality Pipeline",
+   "id": "ec89fab6-b54c-4e5c-93b2-7b6d1d79a8c8",
+   "url": "https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0",
+   "title": "Round 2 pending issues: security (11)",
+   "pendingKeys": [
+    "security/agent-deny-list",
+    "security/prompt-injection",
+    "security/credential-broker",
+    "security/field-encryption",
+    "security/platform-dr",
+    "security/retention-pii",
+    "security/security-telemetry",
+    "security/dast",
+    "security/founder-break-glass",
+    "security/supply-chain",
+    "security/pci-posture"
+   ]
+  },
+  {
+   "project": "Quality Pipeline",
+   "id": "f06d1261-c44d-42ec-a2c2-a69f0fe12912",
+   "url": "https://linear.app/paperos/document/paperos-security-and-threat-model-51fd5fd8929c",
+   "title": "PaperOS Security & Threat Model"
+  }
+ ],
+ "updated": [],
+ "notes": [
+  "Linear returned USAGE_LIMIT_EXCEEDED (free-plan issue cap) for 11 security issues; full specs saved in <plan-dir>/round2/agent6/pending-issues.json and published as a Linear document."
+ ],
+ "pendingIssuesFile": "<plan-dir>/round2/agent6/pending-issues.json"
+}

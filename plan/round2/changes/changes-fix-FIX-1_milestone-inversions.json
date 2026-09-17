@@ -1,0 +1,132 @@
+{
+ "fix": "FIX-1 milestone inversions",
+ "at": "2026-09-17",
+ "milestoneUpdates": [
+  {
+   "milestoneId": "5a6ecd45-07b7-40e2-80d5-fbbba5c9c0f8",
+   "project": "tables",
+   "name": "All view types",
+   "before": "2026-09-27",
+   "after": "2026-09-29",
+   "success": true
+  },
+  {
+   "milestoneId": "36cd250f-6366-42cc-b85e-499bf122bd3d",
+   "project": "growth",
+   "name": "CRM core",
+   "before": "2026-09-28",
+   "after": "2026-09-29",
+   "success": true
+  },
+  {
+   "milestoneId": "5cabe71a-d4d3-48ab-8d28-b932bd22d1f6",
+   "project": "tables",
+   "name": "View sharing, formulas, dashboards",
+   "before": "2026-09-30",
+   "after": "2026-09-30",
+   "success": true,
+   "note": "already 09-30, no call made"
+  }
+ ],
+ "issueMilestoneMoves": [
+  {
+   "issue": "PAP-26",
+   "issueId": "3e86bdd7-76a8-4910-ac29-c7e42270ab70",
+   "fromMilestone": "Template scaffolds and runs on web (c48b2fa3-aebc-4520-877d-7f301322bcc9, 09-20)",
+   "toMilestoneId": "d701b501-bd3e-4bac-8ae8-ab50ed28d67b",
+   "toMilestone": "Desktop and mobile shells build (09-24)",
+   "success": true
+  }
+ ],
+ "relationDeletes": [
+  {
+   "edge": "PAP-239->PAP-97",
+   "relationId": "91a62d5d-16b3-47ea-91c6-e5bf4fe9e74c",
+   "success": true,
+   "nowSoft": true
+  },
+  {
+   "edge": "PAP-235->PAP-180",
+   "relationId": "39a47916-5c90-4e90-9665-da1705aac569",
+   "success": true,
+   "nowSoft": true
+  },
+  {
+   "edge": "PAP-88->PAP-29",
+   "relationId": "e42132ba-2ff7-44b9-a471-e99510d8443c",
+   "success": true,
+   "nowSoft": true
+  }
+ ],
+ "descriptionUpdates": [
+  {
+   "issue": "PAP-239",
+   "issueId": "9ff9bb9e-5c89-43a0-b5e4-2b2a97e4fb85",
+   "section": "Dependencies",
+   "success": true,
+   "replaced": "PAP-79 (hard). Consumers listed above."
+  },
+  {
+   "issue": "PAP-97",
+   "issueId": "3b4c007c-4002-4240-ad84-c1bfe127588d",
+   "section": "Dependencies",
+   "success": true,
+   "replaced": "Blocked by PAP-96 and PAP-239. Blocks PAP-101,"
+  },
+  {
+   "issue": "PAP-235",
+   "issueId": "e4963923-82f4-4655-b8a8-5d079758d554",
+   "section": "Dependencies",
+   "success": true,
+   "replaced": "PAP-75 (hard). Soft: PAP-37, PAP-27, PAP-50."
+  },
+  {
+   "issue": "PAP-180",
+   "issueId": "0bcc9871-bc3f-49d0-a9cd-e8027451fc21",
+   "section": "Dependencies",
+   "success": true,
+   "replaced": "PAP-235 (hard, theme)"
+  },
+  {
+   "issue": "PAP-88",
+   "issueId": "e8583eb7-35b1-47c8-8503-a508004b63ee",
+   "section": "Dependencies",
+   "success": true,
+   "replaced": "Soft: PAP-89, PAP-97, PAP-86, PAP-85, PAP-87, PAP-30, PAP-52"
+  },
+  {
+   "issue": "PAP-29",
+   "issueId": "be03b427-c35e-4c50-9817-655c5af3d7c0",
+   "section": "Dependencies",
+   "success": true,
+   "replaced": "PAP-22, PAP-26, PAP-28, PAP-88, PAP-120 (hard). Soft: PAP-19"
+  },
+  {
+   "issue": "PAP-26",
+   "issueId": "3e86bdd7-76a8-4910-ac29-c7e42270ab70",
+   "section": "Dependencies",
+   "success": true,
+   "replaced": "PAP-13, PAP-25, PAP-30 (hard). Soft:"
+  }
+ ],
+ "documentUpdates": [
+  {
+   "documentId": "1623cb9d-9ed5-4af1-aa62-f520948fc21c",
+   "title": "PaperOS Execution Schedule",
+   "section": "7. Milestone target dates moved by this schedule",
+   "success": true,
+   "verifiedUpdatedAt": "2026-09-17T06:18:48.748Z"
+  }
+ ],
+ "notes": [
+  "Template scaffolds and runs on web kept at 09-20: setting it to 09-22 (the brief's option) would invert PAP-25 VPS provision -> PAP-45 Forgejo (forge milestone 09-20), which cannot be made soft. Used the critique's alternative: moved PAP-26 alone to Desktop and mobile shells build (09-24).",
+  "growth / CRM core moved 09-28 -> 09-29 because PAP-189 (CRM kanban) hard-depends on PAP-167 (All view types, now 09-29); CRM core blocks nothing outside itself."
+ ],
+ "verification": {
+  "liveIssues": 275,
+  "blocksRelations": 432,
+  "inversions": 0,
+  "note": "Snapshot had 437 relations; 434 expected after this fix; live shows 432, so a concurrent agent removed two others. Zero blocker-later-than-blocked inversions."
+ },
+ "requestsUsed": 12
+}

@@ -1,0 +1,49 @@
+{
+ "fix": "FIX-5 issue-cap-needs-justin-plan-b",
+ "date": "2026-09-17",
+ "note": "Pending specs folded into live issues as work packages. Create scripts must skip these keys; the pending documents keep the text for reference only.",
+ "folded": [
+  {
+   "key": "migration/test-accounts",
+   "into": "PAP-198",
+   "workPackage": 2,
+   "source": "agent5/new_gaps.py, agent5/pending-issues.json, document 'Round 2 pending issues: migration (20)'",
+   "citedBy": [
+    "PAP-200",
+    "PAP-202",
+    "PAP-203",
+    "PAP-204",
+    "PAP-206"
+   ]
+  },
+  {
+   "key": "gap/growth/consent-centre",
+   "into": "PAP-187",
+   "workPackage": 0,
+   "source": "agent4/new_growth.py, agent4/pending-issues.json, document 'Round 2 pending issues: growth (13)'",
+   "citedBy": [
+    "PAP-191",
+    "PAP-193"
+   ]
+  },
+  {
+   "key": "gap/business-core/recurring-dunning",
+   "into": "PAP-180",
+   "workPackage": 4,
+   "source": "agent4/new_biz.py, agent4/pending-issues.json, document 'Round 2 pending issues: business-core (11)'",
+   "citedBy": [
+    "PAP-174",
+    "PAP-180"
+   ]
+  },
+  {
+   "key": "spec-builder/spec-versioning",
+   "into": "PAP-114",
+   "workPackage": "out of scope; migrate/ skeleton only",
+   "source": "agent2/new_spec.py, document 'Round 2 pending issues: spec-builder (11)'",
+   "citedBy": [
+    "PAP-114"
+   ]
+  }
+ ]
+}
