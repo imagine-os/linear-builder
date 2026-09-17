@@ -130,3 +130,14 @@ Linear's ~1,500 requests/hour is not binding (16 sessions x ~20 issue/comment/st
 ## 7. Recommendation
 
 Run scenario E (per-task assignment) at 8-16 concurrent sessions: **$3,490 for the 326-issue Oct-1 scope** (about $3.8K with the deferred set), 3-6 operating days of session time, with the human-gate schedule as the real calendar constraint. It is cheaper than B by $2.5K while keeping Opus 5 / high on the scaffold, orchestrator, security-titled and P0 data/identity/realtime/pm-linear work and Fable 5.1 / high on the 8 keystone specs and the 4 release-candidate reviews; the $417 premium over C is the price of that coverage. Start with the $400 pilot under the E rule on P0's first dependency layers (~30-35 issues): it exercises all three builder models and gives real per-size token burn to re-baseline these assumptions before the rest is committed.
+
+## 8. Discounted terms (2026-09-17, round 3)
+
+Justin's credit terms changed after this estimate was written: he pays **$50 for every $2,500 of list-price Claude spend** (x0.02), and sessions run 24/7. Under those terms the token-saving of scenario E is worth about $150 to Justin, so the plan switches to spending list dollars where the build is most fragile. `docs/build-chunks.md` re-prices the same 326 issues with the same token model, prices and scheduler, keeps per-issue Effort as labeled, adds the four release-candidate reviews, and cuts the 16-builder schedule into consecutive **$2,500 list chunks ($50 each)** with, per chunk, the issues by project, umbrellas and milestones completed, release candidates reached, start and end times from 2026-09-17T14:23Z and the `Needs Justin` items that must be answered first.
+
+| Mix | Builders / QA | Fable 5.1 on | Chunks | List | To Justin | Wall-clock at 16 builders 24/7 |
+|---|---|---|---|---|---|---|
+| A | Fable 5.1 | everything | 5 | $11,166 | **$223.32** (5 x $50 billed whole) | 37.3 h |
+| B (recommended) | Opus 5 | Spec and Research issues, every reviewer session, the 4 RC reviews | 4 | $7,909 | **$158.17** (4 x $50 billed whole) | 37.3 h |
+
+The 42 deferred issues are an optional final chunk: +$1,387 list ($27.75) on A, +$983 ($19.66) on B, +5.5 h. Per-issue models for mix B: `round3/model-effort-B.json` (planning session; Linear labels are updated by the verify stage, not by this document). The 37 hours are session time only; the `Needs Justin` gates and merge conflicts listed in section 5 still set the calendar.

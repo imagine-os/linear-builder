@@ -1,0 +1,4966 @@
+{
+ "generatedAt": "2026-09-17T14:30:44Z",
+ "snapshotTakenAt": "2026-09-17T13:11:39Z",
+ "terms": {
+  "chunkListUsd": 2500.0,
+  "discountedPerChunkUsd": 50,
+  "discountFactor": 0.02,
+  "builders": 16,
+  "hoursPerDay": 24,
+  "start": "2026-09-17T14:23Z",
+  "scheduler": "list scheduling, ready-first by longest remaining tail over the live blockedBy graph (estimate.py); durations S 30 / M 75 / L 180 min + 20 review + 15 QA (code)",
+  "costModel": "estimate.py token model; effort scales output tokens (low 0.6, medium 1.0, high 1.4); reviewer 40% of builder tokens on Fable 5.1 / high; QA 25% (code only) / low; x1.25 contingency; 4 RC reviews = L-size Fable 5.1 / high sessions placed at the RC gate times",
+  "prices": {
+   "fable": {
+    "inp": 10,
+    "out": 50,
+    "cw": 12.5,
+    "cr": 0.25
+   },
+   "opus": {
+    "inp": 5,
+    "out": 25,
+    "cw": 6.25,
+    "cr": 0.5
+   },
+   "sonnet": {
+    "inp": 2,
+    "out": 10,
+    "cw": 2.5,
+    "cr": 0.2
+   },
+   "haiku": {
+    "inp": 1,
+    "out": 5,
+    "cw": 1.25,
+    "cr": 0.1
+   }
+  }
+ },
+ "mixes": {
+  "A": {
+   "description": "all Fable 5.1 (builders, reviewers, QA, RC reviews)",
+   "builderModels": {
+    "Build": "claude-fable-5-1",
+    "Infra": "claude-fable-5-1",
+    "Spec": "claude-fable-5-1",
+    "Research": "claude-fable-5-1",
+    "Docs": "claude-fable-5-1",
+    "Review": "claude-fable-5-1"
+   },
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-fable-5-1",
+   "rcReviewModel": "claude-fable-5-1",
+   "rcReviewListCostEach": 68.75,
+   "totals": {
+    "chunks": 5,
+    "issues": 326,
+    "listCost": 11165.81,
+    "discountedCost": 223.32,
+    "wholeChunksBilled": 5,
+    "wholeChunksBilledUsd": 250,
+    "wallClockHours": 37.3,
+    "wallClockDays24h": 1.56,
+    "end": "2026-09-19T03:43Z",
+    "byType": {
+     "Build": 8658.78,
+     "Docs": 133.9,
+     "Infra": 1028.18,
+     "Research": 304.38,
+     "Review": 187.58,
+     "Spec": 577.97
+    },
+    "byPhase": {
+     "P0": 3111.7,
+     "P1": 5353.9,
+     "P2": 2425.2
+    },
+    "rcReviews": 275.0,
+    "withDeferred": {
+     "listCost": 12553.3,
+     "discountedCost": 251.07,
+     "wallClockHours": 42.8,
+     "end": "2026-09-19T09:13Z"
+    }
+   },
+   "chunks": [
+    {
+     "issues": [
+      "PAP-56",
+      "PAP-92",
+      "PAP-103",
+      "PAP-150",
+      "PAP-209",
+      "PAP-302",
+      "PAP-91",
+      "PAP-46",
+      "PAP-55",
+      "PAP-161",
+      "PAP-279",
+      "PAP-303",
+      "PAP-13",
+      "PAP-25",
+      "PAP-66",
+      "PAP-210",
+      "PAP-284",
+      "PAP-14",
+      "PAP-31",
+      "PAP-114",
+      "PAP-127",
+      "PAP-139",
+      "PAP-198",
+      "PAP-212",
+      "PAP-295",
+      "PAP-79",
+      "PAP-42",
+      "PAP-301",
+      "PAP-292",
+      "PAP-105",
+      "PAP-68",
+      "PAP-239",
+      "PAP-16",
+      "PAP-273",
+      "PAP-117",
+      "PAP-285",
+      "PAP-296",
+      "PAP-30",
+      "PAP-78",
+      "PAP-115",
+      "PAP-236",
+      "PAP-255",
+      "PAP-286",
+      "PAP-305",
+      "PAP-32",
+      "PAP-274",
+      "PAP-293",
+      "PAP-297",
+      "PAP-219",
+      "PAP-94",
+      "PAP-133",
+      "PAP-17",
+      "PAP-123",
+      "PAP-275",
+      "PAP-294",
+      "PAP-26",
+      "PAP-118",
+      "PAP-128",
+      "PAP-237",
+      "PAP-256",
+      "PAP-287",
+      "PAP-121",
+      "PAP-176",
+      "PAP-33",
+      "PAP-15",
+      "PAP-43",
+      "PAP-162",
+      "PAP-80",
+      "PAP-52",
+      "PAP-47",
+      "PAP-48",
+      "PAP-350",
+      "PAP-27",
+      "PAP-238",
+      "PAP-257",
+      "PAP-308",
+      "PAP-360",
+      "PAP-50",
+      "PAP-211",
+      "PAP-34",
+      "PAP-175",
+      "PAP-223",
+      "PAP-267",
+      "PAP-37",
+      "PAP-38",
+      "PAP-261",
+      "PAP-22",
+      "PAP-100",
+      "PAP-106",
+      "PAP-74"
+     ],
+     "end": "2026-09-17T23:53Z",
+     "chunk": 1,
+     "listCost": 2499.14,
+     "discountedCost": 49.98,
+     "start": "2026-09-17T14:23Z",
+     "end_min": 570,
+     "firstIssueStart": "2026-09-17T14:23Z",
+     "hours": 9.5,
+     "cumulativeHours": 9.5,
+     "byProject": {
+      "agents": {
+       "issues": [
+        "PAP-103",
+        "PAP-105",
+        "PAP-106",
+        "PAP-284",
+        "PAP-285",
+        "PAP-286",
+        "PAP-287",
+        "PAP-308"
+       ],
+       "umbrellasCompleted": [
+        "PAP-104"
+       ]
+      },
+      "app-shell": {
+       "issues": [
+        "PAP-13",
+        "PAP-14",
+        "PAP-15",
+        "PAP-16",
+        "PAP-17",
+        "PAP-22",
+        "PAP-25",
+        "PAP-26",
+        "PAP-27",
+        "PAP-255",
+        "PAP-256",
+        "PAP-257",
+        "PAP-261",
+        "PAP-305"
+       ],
+       "umbrellasCompleted": [
+        "PAP-19"
+       ]
+      },
+      "business-core": {
+       "issues": [
+        "PAP-175",
+        "PAP-176"
+       ],
+       "umbrellasCompleted": []
+      },
+      "collab": {
+       "issues": [
+        "PAP-127",
+        "PAP-128",
+        "PAP-133"
+       ],
+       "umbrellasCompleted": []
+      },
+      "data-layer": {
+       "issues": [
+        "PAP-30",
+        "PAP-31",
+        "PAP-32",
+        "PAP-33",
+        "PAP-34",
+        "PAP-37",
+        "PAP-38",
+        "PAP-42",
+        "PAP-43",
+        "PAP-267",
+        "PAP-279",
+        "PAP-302",
+        "PAP-303"
+       ],
+       "umbrellasCompleted": []
+      },
+      "design-system": {
+       "issues": [
+        "PAP-66",
+        "PAP-68",
+        "PAP-74",
+        "PAP-236",
+        "PAP-237",
+        "PAP-238"
+       ],
+       "umbrellasCompleted": [
+        "PAP-67"
+       ]
+      },
+      "forge": {
+       "issues": [
+        "PAP-46",
+        "PAP-47",
+        "PAP-48",
+        "PAP-50",
+        "PAP-52",
+        "PAP-273",
+        "PAP-274",
+        "PAP-275"
+       ],
+       "umbrellasCompleted": [
+        "PAP-45"
+       ]
+      },
+      "identity": {
+       "issues": [
+        "PAP-55",
+        "PAP-56",
+        "PAP-219",
+        "PAP-223",
+        "PAP-301"
+       ],
+       "umbrellasCompleted": []
+      },
+      "input": {
+       "issues": [
+        "PAP-150"
+       ],
+       "umbrellasCompleted": []
+      },
+      "libraries": {
+       "issues": [
+        "PAP-209",
+        "PAP-210",
+        "PAP-211",
+        "PAP-212",
+        "PAP-292",
+        "PAP-293",
+        "PAP-294",
+        "PAP-295",
+        "PAP-296",
+        "PAP-297",
+        "PAP-350"
+       ],
+       "umbrellasCompleted": [
+        "PAP-213",
+        "PAP-214"
+       ]
+      },
+      "migration": {
+       "issues": [
+        "PAP-198"
+       ],
+       "umbrellasCompleted": []
+      },
+      "pm-linear": {
+       "issues": [
+        "PAP-91",
+        "PAP-92",
+        "PAP-94",
+        "PAP-100"
+       ],
+       "umbrellasCompleted": []
+      },
+      "quality": {
+       "issues": [
+        "PAP-78",
+        "PAP-79",
+        "PAP-80",
+        "PAP-239"
+       ],
+       "umbrellasCompleted": []
+      },
+      "realtime": {
+       "issues": [
+        "PAP-139"
+       ],
+       "umbrellasCompleted": []
+      },
+      "spec-builder": {
+       "issues": [
+        "PAP-114",
+        "PAP-115",
+        "PAP-117",
+        "PAP-118",
+        "PAP-121",
+        "PAP-123",
+        "PAP-360"
+       ],
+       "umbrellasCompleted": []
+      },
+      "tables": {
+       "issues": [
+        "PAP-161",
+        "PAP-162"
+       ],
+       "umbrellasCompleted": []
+      }
+     },
+     "umbrellasCompleted": {
+      "PAP-19": {
+       "title": "Add Tauri 2 desktop target for Linux, macOS and Windows sharing the web bundle",
+       "children": [
+        "PAP-255",
+        "PAP-256",
+        "PAP-257"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-45": {
+       "title": "Deploy Forgejo on the VPS behind Caddy with SSO from Better Auth and nightly backups",
+       "children": [
+        "PAP-273",
+        "PAP-274",
+        "PAP-275"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-67": {
+       "title": "Adopt Base UI/Radix primitives with Tailwind v4 and build 20 core components (Button, Input, Select, Dialog, Menu, Tabs, Toast, Tooltip, Popover...)",
+       "children": [
+        "PAP-236",
+        "PAP-237",
+        "PAP-238"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-104": {
+       "title": "Write the nine lead characters and their sub-characters as .claude/agents definitions with system prompts",
+       "children": [
+        "PAP-284",
+        "PAP-285",
+        "PAP-286",
+        "PAP-287"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-213": {
+       "title": "Survey table, canvas, editor and chart libraries (TanStack, AG Grid, tldraw, Tiptap, ECharts, visx) and recommend",
+       "children": [
+        "PAP-292",
+        "PAP-293",
+        "PAP-294"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-214": {
+       "title": "Survey backend building blocks (Better Auth, Drizzle, Electric, Hocuspocus, Inngest, Resend) and recommend",
+       "children": [
+        "PAP-295",
+        "PAP-296",
+        "PAP-297"
+       ],
+       "deferredChildren": 0
+      }
+     },
+     "issueCount": 90,
+     "byPhase": {
+      "P0": 69,
+      "P1": 21
+     },
+     "byType": {
+      "Research": 16,
+      "Docs": 2,
+      "Spec": 21,
+      "Infra": 17,
+      "Build": 34
+     },
+     "bySize": {
+      "S": 24,
+      "M": 66
+     },
+     "byBuilderModel": {
+      "claude-fable-5-1": 90
+     },
+     "milestonesCompleted": [
+      {
+       "project": "libraries",
+       "milestone": "Evaluation process",
+       "targetDate": "2026-09-20",
+       "issues": 4,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-17T22:23Z"
+      }
+     ],
+     "releaseCandidatesReached": [],
+     "needsJustinBeforeStart": [
+      {
+       "id": "NJ-1",
+       "text": "Linear: upgrade the workspace plan (PAP-91). Resolved: workspace is on Linear Basic.",
+       "mappedTo": [
+        "PAP-91"
+       ],
+       "status": "resolved"
+      },
+      {
+       "id": "NJ-2",
+       "text": "Infra batch (PAP-25): Hetzner account and cpx41, registrar or Cloudflare token (or accept sslip.io), Resend sign-up, sops recovery key.",
+       "mappedTo": [
+        "PAP-25"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-3",
+       "text": "GitHub App on org imagine-os with repo+workflow scope (PAP-47).",
+       "mappedTo": [
+        "PAP-47"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-5",
+       "text": "Linear: orchestrator API key and webhook signing secret (PAP-92, PAP-97).",
+       "mappedTo": [
+        "PAP-92",
+        "PAP-97"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-6",
+       "text": "Code signing (PAP-256): Apple Developer Program + Azure Trusted Signing, or accept unsigned v0.1.0 installers (default after 48 h: unsigned).",
+       "mappedTo": [
+        "PAP-256"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-7",
+       "text": "License of the template code (PAP-211): MIT, Apache-2.0 or proprietary; default Apache-2.0.",
+       "mappedTo": [
+        "PAP-211"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-8",
+       "text": "Approve docs/pm/justin-queue.md (PAP-94) and the issue contract (PAP-93).",
+       "mappedTo": [
+        "PAP-94",
+        "PAP-93"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-9",
+       "text": "Hire the roster (PAP-104, PAP-210): nine leads, 28 sub-characters, tool scope classes.",
+       "mappedTo": [
+        "PAP-284",
+        "PAP-285",
+        "PAP-286",
+        "PAP-287",
+        "PAP-210"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-12",
+       "text": "Payroll provider (PAP-176): sign the Check sandbox agreement (default) or Gusto Embedded.",
+       "mappedTo": [
+        "PAP-176"
+       ],
+       "status": "open"
+      }
+     ]
+    },
+    {
+     "issues": [
+      "PAP-70",
+      "PAP-71",
+      "PAP-233",
+      "PAP-289",
+      "PAP-258",
+      "PAP-226",
+      "PAP-227",
+      "PAP-392",
+      "PAP-224",
+      "PAP-268",
+      "PAP-225",
+      "PAP-304",
+      "PAP-234",
+      "PAP-69",
+      "PAP-264",
+      "PAP-298",
+      "PAP-262",
+      "PAP-269",
+      "PAP-152",
+      "PAP-290",
+      "PAP-338",
+      "PAP-358",
+      "PAP-228",
+      "PAP-229",
+      "PAP-393",
+      "PAP-240",
+      "PAP-259",
+      "PAP-311",
+      "PAP-58",
+      "PAP-291",
+      "PAP-314",
+      "PAP-265",
+      "PAP-281",
+      "PAP-365",
+      "PAP-270",
+      "PAP-187",
+      "PAP-73",
+      "PAP-329",
+      "PAP-339",
+      "PAP-335",
+      "PAP-87",
+      "PAP-140",
+      "PAP-116",
+      "PAP-246",
+      "PAP-312",
+      "PAP-394",
+      "PAP-177",
+      "PAP-330",
+      "PAP-315",
+      "PAP-122",
+      "PAP-282",
+      "PAP-242",
+      "PAP-271",
+      "PAP-357",
+      "PAP-86",
+      "PAP-340",
+      "PAP-359",
+      "PAP-316",
+      "PAP-336",
+      "PAP-142",
+      "PAP-283",
+      "PAP-247",
+      "PAP-313",
+      "PAP-320",
+      "PAP-361",
+      "PAP-395"
+     ],
+     "end": "2026-09-18T06:33Z",
+     "chunk": 2,
+     "listCost": 2499.84,
+     "discountedCost": 50.0,
+     "start": "2026-09-17T23:53Z",
+     "end_min": 970,
+     "firstIssueStart": "2026-09-17T22:18Z",
+     "hours": 6.7,
+     "cumulativeHours": 16.2,
+     "byProject": {
+      "agents": {
+       "issues": [
+        "PAP-298"
+       ],
+       "umbrellasCompleted": []
+      },
+      "app-shell": {
+       "issues": [
+        "PAP-258",
+        "PAP-259",
+        "PAP-262",
+        "PAP-264",
+        "PAP-265",
+        "PAP-365"
+       ],
+       "umbrellasCompleted": []
+      },
+      "business-core": {
+       "issues": [
+        "PAP-177",
+        "PAP-359",
+        "PAP-392",
+        "PAP-393",
+        "PAP-394",
+        "PAP-395"
+       ],
+       "umbrellasCompleted": [
+        "PAP-179"
+       ]
+      },
+      "collab": {
+       "issues": [
+        "PAP-320"
+       ],
+       "umbrellasCompleted": []
+      },
+      "data-layer": {
+       "issues": [
+        "PAP-268",
+        "PAP-269",
+        "PAP-270",
+        "PAP-271",
+        "PAP-304"
+       ],
+       "umbrellasCompleted": [
+        "PAP-35"
+       ]
+      },
+      "design-system": {
+       "issues": [
+        "PAP-69",
+        "PAP-70",
+        "PAP-71",
+        "PAP-73",
+        "PAP-233",
+        "PAP-234"
+       ],
+       "umbrellasCompleted": []
+      },
+      "forge": {
+       "issues": [
+        "PAP-358"
+       ],
+       "umbrellasCompleted": []
+      },
+      "growth": {
+       "issues": [
+        "PAP-187"
+       ],
+       "umbrellasCompleted": []
+      },
+      "identity": {
+       "issues": [
+        "PAP-58",
+        "PAP-224",
+        "PAP-225",
+        "PAP-226",
+        "PAP-227",
+        "PAP-228",
+        "PAP-229"
+       ],
+       "umbrellasCompleted": [
+        "PAP-57",
+        "PAP-59"
+       ]
+      },
+      "input": {
+       "issues": [
+        "PAP-152",
+        "PAP-289",
+        "PAP-290",
+        "PAP-291",
+        "PAP-329",
+        "PAP-330"
+       ],
+       "umbrellasCompleted": [
+        "PAP-151"
+       ]
+      },
+      "pm-linear": {
+       "issues": [
+        "PAP-281",
+        "PAP-282",
+        "PAP-283"
+       ],
+       "umbrellasCompleted": [
+        "PAP-96"
+       ]
+      },
+      "quality": {
+       "issues": [
+        "PAP-86",
+        "PAP-87",
+        "PAP-240",
+        "PAP-242",
+        "PAP-246",
+        "PAP-247",
+        "PAP-357"
+       ],
+       "umbrellasCompleted": []
+      },
+      "realtime": {
+       "issues": [
+        "PAP-140",
+        "PAP-142"
+       ],
+       "umbrellasCompleted": []
+      },
+      "spec-builder": {
+       "issues": [
+        "PAP-116",
+        "PAP-122",
+        "PAP-311",
+        "PAP-312",
+        "PAP-313",
+        "PAP-314",
+        "PAP-315",
+        "PAP-316",
+        "PAP-361"
+       ],
+       "umbrellasCompleted": [
+        "PAP-119",
+        "PAP-120"
+       ]
+      },
+      "tables": {
+       "issues": [
+        "PAP-335",
+        "PAP-336",
+        "PAP-338",
+        "PAP-339",
+        "PAP-340"
+       ],
+       "umbrellasCompleted": [
+        "PAP-164"
+       ]
+      }
+     },
+     "umbrellasCompleted": {
+      "PAP-35": {
+       "title": "Expose a typed API via oRPC with Zod schemas generated from Drizzle",
+       "children": [
+        "PAP-267",
+        "PAP-268",
+        "PAP-269"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-57": {
+       "title": "Install Better Auth with passkeys, magic link, Google/GitHub OAuth and sessions for web and Tauri",
+       "children": [
+        "PAP-223",
+        "PAP-224",
+        "PAP-225",
+        "PAP-226"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-59": {
+       "title": "Build permission engine combining role-based grants with attribute policies declared in page specs",
+       "children": [
+        "PAP-227",
+        "PAP-228",
+        "PAP-229"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-96": {
+       "title": "Build the orchestrator that polls Ready for Claude, spawns one Claude Code session per issue in a git worktree and moves states",
+       "children": [
+        "PAP-281",
+        "PAP-282",
+        "PAP-283"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-119": {
+       "title": "Specify the data section (entities, queries, mutations, sync mode) and generate typed hooks from it",
+       "children": [
+        "PAP-311",
+        "PAP-312",
+        "PAP-313"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-120": {
+       "title": "Generate page scaffolds (layout, component tree, loading/empty/error states) from specs",
+       "children": [
+        "PAP-314",
+        "PAP-315",
+        "PAP-316"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-151": {
+       "title": "Build the global command registry with keyboard shortcuts, command palette and per-page scoping",
+       "children": [
+        "PAP-289",
+        "PAP-290",
+        "PAP-291"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-164": {
+       "title": "Implement field types: text, number, currency, date, select, multi-select, relation, lookup, rollup, formula, attachment, user, checkbox, rating, URL, email, phone",
+       "children": [
+        "PAP-338",
+        "PAP-339",
+        "PAP-340"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-179": {
+       "title": "Build a double-entry ledger (accounts, journal entries, periods) in Postgres with immutability guarantees",
+       "children": [
+        "PAP-392",
+        "PAP-393",
+        "PAP-394"
+       ],
+       "deferredChildren": 0
+      }
+     },
+     "issueCount": 66,
+     "byPhase": {
+      "P1": 39,
+      "P0": 23,
+      "P2": 4
+     },
+     "byType": {
+      "Build": 51,
+      "Spec": 4,
+      "Infra": 9,
+      "Review": 1,
+      "Docs": 1
+     },
+     "bySize": {
+      "M": 53,
+      "S": 12,
+      "L": 1
+     },
+     "byBuilderModel": {
+      "claude-fable-5-1": 66
+     },
+     "milestonesCompleted": [
+      {
+       "project": "design-system",
+       "milestone": "Tokens and primitives",
+       "targetDate": "2026-09-22",
+       "issues": 8,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T01:28Z"
+      },
+      {
+       "project": "data-layer",
+       "milestone": "Postgres + Drizzle baseline",
+       "targetDate": "2026-09-22",
+       "issues": 13,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T01:48Z"
+      },
+      {
+       "project": "identity",
+       "milestone": "Auth works across web and desktop",
+       "targetDate": "2026-09-23",
+       "issues": 12,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T02:53Z"
+      },
+      {
+       "project": "input",
+       "milestone": "Keyboard and command system",
+       "targetDate": "2026-09-23",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T03:03Z"
+      },
+      {
+       "project": "spec-builder",
+       "milestone": "Spec schema and validator",
+       "targetDate": "2026-09-24",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T04:38Z"
+      }
+     ],
+     "releaseCandidatesReached": [
+      {
+       "rc": "RC0",
+       "label": "RC0 staging + sign-in + orchestrator claiming",
+       "reviewAt": "2026-09-18T06:13Z",
+       "gateIssues": [
+        "PAP-25",
+        "PAP-30",
+        "PAP-269",
+        "PAP-223",
+        "PAP-224",
+        "PAP-281",
+        "PAP-282",
+        "PAP-283"
+       ]
+      },
+      {
+       "rc": "RC1",
+       "label": "RC1 v0.1.0-rc.1: RLS permissions, installers, Yjs server, codegen, Stripe test mode, story baselines",
+       "reviewAt": "2026-09-18T06:03Z",
+       "gateIssues": [
+        "PAP-227",
+        "PAP-228",
+        "PAP-229",
+        "PAP-256",
+        "PAP-257",
+        "PAP-140",
+        "PAP-314",
+        "PAP-315",
+        "PAP-316",
+        "PAP-177",
+        "PAP-246",
+        "PAP-52"
+       ]
+      }
+     ],
+     "needsJustinBeforeStart": [
+      {
+       "id": "NJ-10",
+       "text": "Stripe test-mode account and restricted key (PAP-177); Google Cloud OAuth consent screen (PAP-224, PAP-200).",
+       "mappedTo": [
+        "PAP-177",
+        "PAP-224",
+        "PAP-200"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-11",
+       "text": "Domain: set PAPEROS_DOMAIN or keep sslip.io for v0.1.0 (RC1).",
+       "mappedTo": [
+        "RC1"
+       ],
+       "status": "open"
+      }
+     ]
+    },
+    {
+     "issues": [
+      "PAP-331",
+      "PAP-39",
+      "PAP-272",
+      "PAP-129",
+      "PAP-178",
+      "PAP-382",
+      "PAP-248",
+      "PAP-398",
+      "PAP-260",
+      "PAP-337",
+      "PAP-97",
+      "PAP-317",
+      "PAP-354",
+      "PAP-362",
+      "PAP-363",
+      "PAP-396",
+      "PAP-321",
+      "PAP-98",
+      "PAP-326",
+      "PAP-263",
+      "PAP-288",
+      "PAP-300",
+      "PAP-309",
+      "PAP-376",
+      "PAP-383",
+      "PAP-341",
+      "PAP-170",
+      "PAP-299",
+      "PAP-318",
+      "PAP-344",
+      "PAP-364",
+      "PAP-397",
+      "PAP-372",
+      "PAP-93",
+      "PAP-167",
+      "PAP-327",
+      "PAP-322",
+      "PAP-356",
+      "PAP-399",
+      "PAP-319",
+      "PAP-99",
+      "PAP-351",
+      "PAP-266",
+      "PAP-342",
+      "PAP-243",
+      "PAP-429",
+      "PAP-345",
+      "PAP-60",
+      "PAP-328",
+      "PAP-141",
+      "PAP-156",
+      "PAP-245",
+      "PAP-373",
+      "PAP-40",
+      "PAP-144",
+      "PAP-51",
+      "PAP-61",
+      "PAP-323",
+      "PAP-62",
+      "PAP-63",
+      "PAP-75",
+      "PAP-343",
+      "PAP-244",
+      "PAP-83",
+      "PAP-84"
+     ],
+     "end": "2026-09-18T13:53Z",
+     "chunk": 3,
+     "listCost": 2495.09,
+     "discountedCost": 49.9,
+     "start": "2026-09-18T06:33Z",
+     "end_min": 1410,
+     "firstIssueStart": "2026-09-18T04:53Z",
+     "hours": 7.3,
+     "cumulativeHours": 23.5,
+     "byProject": {
+      "agents": {
+       "issues": [
+        "PAP-288",
+        "PAP-299",
+        "PAP-309"
+       ],
+       "umbrellasCompleted": []
+      },
+      "app-shell": {
+       "issues": [
+        "PAP-260",
+        "PAP-263",
+        "PAP-266",
+        "PAP-363",
+        "PAP-364",
+        "PAP-429"
+       ],
+       "umbrellasCompleted": [
+        "PAP-20",
+        "PAP-21",
+        "PAP-28"
+       ]
+      },
+      "business-core": {
+       "issues": [
+        "PAP-178",
+        "PAP-396",
+        "PAP-397",
+        "PAP-398",
+        "PAP-399"
+       ],
+       "umbrellasCompleted": [
+        "PAP-180"
+       ]
+      },
+      "collab": {
+       "issues": [
+        "PAP-129",
+        "PAP-317",
+        "PAP-318",
+        "PAP-319",
+        "PAP-321",
+        "PAP-322",
+        "PAP-323"
+       ],
+       "umbrellasCompleted": [
+        "PAP-131",
+        "PAP-132"
+       ]
+      },
+      "data-layer": {
+       "issues": [
+        "PAP-39",
+        "PAP-40",
+        "PAP-272",
+        "PAP-354"
+       ],
+       "umbrellasCompleted": [
+        "PAP-36"
+       ]
+      },
+      "design-system": {
+       "issues": [
+        "PAP-75"
+       ],
+       "umbrellasCompleted": []
+      },
+      "forge": {
+       "issues": [
+        "PAP-51"
+       ],
+       "umbrellasCompleted": []
+      },
+      "identity": {
+       "issues": [
+        "PAP-60",
+        "PAP-61",
+        "PAP-62",
+        "PAP-63"
+       ],
+       "umbrellasCompleted": []
+      },
+      "input": {
+       "issues": [
+        "PAP-156",
+        "PAP-331"
+       ],
+       "umbrellasCompleted": [
+        "PAP-155"
+       ]
+      },
+      "libraries": {
+       "issues": [
+        "PAP-351"
+       ],
+       "umbrellasCompleted": []
+      },
+      "pm-linear": {
+       "issues": [
+        "PAP-93",
+        "PAP-97",
+        "PAP-98",
+        "PAP-99",
+        "PAP-300",
+        "PAP-372",
+        "PAP-373"
+       ],
+       "umbrellasCompleted": []
+      },
+      "quality": {
+       "issues": [
+        "PAP-83",
+        "PAP-84",
+        "PAP-243",
+        "PAP-244",
+        "PAP-245",
+        "PAP-248",
+        "PAP-356"
+       ],
+       "umbrellasCompleted": [
+        "PAP-81",
+        "PAP-82"
+       ]
+      },
+      "realtime": {
+       "issues": [
+        "PAP-141",
+        "PAP-144",
+        "PAP-326",
+        "PAP-327",
+        "PAP-328"
+       ],
+       "umbrellasCompleted": [
+        "PAP-143"
+       ]
+      },
+      "spec-builder": {
+       "issues": [
+        "PAP-362",
+        "PAP-376"
+       ],
+       "umbrellasCompleted": []
+      },
+      "tables": {
+       "issues": [
+        "PAP-167",
+        "PAP-170",
+        "PAP-337",
+        "PAP-341",
+        "PAP-342",
+        "PAP-343",
+        "PAP-344",
+        "PAP-345",
+        "PAP-382",
+        "PAP-383"
+       ],
+       "umbrellasCompleted": [
+        "PAP-163",
+        "PAP-165"
+       ]
+      }
+     },
+     "umbrellasCompleted": {
+      "PAP-20": {
+       "title": "Add Tauri 2 mobile targets (iOS, Android) with platform capability shims",
+       "children": [
+        "PAP-258",
+        "PAP-259",
+        "PAP-260"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-21": {
+       "title": "Build responsive breakpoint matrix and multi-monitor window manager that detaches panels into OS windows",
+       "children": [
+        "PAP-261",
+        "PAP-262",
+        "PAP-263"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-28": {
+       "title": "Make every platform capability a removable module: module manifests, `modules:` in app.spec.yaml, `paperos create --without`, per-tenant module toggles and dead-code checks",
+       "children": [
+        "PAP-264",
+        "PAP-265",
+        "PAP-266"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-36": {
+       "title": "Integrate PGlite and ElectricSQL shapes for local-first reads with an offline write queue",
+       "children": [
+        "PAP-270",
+        "PAP-271",
+        "PAP-272"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-81": {
+       "title": "Build gate 2: three Claude reviewer agents (correctness, security, spec-conformance) posting structured PR reviews",
+       "children": [
+        "PAP-243",
+        "PAP-244",
+        "PAP-245"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-82": {
+       "title": "Build gate 3: Playwright screenshot suite across the 7-width breakpoint matrix, all themes and key pages with baseline diffs",
+       "children": [
+        "PAP-246",
+        "PAP-247",
+        "PAP-248"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-131": {
+       "title": "Implement in-app comments anchored to any entity, page element or doc block with mentions and resolve",
+       "children": [
+        "PAP-317",
+        "PAP-318",
+        "PAP-319"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-132": {
+       "title": "Build the canvas view (tldraw or React Flow) showing the UX flow of the whole app, generated from specs and editable",
+       "children": [
+        "PAP-320",
+        "PAP-321",
+        "PAP-322"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-143": {
+       "title": "Stream record changes via Electric shapes to all connected clients and reconcile with local writes",
+       "children": [
+        "PAP-326",
+        "PAP-327",
+        "PAP-328"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-155": {
+       "title": "Build accessible drag-and-drop (dnd-kit) for tables, kanban and canvas with a keyboard alternative",
+       "children": [
+        "PAP-329",
+        "PAP-330",
+        "PAP-331"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-163": {
+       "title": "Build the view query compiler from view model to SQL and Electric shapes with server-side pagination",
+       "children": [
+        "PAP-335",
+        "PAP-336",
+        "PAP-337"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-165": {
+       "title": "Build the virtualized grid view (TanStack Table) with inline edit, column resize/reorder, freeze and cell types",
+       "children": [
+        "PAP-341",
+        "PAP-342",
+        "PAP-343"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-180": {
+       "title": "Implement invoices, quotes and receipts with PDF generation and Stripe payment links",
+       "children": [
+        "PAP-395",
+        "PAP-396",
+        "PAP-397"
+       ],
+       "deferredChildren": 0
+      }
+     },
+     "issueCount": 65,
+     "byPhase": {
+      "P1": 42,
+      "P0": 10,
+      "P2": 13
+     },
+     "byType": {
+      "Build": 58,
+      "Infra": 2,
+      "Spec": 2,
+      "Research": 1,
+      "Review": 2
+     },
+     "bySize": {
+      "M": 60,
+      "S": 5
+     },
+     "byBuilderModel": {
+      "claude-fable-5-1": 65
+     },
+     "milestonesCompleted": [
+      {
+       "project": "spec-builder",
+       "milestone": "Codegen and conformance tests",
+       "targetDate": "2026-09-26",
+       "issues": 12,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T08:18Z"
+      },
+      {
+       "project": "realtime",
+       "milestone": "Yjs server and presence",
+       "targetDate": "2026-09-25",
+       "issues": 4,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T12:13Z"
+      },
+      {
+       "project": "quality",
+       "milestone": "Gates 1 and 2 on every PR",
+       "targetDate": "2026-09-25",
+       "issues": 11,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T13:33Z"
+      }
+     ],
+     "releaseCandidatesReached": [],
+     "needsJustinBeforeStart": [
+      {
+       "id": "NJ-4",
+       "text": "Anthropic Console: orchestrator API key, hard spend limit, usage export (PAP-98).",
+       "mappedTo": [
+        "PAP-98"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-13",
+       "text": "Airtable demo base and token (PAP-202); Slack incoming webhook (PAP-136).",
+       "mappedTo": [
+        "PAP-414",
+        "PAP-415",
+        "PAP-416",
+        "PAP-323",
+        "PAP-324",
+        "PAP-325"
+       ],
+       "status": "open"
+      }
+     ]
+    },
+    {
+     "issues": [
+      "PAP-90",
+      "PAP-324",
+      "PAP-107",
+      "PAP-109",
+      "PAP-111",
+      "PAP-113",
+      "PAP-134",
+      "PAP-138",
+      "PAP-145",
+      "PAP-252",
+      "PAP-148",
+      "PAP-153",
+      "PAP-154",
+      "PAP-332",
+      "PAP-334",
+      "PAP-172",
+      "PAP-166",
+      "PAP-249",
+      "PAP-183",
+      "PAP-135",
+      "PAP-333",
+      "PAP-159",
+      "PAP-169",
+      "PAP-181",
+      "PAP-192",
+      "PAP-253",
+      "PAP-216",
+      "PAP-217",
+      "PAP-220",
+      "PAP-280",
+      "PAP-347",
+      "PAP-385",
+      "PAP-388",
+      "PAP-250",
+      "PAP-307",
+      "PAP-102",
+      "PAP-310",
+      "PAP-189",
+      "PAP-346",
+      "PAP-353",
+      "PAP-355",
+      "PAP-254",
+      "PAP-366",
+      "PAP-367",
+      "PAP-368",
+      "PAP-369",
+      "PAP-348",
+      "PAP-386",
+      "PAP-389",
+      "PAP-370",
+      "PAP-371",
+      "PAP-375",
+      "PAP-377",
+      "PAP-378",
+      "PAP-379",
+      "PAP-381",
+      "PAP-384",
+      "PAP-89",
+      "PAP-387",
+      "PAP-391",
+      "PAP-400"
+     ],
+     "end": "2026-09-18T20:38Z",
+     "chunk": 4,
+     "listCost": 2466.21,
+     "discountedCost": 49.32,
+     "start": "2026-09-18T13:53Z",
+     "end_min": 1815,
+     "firstIssueStart": "2026-09-18T12:13Z",
+     "hours": 6.8,
+     "cumulativeHours": 30.2,
+     "byProject": {
+      "agents": {
+       "issues": [
+        "PAP-107",
+        "PAP-109",
+        "PAP-111",
+        "PAP-113",
+        "PAP-280",
+        "PAP-310"
+       ],
+       "umbrellasCompleted": [
+        "PAP-110"
+       ]
+      },
+      "app-shell": {
+       "issues": [
+        "PAP-366",
+        "PAP-367",
+        "PAP-368",
+        "PAP-369"
+       ],
+       "umbrellasCompleted": []
+      },
+      "business-core": {
+       "issues": [
+        "PAP-181",
+        "PAP-183",
+        "PAP-391",
+        "PAP-400"
+       ],
+       "umbrellasCompleted": [
+        "PAP-184"
+       ]
+      },
+      "collab": {
+       "issues": [
+        "PAP-134",
+        "PAP-135",
+        "PAP-138",
+        "PAP-324",
+        "PAP-379"
+       ],
+       "umbrellasCompleted": []
+      },
+      "data-layer": {
+       "issues": [
+        "PAP-353",
+        "PAP-355",
+        "PAP-370"
+       ],
+       "umbrellasCompleted": []
+      },
+      "forge": {
+       "issues": [
+        "PAP-371"
+       ],
+       "umbrellasCompleted": []
+      },
+      "growth": {
+       "issues": [
+        "PAP-189",
+        "PAP-192"
+       ],
+       "umbrellasCompleted": []
+      },
+      "identity": {
+       "issues": [
+        "PAP-220"
+       ],
+       "umbrellasCompleted": []
+      },
+      "input": {
+       "issues": [
+        "PAP-153",
+        "PAP-154",
+        "PAP-159"
+       ],
+       "umbrellasCompleted": []
+      },
+      "libraries": {
+       "issues": [
+        "PAP-216",
+        "PAP-217"
+       ],
+       "umbrellasCompleted": []
+      },
+      "migration": {
+       "issues": [
+        "PAP-347",
+        "PAP-348"
+       ],
+       "umbrellasCompleted": []
+      },
+      "pm-linear": {
+       "issues": [
+        "PAP-102",
+        "PAP-307"
+       ],
+       "umbrellasCompleted": []
+      },
+      "quality": {
+       "issues": [
+        "PAP-89",
+        "PAP-90",
+        "PAP-249",
+        "PAP-250",
+        "PAP-252",
+        "PAP-253",
+        "PAP-254"
+       ],
+       "umbrellasCompleted": [
+        "PAP-88"
+       ]
+      },
+      "realtime": {
+       "issues": [
+        "PAP-145",
+        "PAP-148",
+        "PAP-381"
+       ],
+       "umbrellasCompleted": []
+      },
+      "spec-builder": {
+       "issues": [
+        "PAP-375",
+        "PAP-377",
+        "PAP-378"
+       ],
+       "umbrellasCompleted": [
+        "PAP-124"
+       ]
+      },
+      "tables": {
+       "issues": [
+        "PAP-166",
+        "PAP-169",
+        "PAP-172",
+        "PAP-332",
+        "PAP-333",
+        "PAP-334",
+        "PAP-346",
+        "PAP-384",
+        "PAP-385",
+        "PAP-386",
+        "PAP-387",
+        "PAP-388",
+        "PAP-389"
+       ],
+       "umbrellasCompleted": [
+        "PAP-168",
+        "PAP-171",
+        "PAP-173"
+       ]
+      }
+     },
+     "umbrellasCompleted": {
+      "PAP-88": {
+       "title": "Define the release train: nightly staging deploy, weekly release candidate to Needs Justin with consolidated review report",
+       "children": [
+        "PAP-252",
+        "PAP-253",
+        "PAP-254"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-110": {
+       "title": "Create an eval harness with golden tasks per character, scored nightly, regressions flagged in Linear",
+       "children": [
+        "PAP-308",
+        "PAP-309",
+        "PAP-310"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-124": {
+       "title": "Build the spec editor UI with form and YAML views and live preview",
+       "children": [
+        "PAP-376",
+        "PAP-377",
+        "PAP-378"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-168": {
+       "title": "Build calendar, timeline and Gantt views with dependencies",
+       "children": [
+        "PAP-344",
+        "PAP-345",
+        "PAP-346"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-171": {
+       "title": "Build a formula engine compatible with common Airtable and Notion functions",
+       "children": [
+        "PAP-382",
+        "PAP-383",
+        "PAP-384"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-173": {
+       "title": "Compose views into dashboard pages with drag-arranged blocks and cross-filters",
+       "children": [
+        "PAP-385",
+        "PAP-386",
+        "PAP-387"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-184": {
+       "title": "Define the payroll provider interface and implement the first adapter (Check or Gusto Embedded)",
+       "children": [
+        "PAP-398",
+        "PAP-399",
+        "PAP-400"
+       ],
+       "deferredChildren": 0
+      }
+     },
+     "issueCount": 61,
+     "byPhase": {
+      "P2": 24,
+      "P1": 35,
+      "P0": 2
+     },
+     "byType": {
+      "Build": 56,
+      "Spec": 1,
+      "Infra": 4
+     },
+     "bySize": {
+      "M": 58,
+      "S": 3
+     },
+     "byBuilderModel": {
+      "claude-fable-5-1": 61
+     },
+     "milestonesCompleted": [
+      {
+       "project": "agents",
+       "milestone": "Agent org visible in app",
+       "targetDate": "2026-09-30",
+       "issues": 1,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T14:43Z"
+      },
+      {
+       "project": "realtime",
+       "milestone": "Record sync and conflict UX",
+       "targetDate": "2026-09-28",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T14:48Z"
+      },
+      {
+       "project": "input",
+       "milestone": "Touch, pen, gamepad",
+       "targetDate": "2026-09-27",
+       "issues": 6,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T15:13Z"
+      },
+      {
+       "project": "tables",
+       "milestone": "Grid with sort, filter, group",
+       "targetDate": "2026-09-28",
+       "issues": 12,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T15:43Z"
+      },
+      {
+       "project": "business-core",
+       "milestone": "Ledger and reports",
+       "targetDate": "2026-09-29",
+       "issues": 8,
+       "deferredIssuesExcluded": 1,
+       "completedAt": "2026-09-18T16:38Z"
+      },
+      {
+       "project": "growth",
+       "milestone": "Campaigns and social",
+       "targetDate": "2026-09-30",
+       "issues": 1,
+       "deferredIssuesExcluded": 7,
+       "completedAt": "2026-09-18T16:38Z"
+      },
+      {
+       "project": "libraries",
+       "milestone": "Registry live",
+       "targetDate": "2026-09-30",
+       "issues": 2,
+       "deferredIssuesExcluded": 1,
+       "completedAt": "2026-09-18T16:58Z"
+      },
+      {
+       "project": "identity",
+       "milestone": "Roles and audiences enforced end to end",
+       "targetDate": "2026-09-25",
+       "issues": 4,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T17:03Z"
+      },
+      {
+       "project": "agents",
+       "milestone": "Roster defined and installed",
+       "targetDate": "2026-09-24",
+       "issues": 11,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T17:08Z"
+      },
+      {
+       "project": "tables",
+       "milestone": "All view types",
+       "targetDate": "2026-09-29",
+       "issues": 9,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T18:23Z"
+      },
+      {
+       "project": "app-shell",
+       "milestone": "Desktop and mobile shells build",
+       "targetDate": "2026-09-24",
+       "issues": 14,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T18:58Z"
+      },
+      {
+       "project": "data-layer",
+       "milestone": "Local-first sync working",
+       "targetDate": "2026-09-25",
+       "issues": 8,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T19:38Z"
+      },
+      {
+       "project": "forge",
+       "milestone": "CI runs on both forges",
+       "targetDate": "2026-09-24",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T19:53Z"
+      },
+      {
+       "project": "quality",
+       "milestone": "Edge-case hunting and release trains",
+       "targetDate": "2026-09-30",
+       "issues": 8,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T20:23Z"
+      },
+      {
+       "project": "business-core",
+       "milestone": "Stripe billing live",
+       "targetDate": "2026-09-27",
+       "issues": 6,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T20:38Z"
+      }
+     ],
+     "releaseCandidatesReached": [],
+     "needsJustinBeforeStart": [
+      {
+       "id": "NJ-16",
+       "text": "Approve the content agent (PAP-192) and migration agent (PAP-208).",
+       "mappedTo": [
+        "PAP-192",
+        "PAP-208"
+       ],
+       "status": "open"
+      }
+     ]
+    },
+    {
+     "issues": [
+      "PAP-430",
+      "PAP-431",
+      "PAP-349",
+      "PAP-390",
+      "PAP-24",
+      "PAP-432",
+      "PAP-29",
+      "PAP-53",
+      "PAP-64",
+      "PAP-76",
+      "PAP-108",
+      "PAP-112",
+      "PAP-125",
+      "PAP-201",
+      "PAP-126",
+      "PAP-147",
+      "PAP-186",
+      "PAP-188",
+      "PAP-306",
+      "PAP-18",
+      "PAP-72",
+      "PAP-130",
+      "PAP-146",
+      "PAP-251",
+      "PAP-325",
+      "PAP-41",
+      "PAP-200",
+      "PAP-352",
+      "PAP-374",
+      "PAP-44",
+      "PAP-49",
+      "PAP-208",
+      "PAP-380",
+      "PAP-77",
+      "PAP-95",
+      "PAP-160",
+      "PAP-241",
+      "PAP-414",
+      "PAP-420",
+      "PAP-413",
+      "PAP-415",
+      "PAP-421",
+      "PAP-416",
+      "PAP-422"
+     ],
+     "end": "2026-09-19T03:43Z",
+     "chunk": 5,
+     "listCost": 1205.53,
+     "discountedCost": 24.11,
+     "start": "2026-09-18T20:38Z",
+     "end_min": 2240,
+     "firstIssueStart": "2026-09-18T18:53Z",
+     "hours": 7.1,
+     "cumulativeHours": 37.3,
+     "byProject": {
+      "agents": {
+       "issues": [
+        "PAP-108",
+        "PAP-112"
+       ],
+       "umbrellasCompleted": []
+      },
+      "app-shell": {
+       "issues": [
+        "PAP-18",
+        "PAP-24",
+        "PAP-29",
+        "PAP-430",
+        "PAP-431"
+       ],
+       "umbrellasCompleted": []
+      },
+      "business-core": {
+       "issues": [
+        "PAP-186"
+       ],
+       "umbrellasCompleted": []
+      },
+      "collab": {
+       "issues": [
+        "PAP-130",
+        "PAP-325",
+        "PAP-380"
+       ],
+       "umbrellasCompleted": [
+        "PAP-136"
+       ]
+      },
+      "data-layer": {
+       "issues": [
+        "PAP-41",
+        "PAP-432"
+       ],
+       "umbrellasCompleted": []
+      },
+      "design-system": {
+       "issues": [
+        "PAP-72",
+        "PAP-76",
+        "PAP-77"
+       ],
+       "umbrellasCompleted": []
+      },
+      "forge": {
+       "issues": [
+        "PAP-44",
+        "PAP-49",
+        "PAP-53"
+       ],
+       "umbrellasCompleted": []
+      },
+      "growth": {
+       "issues": [
+        "PAP-188"
+       ],
+       "umbrellasCompleted": []
+      },
+      "identity": {
+       "issues": [
+        "PAP-64"
+       ],
+       "umbrellasCompleted": []
+      },
+      "input": {
+       "issues": [
+        "PAP-160"
+       ],
+       "umbrellasCompleted": []
+      },
+      "libraries": {
+       "issues": [
+        "PAP-352"
+       ],
+       "umbrellasCompleted": [
+        "PAP-215"
+       ]
+      },
+      "migration": {
+       "issues": [
+        "PAP-200",
+        "PAP-201",
+        "PAP-208",
+        "PAP-349",
+        "PAP-413",
+        "PAP-414",
+        "PAP-415",
+        "PAP-416",
+        "PAP-420",
+        "PAP-421",
+        "PAP-422"
+       ],
+       "umbrellasCompleted": [
+        "PAP-199",
+        "PAP-202",
+        "PAP-205"
+       ]
+      },
+      "pm-linear": {
+       "issues": [
+        "PAP-95",
+        "PAP-306",
+        "PAP-374"
+       ],
+       "umbrellasCompleted": [
+        "PAP-101"
+       ]
+      },
+      "quality": {
+       "issues": [
+        "PAP-241",
+        "PAP-251"
+       ],
+       "umbrellasCompleted": [
+        "PAP-85"
+       ]
+      },
+      "realtime": {
+       "issues": [
+        "PAP-146",
+        "PAP-147"
+       ],
+       "umbrellasCompleted": []
+      },
+      "spec-builder": {
+       "issues": [
+        "PAP-125",
+        "PAP-126"
+       ],
+       "umbrellasCompleted": []
+      },
+      "tables": {
+       "issues": [
+        "PAP-390"
+       ],
+       "umbrellasCompleted": [
+        "PAP-174"
+       ]
+      }
+     },
+     "umbrellasCompleted": {
+      "PAP-85": {
+       "title": "Build gate 4: edge-case hunter agent generating adversarial inputs, empty/huge/unicode states, network failure and slow-device scenarios from page specs",
+       "children": [
+        "PAP-249",
+        "PAP-250",
+        "PAP-251"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-101": {
+       "title": "Build bidirectional Linear sync (GraphQL + webhooks) with conflict rule: Linear wins until cutover",
+       "children": [
+        "PAP-372",
+        "PAP-373",
+        "PAP-374"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-136": {
+       "title": "Build a notification center (in-app, email, Slack) with per-audience preferences",
+       "children": [
+        "PAP-323",
+        "PAP-324",
+        "PAP-325"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-174": {
+       "title": "Build table automations: triggers (record change, schedule, form, inbound webhook), filter-tree conditions and actions (update record, notify, outbound webhook, connector call, create Linear issue) with a run log",
+       "children": [
+        "PAP-388",
+        "PAP-389",
+        "PAP-390"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-199": {
+       "title": "Build the import framework: source connector, schema-mapping UI, dry run, validation, rollback",
+       "children": [
+        "PAP-347",
+        "PAP-348",
+        "PAP-349"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-202": {
+       "title": "Import Airtable bases (tables, views, relations, attachments)",
+       "children": [
+        "PAP-414",
+        "PAP-415",
+        "PAP-416"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-205": {
+       "title": "Export everything (tables, docs, files, ledger) to open formats",
+       "children": [
+        "PAP-420",
+        "PAP-421",
+        "PAP-422"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-215": {
+       "title": "Evaluate whole OSS products to embed or fork (Twenty CRM, NocoDB, Baserow, Plane, Cal.com, Formbricks, Postiz)",
+       "children": [
+        "PAP-350",
+        "PAP-351",
+        "PAP-352"
+       ],
+       "deferredChildren": 0
+      }
+     },
+     "issueCount": 44,
+     "byPhase": {
+      "P2": 26,
+      "P1": 13,
+      "P0": 5
+     },
+     "byType": {
+      "Build": 24,
+      "Docs": 8,
+      "Review": 6,
+      "Spec": 3,
+      "Research": 3
+     },
+     "bySize": {
+      "M": 27,
+      "S": 17
+     },
+     "byBuilderModel": {
+      "claude-fable-5-1": 44
+     },
+     "milestonesCompleted": [
+      {
+       "project": "tables",
+       "milestone": "View sharing, formulas, dashboards",
+       "targetDate": "2026-09-30",
+       "issues": 10,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T21:13Z"
+      },
+      {
+       "project": "app-shell",
+       "milestone": "Multi-monitor and PWA polish",
+       "targetDate": "2026-09-29",
+       "issues": 13,
+       "deferredIssuesExcluded": 1,
+       "completedAt": "2026-09-18T21:43Z"
+      },
+      {
+       "project": "forge",
+       "milestone": "Disaster recovery proven",
+       "targetDate": "2026-09-30",
+       "issues": 1,
+       "deferredIssuesExcluded": 3,
+       "completedAt": "2026-09-18T21:43Z"
+      },
+      {
+       "project": "identity",
+       "milestone": "Agent principals and enterprise",
+       "targetDate": "2026-09-30",
+       "issues": 2,
+       "deferredIssuesExcluded": 5,
+       "completedAt": "2026-09-18T21:48Z"
+      },
+      {
+       "project": "agents",
+       "milestone": "Sub-agents, skills and evals live",
+       "targetDate": "2026-09-25",
+       "issues": 8,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T21:53Z"
+      },
+      {
+       "project": "spec-builder",
+       "milestone": "Spec editor UI",
+       "targetDate": "2026-09-30",
+       "issues": 6,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T22:13Z"
+      },
+      {
+       "project": "business-core",
+       "milestone": "Payroll adapter and cash dashboard",
+       "targetDate": "2026-10-01",
+       "issues": 4,
+       "deferredIssuesExcluded": 1,
+       "completedAt": "2026-09-18T22:13Z"
+      },
+      {
+       "project": "growth",
+       "milestone": "CRM core",
+       "targetDate": "2026-09-29",
+       "issues": 3,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T22:18Z"
+      },
+      {
+       "project": "pm-linear",
+       "milestone": "Orchestrator claims and ships issues",
+       "targetDate": "2026-09-22",
+       "issues": 9,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T22:23Z"
+      },
+      {
+       "project": "app-shell",
+       "milestone": "Template scaffolds and runs on web",
+       "targetDate": "2026-09-20",
+       "issues": 8,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T22:48Z"
+      },
+      {
+       "project": "design-system",
+       "milestone": "Component library covers app shell needs",
+       "targetDate": "2026-09-25",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T22:48Z"
+      },
+      {
+       "project": "collab",
+       "milestone": "Docs and prompt log stores",
+       "targetDate": "2026-09-23",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T22:53Z"
+      },
+      {
+       "project": "realtime",
+       "milestone": "Scale and offline tested",
+       "targetDate": "2026-09-30",
+       "issues": 4,
+       "deferredIssuesExcluded": 1,
+       "completedAt": "2026-09-18T22:53Z"
+      },
+      {
+       "project": "collab",
+       "milestone": "Comments and canvas",
+       "targetDate": "2026-09-29",
+       "issues": 11,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T22:58Z"
+      },
+      {
+       "project": "data-layer",
+       "milestone": "Tenant-safe and observable",
+       "targetDate": "2026-09-30",
+       "issues": 6,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T23:03Z"
+      },
+      {
+       "project": "pm-linear",
+       "milestone": "PM module syncs both ways",
+       "targetDate": "2026-09-30",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T23:03Z"
+      },
+      {
+       "project": "migration",
+       "milestone": "Import framework and CSV",
+       "targetDate": "2026-09-28",
+       "issues": 6,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T23:03Z"
+      },
+      {
+       "project": "libraries",
+       "milestone": "Core adoptions decided",
+       "targetDate": "2026-09-24",
+       "issues": 9,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T23:03Z"
+      },
+      {
+       "project": "forge",
+       "milestone": "Forgejo live and mirrored",
+       "targetDate": "2026-09-20",
+       "issues": 8,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T23:13Z"
+      },
+      {
+       "project": "collab",
+       "milestone": "Knowledge surfaced everywhere",
+       "targetDate": "2026-09-30",
+       "issues": 3,
+       "deferredIssuesExcluded": 1,
+       "completedAt": "2026-09-18T23:18Z"
+      },
+      {
+       "project": "migration",
+       "milestone": "Business migrations",
+       "targetDate": "2026-10-01",
+       "issues": 1,
+       "deferredIssuesExcluded": 6,
+       "completedAt": "2026-09-18T23:18Z"
+      },
+      {
+       "project": "design-system",
+       "milestone": "Themable per tenant with docs",
+       "targetDate": "2026-09-30",
+       "issues": 3,
+       "deferredIssuesExcluded": 1,
+       "completedAt": "2026-09-18T23:38Z"
+      },
+      {
+       "project": "pm-linear",
+       "milestone": "Linear configured for the pipeline",
+       "targetDate": "2026-09-20",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T23:38Z"
+      },
+      {
+       "project": "quality",
+       "milestone": "Visual and video gates",
+       "targetDate": "2026-09-26",
+       "issues": 8,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T23:43Z"
+      },
+      {
+       "project": "input",
+       "milestone": "Voice and accessibility certification",
+       "targetDate": "2026-09-30",
+       "issues": 2,
+       "deferredIssuesExcluded": 2,
+       "completedAt": "2026-09-18T23:43Z"
+      },
+      {
+       "project": "migration",
+       "milestone": "Airtable, Notion, ClickUp importers",
+       "targetDate": "2026-09-30",
+       "issues": 7,
+       "deferredIssuesExcluded": 4,
+       "completedAt": "2026-09-19T03:43Z"
+      }
+     ],
+     "releaseCandidatesReached": [
+      {
+       "rc": "RC2",
+       "label": "RC2 v0.1.0-rc.2, first real cut: gates 1-4, grid + compiler, comments, record sync, ledger + invoices, imports, drill",
+       "reviewAt": "2026-09-18T21:43Z",
+       "gateIssues": [
+        "PAP-335",
+        "PAP-336",
+        "PAP-337",
+        "PAP-341",
+        "PAP-342",
+        "PAP-343",
+        "PAP-317",
+        "PAP-318",
+        "PAP-319",
+        "PAP-326",
+        "PAP-327",
+        "PAP-328",
+        "PAP-392",
+        "PAP-393",
+        "PAP-394",
+        "PAP-395",
+        "PAP-396",
+        "PAP-397",
+        "PAP-347",
+        "PAP-348",
+        "PAP-349",
+        "PAP-29",
+        "PAP-254"
+       ]
+      },
+      {
+       "rc": "RC3",
+       "label": "RC3 = v0.1.0: every non-deferred issue Done",
+       "reviewAt": "2026-09-19T03:43Z",
+       "gateIssues": []
+      }
+     ],
+     "needsJustinBeforeStart": [
+      {
+       "id": "NJ-15",
+       "text": "Release candidate v0.1.0-rc.2 from PAP-254: /approve or /reject (RC2).",
+       "mappedTo": [
+        "RC2"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-17",
+       "text": "Accessibility statement wording (PAP-160).",
+       "mappedTo": [
+        "PAP-160"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-18",
+       "text": "Industry list and terminology defaults (PAP-126).",
+       "mappedTo": [
+        "PAP-126"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-19",
+       "text": "Scope freeze: deferred list becomes milestone v0.2.",
+       "mappedTo": [
+        "RC3"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-20",
+       "text": "Release candidate v0.1.0: /approve promotes and tags (RC3, PAP-254).",
+       "mappedTo": [
+        "RC3"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-21",
+       "text": "PAP-5: close or keep as scoreboard (PAP-95 vs PAP-29).",
+       "mappedTo": [
+        "RC3"
+       ],
+       "status": "open"
+      }
+     ]
+    }
+   ],
+   "deferredChunk": {
+    "chunk": "optional",
+    "label": "Deferred set (42 leaves; needs NJ-14 go and NJ-19 v0.2 scoping)",
+    "issueCount": 42,
+    "listCost": 1387.49,
+    "discountedCost": 27.75,
+    "equivalentChunks": 0.55,
+    "start": "2026-09-19T03:43Z",
+    "end": "2026-09-19T09:13Z",
+    "hours": 5.5,
+    "byProject": {
+     "app-shell": {
+      "issues": [
+       "PAP-23"
+      ]
+     },
+     "business-core": {
+      "issues": [
+       "PAP-182",
+       "PAP-185"
+      ]
+     },
+     "collab": {
+      "issues": [
+       "PAP-137"
+      ]
+     },
+     "design-system": {
+      "issues": [
+       "PAP-235"
+      ]
+     },
+     "forge": {
+      "issues": [
+       "PAP-276",
+       "PAP-277",
+       "PAP-278"
+      ]
+     },
+     "growth": {
+      "issues": [
+       "PAP-193",
+       "PAP-194",
+       "PAP-195",
+       "PAP-401",
+       "PAP-402",
+       "PAP-403",
+       "PAP-404",
+       "PAP-405",
+       "PAP-406",
+       "PAP-407",
+       "PAP-408",
+       "PAP-409",
+       "PAP-410",
+       "PAP-411",
+       "PAP-412"
+      ]
+     },
+     "identity": {
+      "issues": [
+       "PAP-221",
+       "PAP-222",
+       "PAP-230",
+       "PAP-231",
+       "PAP-232"
+      ]
+     },
+     "input": {
+      "issues": [
+       "PAP-157",
+       "PAP-158"
+      ]
+     },
+     "libraries": {
+      "issues": [
+       "PAP-218"
+      ]
+     },
+     "migration": {
+      "issues": [
+       "PAP-204",
+       "PAP-417",
+       "PAP-418",
+       "PAP-419",
+       "PAP-423",
+       "PAP-424",
+       "PAP-425",
+       "PAP-426",
+       "PAP-427",
+       "PAP-428"
+      ]
+     },
+     "realtime": {
+      "issues": [
+       "PAP-149"
+      ]
+     }
+    },
+    "byBuilderModel": {
+     "claude-fable-5-1": 42
+    },
+    "effortNote": "efforts kept as labeled (all 42 carry Effort: low from the deferral rule)",
+    "milestonesDeferredOnly": [
+     {
+      "project": "growth",
+      "milestone": "Acquisition analytics",
+      "deferredIssues": 8
+     }
+    ],
+    "needsJustinBeforeStart": [
+     {
+      "id": "NJ-14",
+      "text": "Stop-loss checkpoint: go or no-go on the stretch pool (deferred set).",
+      "mappedTo": [
+       "DEFERRED"
+      ],
+      "status": "open"
+     }
+    ]
+   }
+  },
+  "B": {
+   "description": "Opus 5 builders and QA; Fable 5.1 for Spec/Research issues, all reviewer sessions and the 4 RC reviews",
+   "builderModels": {
+    "Build": "claude-opus-5",
+    "Infra": "claude-opus-5",
+    "Spec": "claude-fable-5-1",
+    "Research": "claude-fable-5-1",
+    "Docs": "claude-opus-5",
+    "Review": "claude-opus-5"
+   },
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "rcReviewModel": "claude-fable-5-1",
+   "rcReviewListCostEach": 68.75,
+   "totals": {
+    "chunks": 4,
+    "issues": 326,
+    "listCost": 7908.55,
+    "discountedCost": 158.17,
+    "wholeChunksBilled": 4,
+    "wholeChunksBilledUsd": 200,
+    "wallClockHours": 37.3,
+    "wallClockDays24h": 1.56,
+    "end": "2026-09-19T03:43Z",
+    "byType": {
+     "Build": 5824.13,
+     "Docs": 94.35,
+     "Infra": 704.58,
+     "Research": 304.38,
+     "Review": 128.13,
+     "Spec": 577.97
+    },
+    "byPhase": {
+     "P0": 2283.87,
+     "P1": 3707.4,
+     "P2": 1642.28
+    },
+    "rcReviews": 275.0,
+    "withDeferred": {
+     "listCost": 8891.39,
+     "discountedCost": 177.83,
+     "wallClockHours": 42.8,
+     "end": "2026-09-19T09:13Z"
+    }
+   },
+   "chunks": [
+    {
+     "issues": [
+      "PAP-56",
+      "PAP-92",
+      "PAP-103",
+      "PAP-150",
+      "PAP-209",
+      "PAP-302",
+      "PAP-91",
+      "PAP-46",
+      "PAP-55",
+      "PAP-161",
+      "PAP-279",
+      "PAP-303",
+      "PAP-13",
+      "PAP-25",
+      "PAP-66",
+      "PAP-210",
+      "PAP-284",
+      "PAP-14",
+      "PAP-31",
+      "PAP-114",
+      "PAP-127",
+      "PAP-139",
+      "PAP-198",
+      "PAP-212",
+      "PAP-295",
+      "PAP-79",
+      "PAP-42",
+      "PAP-301",
+      "PAP-292",
+      "PAP-105",
+      "PAP-68",
+      "PAP-239",
+      "PAP-16",
+      "PAP-273",
+      "PAP-117",
+      "PAP-285",
+      "PAP-296",
+      "PAP-30",
+      "PAP-78",
+      "PAP-115",
+      "PAP-236",
+      "PAP-255",
+      "PAP-286",
+      "PAP-305",
+      "PAP-32",
+      "PAP-274",
+      "PAP-293",
+      "PAP-297",
+      "PAP-219",
+      "PAP-94",
+      "PAP-133",
+      "PAP-17",
+      "PAP-123",
+      "PAP-275",
+      "PAP-294",
+      "PAP-26",
+      "PAP-118",
+      "PAP-128",
+      "PAP-237",
+      "PAP-256",
+      "PAP-287",
+      "PAP-121",
+      "PAP-176",
+      "PAP-33",
+      "PAP-15",
+      "PAP-43",
+      "PAP-162",
+      "PAP-80",
+      "PAP-52",
+      "PAP-47",
+      "PAP-48",
+      "PAP-350",
+      "PAP-27",
+      "PAP-238",
+      "PAP-257",
+      "PAP-308",
+      "PAP-360",
+      "PAP-50",
+      "PAP-211",
+      "PAP-34",
+      "PAP-175",
+      "PAP-223",
+      "PAP-267",
+      "PAP-37",
+      "PAP-38",
+      "PAP-261",
+      "PAP-22",
+      "PAP-100",
+      "PAP-106",
+      "PAP-74",
+      "PAP-70",
+      "PAP-71",
+      "PAP-233",
+      "PAP-289",
+      "PAP-258",
+      "PAP-226",
+      "PAP-227",
+      "PAP-392",
+      "PAP-224",
+      "PAP-268",
+      "PAP-225",
+      "PAP-304",
+      "PAP-234",
+      "PAP-69",
+      "PAP-264",
+      "PAP-298",
+      "PAP-262",
+      "PAP-269",
+      "PAP-152",
+      "PAP-290",
+      "PAP-338",
+      "PAP-358",
+      "PAP-228",
+      "PAP-229"
+     ],
+     "end": "2026-09-18T02:28Z",
+     "chunk": 1,
+     "listCost": 2495.58,
+     "discountedCost": 49.91,
+     "start": "2026-09-17T14:23Z",
+     "end_min": 725,
+     "firstIssueStart": "2026-09-17T14:23Z",
+     "hours": 12.1,
+     "cumulativeHours": 12.1,
+     "byProject": {
+      "agents": {
+       "issues": [
+        "PAP-103",
+        "PAP-105",
+        "PAP-106",
+        "PAP-284",
+        "PAP-285",
+        "PAP-286",
+        "PAP-287",
+        "PAP-298",
+        "PAP-308"
+       ],
+       "umbrellasCompleted": [
+        "PAP-104"
+       ]
+      },
+      "app-shell": {
+       "issues": [
+        "PAP-13",
+        "PAP-14",
+        "PAP-15",
+        "PAP-16",
+        "PAP-17",
+        "PAP-22",
+        "PAP-25",
+        "PAP-26",
+        "PAP-27",
+        "PAP-255",
+        "PAP-256",
+        "PAP-257",
+        "PAP-258",
+        "PAP-261",
+        "PAP-262",
+        "PAP-264",
+        "PAP-305"
+       ],
+       "umbrellasCompleted": [
+        "PAP-19"
+       ]
+      },
+      "business-core": {
+       "issues": [
+        "PAP-175",
+        "PAP-176",
+        "PAP-392"
+       ],
+       "umbrellasCompleted": []
+      },
+      "collab": {
+       "issues": [
+        "PAP-127",
+        "PAP-128",
+        "PAP-133"
+       ],
+       "umbrellasCompleted": []
+      },
+      "data-layer": {
+       "issues": [
+        "PAP-30",
+        "PAP-31",
+        "PAP-32",
+        "PAP-33",
+        "PAP-34",
+        "PAP-37",
+        "PAP-38",
+        "PAP-42",
+        "PAP-43",
+        "PAP-267",
+        "PAP-268",
+        "PAP-269",
+        "PAP-279",
+        "PAP-302",
+        "PAP-303",
+        "PAP-304"
+       ],
+       "umbrellasCompleted": [
+        "PAP-35"
+       ]
+      },
+      "design-system": {
+       "issues": [
+        "PAP-66",
+        "PAP-68",
+        "PAP-69",
+        "PAP-70",
+        "PAP-71",
+        "PAP-74",
+        "PAP-233",
+        "PAP-234",
+        "PAP-236",
+        "PAP-237",
+        "PAP-238"
+       ],
+       "umbrellasCompleted": [
+        "PAP-67"
+       ]
+      },
+      "forge": {
+       "issues": [
+        "PAP-46",
+        "PAP-47",
+        "PAP-48",
+        "PAP-50",
+        "PAP-52",
+        "PAP-273",
+        "PAP-274",
+        "PAP-275",
+        "PAP-358"
+       ],
+       "umbrellasCompleted": [
+        "PAP-45"
+       ]
+      },
+      "identity": {
+       "issues": [
+        "PAP-55",
+        "PAP-56",
+        "PAP-219",
+        "PAP-223",
+        "PAP-224",
+        "PAP-225",
+        "PAP-226",
+        "PAP-227",
+        "PAP-228",
+        "PAP-229",
+        "PAP-301"
+       ],
+       "umbrellasCompleted": [
+        "PAP-57",
+        "PAP-59"
+       ]
+      },
+      "input": {
+       "issues": [
+        "PAP-150",
+        "PAP-152",
+        "PAP-289",
+        "PAP-290"
+       ],
+       "umbrellasCompleted": []
+      },
+      "libraries": {
+       "issues": [
+        "PAP-209",
+        "PAP-210",
+        "PAP-211",
+        "PAP-212",
+        "PAP-292",
+        "PAP-293",
+        "PAP-294",
+        "PAP-295",
+        "PAP-296",
+        "PAP-297",
+        "PAP-350"
+       ],
+       "umbrellasCompleted": [
+        "PAP-213",
+        "PAP-214"
+       ]
+      },
+      "migration": {
+       "issues": [
+        "PAP-198"
+       ],
+       "umbrellasCompleted": []
+      },
+      "pm-linear": {
+       "issues": [
+        "PAP-91",
+        "PAP-92",
+        "PAP-94",
+        "PAP-100"
+       ],
+       "umbrellasCompleted": []
+      },
+      "quality": {
+       "issues": [
+        "PAP-78",
+        "PAP-79",
+        "PAP-80",
+        "PAP-239"
+       ],
+       "umbrellasCompleted": []
+      },
+      "realtime": {
+       "issues": [
+        "PAP-139"
+       ],
+       "umbrellasCompleted": []
+      },
+      "spec-builder": {
+       "issues": [
+        "PAP-114",
+        "PAP-115",
+        "PAP-117",
+        "PAP-118",
+        "PAP-121",
+        "PAP-123",
+        "PAP-360"
+       ],
+       "umbrellasCompleted": []
+      },
+      "tables": {
+       "issues": [
+        "PAP-161",
+        "PAP-162",
+        "PAP-338"
+       ],
+       "umbrellasCompleted": []
+      }
+     },
+     "umbrellasCompleted": {
+      "PAP-19": {
+       "title": "Add Tauri 2 desktop target for Linux, macOS and Windows sharing the web bundle",
+       "children": [
+        "PAP-255",
+        "PAP-256",
+        "PAP-257"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-35": {
+       "title": "Expose a typed API via oRPC with Zod schemas generated from Drizzle",
+       "children": [
+        "PAP-267",
+        "PAP-268",
+        "PAP-269"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-45": {
+       "title": "Deploy Forgejo on the VPS behind Caddy with SSO from Better Auth and nightly backups",
+       "children": [
+        "PAP-273",
+        "PAP-274",
+        "PAP-275"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-57": {
+       "title": "Install Better Auth with passkeys, magic link, Google/GitHub OAuth and sessions for web and Tauri",
+       "children": [
+        "PAP-223",
+        "PAP-224",
+        "PAP-225",
+        "PAP-226"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-59": {
+       "title": "Build permission engine combining role-based grants with attribute policies declared in page specs",
+       "children": [
+        "PAP-227",
+        "PAP-228",
+        "PAP-229"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-67": {
+       "title": "Adopt Base UI/Radix primitives with Tailwind v4 and build 20 core components (Button, Input, Select, Dialog, Menu, Tabs, Toast, Tooltip, Popover...)",
+       "children": [
+        "PAP-236",
+        "PAP-237",
+        "PAP-238"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-104": {
+       "title": "Write the nine lead characters and their sub-characters as .claude/agents definitions with system prompts",
+       "children": [
+        "PAP-284",
+        "PAP-285",
+        "PAP-286",
+        "PAP-287"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-213": {
+       "title": "Survey table, canvas, editor and chart libraries (TanStack, AG Grid, tldraw, Tiptap, ECharts, visx) and recommend",
+       "children": [
+        "PAP-292",
+        "PAP-293",
+        "PAP-294"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-214": {
+       "title": "Survey backend building blocks (Better Auth, Drizzle, Electric, Hocuspocus, Inngest, Resend) and recommend",
+       "children": [
+        "PAP-295",
+        "PAP-296",
+        "PAP-297"
+       ],
+       "deferredChildren": 0
+      }
+     },
+     "issueCount": 114,
+     "byPhase": {
+      "P0": 82,
+      "P1": 31,
+      "P2": 1
+     },
+     "byType": {
+      "Research": 16,
+      "Docs": 2,
+      "Spec": 22,
+      "Infra": 20,
+      "Build": 54
+     },
+     "bySize": {
+      "S": 27,
+      "M": 87
+     },
+     "byBuilderModel": {
+      "claude-fable-5-1": 38,
+      "claude-opus-5": 76
+     },
+     "milestonesCompleted": [
+      {
+       "project": "libraries",
+       "milestone": "Evaluation process",
+       "targetDate": "2026-09-20",
+       "issues": 4,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-17T22:23Z"
+      },
+      {
+       "project": "design-system",
+       "milestone": "Tokens and primitives",
+       "targetDate": "2026-09-22",
+       "issues": 8,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T01:28Z"
+      },
+      {
+       "project": "data-layer",
+       "milestone": "Postgres + Drizzle baseline",
+       "targetDate": "2026-09-22",
+       "issues": 13,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T01:48Z"
+      }
+     ],
+     "releaseCandidatesReached": [],
+     "needsJustinBeforeStart": [
+      {
+       "id": "NJ-1",
+       "text": "Linear: upgrade the workspace plan (PAP-91). Resolved: workspace is on Linear Basic.",
+       "mappedTo": [
+        "PAP-91"
+       ],
+       "status": "resolved"
+      },
+      {
+       "id": "NJ-2",
+       "text": "Infra batch (PAP-25): Hetzner account and cpx41, registrar or Cloudflare token (or accept sslip.io), Resend sign-up, sops recovery key.",
+       "mappedTo": [
+        "PAP-25"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-3",
+       "text": "GitHub App on org imagine-os with repo+workflow scope (PAP-47).",
+       "mappedTo": [
+        "PAP-47"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-5",
+       "text": "Linear: orchestrator API key and webhook signing secret (PAP-92, PAP-97).",
+       "mappedTo": [
+        "PAP-92",
+        "PAP-97"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-6",
+       "text": "Code signing (PAP-256): Apple Developer Program + Azure Trusted Signing, or accept unsigned v0.1.0 installers (default after 48 h: unsigned).",
+       "mappedTo": [
+        "PAP-256"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-7",
+       "text": "License of the template code (PAP-211): MIT, Apache-2.0 or proprietary; default Apache-2.0.",
+       "mappedTo": [
+        "PAP-211"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-8",
+       "text": "Approve docs/pm/justin-queue.md (PAP-94) and the issue contract (PAP-93).",
+       "mappedTo": [
+        "PAP-94",
+        "PAP-93"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-9",
+       "text": "Hire the roster (PAP-104, PAP-210): nine leads, 28 sub-characters, tool scope classes.",
+       "mappedTo": [
+        "PAP-284",
+        "PAP-285",
+        "PAP-286",
+        "PAP-287",
+        "PAP-210"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-10",
+       "text": "Stripe test-mode account and restricted key (PAP-177); Google Cloud OAuth consent screen (PAP-224, PAP-200).",
+       "mappedTo": [
+        "PAP-177",
+        "PAP-224",
+        "PAP-200"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-12",
+       "text": "Payroll provider (PAP-176): sign the Check sandbox agreement (default) or Gusto Embedded.",
+       "mappedTo": [
+        "PAP-176"
+       ],
+       "status": "open"
+      }
+     ]
+    },
+    {
+     "issues": [
+      "PAP-393",
+      "PAP-240",
+      "PAP-259",
+      "PAP-311",
+      "PAP-58",
+      "PAP-291",
+      "PAP-314",
+      "PAP-265",
+      "PAP-281",
+      "PAP-365",
+      "PAP-270",
+      "PAP-187",
+      "PAP-73",
+      "PAP-329",
+      "PAP-339",
+      "PAP-335",
+      "PAP-87",
+      "PAP-140",
+      "PAP-116",
+      "PAP-246",
+      "PAP-312",
+      "PAP-394",
+      "PAP-177",
+      "PAP-330",
+      "PAP-315",
+      "PAP-122",
+      "PAP-282",
+      "PAP-242",
+      "PAP-271",
+      "PAP-357",
+      "PAP-86",
+      "PAP-340",
+      "PAP-359",
+      "PAP-316",
+      "PAP-336",
+      "PAP-142",
+      "PAP-283",
+      "PAP-247",
+      "PAP-313",
+      "PAP-320",
+      "PAP-361",
+      "PAP-395",
+      "PAP-331",
+      "PAP-39",
+      "PAP-272",
+      "PAP-129",
+      "PAP-178",
+      "PAP-382",
+      "PAP-248",
+      "PAP-398",
+      "PAP-260",
+      "PAP-337",
+      "PAP-97",
+      "PAP-317",
+      "PAP-354",
+      "PAP-362",
+      "PAP-363",
+      "PAP-396",
+      "PAP-321",
+      "PAP-98",
+      "PAP-326",
+      "PAP-263",
+      "PAP-288",
+      "PAP-300",
+      "PAP-309",
+      "PAP-376",
+      "PAP-383",
+      "PAP-341",
+      "PAP-170",
+      "PAP-299",
+      "PAP-318",
+      "PAP-344",
+      "PAP-364",
+      "PAP-397",
+      "PAP-372",
+      "PAP-93",
+      "PAP-167",
+      "PAP-327",
+      "PAP-322",
+      "PAP-356",
+      "PAP-399",
+      "PAP-319",
+      "PAP-99",
+      "PAP-351",
+      "PAP-266",
+      "PAP-342",
+      "PAP-243",
+      "PAP-429",
+      "PAP-345",
+      "PAP-60",
+      "PAP-328",
+      "PAP-141"
+     ],
+     "end": "2026-09-18T12:13Z",
+     "chunk": 2,
+     "listCost": 2486.06,
+     "discountedCost": 49.72,
+     "start": "2026-09-18T02:28Z",
+     "end_min": 1310,
+     "firstIssueStart": "2026-09-18T00:23Z",
+     "hours": 9.8,
+     "cumulativeHours": 21.8,
+     "byProject": {
+      "agents": {
+       "issues": [
+        "PAP-288",
+        "PAP-299",
+        "PAP-309"
+       ],
+       "umbrellasCompleted": []
+      },
+      "app-shell": {
+       "issues": [
+        "PAP-259",
+        "PAP-260",
+        "PAP-263",
+        "PAP-265",
+        "PAP-266",
+        "PAP-363",
+        "PAP-364",
+        "PAP-365",
+        "PAP-429"
+       ],
+       "umbrellasCompleted": [
+        "PAP-20",
+        "PAP-21",
+        "PAP-28"
+       ]
+      },
+      "business-core": {
+       "issues": [
+        "PAP-177",
+        "PAP-178",
+        "PAP-359",
+        "PAP-393",
+        "PAP-394",
+        "PAP-395",
+        "PAP-396",
+        "PAP-397",
+        "PAP-398",
+        "PAP-399"
+       ],
+       "umbrellasCompleted": [
+        "PAP-179",
+        "PAP-180"
+       ]
+      },
+      "collab": {
+       "issues": [
+        "PAP-129",
+        "PAP-317",
+        "PAP-318",
+        "PAP-319",
+        "PAP-320",
+        "PAP-321",
+        "PAP-322"
+       ],
+       "umbrellasCompleted": [
+        "PAP-131",
+        "PAP-132"
+       ]
+      },
+      "data-layer": {
+       "issues": [
+        "PAP-39",
+        "PAP-270",
+        "PAP-271",
+        "PAP-272",
+        "PAP-354"
+       ],
+       "umbrellasCompleted": [
+        "PAP-36"
+       ]
+      },
+      "design-system": {
+       "issues": [
+        "PAP-73"
+       ],
+       "umbrellasCompleted": []
+      },
+      "growth": {
+       "issues": [
+        "PAP-187"
+       ],
+       "umbrellasCompleted": []
+      },
+      "identity": {
+       "issues": [
+        "PAP-58",
+        "PAP-60"
+       ],
+       "umbrellasCompleted": []
+      },
+      "input": {
+       "issues": [
+        "PAP-291",
+        "PAP-329",
+        "PAP-330",
+        "PAP-331"
+       ],
+       "umbrellasCompleted": [
+        "PAP-151",
+        "PAP-155"
+       ]
+      },
+      "libraries": {
+       "issues": [
+        "PAP-351"
+       ],
+       "umbrellasCompleted": []
+      },
+      "pm-linear": {
+       "issues": [
+        "PAP-93",
+        "PAP-97",
+        "PAP-98",
+        "PAP-99",
+        "PAP-281",
+        "PAP-282",
+        "PAP-283",
+        "PAP-300",
+        "PAP-372"
+       ],
+       "umbrellasCompleted": [
+        "PAP-96"
+       ]
+      },
+      "quality": {
+       "issues": [
+        "PAP-86",
+        "PAP-87",
+        "PAP-240",
+        "PAP-242",
+        "PAP-243",
+        "PAP-246",
+        "PAP-247",
+        "PAP-248",
+        "PAP-356",
+        "PAP-357"
+       ],
+       "umbrellasCompleted": [
+        "PAP-82"
+       ]
+      },
+      "realtime": {
+       "issues": [
+        "PAP-140",
+        "PAP-141",
+        "PAP-142",
+        "PAP-326",
+        "PAP-327",
+        "PAP-328"
+       ],
+       "umbrellasCompleted": [
+        "PAP-143"
+       ]
+      },
+      "spec-builder": {
+       "issues": [
+        "PAP-116",
+        "PAP-122",
+        "PAP-311",
+        "PAP-312",
+        "PAP-313",
+        "PAP-314",
+        "PAP-315",
+        "PAP-316",
+        "PAP-361",
+        "PAP-362",
+        "PAP-376"
+       ],
+       "umbrellasCompleted": [
+        "PAP-119",
+        "PAP-120"
+       ]
+      },
+      "tables": {
+       "issues": [
+        "PAP-167",
+        "PAP-170",
+        "PAP-335",
+        "PAP-336",
+        "PAP-337",
+        "PAP-339",
+        "PAP-340",
+        "PAP-341",
+        "PAP-342",
+        "PAP-344",
+        "PAP-345",
+        "PAP-382",
+        "PAP-383"
+       ],
+       "umbrellasCompleted": [
+        "PAP-163",
+        "PAP-164"
+       ]
+      }
+     },
+     "umbrellasCompleted": {
+      "PAP-20": {
+       "title": "Add Tauri 2 mobile targets (iOS, Android) with platform capability shims",
+       "children": [
+        "PAP-258",
+        "PAP-259",
+        "PAP-260"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-21": {
+       "title": "Build responsive breakpoint matrix and multi-monitor window manager that detaches panels into OS windows",
+       "children": [
+        "PAP-261",
+        "PAP-262",
+        "PAP-263"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-28": {
+       "title": "Make every platform capability a removable module: module manifests, `modules:` in app.spec.yaml, `paperos create --without`, per-tenant module toggles and dead-code checks",
+       "children": [
+        "PAP-264",
+        "PAP-265",
+        "PAP-266"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-36": {
+       "title": "Integrate PGlite and ElectricSQL shapes for local-first reads with an offline write queue",
+       "children": [
+        "PAP-270",
+        "PAP-271",
+        "PAP-272"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-82": {
+       "title": "Build gate 3: Playwright screenshot suite across the 7-width breakpoint matrix, all themes and key pages with baseline diffs",
+       "children": [
+        "PAP-246",
+        "PAP-247",
+        "PAP-248"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-96": {
+       "title": "Build the orchestrator that polls Ready for Claude, spawns one Claude Code session per issue in a git worktree and moves states",
+       "children": [
+        "PAP-281",
+        "PAP-282",
+        "PAP-283"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-119": {
+       "title": "Specify the data section (entities, queries, mutations, sync mode) and generate typed hooks from it",
+       "children": [
+        "PAP-311",
+        "PAP-312",
+        "PAP-313"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-120": {
+       "title": "Generate page scaffolds (layout, component tree, loading/empty/error states) from specs",
+       "children": [
+        "PAP-314",
+        "PAP-315",
+        "PAP-316"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-131": {
+       "title": "Implement in-app comments anchored to any entity, page element or doc block with mentions and resolve",
+       "children": [
+        "PAP-317",
+        "PAP-318",
+        "PAP-319"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-132": {
+       "title": "Build the canvas view (tldraw or React Flow) showing the UX flow of the whole app, generated from specs and editable",
+       "children": [
+        "PAP-320",
+        "PAP-321",
+        "PAP-322"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-143": {
+       "title": "Stream record changes via Electric shapes to all connected clients and reconcile with local writes",
+       "children": [
+        "PAP-326",
+        "PAP-327",
+        "PAP-328"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-151": {
+       "title": "Build the global command registry with keyboard shortcuts, command palette and per-page scoping",
+       "children": [
+        "PAP-289",
+        "PAP-290",
+        "PAP-291"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-155": {
+       "title": "Build accessible drag-and-drop (dnd-kit) for tables, kanban and canvas with a keyboard alternative",
+       "children": [
+        "PAP-329",
+        "PAP-330",
+        "PAP-331"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-163": {
+       "title": "Build the view query compiler from view model to SQL and Electric shapes with server-side pagination",
+       "children": [
+        "PAP-335",
+        "PAP-336",
+        "PAP-337"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-164": {
+       "title": "Implement field types: text, number, currency, date, select, multi-select, relation, lookup, rollup, formula, attachment, user, checkbox, rating, URL, email, phone",
+       "children": [
+        "PAP-338",
+        "PAP-339",
+        "PAP-340"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-179": {
+       "title": "Build a double-entry ledger (accounts, journal entries, periods) in Postgres with immutability guarantees",
+       "children": [
+        "PAP-392",
+        "PAP-393",
+        "PAP-394"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-180": {
+       "title": "Implement invoices, quotes and receipts with PDF generation and Stripe payment links",
+       "children": [
+        "PAP-395",
+        "PAP-396",
+        "PAP-397"
+       ],
+       "deferredChildren": 0
+      }
+     },
+     "issueCount": 92,
+     "byPhase": {
+      "P2": 14,
+      "P0": 18,
+      "P1": 60
+     },
+     "byType": {
+      "Build": 77,
+      "Spec": 4,
+      "Infra": 7,
+      "Review": 2,
+      "Docs": 1,
+      "Research": 1
+     },
+     "bySize": {
+      "M": 79,
+      "S": 12,
+      "L": 1
+     },
+     "byBuilderModel": {
+      "claude-opus-5": 87,
+      "claude-fable-5-1": 5
+     },
+     "milestonesCompleted": [
+      {
+       "project": "identity",
+       "milestone": "Auth works across web and desktop",
+       "targetDate": "2026-09-23",
+       "issues": 12,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T02:53Z"
+      },
+      {
+       "project": "input",
+       "milestone": "Keyboard and command system",
+       "targetDate": "2026-09-23",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T03:03Z"
+      },
+      {
+       "project": "spec-builder",
+       "milestone": "Spec schema and validator",
+       "targetDate": "2026-09-24",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T04:38Z"
+      },
+      {
+       "project": "spec-builder",
+       "milestone": "Codegen and conformance tests",
+       "targetDate": "2026-09-26",
+       "issues": 12,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T08:18Z"
+      },
+      {
+       "project": "realtime",
+       "milestone": "Yjs server and presence",
+       "targetDate": "2026-09-25",
+       "issues": 4,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T12:13Z"
+      }
+     ],
+     "releaseCandidatesReached": [
+      {
+       "rc": "RC0",
+       "label": "RC0 staging + sign-in + orchestrator claiming",
+       "reviewAt": "2026-09-18T06:13Z",
+       "gateIssues": [
+        "PAP-25",
+        "PAP-30",
+        "PAP-269",
+        "PAP-223",
+        "PAP-224",
+        "PAP-281",
+        "PAP-282",
+        "PAP-283"
+       ]
+      },
+      {
+       "rc": "RC1",
+       "label": "RC1 v0.1.0-rc.1: RLS permissions, installers, Yjs server, codegen, Stripe test mode, story baselines",
+       "reviewAt": "2026-09-18T06:03Z",
+       "gateIssues": [
+        "PAP-227",
+        "PAP-228",
+        "PAP-229",
+        "PAP-256",
+        "PAP-257",
+        "PAP-140",
+        "PAP-314",
+        "PAP-315",
+        "PAP-316",
+        "PAP-177",
+        "PAP-246",
+        "PAP-52"
+       ]
+      }
+     ],
+     "needsJustinBeforeStart": [
+      {
+       "id": "NJ-4",
+       "text": "Anthropic Console: orchestrator API key, hard spend limit, usage export (PAP-98).",
+       "mappedTo": [
+        "PAP-98"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-11",
+       "text": "Domain: set PAPEROS_DOMAIN or keep sslip.io for v0.1.0 (RC1).",
+       "mappedTo": [
+        "RC1"
+       ],
+       "status": "open"
+      }
+     ]
+    },
+    {
+     "issues": [
+      "PAP-156",
+      "PAP-245",
+      "PAP-373",
+      "PAP-40",
+      "PAP-144",
+      "PAP-51",
+      "PAP-61",
+      "PAP-323",
+      "PAP-62",
+      "PAP-63",
+      "PAP-75",
+      "PAP-343",
+      "PAP-244",
+      "PAP-83",
+      "PAP-84",
+      "PAP-90",
+      "PAP-324",
+      "PAP-107",
+      "PAP-109",
+      "PAP-111",
+      "PAP-113",
+      "PAP-134",
+      "PAP-138",
+      "PAP-145",
+      "PAP-252",
+      "PAP-148",
+      "PAP-153",
+      "PAP-154",
+      "PAP-332",
+      "PAP-334",
+      "PAP-172",
+      "PAP-166",
+      "PAP-249",
+      "PAP-183",
+      "PAP-135",
+      "PAP-333",
+      "PAP-159",
+      "PAP-169",
+      "PAP-181",
+      "PAP-192",
+      "PAP-253",
+      "PAP-216",
+      "PAP-217",
+      "PAP-220",
+      "PAP-280",
+      "PAP-347",
+      "PAP-385",
+      "PAP-388",
+      "PAP-250",
+      "PAP-307",
+      "PAP-102",
+      "PAP-310",
+      "PAP-189",
+      "PAP-346",
+      "PAP-353",
+      "PAP-355",
+      "PAP-254",
+      "PAP-366",
+      "PAP-367",
+      "PAP-368",
+      "PAP-369",
+      "PAP-348",
+      "PAP-386",
+      "PAP-389",
+      "PAP-370",
+      "PAP-371",
+      "PAP-375",
+      "PAP-377",
+      "PAP-378",
+      "PAP-379",
+      "PAP-381",
+      "PAP-384",
+      "PAP-89",
+      "PAP-387",
+      "PAP-391",
+      "PAP-400",
+      "PAP-430",
+      "PAP-431",
+      "PAP-349",
+      "PAP-390",
+      "PAP-24",
+      "PAP-432",
+      "PAP-29",
+      "PAP-53",
+      "PAP-64",
+      "PAP-76",
+      "PAP-108",
+      "PAP-112",
+      "PAP-125",
+      "PAP-201",
+      "PAP-126",
+      "PAP-147",
+      "PAP-186",
+      "PAP-188",
+      "PAP-306",
+      "PAP-18",
+      "PAP-72"
+     ],
+     "end": "2026-09-18T22:48Z",
+     "chunk": 3,
+     "listCost": 2497.92,
+     "discountedCost": 49.96,
+     "start": "2026-09-18T12:13Z",
+     "end_min": 1945,
+     "firstIssueStart": "2026-09-18T10:58Z",
+     "hours": 10.6,
+     "cumulativeHours": 32.4,
+     "byProject": {
+      "agents": {
+       "issues": [
+        "PAP-107",
+        "PAP-108",
+        "PAP-109",
+        "PAP-111",
+        "PAP-112",
+        "PAP-113",
+        "PAP-280",
+        "PAP-310"
+       ],
+       "umbrellasCompleted": [
+        "PAP-110"
+       ]
+      },
+      "app-shell": {
+       "issues": [
+        "PAP-18",
+        "PAP-24",
+        "PAP-29",
+        "PAP-366",
+        "PAP-367",
+        "PAP-368",
+        "PAP-369",
+        "PAP-430",
+        "PAP-431"
+       ],
+       "umbrellasCompleted": []
+      },
+      "business-core": {
+       "issues": [
+        "PAP-181",
+        "PAP-183",
+        "PAP-186",
+        "PAP-391",
+        "PAP-400"
+       ],
+       "umbrellasCompleted": [
+        "PAP-184"
+       ]
+      },
+      "collab": {
+       "issues": [
+        "PAP-134",
+        "PAP-135",
+        "PAP-138",
+        "PAP-323",
+        "PAP-324",
+        "PAP-379"
+       ],
+       "umbrellasCompleted": []
+      },
+      "data-layer": {
+       "issues": [
+        "PAP-40",
+        "PAP-353",
+        "PAP-355",
+        "PAP-370",
+        "PAP-432"
+       ],
+       "umbrellasCompleted": []
+      },
+      "design-system": {
+       "issues": [
+        "PAP-72",
+        "PAP-75",
+        "PAP-76"
+       ],
+       "umbrellasCompleted": []
+      },
+      "forge": {
+       "issues": [
+        "PAP-51",
+        "PAP-53",
+        "PAP-371"
+       ],
+       "umbrellasCompleted": []
+      },
+      "growth": {
+       "issues": [
+        "PAP-188",
+        "PAP-189",
+        "PAP-192"
+       ],
+       "umbrellasCompleted": []
+      },
+      "identity": {
+       "issues": [
+        "PAP-61",
+        "PAP-62",
+        "PAP-63",
+        "PAP-64",
+        "PAP-220"
+       ],
+       "umbrellasCompleted": []
+      },
+      "input": {
+       "issues": [
+        "PAP-153",
+        "PAP-154",
+        "PAP-156",
+        "PAP-159"
+       ],
+       "umbrellasCompleted": []
+      },
+      "libraries": {
+       "issues": [
+        "PAP-216",
+        "PAP-217"
+       ],
+       "umbrellasCompleted": []
+      },
+      "migration": {
+       "issues": [
+        "PAP-201",
+        "PAP-347",
+        "PAP-348",
+        "PAP-349"
+       ],
+       "umbrellasCompleted": [
+        "PAP-199"
+       ]
+      },
+      "pm-linear": {
+       "issues": [
+        "PAP-102",
+        "PAP-306",
+        "PAP-307",
+        "PAP-373"
+       ],
+       "umbrellasCompleted": []
+      },
+      "quality": {
+       "issues": [
+        "PAP-83",
+        "PAP-84",
+        "PAP-89",
+        "PAP-90",
+        "PAP-244",
+        "PAP-245",
+        "PAP-249",
+        "PAP-250",
+        "PAP-252",
+        "PAP-253",
+        "PAP-254"
+       ],
+       "umbrellasCompleted": [
+        "PAP-81",
+        "PAP-88"
+       ]
+      },
+      "realtime": {
+       "issues": [
+        "PAP-144",
+        "PAP-145",
+        "PAP-147",
+        "PAP-148",
+        "PAP-381"
+       ],
+       "umbrellasCompleted": []
+      },
+      "spec-builder": {
+       "issues": [
+        "PAP-125",
+        "PAP-126",
+        "PAP-375",
+        "PAP-377",
+        "PAP-378"
+       ],
+       "umbrellasCompleted": [
+        "PAP-124"
+       ]
+      },
+      "tables": {
+       "issues": [
+        "PAP-166",
+        "PAP-169",
+        "PAP-172",
+        "PAP-332",
+        "PAP-333",
+        "PAP-334",
+        "PAP-343",
+        "PAP-346",
+        "PAP-384",
+        "PAP-385",
+        "PAP-386",
+        "PAP-387",
+        "PAP-388",
+        "PAP-389",
+        "PAP-390"
+       ],
+       "umbrellasCompleted": [
+        "PAP-165",
+        "PAP-168",
+        "PAP-171",
+        "PAP-173",
+        "PAP-174"
+       ]
+      }
+     },
+     "umbrellasCompleted": {
+      "PAP-81": {
+       "title": "Build gate 2: three Claude reviewer agents (correctness, security, spec-conformance) posting structured PR reviews",
+       "children": [
+        "PAP-243",
+        "PAP-244",
+        "PAP-245"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-88": {
+       "title": "Define the release train: nightly staging deploy, weekly release candidate to Needs Justin with consolidated review report",
+       "children": [
+        "PAP-252",
+        "PAP-253",
+        "PAP-254"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-110": {
+       "title": "Create an eval harness with golden tasks per character, scored nightly, regressions flagged in Linear",
+       "children": [
+        "PAP-308",
+        "PAP-309",
+        "PAP-310"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-124": {
+       "title": "Build the spec editor UI with form and YAML views and live preview",
+       "children": [
+        "PAP-376",
+        "PAP-377",
+        "PAP-378"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-165": {
+       "title": "Build the virtualized grid view (TanStack Table) with inline edit, column resize/reorder, freeze and cell types",
+       "children": [
+        "PAP-341",
+        "PAP-342",
+        "PAP-343"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-168": {
+       "title": "Build calendar, timeline and Gantt views with dependencies",
+       "children": [
+        "PAP-344",
+        "PAP-345",
+        "PAP-346"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-171": {
+       "title": "Build a formula engine compatible with common Airtable and Notion functions",
+       "children": [
+        "PAP-382",
+        "PAP-383",
+        "PAP-384"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-173": {
+       "title": "Compose views into dashboard pages with drag-arranged blocks and cross-filters",
+       "children": [
+        "PAP-385",
+        "PAP-386",
+        "PAP-387"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-174": {
+       "title": "Build table automations: triggers (record change, schedule, form, inbound webhook), filter-tree conditions and actions (update record, notify, outbound webhook, connector call, create Linear issue) with a run log",
+       "children": [
+        "PAP-388",
+        "PAP-389",
+        "PAP-390"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-184": {
+       "title": "Define the payroll provider interface and implement the first adapter (Check or Gusto Embedded)",
+       "children": [
+        "PAP-398",
+        "PAP-399",
+        "PAP-400"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-199": {
+       "title": "Build the import framework: source connector, schema-mapping UI, dry run, validation, rollback",
+       "children": [
+        "PAP-347",
+        "PAP-348",
+        "PAP-349"
+       ],
+       "deferredChildren": 0
+      }
+     },
+     "issueCount": 97,
+     "byPhase": {
+      "P1": 55,
+      "P0": 5,
+      "P2": 37
+     },
+     "byType": {
+      "Review": 6,
+      "Build": 77,
+      "Infra": 5,
+      "Spec": 4,
+      "Docs": 4,
+      "Research": 1
+     },
+     "bySize": {
+      "M": 89,
+      "S": 8
+     },
+     "byBuilderModel": {
+      "claude-opus-5": 92,
+      "claude-fable-5-1": 5
+     },
+     "milestonesCompleted": [
+      {
+       "project": "quality",
+       "milestone": "Gates 1 and 2 on every PR",
+       "targetDate": "2026-09-25",
+       "issues": 11,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T13:33Z"
+      },
+      {
+       "project": "agents",
+       "milestone": "Agent org visible in app",
+       "targetDate": "2026-09-30",
+       "issues": 1,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T14:43Z"
+      },
+      {
+       "project": "realtime",
+       "milestone": "Record sync and conflict UX",
+       "targetDate": "2026-09-28",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T14:48Z"
+      },
+      {
+       "project": "input",
+       "milestone": "Touch, pen, gamepad",
+       "targetDate": "2026-09-27",
+       "issues": 6,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T15:13Z"
+      },
+      {
+       "project": "tables",
+       "milestone": "Grid with sort, filter, group",
+       "targetDate": "2026-09-28",
+       "issues": 12,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T15:43Z"
+      },
+      {
+       "project": "business-core",
+       "milestone": "Ledger and reports",
+       "targetDate": "2026-09-29",
+       "issues": 8,
+       "deferredIssuesExcluded": 1,
+       "completedAt": "2026-09-18T16:38Z"
+      },
+      {
+       "project": "growth",
+       "milestone": "Campaigns and social",
+       "targetDate": "2026-09-30",
+       "issues": 1,
+       "deferredIssuesExcluded": 7,
+       "completedAt": "2026-09-18T16:38Z"
+      },
+      {
+       "project": "libraries",
+       "milestone": "Registry live",
+       "targetDate": "2026-09-30",
+       "issues": 2,
+       "deferredIssuesExcluded": 1,
+       "completedAt": "2026-09-18T16:58Z"
+      },
+      {
+       "project": "identity",
+       "milestone": "Roles and audiences enforced end to end",
+       "targetDate": "2026-09-25",
+       "issues": 4,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T17:03Z"
+      },
+      {
+       "project": "agents",
+       "milestone": "Roster defined and installed",
+       "targetDate": "2026-09-24",
+       "issues": 11,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T17:08Z"
+      },
+      {
+       "project": "tables",
+       "milestone": "All view types",
+       "targetDate": "2026-09-29",
+       "issues": 9,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T18:23Z"
+      },
+      {
+       "project": "app-shell",
+       "milestone": "Desktop and mobile shells build",
+       "targetDate": "2026-09-24",
+       "issues": 14,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T18:58Z"
+      },
+      {
+       "project": "data-layer",
+       "milestone": "Local-first sync working",
+       "targetDate": "2026-09-25",
+       "issues": 8,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T19:38Z"
+      },
+      {
+       "project": "forge",
+       "milestone": "CI runs on both forges",
+       "targetDate": "2026-09-24",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T19:53Z"
+      },
+      {
+       "project": "quality",
+       "milestone": "Edge-case hunting and release trains",
+       "targetDate": "2026-09-30",
+       "issues": 8,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T20:23Z"
+      },
+      {
+       "project": "business-core",
+       "milestone": "Stripe billing live",
+       "targetDate": "2026-09-27",
+       "issues": 6,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T20:38Z"
+      },
+      {
+       "project": "tables",
+       "milestone": "View sharing, formulas, dashboards",
+       "targetDate": "2026-09-30",
+       "issues": 10,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T21:13Z"
+      },
+      {
+       "project": "app-shell",
+       "milestone": "Multi-monitor and PWA polish",
+       "targetDate": "2026-09-29",
+       "issues": 13,
+       "deferredIssuesExcluded": 1,
+       "completedAt": "2026-09-18T21:43Z"
+      },
+      {
+       "project": "forge",
+       "milestone": "Disaster recovery proven",
+       "targetDate": "2026-09-30",
+       "issues": 1,
+       "deferredIssuesExcluded": 3,
+       "completedAt": "2026-09-18T21:43Z"
+      },
+      {
+       "project": "identity",
+       "milestone": "Agent principals and enterprise",
+       "targetDate": "2026-09-30",
+       "issues": 2,
+       "deferredIssuesExcluded": 5,
+       "completedAt": "2026-09-18T21:48Z"
+      },
+      {
+       "project": "agents",
+       "milestone": "Sub-agents, skills and evals live",
+       "targetDate": "2026-09-25",
+       "issues": 8,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T21:53Z"
+      },
+      {
+       "project": "spec-builder",
+       "milestone": "Spec editor UI",
+       "targetDate": "2026-09-30",
+       "issues": 6,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T22:13Z"
+      },
+      {
+       "project": "business-core",
+       "milestone": "Payroll adapter and cash dashboard",
+       "targetDate": "2026-10-01",
+       "issues": 4,
+       "deferredIssuesExcluded": 1,
+       "completedAt": "2026-09-18T22:13Z"
+      },
+      {
+       "project": "growth",
+       "milestone": "CRM core",
+       "targetDate": "2026-09-29",
+       "issues": 3,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T22:18Z"
+      },
+      {
+       "project": "pm-linear",
+       "milestone": "Orchestrator claims and ships issues",
+       "targetDate": "2026-09-22",
+       "issues": 9,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T22:23Z"
+      },
+      {
+       "project": "app-shell",
+       "milestone": "Template scaffolds and runs on web",
+       "targetDate": "2026-09-20",
+       "issues": 8,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T22:48Z"
+      },
+      {
+       "project": "design-system",
+       "milestone": "Component library covers app shell needs",
+       "targetDate": "2026-09-25",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T22:48Z"
+      }
+     ],
+     "releaseCandidatesReached": [
+      {
+       "rc": "RC2",
+       "label": "RC2 v0.1.0-rc.2, first real cut: gates 1-4, grid + compiler, comments, record sync, ledger + invoices, imports, drill",
+       "reviewAt": "2026-09-18T21:43Z",
+       "gateIssues": [
+        "PAP-335",
+        "PAP-336",
+        "PAP-337",
+        "PAP-341",
+        "PAP-342",
+        "PAP-343",
+        "PAP-317",
+        "PAP-318",
+        "PAP-319",
+        "PAP-326",
+        "PAP-327",
+        "PAP-328",
+        "PAP-392",
+        "PAP-393",
+        "PAP-394",
+        "PAP-395",
+        "PAP-396",
+        "PAP-397",
+        "PAP-347",
+        "PAP-348",
+        "PAP-349",
+        "PAP-29",
+        "PAP-254"
+       ]
+      }
+     ],
+     "needsJustinBeforeStart": [
+      {
+       "id": "NJ-13",
+       "text": "Airtable demo base and token (PAP-202); Slack incoming webhook (PAP-136).",
+       "mappedTo": [
+        "PAP-414",
+        "PAP-415",
+        "PAP-416",
+        "PAP-323",
+        "PAP-324",
+        "PAP-325"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-15",
+       "text": "Release candidate v0.1.0-rc.2 from PAP-254: /approve or /reject (RC2).",
+       "mappedTo": [
+        "RC2"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-16",
+       "text": "Approve the content agent (PAP-192) and migration agent (PAP-208).",
+       "mappedTo": [
+        "PAP-192",
+        "PAP-208"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-18",
+       "text": "Industry list and terminology defaults (PAP-126).",
+       "mappedTo": [
+        "PAP-126"
+       ],
+       "status": "open"
+      }
+     ]
+    },
+    {
+     "issues": [
+      "PAP-130",
+      "PAP-146",
+      "PAP-251",
+      "PAP-325",
+      "PAP-41",
+      "PAP-200",
+      "PAP-352",
+      "PAP-374",
+      "PAP-44",
+      "PAP-49",
+      "PAP-208",
+      "PAP-380",
+      "PAP-77",
+      "PAP-95",
+      "PAP-160",
+      "PAP-241",
+      "PAP-414",
+      "PAP-420",
+      "PAP-413",
+      "PAP-415",
+      "PAP-421",
+      "PAP-416",
+      "PAP-422"
+     ],
+     "end": "2026-09-19T03:43Z",
+     "chunk": 4,
+     "listCost": 428.99,
+     "discountedCost": 8.58,
+     "start": "2026-09-18T22:48Z",
+     "end_min": 2240,
+     "firstIssueStart": "2026-09-18T21:13Z",
+     "hours": 4.9,
+     "cumulativeHours": 37.3,
+     "byProject": {
+      "collab": {
+       "issues": [
+        "PAP-130",
+        "PAP-325",
+        "PAP-380"
+       ],
+       "umbrellasCompleted": [
+        "PAP-136"
+       ]
+      },
+      "data-layer": {
+       "issues": [
+        "PAP-41"
+       ],
+       "umbrellasCompleted": []
+      },
+      "design-system": {
+       "issues": [
+        "PAP-77"
+       ],
+       "umbrellasCompleted": []
+      },
+      "forge": {
+       "issues": [
+        "PAP-44",
+        "PAP-49"
+       ],
+       "umbrellasCompleted": []
+      },
+      "input": {
+       "issues": [
+        "PAP-160"
+       ],
+       "umbrellasCompleted": []
+      },
+      "libraries": {
+       "issues": [
+        "PAP-352"
+       ],
+       "umbrellasCompleted": [
+        "PAP-215"
+       ]
+      },
+      "migration": {
+       "issues": [
+        "PAP-200",
+        "PAP-208",
+        "PAP-413",
+        "PAP-414",
+        "PAP-415",
+        "PAP-416",
+        "PAP-420",
+        "PAP-421",
+        "PAP-422"
+       ],
+       "umbrellasCompleted": [
+        "PAP-202",
+        "PAP-205"
+       ]
+      },
+      "pm-linear": {
+       "issues": [
+        "PAP-95",
+        "PAP-374"
+       ],
+       "umbrellasCompleted": [
+        "PAP-101"
+       ]
+      },
+      "quality": {
+       "issues": [
+        "PAP-241",
+        "PAP-251"
+       ],
+       "umbrellasCompleted": [
+        "PAP-85"
+       ]
+      },
+      "realtime": {
+       "issues": [
+        "PAP-146"
+       ],
+       "umbrellasCompleted": []
+      }
+     },
+     "umbrellasCompleted": {
+      "PAP-85": {
+       "title": "Build gate 4: edge-case hunter agent generating adversarial inputs, empty/huge/unicode states, network failure and slow-device scenarios from page specs",
+       "children": [
+        "PAP-249",
+        "PAP-250",
+        "PAP-251"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-101": {
+       "title": "Build bidirectional Linear sync (GraphQL + webhooks) with conflict rule: Linear wins until cutover",
+       "children": [
+        "PAP-372",
+        "PAP-373",
+        "PAP-374"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-136": {
+       "title": "Build a notification center (in-app, email, Slack) with per-audience preferences",
+       "children": [
+        "PAP-323",
+        "PAP-324",
+        "PAP-325"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-202": {
+       "title": "Import Airtable bases (tables, views, relations, attachments)",
+       "children": [
+        "PAP-414",
+        "PAP-415",
+        "PAP-416"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-205": {
+       "title": "Export everything (tables, docs, files, ledger) to open formats",
+       "children": [
+        "PAP-420",
+        "PAP-421",
+        "PAP-422"
+       ],
+       "deferredChildren": 0
+      },
+      "PAP-215": {
+       "title": "Evaluate whole OSS products to embed or fork (Twenty CRM, NocoDB, Baserow, Plane, Cal.com, Formbricks, Postiz)",
+       "children": [
+        "PAP-350",
+        "PAP-351",
+        "PAP-352"
+       ],
+       "deferredChildren": 0
+      }
+     },
+     "issueCount": 23,
+     "byPhase": {
+      "P0": 4,
+      "P2": 15,
+      "P1": 4
+     },
+     "byType": {
+      "Build": 15,
+      "Docs": 4,
+      "Research": 2,
+      "Spec": 1,
+      "Review": 1
+     },
+     "bySize": {
+      "S": 14,
+      "M": 9
+     },
+     "byBuilderModel": {
+      "claude-opus-5": 20,
+      "claude-fable-5-1": 3
+     },
+     "milestonesCompleted": [
+      {
+       "project": "collab",
+       "milestone": "Docs and prompt log stores",
+       "targetDate": "2026-09-23",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T22:53Z"
+      },
+      {
+       "project": "realtime",
+       "milestone": "Scale and offline tested",
+       "targetDate": "2026-09-30",
+       "issues": 4,
+       "deferredIssuesExcluded": 1,
+       "completedAt": "2026-09-18T22:53Z"
+      },
+      {
+       "project": "collab",
+       "milestone": "Comments and canvas",
+       "targetDate": "2026-09-29",
+       "issues": 11,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T22:58Z"
+      },
+      {
+       "project": "data-layer",
+       "milestone": "Tenant-safe and observable",
+       "targetDate": "2026-09-30",
+       "issues": 6,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T23:03Z"
+      },
+      {
+       "project": "pm-linear",
+       "milestone": "PM module syncs both ways",
+       "targetDate": "2026-09-30",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T23:03Z"
+      },
+      {
+       "project": "migration",
+       "milestone": "Import framework and CSV",
+       "targetDate": "2026-09-28",
+       "issues": 6,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T23:03Z"
+      },
+      {
+       "project": "libraries",
+       "milestone": "Core adoptions decided",
+       "targetDate": "2026-09-24",
+       "issues": 9,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T23:03Z"
+      },
+      {
+       "project": "forge",
+       "milestone": "Forgejo live and mirrored",
+       "targetDate": "2026-09-20",
+       "issues": 8,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T23:13Z"
+      },
+      {
+       "project": "collab",
+       "milestone": "Knowledge surfaced everywhere",
+       "targetDate": "2026-09-30",
+       "issues": 3,
+       "deferredIssuesExcluded": 1,
+       "completedAt": "2026-09-18T23:18Z"
+      },
+      {
+       "project": "migration",
+       "milestone": "Business migrations",
+       "targetDate": "2026-10-01",
+       "issues": 1,
+       "deferredIssuesExcluded": 6,
+       "completedAt": "2026-09-18T23:18Z"
+      },
+      {
+       "project": "design-system",
+       "milestone": "Themable per tenant with docs",
+       "targetDate": "2026-09-30",
+       "issues": 3,
+       "deferredIssuesExcluded": 1,
+       "completedAt": "2026-09-18T23:38Z"
+      },
+      {
+       "project": "pm-linear",
+       "milestone": "Linear configured for the pipeline",
+       "targetDate": "2026-09-20",
+       "issues": 5,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T23:38Z"
+      },
+      {
+       "project": "quality",
+       "milestone": "Visual and video gates",
+       "targetDate": "2026-09-26",
+       "issues": 8,
+       "deferredIssuesExcluded": 0,
+       "completedAt": "2026-09-18T23:43Z"
+      },
+      {
+       "project": "input",
+       "milestone": "Voice and accessibility certification",
+       "targetDate": "2026-09-30",
+       "issues": 2,
+       "deferredIssuesExcluded": 2,
+       "completedAt": "2026-09-18T23:43Z"
+      },
+      {
+       "project": "migration",
+       "milestone": "Airtable, Notion, ClickUp importers",
+       "targetDate": "2026-09-30",
+       "issues": 7,
+       "deferredIssuesExcluded": 4,
+       "completedAt": "2026-09-19T03:43Z"
+      }
+     ],
+     "releaseCandidatesReached": [
+      {
+       "rc": "RC3",
+       "label": "RC3 = v0.1.0: every non-deferred issue Done",
+       "reviewAt": "2026-09-19T03:43Z",
+       "gateIssues": []
+      }
+     ],
+     "needsJustinBeforeStart": [
+      {
+       "id": "NJ-17",
+       "text": "Accessibility statement wording (PAP-160).",
+       "mappedTo": [
+        "PAP-160"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-19",
+       "text": "Scope freeze: deferred list becomes milestone v0.2.",
+       "mappedTo": [
+        "RC3"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-20",
+       "text": "Release candidate v0.1.0: /approve promotes and tags (RC3, PAP-254).",
+       "mappedTo": [
+        "RC3"
+       ],
+       "status": "open"
+      },
+      {
+       "id": "NJ-21",
+       "text": "PAP-5: close or keep as scoreboard (PAP-95 vs PAP-29).",
+       "mappedTo": [
+        "RC3"
+       ],
+       "status": "open"
+      }
+     ]
+    }
+   ],
+   "deferredChunk": {
+    "chunk": "optional",
+    "label": "Deferred set (42 leaves; needs NJ-14 go and NJ-19 v0.2 scoping)",
+    "issueCount": 42,
+    "listCost": 982.84,
+    "discountedCost": 19.66,
+    "equivalentChunks": 0.39,
+    "start": "2026-09-19T03:43Z",
+    "end": "2026-09-19T09:13Z",
+    "hours": 5.5,
+    "byProject": {
+     "app-shell": {
+      "issues": [
+       "PAP-23"
+      ]
+     },
+     "business-core": {
+      "issues": [
+       "PAP-182",
+       "PAP-185"
+      ]
+     },
+     "collab": {
+      "issues": [
+       "PAP-137"
+      ]
+     },
+     "design-system": {
+      "issues": [
+       "PAP-235"
+      ]
+     },
+     "forge": {
+      "issues": [
+       "PAP-276",
+       "PAP-277",
+       "PAP-278"
+      ]
+     },
+     "growth": {
+      "issues": [
+       "PAP-193",
+       "PAP-194",
+       "PAP-195",
+       "PAP-401",
+       "PAP-402",
+       "PAP-403",
+       "PAP-404",
+       "PAP-405",
+       "PAP-406",
+       "PAP-407",
+       "PAP-408",
+       "PAP-409",
+       "PAP-410",
+       "PAP-411",
+       "PAP-412"
+      ]
+     },
+     "identity": {
+      "issues": [
+       "PAP-221",
+       "PAP-222",
+       "PAP-230",
+       "PAP-231",
+       "PAP-232"
+      ]
+     },
+     "input": {
+      "issues": [
+       "PAP-157",
+       "PAP-158"
+      ]
+     },
+     "libraries": {
+      "issues": [
+       "PAP-218"
+      ]
+     },
+     "migration": {
+      "issues": [
+       "PAP-204",
+       "PAP-417",
+       "PAP-418",
+       "PAP-419",
+       "PAP-423",
+       "PAP-424",
+       "PAP-425",
+       "PAP-426",
+       "PAP-427",
+       "PAP-428"
+      ]
+     },
+     "realtime": {
+      "issues": [
+       "PAP-149"
+      ]
+     }
+    },
+    "byBuilderModel": {
+     "claude-opus-5": 42
+    },
+    "effortNote": "efforts kept as labeled (all 42 carry Effort: low from the deferral rule)",
+    "milestonesDeferredOnly": [
+     {
+      "project": "growth",
+      "milestone": "Acquisition analytics",
+      "deferredIssues": 8
+     }
+    ],
+    "needsJustinBeforeStart": [
+     {
+      "id": "NJ-14",
+      "text": "Stop-loss checkpoint: go or no-go on the stretch pool (deferred set).",
+      "mappedTo": [
+       "DEFERRED"
+      ],
+      "status": "open"
+     }
+    ]
+   }
+  }
+ }
+}

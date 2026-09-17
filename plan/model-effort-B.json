@@ -1,0 +1,3380 @@
+{
+ "takenAt": "2026-09-17T13:11:39Z",
+ "mix": "B",
+ "rules": "Opus 5 builders and QA; Fable 5.1 for Spec/Research issues, all reviewer sessions and the 4 RC reviews; per-issue Effort as labeled (estimate/model-effort.json)",
+ "assignments": [
+  {
+   "identifier": "PAP-13",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-14",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-15",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-16",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-17",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-18",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-19",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-20",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-21",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-22",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-23",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-24",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Docs -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-25",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-26",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-27",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-28",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-29",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Review -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-30",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-31",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-32",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-33",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-34",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-35",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-36",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-37",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-38",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-39",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-40",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-41",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Docs -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-42",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-43",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-44",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-45",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-46",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-47",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-48",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-49",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Docs -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-50",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-51",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-52",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-53",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Review -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-54",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-55",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-56",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-57",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-58",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-59",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-60",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-61",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-62",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-63",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-64",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Review -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-65",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-66",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-67",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-68",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-69",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-70",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-71",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-72",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-73",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Review -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-74",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-75",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-76",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Docs -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-77",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-78",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-79",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-80",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-81",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-82",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-83",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-84",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-85",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-86",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-87",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-88",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-89",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-90",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-91",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-92",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Docs -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-93",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-94",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-95",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Docs -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-96",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-97",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-98",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-99",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-100",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-101",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-102",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-103",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-104",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-105",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-106",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-107",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-108",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-109",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-110",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-111",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-112",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Docs -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-113",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-114",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-115",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-116",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-117",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-118",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-119",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-120",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-121",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-122",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-123",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-124",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-125",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Docs -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-126",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-127",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-128",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-129",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-130",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-131",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-132",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-133",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-134",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-135",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-136",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-137",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-138",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-139",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-140",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-141",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-142",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-143",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-144",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-145",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-146",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-147",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Review -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-148",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-149",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-150",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-151",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-152",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-153",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-154",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-155",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-156",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Review -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-157",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-158",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-159",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-160",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Docs -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-161",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-162",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-163",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-164",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-165",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-166",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-167",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-168",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-169",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-170",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-171",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-172",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-173",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-174",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-175",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-176",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-177",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-178",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-179",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-180",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-181",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-182",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-183",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-184",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-185",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-186",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-187",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-188",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-189",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-190",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-191",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-192",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-193",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-194",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-195",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-196",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-197",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-198",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-199",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-200",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-201",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-202",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-203",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-204",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-205",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-206",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-207",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-208",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-209",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-210",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-211",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-212",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-213",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-214",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-215",
+   "model": null,
+   "effort": null,
+   "reviewerModel": null,
+   "qaModel": null,
+   "reason": "umbrella; children carry model/effort"
+  },
+  {
+   "identifier": "PAP-216",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-217",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-218",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-219",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-220",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-221",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-222",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-223",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-224",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-225",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-226",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-227",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-228",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-229",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-230",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-231",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-232",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-233",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-234",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-235",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-236",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-237",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-238",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-239",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-240",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-241",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Review -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-242",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-243",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-244",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-245",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-246",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-247",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-248",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-249",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-250",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-251",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-252",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-253",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-254",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-255",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-256",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-257",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-258",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-259",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-260",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-261",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-262",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-263",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-264",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-265",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-266",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-267",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-268",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-269",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-270",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-271",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-272",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-273",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-274",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-275",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Docs -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-276",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-277",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-278",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-279",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-280",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-281",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-282",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-283",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-284",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-285",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-286",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-287",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-288",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-289",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-290",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-291",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-292",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-293",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-294",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-295",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-296",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-297",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-298",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-299",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-300",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-301",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-302",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-303",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-304",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-305",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-306",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Review -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-307",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-308",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-309",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-310",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-311",
+   "model": "claude-fable-5-1",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-312",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-313",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-314",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-315",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-316",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-317",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-318",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-319",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-320",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-321",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-322",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-323",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-324",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-325",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-326",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-327",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-328",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-329",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-330",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-331",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-332",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-333",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-334",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-335",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-336",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-337",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-338",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-339",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-340",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-341",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-342",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-343",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-344",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-345",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-346",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-347",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-348",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-349",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-350",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-351",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-352",
+   "model": "claude-fable-5-1",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Spec/Research -> Fable 5.1"
+  },
+  {
+   "identifier": "PAP-353",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-354",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-355",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-356",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-357",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-358",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-359",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Docs -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-360",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-361",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-362",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-363",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-364",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-365",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-366",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-367",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-368",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-369",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-370",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-371",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Infra -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-372",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-373",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-374",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-375",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-376",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-377",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-378",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-379",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-380",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-381",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-382",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-383",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-384",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-385",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-386",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-387",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-388",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-389",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-390",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-391",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-392",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-393",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-394",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-395",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-396",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-397",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-398",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-399",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-400",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-401",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-402",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-403",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-404",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-405",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-406",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-407",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-408",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-409",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-410",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-411",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-412",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-413",
+   "model": "claude-opus-5",
+   "effort": "medium",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-414",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-415",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-416",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-417",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-418",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-419",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-420",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-421",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-422",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-423",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-424",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-425",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-426",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-427",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-428",
+   "model": "claude-opus-5",
+   "effort": "low",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder (deferred; effort kept low as labeled)"
+  },
+  {
+   "identifier": "PAP-429",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": null,
+   "reason": "Review -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-430",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-431",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  },
+  {
+   "identifier": "PAP-432",
+   "model": "claude-opus-5",
+   "effort": "high",
+   "reviewerModel": "claude-fable-5-1",
+   "qaModel": "claude-opus-5",
+   "reason": "Build -> Opus 5 builder"
+  }
+ ],
+ "counts_by_model_effort": {
+  "claude-fable-5-1 / high": 32,
+  "claude-fable-5-1 / medium": 19,
+  "claude-opus-5 / high": 205,
+  "claude-opus-5 / low": 46,
+  "claude-opus-5 / medium": 66,
+  "null / -": 52
+ },
+ "rcReviews": {
+  "model": "claude-fable-5-1",
+  "effort": "high",
+  "count": 4
+ }
+}
