@@ -15,13 +15,15 @@ blockedBy: ["PAP-66", "PAP-212"]
 blocks: ["PAP-69", "PAP-70", "PAP-71", "PAP-73", "PAP-74", "PAP-151", "PAP-164", "PAP-233", "PAP-289", "PAP-338"]
 key: "design-system/primitives"
 url: "https://linear.app/paperos/issue/PAP-67/adopt-base-uiradix-primitives-with-tailwind-v4-and-build-20-core"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:18:10.888Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:17.190Z"
 model: null
 effort: null
 ---
 
 # PAP-67: Adopt Base UI/Radix primitives with Tailwind v4 and build 20 core components (Button, Input, Select, Dialog, Menu, Tabs, Toast, Tooltip, Popover...)
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -88,3 +90,7 @@ Iris (Component Crafter) builds all children. Reviewed by Sentinel (Code Reviewe
 **Size**
 
 L, split into 3 children (M, M, M).
+
+**Module boundary**
+
+This umbrella is the Design System half of the PaperOS Module System (`docs/module-system.md`). The `design-system` module implements `@paperos/contract-design-system` (component id registry with props schemas, DTCG token set, theme, icon and motion ports). Other modules reference components only by registered `ui.<name>` id through the contract and codegen; they never import `packages/ui` internals. The module imports `@paperos/core` and its own packages only. Its manifest declares `provides: [{ contract: '@paperos/contract-design-system', version: '0.1.0' }]`, `owner: { agent: 'Iris', project: 'design-system' }` and `swapRisk: 'high'`. The contract package is published by `PAP-459`, proven by `PAP-460` and bound into `@paperos/kernel` by `PAP-461`; children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

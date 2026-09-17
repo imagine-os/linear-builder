@@ -15,13 +15,15 @@ blockedBy: ["PAP-81", "PAP-244", "PAP-245"]
 blocks: []
 key: "quality/gate2-calibration"
 url: "https://linear.app/paperos/issue/PAP-241/run-gate-2-calibration-and-false-negative-tracking-weekly-manual-spot"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:49.395Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:05.266Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-241: Run Gate 2 calibration and false-negative tracking: weekly manual spot check of five verdicts, precision and recall trend, reviewer prompt tuning loop
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Review
 
 **Goal**
 

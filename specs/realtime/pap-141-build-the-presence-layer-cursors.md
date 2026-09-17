@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-140"]
-blocks: ["PAP-146", "PAP-149"]
+blocks: ["PAP-146", "PAP-149", "PAP-481"]
 key: "realtime/presence"
 url: "https://linear.app/paperos/issue/PAP-141/build-the-presence-layer-cursors-avatars-selections-and-who-is-viewing"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:53:30.425Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:33.322Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-141: Build the presence layer: cursors, avatars, selections and 'who is viewing' across pages
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

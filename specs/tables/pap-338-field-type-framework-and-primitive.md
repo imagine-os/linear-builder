@@ -15,13 +15,15 @@ blockedBy: ["PAP-67", "PAP-71", "PAP-161", "PAP-233"]
 blocks: ["PAP-339"]
 key: "tables/fields/framework-primitives"
 url: "https://linear.app/paperos/issue/PAP-338/field-type-framework-and-primitive-types-text-number-currency-percent"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:35.594Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:31.370Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-338: Field type framework and primitive types (text, number, currency, percent, date, checkbox, rating, url, email, phone)
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

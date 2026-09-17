@@ -15,13 +15,15 @@ blockedBy: ["PAP-25"]
 blocks: ["PAP-26", "PAP-36", "PAP-40", "PAP-270", "PAP-354"]
 key: "data-layer/postgres-provision"
 url: "https://linear.app/paperos/issue/PAP-30/provision-postgres-17-on-the-self-hosted-vps-with-automated-backups"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:05:37.974Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:56.716Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-30: Provision Postgres 17 on the self-hosted VPS with automated backups and point-in-time recovery
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

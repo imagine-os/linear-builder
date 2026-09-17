@@ -15,13 +15,15 @@ blockedBy: ["PAP-268"]
 blocks: ["PAP-36", "PAP-39", "PAP-40", "PAP-119", "PAP-129", "PAP-163", "PAP-193", "PAP-222", "PAP-242", "PAP-311", "PAP-335"]
 key: "child/PAP-35/14"
 url: "https://linear.app/paperos/issue/PAP-269/openapi-docs-health-endpoints-and-staging-deploy-of-appsapi"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:12:03.752Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:12.445Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-269: OpenAPI docs, health endpoints and staging deploy of apps/api
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S
 
 **Goal**
 

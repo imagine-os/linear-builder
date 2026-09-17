@@ -6,7 +6,7 @@ projectName: "Quality Pipeline"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Edge-case hunting and release trains"
 state: "Backlog"
 parent: "PAP-88"
@@ -15,13 +15,15 @@ blockedBy: ["PAP-26", "PAP-81", "PAP-82", "PAP-242", "PAP-252"]
 blocks: ["PAP-254"]
 key: "quality/release-train/nightly-staging"
 url: "https://linear.app/paperos/issue/PAP-253/nightly-staging-workflow-with-full-gate-run"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:43.005Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:09.464Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-253: Nightly staging workflow with full gate run
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

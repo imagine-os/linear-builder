@@ -15,13 +15,15 @@ blockedBy: ["PAP-201", "PAP-421"]
 blocks: []
 key: "child/PAP-205/2"
 url: "https://linear.app/paperos/issue/PAP-422/round-trip-paperos-connector-import-a-paperos-archive-into-an-empty"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:51.916Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:55.191Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-422: Round-trip `paperos` connector: import a PaperOS archive into an empty tenant and verify counts and hashes table by table
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

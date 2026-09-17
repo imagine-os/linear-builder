@@ -6,7 +6,7 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Developer"]
+surfaces: ["Developer", "Customer"]
 milestone: "Desktop and mobile shells build"
 state: "Backlog"
 parent: "PAP-19"
@@ -15,13 +15,15 @@ blockedBy: ["PAP-256"]
 blocks: ["PAP-20", "PAP-21", "PAP-24"]
 key: "child/PAP-19/2"
 url: "https://linear.app/paperos/issue/PAP-257/desktop-updater-single-instance-guard-and-paperos-deep-links"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:12:02.402Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:09.902Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-257: Desktop updater, single-instance guard and paperos:// deep links
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

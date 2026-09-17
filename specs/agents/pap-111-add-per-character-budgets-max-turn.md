@@ -11,17 +11,19 @@ milestone: "Sub-agents, skills and evals live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-98", "PAP-298", "PAP-300"]
+blockedBy: ["PAP-98", "PAP-298", "PAP-300", "PAP-466"]
 blocks: []
 key: "agents/cost-controls"
 url: "https://linear.app/paperos/issue/PAP-111/add-per-character-budgets-max-turn-limits-and-a-kill-switch"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:04:56.488Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:57:13.042Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-111: Add per-character budgets, max-turn limits and a kill switch
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

@@ -6,7 +6,7 @@ projectName: "Quality Pipeline"
 phase: "P1"
 type: "Spec"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Edge-case hunting and release trains"
 state: "Backlog"
 parent: "PAP-88"
@@ -15,13 +15,15 @@ blockedBy: ["PAP-94"]
 blocks: ["PAP-253", "PAP-254"]
 key: "quality/release-train/policy-environments"
 url: "https://linear.app/paperos/issue/PAP-252/release-train-policy-document-and-environments-config"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:42.056Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:07.945Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-252: Release train policy document and environments config
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Spec P1
 
 **Goal**
 

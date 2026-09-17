@@ -6,7 +6,7 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Staff"]
+surfaces: ["Staff", "Developer"]
 milestone: "Comments and canvas"
 state: "Backlog"
 parent: null
@@ -15,13 +15,15 @@ blockedBy: ["PAP-114", "PAP-127", "PAP-140"]
 blocks: ["PAP-113", "PAP-157"]
 key: "collab/canvas-view"
 url: "https://linear.app/paperos/issue/PAP-132/build-the-canvas-view-tldraw-or-react-flow-showing-the-ux-flow-of-the"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:03:46.979Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:30.315Z"
 model: null
 effort: null
 ---
 
 # PAP-132: Build the canvas view (tldraw or React Flow) showing the UX flow of the whole app, generated from specs and editable
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

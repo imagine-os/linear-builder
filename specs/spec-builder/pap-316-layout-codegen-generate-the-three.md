@@ -15,13 +15,15 @@ blockedBy: ["PAP-314", "PAP-315"]
 blocks: ["PAP-29"]
 key: "spec-builder/layout-codegen/examples"
 url: "https://linear.app/paperos/issue/PAP-316/layout-codegen-generate-the-three-example-specs-screenshot-seven"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:05.842Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:25.483Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-316: Layout codegen: generate the three example specs, screenshot seven widths and pass conformance with zero manual edits
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S
 
 **Goal**
 

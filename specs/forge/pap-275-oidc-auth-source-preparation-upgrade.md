@@ -15,13 +15,15 @@ blockedBy: ["PAP-274"]
 blocks: ["PAP-54"]
 key: "child/PAP-45/20"
 url: "https://linear.app/paperos/issue/PAP-275/oidc-auth-source-preparation-upgrade-procedure-and-forgejo-runbook"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:12:03.752Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:14.570Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-275: OIDC auth source preparation, upgrade procedure and Forgejo runbook
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — security-sensitive title keyword: auth
 
 **Goal**
 

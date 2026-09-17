@@ -11,17 +11,19 @@ milestone: "Sub-agents, skills and evals live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-96"]
+blockedBy: ["PAP-96", "PAP-466"]
 blocks: ["PAP-102", "PAP-113"]
 key: "agents/session-observability"
 url: "https://linear.app/paperos/issue/PAP-288/add-agent-session-observability-heartbeats-stuck-session-detection-per"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:09.833Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:57:15.156Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-288: Add agent session observability: heartbeats, stuck-session detection, per-session OTel spans and a `/status` contract shared by the org chart, board cards and cost controls
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

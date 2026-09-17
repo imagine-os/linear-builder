@@ -6,22 +6,24 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Staff", "Developer"]
 milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: []
-blocks: []
+blocks: ["PAP-435", "PAP-453"]
 key: "gap/app-shell/runtime-flags"
 url: "https://linear.app/paperos/issue/PAP-366/build-runtime-feature-flags-per-tenant-and-per-audience-flags-with"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:01:27.454Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:40.064Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-366: Build runtime feature flags: per-tenant and per-audience flags with kill switches, segment targeting and page-spec `flags:` guards
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

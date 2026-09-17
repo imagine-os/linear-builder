@@ -15,13 +15,15 @@ blockedBy: ["PAP-327"]
 blocks: ["PAP-144", "PAP-147", "PAP-148"]
 key: "realtime/record-sync/resubscribe-lag"
 url: "https://linear.app/paperos/issue/PAP-328/permission-driven-resubscribe-and-lag-measurement"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:28.589Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:28.953Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-328: Permission-driven resubscribe and lag measurement
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S
 
 **Goal**
 

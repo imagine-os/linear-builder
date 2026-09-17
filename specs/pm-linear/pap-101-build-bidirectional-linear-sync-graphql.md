@@ -15,13 +15,15 @@ blockedBy: ["PAP-97", "PAP-100"]
 blocks: []
 key: "pm-linear/linear-sync"
 url: "https://linear.app/paperos/issue/PAP-101/build-bidirectional-linear-sync-graphql-webhooks-with-conflict-rule"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:18.239Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:57:21.681Z"
 model: null
 effort: null
 ---
 
 # PAP-101: Build bidirectional Linear sync (GraphQL + webhooks) with conflict rule: Linear wins until cutover
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -85,3 +87,7 @@ Built by Nova (lead) with Forge (Schema Wright) for the outbox; reviewed by Sent
 **Size**
 
 L (umbrella; children M, M, S)
+
+**Module boundary**
+
+This umbrella is the Project Management & Claude Pipeline half of the PaperOS Module System (`docs/module-system.md`). The `pm-linear` module implements `@paperos/contract-pm-linear` (issue contract and states, PM entities, `PmSourcePort`, queue port, webhook envelope). The orchestrator, triage, import and board views talk to Linear only through `PmSourcePort`, so the Linear adapter can be replaced by the native PM module without touching them; the module may import `@paperos/core`, `contract-data-layer`, `contract-tables`, `contract-collab` and its own packages. Its manifest declares `provides: [{ contract: '@paperos/contract-pm-linear', version: '0.1.0' }]`, `owner: { agent: 'Atlas', project: 'pm-linear' }` and `swapRisk: 'high'`. The contract package is published by PAP-465 (`module/pm-linear/contract`), proven by PAP-468 (`module/pm-linear/conformance`) and bound into `@paperos/kernel` by PAP-471 (`module/pm-linear/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

@@ -15,13 +15,15 @@ blockedBy: ["PAP-78", "PAP-219", "PAP-239"]
 blocks: ["PAP-357", "PAP-358"]
 key: "quality/security-scans"
 url: "https://linear.app/paperos/issue/PAP-80/add-dependency-audit-secret-scanning-semgrep-sast-and-container"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:43:10.757Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:12.421Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-80: Add dependency audit, secret scanning, Semgrep SAST and container scanning to CI
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-209"]
 blocks: ["PAP-170"]
 key: "libraries/data-landscape"
 url: "https://linear.app/paperos/issue/PAP-213/survey-table-canvas-editor-and-chart-libraries-tanstack-ag-grid-tldraw"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:03:42.832Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:58.771Z"
 model: null
 effort: null
 ---
 
 # PAP-213: Survey table, canvas, editor and chart libraries (TanStack, AG Grid, tldraw, Tiptap, ECharts, visx) and recommend
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-143"
 children: []
 blockedBy: ["PAP-36"]
-blocks: ["PAP-327"]
+blocks: ["PAP-327", "PAP-481"]
 key: "realtime/record-sync/live-hooks-registry"
 url: "https://linear.app/paperos/issue/PAP-326/live-record-hooks-and-shape-registry-additions"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:28.589Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:27.943Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-326: Live record hooks and shape registry additions
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

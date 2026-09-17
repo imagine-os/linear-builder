@@ -15,13 +15,15 @@ blockedBy: ["PAP-25"]
 blocks: ["PAP-47", "PAP-48", "PAP-50", "PAP-54", "PAP-276"]
 key: "forge/forgejo-deploy"
 url: "https://linear.app/paperos/issue/PAP-45/deploy-forgejo-on-the-vps-behind-caddy-with-sso-from-better-auth-and"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:12:08.765Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:02.047Z"
 model: null
 effort: null
 ---
 
 # PAP-45: Deploy Forgejo on the VPS behind Caddy with SSO from Better Auth and nightly backups
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-17", "PAP-32"]
 blocks: ["PAP-190", "PAP-193", "PAP-222", "PAP-230"]
 key: "security/field-encryption"
 url: "https://linear.app/paperos/issue/PAP-353/build-server-side-field-encryption-for-stored-secrets-oauth-tokens"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:04.988Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:36.624Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-353: Build server-side field encryption for stored secrets (OAuth tokens, SCIM and webhook secrets, connector credentials, TOTP seeds) with envelope keys, key rotation and a leak scanner
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — security-sensitive title keyword: encrypt
 
 **Goal**
 

@@ -12,16 +12,18 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-190", "PAP-401"]
+blocks: ["PAP-190", "PAP-401", "PAP-485"]
 key: "growth/growth-research"
 url: "https://linear.app/paperos/issue/PAP-188/survey-open-source-crm-and-marketing-stacks-twenty-postiz-listmonk-dub"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T05:24:45.959Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:50.472Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-188: Survey open-source CRM and marketing stacks (Twenty, Postiz, Listmonk, Dub) for reuse vs build; write ADR
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Research M
 
 **Goal**
 

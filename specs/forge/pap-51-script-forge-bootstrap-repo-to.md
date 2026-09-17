@@ -6,22 +6,24 @@ projectName: "Version Control & Forge Independence"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "CI runs on both forges"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-47", "PAP-48"]
+blockedBy: ["PAP-47", "PAP-48", "PAP-449"]
 blocks: ["PAP-276"]
 key: "forge/repo-bootstrap"
 url: "https://linear.app/paperos/issue/PAP-51/script-forge-bootstrap-repo-to-configure-imagine-os-repos-with-mirrors"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:05:42.934Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:05.578Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-51: Script `forge bootstrap <repo>` to configure imagine-os repos with mirrors, secrets, labels and webhooks
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

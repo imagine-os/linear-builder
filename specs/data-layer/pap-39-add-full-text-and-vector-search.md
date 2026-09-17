@@ -15,13 +15,15 @@ blockedBy: ["PAP-33", "PAP-34", "PAP-35", "PAP-43", "PAP-59", "PAP-228", "PAP-26
 blocks: ["PAP-138"]
 key: "data-layer/search"
 url: "https://linear.app/paperos/issue/PAP-39/add-full-text-and-vector-search-tsvector-pgvector-over-any-entity"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:46.762Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:59.666Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-39: Add full-text and vector search (tsvector + pgvector) over any entity through a search registry
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

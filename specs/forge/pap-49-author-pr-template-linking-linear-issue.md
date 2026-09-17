@@ -6,7 +6,7 @@ projectName: "Version Control & Forge Independence"
 phase: "P0"
 type: "Docs"
 priority: 2
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Forgejo live and mirrored"
 state: "Backlog"
 parent: null
@@ -15,13 +15,15 @@ blockedBy: ["PAP-46"]
 blocks: []
 key: "forge/pr-templates"
 url: "https://linear.app/paperos/issue/PAP-49/author-pr-template-linking-linear-issue-page-spec-screenshots-and-the"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:05:42.663Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:02.432Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-49: Author PR template linking Linear issue, page spec, screenshots and the review-gate checklist
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — security-sensitive title keyword: Auth
 
 **Goal**
 

@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-164"
 children: []
 blockedBy: ["PAP-339"]
-blocks: ["PAP-165", "PAP-171", "PAP-199"]
+blocks: ["PAP-165", "PAP-171", "PAP-199", "PAP-489"]
 key: "tables/fields/relational-computed"
 url: "https://linear.app/paperos/issue/PAP-340/relational-and-computed-types-relation-lookup-rollup-formula-storage"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:34.130Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:31.654Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-340: Relational and computed types (relation, lookup, rollup, formula storage) and convertFieldType with lossiness report
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-46", "PAP-133"]
 blocks: ["PAP-358"]
 key: "forge/release-tags"
 url: "https://linear.app/paperos/issue/PAP-52/automate-semantic-release-tags-and-changelog-generation-on-merge-to"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:05:43.028Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:02.722Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-52: Automate semantic release tags and changelog generation on merge to main
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

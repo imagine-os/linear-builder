@@ -15,13 +15,15 @@ blockedBy: ["PAP-127", "PAP-140"]
 blocks: ["PAP-131", "PAP-317", "PAP-379"]
 key: "realtime/collab-text"
 url: "https://linear.app/paperos/issue/PAP-142/add-collaborative-rich-text-tiptap-yjs-as-the-shared-editor-for-docs"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:53:30.558Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:33.480Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-142: Add collaborative rich text (Tiptap + Yjs) as the shared editor for docs and comments
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

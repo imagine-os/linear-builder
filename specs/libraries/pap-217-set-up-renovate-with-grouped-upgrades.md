@@ -11,17 +11,19 @@ milestone: "Registry live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-48", "PAP-78"]
+blockedBy: ["PAP-48", "PAP-78", "PAP-493"]
 blocks: []
 key: "libraries/upgrade-bot"
 url: "https://linear.app/paperos/issue/PAP-217/set-up-renovate-with-grouped-upgrades-and-agent-reviewed-changelog"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T05:21:25.145Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:42.001Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-217: Set up Renovate with grouped upgrades and agent-reviewed changelog summaries
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-115"]
 blocks: []
 key: "spec-builder/spec-docs"
 url: "https://linear.app/paperos/issue/PAP-125/document-the-spec-builder-with-three-fully-specified-example-pages"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:50:30.931Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:29.661Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-125: Document the spec builder with three fully specified example pages (customer list, staff dashboard, agent console)
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Docs M
 
 **Goal**
 

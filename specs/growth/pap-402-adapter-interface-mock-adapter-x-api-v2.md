@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-190"
 children: []
 blockedBy: ["PAP-43", "PAP-401"]
-blocks: ["PAP-403"]
+blocks: ["PAP-403", "PAP-491"]
 key: "growth/social/adapter-mock-x"
 url: "https://linear.app/paperos/issue/PAP-402/adapter-interface-mock-adapter-x-api-v2-adapter-and-the-pg-boss"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:47.457Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:49.848Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-402: Adapter interface, mock adapter, X API v2 adapter and the pg-boss publishing worker
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

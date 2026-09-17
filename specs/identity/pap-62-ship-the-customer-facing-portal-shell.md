@@ -7,21 +7,23 @@ phase: "P1"
 type: "Build"
 priority: 2
 surfaces: ["Customer"]
-milestone: "Roles and audiences enforced end to end"
+milestone: "Agent principals and enterprise"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-16", "PAP-58"]
+blockedBy: ["PAP-16", "PAP-58", "PAP-438", "PAP-447"]
 blocks: []
 key: "identity/customer-portal-shell"
 url: "https://linear.app/paperos/issue/PAP-62/ship-the-customer-facing-portal-shell-login-profile-billing-entry"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:18:09.804Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:11:29.637Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-62: Ship the customer-facing portal shell (login, profile, billing entry) separate from the staff console
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

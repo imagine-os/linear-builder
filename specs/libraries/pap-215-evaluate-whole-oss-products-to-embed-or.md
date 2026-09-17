@@ -15,13 +15,15 @@ blockedBy: ["PAP-209"]
 blocks: []
 key: "libraries/oss-products"
 url: "https://linear.app/paperos/issue/PAP-215/evaluate-whole-oss-products-to-embed-or-fork-twenty-crm-nocodb-baserow"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:03:52.918Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:58.956Z"
 model: null
 effort: null
 ---
 
 # PAP-215: Evaluate whole OSS products to embed or fork (Twenty CRM, NocoDB, Baserow, Plane, Cal.com, Formbricks, Postiz)
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-25", "PAP-298", "PAP-300"]
-blocks: []
+blocks: ["PAP-472"]
 key: "agents/runtime-sandbox"
 url: "https://linear.app/paperos/issue/PAP-280/build-the-agent-runtime-sandbox-per-session-container-worktree-mount"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:09.917Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:15.072Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-280: Build the agent runtime sandbox: per-session container, worktree mount, CPU/RAM/time limits and network isolation with the credential broker's egress proxy as the only route
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — security-sensitive title keyword: credential broker
 
 **Goal**
 

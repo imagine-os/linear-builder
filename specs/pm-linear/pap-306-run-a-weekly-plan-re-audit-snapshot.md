@@ -7,21 +7,23 @@ phase: "P1"
 type: "Review"
 priority: 2
 surfaces: ["Agent", "Staff"]
-milestone: "Orchestrator claims and ships issues"
+milestone: "PM module syncs both ways"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-93", "PAP-99", "PAP-105"]
+blockedBy: ["PAP-93", "PAP-99", "PAP-105", "PAP-439"]
 blocks: []
 key: "pm-linear/weekly-reaudit"
 url: "https://linear.app/paperos/issue/PAP-306/run-a-weekly-plan-re-audit-snapshot-linear-detect-dependency-drift"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:01.144Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:11:28.611Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-306: Run a weekly plan re-audit: snapshot Linear, detect dependency drift, cycles, stale In Progress sessions, issues without specs; post the report to Linear
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Review
 
 **Goal**
 

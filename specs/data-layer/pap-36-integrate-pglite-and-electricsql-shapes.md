@@ -15,13 +15,15 @@ blockedBy: ["PAP-30", "PAP-31", "PAP-34", "PAP-35", "PAP-269"]
 blocks: ["PAP-143", "PAP-326"]
 key: "data-layer/local-first-sync"
 url: "https://linear.app/paperos/issue/PAP-36/integrate-pglite-and-electricsql-shapes-for-local-first-reads-with-an"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:45.357Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:59.316Z"
 model: null
 effort: null
 ---
 
 # PAP-36: Integrate PGlite and ElectricSQL shapes for local-first reads with an offline write queue
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

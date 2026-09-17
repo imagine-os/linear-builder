@@ -15,13 +15,15 @@ blockedBy: ["PAP-103"]
 blocks: ["PAP-106", "PAP-108", "PAP-109", "PAP-110", "PAP-112", "PAP-113", "PAP-192", "PAP-208", "PAP-218", "PAP-308"]
 key: "agents/roster-v1"
 url: "https://linear.app/paperos/issue/PAP-104/write-the-nine-lead-characters-and-their-sub-characters-as"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:18.064Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:57:21.784Z"
 model: null
 effort: null
 ---
 
 # PAP-104: Write the nine lead characters and their sub-characters as .claude/agents definitions with system prompts
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -88,3 +90,7 @@ Built by Atlas (lead) with Quill (Page Spec Writer) drafting prompts; reviewed b
 **Size**
 
 L (umbrella; children S, M, M, M)
+
+**Module boundary**
+
+This umbrella is the Agent Characters & Orgs half of the PaperOS Module System (`docs/module-system.md`). The `agents` module implements `@paperos/contract-agents` (character schema, handoff artefact, session status, agent runtime and budget ports, prompt-log sink, skill manifest, MCP allowlist, deny-list policy). The orchestrator, org chart, eval harness and content or migration agents use these schemas and ports only; the module may import `@paperos/core`, `contract-identity`, `contract-pm-linear`, `contract-collab` and its own packages. Its manifest declares `provides: [{ contract: '@paperos/contract-agents', version: '0.1.0' }]`, `owner: { agent: 'Atlas', project: 'agents' }` and `swapRisk: 'medium'`. The contract package is published by PAP-466 (`module/agents/contract`), proven by PAP-469 (`module/agents/conformance`) and bound into `@paperos/kernel` by PAP-472 (`module/agents/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

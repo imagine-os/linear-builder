@@ -15,13 +15,15 @@ blockedBy: ["PAP-272", "PAP-326"]
 blocks: ["PAP-328"]
 key: "realtime/record-sync/reconciler"
 url: "https://linear.app/paperos/issue/PAP-327/reconciler-for-optimistic-writes-and-conflict-events"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:28.589Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:28.654Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-327: Reconciler for optimistic writes and conflict events
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

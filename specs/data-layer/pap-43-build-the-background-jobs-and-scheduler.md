@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-32", "PAP-214", "PAP-297"]
-blocks: ["PAP-37", "PAP-39", "PAP-136", "PAP-174", "PAP-190", "PAP-191", "PAP-194", "PAP-199", "PAP-205", "PAP-221", "PAP-222", "PAP-324", "PAP-347", "PAP-355", "PAP-388", "PAP-391", "PAP-402", "PAP-404", "PAP-420"]
+blocks: ["PAP-37", "PAP-39", "PAP-136", "PAP-174", "PAP-190", "PAP-191", "PAP-194", "PAP-199", "PAP-205", "PAP-221", "PAP-222", "PAP-324", "PAP-347", "PAP-355", "PAP-388", "PAP-391", "PAP-402", "PAP-404", "PAP-420", "PAP-443", "PAP-454"]
 key: "data-layer/jobs-queue"
 url: "https://linear.app/paperos/issue/PAP-43/build-the-background-jobs-and-scheduler-package-pg-boss-with-retries"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:24.319Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:01.861Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-43: Build the background jobs and scheduler package (pg-boss) with retries, idempotency keys, cron, dead-letter queue and an admin view
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

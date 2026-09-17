@@ -15,13 +15,15 @@ blockedBy: ["PAP-175", "PAP-177", "PAP-179", "PAP-359", "PAP-394"]
 blocks: ["PAP-196", "PAP-408"]
 key: "business-core/stripe-connect"
 url: "https://linear.app/paperos/issue/PAP-181/add-stripe-connect-so-tenants-can-accept-payments-and-receive-payouts"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:45.105Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:47.255Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-181: Add Stripe Connect so tenants can accept payments and receive payouts
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

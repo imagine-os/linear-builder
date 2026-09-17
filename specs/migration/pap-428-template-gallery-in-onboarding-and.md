@@ -15,13 +15,15 @@ blockedBy: ["PAP-427"]
 blocks: []
 key: "child/PAP-207/2"
 url: "https://linear.app/paperos/issue/PAP-428/template-gallery-in-onboarding-and-settings-cards-with-previews-dry"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:53.416Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:57.567Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-428: Template gallery in onboarding and settings: cards with previews, dry-run diff, apply with or without sample data, remove sample data
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

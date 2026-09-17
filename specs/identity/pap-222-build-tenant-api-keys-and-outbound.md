@@ -15,13 +15,15 @@ blockedBy: ["PAP-35", "PAP-43", "PAP-59", "PAP-229", "PAP-269", "PAP-303", "PAP-
 blocks: []
 key: "identity/tenant-api-keys-webhooks"
 url: "https://linear.app/paperos/issue/PAP-222/build-tenant-api-keys-and-outbound-webhooks-for-developers-scoped-keys"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:04.815Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:59.741Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-222: Build tenant API keys and outbound webhooks for developers: scoped keys, per-key limits, signed webhook deliveries with retries, developer settings page and generated TypeScript SDK
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

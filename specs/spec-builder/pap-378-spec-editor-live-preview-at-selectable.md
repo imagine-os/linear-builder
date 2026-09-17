@@ -15,13 +15,15 @@ blockedBy: ["PAP-376"]
 blocks: []
 key: "spec-builder/spec-editor-ui/preview"
 url: "https://linear.app/paperos/issue/PAP-378/spec-editor-live-preview-at-selectable-widths-flow-graph-tab-keyboard"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:03.561Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:43.282Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-378: Spec editor: live preview at selectable widths, flow-graph tab, keyboard shortcuts and accessibility polish
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

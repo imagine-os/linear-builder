@@ -6,22 +6,24 @@ projectName: "Migration & Import Tools"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Staff", "Developer"]
 milestone: "Import framework and CSV"
 state: "Backlog"
 parent: "PAP-199"
 children: []
-blockedBy: ["PAP-37", "PAP-43", "PAP-164", "PAP-198"]
-blocks: ["PAP-348"]
+blockedBy: ["PAP-37", "PAP-43", "PAP-164", "PAP-198", "PAP-448"]
+blocks: ["PAP-348", "PAP-496"]
 key: "child/PAP-199/0"
 url: "https://linear.app/paperos/issue/PAP-347/connector-interface-mapping-model-and-import-engine-sourceconnector"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:39.257Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:04.437Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-347: Connector interface, mapping model and import engine (`SourceConnector`, `import_mapping`, batching, resumability, fixture connector)
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

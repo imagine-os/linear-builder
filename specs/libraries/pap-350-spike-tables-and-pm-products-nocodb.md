@@ -15,13 +15,15 @@ blockedBy: ["PAP-209"]
 blocks: ["PAP-351"]
 key: "child/PAP-215/0"
 url: "https://linear.app/paperos/issue/PAP-350/spike-tables-and-pm-products-nocodb-baserow-and-plane-with-compose"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:41.073Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:34.317Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-350: Spike tables and PM products: NocoDB, Baserow and Plane with compose, seeded flows, metrics and scorecards
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Research M
 
 **Goal**
 

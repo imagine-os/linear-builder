@@ -15,13 +15,15 @@ blockedBy: ["PAP-14", "PAP-255"]
 blocks: ["PAP-259"]
 key: "child/PAP-20/3"
 url: "https://linear.app/paperos/issue/PAP-258/tauri-mobile-project-init-and-ci-builds-android-debug-apk-ios"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:35.093Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:10.012Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-258: Tauri mobile project init and CI builds (Android debug APK, iOS simulator app)
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

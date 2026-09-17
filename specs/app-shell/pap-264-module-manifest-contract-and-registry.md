@@ -11,17 +11,19 @@ milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: "PAP-28"
 children: []
-blockedBy: ["PAP-117", "PAP-305"]
-blocks: ["PAP-265"]
+blockedBy: ["PAP-117", "PAP-305", "PAP-433"]
+blocks: ["PAP-265", "PAP-453"]
 key: "child/PAP-28/9"
 url: "https://linear.app/paperos/issue/PAP-264/module-manifest-contract-and-registry-packagescoremodules"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:01.144Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:50:05.968Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-264: Module manifest contract and registry (packages/core/modules)
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

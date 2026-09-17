@@ -15,13 +15,15 @@ blockedBy: ["PAP-33", "PAP-43"]
 blocks: ["PAP-180", "PAP-185", "PAP-190", "PAP-197", "PAP-199", "PAP-347", "PAP-354", "PAP-396", "PAP-401", "PAP-410"]
 key: "data-layer/file-storage"
 url: "https://linear.app/paperos/issue/PAP-37/add-s3-compatible-object-storage-minio-with-signed-uploads-and-image"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:05:39.358Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:59.442Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-37: Add S3-compatible object storage (MinIO) with signed uploads and image variants
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

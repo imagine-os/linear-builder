@@ -15,13 +15,15 @@ blockedBy: ["PAP-13"]
 blocks: ["PAP-20", "PAP-21", "PAP-24", "PAP-262"]
 key: "app-shell/tauri-desktop"
 url: "https://linear.app/paperos/issue/PAP-19/add-tauri-2-desktop-target-for-linux-macos-and-windows-sharing-the-web"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:12:04.882Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:52.647Z"
 model: null
 effort: null
 ---
 
 # PAP-19: Add Tauri 2 desktop target for Linux, macOS and Windows sharing the web bundle
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

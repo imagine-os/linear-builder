@@ -15,13 +15,15 @@ blockedBy: ["PAP-243"]
 blocks: ["PAP-85", "PAP-88", "PAP-241"]
 key: "quality/review-agents/correctness-spec"
 url: "https://linear.app/paperos/issue/PAP-244/correctness-and-spec-conformance-reviewer-definitions"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:04:40.934Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:07.002Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-244: Correctness and spec-conformance reviewer definitions
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

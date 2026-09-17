@@ -15,13 +15,15 @@ blockedBy: ["PAP-70"]
 blocks: ["PAP-155", "PAP-156", "PAP-158", "PAP-330"]
 key: "input/focus-management"
 url: "https://linear.app/paperos/issue/PAP-152/implement-robust-focus-management-roving-tabindex-and-skip-links"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:53:33.008Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:38.648Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-152: Implement robust focus management, roving tabindex and skip links across all layouts
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

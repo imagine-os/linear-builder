@@ -15,13 +15,15 @@ blockedBy: ["PAP-91"]
 blocks: ["PAP-88", "PAP-108", "PAP-252", "PAP-254"]
 key: "pm-linear/justin-queue"
 url: "https://linear.app/paperos/issue/PAP-94/design-the-needs-justin-queue-batched-decisions-one-click"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:19.435Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:17.097Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-94: Design the Needs Justin queue: batched decisions, one-click approve/reject comments, max five open items rule
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Spec P0
 
 **Goal**
 

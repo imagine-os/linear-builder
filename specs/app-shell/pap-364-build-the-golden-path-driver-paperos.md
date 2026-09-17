@@ -6,7 +6,7 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: null
@@ -15,13 +15,15 @@ blockedBy: ["PAP-22", "PAP-360", "PAP-362", "PAP-363"]
 blocks: ["PAP-429"]
 key: "gp/app-shell/driver"
 url: "https://linear.app/paperos/issue/PAP-364/build-the-golden-path-driver-paperos-create-idea-runs-interview-app"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:11.039Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:39.863Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-364: Build the golden path driver: `paperos create --idea` runs interview, app spec, generation, seed, push, provisioning and preview in one command with checkpoint stamps
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

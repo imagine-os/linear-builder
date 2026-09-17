@@ -6,22 +6,24 @@ projectName: "Design System"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Component library covers app shell needs"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-68", "PAP-71"]
+blockedBy: ["PAP-68", "PAP-71", "PAP-459"]
 blocks: ["PAP-120", "PAP-315"]
 key: "design-system/state-components"
 url: "https://linear.app/paperos/issue/PAP-234/build-the-state-components-codegen-emits-errorstate-deniedstate"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:04:37.897Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:11.367Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-234: Build the state components codegen emits: ErrorState, DeniedState, OfflineBanner, IntegrationUnavailable, LoadingPage as spec-mapped `ui.*` components
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S
 
 **Goal**
 

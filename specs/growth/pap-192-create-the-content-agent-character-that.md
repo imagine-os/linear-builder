@@ -11,17 +11,19 @@ milestone: "Campaigns and social"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-104", "PAP-287"]
+blockedBy: ["PAP-104", "PAP-287", "PAP-485"]
 blocks: []
 key: "growth/content-agent"
 url: "https://linear.app/paperos/issue/PAP-192/create-the-content-agent-character-that-drafts-posts-and-emails-from"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:19.840Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:38.913Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-192: Create the content agent character that drafts posts and emails from changelogs and specs for human approval
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

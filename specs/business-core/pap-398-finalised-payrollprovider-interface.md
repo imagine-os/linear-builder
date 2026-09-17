@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-184"
 children: []
 blockedBy: ["PAP-176"]
-blocks: ["PAP-399"]
+blocks: ["PAP-399", "PAP-490"]
 key: "business-core/payroll/adapter-contract"
 url: "https://linear.app/paperos/issue/PAP-398/finalised-payrollprovider-interface-first-adapter-with-idempotency"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:47.457Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:49.502Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-398: Finalised PayrollProvider interface, first adapter with idempotency keys, webhook route and the adapter contract test suite
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

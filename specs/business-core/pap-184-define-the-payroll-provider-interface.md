@@ -15,13 +15,15 @@ blockedBy: ["PAP-175", "PAP-176", "PAP-179", "PAP-359", "PAP-394"]
 blocks: []
 key: "business-core/payroll-adapter"
 url: "https://linear.app/paperos/issue/PAP-184/define-the-payroll-provider-interface-and-implement-the-first-adapter"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:11.850Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:49.306Z"
 model: null
 effort: null
 ---
 
 # PAP-184: Define the payroll provider interface and implement the first adapter (Check or Gusto Embedded)
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

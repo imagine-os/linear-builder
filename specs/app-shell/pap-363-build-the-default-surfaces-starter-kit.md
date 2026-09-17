@@ -6,7 +6,7 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Developer", "Staff"]
+surfaces: ["Customer", "Staff", "Developer"]
 milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: null
@@ -15,13 +15,15 @@ blockedBy: ["PAP-55", "PAP-117", "PAP-240", "PAP-361"]
 blocks: ["PAP-364"]
 key: "gp/app-shell/starter-surfaces"
 url: "https://linear.app/paperos/issue/PAP-363/build-the-default-surfaces-starter-kit-customer-portal-and-staff"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:11.039Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:39.724Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-363: Build the default surfaces starter kit: customer portal and staff console page specs, a seeded demo tenant per audience and a first-run checklist for every generated app
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

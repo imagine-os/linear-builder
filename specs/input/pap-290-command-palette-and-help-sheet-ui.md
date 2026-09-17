@@ -15,13 +15,15 @@ blockedBy: ["PAP-238", "PAP-289"]
 blocks: ["PAP-291"]
 key: "input/commands/palette-help-ui"
 url: "https://linear.app/paperos/issue/PAP-290/command-palette-and-help-sheet-ui"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:22.997Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:17.991Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-290: Command palette and help sheet UI
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

@@ -6,22 +6,24 @@ projectName: "Quality Pipeline"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Agent", "Staff"]
+surfaces: ["Staff", "Agent"]
 milestone: "Edge-case hunting and release trains"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-88", "PAP-239", "PAP-254", "PAP-356"]
+blockedBy: ["PAP-88", "PAP-239", "PAP-254", "PAP-356", "PAP-462"]
 blocks: []
 key: "quality/review-report"
 url: "https://linear.app/paperos/issue/PAP-89/generate-a-one-page-human-review-digest-per-release-candidate-what"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:05.970Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:13.216Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-89: Generate a one-page human review digest per release candidate: what changed, risks, screenshots, open questions
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

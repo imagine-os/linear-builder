@@ -15,13 +15,15 @@ blockedBy: []
 blocks: ["PAP-96", "PAP-281", "PAP-299"]
 key: "pm-linear/session-playbook"
 url: "https://linear.app/paperos/issue/PAP-92/write-the-session-playbook-how-a-claude-session-picks-up-an-issue-what"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:49:48.032Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:15.421Z"
 model: "claude-fable-5-1"
 effort: "high"
 ---
 
 # PAP-92: Write the session playbook: how a Claude session picks up an issue, what it must read, how it reports and ends
+
+**Model / Effort:** Fable 5.1 (`claude-fable-5-1`) / high — keystone spec: session playbook
 
 **Goal**
 

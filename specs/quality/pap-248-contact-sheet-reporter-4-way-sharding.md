@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-82"
 children: []
 blockedBy: ["PAP-239", "PAP-246", "PAP-247"]
-blocks: ["PAP-83", "PAP-84", "PAP-88"]
+blocks: ["PAP-83", "PAP-84", "PAP-88", "PAP-464"]
 key: "quality/playwright-matrix/reporter-sharding"
 url: "https://linear.app/paperos/issue/PAP-248/contact-sheet-reporter-4-way-sharding-and-the-visualjson-artifact"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:04:43.255Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:07.571Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-248: Contact-sheet reporter, 4-way sharding and the visual.json artifact
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S
 
 **Goal**
 

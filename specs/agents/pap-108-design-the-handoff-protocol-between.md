@@ -15,13 +15,15 @@ blockedBy: ["PAP-94", "PAP-104", "PAP-105", "PAP-287"]
 blocks: []
 key: "agents/handoffs"
 url: "https://linear.app/paperos/issue/PAP-108/design-the-handoff-protocol-between-characters-artifact-contract"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:19.840Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:24.251Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-108: Design the handoff protocol between characters: artifact contract, Linear comment format, escalation to Needs Justin
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Spec P1
 
 **Goal**
 

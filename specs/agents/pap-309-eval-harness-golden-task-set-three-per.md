@@ -15,13 +15,15 @@ blockedBy: ["PAP-308"]
 blocks: ["PAP-310"]
 key: "agents/eval-harness/tasks"
 url: "https://linear.app/paperos/issue/PAP-309/eval-harness-golden-task-set-three-per-lead-one-per-sub-with-fixture"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:07.237Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:23.089Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-309: Eval harness: golden task set (three per lead, one per sub) with fixture repos and answer keys
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

@@ -6,7 +6,7 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Staff"]
+surfaces: ["Staff", "Developer"]
 milestone: "Desktop and mobile shells build"
 state: "Backlog"
 parent: "PAP-21"
@@ -15,13 +15,15 @@ blockedBy: ["PAP-16", "PAP-19", "PAP-261"]
 blocks: ["PAP-263"]
 key: "child/PAP-21/7"
 url: "https://linear.app/paperos/issue/PAP-262/tauri-windowmanager-detach-dock-list-displays-and-topology-hash"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:35.093Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:10.392Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-262: Tauri WindowManager: detach, dock, list_displays and topology-hash persistence
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

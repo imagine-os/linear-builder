@@ -6,7 +6,7 @@ projectName: "Table & Views Engine"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff", "Customer"]
 milestone: "All view types"
 state: "Backlog"
 parent: null
@@ -15,13 +15,15 @@ blockedBy: ["PAP-164", "PAP-165"]
 blocks: ["PAP-199", "PAP-208"]
 key: "gap/tables/schema-editor"
 url: "https://linear.app/paperos/issue/PAP-332/build-the-custom-dataset-schema-editor-create-tables-and-fields-in-app"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:03.569Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:29.310Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-332: Build the custom dataset schema editor: create tables and fields in-app, reorder, field type conversion with a lossiness report and background backfill
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

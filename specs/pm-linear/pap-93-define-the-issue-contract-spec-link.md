@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-91"]
-blocks: ["PAP-306", "PAP-307"]
+blocks: ["PAP-306", "PAP-307", "PAP-465"]
 key: "pm-linear/issue-contract"
 url: "https://linear.app/paperos/issue/PAP-93/define-the-issue-contract-spec-link-acceptance-criteria-surfaces"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:19.521Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:16.934Z"
 model: "claude-fable-5-1"
 effort: "high"
 ---
 
 # PAP-93: Define the issue contract (spec link, acceptance criteria, surfaces, definition of done) enforced by a Linear webhook validator
+
+**Model / Effort:** Fable 5.1 (`claude-fable-5-1`) / high — keystone spec: issue contract
 
 **Goal**
 

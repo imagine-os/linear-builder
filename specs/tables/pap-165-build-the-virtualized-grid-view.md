@@ -15,13 +15,15 @@ blockedBy: ["PAP-71", "PAP-151", "PAP-163", "PAP-164", "PAP-291", "PAP-337", "PA
 blocks: ["PAP-135", "PAP-166", "PAP-172", "PAP-173", "PAP-183", "PAP-189", "PAP-332", "PAP-333", "PAP-334", "PAP-386"]
 key: "tables/grid-view"
 url: "https://linear.app/paperos/issue/PAP-165/build-the-virtualized-grid-view-tanstack-table-with-inline-edit-column"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:14.604Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:43.344Z"
 model: null
 effort: null
 ---
 
 # PAP-165: Build the virtualized grid view (TanStack Table) with inline edit, column resize/reorder, freeze and cell types
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

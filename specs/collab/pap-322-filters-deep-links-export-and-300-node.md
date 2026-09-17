@@ -6,7 +6,7 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Staff"]
+surfaces: ["Staff", "Developer"]
 milestone: "Comments and canvas"
 state: "Backlog"
 parent: "PAP-132"
@@ -15,13 +15,15 @@ blockedBy: ["PAP-321"]
 blocks: ["PAP-113", "PAP-157"]
 key: "collab/canvas/filters-export-perf"
 url: "https://linear.app/paperos/issue/PAP-322/filters-deep-links-export-and-300-node-performance-run"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:27.539Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:26.083Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-322: Filters, deep links, export and 300-node performance run
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

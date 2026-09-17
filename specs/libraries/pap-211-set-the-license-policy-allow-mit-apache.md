@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-209"]
-blocks: ["PAP-216"]
+blocks: ["PAP-216", "PAP-497"]
 key: "libraries/license-policy"
 url: "https://linear.app/paperos/issue/PAP-211/set-the-license-policy-allow-mitapachebsd-review-agpl-block-sspl"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T05:19:20.893Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:56.893Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-211: Set the license policy (allow MIT/Apache/BSD, review AGPL, block SSPL) enforced by a CI license check
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

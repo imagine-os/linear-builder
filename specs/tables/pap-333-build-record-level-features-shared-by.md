@@ -6,22 +6,24 @@ projectName: "Table & Views Engine"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff", "Customer"]
 milestone: "All view types"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-38", "PAP-165"]
+blockedBy: ["PAP-38", "PAP-165", "PAP-483"]
 blocks: ["PAP-102", "PAP-189"]
 key: "gap/tables/record-detail"
 url: "https://linear.app/paperos/issue/PAP-333/build-record-level-features-shared-by-every-module-record-detail-page"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:05.600Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:32.576Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-333: Build record-level features shared by every module: record detail page and panel routing, activity timeline, attachments tab, per-record comments and field history with undo
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

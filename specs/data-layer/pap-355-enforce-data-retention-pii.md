@@ -15,13 +15,15 @@ blockedBy: ["PAP-33", "PAP-38", "PAP-43"]
 blocks: ["PAP-221"]
 key: "security/retention-pii"
 url: "https://linear.app/paperos/issue/PAP-355/enforce-data-retention-pii-classification-and-tenant-hard-purge-pii"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:05.485Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:36.963Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-355: Enforce data retention, PII classification and tenant hard-purge: `pii` column annotations driving redaction and OTel filters, per-table retention jobs, and the export-first purge after the grace period
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

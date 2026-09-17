@@ -15,13 +15,15 @@ blockedBy: ["PAP-58", "PAP-353"]
 blocks: ["PAP-232"]
 key: "identity/sso-scim/sso-plugin-domains"
 url: "https://linear.app/paperos/issue/PAP-230/sso-plugin-oidc-and-saml-per-tenant-with-domain-verification"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:04.815Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:02.367Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-230: SSO plugin: OIDC and SAML per tenant with domain verification
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

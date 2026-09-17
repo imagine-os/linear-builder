@@ -12,16 +12,18 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-140"]
+blocks: ["PAP-140", "PAP-475"]
 key: "realtime/realtime-research"
 url: "https://linear.app/paperos/issue/PAP-139/benchmark-yjs-vs-automerge-vs-loro-for-document-crdt-and-write-an-adr"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:53:30.222Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:33.081Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-139: Benchmark Yjs vs Automerge vs Loro for document CRDT and write an ADR
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Research S
 
 **Goal**
 

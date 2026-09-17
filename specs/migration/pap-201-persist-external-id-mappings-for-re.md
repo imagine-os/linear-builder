@@ -15,13 +15,15 @@ blockedBy: ["PAP-199", "PAP-349"]
 blocks: ["PAP-202", "PAP-203", "PAP-204", "PAP-205", "PAP-206", "PAP-415", "PAP-417", "PAP-422", "PAP-423"]
 key: "migration/id-mapping"
 url: "https://linear.app/paperos/issue/PAP-201/persist-external-id-mappings-for-re-sync-and-incremental-imports"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:41.073Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:54.721Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-201: Persist external ID mappings for re-sync and incremental imports
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S
 
 **Goal**
 

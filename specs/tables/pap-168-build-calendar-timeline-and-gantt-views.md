@@ -15,13 +15,15 @@ blockedBy: ["PAP-163", "PAP-337"]
 blocks: []
 key: "tables/calendar-timeline-gantt"
 url: "https://linear.app/paperos/issue/PAP-168/build-calendar-timeline-and-gantt-views-with-dependencies"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:14.431Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:43.760Z"
 model: null
 effort: null
 ---
 
 # PAP-168: Build calendar, timeline and Gantt views with dependencies
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

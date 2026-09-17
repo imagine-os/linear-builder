@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-32"]
-blocks: ["PAP-34", "PAP-35", "PAP-37", "PAP-38", "PAP-39", "PAP-57", "PAP-100", "PAP-129", "PAP-175", "PAP-187", "PAP-205", "PAP-223", "PAP-267", "PAP-268", "PAP-355", "PAP-420"]
+blocks: ["PAP-34", "PAP-35", "PAP-37", "PAP-38", "PAP-39", "PAP-57", "PAP-100", "PAP-129", "PAP-175", "PAP-187", "PAP-205", "PAP-223", "PAP-267", "PAP-268", "PAP-355", "PAP-420", "PAP-448", "PAP-456"]
 key: "data-layer/core-entities"
 url: "https://linear.app/paperos/issue/PAP-33/model-core-platform-entities-tenant-workspace-user-membership-role"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:05:38.875Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:59.044Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-33: Model core platform entities: tenant, workspace, user, membership, role, audit_event, file
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Spec P0
 
 **Goal**
 

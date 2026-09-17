@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-114"]
-blocks: ["PAP-118", "PAP-122", "PAP-125", "PAP-362"]
+blocks: ["PAP-118", "PAP-122", "PAP-125", "PAP-362", "PAP-473"]
 key: "spec-builder/validator"
 url: "https://linear.app/paperos/issue/PAP-115/build-the-spec-validator-cli-and-ci-check-that-fails-prs-whose-pages"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:16.611Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:27.192Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-115: Build the spec validator CLI and CI check that fails PRs whose pages lack or violate specs
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

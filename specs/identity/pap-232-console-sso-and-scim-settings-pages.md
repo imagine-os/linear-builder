@@ -15,13 +15,15 @@ blockedBy: ["PAP-230", "PAP-231"]
 blocks: []
 key: "identity/sso-scim/console-enforcement-docs"
 url: "https://linear.app/paperos/issue/PAP-232/console-sso-and-scim-settings-pages-enforcement-and-enterprise-docs"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:23:19.381Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:02.597Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-232: Console SSO and SCIM settings pages, enforcement and enterprise docs
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

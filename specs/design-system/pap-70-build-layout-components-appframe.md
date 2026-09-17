@@ -11,17 +11,19 @@ milestone: "Tokens and primitives"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-16", "PAP-67", "PAP-238"]
+blockedBy: ["PAP-16", "PAP-67", "PAP-238", "PAP-447"]
 blocks: ["PAP-124", "PAP-152", "PAP-376"]
 key: "design-system/layout-components"
 url: "https://linear.app/paperos/issue/PAP-70/build-layout-components-appframe-splitpane-inspector-commandbar"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:49.395Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:02.243Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-70: Build layout components: AppFrame, SplitPane, Inspector, CommandBar, ResponsiveGrid
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

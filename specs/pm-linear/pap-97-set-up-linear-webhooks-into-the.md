@@ -15,13 +15,15 @@ blockedBy: ["PAP-96", "PAP-283", "PAP-303"]
 blocks: ["PAP-101", "PAP-299", "PAP-307", "PAP-356", "PAP-372"]
 key: "pm-linear/webhooks"
 url: "https://linear.app/paperos/issue/PAP-97/set-up-linear-webhooks-into-the-orchestrator-and-pr-status-back-to"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:19.228Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:17.726Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-97: Set up Linear webhooks into the orchestrator and PR status back to Linear as comments with screenshots and review verdicts
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build M, P0 in pm-linear
 
 **Goal**
 

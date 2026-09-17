@@ -15,13 +15,15 @@ blockedBy: ["PAP-48", "PAP-104", "PAP-287"]
 blocks: ["PAP-298"]
 key: "agents/tool-scopes"
 url: "https://linear.app/paperos/issue/PAP-106/implement-per-character-mcp-allowlists-and-permission-modes-and-verify"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:17.918Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:23.827Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-106: Implement per-character MCP allowlists and permission modes and verify least privilege with an automated test
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

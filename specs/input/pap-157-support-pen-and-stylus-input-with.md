@@ -15,13 +15,15 @@ blockedBy: ["PAP-132", "PAP-150", "PAP-322"]
 blocks: []
 key: "input/pen"
 url: "https://linear.app/paperos/issue/PAP-157/support-pen-and-stylus-input-with-pressure-for-canvas-and-annotation"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:28.589Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:40.504Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-157: Support pen and stylus input with pressure for canvas and annotation
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-104", "PAP-199", "PAP-287", "PAP-332", "PAP-334", "PAP-349"]
 blocks: []
 key: "migration/migration-agent"
 url: "https://linear.app/paperos/issue/PAP-208/create-the-migration-agent-character-that-interviews-users-about"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:10.135Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:56.636Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-208: Create the migration agent character that interviews users about current tools and runs the imports
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-67", "PAP-71", "PAP-161", "PAP-233", "PAP-238", "PAP-302"]
 blocks: ["PAP-165", "PAP-171", "PAP-199", "PAP-332", "PAP-341", "PAP-347", "PAP-382"]
 key: "tables/field-types"
 url: "https://linear.app/paperos/issue/PAP-164/implement-field-types-text-number-currency-date-select-multi-select"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:14.748Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:43.225Z"
 model: null
 effort: null
 ---
 
 # PAP-164: Implement field types: text, number, currency, date, select, multi-select, relation, lookup, rollup, formula, attachment, user, checkbox, rating, URL, email, phone
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

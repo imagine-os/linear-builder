@@ -15,13 +15,15 @@ blockedBy: ["PAP-67", "PAP-238", "PAP-302"]
 blocks: ["PAP-164", "PAP-165", "PAP-234", "PAP-338", "PAP-341"]
 key: "design-system/data-display"
 url: "https://linear.app/paperos/issue/PAP-71/build-data-display-components-cell-renderers-badge-avatarstack"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:04:56.488Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:09.620Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-71: Build data display components: cell renderers, Badge, AvatarStack, Timeline, EmptyState, Skeleton
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

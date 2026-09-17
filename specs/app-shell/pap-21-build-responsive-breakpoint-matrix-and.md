@@ -15,13 +15,15 @@ blockedBy: ["PAP-14", "PAP-16", "PAP-19", "PAP-257"]
 blocks: ["PAP-23", "PAP-145"]
 key: "app-shell/breakpoints-windows"
 url: "https://linear.app/paperos/issue/PAP-21/build-responsive-breakpoint-matrix-and-multi-monitor-window-manager"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:43.005Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:52.790Z"
 model: null
 effort: null
 ---
 
 # PAP-21: Build responsive breakpoint matrix and multi-monitor window manager that detaches panels into OS windows
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

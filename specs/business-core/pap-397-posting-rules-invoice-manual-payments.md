@@ -15,13 +15,15 @@ blockedBy: ["PAP-179", "PAP-396"]
 blocks: ["PAP-182", "PAP-183"]
 key: "business-core/invoicing/postings-portal-emails"
 url: "https://linear.app/paperos/issue/PAP-397/posting-rules-invoice-manual-payments-reminders-job-customer-portal"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:46.284Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:49.387Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-397: Posting rules invoice.*, manual payments, reminders job, customer portal invoice list and email templates
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

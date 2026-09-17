@@ -15,13 +15,15 @@ blockedBy: ["PAP-238", "PAP-338"]
 blocks: ["PAP-340"]
 key: "tables/fields/choice-people-attachment"
 url: "https://linear.app/paperos/issue/PAP-339/choice-people-and-attachment-types-select-multiselect-user-attachment"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:34.130Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:31.560Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-339: Choice, people and attachment types (select, multiSelect, user, attachment) with FieldSettingsPanel
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

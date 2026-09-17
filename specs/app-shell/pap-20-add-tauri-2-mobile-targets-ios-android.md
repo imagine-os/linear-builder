@@ -15,13 +15,15 @@ blockedBy: ["PAP-14", "PAP-17", "PAP-19", "PAP-257"]
 blocks: ["PAP-154"]
 key: "app-shell/tauri-mobile"
 url: "https://linear.app/paperos/issue/PAP-20/add-tauri-2-mobile-targets-ios-android-with-platform-capability-shims"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:43.005Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:52.715Z"
 model: null
 effort: null
 ---
 
 # PAP-20: Add Tauri 2 mobile targets (iOS, Android) with platform capability shims
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

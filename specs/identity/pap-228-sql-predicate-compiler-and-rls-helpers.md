@@ -15,13 +15,15 @@ blockedBy: ["PAP-34", "PAP-227"]
 blocks: ["PAP-39", "PAP-163", "PAP-335"]
 key: "identity/rbac-abac/sql-compiler-rls"
 url: "https://linear.app/paperos/issue/PAP-228/sql-predicate-compiler-and-rls-helpers"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:39.016Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:02.141Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-228: SQL predicate compiler and RLS helpers
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — security-sensitive title keyword: RLS
 
 **Goal**
 

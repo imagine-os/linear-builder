@@ -11,17 +11,19 @@ milestone: "Acquisition analytics"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-43", "PAP-163", "PAP-187", "PAP-304", "PAP-337"]
+blockedBy: ["PAP-43", "PAP-163", "PAP-187", "PAP-304", "PAP-337", "PAP-485"]
 blocks: []
 key: "growth/attribution"
 url: "https://linear.app/paperos/issue/PAP-194/track-acquisition-analytics-utm-referral-funnel-with-a-privacy-first"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:32.030Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:38.913Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-194: Track acquisition analytics (UTM, referral, funnel) with a privacy-first event pipeline
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

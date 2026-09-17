@@ -6,22 +6,24 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Agent", "Staff"]
+surfaces: ["Staff", "Agent"]
 milestone: "Comments and canvas"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-129", "PAP-165", "PAP-343"]
+blockedBy: ["PAP-129", "PAP-165", "PAP-343", "PAP-474"]
 blocks: []
 key: "collab/prompt-log-ui"
 url: "https://linear.app/paperos/issue/PAP-135/build-the-prompt-log-browser-filter-by-issue-or-character-replay-a"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:37.290Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:58:04.356Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-135: Build the prompt log browser: filter by issue or character, replay a session, link to the PR
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-114", "PAP-117"]
 blocks: ["PAP-362"]
 key: "spec-builder/spec-to-canvas"
 url: "https://linear.app/paperos/issue/PAP-123/emit-the-ux-flow-graph-pages-transitions-roles-from-specs-for-the"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:51:37.964Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:29.496Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-123: Emit the UX-flow graph (pages, transitions, roles) from specs for the canvas view
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

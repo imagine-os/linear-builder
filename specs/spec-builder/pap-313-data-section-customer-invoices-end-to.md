@@ -15,13 +15,15 @@ blockedBy: ["PAP-311", "PAP-312"]
 blocks: []
 key: "spec-builder/data-section/example"
 url: "https://linear.app/paperos/issue/PAP-313/data-section-customer-invoices-end-to-end-with-live-sync-second"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:05.712Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:25.165Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-313: Data section: `customer-invoices` end to end with live sync, second-context and offline tests
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

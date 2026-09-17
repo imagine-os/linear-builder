@@ -6,7 +6,7 @@ projectName: "Table & Views Engine"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff", "Customer"]
 milestone: "All view types"
 state: "Backlog"
 parent: null
@@ -15,13 +15,15 @@ blockedBy: ["PAP-32", "PAP-165"]
 blocks: ["PAP-199", "PAP-208"]
 key: "gap/tables/bulk-trash"
 url: "https://linear.app/paperos/issue/PAP-334/build-bulk-operations-trash-and-restore-multi-row-edit-and-delete-with"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:03.569Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:30.997Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-334: Build bulk operations, trash and restore: multi-row edit and delete with server batching, soft-delete trash with 30-day restore, undo toast
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

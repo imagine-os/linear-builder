@@ -15,13 +15,15 @@ blockedBy: ["PAP-59", "PAP-165", "PAP-229", "PAP-304", "PAP-343"]
 blocks: ["PAP-173", "PAP-385"]
 key: "tables/view-sharing"
 url: "https://linear.app/paperos/issue/PAP-172/add-saved-views-personal-vs-shared-views-public-embeds-and-per"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:37.290Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:44.218Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-172: Add saved views, personal vs shared views, public embeds and per-audience defaults
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

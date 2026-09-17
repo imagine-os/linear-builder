@@ -15,13 +15,15 @@ blockedBy: ["PAP-376"]
 blocks: []
 key: "spec-builder/spec-editor-ui/form"
 url: "https://linear.app/paperos/issue/PAP-377/spec-editor-form-view-component-tree-editor-and-two-way-sync-with-yaml"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:03.334Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:42.968Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-377: Spec editor: form view, component tree editor and two-way sync with YAML preserving comments
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

@@ -6,7 +6,7 @@ projectName: "Quality Pipeline"
 phase: "P1"
 type: "Infra"
 priority: 2
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Edge-case hunting and release trains"
 state: "Backlog"
 parent: null
@@ -15,13 +15,15 @@ blockedBy: ["PAP-26", "PAP-80", "PAP-240"]
 blocks: ["PAP-254"]
 key: "security/dast"
 url: "https://linear.app/paperos/issue/PAP-357/add-dynamic-security-testing-nightly-zap-baseline-and-authenticated"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:05.363Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:37.305Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-357: Add dynamic security testing: nightly ZAP baseline and authenticated scan of staging plus a security regression suite (CSRF, IDOR across tenants, headers, rate limits, upload abuse, webhook replay) that blocks the release candidate
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — security-sensitive title keyword: auth
 
 **Goal**
 

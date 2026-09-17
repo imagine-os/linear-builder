@@ -11,17 +11,19 @@ milestone: "Voice and accessibility certification"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-150", "PAP-152"]
+blockedBy: ["PAP-150", "PAP-152", "PAP-476"]
 blocks: []
 key: "input/gamepad"
 url: "https://linear.app/paperos/issue/PAP-158/add-gamepad-and-tv-remote-navigation-for-kiosk-and-tv-modes-with"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:23:14.202Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:58:05.711Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-158: Add gamepad and TV-remote navigation for kiosk and TV modes with spatial focus
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

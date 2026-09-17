@@ -11,17 +11,19 @@ milestone: "Registry live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-128", "PAP-209", "PAP-211"]
-blocks: ["PAP-218"]
+blockedBy: ["PAP-128", "PAP-209", "PAP-211", "PAP-493"]
+blocks: ["PAP-218", "PAP-497"]
 key: "libraries/registry"
 url: "https://linear.app/paperos/issue/PAP-216/build-the-library-registry-in-the-docs-system-adopted-trialing"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T05:21:25.145Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:50.943Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-216: Build the library registry in the docs system: adopted, trialing, rejected with reasons and owners
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 
@@ -88,3 +90,7 @@ Built by Scout (Library Evaluator) with Quill for the docs page. Reviewed by Sen
 **Size**
 
 M: small schema and page; lockfile parsing, check rules and seeding touch every package.
+
+**Module boundary**
+
+This issue is the Library Discovery & Integration half of the PaperOS Module System (`docs/module-system.md`). The `libraries` module implements `@paperos/contract-libraries` (library record, rubric scores, ADR frontmatter, license policy, MCP connector record, Renovate groups, Scout report). The license gate, Renovate and the Scout routine read the policy and registry only through these schemas; the module may import `@paperos/core`, `contract-collab`, `contract-quality` and its own tooling. Its manifest declares `provides: [{ contract: '@paperos/contract-libraries', version: '0.1.0' }]`, `owner: { agent: 'Scout', project: 'libraries' }` and `swapRisk: 'low'`. The contract package is published by PAP-493 (`module/libraries/contract`), proven by PAP-495 (`module/libraries/conformance`) and bound into `@paperos/kernel` by PAP-497 (`module/libraries/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

@@ -15,13 +15,15 @@ blockedBy: ["PAP-405"]
 blocks: []
 key: "growth/outreach/ui"
 url: "https://linear.app/paperos/issue/PAP-406/sequence-builder-template-editor-with-preview-and-test-send-enrolments"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:47.457Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:51.731Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-406: Sequence builder, template editor with preview and test send, enrolments grid and domain setup wizard
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

@@ -12,16 +12,18 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-151", "PAP-154", "PAP-155", "PAP-157", "PAP-158", "PAP-289", "PAP-329"]
+blocks: ["PAP-151", "PAP-154", "PAP-155", "PAP-157", "PAP-158", "PAP-289", "PAP-329", "PAP-476"]
 key: "input/input-abstraction"
 url: "https://linear.app/paperos/issue/PAP-150/design-a-unified-input-event-abstraction-so-components-handle-mouse"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:53:32.024Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:38.289Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-150: Design a unified input event abstraction so components handle mouse, touch, pen and gamepad uniformly
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Spec P0
 
 **Goal**
 

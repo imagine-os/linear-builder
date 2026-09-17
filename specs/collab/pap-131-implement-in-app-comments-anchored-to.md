@@ -15,13 +15,15 @@ blockedBy: ["PAP-59", "PAP-140", "PAP-142", "PAP-229", "PAP-302"]
 blocks: ["PAP-136", "PAP-137", "PAP-197", "PAP-323", "PAP-411"]
 key: "collab/comments"
 url: "https://linear.app/paperos/issue/PAP-131/implement-in-app-comments-anchored-to-any-entity-page-element-or-doc"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:04:58.278Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:58:14.827Z"
 model: null
 effort: null
 ---
 
 # PAP-131: Implement in-app comments anchored to any entity, page element or doc block with mentions and resolve
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -86,3 +88,7 @@ Built by Nova (CRDT Engineer) with Iris on the panel components. Reviewed by Sen
 **Size**
 
 L, planned as three M/S work packages (child issues pending the issue limit).
+
+**Module boundary**
+
+This umbrella is the In-App Collaboration & Knowledge half of the PaperOS Module System (`docs/module-system.md`). The `collab` module implements `@paperos/contract-collab` (comment anchors and port, docs, prompt log, changelog, ADR record, notification kinds and port). Tables, PM, growth and quality attach comments and notifications only through these ports and slot fills; the module may import `@paperos/core`, `contract-data-layer`, `contract-identity`, `contract-realtime`, `contract-design-system` and its own package. Its manifest declares `provides: [{ contract: '@paperos/contract-collab', version: '0.1.0' }]`, `owner: { agent: 'Nova', project: 'collab' }` and `swapRisk: 'medium'`. The contract package is published by PAP-474 (`module/collab/contract`), proven by PAP-477 (`module/collab/conformance`) and bound into `@paperos/kernel` by PAP-480 (`module/collab/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

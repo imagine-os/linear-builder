@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-13"]
-blocks: ["PAP-80", "PAP-81", "PAP-82", "PAP-87", "PAP-122", "PAP-217", "PAP-243", "PAP-246"]
+blocks: ["PAP-80", "PAP-81", "PAP-82", "PAP-87", "PAP-122", "PAP-217", "PAP-243", "PAP-246", "PAP-439"]
 key: "quality/ci-gate1"
 url: "https://linear.app/paperos/issue/PAP-78/set-up-ci-gate-1-typecheck-biome-lint-vitest-unit-tests-and-web-build"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:43:10.625Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:12.141Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-78: Set up CI gate 1: typecheck, Biome lint, Vitest unit tests and web build on every PR
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-175", "PAP-398"]
 blocks: ["PAP-400"]
 key: "business-core/payroll/onboarding-sync"
 url: "https://linear.app/paperos/issue/PAP-399/payroll-tables-company-and-employee-onboarding-via-provider-links"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:46.284Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:49.584Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-399: Payroll tables, company and employee onboarding via provider links, employee sync from fin_employee and status polling
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

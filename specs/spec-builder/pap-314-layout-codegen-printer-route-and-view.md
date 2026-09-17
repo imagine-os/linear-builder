@@ -11,17 +11,19 @@ milestone: "Codegen and conformance tests"
 state: "Backlog"
 parent: "PAP-120"
 children: []
-blockedBy: ["PAP-74", "PAP-114"]
-blocks: ["PAP-315", "PAP-316"]
+blockedBy: ["PAP-74", "PAP-114", "PAP-459"]
+blocks: ["PAP-315", "PAP-316", "PAP-473"]
 key: "spec-builder/layout-codegen/templates"
 url: "https://linear.app/paperos/issue/PAP-314/layout-codegen-printer-route-and-view-templates-two-file-ownership-and"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:06.727Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:10.325Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-314: Layout codegen: Printer, route and view templates, two-file ownership and determinism
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

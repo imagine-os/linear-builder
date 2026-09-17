@@ -6,7 +6,7 @@ projectName: "Table & Views Engine"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff", "Customer"]
 milestone: "View sharing, formulas, dashboards"
 state: "Backlog"
 parent: "PAP-174"
@@ -15,13 +15,15 @@ blockedBy: ["PAP-166", "PAP-389"]
 blocks: []
 key: "tables/automations/builder-log-templates"
 url: "https://linear.app/paperos/issue/PAP-390/automation-builder-page-test-run-run-log-with-replay-five-starter"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:44.007Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:46.815Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-390: Automation builder page, test run, run log with replay, five starter templates and import hooks
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

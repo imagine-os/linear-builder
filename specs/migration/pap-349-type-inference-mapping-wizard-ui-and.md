@@ -6,22 +6,24 @@ projectName: "Migration & Import Tools"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Staff", "Developer"]
 milestone: "Import framework and CSV"
 state: "Backlog"
 parent: "PAP-199"
 children: []
 blockedBy: ["PAP-348"]
-blocks: ["PAP-200", "PAP-201", "PAP-202", "PAP-203", "PAP-204", "PAP-205", "PAP-206", "PAP-207", "PAP-208"]
+blocks: ["PAP-200", "PAP-201", "PAP-202", "PAP-203", "PAP-204", "PAP-205", "PAP-206", "PAP-207", "PAP-208", "PAP-496"]
 key: "child/PAP-199/2"
 url: "https://linear.app/paperos/issue/PAP-349/type-inference-mapping-wizard-ui-and-run-history-with-per-item-drill"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:39.257Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:34.185Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-349: Type inference, mapping wizard UI and run history with per-item drill-down and rollback button
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

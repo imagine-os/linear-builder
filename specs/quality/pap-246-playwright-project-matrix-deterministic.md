@@ -15,13 +15,15 @@ blockedBy: ["PAP-14", "PAP-78"]
 blocks: ["PAP-247", "PAP-248"]
 key: "quality/playwright-matrix/projects-fixtures-stories"
 url: "https://linear.app/paperos/issue/PAP-246/playwright-project-matrix-deterministic-fixtures-and-storybook-story"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:42.056Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:07.337Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-246: Playwright project matrix, deterministic fixtures and Storybook story capture
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

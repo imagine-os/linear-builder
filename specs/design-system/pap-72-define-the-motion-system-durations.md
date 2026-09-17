@@ -15,13 +15,15 @@ blockedBy: ["PAP-66"]
 blocks: []
 key: "design-system/motion"
 url: "https://linear.app/paperos/issue/PAP-72/define-the-motion-system-durations-easings-reduced-motion-and-shared"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:18:12.495Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:09.718Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-72: Define the motion system (durations, easings, reduced-motion) and shared transition components
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S
 
 **Goal**
 

@@ -11,17 +11,19 @@ milestone: "Acquisition analytics"
 state: "Backlog"
 parent: "PAP-196"
 children: []
-blockedBy: ["PAP-177"]
+blockedBy: ["PAP-177", "PAP-484"]
 blocks: ["PAP-408"]
 key: "growth/referral/codes-attribution"
 url: "https://linear.app/paperos/issue/PAP-407/referral-programs-codes-rcode-route-attribution-window-and-the"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:48.727Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:38.913Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-407: Referral programs, codes, /r/{code} route, attribution window and the qualification worker
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

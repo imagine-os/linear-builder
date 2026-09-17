@@ -15,13 +15,15 @@ blockedBy: ["PAP-81", "PAP-114", "PAP-239", "PAP-240", "PAP-244", "PAP-245"]
 blocks: []
 key: "quality/edge-case-hunter"
 url: "https://linear.app/paperos/issue/PAP-85/build-gate-4-edge-case-hunter-agent-generating-adversarial-inputs"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:43:12.479Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:14.481Z"
 model: null
 effort: null
 ---
 
 # PAP-85: Build gate 4: edge-case hunter agent generating adversarial inputs, empty/huge/unicode states, network failure and slow-device scenarios from page specs
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

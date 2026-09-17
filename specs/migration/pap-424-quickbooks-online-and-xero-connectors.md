@@ -15,13 +15,15 @@ blockedBy: ["PAP-423"]
 blocks: ["PAP-425"]
 key: "child/PAP-206/1"
 url: "https://linear.app/paperos/issue/PAP-424/quickbooks-online-and-xero-connectors-chart-of-accounts-opening"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:51.916Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:57.187Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-424: QuickBooks Online and Xero connectors: chart of accounts, opening balances on a conversion date, optional journal and invoice history
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

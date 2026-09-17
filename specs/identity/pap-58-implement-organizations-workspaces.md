@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-57", "PAP-224"]
-blocks: ["PAP-62", "PAP-63", "PAP-65", "PAP-86", "PAP-177", "PAP-221", "PAP-230", "PAP-231"]
+blocks: ["PAP-62", "PAP-63", "PAP-65", "PAP-86", "PAP-177", "PAP-221", "PAP-230", "PAP-231", "PAP-458"]
 key: "identity/org-tenancy"
 url: "https://linear.app/paperos/issue/PAP-58/implement-organizations-workspaces-invitations-and-tenant-switching"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:46.762Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:06.742Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-58: Implement organizations, workspaces, invitations and tenant switching
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build M, P0 in identity
 
 **Goal**
 

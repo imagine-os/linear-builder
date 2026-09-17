@@ -15,13 +15,15 @@ blockedBy: ["PAP-383"]
 blocks: []
 key: "tables/formula/sql-cache"
 url: "https://linear.app/paperos/issue/PAP-384/sql-compiler-formula-cache-fallback-job-and-the-dependency-graph"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:42.311Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:45.707Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-384: SQL compiler, formula_cache fallback job and the dependency graph
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

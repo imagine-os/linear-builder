@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-67"
 children: []
 blockedBy: ["PAP-236", "PAP-237"]
-blocks: ["PAP-69", "PAP-70", "PAP-71", "PAP-73", "PAP-74", "PAP-151", "PAP-164", "PAP-233", "PAP-290", "PAP-339"]
+blocks: ["PAP-69", "PAP-70", "PAP-71", "PAP-73", "PAP-74", "PAP-151", "PAP-164", "PAP-233", "PAP-290", "PAP-339", "PAP-461"]
 key: "design-system/primitives/selection-navigation"
 url: "https://linear.app/paperos/issue/PAP-238/selection-and-navigation-components-select-combobox-tabs-avatar"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:04:38.909Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:04.732Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-238: Selection and navigation components: Select, Combobox, Tabs, Avatar, Separator
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

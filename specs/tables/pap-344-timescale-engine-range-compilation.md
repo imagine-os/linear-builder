@@ -15,13 +15,15 @@ blockedBy: ["PAP-163"]
 blocks: ["PAP-345"]
 key: "tables/time/engine-calendar"
 url: "https://linear.app/paperos/issue/PAP-344/timescale-engine-range-compilation-overlap-packing-and-the-calendar"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:37.290Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:33.431Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-344: TimeScale engine, range compilation, overlap packing and the calendar view (month, week, day, agenda)
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

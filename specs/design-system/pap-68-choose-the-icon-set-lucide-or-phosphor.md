@@ -15,13 +15,15 @@ blockedBy: ["PAP-66"]
 blocks: ["PAP-234"]
 key: "design-system/icons-illustrations"
 url: "https://linear.app/paperos/issue/PAP-68/choose-the-icon-set-lucide-or-phosphor-and-illustration-style-build-a"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:18:11.201Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:09.317Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-68: Choose the icon set (Lucide or Phosphor) and illustration style; build a tree-shaken Icon component
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S
 
 **Goal**
 

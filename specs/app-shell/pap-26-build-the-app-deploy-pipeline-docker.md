@@ -15,13 +15,15 @@ blockedBy: ["PAP-13", "PAP-25", "PAP-30"]
 blocks: ["PAP-29", "PAP-86", "PAP-88", "PAP-253", "PAP-357", "PAP-358", "PAP-365"]
 key: "app-shell/app-deploy-pipeline"
 url: "https://linear.app/paperos/issue/PAP-26/build-the-app-deploy-pipeline-docker-images-for-appsweb-and-appsapi"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:18:47.925Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:55.957Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-26: Build the app deploy pipeline: Docker images for apps/web and apps/api, staging on merge to main, production on tag, per-PR previews and rollback via Coolify
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

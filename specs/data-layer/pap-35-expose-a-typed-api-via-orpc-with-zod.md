@@ -15,13 +15,15 @@ blockedBy: ["PAP-33"]
 blocks: ["PAP-36", "PAP-39", "PAP-40", "PAP-119", "PAP-129", "PAP-163", "PAP-193", "PAP-222", "PAP-242", "PAP-312", "PAP-335"]
 key: "data-layer/api-layer"
 url: "https://linear.app/paperos/issue/PAP-35/expose-a-typed-api-via-orpc-with-zod-schemas-generated-from-drizzle"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:43:05.865Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:11.648Z"
 model: null
 effort: null
 ---
 
 # PAP-35: Expose a typed API via oRPC with Zod schemas generated from Drizzle
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -96,3 +98,7 @@ Built by Forge. Reviewed by Sentinel (Code Reviewer and Security Auditor).
 **Size**
 
 L as an umbrella; children are M, M, S.
+
+**Module boundary**
+
+This umbrella is the Data Layer & Database half of the PaperOS Module System (`docs/module-system.md`). The `data-layer` module implements `@paperos/contract-data-layer` (tenant context, repository and unit-of-work ports, event bus, jobs, files, search, audit, sync, email, idempotency, API conventions) and pins contract-zero (`@paperos/core/types|filter|events`). Other modules may import its contract and `@paperos/db` column helpers, never its tables or router handlers; it may import only `@paperos/core`, `@paperos/contract-identity` and its own packages. Its manifest declares `provides: [{ contract: '@paperos/contract-data-layer', version: '0.1.0' }]`, `owner: { agent: 'Forge', project: 'data-layer' }` and `swapRisk: 'critical'`. The contract package is published by PAP-448 (`module/data-layer/contract`), proven by PAP-451 (`module/data-layer/conformance`) and bound into `@paperos/kernel` by PAP-454 (`module/data-layer/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

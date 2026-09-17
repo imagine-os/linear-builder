@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-179"
 children: []
 blockedBy: ["PAP-393"]
-blocks: ["PAP-180", "PAP-181", "PAP-183", "PAP-184", "PAP-185", "PAP-196", "PAP-206"]
+blocks: ["PAP-180", "PAP-181", "PAP-183", "PAP-184", "PAP-185", "PAP-196", "PAP-206", "PAP-490"]
 key: "business-core/ledger/rules-ui-trialbalance"
 url: "https://linear.app/paperos/issue/PAP-394/posting-rule-registry-with-the-first-five-rules-financejournal-ui"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:45.105Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:49.042Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-394: Posting rule registry with the first five rules, /finance/journal UI, trial balance and rebuildBalances
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

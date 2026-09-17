@@ -15,13 +15,15 @@ blockedBy: ["PAP-250"]
 blocks: []
 key: "quality/edge-case-hunter/findings-repros-nightly"
 url: "https://linear.app/paperos/issue/PAP-251/findings-generated-repro-tests-and-nightly-library-run"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:04:42.069Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:07.825Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-251: Findings, generated repro tests and nightly library run
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S
 
 **Goal**
 

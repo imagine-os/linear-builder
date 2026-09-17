@@ -15,13 +15,15 @@ blockedBy: ["PAP-104", "PAP-105"]
 blocks: ["PAP-309", "PAP-310"]
 key: "agents/eval-harness/runner"
 url: "https://linear.app/paperos/issue/PAP-308/eval-harness-task-format-sdk-runner-deterministic-graders-and-results"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:08.299Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:23.002Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-308: Eval harness: task format, SDK runner, deterministic graders and results table
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

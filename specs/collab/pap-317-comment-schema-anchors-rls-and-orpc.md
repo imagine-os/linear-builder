@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-131"
 children: []
 blockedBy: ["PAP-59", "PAP-140", "PAP-142", "PAP-229"]
-blocks: ["PAP-318"]
+blocks: ["PAP-318", "PAP-480"]
 key: "collab/comments/schema-rls-rpc"
 url: "https://linear.app/paperos/issue/PAP-317/comment-schema-anchors-rls-and-orpc-procedures"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:27.539Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:25.586Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-317: Comment schema, anchors, RLS and oRPC procedures
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — security-sensitive title keyword: RLS
 
 **Goal**
 

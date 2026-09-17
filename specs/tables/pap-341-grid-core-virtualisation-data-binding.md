@@ -15,13 +15,15 @@ blockedBy: ["PAP-71", "PAP-151", "PAP-163", "PAP-164"]
 blocks: ["PAP-342"]
 key: "tables/grid/core"
 url: "https://linear.app/paperos/issue/PAP-341/grid-core-virtualisation-data-binding-selection-model-and-keyboard"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:37.290Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:31.726Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-341: Grid core: virtualisation, data binding, selection model and keyboard navigation
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

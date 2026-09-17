@@ -15,13 +15,15 @@ blockedBy: ["PAP-114", "PAP-210"]
 blocks: ["PAP-174", "PAP-389"]
 key: "spec-builder/integrations-section"
 url: "https://linear.app/paperos/issue/PAP-121/specify-the-integrations-section-stripe-linear-notion-drive-webflow"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:50:29.838Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:27.911Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-121: Specify the integrations section (Stripe, Linear, Notion, Drive, Webflow, Miro, Gamma) backed by a connector registry
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Spec P1
 
 **Goal**
 

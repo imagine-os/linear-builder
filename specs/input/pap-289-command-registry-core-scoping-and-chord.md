@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-151"
 children: []
 blockedBy: ["PAP-67", "PAP-150"]
-blocks: ["PAP-290"]
+blocks: ["PAP-290", "PAP-482"]
 key: "input/commands/registry-core"
 url: "https://linear.app/paperos/issue/PAP-289/command-registry-core-scoping-and-chord-matcher"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:22.997Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:17.879Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-289: Command registry core, scoping and chord matcher
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

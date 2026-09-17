@@ -11,17 +11,19 @@ milestone: "Roles and audiences enforced end to end"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-38", "PAP-59", "PAP-229"]
+blockedBy: ["PAP-38", "PAP-59", "PAP-229", "PAP-456"]
 blocks: []
 key: "identity/impersonation"
 url: "https://linear.app/paperos/issue/PAP-61/add-staff-view-as-customer-impersonation-with-full-audit-trail"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:47.788Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:09.044Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-61: Add staff 'view as customer' impersonation with full audit trail
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

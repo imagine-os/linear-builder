@@ -11,17 +11,19 @@ milestone: "Acquisition analytics"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-163", "PAP-166", "PAP-187", "PAP-279", "PAP-303", "PAP-337"]
+blockedBy: ["PAP-163", "PAP-166", "PAP-187", "PAP-279", "PAP-303", "PAP-337", "PAP-485"]
 blocks: []
 key: "growth/segments"
 url: "https://linear.app/paperos/issue/PAP-195/build-audience-segments-from-crm-and-product-usage-that-feed-campaigns"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:32.030Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:38.913Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-195: Build audience segments from CRM and product usage that feed campaigns and in-app targeting
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

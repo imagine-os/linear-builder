@@ -12,16 +12,18 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-211", "PAP-212", "PAP-213", "PAP-214", "PAP-215", "PAP-216", "PAP-292", "PAP-295", "PAP-350"]
+blocks: ["PAP-211", "PAP-212", "PAP-213", "PAP-214", "PAP-215", "PAP-216", "PAP-292", "PAP-295", "PAP-350", "PAP-493"]
 key: "libraries/eval-rubric"
 url: "https://linear.app/paperos/issue/PAP-209/define-the-library-evaluation-rubric-license-maintenance-bundle-size"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T05:19:20.671Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:56.716Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-209: Define the library evaluation rubric (license, maintenance, bundle size, a11y, TS quality, agent-friendliness) and ADR template
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Spec P0
 
 **Goal**
 

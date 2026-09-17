@@ -11,17 +11,19 @@ milestone: "PM module syncs both ways"
 state: "Backlog"
 parent: "PAP-101"
 children: []
-blockedBy: ["PAP-97", "PAP-100"]
-blocks: ["PAP-373", "PAP-374"]
+blockedBy: ["PAP-97", "PAP-100", "PAP-465"]
+blocks: ["PAP-373", "PAP-374", "PAP-471"]
 key: "pm-linear/linear-sync/inbound"
 url: "https://linear.app/paperos/issue/PAP-372/linear-sync-backfill-and-inbound-webhook-upsert-into-pm-tables"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:03.091Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:57:13.042Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-372: Linear sync: backfill and inbound webhook upsert into pm_* tables
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

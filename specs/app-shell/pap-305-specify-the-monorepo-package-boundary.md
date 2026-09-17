@@ -6,22 +6,24 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P0"
 type: "Spec"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Template scaffolds and runs on web"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-13"]
-blocks: ["PAP-24", "PAP-28", "PAP-100", "PAP-264"]
+blocks: ["PAP-24", "PAP-28", "PAP-100", "PAP-264", "PAP-439"]
 key: "contracts/package-boundaries"
 url: "https://linear.app/paperos/issue/PAP-305/specify-the-monorepo-package-boundary-map-package-ownership-table"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:01.144Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:22.684Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-305: Specify the monorepo package boundary map: package ownership table, allowed dependency graph, `packages/core` sub-folder owners, dependency-cruiser lint in Gate 1 and the `packages/pm` move
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Spec P0
 
 **Goal**
 

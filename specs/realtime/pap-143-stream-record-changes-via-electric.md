@@ -15,13 +15,15 @@ blockedBy: ["PAP-36", "PAP-272"]
 blocks: ["PAP-144", "PAP-147", "PAP-148", "PAP-381"]
 key: "realtime/record-sync"
 url: "https://linear.app/paperos/issue/PAP-143/stream-record-changes-via-electric-shapes-to-all-connected-clients-and"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:03:48.140Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:58:14.946Z"
 model: null
 effort: null
 ---
 
 # PAP-143: Stream record changes via Electric shapes to all connected clients and reconcile with local writes
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -83,3 +85,7 @@ Builder: Nova (CRDT Engineer) with Forge (Schema Wright) on stamping columns. Re
 **Size**
 
 L, planned as three M/S work packages (child issues pending the issue limit).
+
+**Module boundary**
+
+This umbrella is the Multiplayer & Realtime half of the PaperOS Module System (`docs/module-system.md`). The `realtime` module implements `@paperos/contract-realtime` (collab doc rooms, presence, live records and reconciler, push transport, window bus, offline queue status). Collab, tables, canvas and support surfaces open rooms and subscribe to live records only through these ports, never through Yjs, Hocuspocus or Electric clients directly; the module may import `@paperos/core`, `contract-data-layer`, `contract-identity` and its own packages. Its manifest declares `provides: [{ contract: '@paperos/contract-realtime', version: '0.1.0' }]`, `owner: { agent: 'Nova', project: 'realtime' }` and `swapRisk: 'high'`. The contract package is published by PAP-475 (`module/realtime/contract`), proven by PAP-478 (`module/realtime/conformance`) and bound into `@paperos/kernel` by PAP-481 (`module/realtime/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

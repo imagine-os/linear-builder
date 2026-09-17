@@ -15,13 +15,15 @@ blockedBy: ["PAP-37", "PAP-177", "PAP-179", "PAP-394"]
 blocks: ["PAP-182", "PAP-183"]
 key: "business-core/invoicing"
 url: "https://linear.app/paperos/issue/PAP-180/implement-invoices-quotes-and-receipts-with-pdf-generation-and-stripe"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:12.321Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:47.055Z"
 model: null
 effort: null
 ---
 
 # PAP-180: Implement invoices, quotes and receipts with PDF generation and Stripe payment links
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

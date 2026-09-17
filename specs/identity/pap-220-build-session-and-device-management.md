@@ -11,17 +11,19 @@ milestone: "Roles and audiences enforced end to end"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-57", "PAP-224"]
+blockedBy: ["PAP-57", "PAP-224", "PAP-456"]
 blocks: []
 key: "identity/session-device-management"
 url: "https://linear.app/paperos/issue/PAP-220/build-session-and-device-management-list-and-revoke-sessions-totp"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:46.762Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:09.044Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-220: Build session and device management: list and revoke sessions, TOTP fallback for passkeys, account recovery codes
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

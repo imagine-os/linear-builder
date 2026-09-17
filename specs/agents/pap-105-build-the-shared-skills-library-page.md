@@ -15,13 +15,15 @@ blockedBy: ["PAP-103"]
 blocks: ["PAP-108", "PAP-110", "PAP-118", "PAP-134", "PAP-306", "PAP-308"]
 key: "agents/skills-library"
 url: "https://linear.app/paperos/issue/PAP-105/build-the-shared-skills-library-page-from-spec-review-pr-screenshot"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:17.986Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:23.614Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-105: Build the shared skills library (page-from-spec, review-pr, screenshot-audit, write-adr, linear-update) as .claude/skills
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

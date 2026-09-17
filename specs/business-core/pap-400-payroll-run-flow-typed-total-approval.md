@@ -15,13 +15,15 @@ blockedBy: ["PAP-179", "PAP-399"]
 blocks: []
 key: "business-core/payroll/run-approve-post"
 url: "https://linear.app/paperos/issue/PAP-400/payroll-run-flow-typed-total-approval-webhook-status-transitions"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:47.457Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:49.670Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-400: Payroll run flow, typed-total approval, webhook status transitions, ledger posting and the paystub portal page
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

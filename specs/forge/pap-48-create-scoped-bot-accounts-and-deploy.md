@@ -15,13 +15,15 @@ blockedBy: ["PAP-45", "PAP-273", "PAP-301"]
 blocks: ["PAP-51", "PAP-106", "PAP-217", "PAP-300"]
 key: "forge/bot-accounts"
 url: "https://linear.app/paperos/issue/PAP-48/create-scoped-bot-accounts-and-deploy-keys-for-each-agent-character-on"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:04:56.488Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:11:30.303Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-48: Create scoped bot accounts and deploy keys for each agent character on both forges
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

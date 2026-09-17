@@ -11,17 +11,19 @@ milestone: "Registry live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-104", "PAP-216", "PAP-287"]
+blockedBy: ["PAP-104", "PAP-216", "PAP-287", "PAP-493"]
 blocks: []
 key: "libraries/scout-agent"
 url: "https://linear.app/paperos/issue/PAP-218/create-the-scout-character-routine-weekly-scan-for-new-libraries"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:19.840Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:44.914Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-218: Create the Scout character routine: weekly scan for new libraries relevant to open issues
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

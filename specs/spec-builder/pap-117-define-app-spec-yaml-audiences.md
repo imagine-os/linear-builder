@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-114"]
-blocks: ["PAP-28", "PAP-123", "PAP-126", "PAP-160", "PAP-264", "PAP-360", "PAP-361", "PAP-363"]
+blocks: ["PAP-28", "PAP-123", "PAP-126", "PAP-160", "PAP-264", "PAP-360", "PAP-361", "PAP-363", "PAP-467"]
 key: "spec-builder/app-level-spec"
 url: "https://linear.app/paperos/issue/PAP-117/define-appspecyaml-audiences-navigation-entities-integrations-that"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:50:29.345Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:27.436Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-117: Define app.spec.yaml (audiences, navigation, entities, integrations) that page specs inherit from
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Spec P1
 
 **Goal**
 

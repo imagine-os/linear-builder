@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: ["PAP-246", "PAP-247", "PAP-248"]
 blockedBy: ["PAP-14", "PAP-78", "PAP-239", "PAP-240"]
-blocks: ["PAP-83", "PAP-84", "PAP-88", "PAP-253"]
+blocks: ["PAP-83", "PAP-84", "PAP-88", "PAP-253", "PAP-446"]
 key: "quality/playwright-matrix"
 url: "https://linear.app/paperos/issue/PAP-82/build-gate-3-playwright-screenshot-suite-across-the-7-width-breakpoint"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:43:10.905Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:12.585Z"
 model: null
 effort: null
 ---
 
 # PAP-82: Build gate 3: Playwright screenshot suite across the 7-width breakpoint matrix, all themes and key pages with baseline diffs
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

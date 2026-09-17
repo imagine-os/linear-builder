@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-25", "PAP-57", "PAP-59", "PAP-139", "PAP-224", "PAP-229"]
-blocks: ["PAP-131", "PAP-132", "PAP-141", "PAP-142", "PAP-145", "PAP-147", "PAP-317", "PAP-321", "PAP-354"]
+blocks: ["PAP-131", "PAP-132", "PAP-141", "PAP-142", "PAP-145", "PAP-147", "PAP-317", "PAP-321", "PAP-354", "PAP-475", "PAP-481"]
 key: "realtime/yjs-server"
 url: "https://linear.app/paperos/issue/PAP-140/deploy-a-hocuspocus-yjs-server-with-auth-hook-postgres-persistence-and"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:46.762Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:33.214Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-140: Deploy a Hocuspocus (Yjs) server with auth hook, Postgres persistence and room-per-document
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — security-sensitive title keyword: auth
 
 **Goal**
 

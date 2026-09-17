@@ -15,13 +15,15 @@ blockedBy: ["PAP-59", "PAP-114", "PAP-229", "PAP-279"]
 blocks: ["PAP-64", "PAP-361"]
 key: "spec-builder/access-section"
 url: "https://linear.app/paperos/issue/PAP-116/specify-the-access-section-format-that-compiles-to-permission-engine"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:43:06.702Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:27.306Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-116: Specify the access section format that compiles to permission-engine policies
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Spec P0
 
 **Goal**
 

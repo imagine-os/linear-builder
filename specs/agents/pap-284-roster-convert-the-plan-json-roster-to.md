@@ -15,13 +15,15 @@ blockedBy: ["PAP-103"]
 blocks: ["PAP-285", "PAP-286", "PAP-287"]
 key: "agents/roster-v1/yaml"
 url: "https://linear.app/paperos/issue/PAP-284/roster-convert-the-planjson-roster-to-37-validated-character-yaml"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:09.762Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:17.307Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-284: Roster: convert the plan.json roster to 37 validated character YAML files
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S
 
 **Goal**
 

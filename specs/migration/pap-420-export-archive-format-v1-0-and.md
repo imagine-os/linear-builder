@@ -11,17 +11,19 @@ milestone: "Airtable, Notion, ClickUp importers"
 state: "Backlog"
 parent: "PAP-205"
 children: []
-blockedBy: ["PAP-33", "PAP-43", "PAP-128", "PAP-199"]
+blockedBy: ["PAP-33", "PAP-43", "PAP-128", "PAP-199", "PAP-492"]
 blocks: ["PAP-421"]
 key: "child/PAP-205/0"
 url: "https://linear.app/paperos/issue/PAP-420/export-archive-format-v10-and-streaming-export-job-manifest-json"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:51.916Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:42.001Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-420: Export archive format v1.0 and streaming export job: manifest, JSON Schemas, table, docs, files, comments, PM, CRM, ledger and audit writers
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

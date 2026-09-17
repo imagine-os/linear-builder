@@ -15,13 +15,15 @@ blockedBy: ["PAP-30", "PAP-37", "PAP-96", "PAP-140"]
 blocks: ["PAP-88"]
 key: "security/platform-dr"
 url: "https://linear.app/paperos/issue/PAP-354/add-object-storage-yjs-orchestrator-and-sops-key-backups-and-a-monthly"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:05.213Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:36.792Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-354: Add object-storage, Yjs, orchestrator and sops-key backups and a monthly platform-wide disaster-recovery drill restoring everything on a fresh host against RPO 1 h and RTO 4 h
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

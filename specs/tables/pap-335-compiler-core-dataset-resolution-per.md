@@ -15,13 +15,15 @@ blockedBy: ["PAP-35", "PAP-59", "PAP-161", "PAP-228", "PAP-229", "PAP-269", "PAP
 blocks: ["PAP-336"]
 key: "tables/compiler/core"
 url: "https://linear.app/paperos/issue/PAP-335/compiler-core-dataset-resolution-per-type-filter-ops-sorts-and-signed"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:32.030Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:31.109Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-335: Compiler core: dataset resolution, per-type filter ops, sorts and signed keyset cursors
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

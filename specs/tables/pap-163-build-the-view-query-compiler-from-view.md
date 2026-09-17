@@ -15,13 +15,15 @@ blockedBy: ["PAP-35", "PAP-59", "PAP-161", "PAP-228", "PAP-229", "PAP-269", "PAP
 blocks: ["PAP-165", "PAP-167", "PAP-168", "PAP-169", "PAP-170", "PAP-194", "PAP-195", "PAP-341", "PAP-344"]
 key: "tables/query-compiler"
 url: "https://linear.app/paperos/issue/PAP-163/build-the-view-query-compiler-from-view-model-to-sql-and-electric"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:15.060Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:49.637Z"
 model: null
 effort: null
 ---
 
 # PAP-163: Build the view query compiler from view model to SQL and Electric shapes with server-side pagination
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -90,3 +92,7 @@ L, split into three M children; the umbrella carries only the integration bench.
 **Pending issues**
 
 Bracketed references above are fully specified work packages that Linear refused to create on 2026-09-17 (`USAGE_LIMIT_EXCEEDED`, free-plan issue cap). Their specs live in the project document(s) [tables](<https://linear.app/paperos/document/round-2-pending-issues-tables-24-86486d9b99cc>) and they are created as issues by `round2/agent4/create_issues.py` once the workspace plan is upgraded.
+
+**Module boundary**
+
+This umbrella is the Table & Views Engine half of the PaperOS Module System (`docs/module-system.md`). The `tables` module implements `@paperos/contract-tables` (`ViewSpec`, `FieldDef`, dataset registration, view query, renderer registry, field type plugin, formula, automation trigger and record ports). PM, finance, CRM, import and dashboards register datasets and render views only through these ports; the module may import `@paperos/core`, `contract-data-layer`, `contract-identity`, `contract-design-system`, `contract-input` and its own package. Its manifest declares `provides: [{ contract: '@paperos/contract-tables', version: '0.1.0' }]`, `owner: { agent: 'Nova', project: 'tables' }` and `swapRisk: 'high'`. The contract package is published by PAP-483 (`module/tables/contract`), proven by PAP-486 (`module/tables/conformance`) and bound into `@paperos/kernel` by PAP-489 (`module/tables/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

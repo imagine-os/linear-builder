@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-16"]
-blocks: ["PAP-41", "PAP-76", "PAP-109", "PAP-130", "PAP-134", "PAP-138", "PAP-203", "PAP-205", "PAP-216", "PAP-379", "PAP-380", "PAP-418", "PAP-420"]
+blocks: ["PAP-41", "PAP-76", "PAP-109", "PAP-130", "PAP-134", "PAP-138", "PAP-203", "PAP-205", "PAP-216", "PAP-379", "PAP-380", "PAP-418", "PAP-420", "PAP-445", "PAP-474", "PAP-480"]
 key: "collab/docs-engine"
 url: "https://linear.app/paperos/issue/PAP-128/build-the-docs-engine-mdx-docs-stored-in-the-repo-rendered-in-app"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:53:28.407Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:29.960Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-128: Build the docs engine: MDX docs stored in the repo, rendered in-app, searchable and versioned with git
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

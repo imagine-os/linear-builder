@@ -11,17 +11,19 @@ milestone: "Acquisition analytics"
 state: "Backlog"
 parent: "PAP-197"
 children: []
-blockedBy: ["PAP-131", "PAP-410"]
+blockedBy: ["PAP-131", "PAP-410", "PAP-475"]
 blocks: ["PAP-412"]
 key: "growth/support/chat-notes"
 url: "https://linear.app/paperos/issue/PAP-411/portal-supportchat-widget-with-live-sync-and-presence-unauthenticated"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:50.203Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:58:05.711Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-411: Portal SupportChat widget with live sync and presence, unauthenticated email capture and internal notes on comment threads
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

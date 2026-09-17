@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-165"
 children: []
 blockedBy: ["PAP-342"]
-blocks: ["PAP-135", "PAP-166", "PAP-172", "PAP-173", "PAP-183", "PAP-189"]
+blocks: ["PAP-135", "PAP-166", "PAP-172", "PAP-173", "PAP-183", "PAP-189", "PAP-489"]
 key: "tables/grid/columns-groups-panel"
 url: "https://linear.app/paperos/issue/PAP-343/column-operations-grouping-headers-aggregate-footer-and-recordpanel"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:35.594Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:33.305Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-343: Column operations, grouping headers, aggregate footer and RecordPanel
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

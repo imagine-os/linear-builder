@@ -15,13 +15,15 @@ blockedBy: ["PAP-96", "PAP-283"]
 blocks: ["PAP-111", "PAP-113"]
 key: "pm-linear/credit-metering"
 url: "https://linear.app/paperos/issue/PAP-98/track-claude-credit-spend-per-issue-and-project-and-post-a-daily-burn"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:19.146Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:18.010Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-98: Track Claude credit spend per issue and project and post a daily burn report to Linear
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build M, P0 in pm-linear
 
 **Goal**
 

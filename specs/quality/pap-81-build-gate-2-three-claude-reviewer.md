@@ -15,13 +15,15 @@ blockedBy: ["PAP-78", "PAP-79", "PAP-239", "PAP-299"]
 blocks: ["PAP-85", "PAP-88", "PAP-241", "PAP-253"]
 key: "quality/review-agents"
 url: "https://linear.app/paperos/issue/PAP-81/build-gate-2-three-claude-reviewer-agents-correctness-security-spec"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:04:56.488Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:17.309Z"
 model: null
 effort: null
 ---
 
 # PAP-81: Build gate 2: three Claude reviewer agents (correctness, security, spec-conformance) posting structured PR reviews
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -89,3 +91,7 @@ Sentinel (Code Reviewer and Security Auditor write their own prompts) with Atlas
 **Size**
 
 L, split into 3 children (M, M, S).
+
+**Module boundary**
+
+This umbrella is the Quality Pipeline half of the PaperOS Module System (`docs/module-system.md`). The `quality` module implements `@paperos/contract-quality` (gate artefact schemas, finding and severity taxonomy, gate runner, RC manifest, test seed port). Reviewers, the orchestrator and the digest read artefacts only through these schemas; the module may import `@paperos/core`, `@paperos/contract-forge`, `@paperos/contract-pm-linear` and its own packages. Its manifest declares `provides: [{ contract: '@paperos/contract-quality', version: '0.1.0' }]`, `owner: { agent: 'Sentinel', project: 'quality' }` and `swapRisk: 'medium'`. The contract package is published by `PAP-462`, proven by `PAP-463` and bound into `@paperos/kernel` by `PAP-464`; children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

@@ -6,22 +6,24 @@ projectName: "Version Control & Forge Independence"
 phase: "P0"
 type: "Spec"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Forgejo live and mirrored"
 state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-49", "PAP-52", "PAP-96", "PAP-133", "PAP-281"]
+blocks: ["PAP-49", "PAP-52", "PAP-96", "PAP-133", "PAP-281", "PAP-449"]
 key: "forge/branch-policy"
 url: "https://linear.app/paperos/issue/PAP-46/define-branch-protection-conventional-commits-and-worktree-per-issue"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:05:41.818Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:02.137Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-46: Define branch protection, conventional commits and worktree-per-issue conventions for parallel agents
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Spec P0
 
 **Goal**
 

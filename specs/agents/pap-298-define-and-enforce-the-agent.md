@@ -15,13 +15,15 @@ blockedBy: ["PAP-106", "PAP-210"]
 blocks: ["PAP-96", "PAP-111", "PAP-280"]
 key: "security/agent-deny-list"
 url: "https://linear.app/paperos/issue/PAP-298/define-and-enforce-the-agent-destructive-action-deny-list-policy-file"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:08.408Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:20.407Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-298: Define and enforce the agent destructive-action deny list: policy file, PreToolUse hook, MCP destructive-scope interception with Needs Justin escalation, and server-side backstops
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — security-sensitive title keyword: deny list
 
 **Goal**
 

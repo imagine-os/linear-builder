@@ -15,13 +15,15 @@ blockedBy: ["PAP-209"]
 blocks: ["PAP-67", "PAP-236"]
 key: "libraries/ui-landscape"
 url: "https://linear.app/paperos/issue/PAP-212/survey-ui-kits-and-headless-libraries-base-ui-radix-react-aria-shadcn"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T05:21:26.859Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:57.033Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-212: Survey UI kits and headless libraries (Base UI, Radix, React Aria, shadcn, Ark) and recommend
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Research M
 
 **Goal**
 

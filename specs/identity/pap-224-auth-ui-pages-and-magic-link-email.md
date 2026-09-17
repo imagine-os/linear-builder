@@ -15,13 +15,15 @@ blockedBy: ["PAP-223"]
 blocks: ["PAP-58", "PAP-86", "PAP-140", "PAP-220", "PAP-240"]
 key: "identity/better-auth/ui-pages-email"
 url: "https://linear.app/paperos/issue/PAP-224/auth-ui-pages-and-magic-link-email-delivery"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:04:36.750Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:01.740Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-224: Auth UI pages and magic-link email delivery
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — security-sensitive title keyword: Auth
 
 **Goal**
 

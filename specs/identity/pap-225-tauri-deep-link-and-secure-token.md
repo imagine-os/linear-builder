@@ -15,13 +15,15 @@ blockedBy: ["PAP-223"]
 blocks: []
 key: "identity/better-auth/tauri-session"
 url: "https://linear.app/paperos/issue/PAP-225/tauri-deep-link-and-secure-token-session-flow"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:04:36.750Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:01.817Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-225: Tauri deep-link and secure-token session flow
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build M, P0 in identity
 
 **Goal**
 

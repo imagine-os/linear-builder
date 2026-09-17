@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-13"]
-blocks: ["PAP-21", "PAP-22", "PAP-24", "PAP-54", "PAP-62", "PAP-63", "PAP-70", "PAP-128", "PAP-261", "PAP-262", "PAP-277"]
+blocks: ["PAP-21", "PAP-22", "PAP-24", "PAP-54", "PAP-62", "PAP-63", "PAP-70", "PAP-128", "PAP-261", "PAP-262", "PAP-277", "PAP-438", "PAP-447", "PAP-453"]
 key: "app-shell/router-layouts"
 url: "https://linear.app/paperos/issue/PAP-16/implement-file-based-router-with-layout-slots-nav-sidebar-inspector"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:05:33.665Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:11.299Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-16: Implement file-based router with layout slots (nav, sidebar, inspector, command bar) driven by page specs
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 
@@ -98,3 +100,7 @@ Built by Forge. Reviewed by Sentinel (Code Reviewer) and Quill (spec adapter nam
 **Size**
 
 M: one library, one adapter, three example routes.
+
+**Module boundary**
+
+This issue is the Universal App Shell & Repo Template half of the PaperOS Module System (`docs/module-system.md`). The `app-shell` module implements `@paperos/contract-app-shell` (slots, route contribution, layout, window manager, config and secrets, flags, i18n, native capabilities). It may import `@paperos/core`, any `@paperos/contract-*` and its own packages; it must never import another module's implementation package, and modules reach the shell only through slot fills and route contributions declared in their manifests. Its manifest declares `provides: [{ contract: '@paperos/contract-app-shell', version: '0.1.0' }]`, `owner: { agent: 'Forge', project: 'app-shell' }` and `swapRisk: 'critical'`. The contract package is published by PAP-447 (`module/app-shell/contract`), proven by PAP-450 (`module/app-shell/conformance`) and bound into `@paperos/kernel` by PAP-453 (`module/app-shell/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

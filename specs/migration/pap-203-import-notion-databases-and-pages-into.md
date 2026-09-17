@@ -15,13 +15,15 @@ blockedBy: ["PAP-128", "PAP-199", "PAP-201", "PAP-349"]
 blocks: []
 key: "migration/notion"
 url: "https://linear.app/paperos/issue/PAP-203/import-notion-databases-and-pages-into-tables-and-docs"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:41.073Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:56.242Z"
 model: null
 effort: null
 ---
 
 # PAP-203: Import Notion databases and pages into tables and docs
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

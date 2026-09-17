@@ -15,13 +15,15 @@ blockedBy: ["PAP-70", "PAP-114"]
 blocks: []
 key: "spec-builder/spec-editor-ui"
 url: "https://linear.app/paperos/issue/PAP-124/build-the-spec-editor-ui-with-form-and-yaml-views-and-live-preview"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:16.029Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:29.567Z"
 model: null
 effort: null
 ---
 
 # PAP-124: Build the spec editor UI with form and YAML views and live preview
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

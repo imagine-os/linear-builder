@@ -15,13 +15,15 @@ blockedBy: ["PAP-35", "PAP-114", "PAP-269", "PAP-279"]
 blocks: ["PAP-362"]
 key: "spec-builder/data-section"
 url: "https://linear.app/paperos/issue/PAP-119/specify-the-data-section-entities-queries-mutations-sync-mode-and"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:16.403Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:27.686Z"
 model: null
 effort: null
 ---
 
 # PAP-119: Specify the data section (entities, queries, mutations, sync mode) and generate typed hooks from it
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

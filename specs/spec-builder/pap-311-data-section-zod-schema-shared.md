@@ -15,13 +15,15 @@ blockedBy: ["PAP-114", "PAP-269", "PAP-279"]
 blocks: ["PAP-312", "PAP-313"]
 key: "spec-builder/data-section/schema"
 url: "https://linear.app/paperos/issue/PAP-311/data-section-zod-schema-shared-filtertree-import-and-validator-rules"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:06.860Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:23.268Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-311: Data section: Zod schema, shared FilterTree import and validator rules
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Spec P1
 
 **Goal**
 

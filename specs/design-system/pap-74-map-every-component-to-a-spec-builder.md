@@ -6,22 +6,24 @@ projectName: "Design System"
 phase: "P1"
 type: "Spec"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Component library covers app shell needs"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-67", "PAP-114", "PAP-238"]
-blocks: ["PAP-120", "PAP-314"]
+blocks: ["PAP-120", "PAP-314", "PAP-459"]
 key: "design-system/component-spec-mapping"
 url: "https://linear.app/paperos/issue/PAP-74/map-every-component-to-a-spec-builder-component-id-with-props-schema"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:47.788Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:11.291Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-74: Map every component to a spec-builder component ID with props schema so page specs reference real components
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Spec P1
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-104", "PAP-287"]
 blocks: []
 key: "agents/character-docs"
 url: "https://linear.app/paperos/issue/PAP-112/publish-the-character-handbook-who-does-what-how-to-summon-them-what"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:19.840Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:25.178Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-112: Publish the character handbook: who does what, how to summon them, what they may not do
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Docs M
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-350"]
 blocks: ["PAP-352"]
 key: "child/PAP-215/1"
 url: "https://linear.app/paperos/issue/PAP-351/spike-growth-products-twenty-crm-chatwoot-listmonk-and-postiz-with"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:41.073Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:34.565Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-351: Spike growth products: Twenty CRM, Chatwoot, Listmonk and Postiz with compose, seeded flows, metrics and scorecards
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Research M
 
 **Goal**
 

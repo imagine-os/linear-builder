@@ -15,13 +15,15 @@ blockedBy: ["PAP-295"]
 blocks: ["PAP-297"]
 key: "child/PAP-214/1"
 url: "https://linear.app/paperos/issue/PAP-296/decide-search-observability-feature-flags-and-object-storage-with-a"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:24.319Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:20.130Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-296: Decide search, observability, feature flags and object storage with a resource budget table under 6 GB
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Research M
 
 **Goal**
 

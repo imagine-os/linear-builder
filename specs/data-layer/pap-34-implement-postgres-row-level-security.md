@@ -15,13 +15,15 @@ blockedBy: ["PAP-33"]
 blocks: ["PAP-36", "PAP-39", "PAP-59", "PAP-228", "PAP-270"]
 key: "data-layer/rls-tenancy"
 url: "https://linear.app/paperos/issue/PAP-34/implement-postgres-row-level-security-policies-for-multi-tenant"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:05:39.036Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:59.138Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-34: Implement Postgres row-level security policies for multi-tenant isolation with a cross-tenant test harness
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build M, P0 in data-layer
 
 **Goal**
 

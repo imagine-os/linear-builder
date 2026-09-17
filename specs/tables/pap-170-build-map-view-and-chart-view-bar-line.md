@@ -15,13 +15,15 @@ blockedBy: ["PAP-163", "PAP-213", "PAP-294", "PAP-337"]
 blocks: ["PAP-173", "PAP-386"]
 key: "tables/map-chart-views"
 url: "https://linear.app/paperos/issue/PAP-170/build-map-view-and-chart-view-bar-line-pie-number-bound-to-view"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:34.130Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:43.973Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-170: Build map view and chart view (bar, line, pie, number) bound to view aggregations
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

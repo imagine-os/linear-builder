@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-45", "PAP-273"]
-blocks: ["PAP-22", "PAP-51", "PAP-53"]
+blocks: ["PAP-22", "PAP-51", "PAP-53", "PAP-455"]
 key: "forge/mirror"
 url: "https://linear.app/paperos/issue/PAP-47/configure-bidirectional-push-mirroring-between-forgejo-and-the-github"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:45.357Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:02.243Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-47: Configure bidirectional push mirroring between Forgejo and the GitHub org imagine-os for all repos
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

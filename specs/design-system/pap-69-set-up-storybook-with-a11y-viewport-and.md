@@ -15,13 +15,15 @@ blockedBy: ["PAP-67", "PAP-238"]
 blocks: ["PAP-73", "PAP-76"]
 key: "design-system/storybook"
 url: "https://linear.app/paperos/issue/PAP-69/set-up-storybook-with-a11y-viewport-and-interaction-test-addons"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:49.395Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:09.412Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-69: Set up Storybook with a11y, viewport and interaction-test addons deployed to GitHub Pages
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

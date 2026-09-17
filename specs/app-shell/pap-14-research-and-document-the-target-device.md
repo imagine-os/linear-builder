@@ -15,13 +15,15 @@ blockedBy: []
 blocks: ["PAP-20", "PAP-21", "PAP-82", "PAP-246", "PAP-258", "PAP-261"]
 key: "app-shell/device-matrix-research"
 url: "https://linear.app/paperos/issue/PAP-14/research-and-document-the-target-device-matrix-phone-tablet-laptop"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:05:33.425Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:51.451Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-14: Research and document the target device matrix (phone, tablet, laptop, desktop, TV/kiosk, foldable) with breakpoints and test devices
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Research S
 
 **Goal**
 

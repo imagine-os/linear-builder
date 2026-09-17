@@ -12,16 +12,18 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-27", "PAP-71", "PAP-131", "PAP-136", "PAP-164", "PAP-175", "PAP-268"]
+blocks: ["PAP-27", "PAP-71", "PAP-131", "PAP-136", "PAP-164", "PAP-175", "PAP-268", "PAP-448"]
 key: "contracts/shared-value-types"
 url: "https://linear.app/paperos/issue/PAP-302/specify-shared-value-types-and-wire-encodings-in-packagescoretypes"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:00:52.035Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:20.806Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-302: Specify shared value types and wire encodings in `packages/core/types`: `Money` (bigint minor units, string on the wire), `ActorRef`, `EntityRef`, UUIDv7 ids, timestamps, signed cursors and the `ApiError` body
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Spec P0
 
 **Goal**
 

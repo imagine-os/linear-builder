@@ -15,13 +15,15 @@ blockedBy: ["PAP-78", "PAP-240"]
 blocks: ["PAP-242"]
 key: "quality/perf-budgets"
 url: "https://linear.app/paperos/issue/PAP-87/enforce-performance-budgets-lcp-inp-bundle-size-with-lighthouse-ci"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:18:16.568Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:14.845Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-87: Enforce performance budgets (LCP, INP, bundle size) with Lighthouse CI
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S
 
 **Goal**
 

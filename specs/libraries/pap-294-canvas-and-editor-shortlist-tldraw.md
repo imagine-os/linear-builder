@@ -15,13 +15,15 @@ blockedBy: ["PAP-293"]
 blocks: ["PAP-170"]
 key: "child/PAP-213/2"
 url: "https://linear.app/paperos/issue/PAP-294/canvas-and-editor-shortlist-tldraw-react-flow-excalidraw-konva-tiptap"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:22.997Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:19.943Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-294: Canvas and editor shortlist: tldraw, React Flow, Excalidraw, Konva; Tiptap, BlockNote, Lexical, Plate, handed to collab research
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Research S
 
 **Goal**
 

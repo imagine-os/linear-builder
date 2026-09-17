@@ -15,13 +15,15 @@ blockedBy: ["PAP-17", "PAP-259"]
 blocks: ["PAP-154"]
 key: "child/PAP-20/5"
 url: "https://linear.app/paperos/issue/PAP-260/mobile-plugin-wiring-safe-areas-and-device-proofs-camera-haptics"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:35.093Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:10.181Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-260: Mobile plugin wiring, safe areas and device proofs (camera, haptics, biometrics, secure storage, share)
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

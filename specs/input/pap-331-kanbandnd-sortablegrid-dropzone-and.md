@@ -15,13 +15,15 @@ blockedBy: ["PAP-330"]
 blocks: ["PAP-167", "PAP-173"]
 key: "input/dnd/kanban-grid-dropzone-crosswindow"
 url: "https://linear.app/paperos/issue/PAP-331/kanbandnd-sortablegrid-dropzone-and-cross-window-drag"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:30.221Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:29.225Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-331: KanbanDnd, SortableGrid, DropZone and cross-window drag
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

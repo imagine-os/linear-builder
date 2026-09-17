@@ -7,21 +7,23 @@ phase: "P1"
 type: "Build"
 priority: 2
 surfaces: ["Staff"]
-milestone: "Roles and audiences enforced end to end"
+milestone: "Agent principals and enterprise"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-16", "PAP-58"]
+blockedBy: ["PAP-16", "PAP-58", "PAP-438", "PAP-447"]
 blocks: []
 key: "identity/staff-console-shell"
 url: "https://linear.app/paperos/issue/PAP-63/ship-the-staff-console-shell-with-tenant-switcher-audience-filters-and"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:18:10.492Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:11:29.700Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-63: Ship the staff console shell with tenant switcher, audience filters and admin navigation
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

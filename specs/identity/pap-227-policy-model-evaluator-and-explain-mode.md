@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-59"
 children: []
 blockedBy: ["PAP-55", "PAP-279"]
-blocks: ["PAP-228", "PAP-229"]
+blocks: ["PAP-228", "PAP-229", "PAP-458"]
 key: "identity/rbac-abac/model-evaluator"
 url: "https://linear.app/paperos/issue/PAP-227/policy-model-evaluator-and-explain-mode"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:39.016Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:02.027Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-227: Policy model, evaluator and explain mode
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build M, P0 in identity
 
 **Goal**
 

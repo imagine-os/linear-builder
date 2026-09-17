@@ -15,13 +15,15 @@ blockedBy: ["PAP-67", "PAP-150", "PAP-238"]
 blocks: ["PAP-153", "PAP-159", "PAP-165", "PAP-341"]
 key: "input/command-registry"
 url: "https://linear.app/paperos/issue/PAP-151/build-the-global-command-registry-with-keyboard-shortcuts-command"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:03:42.162Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:58:15.052Z"
 model: null
 effort: null
 ---
 
 # PAP-151: Build the global command registry with keyboard shortcuts, command palette and per-page scoping
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -85,3 +87,7 @@ Builder: Nova. Reviewer: Sentinel (Code Reviewer, Security Auditor for the endpo
 **Size**
 
 L, planned as three M/S work packages (child issues pending the issue limit).
+
+**Module boundary**
+
+This umbrella is the Multi-Input Control & Accessibility half of the PaperOS Module System (`docs/module-system.md`). The `input` module implements `@paperos/contract-input` (input event abstraction, command registry, keymap presets, focus, drag-and-drop sensors, gesture and voice routing). Tables, canvas and shells register commands and sensors only through these ports and fill `shell.commandBar` through the manifest; the module may import `@paperos/core`, `contract-app-shell`, `contract-design-system` and its own package. Its manifest declares `provides: [{ contract: '@paperos/contract-input', version: '0.1.0' }]`, `owner: { agent: 'Nova', project: 'input' }` and `swapRisk: 'low'`. The contract package is published by PAP-476 (`module/input/contract`), proven by PAP-479 (`module/input/conformance`) and bound into `@paperos/kernel` by PAP-482 (`module/input/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

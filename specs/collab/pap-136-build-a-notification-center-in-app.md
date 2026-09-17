@@ -11,17 +11,19 @@ milestone: "Comments and canvas"
 state: "Backlog"
 parent: null
 children: ["PAP-323", "PAP-324", "PAP-325"]
-blockedBy: ["PAP-43", "PAP-131", "PAP-302", "PAP-303", "PAP-319"]
+blockedBy: ["PAP-43", "PAP-131", "PAP-302", "PAP-303", "PAP-319", "PAP-436"]
 blocks: []
 key: "collab/notifications"
 url: "https://linear.app/paperos/issue/PAP-136/build-a-notification-center-in-app-email-slack-with-per-audience"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:27.539Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:50:05.968Z"
 model: null
 effort: null
 ---
 
 # PAP-136: Build a notification center (in-app, email, Slack) with per-audience preferences
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

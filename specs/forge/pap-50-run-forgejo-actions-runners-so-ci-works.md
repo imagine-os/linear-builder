@@ -15,13 +15,15 @@ blockedBy: ["PAP-45", "PAP-273"]
 blocks: ["PAP-53"]
 key: "forge/actions-runner"
 url: "https://linear.app/paperos/issue/PAP-50/run-forgejo-actions-runners-so-ci-works-even-when-github-is"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:45.357Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:02.526Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-50: Run Forgejo Actions runners so CI works even when GitHub is unavailable
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

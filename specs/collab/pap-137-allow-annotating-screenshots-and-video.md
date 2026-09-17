@@ -11,17 +11,19 @@ milestone: "Knowledge surfaced everywhere"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-83", "PAP-131", "PAP-319"]
+blockedBy: ["PAP-83", "PAP-131", "PAP-319", "PAP-462", "PAP-474"]
 blocks: []
 key: "collab/screenshot-annotations"
 url: "https://linear.app/paperos/issue/PAP-137/allow-annotating-screenshots-and-video-frames-with-comments-that"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:27.539Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:58:04.356Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-137: Allow annotating screenshots and video frames with comments that create Linear issues
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

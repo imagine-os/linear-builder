@@ -15,13 +15,15 @@ blockedBy: []
 blocks: ["PAP-22", "PAP-93", "PAP-94", "PAP-95", "PAP-96", "PAP-281"]
 key: "pm-linear/configure-workspace"
 url: "https://linear.app/paperos/issue/PAP-91/add-pipeline-states-ready-for-claude-in-review-needs-justin-label"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:55.994Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:15.258Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-91: Add pipeline states (Ready for Claude, In Review, Needs Justin), label groups and project templates to Linear team PAP
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S
 
 **Needs Justin — NJ-1: upgrade the Linear workspace plan**
 

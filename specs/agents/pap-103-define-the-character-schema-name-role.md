@@ -12,16 +12,18 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-104", "PAP-105", "PAP-284"]
+blocks: ["PAP-104", "PAP-105", "PAP-284", "PAP-466"]
 key: "agents/character-schema"
 url: "https://linear.app/paperos/issue/PAP-103/define-the-character-schema-name-role-reportsto-tools-mcp-servers"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:43:03.703Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:23.263Z"
 model: "claude-fable-5-1"
 effort: "high"
 ---
 
 # PAP-103: Define the character schema: name, role, reportsTo, tools, MCP servers, access scopes, plugins, skills, memory, escalation rules
+
+**Model / Effort:** Fable 5.1 (`claude-fable-5-1`) / high — keystone spec: character schema
 
 **Goal**
 

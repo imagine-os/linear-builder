@@ -15,13 +15,15 @@ blockedBy: ["PAP-13"]
 blocks: ["PAP-18", "PAP-365"]
 key: "app-shell/gh-pages-demo"
 url: "https://linear.app/paperos/issue/PAP-15/set-up-github-pages-demo-deploy-for-every-app-with-per-pr-preview-urls"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:05:33.543Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:51.542Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-15: Set up GitHub Pages demo deploy for every app with per-PR preview URLs
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S
 
 **Goal**
 

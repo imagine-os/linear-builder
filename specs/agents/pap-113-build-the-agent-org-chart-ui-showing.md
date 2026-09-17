@@ -6,22 +6,24 @@ projectName: "Agent Characters & Orgs"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Agent", "Staff"]
+surfaces: ["Staff", "Agent"]
 milestone: "Agent org visible in app"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-98", "PAP-104", "PAP-132", "PAP-287", "PAP-288", "PAP-322"]
+blockedBy: ["PAP-98", "PAP-104", "PAP-132", "PAP-287", "PAP-288", "PAP-322", "PAP-466"]
 blocks: []
 key: "agents/org-chart-ui"
 url: "https://linear.app/paperos/issue/PAP-113/build-the-agent-org-chart-ui-showing-characters-sub-agents-current"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:16.883Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:57:13.042Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-113: Build the agent org chart UI showing characters, sub-agents, current tasks, tools and access
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

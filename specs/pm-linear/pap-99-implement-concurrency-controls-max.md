@@ -15,13 +15,15 @@ blockedBy: ["PAP-96", "PAP-283"]
 blocks: ["PAP-306"]
 key: "pm-linear/concurrency"
 url: "https://linear.app/paperos/issue/PAP-99/implement-concurrency-controls-max-parallel-sessions-file-lock-hints"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:18.319Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:18.179Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-99: Implement concurrency controls: max parallel sessions, file-lock hints and dependency-aware scheduling from dependsOn
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-27", "PAP-120"]
 blocks: []
 key: "spec-builder/spec-i18n"
 url: "https://linear.app/paperos/issue/PAP-375/add-spec-level-internationalisation-message-ids-for-spec-copy-fields"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:12.501Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:42.647Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-375: Add spec-level internationalisation: message IDs for spec copy fields, extraction into catalogs, pseudo-locale validation rule
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

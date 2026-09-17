@@ -15,13 +15,15 @@ blockedBy: ["PAP-25"]
 blocks: ["PAP-47", "PAP-48", "PAP-50", "PAP-274"]
 key: "child/PAP-45/18"
 url: "https://linear.app/paperos/issue/PAP-273/forgejo-compose-stack-behind-caddy-with-hardened-appini-accounts-and"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:36.535Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:14.390Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-273: Forgejo compose stack behind Caddy with hardened app.ini, accounts and org
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

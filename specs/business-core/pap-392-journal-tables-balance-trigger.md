@@ -15,13 +15,15 @@ blockedBy: ["PAP-175"]
 blocks: ["PAP-393"]
 key: "business-core/ledger/journal-constraints"
 url: "https://linear.app/paperos/issue/PAP-392/journal-tables-balance-trigger-immutability-trigger-gapless-numbering"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:45.105Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:47.276Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-392: Journal tables, balance trigger, immutability trigger, gapless numbering and account balances
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

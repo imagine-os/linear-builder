@@ -12,16 +12,18 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-15", "PAP-16", "PAP-17", "PAP-18", "PAP-19", "PAP-26", "PAP-27", "PAP-42", "PAP-78", "PAP-255", "PAP-305"]
+blocks: ["PAP-15", "PAP-16", "PAP-17", "PAP-18", "PAP-19", "PAP-26", "PAP-27", "PAP-42", "PAP-78", "PAP-255", "PAP-305", "PAP-434"]
 key: "app-shell/monorepo-scaffold"
 url: "https://linear.app/paperos/issue/PAP-13/scaffold-paperos-template-monorepo-with-pnpm-turborepo-strict"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:43:03.283Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:51.258Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-13: Scaffold paperos-template monorepo with pnpm, Turborepo, strict TypeScript and a Vite React 19 web app
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — monorepo scaffold (named exception)
 
 **Goal**
 

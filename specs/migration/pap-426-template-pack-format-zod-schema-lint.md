@@ -11,17 +11,19 @@ milestone: "Business migrations"
 state: "Backlog"
 parent: "PAP-207"
 children: []
-blockedBy: ["PAP-114", "PAP-161", "PAP-199"]
+blockedBy: ["PAP-114", "PAP-161", "PAP-199", "PAP-492"]
 blocks: ["PAP-427"]
 key: "child/PAP-207/0"
 url: "https://linear.app/paperos/issue/PAP-426/template-pack-format-zod-schema-lint-and-the-template-applier"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:53.416Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:42.001Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-426: Template pack format, Zod schema, lint, and the `template` applier connector with conflict strategies, composition and upgrade
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

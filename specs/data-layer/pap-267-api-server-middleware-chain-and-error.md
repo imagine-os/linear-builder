@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-35"
 children: []
 blockedBy: ["PAP-33"]
-blocks: ["PAP-268", "PAP-270", "PAP-304"]
+blocks: ["PAP-268", "PAP-270", "PAP-304", "PAP-437", "PAP-454"]
 key: "child/PAP-35/12"
 url: "https://linear.app/paperos/issue/PAP-267/api-server-middleware-chain-and-error-mapping-appsapi-on-hono-4"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:43:05.951Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:12.234Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-267: API server, middleware chain and error mapping (apps/api on Hono 4)
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build M, P0 in data-layer
 
 **Goal**
 

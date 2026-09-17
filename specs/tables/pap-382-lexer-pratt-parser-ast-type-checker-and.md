@@ -15,13 +15,15 @@ blockedBy: ["PAP-162", "PAP-164"]
 blocks: ["PAP-383"]
 key: "tables/formula/parser-typecheck"
 url: "https://linear.app/paperos/issue/PAP-382/lexer-pratt-parser-ast-type-checker-and-the-definefunction-catalogue"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:42.311Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:43.916Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-382: Lexer, Pratt parser, AST, type checker and the defineFunction catalogue
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-42"]
-blocks: ["PAP-33", "PAP-41", "PAP-43", "PAP-129", "PAP-240", "PAP-334", "PAP-353"]
+blocks: ["PAP-33", "PAP-41", "PAP-43", "PAP-129", "PAP-240", "PAP-334", "PAP-353", "PAP-443"]
 key: "data-layer/drizzle-schema"
 url: "https://linear.app/paperos/issue/PAP-32/set-up-drizzle-orm-schema-as-code-with-migration-workflow-and-seed"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:05:38.185Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:57.451Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-32: Set up Drizzle ORM schema-as-code with migration workflow and seed scripts
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build M, P0 in data-layer
 
 **Goal**
 

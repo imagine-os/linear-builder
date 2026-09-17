@@ -7,7 +7,7 @@ phase: "P1"
 type: "Infra"
 priority: 2
 surfaces: ["Developer"]
-milestone: "CI runs on both forges"
+milestone: "Disaster recovery proven"
 state: "Backlog"
 parent: null
 children: []
@@ -15,13 +15,15 @@ blockedBy: ["PAP-26", "PAP-52", "PAP-80"]
 blocks: ["PAP-254"]
 key: "security/supply-chain"
 url: "https://linear.app/paperos/issue/PAP-358/add-supply-chain-integrity-lockfile-and-minimum-release-age-policy"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:03.990Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:11:28.311Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-358: Add supply-chain integrity: lockfile and minimum-release-age policy, pinned actions by digest, SLSA provenance attestations and cosign signatures for container images and Tauri artifacts, verified before deploy and update
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

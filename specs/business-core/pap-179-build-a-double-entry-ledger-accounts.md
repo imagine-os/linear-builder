@@ -15,13 +15,15 @@ blockedBy: ["PAP-175", "PAP-303"]
 blocks: ["PAP-180", "PAP-181", "PAP-183", "PAP-184", "PAP-185", "PAP-196", "PAP-206", "PAP-397", "PAP-400", "PAP-408", "PAP-423"]
 key: "business-core/ledger"
 url: "https://linear.app/paperos/issue/PAP-179/build-a-double-entry-ledger-accounts-journal-entries-periods-in"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:12.458Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:49.729Z"
 model: null
 effort: null
 ---
 
 # PAP-179: Build a double-entry ledger (accounts, journal entries, periods) in Postgres with immutability guarantees
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -90,3 +92,7 @@ L, split into three M children plus a dedicated adversarial review.
 **Pending issues**
 
 Bracketed references above are fully specified work packages that Linear refused to create on 2026-09-17 (`USAGE_LIMIT_EXCEEDED`, free-plan issue cap). Their specs live in the project document(s) [business-core](<https://linear.app/paperos/document/round-2-pending-issues-business-core-11-7c8c2526b3c9>) and they are created as issues by `round2/agent4/create_issues.py` once the workspace plan is upgraded.
+
+**Module boundary**
+
+This umbrella is the Business Core: Payments, Finance & Payroll half of the PaperOS Module System (`docs/module-system.md`). The `business-core` module implements `@paperos/contract-business-core` (finance model, ledger and posting rules, billing, payments, tax and payroll provider ports, document port, entitlements, usage metering). Growth, migration and dashboards post to the ledger and read entitlements only through these ports; Stripe and payroll SDKs are imported nowhere else. The module may import `@paperos/core`, `contract-data-layer`, `contract-identity`, `contract-tables` and its own package. Its manifest declares `provides: [{ contract: '@paperos/contract-business-core', version: '0.1.0' }]`, `owner: { agent: 'Ledger', project: 'business-core' }` and `swapRisk: 'high'`. The contract package is published by PAP-484 (`module/business-core/contract`), proven by PAP-487 (`module/business-core/conformance`) and bound into `@paperos/kernel` by PAP-490 (`module/business-core/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

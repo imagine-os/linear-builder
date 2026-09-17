@@ -15,13 +15,15 @@ blockedBy: ["PAP-351"]
 blocks: []
 key: "child/PAP-215/2"
 url: "https://linear.app/paperos/issue/PAP-352/spike-calcom-and-formbricks-then-write-the-oss-products-mode-adr"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:41.073Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:34.842Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-352: Spike Cal.com and Formbricks, then write the OSS products mode ADR, borrow reference docs and embed integration contracts
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Research M
 
 **Goal**
 

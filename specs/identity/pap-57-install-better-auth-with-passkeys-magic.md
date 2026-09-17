@@ -15,13 +15,15 @@ blockedBy: ["PAP-33", "PAP-56"]
 blocks: ["PAP-58", "PAP-86", "PAP-140", "PAP-220", "PAP-240"]
 key: "identity/better-auth"
 url: "https://linear.app/paperos/issue/PAP-57/install-better-auth-with-passkeys-magic-link-googlegithub-oauth-and"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:18:09.223Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:06.626Z"
 model: null
 effort: null
 ---
 
 # PAP-57: Install Better Auth with passkeys, magic link, Google/GitHub OAuth and sessions for web and Tauri
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-268", "PAP-271"]
 blocks: ["PAP-143", "PAP-327"]
 key: "child/PAP-36/17"
 url: "https://linear.app/paperos/issue/PAP-272/offline-write-outbox-replay-with-backoff-leader-election-and"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:36.535Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:12.707Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-272: Offline write outbox, replay with backoff, leader election and SyncIndicator
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

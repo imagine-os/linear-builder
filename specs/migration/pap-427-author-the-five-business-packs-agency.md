@@ -15,13 +15,15 @@ blockedBy: ["PAP-426"]
 blocks: ["PAP-428"]
 key: "child/PAP-207/1"
 url: "https://linear.app/paperos/issue/PAP-427/author-the-five-business-packs-agency-retail-saas-clinic-restaurant"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:53.416Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:57.474Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-427: Author the five business packs (agency, retail, SaaS, clinic, restaurant) with page specs, views, pipelines, charts of accounts, sample data and starter docs
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

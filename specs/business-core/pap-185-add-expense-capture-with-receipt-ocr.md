@@ -15,13 +15,15 @@ blockedBy: ["PAP-37", "PAP-175", "PAP-179", "PAP-394"]
 blocks: []
 key: "business-core/expense-capture"
 url: "https://linear.app/paperos/issue/PAP-185/add-expense-capture-with-receipt-ocr-and-ledger-posting"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:45.105Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:49.458Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-185: Add expense capture with receipt OCR and ledger posting
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

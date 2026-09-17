@@ -6,22 +6,24 @@ projectName: "Quality Pipeline"
 phase: "P0"
 type: "Spec"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Gates 1 and 2 on every PR"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-79"]
-blocks: ["PAP-80", "PAP-81", "PAP-82", "PAP-83", "PAP-84", "PAP-85", "PAP-89", "PAP-243", "PAP-248", "PAP-249", "PAP-429"]
+blocks: ["PAP-80", "PAP-81", "PAP-82", "PAP-83", "PAP-84", "PAP-85", "PAP-89", "PAP-243", "PAP-248", "PAP-249", "PAP-429", "PAP-441", "PAP-462"]
 key: "quality/gate-artifact-contract"
 url: "https://linear.app/paperos/issue/PAP-239/specify-the-gate-artifact-contract-one-schema-package-for-gate1json"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:43:12.833Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:04.936Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-239: Specify the gate artifact contract: one schema package for gate1.json, security.json, visual.json, videos.json, vision.json, edgecases.json, finding IDs and artifact paths
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Spec P0
 
 **Goal**
 

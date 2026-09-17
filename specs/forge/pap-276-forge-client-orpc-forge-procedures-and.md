@@ -6,22 +6,24 @@ projectName: "Version Control & Forge Independence"
 phase: "P2"
 type: "Build"
 priority: 4
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Disaster recovery proven"
 state: "Backlog"
 parent: "PAP-54"
 children: []
-blockedBy: ["PAP-45", "PAP-51", "PAP-268"]
-blocks: ["PAP-277"]
+blockedBy: ["PAP-45", "PAP-51", "PAP-268", "PAP-449"]
+blocks: ["PAP-277", "PAP-455"]
 key: "child/PAP-54/21"
 url: "https://linear.app/paperos/issue/PAP-276/forge-client-orpc-forge-procedures-and-forgeread-permission-checks"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:23:19.554Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:04.437Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-276: Forge client, oRPC forge.* procedures and forge.read permission checks
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

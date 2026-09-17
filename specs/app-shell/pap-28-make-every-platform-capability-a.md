@@ -15,13 +15,15 @@ blockedBy: ["PAP-22", "PAP-117", "PAP-303", "PAP-305"]
 blocks: ["PAP-29", "PAP-126"]
 key: "app-shell/feature-modules"
 url: "https://linear.app/paperos/issue/PAP-28/make-every-platform-capability-a-removable-module-module-manifests"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:01.144Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:11.492Z"
 model: null
 effort: null
 ---
 
 # PAP-28: Make every platform capability a removable module: module manifests, `modules:` in app.spec.yaml, `paperos create --without`, per-tenant module toggles and dead-code checks
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -95,3 +97,7 @@ Built by Forge (Platform Engineer) with Quill on the spec section. Reviewed by S
 **Size**
 
 L as an umbrella; children are M, M, M.
+
+**Module boundary**
+
+This umbrella is the Universal App Shell & Repo Template half of the PaperOS Module System (`docs/module-system.md`). The `app-shell` module implements `@paperos/contract-app-shell` (slots, route contribution, layout, window manager, config and secrets, flags, i18n, native capabilities). It may import `@paperos/core`, any `@paperos/contract-*` and its own packages; it must never import another module's implementation package, and modules reach the shell only through slot fills and route contributions declared in their manifests. Its manifest declares `provides: [{ contract: '@paperos/contract-app-shell', version: '0.1.0' }]`, `owner: { agent: 'Forge', project: 'app-shell' }` and `swapRisk: 'critical'`. The contract package is published by PAP-447 (`module/app-shell/contract`), proven by PAP-450 (`module/app-shell/conformance`) and bound into `@paperos/kernel` by PAP-453 (`module/app-shell/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

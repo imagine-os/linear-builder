@@ -15,13 +15,15 @@ blockedBy: ["PAP-21", "PAP-145", "PAP-263"]
 blocks: []
 key: "app-shell/linux-kiosk"
 url: "https://linear.app/paperos/issue/PAP-23/support-linux-kiosk-and-parallel-browser-mode-launching-synced-windows"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:23:13.488Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:55.281Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-23: Support Linux kiosk and parallel-browser mode launching synced windows across displays from one CLI flag
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

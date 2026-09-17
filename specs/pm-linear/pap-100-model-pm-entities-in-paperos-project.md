@@ -6,22 +6,24 @@ projectName: "Project Management & Claude Pipeline"
 phase: "P1"
 type: "Spec"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Staff", "Developer"]
 milestone: "PM module syncs both ways"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-33", "PAP-305"]
+blockedBy: ["PAP-33", "PAP-305", "PAP-448", "PAP-465"]
 blocks: ["PAP-101", "PAP-102", "PAP-204", "PAP-372"]
 key: "pm-linear/pm-data-model"
 url: "https://linear.app/paperos/issue/PAP-100/model-pm-entities-in-paperos-project-issue-cycle-milestone-comment"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:01.144Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:57:13.042Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-100: Model PM entities in PaperOS (project, issue, cycle, milestone, comment, label) mirroring Linear's schema
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Spec P1
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-281"]
 blocks: ["PAP-283"]
 key: "pm-linear/orchestrator/sessions"
 url: "https://linear.app/paperos/issue/PAP-282/orchestrator-worktree-lifecycle-and-claude-session-launch"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:09.068Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:15.737Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-282: Orchestrator: worktree lifecycle and Claude session launch
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — child of PAP-96 orchestrator (named exception applied to children)
 
 **Goal**
 

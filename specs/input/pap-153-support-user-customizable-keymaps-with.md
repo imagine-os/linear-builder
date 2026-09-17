@@ -11,17 +11,19 @@ milestone: "Touch, pen, gamepad"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-151", "PAP-291"]
+blockedBy: ["PAP-151", "PAP-291", "PAP-476"]
 blocks: []
 key: "input/keymaps"
 url: "https://linear.app/paperos/issue/PAP-153/support-user-customizable-keymaps-with-presets-default-vim-style"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:22.997Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:58:05.711Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-153: Support user-customizable keymaps with presets (default, Vim-style, Linear-like) synced per user
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

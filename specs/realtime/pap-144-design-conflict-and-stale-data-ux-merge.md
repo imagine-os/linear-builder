@@ -15,13 +15,15 @@ blockedBy: ["PAP-143", "PAP-328"]
 blocks: ["PAP-148"]
 key: "realtime/conflict-ux"
 url: "https://linear.app/paperos/issue/PAP-144/design-conflict-and-stale-data-ux-merge-banners-last-writer-indicators"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:30.221Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:36.935Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-144: Design conflict and stale-data UX: merge banners, last-writer indicators, undo
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Spec P1
 
 **Goal**
 

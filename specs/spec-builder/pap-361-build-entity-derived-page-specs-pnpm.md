@@ -6,22 +6,24 @@ projectName: "Spec Builder"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Developer", "Staff"]
+surfaces: ["Developer", "Customer", "Staff"]
 milestone: "Codegen and conformance tests"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-116", "PAP-117", "PAP-161"]
+blockedBy: ["PAP-116", "PAP-117", "PAP-161", "PAP-467"]
 blocks: ["PAP-363"]
 key: "gp/spec-builder/entity-pages"
 url: "https://linear.app/paperos/issue/PAP-361/build-entity-derived-page-specs-pnpm-spec-genentity-pages-derives-list"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:10.040Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:11:30.303Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-361: Build entity-derived page specs: `pnpm spec gen:entity-pages` derives list, detail, form and settings pages per entity and audience with view specs, comment anchors and access rules
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

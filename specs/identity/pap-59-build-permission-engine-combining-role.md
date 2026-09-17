@@ -15,13 +15,15 @@ blockedBy: ["PAP-34", "PAP-55", "PAP-279"]
 blocks: ["PAP-39", "PAP-60", "PAP-61", "PAP-64", "PAP-116", "PAP-131", "PAP-140", "PAP-163", "PAP-172", "PAP-178", "PAP-222", "PAP-317", "PAP-335"]
 key: "identity/rbac-abac"
 url: "https://linear.app/paperos/issue/PAP-59/build-permission-engine-combining-role-based-grants-with-attribute"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:43:06.061Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:17.048Z"
 model: null
 effort: null
 ---
 
 # PAP-59: Build permission engine combining role-based grants with attribute policies declared in page specs
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -89,3 +91,7 @@ Forge leads (Schema Wright on PAP-228); Iris on component props. Sentinel (Secur
 **Size**
 
 L, split into 3 children (M, M, M).
+
+**Module boundary**
+
+This umbrella is the Identity, Roles & Audiences half of the PaperOS Module System (`docs/module-system.md`). The `identity` module implements `@paperos/contract-identity` (`Principal`, auth, permission, tenant, impersonation ports, audience segments). Every other module checks permissions only through `PermissionPort.can()` and reads the actor only from the request scope; the module may import `@paperos/core`, `@paperos/contract-data-layer` and its own packages, and never the Better Auth client from anywhere else. Its manifest declares `provides: [{ contract: '@paperos/contract-identity', version: '0.1.0' }]`, `owner: { agent: 'Forge', project: 'identity' }` and `swapRisk: 'critical'`. The contract package is published by `PAP-456`, proven by `PAP-457` and bound into `@paperos/kernel` by `PAP-458`; children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

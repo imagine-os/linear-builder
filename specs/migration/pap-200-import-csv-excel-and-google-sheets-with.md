@@ -15,13 +15,15 @@ blockedBy: ["PAP-199", "PAP-349"]
 blocks: ["PAP-413"]
 key: "migration/csv-excel"
 url: "https://linear.app/paperos/issue/PAP-200/import-csv-excel-and-google-sheets-with-type-inference"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:10.220Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:54.580Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-200: Import CSV, Excel and Google Sheets with type inference
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

@@ -6,22 +6,24 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Staff", "Developer"]
 milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: "PAP-28"
 children: []
-blockedBy: ["PAP-22", "PAP-265"]
+blockedBy: ["PAP-22", "PAP-265", "PAP-471", "PAP-480", "PAP-481", "PAP-482", "PAP-489", "PAP-490", "PAP-491", "PAP-496"]
 blocks: ["PAP-29", "PAP-126"]
 key: "child/PAP-28/11"
 url: "https://linear.app/paperos/issue/PAP-266/paperos-create-without-tenant-module-toggles-and-the-ci-removal-matrix"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:36.535Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:11:30.303Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-266: `paperos create --without`, tenant module toggles and the CI removal matrix
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

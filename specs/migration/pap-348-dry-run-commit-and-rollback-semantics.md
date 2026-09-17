@@ -6,22 +6,24 @@ projectName: "Migration & Import Tools"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Staff", "Developer"]
 milestone: "Import framework and CSV"
 state: "Backlog"
 parent: "PAP-199"
 children: []
 blockedBy: ["PAP-347"]
-blocks: ["PAP-349"]
+blocks: ["PAP-349", "PAP-496"]
 key: "child/PAP-199/1"
 url: "https://linear.app/paperos/issue/PAP-348/dry-run-commit-and-rollback-semantics-transaction-rolled-dry-run"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:39.257Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:34.045Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-348: Dry run, commit and rollback semantics: transaction-rolled dry run, `import_run_item` before-state, exact rollback with conflict listing
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

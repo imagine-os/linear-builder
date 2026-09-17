@@ -15,13 +15,15 @@ blockedBy: ["PAP-26", "PAP-57", "PAP-58", "PAP-224", "PAP-240"]
 blocks: ["PAP-90", "PAP-156"]
 key: "quality/e2e-flows"
 url: "https://linear.app/paperos/issue/PAP-86/write-end-to-end-flow-tests-for-auth-tenant-switch-crud-and-realtime"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:45.357Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:14.595Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-86: Write end-to-end flow tests for auth, tenant switch, CRUD and realtime presence
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — security-sensitive title keyword: auth
 
 **Goal**
 

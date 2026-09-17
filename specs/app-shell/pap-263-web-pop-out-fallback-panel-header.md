@@ -6,7 +6,7 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff", "Customer"]
 milestone: "Desktop and mobile shells build"
 state: "Backlog"
 parent: "PAP-21"
@@ -15,13 +15,15 @@ blockedBy: ["PAP-262"]
 blocks: ["PAP-23", "PAP-145"]
 key: "child/PAP-21/8"
 url: "https://linear.app/paperos/issue/PAP-263/web-pop-out-fallback-panel-header-affordances-and-windows"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:12:02.402Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:11.827Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-263: Web pop-out fallback, panel header affordances and windows documentation
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

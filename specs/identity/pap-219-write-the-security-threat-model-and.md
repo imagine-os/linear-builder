@@ -6,7 +6,7 @@ projectName: "Identity, Roles & Audiences"
 phase: "P0"
 type: "Spec"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Auth works across web and desktop"
 state: "Ready for Claude"
 parent: null
@@ -15,13 +15,15 @@ blockedBy: []
 blocks: ["PAP-60", "PAP-80"]
 key: "identity/threat-model"
 url: "https://linear.app/paperos/issue/PAP-219/write-the-security-threat-model-and-hardening-baseline-stride-per"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:43:04.007Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:59.411Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-219: Write the security threat model and hardening baseline: STRIDE per trust boundary, CSP and security headers, CSRF, secret rotation runbook, incident response playbook
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Spec P0
 
 **Goal**
 

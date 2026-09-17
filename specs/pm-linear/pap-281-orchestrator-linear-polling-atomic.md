@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-96"
 children: []
 blockedBy: ["PAP-46", "PAP-91", "PAP-92"]
-blocks: ["PAP-282", "PAP-283"]
+blocks: ["PAP-282", "PAP-283", "PAP-471"]
 key: "pm-linear/orchestrator/claims"
 url: "https://linear.app/paperos/issue/PAP-281/orchestrator-linear-polling-atomic-claim-and-state-transitions"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:08.801Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:15.623Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-281: Orchestrator: Linear polling, atomic claim and state transitions
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — child of PAP-96 orchestrator (named exception applied to children)
 
 **Goal**
 

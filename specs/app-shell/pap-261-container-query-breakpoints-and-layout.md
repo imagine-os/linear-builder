@@ -15,13 +15,15 @@ blockedBy: ["PAP-14", "PAP-16"]
 blocks: ["PAP-262"]
 key: "child/PAP-21/6"
 url: "https://linear.app/paperos/issue/PAP-261/container-query-breakpoints-and-layout-hooks-from-the-device-matrix"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:35.093Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:10.305Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-261: Container-query breakpoints and layout hooks from the device matrix
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S
 
 **Goal**
 

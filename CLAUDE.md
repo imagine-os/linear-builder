@@ -7,19 +7,22 @@ You are one of the nine PaperOS agent characters picking up an issue from Linear
 ## Read first, in this order
 
 1. `docs/blueprint.md` (Blueprint: vision, decisions, phases, budget, project index)
-2. `docs/interface-and-data-contracts.md` (the shapes every project codes against; changing one needs an ADR, PAP-130)
-3. Your project's `Contract` section: the project content in Linear (project list: `plan/plan.json` `projects[]`)
-4. `docs/agent-roster.md`, then your character sheet in `docs/characters/` (routing, tools, access, refusal rules)
-5. `docs/security-and-threat-model.md` (§4 is the Linear deny list: never archive or delete anything, never move to Done or Canceled, never touch PAP-1..PAP-12 or views)
-6. `docs/execution-schedule.md` (your start day, milestone dates, the branch-start rule, the Needs Justin table)
-7. `docs/new-app-in-ten-minutes.md` (the golden path the whole platform serves)
+2. `docs/interface-and-data-contracts.md` (the shapes every project codes against; changing one needs an ADR, PAP-130; its Module map section names the contract package of every module)
+3. `docs/module-system.md` (**required reading**, the PaperOS Module System: every project is a module with a manifest, a versioned contract package `@paperos/contract-<module>` and implementation packages nobody else imports; the kernel is the only place a dependency lives; the swap playbook and the shell-swap drill PAP-446). Linear document: https://linear.app/paperos/document/paperos-module-system-8007373cc6bb
+4. Your project's `Contract` section: the project content in Linear (project list: `plan/plan.json` `projects[]`)
+5. `docs/agent-roster.md`, then your character sheet in `docs/characters/` (routing, tools, access, refusal rules)
+6. `docs/security-and-threat-model.md` (§4 is the Linear deny list: never archive or delete anything, never move to Done or Canceled, never touch PAP-1..PAP-12 or views)
+7. `docs/execution-schedule.md` (your start day, milestone dates, the branch-start rule, the Needs Justin table, the discounted terms and $2,500 chunks)
+8. `docs/new-app-in-ten-minutes.md` (the golden path the whole platform serves)
 
 Then read your issue in Linear end to end, including its Dependencies section and every issue it links.
 
 ## Where specs live
 
-* `specs/<project-key>/<slug>.md`: one file per canonical PAP issue with frontmatter (identifier, project, phase, type, priority, state, blockedBy, blocks, URL). Index: `specs/README.md`. Every spec has the eight contract sections: Goal, Scope, Spec, Interface contract, Definition of done, Test plan, Demo, Dependencies (plus Size).
-* `docs/pending/<project-key>/<slug>.md`: historical spec text of the 156 round-2 pending issues. All of them were created in Linear on 2026-09-17 as PAP-280..PAP-432 (153 issues; the other 3 stayed folded into live issues as work packages) and are normal issues now, claimable like any other. The live Linear description (mirrored in `specs/`) wins over the pending file; `docs/pending/README.md` maps each `[project/key]` citation to its identifier. Team PAP holds 428 issues, 28 of them in Ready for Claude. For a folded work package, build it on a branch `<parent>/wp<n>-<slug>`.
+* `specs/<project-key>/<slug>.md`: one file per canonical PAP issue (485, 18 project folders incl. `module-system/`) with frontmatter (identifier, project, phase, type, priority, state, blockedBy, blocks, key, URL, updatedAt, model, effort). Index: `specs/README.md`. Every spec has the eleven sections: Goal, Scope, Spec, Interface contract, Test plan, Definition of done, Edge cases, Dependencies, Agent, Size, Demo, and a `**Model / Effort:**` first line.
+* `plan/module-issues.json` and `docs/module-system.md`: the round-3 module-system issues (PAP-433..PAP-497: kernel issues, one contract / conformance / wire trio per module) and the 18 `Module boundary` amendments. If your issue is a `Publish @paperos/contract-<module>`, `Conformance suite` or `Wire <module>` issue, the Module System document is your primary spec context.
+* `plan/chunks.json` and `docs/build-chunks.md`: the $2,500 chunk plan (which issues land in which chunk, in which order, at 16 builders running 24/7; mix A all Fable 5.1, mix B Opus 5 builders). The orchestrator uses the chunk order as its tie-breaker; you do not pick by chunk, you claim from Ready for Claude.
+* `docs/pending/<project-key>/<slug>.md`: historical spec text of the 156 round-2 pending issues. All of them were created in Linear on 2026-09-17 as PAP-280..PAP-432 (153 issues; the other 3 stayed folded into live issues as work packages) and are normal issues now, claimable like any other. The live Linear description (mirrored in `specs/`) wins over the pending file; `docs/pending/README.md` maps each `[project/key]` citation to its identifier. Team PAP holds 493 issues (485 canonical), 29 of them in Ready for Claude. For a folded work package, build it on a branch `<parent>/wp<n>-<slug>`.
 * `plan/round2/changes/`: every Linear mutation made while planning, one log per agent and per fix. Use them to understand why a relation or paragraph exists.
 
 ## Pipeline states
@@ -37,6 +40,7 @@ Then read your issue in Linear end to end, including its Dependencies section an
 
 ## Rules every session obeys
 
+* **Module boundary rule.** A module (every Linear project is one, plus the `module-system` kernel) depends only on other modules' contract packages, `@paperos/contract-<module>` under `packages/contracts/`: types, Zod schemas, event topics, oRPC route signatures, UI slot definitions, repository ports, conformance suite and golden fixtures, never runtime code. Never import another module's implementation package, database table, React component or environment variable; reach it through the kernel (registry and DI container PAP-434, event bus, gateway PAP-437, UI slots PAP-438, config port PAP-444). The dependency lint (PAP-439) fails the build otherwise. Declare what you provide and require in the module manifest (PAP-433), bump the contract version on any shape change (ADR, PAP-130), keep the conformance suite green, and prefer a port plus adapter over a direct call so the module can be swapped by flag (PAP-435) with the swap playbook (PAP-442).
 * **Umbrella rule.** An issue with sub-issues is an umbrella. Never claim it and never move it to Ready for Claude (validator error `UMBRELLA_NOT_CLAIMABLE`). Claim its children like any issue; every child carries the external `blocks` relations it needs. The session that finishes the last child runs the umbrella's integration test, attaches the evidence and moves the umbrella to In Review.
 * **Deferred rule.** An issue carrying the `Deferred` label (the Execution Schedule v0.2 set, 28 issues) or a "deferred" note under Goal is never claimed and never promoted until Justin removes the deferral (NJ-14). If you find one in Ready for Claude, leave one comment `not claimable: labelled Deferred` and move on.
 * **Model and effort rule.** A builder session runs on the model named by the issue's `Model` label (`Model: Fable 5.1`, `Model: Opus 5`, `Model: Sonnet 5`, `Model: Haiku 4.5`) at the reasoning effort named by its `Effort` label (`Effort: low|medium|high|max`, group `Reasoning effort`); the same values sit in the `**Model / Effort:**` line of the description and in the spec frontmatter (`model:`, `effort:`). If either label is missing, fall back to Sonnet 5 / medium. Reviewers and the QA gate follow the rule in `docs/cost-and-duration-estimate.md` section 4b (Opus 5 / high after an Opus or Fable builder, Sonnet 5 / high after a Sonnet builder; QA gate Haiku 4.5 / low). Umbrellas carry no Model or Effort label; their children do.

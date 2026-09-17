@@ -6,22 +6,24 @@ projectName: "Spec Builder"
 phase: "P0"
 type: "Spec"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Spec schema and validator"
 state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-74", "PAP-85", "PAP-115", "PAP-116", "PAP-117", "PAP-119", "PAP-120", "PAP-121", "PAP-123", "PAP-124", "PAP-132", "PAP-207", "PAP-249", "PAP-311", "PAP-314", "PAP-320", "PAP-376", "PAP-426"]
+blocks: ["PAP-74", "PAP-85", "PAP-115", "PAP-116", "PAP-117", "PAP-119", "PAP-120", "PAP-121", "PAP-123", "PAP-124", "PAP-132", "PAP-207", "PAP-249", "PAP-311", "PAP-314", "PAP-320", "PAP-376", "PAP-426", "PAP-467"]
 key: "spec-builder/schema"
 url: "https://linear.app/paperos/issue/PAP-114/define-the-pagespecyaml-schema-purpose-logic-access-data-integrations"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:16.745Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:27.070Z"
 model: "claude-fable-5-1"
 effort: "high"
 ---
 
 # PAP-114: Define the page.spec.yaml schema: purpose, logic, access, data, integrations, layout, components, states, events, edge cases
+
+**Model / Effort:** Fable 5.1 (`claude-fable-5-1`) / high — keystone spec: page spec schema
 
 **Goal**
 

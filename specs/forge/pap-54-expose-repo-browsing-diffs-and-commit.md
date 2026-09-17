@@ -15,13 +15,15 @@ blockedBy: ["PAP-16", "PAP-45", "PAP-275"]
 blocks: []
 key: "forge/in-app-git"
 url: "https://linear.app/paperos/issue/PAP-54/expose-repo-browsing-diffs-and-commit-history-inside-paperos-via-the"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:45.357Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:11.731Z"
 model: null
 effort: null
 ---
 
 # PAP-54: Expose repo browsing, diffs and commit history inside PaperOS via the Forgejo API
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -93,3 +95,7 @@ Built by Forge (lead) for backend and client; Nova's Views team advises on the d
 **Size**
 
 L as an umbrella; children are M, M, M.
+
+**Module boundary**
+
+This umbrella is the Version Control & Forge Independence half of the PaperOS Module System (`docs/module-system.md`). The `forge` module implements `@paperos/contract-forge` (`ForgePort`, repo and PR refs, bootstrap spec, webhook envelopes, CI runner artefact contract). Consumers (orchestrator, release train, in-app repo browser) call `ForgePort` through the kernel and never the Forgejo or GitHub SDKs; the module may import `@paperos/core`, `@paperos/contract-identity`, `@paperos/contract-quality` and its own package. Its manifest declares `provides: [{ contract: '@paperos/contract-forge', version: '0.1.0' }]`, `owner: { agent: 'Forge', project: 'forge' }` and `swapRisk: 'medium'`. The contract package is published by PAP-449 (`module/forge/contract`), proven by PAP-452 (`module/forge/conformance`) and bound into `@paperos/kernel` by PAP-455 (`module/forge/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

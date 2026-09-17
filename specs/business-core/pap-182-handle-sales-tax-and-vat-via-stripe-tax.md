@@ -15,13 +15,15 @@ blockedBy: ["PAP-177", "PAP-180", "PAP-397"]
 blocks: []
 key: "business-core/tax-compliance"
 url: "https://linear.app/paperos/issue/PAP-182/handle-sales-tax-and-vat-via-stripe-tax-and-store-tax-evidence"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:46.284Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:47.459Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-182: Handle sales tax and VAT via Stripe Tax and store tax evidence
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

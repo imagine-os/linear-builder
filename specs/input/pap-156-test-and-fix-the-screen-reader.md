@@ -15,13 +15,15 @@ blockedBy: ["PAP-73", "PAP-86", "PAP-152"]
 blocks: ["PAP-160"]
 key: "input/screen-reader"
 url: "https://linear.app/paperos/issue/PAP-156/test-and-fix-the-screen-reader-experience-nvda-voiceover-talkback-for"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:53:36.205Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:40.415Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-156: Test and fix the screen reader experience (NVDA, VoiceOver, TalkBack) for core flows
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Review
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-372"]
 blocks: ["PAP-374"]
 key: "pm-linear/linear-sync/outbound"
 url: "https://linear.app/paperos/issue/PAP-373/linear-sync-transactional-outbox-outbound-worker-and-loop-prevention"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:03.213Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:42.315Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-373: Linear sync: transactional outbox, outbound worker and loop prevention
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

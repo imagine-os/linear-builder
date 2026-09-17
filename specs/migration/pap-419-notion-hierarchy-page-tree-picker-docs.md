@@ -15,13 +15,15 @@ blockedBy: ["PAP-418"]
 blocks: []
 key: "child/PAP-203/2"
 url: "https://linear.app/paperos/issue/PAP-419/notion-hierarchy-page-tree-picker-docs-placement-and-conversion-report"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:50.203Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:54.714Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-419: Notion hierarchy, page tree picker, docs placement and conversion report
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

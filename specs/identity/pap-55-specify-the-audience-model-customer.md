@@ -6,22 +6,24 @@ projectName: "Identity, Roles & Audiences"
 phase: "P0"
 type: "Spec"
 priority: 1
-surfaces: ["Agent", "Customer", "Staff"]
+surfaces: ["Customer", "Staff", "Agent"]
 milestone: "Auth works across web and desktop"
 state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-59", "PAP-227", "PAP-363"]
+blocks: ["PAP-59", "PAP-227", "PAP-363", "PAP-456"]
 key: "identity/audience-model"
 url: "https://linear.app/paperos/issue/PAP-55/specify-the-audience-model-customer-tiers-staff-roles-partners-admins"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:43:04.563Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:06.453Z"
 model: "claude-fable-5-1"
 effort: "high"
 ---
 
 # PAP-55: Specify the audience model: customer tiers, staff roles, partners, admins, agents and composable segments in between
+
+**Model / Effort:** Fable 5.1 (`claude-fable-5-1`) / high — keystone spec: audience model
 
 **Goal**
 

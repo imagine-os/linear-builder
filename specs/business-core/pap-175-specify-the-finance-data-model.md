@@ -11,17 +11,19 @@ milestone: "Stripe billing live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-33", "PAP-302"]
-blocks: ["PAP-177", "PAP-179", "PAP-181", "PAP-184", "PAP-185", "PAP-392", "PAP-395", "PAP-399"]
+blockedBy: ["PAP-33", "PAP-302", "PAP-448"]
+blocks: ["PAP-177", "PAP-179", "PAP-181", "PAP-184", "PAP-185", "PAP-392", "PAP-395", "PAP-399", "PAP-484"]
 key: "business-core/finance-data-model"
 url: "https://linear.app/paperos/issue/PAP-175/specify-the-finance-data-model-customers-vendors-employees-accounts"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:04:58.278Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:04.437Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-175: Specify the finance data model: customers, vendors, employees, accounts, transactions and periods across all business types
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Spec P1
 
 **Goal**
 

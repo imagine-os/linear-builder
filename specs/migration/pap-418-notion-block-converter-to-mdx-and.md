@@ -15,13 +15,15 @@ blockedBy: ["PAP-128", "PAP-417"]
 blocks: ["PAP-419"]
 key: "child/PAP-203/1"
 url: "https://linear.app/paperos/issue/PAP-418/notion-block-converter-to-mdx-and-tiptap-json-all-block-types-media"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:50.203Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:54.600Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-418: Notion block converter to MDX and Tiptap JSON: all block types, media upload before URL expiry, internal link rewriting
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

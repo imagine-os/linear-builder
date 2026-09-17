@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-59"
 children: []
 blockedBy: ["PAP-227"]
-blocks: ["PAP-60", "PAP-61", "PAP-64", "PAP-116", "PAP-131", "PAP-140", "PAP-163", "PAP-172", "PAP-178", "PAP-222", "PAP-317", "PAP-335"]
+blocks: ["PAP-60", "PAP-61", "PAP-64", "PAP-116", "PAP-131", "PAP-140", "PAP-163", "PAP-172", "PAP-178", "PAP-222", "PAP-317", "PAP-335", "PAP-458"]
 key: "identity/rbac-abac/adapter-middleware-hook"
 url: "https://linear.app/paperos/issue/PAP-229/spec-adapter-orpc-middleware-and-usecan-hook"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:04:36.750Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:02.245Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-229: Spec adapter, oRPC middleware and useCan hook
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build M, P0 in identity
 
 **Goal**
 

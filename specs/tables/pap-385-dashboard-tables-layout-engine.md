@@ -15,13 +15,15 @@ blockedBy: ["PAP-155", "PAP-172"]
 blocks: ["PAP-386"]
 key: "tables/dashboard/model-grid"
 url: "https://linear.app/paperos/issue/PAP-385/dashboard-tables-layout-engine-breakpoint-layouts-and-drag-or-resize"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:42.311Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:45.858Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-385: Dashboard tables, layout engine, breakpoint layouts and drag or resize with keyboard moves
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

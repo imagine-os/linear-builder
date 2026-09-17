@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-155"
 children: []
 blockedBy: ["PAP-150"]
-blocks: ["PAP-330"]
+blocks: ["PAP-330", "PAP-482"]
 key: "input/dnd/sensors-sortable-list"
 url: "https://linear.app/paperos/issue/PAP-329/dnd-kit-sensors-on-the-input-abstraction-and-sortablelist"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:30.221Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:29.062Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-329: dnd-kit sensors on the input abstraction and SortableList
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

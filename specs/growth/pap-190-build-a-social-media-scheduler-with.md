@@ -15,13 +15,15 @@ blockedBy: ["PAP-37", "PAP-43", "PAP-187", "PAP-188", "PAP-353"]
 blocks: []
 key: "growth/social-scheduler"
 url: "https://linear.app/paperos/issue/PAP-190/build-a-social-media-scheduler-with-adapters-x-linkedin-instagram"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:11.592Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:49.858Z"
 model: null
 effort: null
 ---
 
 # PAP-190: Build a social media scheduler with adapters (X, LinkedIn, Instagram, TikTok, YouTube) and an approval queue
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -92,3 +94,7 @@ L, split into three M children; the third waits on app reviews and ships in `dry
 **Pending issues**
 
 Bracketed references above are fully specified work packages that Linear refused to create on 2026-09-17 (`USAGE_LIMIT_EXCEEDED`, free-plan issue cap). Their specs live in the project document(s) data-layer, [growth](<https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012>) and they are created as issues by `round2/agent4/create_issues.py` once the workspace plan is upgraded.
+
+**Module boundary**
+
+This umbrella is the Growth: Marketing, Outreach & CRM half of the PaperOS Module System (`docs/module-system.md`). The `growth` module implements `@paperos/contract-growth` (CRM entities, social adapter, outreach provider, landing page publisher, attribution events, segment, support channel and content draft ports). Platform adapters (X, LinkedIn, Resend, Twilio, Webflow) are implementations behind these ports and are imported nowhere else; the module may import `@paperos/core`, `contract-tables`, `contract-data-layer`, `contract-business-core`, `contract-collab`, `contract-agents` and its own package. Its manifest declares `provides: [{ contract: '@paperos/contract-growth', version: '0.1.0' }]`, `owner: { agent: 'Beacon', project: 'growth' }` and `swapRisk: 'medium'`. The contract package is published by PAP-485 (`module/growth/contract`), proven by PAP-488 (`module/growth/conformance`) and bound into `@paperos/kernel` by PAP-491 (`module/growth/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

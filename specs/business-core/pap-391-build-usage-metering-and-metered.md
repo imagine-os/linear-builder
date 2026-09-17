@@ -11,17 +11,19 @@ milestone: "Stripe billing live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-43", "PAP-177", "PAP-178"]
+blockedBy: ["PAP-43", "PAP-177", "PAP-178", "PAP-484"]
 blocks: []
 key: "gap/business-core/usage-metering"
 url: "https://linear.app/paperos/issue/PAP-391/build-usage-metering-and-metered-billing-usage-events-agent-sessions"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:14.622Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:38.913Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-391: Build usage metering and metered billing: usage events (agent sessions, storage, seats, API calls) aggregated per tenant, Stripe usage records, limit warnings
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

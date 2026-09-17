@@ -15,13 +15,15 @@ blockedBy: ["PAP-179", "PAP-181", "PAP-407"]
 blocks: ["PAP-409"]
 key: "growth/referral/rewards-payouts-ledger"
 url: "https://linear.app/paperos/issue/PAP-408/reward-rules-fraud-rules-approval-stripe-connect-transfers-ledger"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:48.727Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:51.916Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-408: Reward rules, fraud rules, approval, Stripe Connect transfers, ledger postings and monthly statements
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Deferred label (excluded from Oct-1 scope)
 
 **Goal**
 

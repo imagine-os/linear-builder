@@ -15,13 +15,15 @@ blockedBy: ["PAP-25", "PAP-281", "PAP-282"]
 blocks: ["PAP-97", "PAP-98", "PAP-99"]
 key: "pm-linear/orchestrator/deploy"
 url: "https://linear.app/paperos/issue/PAP-283/orchestrator-deployment-on-coolify-status-endpoint-and-runbook"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:08.980Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:17.197Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-283: Orchestrator: deployment on Coolify, `/status` endpoint and runbook
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — child of PAP-96 orchestrator (named exception applied to children)
 
 **Goal**
 

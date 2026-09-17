@@ -15,13 +15,15 @@ blockedBy: ["PAP-199", "PAP-201", "PAP-349"]
 blocks: []
 key: "migration/airtable"
 url: "https://linear.app/paperos/issue/PAP-202/import-airtable-bases-tables-views-relations-attachments"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:41.073Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:54.840Z"
 model: null
 effort: null
 ---
 
 # PAP-202: Import Airtable bases (tables, views, relations, attachments)
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

@@ -12,16 +12,18 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-27", "PAP-67", "PAP-68", "PAP-72", "PAP-75", "PAP-77", "PAP-236"]
+blocks: ["PAP-27", "PAP-67", "PAP-68", "PAP-72", "PAP-75", "PAP-77", "PAP-236", "PAP-459"]
 key: "design-system/tokens"
 url: "https://linear.app/paperos/issue/PAP-66/define-design-tokens-color-type-space-radius-motion-elevation-in-dtcg"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:18:10.797Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:09.109Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-66: Define design tokens (color, type, space, radius, motion, elevation) in DTCG JSON compiled to CSS variables
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

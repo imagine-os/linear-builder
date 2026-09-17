@@ -6,22 +6,24 @@ projectName: "Spec Builder"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Codegen and conformance tests"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-115", "PAP-119", "PAP-120", "PAP-122", "PAP-123"]
+blockedBy: ["PAP-115", "PAP-119", "PAP-120", "PAP-122", "PAP-123", "PAP-467"]
 blocks: ["PAP-364", "PAP-430"]
 key: "gp/spec-builder/gen-pipeline"
 url: "https://linear.app/paperos/issue/PAP-362/build-paperos-gen-the-whole-app-generation-pipeline-that-runs-every"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:11.039Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:57:15.156Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-362: Build `paperos gen`: the whole-app generation pipeline that runs every generator in dependency order with a manifest, incremental cache, deterministic output and a `--check` drift mode
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

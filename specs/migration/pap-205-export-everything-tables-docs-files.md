@@ -15,13 +15,15 @@ blockedBy: ["PAP-33", "PAP-43", "PAP-128", "PAP-199", "PAP-201", "PAP-349"]
 blocks: []
 key: "migration/export"
 url: "https://linear.app/paperos/issue/PAP-205/export-everything-tables-docs-files-ledger-to-open-formats"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:39.257Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:56.400Z"
 model: null
 effort: null
 ---
 
 # PAP-205: Export everything (tables, docs, files, ledger) to open formats
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

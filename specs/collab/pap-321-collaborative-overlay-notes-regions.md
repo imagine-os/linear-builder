@@ -6,22 +6,24 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Staff"]
+surfaces: ["Staff", "Developer"]
 milestone: "Comments and canvas"
 state: "Backlog"
 parent: "PAP-132"
 children: []
-blockedBy: ["PAP-140", "PAP-320"]
+blockedBy: ["PAP-140", "PAP-320", "PAP-475"]
 blocks: ["PAP-322"]
 key: "collab/canvas/yjs-overlay"
 url: "https://linear.app/paperos/issue/PAP-321/collaborative-overlay-notes-regions-overrides-in-yjs"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:27.539Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:58:05.711Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-321: Collaborative overlay: notes, regions, overrides in Yjs
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

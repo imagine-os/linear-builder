@@ -15,13 +15,15 @@ blockedBy: ["PAP-37", "PAP-177", "PAP-395"]
 blocks: ["PAP-397"]
 key: "business-core/invoicing/pdf-paypage"
 url: "https://linear.app/paperos/issue/PAP-396/branded-pdf-rendering-public-pay-and-doc-pages-stripe-checkout-on"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:46.284Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:49.291Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-396: Branded PDF rendering, public /pay and /doc pages, Stripe Checkout on platform or connected account, receipts
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

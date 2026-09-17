@@ -15,13 +15,15 @@ blockedBy: ["PAP-201", "PAP-414"]
 blocks: ["PAP-416"]
 key: "child/PAP-202/1"
 url: "https://linear.app/paperos/issue/PAP-415/airtable-field-mapping-every-field-type-to-paperos-types-relations-two"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:50.203Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:54.247Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-415: Airtable field mapping: every field type to PaperOS types, relations two-pass, lookups and rollups third pass, formula translation report
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

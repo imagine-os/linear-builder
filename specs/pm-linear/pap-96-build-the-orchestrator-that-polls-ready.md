@@ -15,13 +15,15 @@ blockedBy: ["PAP-25", "PAP-46", "PAP-91", "PAP-92", "PAP-298"]
 blocks: ["PAP-97", "PAP-98", "PAP-99", "PAP-288", "PAP-300", "PAP-354"]
 key: "pm-linear/orchestrator"
 url: "https://linear.app/paperos/issue/PAP-96/build-the-orchestrator-that-polls-ready-for-claude-spawns-one-claude"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:19.348Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:11:30.303Z"
 model: null
 effort: null
 ---
 
 # PAP-96: Build the orchestrator that polls Ready for Claude, spawns one Claude Code session per issue in a git worktree and moves states
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-117", "PAP-156"]
 blocks: []
 key: "input/a11y-statement"
 url: "https://linear.app/paperos/issue/PAP-160/publish-an-accessibility-statement-and-conformance-report-template-per"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:53:36.205Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:40.860Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-160: Publish an accessibility statement and conformance report template per app
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Docs S
 
 **Goal**
 

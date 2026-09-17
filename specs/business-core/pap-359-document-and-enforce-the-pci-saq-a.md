@@ -6,7 +6,7 @@ projectName: "Business Core: Payments, Finance & Payroll"
 phase: "P1"
 type: "Docs"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Staff", "Developer"]
 milestone: "Stripe billing live"
 state: "Backlog"
 parent: null
@@ -15,13 +15,15 @@ blockedBy: ["PAP-177"]
 blocks: ["PAP-181", "PAP-184"]
 key: "security/pci-posture"
 url: "https://linear.app/paperos/issue/PAP-359/document-and-enforce-the-pci-saq-a-posture-stripe-hosted-card-entry"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:04.763Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:37.616Z"
 model: "claude-sonnet-5"
 effort: "low"
 ---
 
 # PAP-359: Document and enforce the PCI SAQ-A posture: Stripe-hosted card entry only, a Semgrep rule against card-data fields, restricted Stripe keys per service, live-key custody through Needs Justin, and the quarterly SAQ-A checklist
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Docs S
 
 **Goal**
 

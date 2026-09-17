@@ -15,13 +15,15 @@ blockedBy: ["PAP-240", "PAP-246"]
 blocks: ["PAP-248"]
 key: "quality/playwright-matrix/pages-auth-baselines"
 url: "https://linear.app/paperos/issue/PAP-247/page-capture-with-authenticated-audiences-and-baseline-update-workflow"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:04:42.069Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:07.468Z"
 model: "claude-opus-5"
 effort: "high"
 ---
 
 # PAP-247: Page capture with authenticated audiences and baseline update workflow
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / high — security-sensitive title keyword: auth
 
 **Goal**
 

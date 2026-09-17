@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-58", "PAP-175", "PAP-303"]
-blocks: ["PAP-178", "PAP-180", "PAP-181", "PAP-182", "PAP-196", "PAP-359", "PAP-391", "PAP-396", "PAP-407"]
+blocks: ["PAP-178", "PAP-180", "PAP-181", "PAP-182", "PAP-196", "PAP-359", "PAP-391", "PAP-396", "PAP-407", "PAP-490"]
 key: "business-core/stripe-billing"
 url: "https://linear.app/paperos/issue/PAP-177/integrate-stripe-billing-products-prices-subscriptions-customer-portal"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:13.547Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:46.475Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-177: Integrate Stripe Billing: products, prices, subscriptions, customer portal and webhooks
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

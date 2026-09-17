@@ -15,13 +15,15 @@ blockedBy: ["PAP-382"]
 blocks: ["PAP-384"]
 key: "tables/formula/evaluator-editor"
 url: "https://linear.app/paperos/issue/PAP-383/typescript-evaluator-with-function-implementations-and-the-codemirror"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:42.311Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:45.490Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-383: TypeScript evaluator with function implementations and the CodeMirror formula editor
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

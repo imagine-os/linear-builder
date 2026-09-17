@@ -15,13 +15,15 @@ blockedBy: ["PAP-15", "PAP-22", "PAP-26"]
 blocks: ["PAP-429"]
 key: "gp/app-shell/provisioning"
 url: "https://linear.app/paperos/issue/PAP-365/build-golden-path-provisioning-parallel-idempotent-steps-warm-pools"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:12.501Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:39.963Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-365: Build golden path provisioning: parallel idempotent steps, warm pools for preview slots, databases and mirror repos, `--resume` and per-step time budgets in `paperos create`
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

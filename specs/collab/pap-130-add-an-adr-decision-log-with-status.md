@@ -15,13 +15,15 @@ blockedBy: ["PAP-128"]
 blocks: []
 key: "collab/decision-log"
 url: "https://linear.app/paperos/issue/PAP-130/add-an-adrdecision-log-with-status-alternatives-and-links-to-issues"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:53:28.676Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:30.122Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-130: Add an ADR/decision log with status, alternatives and links to issues
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S
 
 **Goal**
 

@@ -6,7 +6,7 @@ projectName: "Migration & Import Tools"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Staff", "Developer"]
 milestone: "Import framework and CSV"
 state: "Backlog"
 parent: null
@@ -15,13 +15,15 @@ blockedBy: ["PAP-37", "PAP-43", "PAP-164", "PAP-198", "PAP-332", "PAP-334", "PAP
 blocks: ["PAP-200", "PAP-201", "PAP-202", "PAP-203", "PAP-204", "PAP-205", "PAP-206", "PAP-207", "PAP-208", "PAP-414", "PAP-417", "PAP-420", "PAP-423", "PAP-426"]
 key: "migration/import-framework"
 url: "https://linear.app/paperos/issue/PAP-199/build-the-import-framework-source-connector-schema-mapping-ui-dry-run"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:35.594Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:11:30.303Z"
 model: null
 effort: null
 ---
 
 # PAP-199: Build the import framework: source connector, schema-mapping UI, dry run, validation, rollback
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -86,3 +88,7 @@ Built by Scout (Import Mapper) with Nova on the record API and Iris on the wizar
 **Size**
 
 L umbrella; three M work packages. Pending sub-issue specs: [Round 2 pending issues: migration (20)](https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6)
+
+**Module boundary**
+
+This umbrella is the Migration & Import Tools half of the PaperOS Module System (`docs/module-system.md`). The `migration` module implements `@paperos/contract-migration` (`SourceConnector`, mapping model, import run states, external id map, export archive, template pack, migration interview). Connectors are implementations behind `SourceConnector`; target modules are written through `contract-tables`, `contract-collab`, `contract-business-core` and `contract-pm-linear` ports, never their tables. The module may import `@paperos/core`, those contracts, `contract-data-layer` and its own package. Its manifest declares `provides: [{ contract: '@paperos/contract-migration', version: '0.1.0' }]`, `owner: { agent: 'Scout', project: 'migration' }` and `swapRisk: 'low'`. The contract package is published by PAP-492 (`module/migration/contract`), proven by PAP-494 (`module/migration/conformance`) and bound into `@paperos/kernel` by PAP-496 (`module/migration/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

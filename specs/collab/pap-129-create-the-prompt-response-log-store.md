@@ -12,16 +12,18 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-32", "PAP-33", "PAP-35", "PAP-269"]
-blocks: ["PAP-107", "PAP-135"]
+blocks: ["PAP-107", "PAP-135", "PAP-480"]
 key: "collab/prompt-log-store"
 url: "https://linear.app/paperos/issue/PAP-129/create-the-promptresponse-log-store-session-character-issue-tokens"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:44.044Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:30.049Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-129: Create the prompt/response log store (session, character, issue, tokens, cost, tool calls) with redaction
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

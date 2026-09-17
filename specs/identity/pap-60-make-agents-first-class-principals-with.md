@@ -11,17 +11,19 @@ milestone: "Agent principals and enterprise"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-59", "PAP-219", "PAP-229"]
+blockedBy: ["PAP-59", "PAP-219", "PAP-229", "PAP-456"]
 blocks: ["PAP-146"]
 key: "identity/agent-principals"
 url: "https://linear.app/paperos/issue/PAP-60/make-agents-first-class-principals-with-scoped-api-keys-rate-limits"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:47.788Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:54:09.044Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-60: Make agents first-class principals with scoped API keys, rate limits and visible attribution
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: []
 blocks: []
 key: "gap/app-shell/code-signing"
 url: "https://linear.app/paperos/issue/PAP-369/set-up-desktop-and-mobile-code-signing-and-notarisation-apple"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:01:27.454Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:40.346Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-369: Set up desktop and mobile code signing and notarisation (Apple Developer, Windows certificate, Android keystore) with one Needs Justin credential ask
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-74", "PAP-114", "PAP-234"]
 blocks: ["PAP-29", "PAP-362", "PAP-375"]
 key: "spec-builder/layout-codegen"
 url: "https://linear.app/paperos/issue/PAP-120/generate-page-scaffolds-layout-component-tree-loadingemptyerror-states"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:16.285Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T14:57:21.851Z"
 model: null
 effort: null
 ---
 
 # PAP-120: Generate page scaffolds (layout, component tree, loading/empty/error states) from specs
+
+**Model / Effort:** set on children (umbrella is never claimed)
 
 **Goal**
 
@@ -83,3 +85,7 @@ Built by Nova with Iris (Component Crafter) on component emit; reviewed by Senti
 **Size**
 
 L (umbrella; children M, M, S)
+
+**Module boundary**
+
+This umbrella is the Spec Builder half of the PaperOS Module System (`docs/module-system.md`). The `spec-builder` module implements `@paperos/contract-spec-builder` (`PageSpec`, `AppSpec`, validator port, generator plugin interface, flow graph, component refs). Codegen targets are generator plugins registered through the contract; consumers read specs through the schemas and never parse YAML themselves. The module may import `@paperos/core`, `contract-design-system`, `contract-identity`, `contract-data-layer`, `contract-app-shell` and its own package. Its manifest declares `provides: [{ contract: '@paperos/contract-spec-builder', version: '0.1.0' }]`, `owner: { agent: 'Quill', project: 'spec-builder' }` and `swapRisk: 'high'`. The contract package is published by PAP-467 (`module/spec-builder/contract`), proven by PAP-470 (`module/spec-builder/conformance`) and bound into `@paperos/kernel` by PAP-473 (`module/spec-builder/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).

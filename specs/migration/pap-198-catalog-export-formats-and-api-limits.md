@@ -12,16 +12,18 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-199", "PAP-347", "PAP-413"]
+blocks: ["PAP-199", "PAP-347", "PAP-413", "PAP-492"]
 key: "migration/format-research"
 url: "https://linear.app/paperos/issue/PAP-198/catalog-export-formats-and-api-limits-of-airtable-notion-clickup"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:10.298Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:54.358Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-198: Catalog export formats and API limits of Airtable, Notion, ClickUp, Monday, HubSpot and QuickBooks
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Research M
 
 **Goal**
 

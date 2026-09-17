@@ -15,13 +15,15 @@ blockedBy: ["PAP-335"]
 blocks: ["PAP-337"]
 key: "tables/compiler/groups-shapes"
 url: "https://linear.app/paperos/issue/PAP-336/groups-aggregates-and-electric-shape-eligibility"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:30.221Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:31.195Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-336: Groups, aggregates and Electric shape eligibility
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

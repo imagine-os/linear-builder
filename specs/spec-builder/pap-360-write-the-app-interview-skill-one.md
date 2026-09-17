@@ -6,7 +6,7 @@ projectName: "Spec Builder"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Developer", "Agent"]
 milestone: "Codegen and conformance tests"
 state: "Backlog"
 parent: null
@@ -15,13 +15,15 @@ blockedBy: ["PAP-117", "PAP-118"]
 blocks: ["PAP-364"]
 key: "gp/spec-builder/app-interview"
 url: "https://linear.app/paperos/issue/PAP-360/write-the-app-interview-skill-one-paragraph-idea-to-appspecyaml"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:10.040Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:37.806Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-360: Write the app interview skill: one paragraph idea to `app.spec.yaml` (business profile, audiences, entities, navigation, modules) in at most six questions with `--yes` defaults
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

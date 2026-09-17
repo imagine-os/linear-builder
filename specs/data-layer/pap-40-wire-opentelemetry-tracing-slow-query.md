@@ -15,13 +15,15 @@ blockedBy: ["PAP-30", "PAP-35", "PAP-269"]
 blocks: []
 key: "data-layer/observability"
 url: "https://linear.app/paperos/issue/PAP-40/wire-opentelemetry-tracing-slow-query-logging-and-grafana-dashboards"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:45.357Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:40:59.797Z"
 model: "claude-opus-5"
 effort: "medium"
 ---
 
 # PAP-40: Wire OpenTelemetry tracing, slow-query logging and Grafana dashboards for API and sync
+
+**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M
 
 **Goal**
 

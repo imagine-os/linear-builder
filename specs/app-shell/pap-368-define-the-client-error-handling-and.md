@@ -6,7 +6,7 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Developer", "Staff"]
+surfaces: ["Customer", "Staff", "Developer"]
 milestone: "Desktop and mobile shells build"
 state: "Backlog"
 parent: null
@@ -15,13 +15,15 @@ blockedBy: []
 blocks: []
 key: "gap/app-shell/client-errors"
 url: "https://linear.app/paperos/issue/PAP-368/define-the-client-error-handling-and-crash-reporting-contract-error"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:01:27.454Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:40.257Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-368: Define the client error handling and crash reporting contract: error boundaries, error code catalogue, user-facing copy, browser and Tauri crash reports into observability
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

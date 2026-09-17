@@ -11,17 +11,19 @@ milestone: "PM module syncs both ways"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-100", "PAP-167", "PAP-288", "PAP-333"]
+blockedBy: ["PAP-100", "PAP-167", "PAP-288", "PAP-333", "PAP-465", "PAP-483"]
 blocks: []
 key: "pm-linear/board-views"
 url: "https://linear.app/paperos/issue/PAP-102/render-pm-board-list-and-timeline-views-using-the-tablesviews-engine"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:18.155Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:32.576Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-102: Render PM board, list and timeline views using the tables/views engine
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

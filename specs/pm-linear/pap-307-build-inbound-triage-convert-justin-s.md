@@ -6,22 +6,24 @@ projectName: "Project Management & Claude Pipeline"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Agent", "Staff"]
-milestone: "Orchestrator claims and ships issues"
+surfaces: ["Staff", "Agent"]
+milestone: "PM module syncs both ways"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-93", "PAP-97", "PAP-118"]
+blockedBy: ["PAP-93", "PAP-97", "PAP-118", "PAP-465"]
 blocks: []
 key: "pm-linear/inbound-triage"
 url: "https://linear.app/paperos/issue/PAP-307/build-inbound-triage-convert-justins-freeform-issues-and-comments-into"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:07.130Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:11:28.735Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-307: Build inbound triage: convert Justin's freeform issues and comments into contract-valid issues via the Decomposer sub-agent, wired to the Triage view
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: []
 blocks: []
 key: "gap/app-shell/custom-domains"
 url: "https://linear.app/paperos/issue/PAP-431/add-per-tenant-custom-domains-on-demand-tls-in-caddy-host-based-tenant"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:01:57.775Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:58.019Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-431: Add per-tenant custom domains: on-demand TLS in Caddy, host-based tenant resolution in api-layer, DNS verification UI
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

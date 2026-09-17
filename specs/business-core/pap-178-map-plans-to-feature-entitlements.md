@@ -11,17 +11,19 @@ milestone: "Stripe billing live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-59", "PAP-177", "PAP-229"]
+blockedBy: ["PAP-59", "PAP-177", "PAP-229", "PAP-484"]
 blocks: ["PAP-391"]
 key: "business-core/entitlements"
 url: "https://linear.app/paperos/issue/PAP-178/map-plans-to-feature-entitlements-enforced-by-the-permission-engine"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:12.599Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T15:00:32.576Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-178: Map plans to feature entitlements enforced by the permission engine
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

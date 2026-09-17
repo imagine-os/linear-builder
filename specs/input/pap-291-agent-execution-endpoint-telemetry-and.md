@@ -12,16 +12,18 @@ state: "Backlog"
 parent: "PAP-151"
 children: []
 blockedBy: ["PAP-290"]
-blocks: ["PAP-153", "PAP-159", "PAP-165"]
+blocks: ["PAP-153", "PAP-159", "PAP-165", "PAP-482"]
 key: "input/commands/agent-endpoint-defaults"
 url: "https://linear.app/paperos/issue/PAP-291/agent-execution-endpoint-telemetry-and-default-commands"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:05:22.997Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:18.179Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-291: Agent execution endpoint, telemetry and default commands
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S
 
 **Goal**
 

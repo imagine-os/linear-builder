@@ -15,13 +15,15 @@ blockedBy: ["PAP-70", "PAP-114"]
 blocks: ["PAP-377", "PAP-378"]
 key: "spec-builder/spec-editor-ui/yaml"
 url: "https://linear.app/paperos/issue/PAP-376/spec-editor-spec-list-codemirror-yaml-editor-with-worker-validation"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:06:03.450Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:42.809Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-376: Spec editor: spec list, CodeMirror YAML editor with worker validation and save-to-PR flow
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

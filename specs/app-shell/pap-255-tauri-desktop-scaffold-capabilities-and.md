@@ -15,13 +15,15 @@ blockedBy: ["PAP-13"]
 blocks: ["PAP-256", "PAP-258"]
 key: "child/PAP-19/0"
 url: "https://linear.app/paperos/issue/PAP-255/tauri-desktop-scaffold-capabilities-and-plugins-appsdesktop-menu-tray"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:35.093Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:09.673Z"
 model: "claude-sonnet-5"
 effort: "high"
 ---
 
 # PAP-255: Tauri desktop scaffold, capabilities and plugins (apps/desktop, menu, tray, dev scripts)
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M
 
 **Goal**
 

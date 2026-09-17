@@ -6,22 +6,24 @@ projectName: "Table & Views Engine"
 phase: "P0"
 type: "Spec"
 priority: 1
-surfaces: ["Developer", "Staff"]
+surfaces: ["Staff", "Developer"]
 milestone: "Grid with sort, filter, group"
 state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-163", "PAP-164", "PAP-207", "PAP-335", "PAP-338", "PAP-361", "PAP-426"]
+blocks: ["PAP-163", "PAP-164", "PAP-207", "PAP-335", "PAP-338", "PAP-361", "PAP-426", "PAP-483"]
 key: "tables/view-model-spec"
 url: "https://linear.app/paperos/issue/PAP-161/specify-the-view-model-data-source-fields-filters-sorts-groups"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:43:06.610Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:41:40.987Z"
 model: "claude-fable-5-1"
 effort: "high"
 ---
 
 # PAP-161: Specify the view model: data source, fields, filters, sorts, groups, aggregations, permissions and sharing as a superset of Airtable, Notion and ClickUp
+
+**Model / Effort:** Fable 5.1 (`claude-fable-5-1`) / high — keystone spec: view model
 
 **Goal**
 

@@ -15,13 +15,15 @@ blockedBy: ["PAP-35", "PAP-87", "PAP-269"]
 blocks: ["PAP-88", "PAP-253"]
 key: "quality/api-perf-budgets"
 url: "https://linear.app/paperos/issue/PAP-242/enforce-api-and-database-performance-budgets-k6-smoke-per-release"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T06:22:44.044Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:05.434Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-242: Enforce API and database performance budgets: k6 smoke per release candidate, p95 per procedure, slow-query gate, `apps/api` image size
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S
 
 **Goal**
 

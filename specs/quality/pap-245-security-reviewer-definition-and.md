@@ -15,13 +15,15 @@ blockedBy: ["PAP-243"]
 blocks: ["PAP-85", "PAP-88", "PAP-241"]
 key: "quality/review-agents/security"
 url: "https://linear.app/paperos/issue/PAP-245/security-reviewer-definition-and-securityjson-ingestion"
-source: "Linear snapshot 2026-09-17T13:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T04:04:40.934Z"
+source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-17T13:42:07.250Z"
 model: "claude-sonnet-5"
 effort: "medium"
 ---
 
 # PAP-245: Security reviewer definition and security.json ingestion
+
+**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S
 
 **Goal**
 
