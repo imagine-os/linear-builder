@@ -1,0 +1,4907 @@
+[
+ {
+  "at": "2026-09-18T12:54:13Z",
+  "type": "teamUpdate",
+  "ids": {
+   "teamId": "0ee78894-89f8-4376-a829-f8685dbc1868"
+  },
+  "input": {
+   "issueEstimationType": "fibonacci",
+   "issueEstimationAllowZero": false,
+   "issueEstimationExtended": false
+  },
+  "result": {
+   "success": true,
+   "team": {
+    "id": "0ee78894-89f8-4376-a829-f8685dbc1868",
+    "issueEstimationType": "fibonacci",
+    "issueEstimationAllowZero": false,
+    "issueEstimationExtended": false
+   }
+  }
+ },
+ {
+  "at": "2026-09-18T12:54:31Z",
+  "type": "teamUpdate",
+  "ids": {
+   "teamId": "0ee78894-89f8-4376-a829-f8685dbc1868"
+  },
+  "input": {
+   "cyclesEnabled": true,
+   "cycleDuration": 1,
+   "cycleCooldownTime": 0,
+   "cycleStartDay": 4,
+   "upcomingCycleCount": 2,
+   "cycleIssueAutoAssignStarted": false,
+   "cycleIssueAutoAssignCompleted": false,
+   "cycleLockToActive": false,
+   "cycleEnabledStartDate": "2026-09-18T00:00:00.000Z"
+  },
+  "result": {
+   "success": true,
+   "team": {
+    "cyclesEnabled": true,
+    "cycleDuration": 1,
+    "cycleCooldownTime": 0,
+    "cycleStartDay": 4,
+    "upcomingCycleCount": 2,
+    "cycleIssueAutoAssignStarted": false,
+    "cycleIssueAutoAssignCompleted": false,
+    "cycleLockToActive": false
+   }
+  }
+ },
+ {
+  "at": "2026-09-18T12:54:55Z",
+  "type": "cycleUpdate",
+  "ids": {
+   "cycleIds": [
+    "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "eded55ec-07ed-45ca-94fe-0603663e15bc"
+   ]
+  },
+  "input": {
+   "i1": {
+    "name": "C1 Foundation & core systems",
+    "description": "Week 1 (Thu 09-18 to Wed 09-24): monorepo, data layer, identity, design system, forge, quality gates, orchestrator; P0 specs and research. RC0 on 09-21, RC1 on 09-24."
+   },
+   "i2": {
+    "name": "C2 Business layer & hardening",
+    "description": "Week 2 (Thu 09-25 to Wed 10-01): tables/views, collab, realtime, business core, growth, migration, multi-input; gates 2-4 on every PR. RC2 on 09-28, RC3 = v0.1.0 on 10-01."
+   },
+   "i3": {
+    "name": "C3 v0.2 stretch",
+    "description": "Week 3 (Thu 10-02 to Wed 10-08): Deferred set (v0.2 scope after NJ-19) and post-release fixes. Nothing is pre-assigned here."
+   }
+  },
+  "result": {
+   "a": {
+    "success": true,
+    "cycle": {
+     "id": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+     "number": 1,
+     "name": "C1 Foundation & core systems",
+     "startsAt": "2026-09-18T00:00:00.000Z",
+     "endsAt": "2026-09-25T07:00:00.000Z"
+    }
+   },
+   "b": {
+    "success": true,
+    "cycle": {
+     "id": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+     "number": 2,
+     "name": "C2 Business layer & hardening",
+     "startsAt": "2026-09-25T07:00:00.000Z",
+     "endsAt": "2026-10-02T07:00:00.000Z"
+    }
+   },
+   "c": {
+    "success": true,
+    "cycle": {
+     "id": "eded55ec-07ed-45ca-94fe-0603663e15bc",
+     "number": 3,
+     "name": "C3 v0.2 stretch",
+     "startsAt": "2026-10-02T07:00:00.000Z",
+     "endsAt": "2026-10-09T07:00:00.000Z"
+    }
+   }
+  }
+ },
+ {
+  "at": "2026-09-18T12:54:55Z",
+  "type": "teamUpdate",
+  "ids": {
+   "teamId": "0ee78894-89f8-4376-a829-f8685dbc1868"
+  },
+  "input": {
+   "triageEnabled": true
+  },
+  "result": {
+   "success": true,
+   "team": {
+    "triageEnabled": true,
+    "triageIssueState": {
+     "id": "185d9592-5ff4-4e22-a276-1855a30f69e0",
+     "name": "Triage",
+     "type": "triage"
+    }
+   }
+  }
+ },
+ {
+  "at": "2026-09-18T12:55:42Z",
+  "type": "issueLabelUpdate",
+  "ids": {
+   "labelIds": [
+    "9526e961-186c-4ebb-8c10-102d588a1bb6",
+    "d043f950-f433-45c4-9bfe-65b9813369f8",
+    "ff4b5d8d-f236-4d15-a75a-0eacc09e988e",
+    "bb6ce0ab-cc34-4fc2-9973-ade330d2af8f"
+   ],
+   "names": [
+    "Customer",
+    "Staff",
+    "Developer",
+    "Agent"
+   ]
+  },
+  "input": {
+   "parentId": "086b098d-a94f-4bae-815c-3e6d56d514dc"
+  },
+  "result": {
+   "customer": {
+    "success": true,
+    "issueLabel": {
+     "id": "9526e961-186c-4ebb-8c10-102d588a1bb6",
+     "name": "Customer",
+     "parent": {
+      "id": "086b098d-a94f-4bae-815c-3e6d56d514dc",
+      "name": "Surface"
+     }
+    }
+   },
+   "staff": {
+    "success": true,
+    "issueLabel": {
+     "id": "d043f950-f433-45c4-9bfe-65b9813369f8",
+     "name": "Staff",
+     "parent": {
+      "id": "086b098d-a94f-4bae-815c-3e6d56d514dc",
+      "name": "Surface"
+     }
+    }
+   },
+   "developer": {
+    "success": true,
+    "issueLabel": {
+     "id": "ff4b5d8d-f236-4d15-a75a-0eacc09e988e",
+     "name": "Developer",
+     "parent": {
+      "id": "086b098d-a94f-4bae-815c-3e6d56d514dc",
+      "name": "Surface"
+     }
+    }
+   },
+   "agent": {
+    "success": true,
+    "issueLabel": {
+     "id": "bb6ce0ab-cc34-4fc2-9973-ade330d2af8f",
+     "name": "Agent",
+     "parent": {
+      "id": "086b098d-a94f-4bae-815c-3e6d56d514dc",
+      "name": "Surface"
+     }
+    }
+   }
+  }
+ },
+ {
+  "at": "2026-09-18T12:55:43Z",
+  "type": "issueLabelCreate",
+  "ids": {},
+  "input": {
+   "teamId": "0ee78894-89f8-4376-a829-f8685dbc1868",
+   "name": "Chunk",
+   "isGroup": true,
+   "color": "#0EA5E9"
+  },
+  "result": {
+   "success": true,
+   "issueLabel": {
+    "id": "aa0b8939-6d0f-4894-a105-6aa0538fd9a5",
+    "name": "Chunk",
+    "isGroup": true,
+    "color": "#0EA5E9"
+   }
+  }
+ },
+ {
+  "at": "2026-09-18T12:55:44Z",
+  "type": "issueLabelCreate",
+  "ids": {
+   "parentId": "aa0b8939-6d0f-4894-a105-6aa0538fd9a5"
+  },
+  "input": {
+   "names": [
+    "Chunk 1",
+    "Chunk 2",
+    "Chunk 3",
+    "Chunk 4",
+    "Chunk 5"
+   ]
+  },
+  "result": {
+   "c1": {
+    "success": true,
+    "issueLabel": {
+     "id": "1cc2bc15-b0f1-41ad-90cc-90c24b82a886",
+     "name": "Chunk 1",
+     "color": "#BAE6FD"
+    }
+   },
+   "c2": {
+    "success": true,
+    "issueLabel": {
+     "id": "d2b1ae15-d90e-4fdb-a063-03d301f15aee",
+     "name": "Chunk 2",
+     "color": "#7DD3FC"
+    }
+   },
+   "c3": {
+    "success": true,
+    "issueLabel": {
+     "id": "0566fac3-212e-4800-ae54-b451ded74b9a",
+     "name": "Chunk 3",
+     "color": "#38BDF8"
+    }
+   },
+   "c4": {
+    "success": true,
+    "issueLabel": {
+     "id": "ae3e5cf0-d021-4c98-9052-64c13d420989",
+     "name": "Chunk 4",
+     "color": "#0284C7"
+    }
+   },
+   "c5": {
+    "success": true,
+    "issueLabel": {
+     "id": "ef74ff9c-a960-45bd-8be9-183bb9ede29a",
+     "name": "Chunk 5",
+     "color": "#075985"
+    }
+   }
+  }
+ },
+ {
+  "at": "2026-09-18T12:56:44Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-13",
+   "PAP-14",
+   "PAP-15",
+   "PAP-16",
+   "PAP-17",
+   "PAP-18",
+   "PAP-19",
+   "PAP-20",
+   "PAP-21",
+   "PAP-22"
+  ],
+  "input": {
+   "PAP-13": {
+    "estimate": 3,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-14": {
+    "estimate": 2,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-15": {
+    "estimate": 2,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-16": {
+    "estimate": 3,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-17": {
+    "estimate": 3,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-18": {
+    "estimate": 2,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-19": {
+    "dueDate": "2026-09-24"
+   },
+   "PAP-20": {
+    "dueDate": "2026-09-24"
+   },
+   "PAP-21": {
+    "dueDate": "2026-09-24"
+   },
+   "PAP-22": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   }
+  },
+  "result": {
+   "PAP-13": "ok",
+   "PAP-14": "ok",
+   "PAP-15": "ok",
+   "PAP-16": "ok",
+   "PAP-17": "ok",
+   "PAP-18": "ok",
+   "PAP-19": "ok",
+   "PAP-20": "ok",
+   "PAP-21": "ok",
+   "PAP-22": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:56:46Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-23",
+   "PAP-24",
+   "PAP-25",
+   "PAP-26",
+   "PAP-27",
+   "PAP-28",
+   "PAP-29",
+   "PAP-30",
+   "PAP-31",
+   "PAP-32"
+  ],
+  "input": {
+   "PAP-23": {
+    "estimate": 3
+   },
+   "PAP-24": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-25": {
+    "estimate": 3,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-26": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-27": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-28": {
+    "dueDate": "2026-09-29"
+   },
+   "PAP-29": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-30": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-31": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-32": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   }
+  },
+  "result": {
+   "PAP-23": "ok",
+   "PAP-24": "ok",
+   "PAP-25": "ok",
+   "PAP-26": "ok",
+   "PAP-27": "ok",
+   "PAP-28": "ok",
+   "PAP-29": "ok",
+   "PAP-30": "ok",
+   "PAP-31": "ok",
+   "PAP-32": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:56:48Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-33",
+   "PAP-34",
+   "PAP-35",
+   "PAP-36",
+   "PAP-37",
+   "PAP-38",
+   "PAP-39",
+   "PAP-40",
+   "PAP-41",
+   "PAP-42"
+  ],
+  "input": {
+   "PAP-33": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-34": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-35": {
+    "dueDate": "2026-09-22"
+   },
+   "PAP-36": {
+    "dueDate": "2026-09-25"
+   },
+   "PAP-37": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-38": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-39": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-40": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-41": {
+    "estimate": 2,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-42": {
+    "estimate": 2,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   }
+  },
+  "result": {
+   "PAP-33": "ok",
+   "PAP-34": "ok",
+   "PAP-35": "ok",
+   "PAP-36": "ok",
+   "PAP-37": "ok",
+   "PAP-38": "ok",
+   "PAP-39": "ok",
+   "PAP-40": "ok",
+   "PAP-41": "ok",
+   "PAP-42": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:56:49Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-43",
+   "PAP-44",
+   "PAP-45",
+   "PAP-46",
+   "PAP-47",
+   "PAP-48",
+   "PAP-49",
+   "PAP-50",
+   "PAP-51",
+   "PAP-52"
+  ],
+  "input": {
+   "PAP-43": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-44": {
+    "estimate": 2,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-45": {
+    "dueDate": "2026-09-20"
+   },
+   "PAP-46": {
+    "estimate": 3,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-47": {
+    "estimate": 3,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-48": {
+    "estimate": 3,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-49": {
+    "estimate": 2,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-50": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-51": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-52": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   }
+  },
+  "result": {
+   "PAP-43": "ok",
+   "PAP-44": "ok",
+   "PAP-45": "ok",
+   "PAP-46": "ok",
+   "PAP-47": "ok",
+   "PAP-48": "ok",
+   "PAP-49": "ok",
+   "PAP-50": "ok",
+   "PAP-51": "ok",
+   "PAP-52": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:56:50Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-53",
+   "PAP-54",
+   "PAP-55",
+   "PAP-56",
+   "PAP-57",
+   "PAP-58",
+   "PAP-59",
+   "PAP-60",
+   "PAP-61",
+   "PAP-62"
+  ],
+  "input": {
+   "PAP-53": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-54": {
+    "dueDate": "2026-09-30"
+   },
+   "PAP-55": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-56": {
+    "estimate": 2,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-57": {
+    "dueDate": "2026-09-23"
+   },
+   "PAP-58": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-59": {
+    "dueDate": "2026-09-23"
+   },
+   "PAP-60": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-61": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-62": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   }
+  },
+  "result": {
+   "PAP-53": "ok",
+   "PAP-54": "ok",
+   "PAP-55": "ok",
+   "PAP-56": "ok",
+   "PAP-57": "ok",
+   "PAP-58": "ok",
+   "PAP-59": "ok",
+   "PAP-60": "ok",
+   "PAP-61": "ok",
+   "PAP-62": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:56:52Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-63",
+   "PAP-64",
+   "PAP-65",
+   "PAP-66",
+   "PAP-67",
+   "PAP-68",
+   "PAP-69",
+   "PAP-70",
+   "PAP-71",
+   "PAP-72"
+  ],
+  "input": {
+   "PAP-63": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-64": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-65": {
+    "dueDate": "2026-09-30"
+   },
+   "PAP-66": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-67": {
+    "dueDate": "2026-09-22"
+   },
+   "PAP-68": {
+    "estimate": 2,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-69": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-70": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-71": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-72": {
+    "estimate": 2,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   }
+  },
+  "result": {
+   "PAP-63": "ok",
+   "PAP-64": "ok",
+   "PAP-65": "ok",
+   "PAP-66": "ok",
+   "PAP-67": "ok",
+   "PAP-68": "ok",
+   "PAP-69": "ok",
+   "PAP-70": "ok",
+   "PAP-71": "ok",
+   "PAP-72": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:56:54Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-73",
+   "PAP-74",
+   "PAP-75",
+   "PAP-76",
+   "PAP-77",
+   "PAP-78",
+   "PAP-79",
+   "PAP-80",
+   "PAP-81",
+   "PAP-82"
+  ],
+  "input": {
+   "PAP-73": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-74": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-75": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-76": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-77": {
+    "estimate": 2,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-78": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-79": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-80": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-81": {
+    "dueDate": "2026-09-25"
+   },
+   "PAP-82": {
+    "dueDate": "2026-09-25"
+   }
+  },
+  "result": {
+   "PAP-73": "ok",
+   "PAP-74": "ok",
+   "PAP-75": "ok",
+   "PAP-76": "ok",
+   "PAP-77": "ok",
+   "PAP-78": "ok",
+   "PAP-79": "ok",
+   "PAP-80": "ok",
+   "PAP-81": "ok",
+   "PAP-82": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:56:56Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-83",
+   "PAP-84",
+   "PAP-85",
+   "PAP-86",
+   "PAP-87",
+   "PAP-88",
+   "PAP-89",
+   "PAP-90",
+   "PAP-91",
+   "PAP-92"
+  ],
+  "input": {
+   "PAP-83": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-84": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-85": {
+    "dueDate": "2026-09-26"
+   },
+   "PAP-86": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-87": {
+    "estimate": 2,
+    "dueDate": "2026-09-26",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-88": {
+    "dueDate": "2026-09-30"
+   },
+   "PAP-89": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-90": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-91": {
+    "estimate": 2,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-92": {
+    "estimate": 2,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   }
+  },
+  "result": {
+   "PAP-83": "ok",
+   "PAP-84": "ok",
+   "PAP-85": "ok",
+   "PAP-86": "ok",
+   "PAP-87": "ok",
+   "PAP-88": "ok",
+   "PAP-89": "ok",
+   "PAP-90": "ok",
+   "PAP-91": "ok",
+   "PAP-92": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:56:58Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-93",
+   "PAP-94",
+   "PAP-95",
+   "PAP-96",
+   "PAP-97",
+   "PAP-98",
+   "PAP-99",
+   "PAP-100",
+   "PAP-101",
+   "PAP-102"
+  ],
+  "input": {
+   "PAP-93": {
+    "estimate": 3,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-94": {
+    "estimate": 3,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-95": {
+    "estimate": 2,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-96": {
+    "dueDate": "2026-09-22"
+   },
+   "PAP-97": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-98": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-99": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-100": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-101": {
+    "dueDate": "2026-09-30"
+   },
+   "PAP-102": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   }
+  },
+  "result": {
+   "PAP-93": "ok",
+   "PAP-94": "ok",
+   "PAP-95": "ok",
+   "PAP-96": "ok",
+   "PAP-97": "ok",
+   "PAP-98": "ok",
+   "PAP-99": "ok",
+   "PAP-100": "ok",
+   "PAP-101": "ok",
+   "PAP-102": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:56:59Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-103",
+   "PAP-104",
+   "PAP-105",
+   "PAP-106",
+   "PAP-107",
+   "PAP-108",
+   "PAP-109",
+   "PAP-110",
+   "PAP-111",
+   "PAP-112"
+  ],
+  "input": {
+   "PAP-103": {
+    "estimate": 2,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-104": {
+    "dueDate": "2026-09-24"
+   },
+   "PAP-105": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-106": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-107": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-108": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-109": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-110": {
+    "dueDate": "2026-09-25"
+   },
+   "PAP-111": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-112": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   }
+  },
+  "result": {
+   "PAP-103": "ok",
+   "PAP-104": "ok",
+   "PAP-105": "ok",
+   "PAP-106": "ok",
+   "PAP-107": "ok",
+   "PAP-108": "ok",
+   "PAP-109": "ok",
+   "PAP-110": "ok",
+   "PAP-111": "ok",
+   "PAP-112": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:03Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-113",
+   "PAP-114",
+   "PAP-115",
+   "PAP-116",
+   "PAP-117",
+   "PAP-118",
+   "PAP-119",
+   "PAP-120",
+   "PAP-121",
+   "PAP-122"
+  ],
+  "input": {
+   "PAP-113": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-114": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-115": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-116": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-117": {
+    "estimate": 2,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-118": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-119": {
+    "dueDate": "2026-09-26"
+   },
+   "PAP-120": {
+    "dueDate": "2026-09-26"
+   },
+   "PAP-121": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-122": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   }
+  },
+  "result": {
+   "PAP-113": "ok",
+   "PAP-114": "ok",
+   "PAP-115": "ok",
+   "PAP-116": "ok",
+   "PAP-117": "ok",
+   "PAP-118": "ok",
+   "PAP-119": "ok",
+   "PAP-120": "ok",
+   "PAP-121": "ok",
+   "PAP-122": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:05Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-123",
+   "PAP-124",
+   "PAP-125",
+   "PAP-126",
+   "PAP-127",
+   "PAP-128",
+   "PAP-129",
+   "PAP-130",
+   "PAP-131",
+   "PAP-132"
+  ],
+  "input": {
+   "PAP-123": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-124": {
+    "dueDate": "2026-09-30"
+   },
+   "PAP-125": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-126": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-127": {
+    "estimate": 2,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-128": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-129": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-130": {
+    "estimate": 2,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-131": {
+    "dueDate": "2026-09-29"
+   },
+   "PAP-132": {
+    "dueDate": "2026-09-29"
+   }
+  },
+  "result": {
+   "PAP-123": "ok",
+   "PAP-124": "ok",
+   "PAP-125": "ok",
+   "PAP-126": "ok",
+   "PAP-127": "ok",
+   "PAP-128": "ok",
+   "PAP-129": "ok",
+   "PAP-130": "ok",
+   "PAP-131": "ok",
+   "PAP-132": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:06Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-133",
+   "PAP-134",
+   "PAP-135",
+   "PAP-136",
+   "PAP-137",
+   "PAP-138",
+   "PAP-139",
+   "PAP-140",
+   "PAP-141",
+   "PAP-142"
+  ],
+  "input": {
+   "PAP-133": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-134": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-135": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-136": {
+    "dueDate": "2026-09-29"
+   },
+   "PAP-137": {
+    "estimate": 3
+   },
+   "PAP-138": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-139": {
+    "estimate": 2,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-140": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-141": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-142": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   }
+  },
+  "result": {
+   "PAP-133": "ok",
+   "PAP-134": "ok",
+   "PAP-135": "ok",
+   "PAP-136": "ok",
+   "PAP-137": "ok",
+   "PAP-138": "ok",
+   "PAP-139": "ok",
+   "PAP-140": "ok",
+   "PAP-141": "ok",
+   "PAP-142": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:08Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-143",
+   "PAP-144",
+   "PAP-145",
+   "PAP-146",
+   "PAP-147",
+   "PAP-148",
+   "PAP-149",
+   "PAP-150",
+   "PAP-151",
+   "PAP-152"
+  ],
+  "input": {
+   "PAP-143": {
+    "dueDate": "2026-09-28"
+   },
+   "PAP-144": {
+    "estimate": 2,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-145": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-146": {
+    "estimate": 2,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-147": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-148": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-149": {
+    "estimate": 3
+   },
+   "PAP-150": {
+    "estimate": 2,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-151": {
+    "dueDate": "2026-09-23"
+   },
+   "PAP-152": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   }
+  },
+  "result": {
+   "PAP-143": "ok",
+   "PAP-144": "ok",
+   "PAP-145": "ok",
+   "PAP-146": "ok",
+   "PAP-147": "ok",
+   "PAP-148": "ok",
+   "PAP-149": "ok",
+   "PAP-150": "ok",
+   "PAP-151": "ok",
+   "PAP-152": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:09Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-153",
+   "PAP-154",
+   "PAP-155",
+   "PAP-156",
+   "PAP-157",
+   "PAP-158",
+   "PAP-159",
+   "PAP-160",
+   "PAP-161",
+   "PAP-162"
+  ],
+  "input": {
+   "PAP-153": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-154": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-155": {
+    "dueDate": "2026-09-27"
+   },
+   "PAP-156": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-157": {
+    "estimate": 3
+   },
+   "PAP-158": {
+    "estimate": 3
+   },
+   "PAP-159": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-160": {
+    "estimate": 2,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-161": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-162": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   }
+  },
+  "result": {
+   "PAP-153": "ok",
+   "PAP-154": "ok",
+   "PAP-155": "ok",
+   "PAP-156": "ok",
+   "PAP-157": "ok",
+   "PAP-158": "ok",
+   "PAP-159": "ok",
+   "PAP-160": "ok",
+   "PAP-161": "ok",
+   "PAP-162": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:11Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-163",
+   "PAP-164",
+   "PAP-165",
+   "PAP-166",
+   "PAP-167",
+   "PAP-168",
+   "PAP-169",
+   "PAP-170",
+   "PAP-171",
+   "PAP-172"
+  ],
+  "input": {
+   "PAP-163": {
+    "dueDate": "2026-09-28"
+   },
+   "PAP-164": {
+    "dueDate": "2026-09-28"
+   },
+   "PAP-165": {
+    "dueDate": "2026-09-28"
+   },
+   "PAP-166": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-167": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-168": {
+    "dueDate": "2026-09-29"
+   },
+   "PAP-169": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-170": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-171": {
+    "dueDate": "2026-09-30"
+   },
+   "PAP-172": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   }
+  },
+  "result": {
+   "PAP-163": "ok",
+   "PAP-164": "ok",
+   "PAP-165": "ok",
+   "PAP-166": "ok",
+   "PAP-167": "ok",
+   "PAP-168": "ok",
+   "PAP-169": "ok",
+   "PAP-170": "ok",
+   "PAP-171": "ok",
+   "PAP-172": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:13Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-173",
+   "PAP-174",
+   "PAP-175",
+   "PAP-176",
+   "PAP-177",
+   "PAP-178",
+   "PAP-179",
+   "PAP-180",
+   "PAP-181",
+   "PAP-182"
+  ],
+  "input": {
+   "PAP-173": {
+    "dueDate": "2026-09-30"
+   },
+   "PAP-174": {
+    "dueDate": "2026-09-30"
+   },
+   "PAP-175": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-176": {
+    "estimate": 2,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-177": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-178": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-179": {
+    "dueDate": "2026-09-29"
+   },
+   "PAP-180": {
+    "dueDate": "2026-09-29"
+   },
+   "PAP-181": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-182": {
+    "estimate": 3
+   }
+  },
+  "result": {
+   "PAP-173": "ok",
+   "PAP-174": "ok",
+   "PAP-175": "ok",
+   "PAP-176": "ok",
+   "PAP-177": "ok",
+   "PAP-178": "ok",
+   "PAP-179": "ok",
+   "PAP-180": "ok",
+   "PAP-181": "ok",
+   "PAP-182": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:14Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-183",
+   "PAP-184",
+   "PAP-185",
+   "PAP-186",
+   "PAP-187",
+   "PAP-188",
+   "PAP-189",
+   "PAP-192",
+   "PAP-193",
+   "PAP-194"
+  ],
+  "input": {
+   "PAP-183": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-184": {
+    "dueDate": "2026-10-01"
+   },
+   "PAP-185": {
+    "estimate": 3
+   },
+   "PAP-186": {
+    "estimate": 3,
+    "dueDate": "2026-10-01",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-187": {
+    "estimate": 5,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-188": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-189": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-192": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-193": {
+    "estimate": 3
+   },
+   "PAP-194": {
+    "estimate": 3
+   }
+  },
+  "result": {
+   "PAP-183": "ok",
+   "PAP-184": "ok",
+   "PAP-185": "ok",
+   "PAP-186": "ok",
+   "PAP-187": "ok",
+   "PAP-188": "ok",
+   "PAP-189": "ok",
+   "PAP-192": "ok",
+   "PAP-193": "ok",
+   "PAP-194": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:16Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-195",
+   "PAP-198",
+   "PAP-199",
+   "PAP-200",
+   "PAP-201",
+   "PAP-202",
+   "PAP-204",
+   "PAP-205",
+   "PAP-208",
+   "PAP-209"
+  ],
+  "input": {
+   "PAP-195": {
+    "estimate": 3
+   },
+   "PAP-198": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-199": {
+    "dueDate": "2026-09-28"
+   },
+   "PAP-200": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-201": {
+    "estimate": 2,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-202": {
+    "dueDate": "2026-09-30"
+   },
+   "PAP-204": {
+    "estimate": 3
+   },
+   "PAP-205": {
+    "dueDate": "2026-09-30"
+   },
+   "PAP-208": {
+    "estimate": 3,
+    "dueDate": "2026-10-01",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-209": {
+    "estimate": 2,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   }
+  },
+  "result": {
+   "PAP-195": "ok",
+   "PAP-198": "ok",
+   "PAP-199": "ok",
+   "PAP-200": "ok",
+   "PAP-201": "ok",
+   "PAP-202": "ok",
+   "PAP-204": "ok",
+   "PAP-205": "ok",
+   "PAP-208": "ok",
+   "PAP-209": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:19Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-210",
+   "PAP-211",
+   "PAP-212",
+   "PAP-213",
+   "PAP-214",
+   "PAP-215",
+   "PAP-216",
+   "PAP-217",
+   "PAP-218",
+   "PAP-219"
+  ],
+  "input": {
+   "PAP-210": {
+    "estimate": 3,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-211": {
+    "estimate": 3,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-212": {
+    "estimate": 3,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-213": {
+    "dueDate": "2026-09-24"
+   },
+   "PAP-214": {
+    "dueDate": "2026-09-24"
+   },
+   "PAP-215": {
+    "dueDate": "2026-09-24"
+   },
+   "PAP-216": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-217": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-218": {
+    "estimate": 3
+   },
+   "PAP-219": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   }
+  },
+  "result": {
+   "PAP-210": "ok",
+   "PAP-211": "ok",
+   "PAP-212": "ok",
+   "PAP-213": "ok",
+   "PAP-214": "ok",
+   "PAP-215": "ok",
+   "PAP-216": "ok",
+   "PAP-217": "ok",
+   "PAP-218": "ok",
+   "PAP-219": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:21Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-220",
+   "PAP-221",
+   "PAP-222",
+   "PAP-223",
+   "PAP-224",
+   "PAP-225",
+   "PAP-226",
+   "PAP-227",
+   "PAP-228",
+   "PAP-229"
+  ],
+  "input": {
+   "PAP-220": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-221": {
+    "estimate": 3
+   },
+   "PAP-222": {
+    "estimate": 3
+   },
+   "PAP-223": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-224": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-225": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-226": {
+    "estimate": 2,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-227": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-228": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-229": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   }
+  },
+  "result": {
+   "PAP-220": "ok",
+   "PAP-221": "ok",
+   "PAP-222": "ok",
+   "PAP-223": "ok",
+   "PAP-224": "ok",
+   "PAP-225": "ok",
+   "PAP-226": "ok",
+   "PAP-227": "ok",
+   "PAP-228": "ok",
+   "PAP-229": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:22Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-230",
+   "PAP-231",
+   "PAP-232",
+   "PAP-233",
+   "PAP-234",
+   "PAP-235",
+   "PAP-236",
+   "PAP-237",
+   "PAP-238",
+   "PAP-239"
+  ],
+  "input": {
+   "PAP-230": {
+    "estimate": 3
+   },
+   "PAP-231": {
+    "estimate": 3
+   },
+   "PAP-232": {
+    "estimate": 3
+   },
+   "PAP-233": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-234": {
+    "estimate": 2,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-235": {
+    "estimate": 3
+   },
+   "PAP-236": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-237": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-238": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-239": {
+    "estimate": 2,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   }
+  },
+  "result": {
+   "PAP-230": "ok",
+   "PAP-231": "ok",
+   "PAP-232": "ok",
+   "PAP-233": "ok",
+   "PAP-234": "ok",
+   "PAP-235": "ok",
+   "PAP-236": "ok",
+   "PAP-237": "ok",
+   "PAP-238": "ok",
+   "PAP-239": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:24Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-240",
+   "PAP-241",
+   "PAP-242",
+   "PAP-243",
+   "PAP-244",
+   "PAP-245",
+   "PAP-246",
+   "PAP-247",
+   "PAP-248",
+   "PAP-249"
+  ],
+  "input": {
+   "PAP-240": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-241": {
+    "estimate": 2,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-242": {
+    "estimate": 2,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-243": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-244": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-245": {
+    "estimate": 2,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-246": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-247": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-248": {
+    "estimate": 2,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-249": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   }
+  },
+  "result": {
+   "PAP-240": "ok",
+   "PAP-241": "ok",
+   "PAP-242": "ok",
+   "PAP-243": "ok",
+   "PAP-244": "ok",
+   "PAP-245": "ok",
+   "PAP-246": "ok",
+   "PAP-247": "ok",
+   "PAP-248": "ok",
+   "PAP-249": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:26Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-250",
+   "PAP-251",
+   "PAP-252",
+   "PAP-253",
+   "PAP-254",
+   "PAP-255",
+   "PAP-256",
+   "PAP-257",
+   "PAP-258",
+   "PAP-259"
+  ],
+  "input": {
+   "PAP-250": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-251": {
+    "estimate": 2,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-252": {
+    "estimate": 2,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-253": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-254": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-255": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-256": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-257": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-258": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-259": {
+    "estimate": 2,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   }
+  },
+  "result": {
+   "PAP-250": "ok",
+   "PAP-251": "ok",
+   "PAP-252": "ok",
+   "PAP-253": "ok",
+   "PAP-254": "ok",
+   "PAP-255": "ok",
+   "PAP-256": "ok",
+   "PAP-257": "ok",
+   "PAP-258": "ok",
+   "PAP-259": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:29Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-260",
+   "PAP-261",
+   "PAP-262",
+   "PAP-263",
+   "PAP-264",
+   "PAP-265",
+   "PAP-266",
+   "PAP-267",
+   "PAP-268",
+   "PAP-269"
+  ],
+  "input": {
+   "PAP-260": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-261": {
+    "estimate": 2,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-262": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-263": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-264": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-265": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-266": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-267": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-268": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-269": {
+    "estimate": 2,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   }
+  },
+  "result": {
+   "PAP-260": "ok",
+   "PAP-261": "ok",
+   "PAP-262": "ok",
+   "PAP-263": "ok",
+   "PAP-264": "ok",
+   "PAP-265": "ok",
+   "PAP-266": "ok",
+   "PAP-267": "ok",
+   "PAP-268": "ok",
+   "PAP-269": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:31Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-270",
+   "PAP-271",
+   "PAP-272",
+   "PAP-273",
+   "PAP-274",
+   "PAP-275",
+   "PAP-276",
+   "PAP-277",
+   "PAP-278",
+   "PAP-279"
+  ],
+  "input": {
+   "PAP-270": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-271": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-272": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-273": {
+    "estimate": 3,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-274": {
+    "estimate": 2,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-275": {
+    "estimate": 2,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-276": {
+    "estimate": 3
+   },
+   "PAP-277": {
+    "estimate": 3
+   },
+   "PAP-278": {
+    "estimate": 3
+   },
+   "PAP-279": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   }
+  },
+  "result": {
+   "PAP-270": "ok",
+   "PAP-271": "ok",
+   "PAP-272": "ok",
+   "PAP-273": "ok",
+   "PAP-274": "ok",
+   "PAP-275": "ok",
+   "PAP-276": "ok",
+   "PAP-277": "ok",
+   "PAP-278": "ok",
+   "PAP-279": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:34Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-280",
+   "PAP-281",
+   "PAP-282",
+   "PAP-283",
+   "PAP-284",
+   "PAP-285",
+   "PAP-286",
+   "PAP-287",
+   "PAP-288",
+   "PAP-289"
+  ],
+  "input": {
+   "PAP-280": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-281": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-282": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-283": {
+    "estimate": 2,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-284": {
+    "estimate": 2,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-285": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-286": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-287": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-288": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-289": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   }
+  },
+  "result": {
+   "PAP-280": "ok",
+   "PAP-281": "ok",
+   "PAP-282": "ok",
+   "PAP-283": "ok",
+   "PAP-284": "ok",
+   "PAP-285": "ok",
+   "PAP-286": "ok",
+   "PAP-287": "ok",
+   "PAP-288": "ok",
+   "PAP-289": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:36Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-290",
+   "PAP-291",
+   "PAP-292",
+   "PAP-293",
+   "PAP-294",
+   "PAP-295",
+   "PAP-296",
+   "PAP-297",
+   "PAP-298",
+   "PAP-299"
+  ],
+  "input": {
+   "PAP-290": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-291": {
+    "estimate": 2,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-292": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-293": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-294": {
+    "estimate": 2,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-295": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-296": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-297": {
+    "estimate": 2,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-298": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-299": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   }
+  },
+  "result": {
+   "PAP-290": "ok",
+   "PAP-291": "ok",
+   "PAP-292": "ok",
+   "PAP-293": "ok",
+   "PAP-294": "ok",
+   "PAP-295": "ok",
+   "PAP-296": "ok",
+   "PAP-297": "ok",
+   "PAP-298": "ok",
+   "PAP-299": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:38Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-300",
+   "PAP-301",
+   "PAP-302",
+   "PAP-303",
+   "PAP-304",
+   "PAP-305",
+   "PAP-306",
+   "PAP-307",
+   "PAP-308",
+   "PAP-309"
+  ],
+  "input": {
+   "PAP-300": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-301": {
+    "estimate": 2,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-302": {
+    "estimate": 2,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-303": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-304": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-305": {
+    "estimate": 2,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-306": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-307": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-308": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-309": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   }
+  },
+  "result": {
+   "PAP-300": "ok",
+   "PAP-301": "ok",
+   "PAP-302": "ok",
+   "PAP-303": "ok",
+   "PAP-304": "ok",
+   "PAP-305": "ok",
+   "PAP-306": "ok",
+   "PAP-307": "ok",
+   "PAP-308": "ok",
+   "PAP-309": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:40Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-310",
+   "PAP-311",
+   "PAP-312",
+   "PAP-313",
+   "PAP-314",
+   "PAP-315",
+   "PAP-316",
+   "PAP-317",
+   "PAP-318",
+   "PAP-319"
+  ],
+  "input": {
+   "PAP-310": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-311": {
+    "estimate": 2,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-312": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-313": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-314": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-315": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-316": {
+    "estimate": 2,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-317": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-318": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-319": {
+    "estimate": 2,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   }
+  },
+  "result": {
+   "PAP-310": "ok",
+   "PAP-311": "ok",
+   "PAP-312": "ok",
+   "PAP-313": "ok",
+   "PAP-314": "ok",
+   "PAP-315": "ok",
+   "PAP-316": "ok",
+   "PAP-317": "ok",
+   "PAP-318": "ok",
+   "PAP-319": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:42Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-320",
+   "PAP-321",
+   "PAP-322",
+   "PAP-323",
+   "PAP-324",
+   "PAP-325",
+   "PAP-326",
+   "PAP-327",
+   "PAP-328",
+   "PAP-329"
+  ],
+  "input": {
+   "PAP-320": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-321": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-322": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-323": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-324": {
+    "estimate": 2,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-325": {
+    "estimate": 2,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-326": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-327": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-328": {
+    "estimate": 2,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-329": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   }
+  },
+  "result": {
+   "PAP-320": "ok",
+   "PAP-321": "ok",
+   "PAP-322": "ok",
+   "PAP-323": "ok",
+   "PAP-324": "ok",
+   "PAP-325": "ok",
+   "PAP-326": "ok",
+   "PAP-327": "ok",
+   "PAP-328": "ok",
+   "PAP-329": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:44Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-330",
+   "PAP-331",
+   "PAP-332",
+   "PAP-333",
+   "PAP-334",
+   "PAP-335",
+   "PAP-336",
+   "PAP-337",
+   "PAP-338",
+   "PAP-339"
+  ],
+  "input": {
+   "PAP-330": {
+    "estimate": 2,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-331": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-332": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-333": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-334": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-335": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-336": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-337": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-338": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-339": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   }
+  },
+  "result": {
+   "PAP-330": "ok",
+   "PAP-331": "ok",
+   "PAP-332": "ok",
+   "PAP-333": "ok",
+   "PAP-334": "ok",
+   "PAP-335": "ok",
+   "PAP-336": "ok",
+   "PAP-337": "ok",
+   "PAP-338": "ok",
+   "PAP-339": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:46Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-340",
+   "PAP-341",
+   "PAP-342",
+   "PAP-343",
+   "PAP-344",
+   "PAP-345",
+   "PAP-346",
+   "PAP-347",
+   "PAP-348",
+   "PAP-349"
+  ],
+  "input": {
+   "PAP-340": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-341": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-342": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-343": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-344": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-345": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-346": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-347": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-348": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-349": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   }
+  },
+  "result": {
+   "PAP-340": "ok",
+   "PAP-341": "ok",
+   "PAP-342": "ok",
+   "PAP-343": "ok",
+   "PAP-344": "ok",
+   "PAP-345": "ok",
+   "PAP-346": "ok",
+   "PAP-347": "ok",
+   "PAP-348": "ok",
+   "PAP-349": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:48Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-350",
+   "PAP-351",
+   "PAP-352",
+   "PAP-353",
+   "PAP-354",
+   "PAP-355",
+   "PAP-356",
+   "PAP-357",
+   "PAP-358",
+   "PAP-359"
+  ],
+  "input": {
+   "PAP-350": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-351": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-352": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-353": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-354": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-355": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-356": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-357": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-358": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-359": {
+    "estimate": 2,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   }
+  },
+  "result": {
+   "PAP-350": "ok",
+   "PAP-351": "ok",
+   "PAP-352": "ok",
+   "PAP-353": "ok",
+   "PAP-354": "ok",
+   "PAP-355": "ok",
+   "PAP-356": "ok",
+   "PAP-357": "ok",
+   "PAP-358": "ok",
+   "PAP-359": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:49Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-360",
+   "PAP-361",
+   "PAP-362",
+   "PAP-363",
+   "PAP-364",
+   "PAP-365",
+   "PAP-366",
+   "PAP-367",
+   "PAP-368",
+   "PAP-369"
+  ],
+  "input": {
+   "PAP-360": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "1cc2bc15-b0f1-41ad-90cc-90c24b82a886"
+    ]
+   },
+   "PAP-361": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-362": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-363": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-364": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-365": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-366": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-367": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-368": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-369": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   }
+  },
+  "result": {
+   "PAP-360": "ok",
+   "PAP-361": "ok",
+   "PAP-362": "ok",
+   "PAP-363": "ok",
+   "PAP-364": "ok",
+   "PAP-365": "ok",
+   "PAP-366": "ok",
+   "PAP-367": "ok",
+   "PAP-368": "ok",
+   "PAP-369": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:51Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-370",
+   "PAP-371",
+   "PAP-372",
+   "PAP-373",
+   "PAP-374",
+   "PAP-375",
+   "PAP-376",
+   "PAP-377",
+   "PAP-378",
+   "PAP-379"
+  ],
+  "input": {
+   "PAP-370": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-371": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-372": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-373": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-374": {
+    "estimate": 2,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-375": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-376": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-377": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-378": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-379": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   }
+  },
+  "result": {
+   "PAP-370": "ok",
+   "PAP-371": "ok",
+   "PAP-372": "ok",
+   "PAP-373": "ok",
+   "PAP-374": "ok",
+   "PAP-375": "ok",
+   "PAP-376": "ok",
+   "PAP-377": "ok",
+   "PAP-378": "ok",
+   "PAP-379": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:54Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-380",
+   "PAP-381",
+   "PAP-382",
+   "PAP-383",
+   "PAP-384",
+   "PAP-385",
+   "PAP-386",
+   "PAP-387",
+   "PAP-388",
+   "PAP-389"
+  ],
+  "input": {
+   "PAP-380": {
+    "estimate": 2,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-381": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-382": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-383": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-384": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-385": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-386": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-387": {
+    "estimate": 2,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-388": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-389": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   }
+  },
+  "result": {
+   "PAP-380": "ok",
+   "PAP-381": "ok",
+   "PAP-382": "ok",
+   "PAP-383": "ok",
+   "PAP-384": "ok",
+   "PAP-385": "ok",
+   "PAP-386": "ok",
+   "PAP-387": "ok",
+   "PAP-388": "ok",
+   "PAP-389": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:56Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-390",
+   "PAP-391",
+   "PAP-392",
+   "PAP-393",
+   "PAP-394",
+   "PAP-395",
+   "PAP-396",
+   "PAP-397",
+   "PAP-398",
+   "PAP-399"
+  ],
+  "input": {
+   "PAP-390": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-391": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-392": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-393": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-394": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-395": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "d2b1ae15-d90e-4fdb-a063-03d301f15aee"
+    ]
+   },
+   "PAP-396": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-397": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-398": {
+    "estimate": 3,
+    "dueDate": "2026-10-01",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   },
+   "PAP-399": {
+    "estimate": 3,
+    "dueDate": "2026-10-01",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   }
+  },
+  "result": {
+   "PAP-390": "ok",
+   "PAP-391": "ok",
+   "PAP-392": "ok",
+   "PAP-393": "ok",
+   "PAP-394": "ok",
+   "PAP-395": "ok",
+   "PAP-396": "ok",
+   "PAP-397": "ok",
+   "PAP-398": "ok",
+   "PAP-399": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:57Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-400",
+   "PAP-401",
+   "PAP-402",
+   "PAP-403",
+   "PAP-404",
+   "PAP-405",
+   "PAP-406",
+   "PAP-407",
+   "PAP-408",
+   "PAP-409"
+  ],
+  "input": {
+   "PAP-400": {
+    "estimate": 3,
+    "dueDate": "2026-10-01",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ae3e5cf0-d021-4c98-9052-64c13d420989"
+    ]
+   },
+   "PAP-401": {
+    "estimate": 3
+   },
+   "PAP-402": {
+    "estimate": 3
+   },
+   "PAP-403": {
+    "estimate": 3
+   },
+   "PAP-404": {
+    "estimate": 3
+   },
+   "PAP-405": {
+    "estimate": 3
+   },
+   "PAP-406": {
+    "estimate": 3
+   },
+   "PAP-407": {
+    "estimate": 3
+   },
+   "PAP-408": {
+    "estimate": 3
+   },
+   "PAP-409": {
+    "estimate": 2
+   }
+  },
+  "result": {
+   "PAP-400": "ok",
+   "PAP-401": "ok",
+   "PAP-402": "ok",
+   "PAP-403": "ok",
+   "PAP-404": "ok",
+   "PAP-405": "ok",
+   "PAP-406": "ok",
+   "PAP-407": "ok",
+   "PAP-408": "ok",
+   "PAP-409": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:57:58Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-410",
+   "PAP-411",
+   "PAP-412",
+   "PAP-413",
+   "PAP-414",
+   "PAP-415",
+   "PAP-416",
+   "PAP-417",
+   "PAP-418",
+   "PAP-419"
+  ],
+  "input": {
+   "PAP-410": {
+    "estimate": 3
+   },
+   "PAP-411": {
+    "estimate": 3
+   },
+   "PAP-412": {
+    "estimate": 3
+   },
+   "PAP-413": {
+    "estimate": 2,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-414": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-415": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-416": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-417": {
+    "estimate": 3
+   },
+   "PAP-418": {
+    "estimate": 3
+   },
+   "PAP-419": {
+    "estimate": 2
+   }
+  },
+  "result": {
+   "PAP-410": "ok",
+   "PAP-411": "ok",
+   "PAP-412": "ok",
+   "PAP-413": "ok",
+   "PAP-414": "ok",
+   "PAP-415": "ok",
+   "PAP-416": "ok",
+   "PAP-417": "ok",
+   "PAP-418": "ok",
+   "PAP-419": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:58:00Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-420",
+   "PAP-421",
+   "PAP-422",
+   "PAP-423",
+   "PAP-424",
+   "PAP-425",
+   "PAP-426",
+   "PAP-427",
+   "PAP-428",
+   "PAP-429"
+  ],
+  "input": {
+   "PAP-420": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-421": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-422": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-423": {
+    "estimate": 3
+   },
+   "PAP-424": {
+    "estimate": 3
+   },
+   "PAP-425": {
+    "estimate": 3
+   },
+   "PAP-426": {
+    "estimate": 3
+   },
+   "PAP-427": {
+    "estimate": 3
+   },
+   "PAP-428": {
+    "estimate": 2
+   },
+   "PAP-429": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "0566fac3-212e-4800-ae54-b451ded74b9a"
+    ]
+   }
+  },
+  "result": {
+   "PAP-420": "ok",
+   "PAP-421": "ok",
+   "PAP-422": "ok",
+   "PAP-423": "ok",
+   "PAP-424": "ok",
+   "PAP-425": "ok",
+   "PAP-426": "ok",
+   "PAP-427": "ok",
+   "PAP-428": "ok",
+   "PAP-429": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:58:01Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-430",
+   "PAP-431",
+   "PAP-432",
+   "PAP-433",
+   "PAP-434",
+   "PAP-435",
+   "PAP-436",
+   "PAP-437",
+   "PAP-438",
+   "PAP-439"
+  ],
+  "input": {
+   "PAP-430": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-431": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-432": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555",
+    "addedLabelIds": [
+     "ef74ff9c-a960-45bd-8be9-183bb9ede29a"
+    ]
+   },
+   "PAP-433": {
+    "estimate": 2,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-434": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-435": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-436": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-437": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-438": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-439": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   }
+  },
+  "result": {
+   "PAP-430": "ok",
+   "PAP-431": "ok",
+   "PAP-432": "ok",
+   "PAP-433": "ok",
+   "PAP-434": "ok",
+   "PAP-435": "ok",
+   "PAP-436": "ok",
+   "PAP-437": "ok",
+   "PAP-438": "ok",
+   "PAP-439": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:58:03Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-440",
+   "PAP-441",
+   "PAP-442",
+   "PAP-443",
+   "PAP-444",
+   "PAP-445",
+   "PAP-446",
+   "PAP-447",
+   "PAP-448",
+   "PAP-449"
+  ],
+  "input": {
+   "PAP-440": {
+    "estimate": 2,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-441": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-442": {
+    "estimate": 3,
+    "dueDate": "2026-10-01",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-443": {
+    "estimate": 3,
+    "dueDate": "2026-10-01",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-444": {
+    "estimate": 2,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-445": {
+    "estimate": 2,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-446": {
+    "estimate": 3,
+    "dueDate": "2026-10-01",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-447": {
+    "estimate": 3,
+    "dueDate": "2026-09-20",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-448": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-449": {
+    "estimate": 2,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   }
+  },
+  "result": {
+   "PAP-440": "ok",
+   "PAP-441": "ok",
+   "PAP-442": "ok",
+   "PAP-443": "ok",
+   "PAP-444": "ok",
+   "PAP-445": "ok",
+   "PAP-446": "ok",
+   "PAP-447": "ok",
+   "PAP-448": "ok",
+   "PAP-449": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:58:05Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-450",
+   "PAP-451",
+   "PAP-452",
+   "PAP-453",
+   "PAP-454",
+   "PAP-455",
+   "PAP-456",
+   "PAP-457",
+   "PAP-458",
+   "PAP-459"
+  ],
+  "input": {
+   "PAP-450": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-451": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-452": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-453": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-454": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-455": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-456": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-457": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-458": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-459": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   }
+  },
+  "result": {
+   "PAP-450": "ok",
+   "PAP-451": "ok",
+   "PAP-452": "ok",
+   "PAP-453": "ok",
+   "PAP-454": "ok",
+   "PAP-455": "ok",
+   "PAP-456": "ok",
+   "PAP-457": "ok",
+   "PAP-458": "ok",
+   "PAP-459": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:58:07Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-460",
+   "PAP-461",
+   "PAP-462",
+   "PAP-463",
+   "PAP-464",
+   "PAP-465",
+   "PAP-466",
+   "PAP-467",
+   "PAP-468",
+   "PAP-469"
+  ],
+  "input": {
+   "PAP-460": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-461": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-462": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-463": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-464": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-465": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-466": {
+    "estimate": 2,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-467": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-468": {
+    "estimate": 3,
+    "dueDate": "2026-09-22",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-469": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   }
+  },
+  "result": {
+   "PAP-460": "ok",
+   "PAP-461": "ok",
+   "PAP-462": "ok",
+   "PAP-463": "ok",
+   "PAP-464": "ok",
+   "PAP-465": "ok",
+   "PAP-466": "ok",
+   "PAP-467": "ok",
+   "PAP-468": "ok",
+   "PAP-469": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:58:08Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-470",
+   "PAP-471",
+   "PAP-472",
+   "PAP-473",
+   "PAP-474",
+   "PAP-475",
+   "PAP-476",
+   "PAP-477",
+   "PAP-478",
+   "PAP-479"
+  ],
+  "input": {
+   "PAP-470": {
+    "estimate": 3,
+    "dueDate": "2026-09-26",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-471": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-472": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-473": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-474": {
+    "estimate": 3,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-475": {
+    "estimate": 3,
+    "dueDate": "2026-09-25",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-476": {
+    "estimate": 2,
+    "dueDate": "2026-09-23",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-477": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-478": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-479": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   }
+  },
+  "result": {
+   "PAP-470": "ok",
+   "PAP-471": "ok",
+   "PAP-472": "ok",
+   "PAP-473": "ok",
+   "PAP-474": "ok",
+   "PAP-475": "ok",
+   "PAP-476": "ok",
+   "PAP-477": "ok",
+   "PAP-478": "ok",
+   "PAP-479": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:58:10Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-480",
+   "PAP-481",
+   "PAP-482",
+   "PAP-483",
+   "PAP-484",
+   "PAP-485",
+   "PAP-486",
+   "PAP-487",
+   "PAP-488",
+   "PAP-489"
+  ],
+  "input": {
+   "PAP-480": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-481": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-482": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-483": {
+    "estimate": 3,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-484": {
+    "estimate": 3,
+    "dueDate": "2026-09-27",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-485": {
+    "estimate": 2,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-486": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-487": {
+    "estimate": 3,
+    "dueDate": "2026-09-29",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-488": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-489": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   }
+  },
+  "result": {
+   "PAP-480": "ok",
+   "PAP-481": "ok",
+   "PAP-482": "ok",
+   "PAP-483": "ok",
+   "PAP-484": "ok",
+   "PAP-485": "ok",
+   "PAP-486": "ok",
+   "PAP-487": "ok",
+   "PAP-488": "ok",
+   "PAP-489": "ok"
+  }
+ },
+ {
+  "at": "2026-09-18T12:58:11Z",
+  "type": "issueUpdate",
+  "ids": [
+   "PAP-490",
+   "PAP-491",
+   "PAP-492",
+   "PAP-493",
+   "PAP-494",
+   "PAP-495",
+   "PAP-496",
+   "PAP-497"
+  ],
+  "input": {
+   "PAP-490": {
+    "estimate": 3,
+    "dueDate": "2026-10-01",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-491": {
+    "estimate": 3,
+    "dueDate": "2026-10-01",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-492": {
+    "estimate": 2,
+    "dueDate": "2026-09-28",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-493": {
+    "estimate": 2,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-494": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-495": {
+    "estimate": 3,
+    "dueDate": "2026-09-24",
+    "cycleId": "e8272686-b4d3-4ac7-a89e-ba227bd63250"
+   },
+   "PAP-496": {
+    "estimate": 3,
+    "dueDate": "2026-10-01",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   },
+   "PAP-497": {
+    "estimate": 3,
+    "dueDate": "2026-09-30",
+    "cycleId": "e49d64c2-f2c2-491b-a0a6-24f0b9ce9555"
+   }
+  },
+  "result": {
+   "PAP-490": "ok",
+   "PAP-491": "ok",
+   "PAP-492": "ok",
+   "PAP-493": "ok",
+   "PAP-494": "ok",
+   "PAP-495": "ok",
+   "PAP-496": "ok",
+   "PAP-497": "ok"
+  }
+ }
+]

@@ -1,0 +1,3397 @@
+[
+ {
+  "identifier": "PAP-13",
+  "estimate": 3,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-14",
+  "estimate": 2,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-15",
+  "estimate": 2,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-16",
+  "estimate": 3,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-17",
+  "estimate": 3,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-18",
+  "estimate": 2,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-19",
+  "estimate": null,
+  "dueDate": "2026-09-24",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-20",
+  "estimate": null,
+  "dueDate": "2026-09-24",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-21",
+  "estimate": null,
+  "dueDate": "2026-09-24",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-22",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-23",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-24",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-25",
+  "estimate": 3,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-26",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-27",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-28",
+  "estimate": null,
+  "dueDate": "2026-09-29",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-29",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-30",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-31",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-32",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-33",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-34",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-35",
+  "estimate": null,
+  "dueDate": "2026-09-22",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-36",
+  "estimate": null,
+  "dueDate": "2026-09-25",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-37",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-38",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-39",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-40",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-41",
+  "estimate": 2,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-42",
+  "estimate": 2,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-43",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-44",
+  "estimate": 2,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-45",
+  "estimate": null,
+  "dueDate": "2026-09-20",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-46",
+  "estimate": 3,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-47",
+  "estimate": 3,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-48",
+  "estimate": 3,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-49",
+  "estimate": 2,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-50",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-51",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-52",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-53",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-54",
+  "estimate": null,
+  "dueDate": "2026-09-30",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-55",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-56",
+  "estimate": 2,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-57",
+  "estimate": null,
+  "dueDate": "2026-09-23",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-58",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-59",
+  "estimate": null,
+  "dueDate": "2026-09-23",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-60",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-61",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-62",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-63",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-64",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-65",
+  "estimate": null,
+  "dueDate": "2026-09-30",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-66",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-67",
+  "estimate": null,
+  "dueDate": "2026-09-22",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-68",
+  "estimate": 2,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-69",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-70",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-71",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-72",
+  "estimate": 2,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-73",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-74",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-75",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-76",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-77",
+  "estimate": 2,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-78",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-79",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-80",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-81",
+  "estimate": null,
+  "dueDate": "2026-09-25",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-82",
+  "estimate": null,
+  "dueDate": "2026-09-25",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-83",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-84",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-85",
+  "estimate": null,
+  "dueDate": "2026-09-26",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-86",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-87",
+  "estimate": 2,
+  "dueDate": "2026-09-26",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-88",
+  "estimate": null,
+  "dueDate": "2026-09-30",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-89",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-90",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-91",
+  "estimate": 2,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-92",
+  "estimate": 2,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-93",
+  "estimate": 3,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-94",
+  "estimate": 3,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-95",
+  "estimate": 2,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-96",
+  "estimate": null,
+  "dueDate": "2026-09-22",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-97",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-98",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-99",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-100",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-101",
+  "estimate": null,
+  "dueDate": "2026-09-30",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-102",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-103",
+  "estimate": 2,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-104",
+  "estimate": null,
+  "dueDate": "2026-09-24",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-105",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-106",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-107",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-108",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-109",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-110",
+  "estimate": null,
+  "dueDate": "2026-09-25",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-111",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-112",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-113",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-114",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-115",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-116",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-117",
+  "estimate": 2,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-118",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-119",
+  "estimate": null,
+  "dueDate": "2026-09-26",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-120",
+  "estimate": null,
+  "dueDate": "2026-09-26",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-121",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-122",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-123",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-124",
+  "estimate": null,
+  "dueDate": "2026-09-30",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-125",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-126",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-127",
+  "estimate": 2,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-128",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-129",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-130",
+  "estimate": 2,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-131",
+  "estimate": null,
+  "dueDate": "2026-09-29",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-132",
+  "estimate": null,
+  "dueDate": "2026-09-29",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-133",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-134",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-135",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-136",
+  "estimate": null,
+  "dueDate": "2026-09-29",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-137",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-138",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-139",
+  "estimate": 2,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-140",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-141",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-142",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-143",
+  "estimate": null,
+  "dueDate": "2026-09-28",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-144",
+  "estimate": 2,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-145",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-146",
+  "estimate": 2,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-147",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-148",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-149",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-150",
+  "estimate": 2,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-151",
+  "estimate": null,
+  "dueDate": "2026-09-23",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-152",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-153",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-154",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-155",
+  "estimate": null,
+  "dueDate": "2026-09-27",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-156",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-157",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-158",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-159",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-160",
+  "estimate": 2,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-161",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-162",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-163",
+  "estimate": null,
+  "dueDate": "2026-09-28",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-164",
+  "estimate": null,
+  "dueDate": "2026-09-28",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-165",
+  "estimate": null,
+  "dueDate": "2026-09-28",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-166",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-167",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-168",
+  "estimate": null,
+  "dueDate": "2026-09-29",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-169",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-170",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-171",
+  "estimate": null,
+  "dueDate": "2026-09-30",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-172",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-173",
+  "estimate": null,
+  "dueDate": "2026-09-30",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-174",
+  "estimate": null,
+  "dueDate": "2026-09-30",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-175",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-176",
+  "estimate": 2,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-177",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-178",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-179",
+  "estimate": null,
+  "dueDate": "2026-09-29",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-180",
+  "estimate": null,
+  "dueDate": "2026-09-29",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-181",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-182",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-183",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-184",
+  "estimate": null,
+  "dueDate": "2026-10-01",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-185",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-186",
+  "estimate": 3,
+  "dueDate": "2026-10-01",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-187",
+  "estimate": 5,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-188",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-189",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-190",
+  "estimate": null,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-191",
+  "estimate": null,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-192",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-193",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-194",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-195",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-196",
+  "estimate": null,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-197",
+  "estimate": null,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-198",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-199",
+  "estimate": null,
+  "dueDate": "2026-09-28",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-200",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-201",
+  "estimate": 2,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-202",
+  "estimate": null,
+  "dueDate": "2026-09-30",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-203",
+  "estimate": null,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-204",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-205",
+  "estimate": null,
+  "dueDate": "2026-09-30",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-206",
+  "estimate": null,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-207",
+  "estimate": null,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-208",
+  "estimate": 3,
+  "dueDate": "2026-10-01",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-209",
+  "estimate": 2,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-210",
+  "estimate": 3,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-211",
+  "estimate": 3,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-212",
+  "estimate": 3,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-213",
+  "estimate": null,
+  "dueDate": "2026-09-24",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-214",
+  "estimate": null,
+  "dueDate": "2026-09-24",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-215",
+  "estimate": null,
+  "dueDate": "2026-09-24",
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-216",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-217",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-218",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-219",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-220",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-221",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-222",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-223",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-224",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-225",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-226",
+  "estimate": 2,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-227",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-228",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-229",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-230",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-231",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-232",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-233",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-234",
+  "estimate": 2,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-235",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-236",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-237",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-238",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-239",
+  "estimate": 2,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-240",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-241",
+  "estimate": 2,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-242",
+  "estimate": 2,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-243",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-244",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-245",
+  "estimate": 2,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-246",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-247",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-248",
+  "estimate": 2,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-249",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C1",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-250",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-251",
+  "estimate": 2,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-252",
+  "estimate": 2,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-253",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-254",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-255",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-256",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-257",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-258",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-259",
+  "estimate": 2,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-260",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-261",
+  "estimate": 2,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-262",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-263",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-264",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-265",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-266",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-267",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-268",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-269",
+  "estimate": 2,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-270",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-271",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-272",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-273",
+  "estimate": 3,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-274",
+  "estimate": 2,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-275",
+  "estimate": 2,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-276",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-277",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-278",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-279",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-280",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-281",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-282",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-283",
+  "estimate": 2,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-284",
+  "estimate": 2,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-285",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-286",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-287",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-288",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-289",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-290",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-291",
+  "estimate": 2,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-292",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-293",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-294",
+  "estimate": 2,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-295",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-296",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-297",
+  "estimate": 2,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-298",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-299",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-300",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-301",
+  "estimate": 2,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-302",
+  "estimate": 2,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-303",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-304",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-305",
+  "estimate": 2,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-306",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-307",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-308",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-309",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-310",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-311",
+  "estimate": 2,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-312",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-313",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-314",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-315",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-316",
+  "estimate": 2,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-317",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-318",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-319",
+  "estimate": 2,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-320",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-321",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-322",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-323",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-324",
+  "estimate": 2,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-325",
+  "estimate": 2,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-326",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-327",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-328",
+  "estimate": 2,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-329",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-330",
+  "estimate": 2,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-331",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-332",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-333",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-334",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-335",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-336",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-337",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-338",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-339",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-340",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-341",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-342",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-343",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-344",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-345",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-346",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-347",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-348",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-349",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-350",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-351",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-352",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-353",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-354",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-355",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-356",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-357",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-358",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-359",
+  "estimate": 2,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-360",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 1
+ },
+ {
+  "identifier": "PAP-361",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-362",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-363",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-364",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-365",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-366",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-367",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-368",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-369",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-370",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-371",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-372",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-373",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-374",
+  "estimate": 2,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-375",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-376",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-377",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-378",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-379",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-380",
+  "estimate": 2,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-381",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-382",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-383",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-384",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-385",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-386",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-387",
+  "estimate": 2,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-388",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-389",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-390",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-391",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-392",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-393",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-394",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-395",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 2
+ },
+ {
+  "identifier": "PAP-396",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-397",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-398",
+  "estimate": 3,
+  "dueDate": "2026-10-01",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-399",
+  "estimate": 3,
+  "dueDate": "2026-10-01",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-400",
+  "estimate": 3,
+  "dueDate": "2026-10-01",
+  "cycle": "C2",
+  "chunk": 4
+ },
+ {
+  "identifier": "PAP-401",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-402",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-403",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-404",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-405",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-406",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-407",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-408",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-409",
+  "estimate": 2,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-410",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-411",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-412",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-413",
+  "estimate": 2,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-414",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-415",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-416",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-417",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-418",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-419",
+  "estimate": 2,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-420",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-421",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-422",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-423",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-424",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-425",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-426",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-427",
+  "estimate": 3,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-428",
+  "estimate": 2,
+  "dueDate": null,
+  "cycle": null,
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-429",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 3
+ },
+ {
+  "identifier": "PAP-430",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-431",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-432",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": 5
+ },
+ {
+  "identifier": "PAP-433",
+  "estimate": 2,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-434",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-435",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-436",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-437",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-438",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-439",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-440",
+  "estimate": 2,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-441",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-442",
+  "estimate": 3,
+  "dueDate": "2026-10-01",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-443",
+  "estimate": 3,
+  "dueDate": "2026-10-01",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-444",
+  "estimate": 2,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-445",
+  "estimate": 2,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-446",
+  "estimate": 3,
+  "dueDate": "2026-10-01",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-447",
+  "estimate": 3,
+  "dueDate": "2026-09-20",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-448",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-449",
+  "estimate": 2,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-450",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-451",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-452",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-453",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-454",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-455",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-456",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-457",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-458",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-459",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-460",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-461",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-462",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-463",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-464",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-465",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-466",
+  "estimate": 2,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-467",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-468",
+  "estimate": 3,
+  "dueDate": "2026-09-22",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-469",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-470",
+  "estimate": 3,
+  "dueDate": "2026-09-26",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-471",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-472",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-473",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-474",
+  "estimate": 3,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-475",
+  "estimate": 3,
+  "dueDate": "2026-09-25",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-476",
+  "estimate": 2,
+  "dueDate": "2026-09-23",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-477",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-478",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-479",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-480",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-481",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-482",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-483",
+  "estimate": 3,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-484",
+  "estimate": 3,
+  "dueDate": "2026-09-27",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-485",
+  "estimate": 2,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-486",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-487",
+  "estimate": 3,
+  "dueDate": "2026-09-29",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-488",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-489",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-490",
+  "estimate": 3,
+  "dueDate": "2026-10-01",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-491",
+  "estimate": 3,
+  "dueDate": "2026-10-01",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-492",
+  "estimate": 2,
+  "dueDate": "2026-09-28",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-493",
+  "estimate": 2,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-494",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-495",
+  "estimate": 3,
+  "dueDate": "2026-09-24",
+  "cycle": "C1",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-496",
+  "estimate": 3,
+  "dueDate": "2026-10-01",
+  "cycle": "C2",
+  "chunk": null
+ },
+ {
+  "identifier": "PAP-497",
+  "estimate": 3,
+  "dueDate": "2026-09-30",
+  "cycle": "C2",
+  "chunk": null
+ }
+]
