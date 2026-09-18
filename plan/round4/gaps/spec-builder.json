@@ -1,0 +1,942 @@
+{
+ "project": "spec-builder",
+ "projectName": "Spec Builder",
+ "benchmarks": [
+  "OpenAPI and AsyncAPI (oasdiff, generators)",
+  "Storybook stories and autodocs as specs",
+  "Figma dev mode",
+  "Cucumber and Gherkin scenarios",
+  "Amplication, Plasmic and Retool page schemas",
+  "Backstage software templates",
+  "JSON Schema and Zod",
+  "Permission policy DSLs (Cedar, OPA)",
+  "Spec diffing and versioning tools",
+  "Prisma and Drizzle schema-first codegen",
+  "Next.js metadata, sitemap and OG generation",
+  "Lighthouse CI budgets"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "Page spec schema (meta, purpose, logic, access, data, integrations, layout, components, states, events, edge cases)",
+   "coveredBy": [
+    "PAP-114"
+   ],
+   "status": "covered",
+   "note": "Keystone, Ready for Claude."
+  },
+  {
+   "feature": "App spec (audiences, navigation, entities, integrations, defaults, theme)",
+   "coveredBy": [
+    "PAP-117"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Entity field grammar (types, constraints, relations, internal/computed)",
+   "coveredBy": [
+    "r4/spec-builder/entity-field-grammar"
+   ],
+   "status": "gap",
+   "note": "PAP-117 leaves fields untyped; three consumers."
+  },
+  {
+   "feature": "Business profile (industry, terminology, locale, currency, tax, modules)",
+   "coveredBy": [
+    "PAP-126"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Access section compiled to policies, SQL and matrix",
+   "coveredBy": [
+    "PAP-116"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Data section (queries, mutations, sync mode) and typed hooks",
+   "coveredBy": [
+    "PAP-311",
+    "PAP-312",
+    "PAP-313"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Mutation input constraints and form derivation",
+   "coveredBy": [
+    "r4/spec-builder/mutation-input-constraints"
+   ],
+   "status": "gap",
+   "note": "input is Record<string, ScalarType>."
+  },
+  {
+   "feature": "Integrations section and connector registry",
+   "coveredBy": [
+    "PAP-121"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Feature-flag guards and module requirements per page",
+   "coveredBy": [
+    "r4/spec-builder/schema-v1-1-extensions",
+    "r4/spec-builder/flags-modules-compile"
+   ],
+   "status": "gap",
+   "note": "PAP-366 and PAP-467 name `flags`; PAP-114 lacks it."
+  },
+  {
+   "feature": "Comments anchor declaration per page",
+   "coveredBy": [
+    "r4/spec-builder/schema-v1-1-extensions"
+   ],
+   "status": "gap",
+   "note": "PAP-361 writes `comments:`; v1 rejects it."
+  },
+  {
+   "feature": "Help, tour and shortcuts declaration",
+   "coveredBy": [
+    "r4/spec-builder/schema-v1-1-extensions"
+   ],
+   "status": "gap",
+   "note": "PAP-380 needs it."
+  },
+  {
+   "feature": "Public page SEO metadata, sitemap, robots, OG images",
+   "coveredBy": [
+    "r4/spec-builder/seo-public-metadata"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Per-page performance budgets",
+   "coveredBy": [
+    "r4/spec-builder/page-budgets"
+   ],
+   "status": "gap",
+   "note": "PAP-87 and PAP-242 hand-maintain lists."
+  },
+  {
+   "feature": "Product analytics events declared in specs",
+   "coveredBy": [
+    "r4/spec-builder/analytics-events-section"
+   ],
+   "status": "gap",
+   "note": "Deferred v0.2."
+  },
+  {
+   "feature": "Spec i18n: message ids, extraction, pseudo-locale",
+   "coveredBy": [
+    "PAP-375"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Logic as executable DSL or state machine",
+   "coveredBy": [
+    "PAP-114",
+    "PAP-314"
+   ],
+   "status": "partial",
+   "note": "Stubs by design (non-goal: visual app builder). Not issued."
+  },
+  {
+   "feature": "Notification kinds emitted per action",
+   "coveredBy": [
+    "PAP-114"
+   ],
+   "status": "partial",
+   "note": "logic.effects prose only; not issued."
+  },
+  {
+   "feature": "Validator CLI, rules, baseline, CI annotations",
+   "coveredBy": [
+    "PAP-115"
+   ],
+   "status": "covered",
+   "note": "Props validation amendment proposed."
+  },
+  {
+   "feature": "Route coverage report",
+   "coveredBy": [
+    "PAP-115"
+   ],
+   "status": "covered",
+   "note": "`paperos-spec routes`."
+  },
+  {
+   "feature": "Semantic spec diff on PRs (oasdiff analogue)",
+   "coveredBy": [
+    "r4/spec-builder/spec-diff-pr-comment"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Spec versioning, codemods, deprecations, rehearsal",
+   "coveredBy": [
+    "PAP-114",
+    "r4/spec-builder/spec-versioning-tooling"
+   ],
+   "status": "partial",
+   "note": "Skeleton only by FIX-5; tooling deferred v0.2."
+  },
+  {
+   "feature": "Layout and component tree codegen with two-file ownership",
+   "coveredBy": [
+    "PAP-314",
+    "PAP-315",
+    "PAP-316"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "State switch, slot mapping, action binding, search params",
+   "coveredBy": [
+    "PAP-315"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Storybook stories per state",
+   "coveredBy": [
+    "PAP-314"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Generated MSW handlers and fixture rows for stories and preview",
+   "coveredBy": [
+    "r4/spec-builder/msw-fixtures-from-data"
+   ],
+   "status": "gap",
+   "note": "Three consumers mock differently."
+  },
+  {
+   "feature": "Conformance tests (access matrix, components, states) in Gate 1",
+   "coveredBy": [
+    "PAP-122"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Permission matrix tests at policy, HTTP and UI levels",
+   "coveredBy": [
+    "PAP-64"
+   ],
+   "status": "covered",
+   "note": "identity."
+  },
+  {
+   "feature": "Edge-case scenarios derived from specs (Gate 4)",
+   "coveredBy": [
+    "PAP-85",
+    "PAP-249"
+   ],
+   "status": "covered",
+   "note": "quality."
+  },
+  {
+   "feature": "UX-flow graph with ELK layout and diff",
+   "coveredBy": [
+    "PAP-123"
+   ],
+   "status": "covered",
+   "note": "Relation edges amendment proposed."
+  },
+  {
+   "feature": "Entity-derived CRUD page specs and ViewSpecs",
+   "coveredBy": [
+    "PAP-361"
+   ],
+   "status": "covered",
+   "note": "Needs field grammar and `comments` key."
+  },
+  {
+   "feature": "Backend from entities: Drizzle tables, RLS, migration, oRPC routers, shapes",
+   "coveredBy": [
+    "r4/spec-builder/entity-backend-codegen"
+   ],
+   "status": "gap",
+   "note": "Golden path §4 promises it; no owner."
+  },
+  {
+   "feature": "Whole-app pipeline with manifest, cache, determinism, drift",
+   "coveredBy": [
+    "PAP-362"
+   ],
+   "status": "covered",
+   "note": "Needs backend adapters."
+  },
+  {
+   "feature": "Seed generator for demo tenants",
+   "coveredBy": [
+    "PAP-362",
+    "PAP-363"
+   ],
+   "status": "covered",
+   "note": "app-shell owns the starter kit seed."
+  },
+  {
+   "feature": "Navigation generation with runtime `useCan`",
+   "coveredBy": [
+    "PAP-117"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "OpenAPI from generated routers",
+   "coveredBy": [
+    "PAP-269"
+   ],
+   "status": "covered",
+   "note": "data-layer."
+  },
+  {
+   "feature": "Reverse codegen: infer a spec from an existing route",
+   "coveredBy": [
+    "r4/spec-builder/reverse-codegen-infer"
+   ],
+   "status": "gap",
+   "note": "Retrofit path for SPEC_ROUTE_UNCOVERED."
+  },
+  {
+   "feature": "Page spec templates for non-CRUD pages",
+   "coveredBy": [
+    "r4/spec-builder/page-spec-templates"
+   ],
+   "status": "gap",
+   "note": "Backstage-style starting points."
+  },
+  {
+   "feature": "Three executable example pages and workflow docs",
+   "coveredBy": [
+    "PAP-125"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Synthetic fixture corpus for benchmarks",
+   "coveredBy": [
+    "r4/spec-builder/spec-fixture-corpus"
+   ],
+   "status": "gap",
+   "note": "Five DoDs cite unbuilt fixtures."
+  },
+  {
+   "feature": "Authoring skill: interview to page spec to issue",
+   "coveredBy": [
+    "PAP-118"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "App interview: paragraph to app.spec.yaml",
+   "coveredBy": [
+    "PAP-360"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Spec editor: list, YAML, worker validation, save to PR",
+   "coveredBy": [
+    "PAP-376"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Spec editor: form view, component tree, two-way sync",
+   "coveredBy": [
+    "PAP-377"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Spec editor: live preview, graph tab, keyboard, a11y",
+   "coveredBy": [
+    "PAP-378"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Multiplayer editing of one spec",
+   "coveredBy": [
+    "PAP-124"
+   ],
+   "status": "partial",
+   "note": "Out of scope by PAP-124; PRs are the merge point. Not issued."
+  },
+  {
+   "feature": "Comments on specs in the editor",
+   "coveredBy": [
+    "PAP-377",
+    "PAP-131"
+   ],
+   "status": "covered",
+   "note": "Anchors on data-spec-key."
+  },
+  {
+   "feature": "Spec approval workflow",
+   "coveredBy": [
+    "PAP-376",
+    "PAP-49"
+   ],
+   "status": "covered",
+   "note": "PR review is the approval."
+  },
+  {
+   "feature": "VS Code completion via JSON Schema",
+   "coveredBy": [
+    "PAP-114"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Spec status dashboard",
+   "coveredBy": [
+    "PAP-376"
+   ],
+   "status": "covered",
+   "note": "List with validation status."
+  },
+  {
+   "feature": "Component id registry with props schemas",
+   "coveredBy": [
+    "PAP-74"
+   ],
+   "status": "covered",
+   "note": "design-system."
+  },
+  {
+   "feature": "Props validation against component schemas at validate time",
+   "coveredBy": [
+    "PAP-115",
+    "PAP-74"
+   ],
+   "status": "partial",
+   "note": "Amendment: SPEC_BAD_PROPS."
+  },
+  {
+   "feature": "Business templates and seed packs",
+   "coveredBy": [
+    "PAP-207",
+    "PAP-427"
+   ],
+   "status": "covered",
+   "note": "migration, deferred."
+  },
+  {
+   "feature": "Template upgrade with spec migration",
+   "coveredBy": [
+    "PAP-430"
+   ],
+   "status": "covered",
+   "note": "app-shell; consumes versioning CLI."
+  },
+  {
+   "feature": "Contract package, conformance suite, kernel wiring",
+   "coveredBy": [
+    "PAP-467",
+    "PAP-470",
+    "PAP-473"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Generator plugin interface",
+   "coveredBy": [
+    "PAP-467",
+    "PAP-362"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Spec-conformance reviewer agent input",
+   "coveredBy": [
+    "PAP-244",
+    "r4/spec-builder/spec-diff-pr-comment"
+   ],
+   "status": "partial",
+   "note": "Reviewer exists; gets a semantic diff input."
+  },
+  {
+   "feature": "Accessibility requirements per component in specs",
+   "coveredBy": [
+    "PAP-73",
+    "PAP-82"
+   ],
+   "status": "partial",
+   "note": "Enforced at component level; not per spec. Not issued."
+  },
+  {
+   "feature": "Watch mode for `paperos gen`",
+   "coveredBy": [
+    "PAP-362"
+   ],
+   "status": "partial",
+   "note": "Explicitly later. Not issued."
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/spec-builder/entity-field-grammar",
+   "title": "Define the entity field grammar in app.spec.yaml: field types, constraints, relations, `internal` and `computed` flags shared by entity pages, forms and backend codegen",
+   "type": "Spec",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Spec schema and validator",
+   "dueDate": "2026-09-24",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-117"
+   ],
+   "blocks": [
+    "PAP-360",
+    "PAP-361"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Spec S\n\n**Goal**\n\nPAP-117 leaves `entities[].fields?` untyped; PAP-360 writes fields from the interview, PAP-361 derives columns and forms from them, and the golden path promises Drizzle tables from the same list. Three consumers, no grammar. Fix the `Field` shape once, aligned with the tables field-type union (PAP-164), so the interview, the page generators and the backend generator agree byte for byte.\n\n**Scope**\n\nIn: `packages/spec/src/schema/field.ts` (`FieldSchema`, `FieldType`), the `entities[].fields` slot in `AppSpecSchema` (PAP-117), validator rules through PAP-115 `defineRule`, `docs/spec/entities.md`, fixtures for the three canned apps (clinic, agency, retail). Out: page-level `data` (PAP-311), the tables `FieldDef` runtime (PAP-338), Drizzle emission (`r4/spec-builder/entity-backend-codegen`).\n\n**Spec**\n\n* `Field = { id, type, label?, required?, unique?, default?, internal?: boolean (hidden from customers), computed?: boolean (server-set), index?: boolean, pii?: 'none'|'low'|'high' (feeds PAP-355 and PAP-41), options?: string[] (select, multiSelect), relation?: { entity, kind: one|many, onDelete: restrict|cascade|setNull }, format?: { currency?, precision?, min?, max?, pattern?, maxLength? } }`.\n* `FieldType` is the PAP-164 union re-exported from `@paperos/contract-tables` when present, else the frozen list `text|longText|number|currency|percent|date|dateTime|checkbox|select|multiSelect|relation|user|attachment|url|email|phone|json|rating`; `formula`, `lookup`, `rollup` are `computed` and need `x-expression` (PAP-171 territory, allowed but not generated).\n* Every entity implicitly has `id`, `tenant_id`, `created_at`, `updated_at`, `deleted_at`, `created_by`; declaring them is rule `APP_FIELD_RESERVED`. Naming: `^[a-z][a-zA-Z0-9]*$`, table column snake_case derived deterministically.\n* Rules: `APP_FIELD_UNKNOWN_TYPE`, `APP_FIELD_RELATION_TARGET` (entity missing), `APP_FIELD_OPTIONS_REQUIRED` (select without options), `APP_FIELD_DUP`, `APP_FIELD_CURRENCY_FORMAT` (currency without `format.currency` falls back to the business profile default with a warning), `APP_FIELD_PII_UNSET` (warn on `email|phone|longText` without `pii`).\n* `owner` convention: a `relation(user)` field named `owner` or flagged `x-owner: true` is the ownership field PAP-361 uses for customer row conditions; at most one per entity.\n\n**Interface contract**\n\nProvides: `FieldSchema`, `FieldType`, `Field`, `entityColumns(entity)` (explicit plus implicit fields), `RESERVED_FIELDS`, JSON Schema fragment merged into `app.spec.schema.json`, rule ids above. Consumers: PAP-360 (writes fields), PAP-361 (columns, kanban and calendar options, forms), `r4/spec-builder/entity-backend-codegen`, `r4/spec-builder/mutation-input-constraints`, PAP-123 (relation edges), PAP-41 (`pii`), PAP-208 migration agent. Requires: PAP-117 `AppSpecSchema` (hard), PAP-164 or PAP-338 union (soft, frozen copy with a drift test), PAP-126 currency default (soft).\n\n**Definition of done**\n\n* Schema, rules and fixtures merged; three canned apps validate with zero warnings; JSON Schema snapshot committed and drift-checked in gate 1.\n* Drift test against `@paperos/contract-tables` `FieldType` when present; `docs/spec/entities.md` lists every type with an example; ADR entry via PAP-130 naming the frozen union.\n* Comments on PAP-360 and PAP-361 pointing at the schema; CHANGELOG entry.\n\n**Test plan**\n\n* Unit (Vitest): every type parses; every rule pass and fail fixture; reserved names; relation cycle allowed (self-relation) but `cascade` on self warns.\n* Property (`fast-check`): random valid entities round-trip through `parse(stringify())`.\n* Integration: PAP-117 `gen:app` emits typed `entities.ts` including fields; no UI.\n\n**Demo**\n\nAdd `fields: [{ id: dueAt, type: date }, { id: patient, type: relation, relation: { entity: patient, kind: one } }]` to `appointment` in the clinic fixture, run `pnpm spec:validate`, then break the relation target and read `APP_FIELD_RELATION_TARGET` with the line. Under one minute.\n\n**Edge cases**\n\n* Entity with 200 fields: allowed; warning suggests splitting.\n* Relation to an entity in a disabled module: `MODULE_DISABLED` via PAP-265's rule, not a field error.\n* `select` options renamed later: `x-renamedFrom` on the option so PAP-430 can write a data codemod.\n* Field id collides with a route param name: warning `APP_FIELD_PARAM_SHADOW`.\n\n**Dependencies**\n\nHard: PAP-117. Soft: PAP-164, PAP-338, PAP-126, PAP-115. Blocks PAP-360, PAP-361, `r4/spec-builder/entity-backend-codegen`.\n\n**Agent**\n\nBuilder: Quill (Page Spec Writer) with Forge (Schema Wright). Reviewer: Sentinel (Code Reviewer) and Nova for field-type fit.\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/spec-builder/schema-v1-1-extensions",
+   "title": "Page spec v1.1 sections: `flags`, `modules`, `comments`, `help`, `seo`, `budgets` with codemod stub, JSON Schema and validator rules",
+   "type": "Spec",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Spec schema and validator",
+   "dueDate": "2026-09-24",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-114"
+   ],
+   "blocks": [
+    "PAP-380",
+    "PAP-361"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Spec M\n\n**Goal**\n\nFour live issues write keys PAP-114 v1 rejects: PAP-380 (`help.docs`, `help.tour`), PAP-361 (`comments.anchor`), PAP-366 (`flags:` guard), PAP-467 (`flags`, `modules` in the contract). Add them as one additive schema revision with an ADR, so the unknown-key rule keeps protecting specs and no consumer invents `x-` keys that later diverge.\n\n**Scope**\n\nIn: `packages/spec/src/schema/{flags,modules,comments,help,seo,budgets}.ts` merged into `PageSpecSchema` as optional sections; `specVersion` stays 1 (additive; contract patch `0.1.x` per module-system §2.1); `SPEC_VERSIONS` entry `1.1` in the PAP-114 `migrate/` skeleton with an identity codemod and `x-help` to `help` rename codemod; validator rules; `docs/spec/page-spec.md` regenerated; ADR. Out: compiling the sections (three follow-up Build issues), the versioning toolchain (`r4/spec-builder/spec-versioning-tooling`).\n\n**Spec**\n\n* `flags: { require?: FlagId[], any?: FlagId[], fallback?: RouteRef | 'denied' }`: page renders only when flags hold (PAP-366); `modules: { require: ModuleId[] }` cross-checked against the PAP-264 registry (`MODULE_UNKNOWN`, `MODULE_DISABLED` reuse PAP-265's rule ids).\n* `comments: { anchor: 'entity' | 'element' | 'none', entity?: EntityId, allowCustomers?: boolean }` matching PAP-131's grammar; default `element`.\n* `help: { docs: DocPath[], tour: [{ target: specKey, title: MessageRef, body: MessageRef }] (max 7), shortcuts?: CommandId[] }` as PAP-380 needs; `HELP_DOC_MISSING`, `HELP_TOUR_TARGET` (target must be a `components[].key`).\n* `seo: { title?, description?, ogImage?, canonical?, noindex?: boolean }` allowed only when `layout.template: public` (`SEO_NON_PUBLIC` warn); `budgets: { lcpMs?, inpMs?, bundleKb?, apiP95Ms? }` with app defaults in PAP-117 `defaults.budgets`.\n* `MessageRef` reuses PAP-375's `string | { id, default }`; unknown keys inside the new sections error like top-level ones; `x-help` still passes through but the codemod rewrites it and the validator warns `SPEC_XKEY_PROMOTED`.\n\n**Interface contract**\n\nProvides: six section schemas and types, `PageSpec` v1.1 type, codemods `x-help-to-help`, rule ids above, regenerated JSON Schema. Consumers: PAP-380 (`help`), PAP-361 (`comments`), PAP-366 and `r4/spec-builder/flags-modules-compile` (`flags`, `modules`), `r4/spec-builder/seo-public-metadata` (`seo`), `r4/spec-builder/page-budgets` (`budgets`), PAP-124 form panels, PAP-467 contract (patch bump), PAP-123 (`flags` on nodes). Requires: PAP-114 (hard), PAP-264 module ids, PAP-366 flag ids, PAP-375 `MessageRef` (soft; local alias until merged).\n\n**Definition of done**\n\n* Schema merged; PAP-125 examples gain at least `comments` and `help`; JSON Schema snapshot and drift check green; VS Code completion screenshot for `help.tour`.\n* Codemod rewrites an `x-help` fixture; identity for specs without new sections; every rule pass and fail.\n* ADR accepted (PAP-130); `@paperos/contract-spec-builder` bumped to `0.1.1` with a comment on PAP-467; comments on PAP-380 and PAP-361; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: section fixtures valid and invalid; rule codes with line and col; codemod output snapshot; `specVersion` unchanged.\n* Property: `parseSpec(stringify(spec))` still round-trips with the new sections.\n* Integration: PAP-115 CLI on the template with the examples updated; no UI.\n\n**Demo**\n\nAdd `help: { docs: ['spec/workflow'], tour: [{ target: invoiceTable, title: 'Your invoices', body: '...' }] }` to the invoices example, validate, then point `target` at a missing key and read `HELP_TOUR_TARGET`. Under one minute.\n\n**Edge cases**\n\n* Flag id removed from `flags.yaml`: `FLAG_UNKNOWN` error names the page and the flag.\n* `comments.anchor: entity` on a page without `data.entities`: error.\n* `seo` on an `app` template page: warning, ignored by codegen.\n* Spec with both `x-help` and `help`: error, codemod refuses.\n\n**Dependencies**\n\nHard: PAP-114. Soft: PAP-264, PAP-366, PAP-375, PAP-130, PAP-467. Blocks PAP-380 (help fields), PAP-361 (`comments`), the three compile issues.\n\n**Agent**\n\nBuilder: Quill (Page Spec Writer). Reviewer: Sentinel (Code Reviewer) with Atlas approving the schema change.\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/spec-builder/entity-backend-codegen",
+   "title": "Generate the backend from entities: Drizzle tables with RLS, a reviewed migration, oRPC entity routers and Electric shape registrations as `paperos gen` plugins",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Codegen and conformance tests",
+   "dueDate": "2026-09-26",
+   "parent": null,
+   "size": "L",
+   "estimate": 5,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "r4/spec-builder/entity-field-grammar",
+    "PAP-32",
+    "PAP-228",
+    "PAP-268"
+   ],
+   "blocks": [
+    "PAP-362",
+    "PAP-364"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build L\n\n**Goal**\n\nThe golden path (§4) lists `packages/db/src/schema/app.ts`, `migrations/0001_app.sql` and `apps/api/src/generated/routers.ts` among the files `paperos gen` emits at C3. No issue owns them: PAP-362 registers nine generators and none writes a table or a router, so generated hooks (PAP-312) would call procedures that do not exist.\n\n**Scope**\n\nIn: generators `db-schema`, `db-migration`, `routers`, `shapes` in `packages/spec/src/codegen/backend/` registered with PAP-362's `defineGenerator`; Drizzle emission per entity with implicit columns, indexes, relations and RLS via PAP-228 helpers; `drizzle-kit generate` wrapped so the migration is created once and reviewed in PR #1; oRPC routers `<entity>.list|get|create|update|archive|restore` per Contracts §4 with `authorize()` (PAP-229) and `FilterTree` list input; `defineShape` registrations (PAP-271) for entities with `sync: live` pages; `docs/spec/backend-codegen.md`. Out: custom procedures (hand-written in `apps/api/src/procedures/`), business logic; the PAP-161 `registerDataset` call is emitted as one line per entity, the `ViewSpec` comes from PAP-361.\n\n**Spec**\n\n* Ownership: `generated/**` rewritten every run with the spec-hash banner; `migrations/*.sql` created once with a `-- generated from app.spec.yaml sha256:` header; a later entity change adds a new migration, never edits an old one; `--check` flags a schema whose migration is missing.\n* Every table: `tenant_id` first, six implicit columns, soft delete, `uuid_generate_v7()`, audit trigger (PAP-38), RLS policies `select|insert|update|delete` from the entity's access rows through PAP-116 `toPolicies` and PAP-228's SQL compiler; `pii` fields land in `pii.json` for PAP-41 and PAP-355.\n* Routers: list input `{ cursor?, limit<=100, filter?: FilterTree, sort? }`, keyset cursors (PAP-268), `Idempotency-Key` on create, `X-PaperOS-Reason` required for agents; `internal` fields stripped for `customer.*` at the DTO layer; relations expand one hop with `include`.\n* Determinism: sorted entities and columns, no timestamps; typecheck of `apps/api` and `packages/db` output is part of the drift job.\n* Budget: 20 entities generate in under 3 s; their migration applies on the PAP-42 stack in under 10 s.\n\n**Interface contract**\n\nProvides: the four generators, `generateBackend(app): GeneratedFiles`, migration naming convention, `pii.json`, `registerDataset` lines. Consumes: `Field` grammar, `AppSpec` (PAP-117), Drizzle workflow (PAP-32), RLS helpers and SQL compiler (PAP-228, PAP-34), router conventions (PAP-268, PAP-267), `authorize` (PAP-229), `toPolicies` (PAP-116), audit trigger (PAP-38), `defineShape` (PAP-271), `FilterTree` (PAP-279). Consumed by: PAP-362, PAP-312 hooks, PAP-361 pages, PAP-364, PAP-429, PAP-41.\n\n**Definition of done**\n\n* Clinic fixture: tables, one migration, routers and shapes generated; migration applies on the compose stack; `callAs(customer)` sees own rows only and `callAs(staff)` all (PAP-34 harness); `internal` field absent from the customer DTO.\n* Two runs byte-identical; `--check` red after adding a field without regenerating; typecheck green.\n* `docs/spec/backend-codegen.md`; adapters registered in PAP-362 (comment there); CHANGELOG entry; Linear comment with the generated tree.\n\n**Test plan**\n\n* Unit: column mapping per `FieldType`, implicit columns, relation `onDelete`, RLS policy emission per access shape, DTO stripping of `internal`, router snapshot minimal and maximal.\n* Integration (Postgres in CI): migrate, seed 100 rows, list with a `FilterTree`, cursor pages, RLS matrix via `callAs`, audit rows written with `reason`.\n* E2E: PAP-313's `customer-invoices` page runs against generated procedures instead of hand-written ones (branch-start).\n\n**Demo**\n\nRun `paperos gen --only db-schema,db-migration,routers` on the clinic app, `pnpm db:migrate`, then call `appointments.list` as a patient and as staff from the API playground and compare row counts. Under two minutes.\n\n**Edge cases**\n\n* Entity renamed: new migration creates the new table; the old one gets a `-- deprecated` marker and a Needs Justin note if it holds rows (destructive migrations are never generated).\n* Relation to `user`: joins the PAP-33 table, never a generated one.\n* Two entities in a cycle of `cascade` deletes: error at generation.\n* Module disabled (PAP-266): its entities' tables still generated but migrations tagged with `module_id` for PAP-265's runner.\n* Custom procedure with the same name as a generated one: generation fails naming both files.\n\n**Dependencies**\n\nHard: `r4/spec-builder/entity-field-grammar`, PAP-32, PAP-228, PAP-268. Soft: PAP-116, PAP-229, PAP-38, PAP-271, PAP-34, PAP-41, PAP-265. Blocks PAP-362 (adapter registration), PAP-364.\n\n**Agent**\n\nBuilder: Forge (Schema Wright) with Quill on the spec side. Reviewer: Sentinel (Security Auditor for RLS and DTO stripping).\n\n**Size**\n\nL: two sessions (tables and migration; routers and shapes)."
+  },
+  {
+   "key": "r4/spec-builder/mutation-input-constraints",
+   "title": "Mutation input constraints and form derivation: typed `input` fields with validation rules, generated Zod for client and server, `ui.form` field lists",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Codegen and conformance tests",
+   "dueDate": "2026-09-26",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-311",
+    "r4/spec-builder/entity-field-grammar"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nPAP-311 types mutation `input` as `Record<string, ScalarType>`: no required, min, pattern or relation constraints, so generated forms (PAP-361) cannot validate and the server re-derives rules by hand. Add a constraint grammar that defaults from the entity field grammar, emit one Zod schema used by the form, the hook and the router, and derive the `ui.form` field list.\n\n**Scope**\n\nIn: `packages/spec/src/schema/input.ts` (`InputField`, `Constraint`), `data.mutations[].input` upgraded in PAP-311's schema (backwards compatible: a bare `ScalarType` still parses), generator `gen:forms` in `packages/spec/src/codegen/forms.ts` writing `apps/web/src/generated/<id>.forms.ts` (Zod schema, `defaultValues`, `fields[]` for `ui.form`) and the server-side `input` schema import for `r4/spec-builder/entity-backend-codegen` routers; validator rules; `docs/spec/forms.md`. Out: form components (PAP-233 adapters, PAP-236), layout of forms, file upload widgets (PAP-37).\n\n**Spec**\n\n* `InputField = { type: ScalarType | FieldType, from?: 'entity.<field>' (inherit constraints), required?, min?, max?, minLength?, maxLength?, pattern?, enum?, relation?, default?, label?: MessageRef, help?: MessageRef, widget?: ComponentRef }`; `from` copies the entity field's constraints and options so forms do not restate them.\n* Generated Zod: one schema per mutation, `.strict()`, ICU-ready messages with ids per PAP-375 (`<specId>.mutations.<name>.<field>.error.<rule>`); the same module is imported by the generated hook (PAP-312) for client validation and by the generated router for server validation, so both fail identically.\n* `fields[]` for `ui.form`: order from the spec, widget by type map shared with PAP-361's `field-components.ts` (`date` to `ui.datePicker`, `relation` to `ui.relationPicker`, `select` to `ui.select`), `internal` and `computed` entity fields excluded, `owner` excluded unless staff.\n* Rules: `DATA_INPUT_UNKNOWN_FROM`, `DATA_INPUT_CONSTRAINT_TYPE` (min on a string), `DATA_INPUT_ENUM_EMPTY`, `DATA_INPUT_REQUIRED_DEFAULT` (required with default warns), `DATA_INPUT_PATTERN_INVALID`.\n* Cross-field rules: `x-refine` escape hatch naming a function in `pages/<id>.logic.ts` (`refine.<name>`), typed stub generated once.\n\n**Interface contract**\n\nProvides: `InputFieldSchema`, `Constraint`, `generateForms()`, `pnpm spec gen:forms`, generated `<id>.forms.ts`, widget map, rule ids. Consumers: PAP-312 hooks (client validation), `r4/spec-builder/entity-backend-codegen` routers (server validation), PAP-361 form pages, PAP-377 form editor (constraint controls), PAP-233 form adapters, PAP-85 edge-case hunter (reads constraints for boundary inputs). Requires: PAP-311 (hard), field grammar (hard), PAP-375 `MessageRef` (soft), PAP-74 widget ids (soft; static map).\n\n**Definition of done**\n\n* `customer-invoices` `markPaid` and the clinic `appointment-form` generate schemas; the same invalid payload is rejected by the hook and by the router with the same rule id; `fields[]` renders through `ui.form` in Storybook.\n* Two runs byte-identical; drift job covers `*.forms.ts`; `docs/spec/forms.md`; CHANGELOG entry; Linear comment with a generated file excerpt.\n\n**Test plan**\n\n* Unit: constraint to Zod mapping per type, `from` inheritance, rule fixtures, message id derivation, widget map.\n* Integration: generated schema imported by a mocked router and a rendered form (Testing Library) reject the same inputs.\n* E2E (Playwright): submit an invalid appointment form at 375 and 1280, read inline errors, fix, submit.\n\n**Demo**\n\nAdd `{ id: amount, from: 'invoice.amount', min: 1 }` to `markPaid.input`, run `pnpm spec gen:forms customer-invoices`, open the generated Zod and the story, submit 0 and read the error. One minute.\n\n**Edge cases**\n\n* Entity field type changes: `from` picks it up on regeneration; stale hand-written override in `logic.ts` flagged by typecheck.\n* Relation to an entity the audience may not read: widget becomes a read-only label (matches PAP-361).\n* Pattern with catastrophic backtracking: validator warns using a regex complexity check.\n* Currency input: `Money` wire encoding (PAP-302) as a decimal string; Zod transforms to `amountMinor`.\n\n**Dependencies**\n\nHard: PAP-311, `r4/spec-builder/entity-field-grammar`. Soft: PAP-312, PAP-375, PAP-74, PAP-233, PAP-302, PAP-361.\n\n**Agent**\n\nBuilder: Forge (Schema Wright) with Iris on the widget map. Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/spec-builder/spec-diff-pr-comment",
+   "title": "Semantic spec diff: section-level changes, access matrix delta and breaking flags posted as a PR comment and consumed by the spec-conformance reviewer",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Codegen and conformance tests",
+   "dueDate": "2026-09-26",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-114",
+    "PAP-116"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nOpenAPI has `oasdiff`; specs have `git diff` of YAML. Reviewers (PAP-81's spec-conformance agent) and Justin need to know what a PR changed in meaning: who lost access, which component was removed, which transition vanished, whether the change is breaking for generated code. PAP-123 diffs the graph; nothing diffs the pages.\n\n**Scope**\n\nIn: `diffSpecs(before, after): SpecDiff` in `packages/spec/src/diff/`, CLI `paperos-spec diff <base>..<head> [--format md|json|github]`, Gate 1 step posting one sticky PR comment through PAP-78's action and attaching `spec-diff.json` as a PAP-239 artefact, `SpecDiff` Zod schema in the contract (PAP-467 patch), `docs/spec/diff.md`. Out: graph diff (PAP-123, linked), auto-approval decisions, editor UI (PAP-378 may render it later).\n\n**Spec**\n\n* Diff units: pages added, removed, renamed (id change with same route); per page: `meta.status` transitions, `access` matrix delta computed with PAP-116 `accessMatrix` (rows `audience x action: granted -> denied`), components added or removed by key, states added or removed, events added or removed with dangling targets, data queries and mutations changed, integrations added, edge cases added or removed.\n* Breaking classification (feeds the reviewer): removed component key, removed action, audience losing `page.view`, route change, `status: built` to `deprecated`; `breaking: true` requires a `## Breaking` section in the PR body (PAP-49) or the reviewer posts a blocker.\n* Markdown output is under 300 lines with collapsed `<details>` per page; JSON is stable and sorted; `--format github` produces annotations on the YAML lines that changed meaning.\n* Runs on `specs/**` changes only; skipped otherwise; under 3 s for 300 specs using PAP-115's content-hash cache.\n* Reviewer integration: PAP-244's spec-conformance prompt receives `spec-diff.json` as an input file; PAP-97 status comment links the sticky comment.\n\n**Interface contract**\n\nProvides: `diffSpecs`, `SpecDiff` schema and type, CLI, Gate 1 step `spec-diff`, artefact `spec-diff.json`, sticky comment format. Consumers: PAP-244 spec-conformance reviewer, PAP-97 status comment, PAP-89 digest (spec changes section), PAP-378 (later), PAP-306 weekly re-audit. Requires: PAP-114 parse (hard), PAP-116 `accessMatrix` (hard), PAP-78 sticky-comment action and job slot (soft; runs as a script until then), PAP-239 artefact schema (soft), PAP-49 PR body sections (soft).\n\n**Definition of done**\n\n* Seeded PR removing a component and an audience grant produces the comment with a `breaking` badge and the matrix delta; a docs-only PR skips the step.\n* JSON schema snapshot; `docs/spec/diff.md`; comment on PAP-244 with the input file path; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: every diff unit with fixtures; rename detection; breaking classification table; markdown length cap.\n* Integration: CLI between two fixture trees; annotations map to correct lines.\n* E2E: Gate 1 run on a seeded PR on both forges shows the sticky comment (screenshot).\n\n**Demo**\n\nRemove `markPaid` from the invoices example on a branch, run `paperos-spec diff main..HEAD --format md` and read the breaking badge and the access matrix row that flipped. Under one minute.\n\n**Edge cases**\n\n* Spec moved between folders: detected as rename by `meta.id`, not as remove plus add.\n* Base branch lacks `specs/` (first PR of a new app): every page is `added`; no breaking.\n* YAML unparseable on one side: diff reports `parseError` for that page and continues.\n\n**Dependencies**\n\nHard: PAP-114, PAP-116. Soft: PAP-78, PAP-239, PAP-49, PAP-244, PAP-97, PAP-115.\n\n**Agent**\n\nBuilder: Quill (Page Spec Writer) with Sentinel pairing on the reviewer input. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/spec-builder/flags-modules-compile",
+   "title": "Compile `flags` and `modules` sections: route guards through the flag service, `MODULE_DISABLED` handling in codegen, flag-gated nodes on the flow graph",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Codegen and conformance tests",
+   "dueDate": "2026-09-26",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "r4/spec-builder/schema-v1-1-extensions",
+    "PAP-315"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-366 promises a `flags:` guard in page specs and PAP-88 wants risky pages behind flags; PAP-265 rejects specs referencing disabled modules at validate time but nothing handles a module disabled at runtime for one tenant. Compile the two v1.1 sections into route guards, generated states and graph annotations so a flag flip or a module toggle changes what renders without code.\n\n**Scope**\n\nIn: extension of PAP-315's state switch with `flagged` (renders `fallback` route redirect or `DeniedState` variant `ui.featureUnavailable`) and `moduleDisabled` (renders PAP-234 `IntegrationUnavailable` styled for modules); `useFlags(page.flags)` from PAP-366 in the generated view; route `beforeLoad` guard emitted into the route file at creation; `flags[]` on `FlowGraph` nodes (PAP-123 already reserves the field) and a `flag` filter in PAP-322's toolbar; `docs/spec/flags.md`. Out: the flag service (PAP-366), tenant module toggles (PAP-266), navigation hiding (PAP-117 `gen:app` already filters through `useCan`; extend with `useFlags` here).\n\n**Spec**\n\n* Guard order in the generated view: `denied` (access), then `moduleDisabled` (PAP-266 `tenant_module`), then `flagged`, then the PAP-315 states; navigation items for flagged pages hide unless the flag holds (`gen:app` navigation gains a `flags` field).\n* `flags.require` all must hold, `flags.any` at least one; evaluation is server-side through PAP-366's streamed values with a 5 s propagation budget; missing flag service means `fallback`.\n* Conformance tests (PAP-122) gain a `flagged` state assertion when the section exists; PAP-64's permission matrix records flag-gated actions as `conditional`.\n* Flow graph nodes with `flags` render a flag badge (PAP-320) and can be hidden by the toolbar filter; `paperos gen --check` fails when a spec references an undeclared flag (`FLAG_UNKNOWN` from the schema issue).\n* Kill switch (`module.<id>.impl` family is reserved by PAP-435; page flags live under `page.<id>.*`) never collides: validator rule `FLAG_RESERVED_FAMILY`.\n\n**Interface contract**\n\nProvides: generated guard code, `ui.featureUnavailable` state wiring (component owned by PAP-234, requested by comment), navigation `flags` field, graph badge, rule `FLAG_RESERVED_FAMILY`. Consumes: v1.1 schema, PAP-315 state switch, PAP-366 `useFlags` and server evaluation, PAP-266 `tenant_module`, PAP-234 state components, PAP-123 and PAP-320 graph types, PAP-122 generated tests. Consumed by: PAP-88 release train (flagged pages), PAP-195 in-app targeting, PAP-363 starter kit (optional surfaces).\n\n**Definition of done**\n\n* Clinic fixture page `payments-report` behind `page.payments.report`: hidden from navigation and redirected while off, renders when on, for one tenant only; `appointments` page with `modules.require: [scheduling]` shows the module-disabled state when the tenant toggles it off.\n* Storybook stories for both states at 375 and 1280 in light and dark; conformance test asserts the flagged state; `docs/spec/flags.md`; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: guard order, `require` vs `any`, fallback when the service is down, navigation filtering, reserved family rule.\n* Integration: flip a flag through PAP-366's API and observe the generated route within 5 s (compose stack).\n* E2E (Playwright): two tenants, flag on for one, navigate as each.\n\n**Demo**\n\nSet `flags: { require: ['page.payments.report'] }` on a page, regenerate, load it (redirected), flip the flag in `/_app/settings/flags`, reload and see it. Under two minutes.\n\n**Edge cases**\n\n* Flag on but module disabled: module state wins (order rule).\n* Public page with flags: evaluated for anonymous with tenant-level rules only.\n* Flag deleted while pages reference it: `--check` red and a banner in the spec editor.\n\n**Dependencies**\n\nHard: `r4/spec-builder/schema-v1-1-extensions`, PAP-315. Soft: PAP-366, PAP-266, PAP-234, PAP-123, PAP-320, PAP-322, PAP-122.\n\n**Agent**\n\nBuilder: Nova. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/spec-builder/seo-public-metadata",
+   "title": "Public page metadata from specs: `seo` section to `<head>` tags, Open Graph image route, sitemap and robots generation per app",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Customer"
+   ],
+   "milestone": "Codegen and conformance tests",
+   "dueDate": "2026-09-26",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "r4/spec-builder/schema-v1-1-extensions",
+    "PAP-314"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nEvery generated app ships a public landing page and public docs (PAP-363, PAP-128, PAP-133), and PAP-193 publishes marketing pages. None of them emits a `<title>`, description, Open Graph tags, sitemap or robots file from the spec, so the customer-facing half of the golden path is invisible to search and looks broken when shared. Compile the v1.1 `seo` section and generate the two crawl files.\n\n**Scope**\n\nIn: head emission in PAP-314's route template for `layout.template: public` pages using TanStack Router `head()` (title, description, canonical, `og:*`, `twitter:card`, `robots`); generator `sitemap` in PAP-362's pipeline writing `apps/web/public/sitemap.xml` and `robots.txt` from public page routes plus PAP-128 public docs and PAP-133 public changelog; OG image route `/_public/og/$pageId.png` rendering a tokenised card (PAP-66 tokens, app name, title) with `@vercel/og`-style satori in the API; `docs/spec/seo.md`. Out: marketing analytics (PAP-194), custom domains (PAP-431; sitemap uses `PAPEROS_DOMAIN`), structured data beyond `WebSite`.\n\n**Spec**\n\n* Defaults: `title` falls back to `purpose.summary` truncated to 60 chars, `description` to the first sentence of `purpose.summary` (155 chars), `ogImage` to the generated card; `noindex: true` emits `robots: noindex` and excludes the route from the sitemap; non-public pages are always `noindex` and never listed.\n* Sitemap entries carry `lastmod` from the spec file's git commit date (PAP-128 history helper) and `hreflang` alternates when `r4/collab/docs-i18n` lands; robots allows public routes and disallows `/_app`, `/api`, `/_public/og` caching aside.\n* OG card renders in under 300 ms cached 24 h by `specHash`; light theme only; text from the business profile terminology (PAP-126) when present.\n* Per-tenant custom domains (PAP-431) get a per-host sitemap through a route that filters by tenant; until then one sitemap per app.\n* Gate 3 (PAP-82) captures the landing page and Lighthouse (PAP-87) SEO score is asserted at or above 90 for public pages.\n\n**Interface contract**\n\nProvides: head emission in the route template, `sitemap` generator, `robots.txt`, OG image route, `seo` defaults resolver. Consumes: v1.1 `seo` section, route template (PAP-314), pipeline registry (PAP-362), tokens (PAP-66), business profile (PAP-126, soft), docs and changelog public routes (PAP-128, PAP-133), domain env (PAP-17), Lighthouse job (PAP-87). Consumed by: PAP-363 landing page, PAP-193 landing pages, PAP-133 public changelog.\n\n**Definition of done**\n\n* Landing and public docs pages emit correct tags (Playwright reads `<head>`); sitemap validates against the sitemaps.org XSD; OG image renders for two pages; Lighthouse SEO at or above 90 on the landing page.\n* Screenshots of the OG card and a shared-link preview mock at 1200x630; `docs/spec/seo.md`; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: defaults resolver, truncation, sitemap XML snapshot, robots rules, noindex exclusion.\n* Integration: OG route through the API with cache headers; `--check` on the sitemap after adding a public page.\n* E2E (Playwright): `<head>` assertions on the landing page at 375 and 1280.\n\n**Demo**\n\nAdd `seo: { title: 'Book a physio session' }` to the landing spec, run `paperos gen`, open the page source and `sitemap.xml`, then fetch `/_public/og/landing.png`. Under one minute.\n\n**Edge cases**\n\n* Title over 60 characters: kept, warning `SEO_TITLE_LONG`.\n* Public page behind a flag (`r4/spec-builder/flags-modules-compile`): excluded from the sitemap while off.\n* App without a domain configured: sitemap uses the preview URL and warns.\n\n**Dependencies**\n\nHard: `r4/spec-builder/schema-v1-1-extensions`, PAP-314. Soft: PAP-362, PAP-66, PAP-126, PAP-128, PAP-133, PAP-17, PAP-87, PAP-431, PAP-363.\n\n**Agent**\n\nBuilder: Nova with Beacon consulting on defaults. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/spec-builder/page-budgets",
+   "title": "Per-page performance budgets from specs: `budgets` section compiled into Lighthouse CI assertions, `size-limit` entries and k6 p95 thresholds",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Codegen and conformance tests",
+   "dueDate": "2026-09-26",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "r4/spec-builder/schema-v1-1-extensions",
+    "PAP-87"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-87 enforces web budgets and PAP-242 API budgets with hand-maintained config lists that drift from the routes specs declare. Let the spec own the numbers: a page says its LCP, INP, bundle and API p95 budgets, and one generator writes the three tool configurations, so a new page is measured the day it is specified.\n\n**Scope**\n\nIn: generator `budgets` in PAP-362's pipeline writing `lighthouserc.generated.json` assertions per public and key route, `size-limit` entries per route chunk (`apps/web/.size-limit.generated.json`) and `k6` thresholds per generated procedure (`load/generated/thresholds.json` for PAP-242); app defaults from PAP-117 `defaults.budgets`; a `budgets` column in the PAP-97 status comment; `docs/spec/budgets.md`. Out: the measurement tools themselves (PAP-87, PAP-242), fixing regressions.\n\n**Spec**\n\n* Defaults: `lcpMs 2500`, `inpMs 200`, `bundleKb 250` (route chunk gzip), `apiP95Ms 300`; `layout.template: public` pages default tighter (`lcpMs 1800`, `bundleKb 150`); a page may only tighten below app defaults without `x-budget-waiver: <PAP-n>`.\n* Route to chunk mapping uses the PAP-314 route file names; procedures for k6 come from the page's `data` section queries and mutations mapped to generated routers (`r4/spec-builder/entity-backend-codegen`).\n* Generated configs are merged with hand-written ones by the tools (Lighthouse `extends`, size-limit array concat, k6 thresholds object spread); conflicts error at generation.\n* Regression report: PAP-87 and PAP-242 already fail the PR; this issue adds the budget source line (`from specs/pages/x.spec.yaml:budgets`) to their messages so an agent fixes the right place.\n* `--check` red when a route exists without a budget entry (defaults apply, so this only fires for unspecced routes already caught by PAP-115).\n\n**Interface contract**\n\nProvides: `budgets` generator, three generated config files, waiver convention, status-comment column. Consumes: v1.1 `budgets`, PAP-117 defaults, route naming (PAP-314), pipeline (PAP-362), Lighthouse CI config (PAP-87), k6 harness (PAP-242), status comment (PAP-97). Consumed by: PAP-87, PAP-242, PAP-89 digest (budget table), PAP-363 landing page.\n\n**Definition of done**\n\n* Three example pages produce entries; tightening `bundleKb` below the current chunk turns PAP-87 red on a seeded branch; loosening without a waiver fails validation.\n* `docs/spec/budgets.md`; comments on PAP-87 and PAP-242 with the generated file paths; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: defaults and tightening rule, route to chunk mapping, config merge conflicts, waiver parsing.\n* Integration: Lighthouse CI dry run with the generated config on the template; k6 threshold file loads.\n* E2E: none.\n\n**Demo**\n\nSet `budgets: { bundleKb: 80 }` on the invoices page, run `paperos gen --only budgets`, open the generated size-limit entry, push and watch PAP-87 fail with the spec path in the message. Under two minutes.\n\n**Edge cases**\n\n* Page with no chunk (redirect-only route): skipped with a note.\n* Procedure shared by ten pages: strictest p95 wins and the winner page is named.\n* Lighthouse unavailable in CI: generated file still written; check skipped.\n\n**Dependencies**\n\nHard: `r4/spec-builder/schema-v1-1-extensions`, PAP-87. Soft: PAP-242, PAP-362, PAP-314, PAP-97, `r4/spec-builder/entity-backend-codegen`.\n\n**Agent**\n\nBuilder: Sentinel (Code Reviewer sub-agent as builder). Reviewer: Sentinel (Edge Case Hunter, a second session) with Atlas.\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/spec-builder/msw-fixtures-from-data",
+   "title": "Generate MSW handlers and fixture rows from the data section for Storybook stories, the editor preview and Gate 3 story capture",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Codegen and conformance tests",
+   "dueDate": "2026-09-26",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-312",
+    "PAP-314"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nGenerated stories (PAP-314), conformance tests (PAP-122) and the editor preview (PAP-378) each mock data hooks their own way with `vi.fn` or `vi.mock`. Generate one MSW handler set and deterministic fixture rows per page from the `data` section, so every consumer renders the same success, empty and error states and Gate 3 screenshots stay stable.\n\n**Scope**\n\nIn: generator `mocks` in `packages/spec/src/codegen/mocks.ts` writing `apps/web/src/generated/__mocks__/<id>.handlers.ts` (MSW 2 `http` handlers for the oRPC procedures the page's queries and mutations map to) and `<id>.fixtures.ts` (rows typed from the API contract, generated with a fixed seed and the entity field grammar); story decorators in PAP-314's stories template switching handler sets per state (`success`, `empty`, `error`, `slow`); `docs/spec/mocks.md`. Out: E2E seeds (PAP-240 owns the real database), shape mocking for `live|local` beyond a static snapshot.\n\n**Spec**\n\n* Fixture rows respect field constraints (`r4/spec-builder/mutation-input-constraints`, entity grammar): enum values from options, dates within the last 90 days, currency as decimal strings, relations resolving to sibling fixtures; 12 rows by default, `x-mock-rows` overrides.\n* Handlers: `list` paginates with signed-looking cursors, `get` by id, `create|update` echo with optimistic ids, `error` set returns the PAP-267 error body with `VALIDATION` or `FORBIDDEN`; `slow` adds 1500 ms.\n* `live|local` queries: a `useShape` mock provider returning the fixture rows as a snapshot with `isStale: false`; documented as the one place shapes are faked.\n* PAP-378 preview imports the same handlers inside its iframe (worker-registered MSW) so preview and stories never diverge; PAP-122 keeps `vi.mock` but points it at the generated fixtures.\n* Deterministic: same spec hash, same rows; Gate 3 story capture (PAP-246) relies on it for baseline stability.\n\n**Interface contract**\n\nProvides: `mocks` generator, generated handlers and fixtures, story decorator `withSpecMocks(state)`, `useShape` mock provider. Consumes: hook and procedure mapping (PAP-312), stories template (PAP-314), API contract types (PAP-268), error body (PAP-267), entity grammar and constraints (soft), Storybook (PAP-69), preview (PAP-378), story capture (PAP-246). Consumed by: PAP-316 example screenshots, PAP-378, PAP-122, PAP-246, PAP-125 docs screenshots.\n\n**Definition of done**\n\n* Three example pages render all four states in Storybook from generated mocks; PAP-378 preview uses them; two runs byte-identical.\n* Screenshots of the four states at 375 and 1280; `docs/spec/mocks.md`; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: fixture generation per field type and constraint, handler responses per state, determinism.\n* Integration: Storybook interaction test loads a story per state; preview worker registers handlers.\n* E2E: Gate 3 story capture on the example stories is stable across three runs.\n\n**Demo**\n\nOpen `Generated/customer-invoices` in Storybook, switch the state toolbar to `error`, then `slow`, then open the editor preview and see the same rows. Under one minute.\n\n**Edge cases**\n\n* Procedure hand-written (not generated): handler stub generated with a `TODO` body returning `[]`.\n* Fixture relation cycle: depth-limited to 2 hops.\n* Page with 40 queries: handlers still generated; story loads under 2 s (asserted).\n\n**Dependencies**\n\nHard: PAP-312, PAP-314. Soft: `r4/spec-builder/entity-field-grammar`, `r4/spec-builder/mutation-input-constraints`, PAP-268, PAP-267, PAP-69, PAP-378, PAP-246, PAP-122.\n\n**Agent**\n\nBuilder: Nova. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/spec-builder/spec-fixture-corpus",
+   "title": "Synthetic spec corpus generator: 300 valid page specs and 60-page stress apps for validator, pipeline, editor and diff benchmarks",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Spec schema and validator",
+   "dueDate": "2026-09-24",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Haiku 4.5",
+   "modelId": "claude-haiku-4-5-20251001",
+   "effort": "low",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-114"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Haiku 4.5 (`claude-haiku-4-5-20251001`) / low — Infra S\n\n**Goal**\n\nFive specs measure themselves against fixtures nobody generates: 300 specs under 2 s (PAP-115), a 60-page stress fixture under 20 s (PAP-362), 60 pages times three audiences under 5 s (PAP-361), a 300-component spec in the editor (PAP-377) and 300 pages under 5 s for the graph (PAP-123). Ship one seeded generator so every benchmark, and the weekly rehearsal PAP-114 named, uses the same corpus.\n\n**Scope**\n\nIn: `packages/spec/fixtures/generate.ts` with a fixed seed writing `packages/spec/fixtures/corpus/{small,medium,large}/` (10, 60 and 300 pages plus a matching `app.spec.yaml` per size) and one `maximal.spec.yaml` (300 components, every section, 12-level tree); `pnpm spec fixtures:build` and a committed hash manifest; `bench/` scripts wrapping `hyperfine` for the validator, pipeline and graph; `docs/spec/fixtures.md`. Out: the benchmarks' pass thresholds (owned by the consuming issues), business seed packs (PAP-207).\n\n**Spec**\n\n* Corpus shape: audiences `customer.basic`, `staff.admin`, `agent.builder`; entities scale with size (5, 20, 60) using the field grammar when merged, else the frozen union; pages are 60 percent list or detail, 20 percent forms, 20 percent dashboards and settings; every page has `access`, `data`, three edge cases and at least one `events[]` transition so graphs are connected.\n* All generated specs validate with zero warnings under PAP-115 `--strict`; the generator fails its own build otherwise.\n* Deterministic: same seed, same bytes; the manifest lists sha256 per file; regenerating with a new schema version bumps `corpusVersion` and is a normal PR.\n* Sizes stay under 10 MB total committed; `large` is generated on demand in CI (`fixtures:build --size large`) and cached.\n* Bench scripts print a table and write `bench/results/<tool>.json` the consuming issues paste into their Linear comments.\n\n**Interface contract**\n\nProvides: corpus folders, `generateCorpus({ size, seed })`, hash manifest, `pnpm spec fixtures:build`, bench scripts. Consumes: `PageSpecSchema` and `AppSpecSchema` (PAP-114, PAP-117), validator (PAP-115, soft), field grammar (soft), `hyperfine` (dev dependency). Consumed by: PAP-115, PAP-362, PAP-361, PAP-377, PAP-123, `r4/spec-builder/spec-diff-pr-comment`, PAP-470 conformance fixtures (subset), the weekly rehearsal in PAP-306.\n\n**Definition of done**\n\n* Corpus committed for small and medium, generated for large in CI; every spec validates strict; bench scripts run on the template repo and print timings.\n* `docs/spec/fixtures.md`; comments on PAP-115, PAP-362, PAP-361, PAP-377 and PAP-123 naming the corpus paths; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: determinism (two runs equal), validity under strict, distribution of page kinds, manifest check.\n* Integration: `pnpm spec:validate fixtures/corpus/medium` green; `gen:graph` on medium renders a connected graph.\n* E2E: none.\n\n**Demo**\n\nRun `pnpm spec fixtures:build --size large && pnpm bench:validate`, read the 300-spec timing, open one generated spec and see a complete, boring page. Under one minute.\n\n**Edge cases**\n\n* Schema change breaks the corpus: CI fails on the generator, which is the point; regenerate and review the diff summary.\n* Corpus page ids collide with real pages: namespaced `fx-`.\n* Field grammar unmerged: frozen union with a TODO and a drift test.\n\n**Dependencies**\n\nHard: PAP-114. Soft: PAP-117, PAP-115, `r4/spec-builder/entity-field-grammar`.\n\n**Agent**\n\nBuilder: Quill (Page Spec Writer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/spec-builder/reverse-codegen-infer",
+   "title": "Reverse codegen: `paperos-spec infer <route>` drafts a page spec from an existing route file, component tree and data hooks for retrofitting unspecced pages",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Spec editor UI",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-115",
+    "PAP-74"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nPAP-115 fails a PR on `SPEC_ROUTE_UNCOVERED` and the fix is to write a spec by hand. Hand-written pages already exist in the template (auth pages, settings, dev tools) and will keep appearing when agents prototype. Infer a draft spec from the code, the way Storybook's autodocs and Figma dev mode read what exists, so retrofitting is a review, not a rewrite.\n\n**Scope**\n\nIn: `paperos-spec infer <routeFile|route> [--write] [--all-uncovered]` in `packages/spec/src/infer/` using `ts-morph` to read the route file (`createFileRoute`, `validateSearch`, `staticData`), the view component tree (JSX elements matching PAP-74 registry ids, `data-spec-key`, `data-action`), hooks from `@paperos/api-contract` and generated data modules, `useCan` calls for access hints and `t()` ids for copy; output `specs/pages/<id>.spec.yaml` with `meta.status: draft`, `x-inferred: { at, confidence, unresolved[] }`; `docs/spec/infer.md`. Out: inferring business logic, perfect fidelity (drafts are reviewed), non-React targets.\n\n**Spec**\n\n* Mapping rules: route path to `meta.route` and `layout.template` from the layout parent; registry components to `components[]` with props literal-extracted where static; `useQuery(orpc.x.list)` to `data.queries`; `useMutation` to `data.mutations`; `useCan('page.view')` and `authorize` middleware to `access.view` hints; `states` from `Suspense`, `ErrorBoundary`, `EmptyState` usage; `events` from `navigate()` and `<Link>` targets.\n* Unknown JSX elements become `x-unresolved` entries with file and line; confidence is the share of resolved nodes; below 0.5 the file is written but the CLI exits 2.\n* `--all-uncovered` walks PAP-115's `SPEC_ROUTE_UNCOVERED` list and writes drafts for each; a summary table is printed and, in CI, posted as a PR comment.\n* Drafts never receive `status: ready`; the PAP-118 skill can open an issue per draft (`author-spec open-issue --from-infer`).\n* Idempotent: re-running on an unchanged file yields the same draft; a spec that already exists is never overwritten without `--force`.\n\n**Interface contract**\n\nProvides: `inferSpec(routeFile): { spec, confidence, unresolved }`, CLI, `x-inferred` convention, PR comment table. Consumes: `PageSpecSchema` (PAP-114), route discovery (PAP-115), component registry and `data-spec-key` conventions (PAP-74, PAP-315), API contract types (PAP-268), `ts-morph`. Consumed by: PAP-118 skill, PAP-105 `page-from-spec` (retrofit mode), PAP-24 template guide, PAP-306 re-audit (uncovered routes count).\n\n**Definition of done**\n\n* Inferred drafts for the template's auth pages (PAP-224) and settings pages reach confidence at or above 0.7 and validate as `draft`; `--all-uncovered` on the template leaves zero uncovered routes after review.\n* `docs/spec/infer.md` with the mapping table; CHANGELOG entry; Linear comment with one draft side by side with its source.\n\n**Test plan**\n\n* Unit: each mapping rule on fixture components; confidence math; unresolved reporting; idempotency.\n* Integration: run on the template repo; every draft validates; typecheck untouched.\n* E2E: none.\n\n**Demo**\n\nRun `paperos-spec infer apps/web/src/routes/_app/settings/members.tsx`, open the draft, read the `x-unresolved` list and the confidence, fix two entries and promote to `ready`. Under two minutes.\n\n**Edge cases**\n\n* Route file with dynamic component maps: components listed as `x-unresolved` with a hint.\n* Page using a non-registry component: `SPEC_UNKNOWN_COMPONENT` on validate points at the component to register (PAP-74).\n* Generated page (has a banner): refuses; the spec is the source there.\n\n**Dependencies**\n\nHard: PAP-115, PAP-74. Soft: PAP-268, PAP-315, PAP-118, PAP-105.\n\n**Agent**\n\nBuilder: Nova. Reviewer: Sentinel (Code Reviewer) with Quill checking spec fidelity.\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/spec-builder/page-spec-templates",
+   "title": "Page spec templates: `paperos-spec new --template dashboard|wizard|report|settings|kiosk|landing|detail-tabs` with filled examples and a template lint",
+   "type": "Docs",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Spec editor UI",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-114",
+    "PAP-125"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Docs S\n\n**Goal**\n\nPAP-361 derives CRUD pages and PAP-125 documents three examples. Everything else an agent writes (a dashboard, a multi-step wizard, a report, a kiosk screen, a landing page, a tabbed detail) starts from a blank YAML file. Backstage software templates exist for this reason. Ship seven starting points that validate, generate and screenshot, plus the CLI that copies them.\n\n**Scope**\n\nIn: `packages/spec/templates/pages/<template>.spec.yaml` with `{{placeholders}}` and explanatory comments, `paperos-spec new <id> --template <t> [--entity <e>] [--surface <s>]` in PAP-115's CLI filling placeholders from `app.spec.yaml`, a Vitest lint that every template renders to a strict-valid spec for the clinic fixture, generated screenshots of each at 375 and 1280 for `docs/spec/templates.mdx`. Out: business seed packs (PAP-207, PAP-427), CRUD derivation (PAP-361), the editor's 'new spec' dialog (PAP-376 may call the CLI).\n\n**Spec**\n\n* Templates: `dashboard` (`ui.dashboardBlocks` with three aggregate queries and cross-filter params), `wizard` (multi-step with `logic.actions` per step, search-param step state, `states.saving`), `report` (date range params, `ui.dataGrid` with aggregates, print state, export action), `settings` (sections, `access` staff.admin, audit reason), `kiosk` (`layout.template: kiosk`, large targets, idle reset event, PAP-158 spatial focus hints), `landing` (`public: true`, `seo`, hero and CTA components, form capture to PAP-193 when enabled), `detail-tabs` (record header, tabs from relations, comments anchor, activity).\n* Placeholders: `{{id}}`, `{{entity}}`, `{{Entity}}`, `{{plural}}`, `{{surface}}`, `{{audience}}`; unfilled placeholders fail validation with `SPEC_TEMPLATE_PLACEHOLDER`.\n* Each template includes five edge cases across empty, huge, offline, denied and concurrent edit, matching PAP-118's drafting rules, and a `help` section (v1.1) pointing at its docs page.\n* Templates use registered component ids only; missing components (dashboard blocks before PAP-173) fall back to `ui.responsiveGrid` with a callout comment naming the blocking key, as PAP-125 does.\n* `docs/spec/templates.mdx` lists when to use which, with screenshots and the CLI line for each.\n\n**Interface contract**\n\nProvides: seven templates, `paperos-spec new`, rule `SPEC_TEMPLATE_PLACEHOLDER`, docs page. Consumes: `PageSpecSchema` (PAP-114), CLI (PAP-115), examples conventions (PAP-125), `app.spec.yaml` (PAP-117), component ids (PAP-74, soft), v1.1 `help` and `seo` (soft), kiosk template (PAP-23, deferred; falls back to `focus`). Consumed by: PAP-118 skill (offers a template first), PAP-376 editor new-spec flow, PAP-363 starter kit (landing, settings), PAP-29 drill.\n\n**Definition of done**\n\n* Seven templates render strict-valid specs for the clinic fixture and pass `gen:page`, `gen:tests`; screenshots at 375 and 1280 in light and dark embedded in the docs page.\n* PAP-118 skill lists templates in its question bank (comment there); CHANGELOG entry; Linear comment with the docs link.\n\n**Test plan**\n\n* Unit: placeholder filling, lint rule, template validity per fixture app.\n* Integration: full generator chain on each template in CI as part of the drift job.\n* E2E: Playwright captures the screenshots.\n\n**Demo**\n\nRun `paperos-spec new therapist-dashboard --template dashboard --entity appointment`, validate, `gen:page`, open the route and see the three tiles with mocked data. Under two minutes.\n\n**Edge cases**\n\n* Entity without aggregatable fields: dashboard template uses counts only and comments why.\n* Surface `agent`: templates emit `deny: [customer.*]` and read-only actions.\n* Template id collides with an existing page: CLI refuses without `--force`.\n\n**Dependencies**\n\nHard: PAP-114, PAP-125. Soft: PAP-115, PAP-117, PAP-74, PAP-173, PAP-23, PAP-118, PAP-376, `r4/spec-builder/schema-v1-1-extensions`.\n\n**Agent**\n\nBuilder: Quill (Page Spec Writer). Reviewer: Sentinel (Code Reviewer) with Nova on codegen fit.\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/spec-builder/spec-versioning-tooling",
+   "title": "Spec versioning tooling: version registry, codemod helpers, `paperos-spec migrate --dry-run`, `x-deprecated` metadata with `SPEC_DEPRECATED` and the weekly 300-fixture rehearsal",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Spec editor UI",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-114",
+    "r4/spec-builder/spec-fixture-corpus"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 (Execution Schedule stretch pool; NJ-14 can reinstate). Not claimable before 10-01.\n\nPAP-114 ships only the `migrate/` skeleton and names this follow-up explicitly (FIX-5). Once the issue cap lifted, the tooling gets its home: a version registry, codemod helpers, a dry-run migrator, deprecation metadata and a rehearsal that migrates the synthetic corpus every week so a v2 schema is never the first time the codemods run.\n\n**Scope**\n\nIn: `packages/spec/src/migrate/` filled in: `SPEC_VERSIONS` registry with `codemodsFrom`, helpers `renameKey|moveKey|mapEnum|wrapValue|splitSection`, `paperos-spec migrate [--to <v>] [--dry-run] [--write]` printing a unified diff per file and preserving comments through the `yaml` Document API; `x-deprecated: { since, replaceWith, removeAt }` on schema fields with rule `SPEC_DEPRECATED` (warn until `removeAt`, error after); weekly workflow `spec-migrate-rehearsal.yml` migrating `fixtures/corpus/large` from the oldest supported version and asserting zero diagnostics; `docs/spec/versioning.md` completed. Out: data migrations (PAP-443), template upgrades (PAP-430 consumes the CLI).\n\n**Spec**\n\n* Codemods are pure functions over `YAML.Document` returning `Change[]` with paths; every codemod has a fixture pair; a codemod that loses a comment fails its test.\n* `migrate` refuses to write when the result fails validation; `--dry-run` exit codes 0 no-op, 1 changes, 3 error.\n* Deprecations: the JSON Schema carries `deprecated: true` and `x-replaceWith` so editors (PAP-376) strike the key through; `SPEC_DEPRECATED` hints the codemod name.\n* Rehearsal seeds a copy of the corpus with the previous version's shape (generator flag `--version <v>` in `r4/spec-builder/spec-fixture-corpus`), migrates, validates, and diffs against the current corpus.\n* `paperos upgrade` (PAP-430) calls `migrate --write` for generated apps and lists the changes in its PR body.\n\n**Interface contract**\n\nProvides: version registry, codemod helpers and `Codemod` implementations, CLI, `x-deprecated` schema support, rule `SPEC_DEPRECATED`, rehearsal workflow. Consumes: `migrate/` skeleton and `SpecIssue` (PAP-114), CLI host (PAP-115), corpus generator, `yaml` Document patching from PAP-377, ADR process (PAP-130). Consumed by: PAP-430 template upgrade, PAP-376 editor (deprecation strike-through), `r4/spec-builder/schema-v1-1-extensions` codemods (moved here), PAP-306 re-audit.\n\n**Definition of done**\n\n* Helpers and CLI merged with fixtures; a synthetic v1 to v2 rename migrates the large corpus with comments intact and zero diagnostics; rehearsal workflow green once.\n* `docs/spec/versioning.md`; CHANGELOG entry; Linear comment with the dry-run diff sample.\n\n**Test plan**\n\n* Unit: each helper on fixtures including comments and anchors; exit codes; deprecation date logic with a fake clock.\n* Integration: CLI over the corpus; JSON Schema `deprecated` flags present.\n* E2E: none.\n\n**Demo**\n\nMark `layout.slots` deprecated in a scratch branch with `replaceWith: layout.regions`, run `paperos-spec migrate --dry-run` and read the diff and the `SPEC_DEPRECATED` hint. Under one minute.\n\n**Edge cases**\n\n* Two codemods touch the same path: ordered by version then declaration; conflict fails the registry test.\n* Spec with YAML anchors: aliases rewritten once at the anchor.\n* Unsupported future version: `SPEC_UNSUPPORTED_VERSION` as PAP-114 defines.\n\n**Dependencies**\n\nHard: PAP-114, `r4/spec-builder/spec-fixture-corpus`. Soft: PAP-115, PAP-377, PAP-430, PAP-130. Deferred: v0.2.\n\n**Agent**\n\nBuilder: Quill (Page Spec Writer). Reviewer: Sentinel (Code Reviewer) with Atlas.\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/spec-builder/analytics-events-section",
+   "title": "Spec `analytics` section: product events per action and view compiled into the privacy-first event pipeline with a generated event catalogue",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Developer",
+    "Staff"
+   ],
+   "milestone": "Spec editor UI",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "r4/spec-builder/schema-v1-1-extensions"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 (stretch pool; NJ-14 can reinstate). Not claimable before 10-01.\n\nPAP-194 builds an acquisition analytics pipeline and PAP-195 segments on product usage, but which product events exist is decided ad hoc in code. Let the spec declare them: a page names the events its views and actions emit, codegen wires the calls, and a catalogue page lists every event with its owner and properties.\n\n**Scope**\n\nIn: `analytics: { view?: EventName | false, actions?: Record<actionName, { event: EventName, props?: string[] }>, pii?: 'none' }` in the schema (v1.2 additive), codegen emitting `track()` calls in PAP-315's action binding and route load, generator `analytics-catalogue` writing `docs/.generated/analytics-events.json` and a docs page, rule `ANALYTICS_PROP_PII` (a listed prop flagged `pii: high` in the entity grammar is an error). Out: the pipeline (PAP-194), dashboards (PAP-173), consent (PAP-221).\n\n**Spec**\n\n* Event naming `<page>.<action|viewed>`, overridable; props limited to spec-known fields; `tenant_id` and `actor.type` added automatically, never `actor.id` for customers (PAP-194 privacy rule).\n* Default: every public and customer page emits `viewed`; staff and agent pages emit nothing unless declared.\n* Catalogue page groups by surface and links to the spec; PAP-195 segment builder reads the catalogue for its event picker.\n* Consent: `track()` no-ops when PAP-221 consent is absent for the audience.\n* Determinism and `--check` as for every generator.\n\n**Interface contract**\n\nProvides: `analytics` section schema, `track` emission, catalogue generator and page, rule id. Consumes: v1.1 schema mechanics, PAP-315 action binding, PAP-194 `track()` client, PAP-221 consent (soft), entity `pii` flags. Consumed by: PAP-194, PAP-195, PAP-173 dashboards.\n\n**Definition of done**\n\n* Landing and invoices pages emit declared events into PAP-194's dev sink; a PII prop fails validation; catalogue lists both pages.\n* `docs/spec/analytics.md`; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: schema, naming, PII rule, emission snapshot.\n* Integration: events arrive in the PAP-194 sink in the compose stack.\n* E2E: none.\n\n**Demo**\n\nAdd `analytics: { actions: { payInvoice: { event: 'invoice.pay_clicked', props: ['amount'] } } }`, regenerate, click Pay in mock mode and see the event in the dev sink. Under one minute.\n\n**Edge cases**\n\n* Action without analytics: no call emitted.\n* Event renamed: catalogue marks the old name `retired` for 30 days.\n* Consent revoked mid-session: subsequent calls drop.\n\n**Dependencies**\n\nHard: `r4/spec-builder/schema-v1-1-extensions`. Soft: PAP-194 (its milestone is 10-01; the section ships against a dev sink until then), PAP-315, PAP-221, PAP-195. Deferred: v0.2.\n\n**Agent**\n\nBuilder: Nova with Beacon. Reviewer: Sentinel (Security Auditor for PII).\n\n**Size**\n\nS: half a session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-114",
+   "section": "Spec",
+   "append": "Reserved for v1.1 (additive, `r4/spec-builder/schema-v1-1-extensions`): top-level keys `flags`, `modules`, `comments`, `help`, `seo`, `budgets`. In v1 they parse as `z.unknown().optional()` with warning `SPEC_RESERVED_KEY` so consumers that already write them (PAP-380, PAP-361, PAP-366) are not rejected by the unknown-key rule."
+  },
+  {
+   "identifier": "PAP-115",
+   "section": "Spec",
+   "append": "Rule `SPEC_BAD_PROPS`: component `props` are validated against the PAP-74 registry JSON Schema for that id (Ajv, strict); skipped with one warning when the registry is absent. Rule `SPEC_TEMPLATE_PLACEHOLDER`: any `{{...}}` left in a spec is an error (templates issue)."
+  },
+  {
+   "identifier": "PAP-117",
+   "section": "Spec",
+   "append": "`entities[].fields` is typed by `r4/spec-builder/entity-field-grammar` (`FieldSchema`); until it merges, `fields` parses as `z.array(z.unknown())` with warning `APP_FIELDS_UNTYPED`. The implicit columns (`id`, `tenant_id`, `created_at`, `updated_at`, `deleted_at`, `created_by`) are never declared."
+  },
+  {
+   "identifier": "PAP-123",
+   "section": "Spec",
+   "append": "Derive `relation` edges between `entity` nodes from `entities[].fields[].relation` (field grammar) labelled with the field id and `one|many`; self-relations render as loops; entity nodes with zero pages and zero relations are the `orphan` flag. Nodes carry `flags[]` from the page `flags` section when present."
+  },
+  {
+   "identifier": "PAP-361",
+   "section": "Dependencies",
+   "append": "Hard on `r4/spec-builder/entity-field-grammar` for column, option and `owner` derivation. The `comments: { anchor }` key requires `r4/spec-builder/schema-v1-1-extensions`; until it lands emit `x-comments` and let the codemod promote it."
+  },
+  {
+   "identifier": "PAP-362",
+   "section": "Scope",
+   "append": "Register the `db-schema`, `db-migration`, `routers` and `shapes` generators from `r4/spec-builder/entity-backend-codegen`, plus `forms` (mutation constraints), `mocks`, `sitemap` and `budgets`, each as a ten-line adapter; order: `app` before `db-schema` before `routers` before `data-hooks`. The determinism test and `gen-check` cover them."
+  },
+  {
+   "identifier": "PAP-360",
+   "section": "Spec",
+   "append": "Fields proposed by the interview use the `Field` grammar (`r4/spec-builder/entity-field-grammar`): money nouns become `currency` with `format.currency` from the profile, dates become `date` or `dateTime` by phrasing, people nouns become `relation(user)`, and every `email|phone` field gets `pii: high`."
+  },
+  {
+   "identifier": "PAP-378",
+   "section": "Edge cases",
+   "append": "Preview of a page with `sync: live` queries must not open Electric shapes inside the iframe: it uses the generated MSW handlers and shape snapshot from `r4/spec-builder/msw-fixtures-from-data`; until that lands, `live` hooks are stubbed with an empty snapshot and a banner in the preview."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "data-layer",
+   "title": "Review generated Drizzle tables, RLS policies and routers from `r4/spec-builder/entity-backend-codegen` against PAP-32, PAP-34 and PAP-268 conventions",
+   "why": "The generator writes into data-layer-owned packages through their registration APIs; Forge should co-own the templates and add the generated app schema to `pnpm db:check`."
+  },
+  {
+   "targetProject": "design-system",
+   "title": "Mark text-bearing props `i18n: true` and expose `ui.featureUnavailable` and `ui.form` field-list props in the PAP-74 registry",
+   "why": "PAP-375 wraps only flagged props; the flags compile issue needs a feature-unavailable state; mutation constraints emit a field list `ui.form` must accept."
+  },
+  {
+   "targetProject": "quality",
+   "title": "PAP-244 spec-conformance reviewer consumes `spec-diff.json` and blocks on `breaking: true` without a Breaking section",
+   "why": "r4/spec-builder/spec-diff-pr-comment produces the artefact; the reviewer is where it turns into a verdict."
+  },
+  {
+   "targetProject": "app-shell",
+   "title": "PAP-366 exposes `useFlags(ids)` and a server-side evaluator the generated route guard can call; reserve `page.*` flag family",
+   "why": "r4/spec-builder/flags-modules-compile compiles the `flags` section against it."
+  },
+  {
+   "targetProject": "identity",
+   "title": "PAP-64 records flag-gated actions as `conditional` in the permission matrix",
+   "why": "Pages behind flags otherwise appear as denied or granted depending on the fixture tenant."
+  }
+ ]
+}

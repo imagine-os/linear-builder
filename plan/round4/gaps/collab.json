@@ -1,0 +1,1131 @@
+{
+ "project": "collab",
+ "projectName": "In-App Collaboration & Knowledge",
+ "benchmarks": [
+  "Figma comments and FigJam",
+  "Notion docs, comments and suggestions",
+  "Linear inbox, subscribers and notifications",
+  "Slack notifications",
+  "tldraw and Excalidraw",
+  "Miro",
+  "Google Docs suggesting mode",
+  "Loom",
+  "Beamer and Headway changelogs",
+  "LangSmith prompt traces",
+  "Mintlify and Docusaurus (llms.txt, .md mirrors)",
+  "Intercom articles and Pendo tours",
+  "GitHub notifications and CODEOWNERS"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "Comments anchored to entity, element, doc block, canvas node, screenshot",
+   "coveredBy": [
+    "PAP-317",
+    "PAP-318",
+    "PAP-319"
+   ],
+   "status": "covered",
+   "note": "Figma/Notion parity; five anchor kinds."
+  },
+  {
+   "feature": "Mentions of users, agents and entities",
+   "coveredBy": [
+    "PAP-317",
+    "PAP-318"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Resolve, reopen, reactions, edit and soft delete",
+   "coveredBy": [
+    "PAP-317"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Live thread updates and typing indicator",
+   "coveredBy": [
+    "PAP-319"
+   ],
+   "status": "covered",
+   "note": "Electric shape with polling fallback."
+  },
+  {
+   "feature": "Deep links to threads",
+   "coveredBy": [
+    "PAP-319"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Escalate a thread to a Linear issue",
+   "coveredBy": [
+    "PAP-319"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Attachments in comments",
+   "coveredBy": [
+    "PAP-318"
+   ],
+   "status": "covered",
+   "note": "Through PAP-37 signed uploads."
+  },
+  {
+   "feature": "Internal vs customer-visible threads",
+   "coveredBy": [
+    "PAP-317"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Agent comments with visible attribution",
+   "coveredBy": [
+    "PAP-317"
+   ],
+   "status": "covered",
+   "note": "author_kind plus PAP-60 badge."
+  },
+  {
+   "feature": "Follow or watch a record, thread or doc (Linear subscribers)",
+   "coveredBy": [
+    "r4/collab/watchers-subscriptions"
+   ],
+   "status": "gap",
+   "note": "comment.replied has no recipients without watchers."
+  },
+  {
+   "feature": "Staff triage of unanswered customer comments with assignment and SLA",
+   "coveredBy": [
+    "r4/collab/customer-comment-triage"
+   ],
+   "status": "gap",
+   "note": "Intercom-style queue on the views engine."
+  },
+  {
+   "feature": "Reply to comment emails by email",
+   "coveredBy": [
+    "r4/collab/comment-email-replies"
+   ],
+   "status": "gap",
+   "note": "Deferred v0.2."
+  },
+  {
+   "feature": "Suggestion mode / tracked changes on shared docs (Google Docs)",
+   "coveredBy": [
+    "r4/collab/docs-suggestion-mode"
+   ],
+   "status": "gap",
+   "note": "Deferred v0.2."
+  },
+  {
+   "feature": "Activity timeline per record",
+   "coveredBy": [
+    "PAP-333"
+   ],
+   "status": "covered",
+   "note": "Owned by tables."
+  },
+  {
+   "feature": "Comments on PR diffs inside PaperOS",
+   "coveredBy": [
+    "PAP-278"
+   ],
+   "status": "partial",
+   "note": "Forge PR pages are read-only and deferred-risk; PAP-131 anchors not wired to diffs."
+  },
+  {
+   "feature": "Comment export in the tenant archive",
+   "coveredBy": [
+    "PAP-420"
+   ],
+   "status": "covered",
+   "note": "Owned by migration."
+  },
+  {
+   "feature": "Orphaned and unanchored thread handling",
+   "coveredBy": [
+    "PAP-317",
+    "PAP-318"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "UX-flow canvas generated from specs",
+   "coveredBy": [
+    "PAP-320",
+    "PAP-123"
+   ],
+   "status": "covered",
+   "note": "React Flow per PAP-127."
+  },
+  {
+   "feature": "Collaborative notes, regions, position overrides, undo",
+   "coveredBy": [
+    "PAP-321"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Filters, search, minimap, deep links, PNG/SVG export",
+   "coveredBy": [
+    "PAP-322"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Comments on canvas nodes",
+   "coveredBy": [
+    "PAP-322",
+    "PAP-317"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Presence cursors on the canvas",
+   "coveredBy": [
+    "PAP-321",
+    "PAP-141"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Auto layout (ELK) and stale detection",
+   "coveredBy": [
+    "PAP-123",
+    "PAP-322"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Diff mode: what a PR changed in the flow",
+   "coveredBy": [
+    "r4/collab/canvas-diff-embeds"
+   ],
+   "status": "gap",
+   "note": "diffGraphs exists in PAP-123; no rendering."
+  },
+  {
+   "feature": "Embed a subgraph in docs and record pages; node thumbnails",
+   "coveredBy": [
+    "r4/collab/canvas-diff-embeds"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Entity relation edges (ERD) on the canvas",
+   "coveredBy": [
+    "PAP-123"
+   ],
+   "status": "partial",
+   "note": "Only reads/writes edges; amendment to PAP-123 proposed."
+  },
+  {
+   "feature": "Freehand drawing, pen",
+   "coveredBy": [
+    "PAP-157"
+   ],
+   "status": "covered",
+   "note": "Deferred in input."
+  },
+  {
+   "feature": "Freeform whiteboard (FigJam/Miro templates)",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "Out of scope by design; canvas is spec-derived. Not issued."
+  },
+  {
+   "feature": "Agent org chart on the canvas",
+   "coveredBy": [
+    "PAP-113"
+   ],
+   "status": "covered",
+   "note": "Owned by agents."
+  },
+  {
+   "feature": "Repo MDX docs rendered in-app with sidebar, TOC, history",
+   "coveredBy": [
+    "PAP-128"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Tenant-authored runtime docs (Notion-style)",
+   "coveredBy": [
+    "PAP-379"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Audience-filtered public docs",
+   "coveredBy": [
+    "PAP-128"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Docs search and unified search",
+   "coveredBy": [
+    "PAP-138",
+    "PAP-39"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Block-level comments on docs",
+   "coveredBy": [
+    "PAP-128",
+    "PAP-317"
+   ],
+   "status": "covered",
+   "note": "Anchor grammar collision between repo and runtime docs; amendments to PAP-379 and PAP-474."
+  },
+  {
+   "feature": "Contextual help panel, product tour, shortcut overlay",
+   "coveredBy": [
+    "PAP-380"
+   ],
+   "status": "covered",
+   "note": "Needs spec schema keys; see spec-builder v1.1 issue."
+  },
+  {
+   "feature": "Agent-readable docs: llms.txt, raw Markdown, CLI, MCP tool",
+   "coveredBy": [
+    "r4/collab/agent-readable-docs"
+   ],
+   "status": "gap",
+   "note": "Mintlify/Docusaurus parity for cold sessions."
+  },
+  {
+   "feature": "Reference hub aggregating OpenAPI, data dictionary, contracts, components, ADRs",
+   "coveredBy": [
+    "r4/collab/docs-reference-hub"
+   ],
+   "status": "gap",
+   "note": "Sources exist in five projects; no single entry."
+  },
+  {
+   "feature": "Doc templates, owner and review-date lint, stale-page nudges",
+   "coveredBy": [
+    "r4/collab/docs-authoring-kit"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Was-this-helpful feedback and docs health",
+   "coveredBy": [
+    "r4/collab/docs-authoring-kit"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Q&A over the knowledge base with citations",
+   "coveredBy": [
+    "r4/collab/ask-paperos"
+   ],
+   "status": "gap",
+   "note": "Deferred v0.2."
+  },
+  {
+   "feature": "Docs localisation",
+   "coveredBy": [
+    "r4/collab/docs-i18n"
+   ],
+   "status": "gap",
+   "note": "Deferred v0.2."
+  },
+  {
+   "feature": "Docs lint (links, frontmatter, includes)",
+   "coveredBy": [
+    "PAP-128"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Mermaid and live refs (IssueRef, SpecRef, FileRef)",
+   "coveredBy": [
+    "PAP-128"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Print or PDF export of docs",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "Browser print stylesheet from PAP-235 (deferred) suffices; not issued."
+  },
+  {
+   "feature": "Public docs SEO (sitemap, meta)",
+   "coveredBy": [
+    "PAP-128"
+   ],
+   "status": "partial",
+   "note": "Handled by spec-builder public metadata issue for spec pages; docs sitemap not issued."
+  },
+  {
+   "feature": "Docs available offline in Tauri",
+   "coveredBy": [
+    "PAP-128"
+   ],
+   "status": "covered",
+   "note": "import.meta.glob bundles docs."
+  },
+  {
+   "feature": "Version history for runtime docs with restore",
+   "coveredBy": [
+    "PAP-379"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Notion import into docs",
+   "coveredBy": [
+    "PAP-203",
+    "PAP-418"
+   ],
+   "status": "covered",
+   "note": "Deferred in migration."
+  },
+  {
+   "feature": "Changelog from conventional commits and PR summaries",
+   "coveredBy": [
+    "PAP-133"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "What's new popover with unread badge; public changelog",
+   "coveredBy": [
+    "PAP-133"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Per-tenant, per-audience changelog entries",
+   "coveredBy": [
+    "PAP-133"
+   ],
+   "status": "partial",
+   "note": "Not filtered by enabled modules; amendment."
+  },
+  {
+   "feature": "Changelog notification and email",
+   "coveredBy": [
+    "PAP-133",
+    "r4/collab/notification-core"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "In-app announcements and maintenance banners (Beamer/Headway)",
+   "coveredBy": [
+    "r4/collab/announcements-banners"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Public roadmap page",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "Not issued; v0.2 candidate."
+  },
+  {
+   "feature": "Content agent drafting posts from changelog",
+   "coveredBy": [
+    "PAP-192"
+   ],
+   "status": "covered",
+   "note": "Growth, deferred."
+  },
+  {
+   "feature": "Prompt/response/tool-call store with redaction and cost",
+   "coveredBy": [
+    "PAP-129",
+    "PAP-107"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Session browser, replay, permalinks, golden flags",
+   "coveredBy": [
+    "PAP-135"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Per-issue build journals in the docs engine",
+   "coveredBy": [
+    "r4/collab/build-journals"
+   ],
+   "status": "gap",
+   "note": "The brief's \"logged properly in the documentation system\"."
+  },
+  {
+   "feature": "Prompt log search and session summaries",
+   "coveredBy": [
+    "PAP-138"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Cost metering and daily burn report",
+   "coveredBy": [
+    "PAP-98",
+    "PAP-129"
+   ],
+   "status": "covered",
+   "note": "pm-linear."
+  },
+  {
+   "feature": "Session observability (heartbeats, OTel)",
+   "coveredBy": [
+    "PAP-288"
+   ],
+   "status": "covered",
+   "note": "agents."
+  },
+  {
+   "feature": "Compare two sessions side by side (LangSmith)",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "Not issued; PAP-110 evals cover regressions."
+  },
+  {
+   "feature": "Live tail of running sessions",
+   "coveredBy": [
+    "PAP-135"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Retention and export of prompt events",
+   "coveredBy": [
+    "PAP-129"
+   ],
+   "status": "covered",
+   "note": "180-day MinIO archive."
+  },
+  {
+   "feature": "Rules, skills and agent definitions browsable with history and propose-edit",
+   "coveredBy": [
+    "PAP-134"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Skill usage analytics from the prompt log",
+   "coveredBy": [
+    "PAP-134"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Character memory pages",
+   "coveredBy": [
+    "PAP-109"
+   ],
+   "status": "covered",
+   "note": "agents; reads journals."
+  },
+  {
+   "feature": "Notification kinds registry, worker, in-app and email channels",
+   "coveredBy": [
+    "r4/collab/notification-core"
+   ],
+   "status": "gap",
+   "note": "PAP-136 WP1 had no child; critical path for PAP-94, PAP-88, PAP-89."
+  },
+  {
+   "feature": "Inbox, bell badge, preferences matrix",
+   "coveredBy": [
+    "PAP-323"
+   ],
+   "status": "covered",
+   "note": "Snooze proposed as amendment."
+  },
+  {
+   "feature": "Digests, quiet hours, burst collapse",
+   "coveredBy": [
+    "PAP-324"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Slack channel",
+   "coveredBy": [
+    "PAP-325"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Web and mobile push",
+   "coveredBy": [
+    "PAP-381"
+   ],
+   "status": "covered",
+   "note": "realtime."
+  },
+  {
+   "feature": "Tenant outbound webhooks as a channel",
+   "coveredBy": [
+    "PAP-222"
+   ],
+   "status": "partial",
+   "note": "identity issue is deferred; no channel adapter. Not issued."
+  },
+  {
+   "feature": "Branded email templates",
+   "coveredBy": [
+    "PAP-235",
+    "PAP-370"
+   ],
+   "status": "partial",
+   "note": "PAP-235 deferred; core ships a plain fallback (amendment)."
+  },
+  {
+   "feature": "Unsubscribe and suppression",
+   "coveredBy": [
+    "r4/collab/notification-core"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Unified search with facets and audience isolation",
+   "coveredBy": [
+    "PAP-138"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Screenshot and video annotation to Linear issues",
+   "coveredBy": [
+    "PAP-137"
+   ],
+   "status": "covered",
+   "note": "Deferred."
+  },
+  {
+   "feature": "Async video walkthroughs (Loom)",
+   "coveredBy": [
+    "PAP-83"
+   ],
+   "status": "partial",
+   "note": "Only CI-recorded flows; user recordings not issued (v0.2)."
+  },
+  {
+   "feature": "Contract package, conformance suite, kernel wiring",
+   "coveredBy": [
+    "PAP-474",
+    "PAP-477",
+    "PAP-480"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Deterministic demo seeds for every collab surface",
+   "coveredBy": [
+    "r4/collab/collab-demo-seeds"
+   ],
+   "status": "gap",
+   "note": "Six DoDs assume seeds nobody owns."
+  },
+  {
+   "feature": "Library decision for canvas and editor",
+   "coveredBy": [
+    "PAP-127"
+   ],
+   "status": "covered",
+   "note": "Ready for Claude."
+  },
+  {
+   "feature": "Decision log with supersession graph",
+   "coveredBy": [
+    "PAP-130"
+   ],
+   "status": "covered",
+   "note": ""
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/collab/notification-core",
+   "title": "Notification core: kinds registry, event-bus subscriber worker, preference resolution, in-app and email channels",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "Comments and canvas",
+   "dueDate": "2026-09-29",
+   "parent": "PAP-136",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-43",
+    "PAP-303",
+    "PAP-302"
+   ],
+   "blocks": [
+    "PAP-323",
+    "PAP-324",
+    "PAP-325"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nShip work package 1 of PAP-136, the only package without a child issue: tables, kinds registry, worker and the first two channels that turn domain events into notification rows. `issue.needs_justin` (PAP-94), `review.gate_failed` and `release.candidate` (PAP-88, PAP-89) deliver through this before comments exist, so it depends on jobs and the event bus only, never on PAP-131.\n\n**Scope**\n\nIn: `packages/db/src/schema/notifications.ts` (`notification`, `notification_preference`, `notification_delivery` per Contracts §2, `ActorRef` on the row); `packages/collab/notifications/{kinds,worker,channels,preferences}.ts`; `InAppChannel`, `EmailChannel`; ten seed kinds; `pnpm notify:demo`; core sections of `docs/collab/notifications.md`. Out: inbox UI (PAP-323), digests and quiet hours (PAP-324), Slack (PAP-325), push (PAP-381), marketing email (PAP-191).\n\n**Spec**\n\n* Kinds registry: `defineKind({ id, audiences, defaultChannels, template, batch? })` for `issue.needs_justin`, `review.gate_failed`, `review.ready`, `release.candidate`, `changelog.published`, `agent.blocked`, `import.finished`, `comment.mentioned`, `comment.replied`, `thread.resolved`; a kind naming an unregistered topic fails at boot (PAP-303).\n* Worker: pg-boss job `notifications.dispatch` (PAP-43) subscribed through `subscribe()` from `@paperos/core/events`; expands recipients (cap 500), drops the actor, marks recipients failing `can()` on the source `suppressed`, writes rows idempotent on `(kind, source, recipient, bucket)`, enqueues one `notification_delivery` per channel with 3 retries and backoff.\n* `issue.needs_justin` applies the PAP-94 batching rule (`batch: { window: '15m', max: 5 }`).\n* Channels: `Channel { id, send(n, recipient) -> DeliveryResult }`; `InAppChannel` writes the row and emits `notification.sent`; `EmailChannel` uses `packages/email` (PAP-370) when merged, else Resend with allowlist and Mailpit; plain-HTML fallback template because PAP-235 is Deferred; per-kind unsubscribe JWT at `/n/unsubscribe/:token` (24 h, single use).\n* Preference resolution: per-tenant row, global row, kind default; `resolvePreferences(userId, tenantId, kind) -> { channels[], digest, quietHours }`, columns PAP-324 extends.\n* Budget: in-app row within 2 s, email within 60 s. RLS: recipients read own rows, `owner|admin` read tenant rows, agents only rows addressed to them.\n\n**Interface contract**\n\nProvides: `Notification`, `NotificationKind`, `defineKind`, `registerChannel`, `Channel`, `notify`, `resolvePreferences`, tables above, topic `notification.sent` v1, unsubscribe route, `pnpm notify:demo`; exported as `NotificationPort` in `@paperos/contract-collab` (PAP-474). Consumes: `subscribe()` (PAP-303), `defineJob` (PAP-43), `ActorRef` (PAP-302), audiences (PAP-55), `can()` (PAP-59), email package (PAP-370, soft), `SecretStore` (PAP-17). Consumed by: PAP-323, PAP-324, PAP-325, PAP-94, PAP-88, PAP-89, PAP-97, PAP-133, PAP-199.\n\n**Definition of done**\n\n* Migration applied on staging; RLS harness (PAP-34) shows user B never reads user A's rows.\n* A `review.gate_failed` event produces an in-app row within 2 s and a Mailpit email within 60 s in CI; five `issue.needs_justin` events inside 15 minutes produce one batched row.\n* Unsubscribe link suppresses the next email for that kind only; `docs/collab/notifications.md` explains how to add a kind; CHANGELOG entry; Linear comment with delivery logs.\n\n**Test plan**\n\n* Unit: kind validation, recipient cap, actor exclusion, suppression on `can()` denial, idempotency on retry, preference fallback order, unsubscribe JWT expiry and single use, template snapshots.\n* Integration (Postgres, pg-boss, Mailpit): emit each kind and assert row and email; provider 500 retries three times then `failed`; `callAs(userB)` cannot list userA's rows; boot with an unregistered topic fails.\n* E2E: bell count through PAP-323 once merged; until then `pnpm notify:demo` plus an oRPC `notifications.list` smoke.\n\n**Demo**\n\nRun `pnpm notify:demo review.gate_failed --to justin`, see the Mailpit email and the `notifications.list` row; fire five `issue.needs_justin` events and see one batched row. Under two minutes.\n\n**Edge cases**\n\n* Provider outage: deliveries queue up to 24 h, then `failed` with an ops alert (PAP-40).\n* Source deleted before delivery: row kept with `sourceMissing: true`.\n* Recipient in two tenants: separate rows and preference lookups.\n* Outbox replay (at-least-once): second write is a no-op by idempotency key.\n* Kind registered by a disabled module (PAP-266): worker skips with a debug log.\n\n**Dependencies**\n\nHard: PAP-43, PAP-303, PAP-302. Soft: PAP-370 (Resend fallback), PAP-55, PAP-59, PAP-17, PAP-240. Blocks PAP-323, PAP-324, PAP-325; consumed by PAP-94, PAP-88, PAP-89, PAP-97.\n\n**Agent**\n\nBuilder: Forge (Ops Runner) with Nova on the kinds registry. Reviewer: Sentinel (Security Auditor: RLS, unsubscribe tokens, suppression).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/collab/watchers-subscriptions",
+   "title": "Follow model: watch records, threads and docs with auto-follow rules and watcher fan-out for replies and record changes",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Knowledge surfaced everywhere",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "r4/collab/notification-core",
+    "PAP-317"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nLinear, Notion and GitHub notify subscribers, not just mentioned people. PaperOS has mentions (PAP-317) but no way to follow an invoice, a thread or a doc, so `comment.replied` and `record.updated` have nobody to reach. Add a watcher table, auto-follow rules and a recipient expander the notification core uses.\n\n**Scope**\n\nIn: `watcher(tenant_id, user_id, entity_type, entity_id, reason: author|mention|assigned|manual, muted, created_at)` with RLS; `watchers.follow|unfollow|list` oRPC; `expandWatchers(entityRef)` hook registered with `r4/collab/notification-core` recipient expansion; auto-follow on thread create, mention and assignment; `FollowButton` for record headers and doc pages (`record.panel.tabs` slot and PAP-128 footer). Out: digest rules (PAP-324), presence (PAP-141).\n\n**Spec**\n\n* Auto-follow: thread author and every mentioned user follow the thread; the record's `owner` field (PAP-361 entity grammar) follows the record; `muted: true` overrides auto-follow and survives re-mention.\n* `comment.replied` and `thread.resolved` recipients = thread watchers minus actor; `record.updated` (PAP-38 audit trigger topic) recipients = record watchers, collapsed by PAP-324's burst rule.\n* Customers may follow only entities they can read; `can()` re-checked at fan-out so a revoked customer is `suppressed`.\n* Watcher count shown on `FollowButton`; unfollow from any notification row (`notifications.unfollowSource`).\n* Cap 200 watchers per entity; beyond that, only `manual` watchers are notified and a warning is logged.\n\n**Interface contract**\n\nProvides: `watcher` table, `watchers.*` procedures, `expandWatchers()`, `useWatch(entityRef)`, `FollowButton`. Consumes: recipient expansion hook and `Notification` (`r4/collab/notification-core`), `comment_thread` and events (PAP-317), `EntityRef` (PAP-302), `can()` (PAP-59), slot `record.panel.tabs` (PAP-438), audit topic `record.updated` (PAP-38). Consumed by: PAP-323 (unfollow action), PAP-333 record detail header, PAP-197 support inbox.\n\n**Definition of done**\n\n* Reply to a thread notifies the author and a manual follower, not the replier; unfollow stops it.\n* Screenshots of `FollowButton` states at 375 and 1280 in light and dark; axe clean.\n* `docs/collab/notifications.md` gains a Following section; CHANGELOG entry; Linear comment.\n\n**Test plan**\n\n* Unit: auto-follow rules, mute precedence, cap behaviour, recipient set equality.\n* Integration: RLS `callAs` matrix for follow and list; revoked customer suppressed at fan-out.\n* E2E (Playwright, two contexts): B follows a record, A comments, B's bell increments (PAP-323) within 2 s; B mutes, A comments again, nothing arrives.\n\n**Demo**\n\nOpen an invoice, click Follow, comment on it from another browser and watch the first browser's bell; unfollow and repeat. Under two minutes.\n\n**Edge cases**\n\n* Entity deleted: watchers rows soft-deleted with the entity's `deleted_at` cascade job.\n* User removed from tenant: watchers purged by the PAP-58 membership removal handler.\n* Thread with 50 mentions: 50 auto-follows, one notification each, no duplicates.\n\n**Dependencies**\n\nHard: `r4/collab/notification-core`, PAP-317. Soft: PAP-38, PAP-323, PAP-361, PAP-438.\n\n**Agent**\n\nBuilder: Nova. Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/collab/agent-readable-docs",
+   "title": "Agent-readable docs: `llms.txt`, raw Markdown endpoint per page, `pnpm docs search|get` CLI and a docs MCP tool",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Knowledge surfaced everywhere",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-128"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nThe docs engine renders MDX for humans; a cold Claude session needs the same knowledge as plain text without booting a browser. Mintlify and Docusaurus ship `llms.txt` and `.md` mirrors for exactly this reason. Emit them at build, add a CLI and an MCP tool so sessions and reviewers read docs the same way the UI does.\n\n**Scope**\n\nIn: `pnpm docs:llms` in `packages/collab/docs/` writing `docs/.generated/llms.txt` (index with one line per published doc) and `llms-full.txt` (concatenated, audience `developer|agent` only); route `/_public/docs/$.md` and `/_app/docs/$.md` returning the compiled Markdown (MDX components rendered to text by `renderMdx` text mode); CLI `pnpm docs search <q> [--kind doc|adr|rule]` and `pnpm docs get <slug>`; MCP server `packages/agents/mcp/docs/` (stdio, `@modelcontextprotocol/sdk` 1.x) exposing `search`, `get`, `list` with `scope: read`, catalogued in PAP-210 `mcp-catalog.yaml`. Out: Q&A answers (`r4/collab/ask-paperos`), external docs.\n\n**Spec**\n\n* `llms.txt` follows the llmstxt.org shape: H1 title, blockquote summary, sections per docs folder with `[title](url): description`; regenerated by `pnpm docs:index`; under 200 KB or split by folder.\n* `.md` route strips `Callout`, `Steps`, `Tabs`, `FileRef` (inlined), `Mermaid` (fenced ```mermaid) to plain Markdown; audience rules identical to the HTML routes; `Cache-Control: max-age=300`.\n* CLI reads `docs/.generated/sidebar.json` and, when a database is configured, `search.query` from PAP-39 with `kinds: ['doc','adr','rule_skill']`; offline fallback greps the generated index.\n* MCP tool descriptions are one sentence each; tool output capped at 20 KB per call with a `truncated` flag and a `next` cursor.\n* The session playbook (PAP-92) and CLAUDE.md gain one line: `pnpm docs search` before asking a human.\n\n**Interface contract**\n\nProvides: `llms.txt`, `llms-full.txt`, `.md` routes, `pnpm docs search|get`, MCP server `@paperos/mcp-docs` with tools `mcp__paperos-docs__search|get|list`, catalog entry. Consumes: `DocEntry`, `renderMdx` text mode and `sidebar.json` (PAP-128), `search.query` (PAP-39, PAP-138 soft), MCP catalog schema (PAP-210), agent skill lint (PAP-105 soft). Consumed by: PAP-109 memory loader, PAP-92 playbook, review harness PAP-243 (context assembly), Scout scans (PAP-218).\n\n**Definition of done**\n\n* `llms.txt` and `.md` mirrors generated in CI for the template docs; a staff-only doc is absent from the public `llms.txt`.\n* `pnpm docs search 'quality gates'` returns the gate doc first; MCP server lists three tools in a fresh Claude Code session (`/mcp` screenshot).\n* `docs/collab/agent-docs.md`; CHANGELOG entry; comment on PAP-210 with the catalog entry.\n\n**Test plan**\n\n* Unit: MDX to Markdown conversion fixtures for every component, audience filtering of `llms.txt`, output cap and cursor.\n* Integration: `.md` route via `callAs(customer)` for a staff doc returns 404; MCP server tools tested with the SDK in-memory transport.\n* E2E: none (no UI); CLI smoke in Gate 1.\n\n**Demo**\n\nRun `pnpm docs search hocuspocus`, open the hit with `pnpm docs get`, then curl `/_public/docs/getting-started.md` and diff it against the HTML page's text. Under one minute.\n\n**Edge cases**\n\n* Doc with only Mermaid content: fenced block kept, summary generated from the title.\n* 10k-word doc: `.md` served whole; `llms-full.txt` includes the first 2k words plus a link.\n* Search backend down: CLI falls back to the static index with a notice.\n\n**Dependencies**\n\nHard: PAP-128. Soft: PAP-39, PAP-138, PAP-210, PAP-105, PAP-92.\n\n**Agent**\n\nBuilder: Quill (Prompt Logger) with Forge on the MCP server. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/collab/build-journals",
+   "title": "Build journals: generate a docs page per issue from the prompt log with summary, decisions, files touched, cost and replay links",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent",
+    "Staff"
+   ],
+   "milestone": "Knowledge surfaced everywhere",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-129",
+    "PAP-128"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nJustin asked for every prompt and response to be logged 'properly in the documentation system'. PAP-129 stores them in Postgres and PAP-135 replays them, but nothing turns a finished session into a page a human or the next agent reads. Generate one journal page per issue in the docs engine, so the docs hold the memory of how each part of PaperOS was built.\n\n**Scope**\n\nIn: job `journal.build` in `packages/collab/journal/` triggered by `agent.session.finished` and by PR merge (PAP-97); writer producing `docs/journal/<issue-key>.mdx` (committed on the issue's branch by the finishing session, or to `main` by the merge workflow for orphan sessions); template with frontmatter (`issue`, `sessions[]`, `character`, `model`, `costUsd`, `prUrl`, `status`); index page `/_app/docs/journal` with filters; `SessionLink` (PAP-135) embeds. Out: the 200-word search summary (PAP-138 writes it; reused here), character memory curation (PAP-109).\n\n**Spec**\n\n* Page sections: Summary (from `prompt_session.summary`, generated once by a Claude call with the Changelog Scribe prompt when absent), Decisions (assistant messages matching `decid|chose|because` heuristics plus ADR links from PAP-130 created in the session), Files touched (from `Edit|Write` tool inputs, grouped by package), Commands run (`Bash` tool inputs, deduplicated), Blockers and handoffs (PAP-108 comment format), Cost and tokens (from `promptLog.stats`), Replay (`?seq=` permalinks to the first tool error and final message).\n* Redaction: journal content passes the PAP-129 second-pass redactor again; `[REDACTED:kind]` markers stay; tool outputs are never included, only inputs.\n* Multiple sessions per issue append dated entries; a killed or failed session writes a stub with the failure reason.\n* Journal pages carry `audience: [developer, agent]` and register as search kind `doc` with tag `journal` (PAP-138); size cap 40 KB per page with a 'see replay' link beyond it.\n* Regeneration is idempotent by session id set; a manual edit below `<!-- journal:manual -->` survives regeneration.\n\n**Interface contract**\n\nProvides: `docs/journal/*.mdx`, `buildJournal(issueKey): MdxDocument`, job `journal.build`, `docs.journal.rebuild` procedure for staff.admin, MDX component `JournalRef`. Consumes: `prompt_session`, `prompt_event`, `promptLog.stats` (PAP-129), `renderMdx` and docs routes (PAP-128), `SessionLink` (PAP-135), `adr-index.json` (PAP-130), PR and merge events (PAP-97), Forgejo client for the commit (PAP-276, soft; PAP-134's wrapper otherwise), jobs (PAP-43). Consumed by: PAP-109 (memory loader reads Decisions), PAP-89 release digest (links), PAP-112 handbook.\n\n**Definition of done**\n\n* Journals generated for the 20-turn fixture session and for a real merged issue on staging; page renders at 375 and 1280 with TOC; redaction markers preserved.\n* Index lists journals filterable by character and project; search finds a journal by issue key.\n* `docs/collab/journals.md`; CHANGELOG entry; Linear comment with two rendered journals.\n\n**Test plan**\n\n* Unit: section extraction from fixture events (files, commands, decisions), idempotent regeneration, manual-section preservation, size cap.\n* Integration: job run against seeded prompt log writes the file through a mocked Forgejo API; redactor invoked (spy).\n* E2E (Playwright): open `/_app/docs/journal`, filter by character, open a page, click a replay link and land at `?seq=` in PAP-135.\n\n**Demo**\n\nRun `pnpm journal:build PAP-129` against the seeded store, open `/_app/docs/journal/PAP-129`, read Decisions, click the replay link. Under two minutes.\n\n**Edge cases**\n\n* Session with 10k events: extraction streams by `seq` chunks; page stays under the cap.\n* Summary generation over budget: page written without Summary and flagged `needs_summary`; nightly retry.\n* Issue renamed in Linear: file keyed by identifier, title refreshed from PAP-101 mirror when available.\n* Sub-agent sessions (`parent_session_id`): folded into the parent's journal as a nested entry.\n\n**Dependencies**\n\nHard: PAP-129, PAP-128. Soft: PAP-135, PAP-130, PAP-97, PAP-107 (real sessions), PAP-276, PAP-43, PAP-138.\n\n**Agent**\n\nBuilder: Quill (Prompt Logger). Reviewer: Sentinel (Security Auditor for redaction) and Atlas.\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/collab/collab-demo-seeds",
+   "title": "Collab demo seeds: deterministic fixtures for comments, notifications, prompt sessions, docs and changelog registered with `/__test/seed`",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Comments and canvas",
+   "dueDate": "2026-09-29",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Haiku 4.5",
+   "modelId": "claude-haiku-4-5-20251001",
+   "effort": "low",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-240",
+    "PAP-317",
+    "PAP-129"
+   ],
+   "blocks": [
+    "PAP-135",
+    "PAP-138"
+   ],
+   "description": "**Model / Effort:** Haiku 4.5 (`claude-haiku-4-5-20251001`) / low — Infra S\n\n**Goal**\n\nSix collab specs assume seeded data nobody owns: 50 prompt sessions and a 10k-event session (PAP-135), a 500-doc and 2k-comment corpus (PAP-138), 50 pins on one page (PAP-318), a mention flow between two users (PAP-323), a release with rewritten entries (PAP-133). Ship one deterministic fixture set through PAP-240 so every Gate 3 run, Playwright test and demo starts from the same world.\n\n**Scope**\n\nIn: `packages/collab/fixtures/` generators with a fixed seed (`seedrandom`), fixture sets `collab-basic`, `collab-large`, `prompt-log-20-turns`, `prompt-log-10k`, `search-corpus`; registration with `/__test/seed?set=` (PAP-240); JSON snapshots committed for the small sets; `docs/collab/fixtures.md`. Out: production seeds, business data (PAP-240 owns audiences and tenants).\n\n**Spec**\n\n* `collab-basic`: two staff users and one customer from PAP-240's audience users, one commentable sample record, 12 threads (8 open, 4 resolved, 3 `internal`), one thread with a Linear issue id, 15 notifications across five kinds, 3 changelog versions with customer and staff entries, 20 docs frontmatter-valid under `docs/fixtures/` (excluded from production sidebar).\n* `collab-large`: 60 threads with 50 pins on the sample page for clustering tests, 300 notifications for the 99+ badge, 2k comments and 500 docs for PAP-138's benchmark (generated, not committed).\n* `prompt-log-20-turns`: the NDJSON fixture PAP-107 and PAP-129 name, with two redacted events and one `seq` gap; `prompt-log-10k`: 50 sessions, one with 10k events, deterministic costs from a fixed price epoch.\n* Every generator is idempotent per set and tenant; reset removes only fixture rows (tagged `fixture_set` column or metadata key).\n* Total seed time under 10 s for the small sets, under 90 s for `collab-large` on the CI runner.\n\n**Interface contract**\n\nProvides: fixture set names above, `seedCollab(set, tenantId)`, committed JSON snapshots, `fixture_set` tagging convention. Consumes: `/__test/seed` registry and audience users (PAP-240), tables from PAP-317, PAP-129, `r4/collab/notification-core`, PAP-133 (soft; skipped when absent), docs loader (PAP-128). Consumed by: PAP-135, PAP-138, PAP-318, PAP-323, PAP-133, PAP-137, PAP-477 real-adapter run, Gate 3 (PAP-247).\n\n**Definition of done**\n\n* Sets register and seed on the compose stack; snapshots committed; reset leaves non-fixture rows untouched (test).\n* PAP-135 and PAP-138 test plans run against these sets without private seeds; timing table in the Linear comment.\n* `docs/collab/fixtures.md`; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: determinism (two runs, equal snapshots), idempotency, reset scope.\n* Integration: seed each set on Postgres and assert counts; RLS: fixtures land in the requested tenant only.\n* E2E: none; consumed by other suites.\n\n**Demo**\n\nCall `/__test/seed?set=collab-basic`, open the sample record and see 12 threads and 50 pins after `collab-large`; call reset and see them gone. Under one minute.\n\n**Edge cases**\n\n* A dependent table missing (module disabled): the set skips that generator with a listed warning, never fails.\n* Seeding twice: no duplicate rows (idempotency keys).\n* Fixture docs must never appear in `/_public/docs`: `status: draft` and folder excluded by `_meta.yaml`.\n\n**Dependencies**\n\nHard: PAP-240, PAP-317, PAP-129. Soft: `r4/collab/notification-core`, PAP-133, PAP-128. Blocks PAP-135 and PAP-138 test plans (they may start against the PR branch under the branch-start rule).\n\n**Agent**\n\nBuilder: Forge (Schema Wright). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/collab/announcements-banners",
+   "title": "In-app announcements and maintenance banners: staff-authored, audience-targeted, scheduled, dismissible, flag-aware",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Knowledge surfaced everywhere",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "r4/collab/notification-core",
+    "PAP-55"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nBeamer and Headway pair the changelog with announcements: a banner or modal that staff write, target at an audience and schedule. PAP-133 generates changelogs from commits; nothing lets a tenant admin say 'maintenance Sunday 02:00' or 'new billing page for Pro customers'. Add a small announcement object rendered in the shell and delivered as a notification kind.\n\n**Scope**\n\nIn: `announcement(id, tenant_id?, title, body_md, kind: banner|modal|toast, audiences[], starts_at, ends_at, dismissible, flag?, link?, created_by)` and `announcement_seen(user_id, announcement_id, seen_at)`; oRPC `announcements.list|create|update|archive|dismiss`; `AnnouncementBar` and `AnnouncementModal` filled into `shell.header.actions` and a new `shell.banner` slot (declared with PAP-438); settings page `/_app/settings/announcements` (admin); kind `announcement.published` in the notification core. Out: marketing email (PAP-191), changelog entries (PAP-133), status page.\n\n**Spec**\n\n* Platform announcements (`tenant_id null`) reach every tenant; tenant announcements are scoped by RLS; audiences resolve through PAP-55 segments.\n* Optional `flag` shows the announcement only when a PAP-366 flag is on for the viewer (ties 'new feature' banners to rollouts).\n* Scheduling by `starts_at|ends_at` in the tenant timezone; a job (PAP-43) emits `announcement.published` at start so the notification core fans out once.\n* Dismissal per user; non-dismissible maintenance banners reappear each session; at most one banner and one modal visible at a time (priority by `starts_at`).\n* Body is Markdown rendered by `renderMdx` with links only (no components); 500 characters for banners, 2k for modals.\n\n**Interface contract**\n\nProvides: tables, procedures, `AnnouncementBar`, `AnnouncementModal`, slot `shell.banner` props schema, kind `announcement.published`. Consumes: notification core (`defineKind`), audiences (PAP-55), `can()` (PAP-59), flags (PAP-366, soft), slots (PAP-438), `renderMdx` (PAP-128), jobs (PAP-43), shells (PAP-62, PAP-63). Consumed by: PAP-88 release train (maintenance notice), PAP-133 (link from What's new), PAP-195 in-app targeting.\n\n**Definition of done**\n\n* Admin schedules a customer-only banner; a staff user never sees it; a customer sees it at start time and can dismiss it; screenshots at 375 and 1280 in light and dark; axe clean.\n* `docs/collab/announcements.md`; CHANGELOG entry; Linear comment.\n\n**Test plan**\n\n* Unit: audience resolution, schedule window with timezone, dismissal precedence, one-visible rule.\n* Integration: RLS `callAs` matrix; `/__test` clock advances past `starts_at` and the kind fires once.\n* E2E (Playwright): create, see as customer, dismiss, reload, absent; maintenance banner not dismissible.\n\n**Demo**\n\nCreate a 'Maintenance tonight' banner for all audiences and a 'New invoices page' modal for `customer.pro`, sign in as each audience and see the right one. Under two minutes.\n\n**Edge cases**\n\n* Overlapping banners: newest `starts_at` wins; the other waits.\n* Announcement edited after publish: no second notification; banner updates live via shape or on reload.\n* Flag removed: announcement hidden and flagged `stale` in settings.\n\n**Dependencies**\n\nHard: `r4/collab/notification-core`, PAP-55. Soft: PAP-366, PAP-438, PAP-43, PAP-62, PAP-63.\n\n**Agent**\n\nBuilder: Nova with Iris on the bar and modal. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/collab/canvas-diff-embeds",
+   "title": "Canvas diff mode and embeds: highlight graph changes between two spec hashes, `<FlowGraphEmbed>` for docs and record pages, thumbnail job",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Knowledge surfaced everywhere",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-322",
+    "PAP-123"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nPAP-123 already computes `diffGraphs()` and PAP-322 makes the canvas usable, but nobody can see what a PR changed in the UX flow, and the map lives only at `/_app/dev/canvas`. Add a diff mode fed by two spec hashes or git refs, and an embeddable read-only subgraph for docs pages, record detail pages and the release digest.\n\n**Scope**\n\nIn: `packages/collab/canvas/diff/` with `DiffLayer` (added green, removed red dashed, changed amber, unchanged dimmed) and a toolbar toggle `Compare with: main | last release | <ref>`; oRPC `canvas.graph.diff({ appId, from, to })` reading `flow-graph.json` at two git refs through the Forgejo client; MDX and React `<FlowGraphEmbed pageId depth={1} />` rendering `subgraph()` read-only with an 'open in canvas' link; job `canvas.thumbnails` rendering PNG per page node with `html-to-image` in headless Chromium for docs and Linear comments. Out: editing in embeds, freehand (PAP-157), org chart (PAP-113).\n\n**Spec**\n\n* Diff input is two `FlowGraph` documents; node identity by stable id; changed = label, route, audiences or edge set differs; summary chips (`+3 nodes, -1 edge, 2 changed`) match PAP-123's `GraphDiff` output byte for byte.\n* `?compare=<ref>` deep link (extends PAP-322's URL state); Gate 3 captures the diff view for PRs touching `specs/` and PAP-97 links it in the status comment.\n* Embed renders without Yjs (no overlay), fits to 320 px minimum, lazy loads `@xyflow/react`; maximum 40 nodes, otherwise 'too many to embed' with a link.\n* Thumbnails 480x300, regenerated when `specHash` changes, stored through PAP-37 with a `thumbnail` field written back into `flow-graph.json` meta for PAP-320's `PageNode`.\n* Docs pages can pin an embed with `<FlowGraphEmbed pageId=\"customer-invoices\" />`; record detail pages (PAP-361) get one under the header when the entity has a page node.\n\n**Interface contract**\n\nProvides: `canvas.graph.diff`, `DiffLayer`, `<FlowGraphEmbed>` (React and MDX), job `canvas.thumbnails`, `?compare=` param. Consumes: `diffGraphs`, `subgraph`, `FlowGraph` (PAP-123), `PaperCanvas` read-only and node types (PAP-320, PAP-322), Forgejo client (PAP-276, soft), files (PAP-37), jobs (PAP-43), `renderMdx` component registration (PAP-128). Consumed by: PAP-97 status comment, PAP-89 digest, PAP-361 detail pages, PAP-125 docs.\n\n**Definition of done**\n\n* Diff between two fixture graphs renders the three colours and the summary chips; embed renders inside a docs page and a record page at 375 and 1280; thumbnails appear on `PageNode`.\n* Screenshots in light and dark; axe clean; `docs/collab/canvas.md` gains Diff and Embeds sections; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: diff classification per change kind, embed node cap, thumbnail invalidation on hash change.\n* Integration: `canvas.graph.diff` against a fixture repo with two commits through a mocked Forgejo API.\n* E2E (Playwright): toggle compare, assert coloured nodes and chips; open a doc with an embed and click through to the canvas.\n\n**Demo**\n\nOpen the canvas, choose Compare with main on a branch that adds a page, see the green node and the chip, then open the invoices doc and see the embedded neighbourhood. Under two minutes.\n\n**Edge cases**\n\n* Ref without a generated graph: server builds it on the fly with `buildFlowGraph` (under 5 s) or returns 409 with a hint.\n* Node renamed (id changed): shows as removed plus added; a `--rename-hint` from PAP-123 marks it when routes match.\n* Embed on a page with no node: renders nothing and logs once in dev.\n\n**Dependencies**\n\nHard: PAP-322, PAP-123. Soft: PAP-276, PAP-37, PAP-43, PAP-97, PAP-361.\n\n**Agent**\n\nBuilder: Nova (Canvas Cartographer). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/collab/docs-reference-hub",
+   "title": "Reference hub in the docs engine: one sidebar section for OpenAPI, the data dictionary, module contracts, the component registry and ADRs",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Knowledge surfaced everywhere",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-128"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nFive projects generate reference documentation into five places: Scalar OpenAPI (PAP-269), the data dictionary (PAP-41), module and contract pages (PAP-445), the component registry (PAP-74) and the ADR index (PAP-130). A builder session should find them under one `Reference` heading with cross-links, not by knowing five URLs.\n\n**Scope**\n\nIn: `docs/reference/_meta.yaml` and loader hooks in `packages/collab/docs/reference.ts` that mount generated sources into the sidebar: `api` (embed the Scalar page or render `openapi.json` through `@scalar/api-reference-react`), `data` (PAP-41 output), `modules` and `contracts` (PAP-445 output), `components` (PAP-74 `registry.json` rendered as prop tables with Storybook links), `adr` (PAP-130 index); cross-link resolver turning `PAP-n`, `ui.<name>`, `@paperos/contract-<m>`, table names and topic names into links anywhere in docs. Out: generating the sources (owned elsewhere), API playground auth.\n\n**Spec**\n\n* Each source declares `{ id, title, path|url, generatedBy: PAP-n, freshness: file mtime or `generatedAt` }`; a missing source renders a placeholder card naming the owning issue instead of a 404.\n* Cross-link resolver runs as a rehype plugin over all docs: `PAP-129` links to Linear (PAP-101 mirror when present), `ui.badge` to the component page, `comment_thread` to the dictionary row, `comment.created` to the topic page; unknown tokens are left alone.\n* Freshness badge (`generated 3 h ago`) and a Gate 1 lint `docs:reference-stale` warning when a source is older than its generator's last merge.\n* Search (PAP-138) indexes reference pages with kind `doc` and tag `reference` so `mod+k` finds a table or a component by name.\n* Reference section is `audience: [developer, agent]`; customers never see it.\n\n**Interface contract**\n\nProvides: `docs/reference/` mount, `registerReferenceSource()`, cross-link rehype plugin, lint `docs:reference-stale`. Consumes: `DocEntry`, sidebar and `renderMdx` (PAP-128), `openapi.json` (PAP-269), `docs/data-dictionary/` (PAP-41), `docs/platform/{modules,contracts}/` (PAP-445), `registry.json` (PAP-74), `adr-index.json` (PAP-130), Storybook URL (PAP-69). Consumed by: `r4/collab/agent-readable-docs` (`llms.txt` includes the hub), PAP-24 template guide, PAP-92 playbook.\n\n**Definition of done**\n\n* Hub renders with the sources that exist on `main` and placeholders for the rest; cross-links resolve in three fixture docs; screenshots at 375 and 1280 in light and dark; axe clean.\n* `docs/collab/reference-hub.md`; CHANGELOG entry; Linear comment.\n\n**Test plan**\n\n* Unit: source registration and freshness computation, cross-link tokeniser (positive and negative fixtures), placeholder rendering.\n* Integration: build with PAP-41 output absent and present.\n* E2E (Playwright): open Reference, navigate to a component page, follow a cross-link from a doc to a table row.\n\n**Demo**\n\nOpen `/_app/docs/reference`, click Components, open `ui.badge`, then search `comment_thread` and land on the dictionary row. Under one minute.\n\n**Edge cases**\n\n* Two sources claim the same slug: build fails naming both.\n* OpenAPI spec over 5 MB: rendered lazily per tag group.\n* Token collision (a doc literally about the word `file`): resolver only links backticked tokens.\n\n**Dependencies**\n\nHard: PAP-128. Soft: PAP-269, PAP-41, PAP-445, PAP-74, PAP-130, PAP-69, PAP-138.\n\n**Agent**\n\nBuilder: Quill (Changelog Scribe). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/collab/docs-authoring-kit",
+   "title": "Docs authoring kit and freshness: `pnpm docs new <template>`, Diátaxis templates, owner and review-date lint, stale-page job, was-this-helpful widget",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "Knowledge surfaced everywhere",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-128"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nAgents will write hundreds of docs in two weeks. Without templates and a freshness loop the docs engine becomes a landfill, the failure PAP-109 warns about for memory. Give writers `pnpm docs new`, four Diátaxis templates, lint for owners and review dates, a stale-page job that nudges owners, and the one-click feedback widget Mintlify readers expect.\n\n**Scope**\n\nIn: `pnpm docs new <how-to|tutorial|reference|explanation|runbook> <slug> --owner <character> --audience <a>` in `packages/collab/docs/cli.ts` writing from `docs/_templates/*.mdx`; `pnpm docs:lint` rules `DOC_OWNER_MISSING`, `DOC_REVIEW_OVERDUE` (warn), `DOC_TEMPLATE_UNFILLED` (placeholder text left); frontmatter `reviewAt` (default `updated` + 90 days); nightly job `docs.freshness` posting one notification (`doc.review_due` kind) per owner per week; `DocFeedback` footer widget (thumbs up or down, optional 200-char note) writing `doc_feedback(tenant_id, path, vote, note, actor)` with a weekly rollup page `/_app/docs/health`. Out: translation, analytics beyond votes, editing UI (PAP-379).\n\n**Spec**\n\n* Templates follow Diátaxis: how-to (goal, steps, verify), tutorial (outcome, prerequisites, steps, next), reference (generated-first, tables), explanation (context, decision, consequences), runbook (symptoms, checks, fix, rollback); each carries `<!-- fill -->` markers the lint catches.\n* `reviewAt` overdue pages show a `Review due` badge; `docs.freshness` groups by owner and sends one `doc.review_due` notification through the core; a page older than 180 days without review becomes a warning in the Gate 1 lint summary (never a failure).\n* Feedback votes are anonymous for customers (actor null) and attributed for staff; notes pass the PAP-129 redactor before storage; rollup shows votes per page, down-vote notes and stale pages.\n* `docs/_templates` are excluded from the sidebar and from `llms.txt`.\n* Agent guidance: the `write-docs` note in CLAUDE.md says 'run `pnpm docs new`, never start from a blank file'.\n\n**Interface contract**\n\nProvides: CLI `docs new`, templates, lint rules, `reviewAt` frontmatter, kind `doc.review_due`, `DocFeedback`, table `doc_feedback`, page `/_app/docs/health`. Consumes: docs loader, frontmatter schema and lint (PAP-128), notification core (`r4/collab/notification-core`, soft: log only when absent), jobs (PAP-43), redactor (PAP-129), `can()` (PAP-59). Consumed by: PAP-109 memory (templates), PAP-24, PAP-125 (docs pages adopt templates), Quill sessions.\n\n**Definition of done**\n\n* `pnpm docs new how-to add-a-page` creates a lint-clean file; leaving a `<!-- fill -->` marker fails `docs:lint`; a fixture page with `reviewAt` in the past triggers one notification in the job test.\n* Widget screenshots at 375 and 1280 in light and dark; axe clean; health page renders votes from seeded feedback.\n* `docs/collab/writing-docs.md` (written with the kit); CHANGELOG entry; Linear comment.\n\n**Test plan**\n\n* Unit: template rendering, lint rules, `reviewAt` default computation, weekly grouping by owner.\n* Integration: job with `/__test` clock; feedback RLS via `callAs(customer)` (vote allowed, rollup denied).\n* E2E (Playwright): vote down with a note, see it in the health page as staff.\n\n**Demo**\n\nScaffold a runbook, run the lint and watch it fail on the placeholder, fill it, run again clean; vote on a page and open the health page. Under two minutes.\n\n**Edge cases**\n\n* Owner character no longer in the roster (PAP-104): lint warns, job routes to Quill.\n* Feedback spam: 10 votes per actor per day; anonymous votes rate-limited per IP (PAP-304).\n* Generated reference pages (`r4/collab/docs-reference-hub`): exempt from `reviewAt`.\n\n**Dependencies**\n\nHard: PAP-128. Soft: `r4/collab/notification-core`, PAP-43, PAP-129, PAP-304, PAP-104.\n\n**Agent**\n\nBuilder: Quill (Changelog Scribe). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/collab/customer-comment-triage",
+   "title": "Staff comment triage: unanswered customer threads as a saved view with assignment, age and SLA badges",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Knowledge surfaced everywhere",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-317",
+    "PAP-161"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nCustomers will comment on invoices, appointments and records because PAP-131 lets them. Intercom and Zendesk exist because somebody has to see those comments in one place. Register `comment_thread` as a dataset and ship a staff triage view of unanswered `shared` threads with assignment and age, reusing the views engine instead of a bespoke inbox.\n\n**Scope**\n\nIn: `registerDataset('comment_thread')` (PAP-161) in `packages/collab/comments/dataset.ts` with fields `anchor`, `status`, `visibility`, `created_by`, `last_activity_at`, `last_author_kind`, `assignee_id`, `waiting_on: customer|staff|none`, `age`; `assignee_id` column and `comments.threads.assign` procedure (PAP-317 extension); `ViewSpec` `staff-comment-triage` (grid, filter `visibility = shared and waiting_on = staff`, sort `last_activity_at asc`, saved as a shared view); route `/_staff/comments` rendering PAP-165's grid with a `RecordPanel` opening `ThreadView` (PAP-318); SLA badge from a tenant setting `comments.slaHours` (default 24). Out: email or chat channels (PAP-197), macros, customer-facing status.\n\n**Spec**\n\n* `waiting_on` derives from the last comment's `author_kind` and audience: last customer comment on an open thread means `staff`; last staff or agent comment means `customer`; resolved means `none`.\n* Assignment sets `assignee_id`, emits `thread.assigned` (kind added to the notification core; recipients: assignee) and auto-follows the assignee (`r4/collab/watchers-subscriptions` when merged).\n* Row actions: open thread, assign to me, resolve; bulk assign through PAP-342's bulk bar when available.\n* Agents may be assignees only when their character allows `comments.reply` (PAP-106 scope); customers never see the view (`staff.*` access in the page spec).\n* Counts of overdue threads exposed as `comments.triage.stats` for the staff dashboard (PAP-363) and a `record.panel.tabs` badge.\n\n**Interface contract**\n\nProvides: dataset registration, `assignee_id`, `threads.assign`, `waiting_on` derivation, ViewSpec, route and page spec, `comments.triage.stats`, kind `thread.assigned`. Consumes: `comment_thread` and procedures (PAP-317), `ThreadView` (PAP-318), `registerDataset` and `ViewSpec` (PAP-161), grid (PAP-165, soft: plain table fallback), notification core (soft), `can()` (PAP-59), tenant settings (PAP-58). Consumed by: PAP-363 staff console dashboard, PAP-197 support inbox (later merge).\n\n**Definition of done**\n\n* Seeded threads (`r4/collab/collab-demo-seeds`) show the right `waiting_on`; assigning notifies the assignee; overdue badge appears past the SLA with the `/__test` clock.\n* Screenshots at 375 (card list) and 1280 in light and dark; axe clean; `docs/collab/comments.md` gains a Triage section; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: `waiting_on` derivation matrix, SLA computation across timezones, stats aggregation.\n* Integration: dataset compiles through PAP-163 with the filter; `callAs(customer)` gets 403 on the view and never sees `internal` rows.\n* E2E (Playwright): open the view, assign to me, reply from the panel, row leaves the list.\n\n**Demo**\n\nSign in as a customer and comment on an invoice; sign in as staff, open Comments, see it at the top with its age, assign to yourself and reply; watch it drop out. Under two minutes.\n\n**Edge cases**\n\n* Thread anchor deleted: shown with `orphaned` badge, still assignable.\n* 500 unanswered threads: grid paginates by cursor; stats cached 60 s.\n* Grid engine unmerged: TanStack Table fallback with a documented TODO, as PAP-135 does.\n\n**Dependencies**\n\nHard: PAP-317, PAP-161. Soft: PAP-318, PAP-165, PAP-163, `r4/collab/notification-core`, `r4/collab/watchers-subscriptions`, `r4/collab/collab-demo-seeds`, PAP-342.\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Security Auditor for visibility).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/collab/ask-paperos",
+   "title": "Ask PaperOS: retrieval-augmented answers over docs, ADRs, specs and journals with citations, from the command palette",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Knowledge surfaced everywhere",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-138",
+    "PAP-39"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 (Execution Schedule stretch pool; NJ-14 can reinstate). Not claimable before 10-01.\n\nPAP-138 lists Q&A chat as out of scope. Once the corpus is searchable, the obvious next step is the Intercom-style 'ask a question' that answers from docs, ADRs, specs and build journals with citations, for staff in-app and for agents through the docs MCP tool.\n\n**Scope**\n\nIn: oRPC `ask.query({ q, kinds?, audience })` in `packages/collab/ask/`: hybrid retrieval through PAP-39 (`k=12`), one Claude call with a fixed answer prompt and the retrieved chunks, streamed answer with `[n]` citations resolved to routes; palette command `ask.open` (PAP-151) and `/_app/ask` page with history per user; MCP tool `mcp__paperos-docs__ask` (extends `r4/collab/agent-readable-docs`); per-tenant daily budget and a `feedback` thumbs pair stored with the question. Out: writing docs from answers, external web search, customer-facing chat (PAP-197).\n\n**Spec**\n\n* Retrieval respects PAP-138's audience allowlist; customers are never offered the feature in v0.2 scope.\n* Answer prompt forbids claims without a citation; an answer with zero retrieved chunks returns 'no source found' and the top three search hits instead.\n* Chunking: docs by heading (PAP-128 `data-block-id`), specs by section, journals by section; embeddings through PAP-39's pgvector registration.\n* Cost: `claude-sonnet-5`, 4k input cap, 600 output tokens, tenant budget default 200 questions per day, logged to the prompt log as character `Quill` sub-agent `Librarian` (PAP-129).\n* Latency budget p95 under 6 s streamed; first token under 1.5 s.\n\n**Interface contract**\n\nProvides: `ask.query`, `/_app/ask`, command `ask.open`, MCP tool `ask`, table `ask_question(tenant_id, actor, q, answer, citations, feedback)`. Consumes: `search.query` and pgvector (PAP-39, PAP-138), docs block ids (PAP-128), journals (`r4/collab/build-journals`), palette (PAP-151), prompt log ingest (PAP-129), budgets (PAP-111). Consumed by: PAP-109 memory (answers as candidates), PAP-380 help panel ('Ask a question' upgrade).\n\n**Definition of done**\n\n* Ten golden questions over the seeded corpus answered with correct citations (Vitest with recorded model responses); zero-source case handled.\n* Screenshots at 375 and 1280 in light and dark; axe clean; `docs/collab/ask.md`; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: chunking per source kind, citation resolution, budget enforcement, zero-source fallback.\n* Integration: audience allowlist enforced for staff without `staff.admin` (no `prompt_session` chunks).\n* E2E (Playwright): ask from the palette, click a citation, land on the doc block.\n\n**Demo**\n\nPress `mod+k`, type `? how do comments anchor to a doc block`, read the streamed answer, click citation [1]. Under one minute.\n\n**Edge cases**\n\n* Model unavailable: falls back to search results with a notice.\n* Question contains a secret-looking token: redacted before storage (PAP-129 redactor).\n* Corpus re-indexed mid-answer: citations resolved by block id, not offset.\n\n**Dependencies**\n\nHard: PAP-138, PAP-39. Soft: `r4/collab/build-journals`, `r4/collab/agent-readable-docs`, PAP-151, PAP-129, PAP-111. Deferred: v0.2.\n\n**Agent**\n\nBuilder: Nova with Quill on the prompt. Reviewer: Sentinel (Security Auditor for audience leakage).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/collab/comment-email-replies",
+   "title": "Reply to comment and mention emails by email: per-thread reply address, inbound parsing, attribution and loop guards",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Knowledge surfaced everywhere",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-319",
+    "r4/collab/notification-core",
+    "PAP-370"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 (stretch pool; NJ-14 can reinstate). Not claimable before 10-01.\n\nNotion, Linear and GitHub let you answer a mention from your mail client. Customers especially will reply to 'Bo commented on your invoice' rather than sign in. Add a signed per-thread reply address and an inbound parser that posts the reply as a comment with correct attribution.\n\n**Scope**\n\nIn: `Reply-To: thread+<signed token>@<tenant inbound domain>` set by the `EmailChannel` for `comment.*` kinds; inbound webhook `/api/webhooks/email-inbound` (Resend or Postal inbound per PAP-295 decision) verifying the provider signature; parser reusing PAP-410's quoted-text stripping and HTML sanitising when merged (a 60-line fallback here); `comments.create` as the sender after matching the `From` address to a tenant user and the token to a thread; attachments through PAP-37. Out: creating threads by email, support inbox (PAP-197), marketing replies (PAP-191).\n\n**Spec**\n\n* Token: HMAC of `(threadId, recipientId, kind)` with a 30-day validity; a reply from an address that does not match the recipient is rejected and the sender gets one bounce explaining why.\n* Loop guards: ignore `Auto-Submitted`, `Precedence: bulk`, our own `Message-ID` domain, and any address on the tenant suppression list (PAP-405 when merged).\n* Body limit 10k characters after quote stripping; over that, truncated with a link; images inline become attachments.\n* Every inbound message stored raw for 7 days in MinIO for debugging, then purged (PAP-355 retention class `transient`).\n* Attribution: `author_kind: human`, `source: email` on the comment; the thread shows an envelope icon.\n\n**Interface contract**\n\nProvides: reply address grammar, inbound webhook route, `parseInboundReply()`, comment `source` column. Consumes: `EmailChannel` (`r4/collab/notification-core`), `comments.create` (PAP-317), thread deep links (PAP-319), email package inbound adapter (PAP-370), parsing helpers (PAP-410, soft), files (PAP-37), suppression list (PAP-405, soft), retention (PAP-355). Consumed by: PAP-197 (shares the inbound route).\n\n**Definition of done**\n\n* Reply from Mailpit to a mention email appears as a comment with the right author within 60 s in CI; forged token bounces; auto-reply ignored.\n* `docs/collab/comments.md` gains Email replies; CHANGELOG entry; Linear comment with a screenshot of the envelope-marked comment.\n\n**Test plan**\n\n* Unit: token sign and verify, quote stripping fixtures (Gmail, Outlook, Apple Mail), loop-guard headers, body limit.\n* Integration: webhook signature verification; RLS: reply lands in the right tenant only.\n* E2E: none beyond the integration path (no UI).\n\n**Demo**\n\nTrigger a mention email, reply from Mailpit's UI, refresh the thread and see the comment marked as email. Under one minute.\n\n**Edge cases**\n\n* Sender uses an alias address: unmatched, bounce with instructions; no comment created.\n* Thread resolved before the reply arrives: reopened with the reply (matches in-app behaviour).\n* Provider retries the webhook: idempotent on `Message-ID`.\n\n**Dependencies**\n\nHard: PAP-319, `r4/collab/notification-core`, PAP-370. Soft: PAP-410, PAP-405, PAP-355, PAP-37. Deferred: v0.2.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/collab/docs-suggestion-mode",
+   "title": "Suggestion mode and publish review for runtime docs: tracked changes, accept or reject per change, approval before publish",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Knowledge surfaced everywhere",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-379",
+    "PAP-142"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 (stretch pool; NJ-14 can reinstate). Not claimable before 10-01.\n\nGoogle Docs' suggesting mode is what makes shared documents safe for agents and junior staff: propose, review, accept. Runtime docs (PAP-379) publish whatever the Yjs state holds. Add tracked changes on top of the shared editor and a publish gate for pages an admin marks `reviewed`.\n\n**Scope**\n\nIn: Tiptap extension `suggestions` in `packages/collab/editor-ext/` storing insert and delete marks with `authorId`, `at`, `suggestionId` inside the Yjs doc (no server table); sidebar `SuggestionList` with accept, reject, accept all; `doc_page.review: none|required` and `docs.pages.publish` refusing while open suggestions exist when `required`; agents (`author_kind: agent`) always write in suggesting mode; diff view between the last published version (PAP-379 `doc_page_version`) and the current draft. Out: repo MDX docs (PRs are their review), comment threads (PAP-131 already anchors), suggestion notifications beyond `doc.suggestion_added` kind.\n\n**Spec**\n\n* Marks survive concurrent edits through Yjs; accepting applies the change and removes the marks in one transaction; rejecting removes the inserted text or restores the deleted text.\n* Suggesting mode toggle per user per page (`Cmd+Shift+X`, PAP-151 command `editor.toggleSuggesting`); read-only render (`renderRichText`) shows the published state only.\n* Kind `doc.suggestion_added` notifies the page owner (watchers through `r4/collab/watchers-subscriptions`), collapsed by PAP-324.\n* Version diff uses `diff-match-patch` on `richTextToPlain` with block-level anchors so the diff opens at the first change.\n* Import (PAP-203) writes directly, never as suggestions.\n\n**Interface contract**\n\nProvides: `suggestions` extension, `SuggestionList`, `review` column and publish gate, kind `doc.suggestion_added`, `DocDiffView`. Consumes: `RichTextEditor` and Yjs binding (PAP-142), `doc_page`, versions and publish (PAP-379), notification core, watchers (soft), commands (PAP-151), agent principals (PAP-60). Consumed by: PAP-192 content agent drafts, PAP-109 memory pages edited by agents.\n\n**Definition of done**\n\n* Two contexts: A suggests, B accepts one and rejects another, text matches expectation; publish blocked while a suggestion is open on a `required` page; agent edits always appear as suggestions.\n* Screenshots at 768 and 1280 in light and dark; axe clean; `docs/collab/runtime-docs.md` gains Suggestions; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: mark application and removal, accept-all ordering, publish gate, diff anchoring.\n* Integration: two `Y.Doc`s through local Hocuspocus converge after concurrent accept and edit.\n* E2E (Playwright, two contexts): suggest, accept, reject, publish.\n\n**Demo**\n\nToggle suggesting, replace a sentence, switch browsers as the owner, accept it, publish, open the public page and see the new sentence. Under two minutes.\n\n**Edge cases**\n\n* Suggestion inside a suggestion: flattened to one with two authors.\n* Owner rejects an agent's suggestion: `doc.suggestion_rejected` event for PAP-110 eval signal.\n* Hocuspocus down: suggesting disabled with a banner; reading works.\n\n**Dependencies**\n\nHard: PAP-379, PAP-142. Soft: `r4/collab/notification-core`, `r4/collab/watchers-subscriptions`, PAP-151, PAP-60, PAP-324. Deferred: v0.2.\n\n**Agent**\n\nBuilder: Nova (CRDT Engineer). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/collab/docs-i18n",
+   "title": "Docs localisation: `docs/<locale>/` folders with fallback to the default locale, language switcher, translation status page and a translation skill hook",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Knowledge surfaced everywhere",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-128",
+    "PAP-27"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 (stretch pool; NJ-14 can reinstate). Not claimable before 10-01.\n\n'One-size-fits-all software that adapts to every type of business' includes businesses that do not read English. PAP-27 localises UI strings and PAP-375 spec copy; customer docs and changelog entries have no locale path. Add locale folders with fallback, a switcher and a status page the translation skill (PAP-27) writes into.\n\n**Scope**\n\nIn: loader change in `packages/collab/docs/` resolving `docs/<locale>/<path>.mdx` before `docs/<path>.mdx` with a `translated: false` banner on fallback; frontmatter `sourceHash` and `translatedFrom` for staleness; `LocaleSwitcher` in the docs header bound to PAP-27 negotiation; `/_app/docs/translations` status page (per locale: translated, stale, missing) and `pnpm docs:i18n status|extract --locale es`; changelog entries (PAP-133) gain `locale` with the same fallback; `llms.txt` per locale. Out: machine translation itself (PAP-27 skill), runtime docs (PAP-379) translation UI.\n\n**Spec**\n\n* Resolution order: requested locale, tenant default locale (PAP-126), app default; `hreflang` links on public pages.\n* Staleness: a translated page whose `sourceHash` differs from the current source is `stale`; lint warns; the status page lists it first.\n* Search (PAP-138) indexes each locale as its own document with a `locale` facet; customers search their locale first.\n* Extraction writes a task file `docs/.generated/i18n-tasks.json` the PAP-27 translation skill consumes; a translated file is a normal PR.\n* RTL locales get `dir=\"rtl\"` on the article and mirrored TOC, reusing PAP-27's RTL flip.\n\n**Interface contract**\n\nProvides: locale-aware loader, `LocaleSwitcher`, status page and CLI, frontmatter fields, `i18n-tasks.json`. Consumes: docs loader and lint (PAP-128), locale negotiation and translation skill (PAP-27), business profile default locale (PAP-126), search facets (PAP-138), changelog rows (PAP-133). Consumed by: `r4/collab/agent-readable-docs` (per-locale `llms.txt`), PAP-363 landing pages.\n\n**Definition of done**\n\n* Five template docs translated to `es` (fixture), fallback banner on the rest, switcher works, status page counts match; `hreflang` present on public pages.\n* Screenshots at 375 and 1280 in light and dark for `en` and `es`; axe clean; `docs/collab/docs-i18n.md`; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: resolution order, staleness detection, task extraction, `hreflang` generation.\n* Integration: search facet per locale; changelog fallback.\n* E2E (Playwright): switch locale, see the translated page, open an untranslated one and see the banner.\n\n**Demo**\n\nSwitch to Español, open the getting-started doc in Spanish, open an untranslated page and read the fallback banner, open the status page. Under one minute.\n\n**Edge cases**\n\n* Locale folder with a file the source no longer has: listed as orphan on the status page.\n* Mixed-locale search results: locale facet defaults to the viewer's locale with a toggle.\n* Tenant default locale not enabled in the app: falls back to app default with a settings hint.\n\n**Dependencies**\n\nHard: PAP-128, PAP-27. Soft: PAP-126, PAP-138, PAP-133, PAP-379. Deferred: v0.2.\n\n**Agent**\n\nBuilder: Quill (Changelog Scribe). Reviewer: Sentinel (Visual Inspector for RTL).\n\n**Size**\n\nM: one session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-136",
+   "section": "Spec",
+   "append": "Work package 1 is the child issue `r4/collab/notification-core` (Opus 5 / high, blocked by PAP-43 and PAP-303 only). Because PAP-235 is Deferred, the `EmailChannel` ships a plain-HTML fallback template and switches to the PAP-235 kit when it lands. The `notification` row stores `ActorRef` (PAP-302) for the actor and `EntityRef` for the source, per Contracts §2."
+  },
+  {
+   "identifier": "PAP-133",
+   "section": "Spec",
+   "append": "Per-tenant \"What's new\" filters entries by the tenant's enabled modules (PAP-266 `tenant_module`): an entry whose PR touched only `packages/<module>` files of a disabled module is hidden for that tenant. The Claude rewrite is capped at 40 entries per build and $2 per version; beyond the cap, remaining entries stay `needs_review` with the original text."
+  },
+  {
+   "identifier": "PAP-323",
+   "section": "Spec",
+   "append": "Rows support snooze (`snoozed_until`, presets 1 h, tomorrow 09:00, next Monday) and \"mark all read\" for the current filter; a snoozed row returns to unread at the time and is exempt from PAP-324 quiet hours. Add an \"unfollow source\" action once `r4/collab/watchers-subscriptions` lands."
+  },
+  {
+   "identifier": "PAP-379",
+   "section": "Spec",
+   "append": "Anchor grammar: runtime doc blocks use `tdoc:<pageId>#<blockId>`, not `doc:<path>#<blockId>`, so repo MDX and tenant pages cannot collide on a path-like id; `CommentAnchor` in `@paperos/contract-collab` (PAP-474) gains the `tdoc:` form as a patch bump. `doc_page.slug` may not start with `t/` (reserved by the route)."
+  },
+  {
+   "identifier": "PAP-474",
+   "section": "Spec",
+   "append": "`CommentAnchor` grammar includes six forms: `entity:`, `element:`, `doc:` (repo MDX path), `tdoc:` (runtime `doc_page` id, PAP-379), `canvas:`, `shot:`. Fixtures: three per form. `NotificationPort` exports `defineKind`, `notify`, `resolvePreferences` and the `Channel` interface as specified by `r4/collab/notification-core`."
+  },
+  {
+   "identifier": "PAP-380",
+   "section": "Dependencies",
+   "append": "The spec fields `help.docs[]` and `help.tour[]` are not in PAP-114 v1, whose unknown-key rule rejects them. Until `r4/spec-builder/schema-v1-1-extensions` lands, write them as `x-help: { docs, tour }` (passes through untouched) and read both spellings; the validator rule for doc paths registers against `x-help` first."
+  },
+  {
+   "identifier": "PAP-134",
+   "section": "Definition of done",
+   "append": "\"Justin reviews one rule in-app\" is evidence, not a gate: if no review has happened by RC2 (09-28), attach a Quill review comment on a real rule instead and do not hold the issue in In Review for it."
+  },
+  {
+   "identifier": "PAP-129",
+   "section": "Spec",
+   "append": "`prompt_session` gains `journal_path text` (written by `r4/collab/build-journals`) and `summary_source: search|journal|manual`. Blob contents uploaded through `content_file_id` pass the second-pass redactor before upload, never after. `promptLog.sessions.list` accepts `filter: FilterTree` (PAP-279) so PAP-135's saved views compile server-side."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "spec-builder",
+   "title": "Reserve `help`, `comments`, `flags`, `modules`, `seo`, `budgets` keys in page.spec.yaml v1.1",
+   "why": "PAP-380 (help panel) and PAP-361 (comments anchor per detail page) write keys PAP-114 rejects; filed as r4/spec-builder/schema-v1-1-extensions."
+  },
+  {
+   "targetProject": "growth",
+   "title": "Expose PAP-410 inbound email parsing (quote stripping, HTML sanitising) as a shared helper in `packages/email`",
+   "why": "r4/collab/comment-email-replies and PAP-197 both parse inbound replies; one parser avoids two threading heuristics."
+  },
+  {
+   "targetProject": "realtime",
+   "title": "PAP-142 editor: block ids on every node for `tdoc:` comment anchors and suggestion marks",
+   "why": "PAP-379 anchors comments to Tiptap block ids and the deferred suggestion mode needs stable node ids; PAP-142 should emit `data-block-id` via a UniqueID extension."
+  },
+  {
+   "targetProject": "design-system",
+   "title": "Ship a plain-HTML email base template before PAP-235",
+   "why": "PAP-235 is deferred but the notification core and auth emails need a branded-enough base; a 100-line fallback in packages/email unblocks three projects."
+  },
+  {
+   "targetProject": "agents",
+   "title": "PAP-109 memory loader reads build journals and docs via the docs MCP tool",
+   "why": "r4/collab/build-journals and r4/collab/agent-readable-docs give memory a source; PAP-109 should consume them instead of a separate notes store."
+  }
+ ]
+}

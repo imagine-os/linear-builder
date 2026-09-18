@@ -1,0 +1,760 @@
+{
+ "project": "libraries",
+ "projectName": "Library Discovery & Integration",
+ "benchmarks": [
+  "Renovate and Dependabot",
+  "FOSSA and ScanCode license scanning",
+  "Backstage software catalog",
+  "ADR tooling (adr-tools, log4brains)",
+  "SBOM and CycloneDX",
+  "OpenSSF Scorecard and deps.dev",
+  "publint and arethetypeswrong",
+  "pnpm catalogs, syncpack, knip",
+  "npm and crates.io registries",
+  "Nx and Turborepo module boundary lint",
+  "Socket.dev supply-chain checks",
+  "Electron and Tauri About dialogs for attribution"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "Evaluation rubric with anchors, weights, hard gates and scorecards",
+   "coveredBy": [
+    "PAP-209"
+   ],
+   "status": "covered",
+   "note": "Ready for Claude."
+  },
+  {
+   "feature": "Facts collector (downloads, maintenance, license, types, size)",
+   "coveredBy": [
+    "PAP-209"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Security and packaging facts (OpenSSF Scorecard, advisories, publint, attw)",
+   "coveredBy": [
+    "r4/libraries/facts-security-quality"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "ADR template with alternatives and re-open criteria",
+   "coveredBy": [
+    "PAP-209",
+    "PAP-130"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "License policy tiers by context, CI check, waivers, notices, cargo-deny",
+   "coveredBy": [
+    "PAP-211"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "In-app open source licenses page and About dialog",
+   "coveredBy": [
+    "r4/libraries/oss-licenses-page"
+   ],
+   "status": "gap",
+   "note": "Attribution licenses require visibility."
+  },
+  {
+   "feature": "SBOM (CycloneDX) and vulnerability audit",
+   "coveredBy": [
+    "PAP-80"
+   ],
+   "status": "covered",
+   "note": "quality."
+  },
+  {
+   "feature": "Supply-chain integrity (pinning, min release age, provenance)",
+   "coveredBy": [
+    "PAP-358"
+   ],
+   "status": "covered",
+   "note": "forge."
+  },
+  {
+   "feature": "UI primitives survey and ADR",
+   "coveredBy": [
+    "PAP-212"
+   ],
+   "status": "covered",
+   "note": "Default Base UI after 09-19."
+  },
+  {
+   "feature": "Table, chart, map library spikes and ADRs",
+   "coveredBy": [
+    "PAP-292",
+    "PAP-293"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Canvas and editor shortlist handed to collab",
+   "coveredBy": [
+    "PAP-294",
+    "PAP-127"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Backend building blocks (jobs, email, PDF, search, observability, flags, storage, validation, runtime)",
+   "coveredBy": [
+    "PAP-295",
+    "PAP-296",
+    "PAP-297"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Whole OSS products evaluated with modes (embed, fork, borrow, reject)",
+   "coveredBy": [
+    "PAP-350",
+    "PAP-351",
+    "PAP-352"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Shared spike harness (Vite routes, FPS traces, bundle JSON, screenshots)",
+   "coveredBy": [
+    "r4/libraries/spike-harness-kit"
+   ],
+   "status": "gap",
+   "note": "Five spikes describe the same harness."
+  },
+  {
+   "feature": "`compose-smoke` CI workflow with health probes and docker stats",
+   "coveredBy": [
+    "r4/libraries/compose-smoke-workflow"
+   ],
+   "status": "gap",
+   "note": "Named by seven issues, built by none."
+  },
+  {
+   "feature": "Resource budget table under 6 GB",
+   "coveredBy": [
+    "PAP-296",
+    "r4/libraries/compose-smoke-workflow"
+   ],
+   "status": "covered",
+   "note": "Generated from smoke artefacts."
+  },
+  {
+   "feature": "Embed contracts for OSS products (SSO, theming, tenant mapping)",
+   "coveredBy": [
+    "PAP-352"
+   ],
+   "status": "partial",
+   "note": "Contracts written; no implementation kit; cross-project suggestion to app-shell."
+  },
+  {
+   "feature": "Registry of adopted, trialing, rejected libraries with drift check",
+   "coveredBy": [
+    "PAP-216"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Registry seeded with every production dependency",
+   "coveredBy": [
+    "PAP-216"
+   ],
+   "status": "covered",
+   "note": "In its DoD."
+  },
+  {
+   "feature": "Per-library usage notes for cold sessions (imports, banned APIs, gotchas)",
+   "coveredBy": [
+    "r4/libraries/library-usage-notes"
+   ],
+   "status": "gap",
+   "note": "Agent-friendliness of our adoption."
+  },
+  {
+   "feature": "Lint guardrails from registry status and banned APIs",
+   "coveredBy": [
+    "r4/libraries/library-guardrails-lint"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Import census and swap-impact per library",
+   "coveredBy": [
+    "r4/libraries/import-census"
+   ],
+   "status": "gap",
+   "note": "Makes migrationCostHours evidence-based."
+  },
+  {
+   "feature": "One-command adoption workflow",
+   "coveredBy": [
+    "r4/libraries/adopt-workflow-cli"
+   ],
+   "status": "gap",
+   "note": "Five CLIs across four issues today."
+  },
+  {
+   "feature": "Renovate grouped upgrades with agent summaries and automerge",
+   "coveredBy": [
+    "PAP-217"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Version alignment, catalogs, dedupe, unused dependencies",
+   "coveredBy": [
+    "r4/libraries/dependency-hygiene"
+   ],
+   "status": "gap",
+   "note": "Twenty sessions running pnpm add."
+  },
+  {
+   "feature": "Patch, vendoring and fork policy with registry rows and expiry",
+   "coveredBy": [
+    "r4/libraries/patch-fork-policy"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Dependency health dashboard",
+   "coveredBy": [
+    "r4/libraries/dependency-health-page"
+   ],
+   "status": "gap",
+   "note": "Five artefacts, no page."
+  },
+  {
+   "feature": "Paid tiers, renewals and monthly software cost",
+   "coveredBy": [
+    "r4/libraries/library-cost-model"
+   ],
+   "status": "gap",
+   "note": "Deferred v0.2."
+  },
+  {
+   "feature": "Weekly Scout scan for new libraries",
+   "coveredBy": [
+    "PAP-218"
+   ],
+   "status": "covered",
+   "note": "Deferred."
+  },
+  {
+   "feature": "Scout scan also covers MCP servers and Claude skills",
+   "coveredBy": [
+    "PAP-218"
+   ],
+   "status": "partial",
+   "note": "Amendment proposed."
+  },
+  {
+   "feature": "MCP server and connector catalogue with scope classes",
+   "coveredBy": [
+    "PAP-210"
+   ],
+   "status": "covered",
+   "note": "Ready for Claude."
+  },
+  {
+   "feature": "MCP server security review (tool descriptions, injection surface)",
+   "coveredBy": [
+    "PAP-210",
+    "PAP-299"
+   ],
+   "status": "partial",
+   "note": "Sentinel sign-off per scope class; no rubric extra. Not issued."
+  },
+  {
+   "feature": "Major upgrade playbooks (codemod-driven)",
+   "coveredBy": [
+    "PAP-217",
+    "PAP-430"
+   ],
+   "status": "partial",
+   "note": "Majors become Backlog issues; not issued."
+  },
+  {
+   "feature": "Bundle weight attribution per dependency",
+   "coveredBy": [
+    "PAP-87",
+    "r4/libraries/dependency-health-page"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Rust crate and Docker image evaluation",
+   "coveredBy": [
+    "PAP-209",
+    "PAP-211"
+   ],
+   "status": "covered",
+   "note": "Non-npm rules in the rubric."
+  },
+  {
+   "feature": "Fonts, icons and asset licenses",
+   "coveredBy": [
+    "PAP-211"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "WebView (webkit2gtk, WKWebView) compatibility as a gate",
+   "coveredBy": [
+    "PAP-209",
+    "PAP-212"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Internal software catalog (modules, contracts, services)",
+   "coveredBy": [
+    "PAP-445",
+    "PAP-439"
+   ],
+   "status": "covered",
+   "note": "module-system."
+  },
+  {
+   "feature": "Time-box and budget guard for research sessions",
+   "coveredBy": [
+    "PAP-111"
+   ],
+   "status": "covered",
+   "note": "agents."
+  },
+  {
+   "feature": "Registry rendered through the views engine",
+   "coveredBy": [
+    "PAP-216"
+   ],
+   "status": "partial",
+   "note": "Plain table by design; swap later. Not issued."
+  },
+  {
+   "feature": "Third-party API terms and rate limits tracking",
+   "coveredBy": [
+    "PAP-210",
+    "PAP-121"
+   ],
+   "status": "partial",
+   "note": "vendorRateLimit in the catalog; ToS not tracked. Not issued."
+  },
+  {
+   "feature": "Deprecation tracking and runtime warnings",
+   "coveredBy": [
+    "PAP-216",
+    "r4/libraries/library-guardrails-lint"
+   ],
+   "status": "covered",
+   "note": "Status plus lint warnings window."
+  },
+  {
+   "feature": "Contract package, conformance suite, kernel wiring",
+   "coveredBy": [
+    "PAP-493",
+    "PAP-495",
+    "PAP-497"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Golden task for Scout evaluations",
+   "coveredBy": [
+    "PAP-218",
+    "PAP-110"
+   ],
+   "status": "covered",
+   "note": ""
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/libraries/spike-harness-kit",
+   "title": "Spike harness kit: `spikes/_kit` with route-per-candidate Vite template, Playwright trace-to-FPS script, bundle analyzer output and the `pnpm spike` runner",
+   "type": "Infra",
+   "phase": "P0",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Evaluation process",
+   "dueDate": "2026-09-20",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-13"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Infra S\n\n**Goal**\n\nFive research issues (PAP-212, PAP-292, PAP-293, PAP-294, PAP-127) each describe the same harness: a Vite app with a route per candidate, Playwright traces turned into FPS numbers, `vite build --mode analyze` JSON per route, screenshots at three widths and two themes, and a `pnpm spike <dir> --lib <id>` command. Build it once so every spike measures the same way and Scout compares like with like.\n\n**Scope**\n\nIn: `spikes/_kit/` with `createSpikeApp({ candidates })` (Vite 6, React 19, TanStack Router, PAP-66 tokens when present), `playwright.spike.config.ts`, `scripts/trace-fps.ts` (CDP trace to mean and p5 FPS), `scripts/bundle.ts` (rollup-plugin-visualizer JSON to `results/<lib>.bundle.json`), `scripts/shots.ts` (375, 1024, 1920, light and dark, axe), `results.schema.json` (Zod), root script `pnpm spike <dir> [--lib <id>] [--bench|--shots|--dev]`; `spikes/**` excluded from `turbo build`, `knip` and Gate 3; `docs/libraries/spikes.md`. Out: the spikes themselves, scoring (PAP-209 `pnpm lib score` reads `results/`).\n\n**Spec**\n\n* Candidate contract: `spikes/<dir>/candidates/<lib>/{index.tsx,package.json}`; the kit mounts each at `/c/<lib>` and injects the shared fixture data (`fixtures/rows.ts`: 100k rows generator with a fixed seed, 10k-point series, 5k markers).\n* `trace-fps.ts` throttles CPU 4x (PAP-292 reference profile), scrolls or pans for 5 s, reads `DrawFrame` events, writes `{ meanFps, p5Fps, longFrames }`; numbers reproducible within 5 percent across three runs or the script reports `unstable`.\n* Bundle: per-candidate gzip of the route chunk minus the shared React and router chunk, so libraries are compared on their own weight.\n* Results folder shape `results/<lib>.{fps,bundle,axe}.json` plus `results/summary.json` validated by `results.schema.json`; `pnpm lib score --facts-from results/` (PAP-209) consumes it.\n* Tauri check helper `scripts/tauri-window.ts` opens a candidate route in a secondary PAP-19 window when the shell exists (PAP-212 portal test).\n\n**Interface contract**\n\nProvides: `@paperos/spike-kit` (private), `pnpm spike`, `results.schema.json`, fixture generators, `docs/libraries/spikes.md`. Consumes: monorepo layout (PAP-13), tokens (PAP-66, soft), Tauri shell (PAP-19, soft), rubric CLI input shape (PAP-209). Consumed by: PAP-212, PAP-292, PAP-293, PAP-294, PAP-127 spikes, PAP-215 children for screenshots, PAP-218 candidates later.\n\n**Definition of done**\n\n* Kit merged with one sample candidate (`spikes/_kit/example`), `pnpm spike _kit/example --bench --shots` produces FPS, bundle and axe JSON plus six screenshots on the CI runner.\n* Three consecutive bench runs within 5 percent; `docs/libraries/spikes.md` with the candidate contract; comments on PAP-212, PAP-292, PAP-293 naming the kit; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: results schema, FPS extraction from a recorded trace fixture, bundle subtraction math.\n* Integration: full run on the example candidate in CI; `turbo build` ignores `spikes/`.\n* E2E: none beyond the kit's own Playwright run.\n\n**Demo**\n\nRun `pnpm spike _kit/example --bench`, read the FPS table, open `results/summary.json`, then `--shots` and view the 1920 dark screenshot. Under two minutes.\n\n**Edge cases**\n\n* Candidate needs a global CSS import: kit allows `styles.css` per candidate and records it as a composability note.\n* Library incompatible with React 19: candidate marked `failed: peer` in summary, not a kit error.\n* CI runner slower than the reference: FPS normalised by the example candidate's baseline run in the same job.\n\n**Dependencies**\n\nHard: PAP-13. Soft: PAP-66, PAP-19, PAP-209. Informs PAP-212, PAP-292, PAP-293, PAP-294 (they build inline if the kit is unmerged, then migrate).\n\n**Agent**\n\nBuilder: Scout (Library Evaluator) with Nova. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/libraries/compose-smoke-workflow",
+   "title": "Reusable `compose-smoke` workflow: matrix over `ops/compose/**` and `spikes/oss-products/*`, health probes, `docker stats` capture, image cache and 20-minute cap",
+   "type": "Infra",
+   "phase": "P0",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Core adoptions decided",
+   "dueDate": "2026-09-24",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Infra S\n\n**Goal**\n\nSeven issues (PAP-214, PAP-215 and their six children) assert that a `compose-smoke` CI job starts every candidate and winner with `docker compose up --wait` and captures `docker stats`. None of them builds the job. Ship the reusable workflow first so the spikes report numbers the same way and the resource budget table (PAP-296) is generated, not typed.\n\n**Scope**\n\nIn: `.github/workflows/compose-smoke.yml` (reusable, `workflow_call` and `workflow_dispatch`) discovering compose files under `ops/compose/**` and `spikes/oss-products/*/docker-compose.yml`, running each in its own job with `--wait --wait-timeout 600`, a health probe from a `x-paperos.healthcheck` extension field, `docker stats --no-stream` JSON after a `x-paperos.warmupSeconds` warm-up, optional load script `x-paperos.load`, artefact `compose-smoke/<name>.json`; `scripts/compose-smoke/budget-table.ts` merging artefacts into `docs/adr/backend-resource-budget.md`; Forgejo Actions compatibility (PAP-50). Out: the compose files themselves, production deploys (PAP-26).\n\n**Spec**\n\n* Extension fields documented in `docs/libraries/compose-smoke.md`: `x-paperos: { healthcheck: url, warmupSeconds, load: script, ramBudgetMb, skipCi: reason }`; missing fields default to the first exposed port and 60 s.\n* Image cache: `docker/build-push-action` cache and a weekly pull-warm job so a 2 GB image (Cal.com, Twenty) does not time out; per-job cap 20 minutes, then `status: timeout` with the log tail.\n* Result JSON: `{ name, startedMs, healthy, ramIdleMb, ramLoadedMb, cpuPct, imageSizeMb, status }` validated by a Zod schema shared with PAP-296's budget script.\n* Budget table script sums `ramLoadedMb` for files under `ops/compose/` only (winners), prints headroom against the 6 GB budget and fails when over.\n* Secrets: compose files read `.env.example` placeholders only; anything needing a real key sets `skipCi` and runs nightly on staging through the credential broker (PAP-300).\n\n**Interface contract**\n\nProvides: reusable workflow, extension field grammar, result schema, budget-table script, `docs/libraries/compose-smoke.md`. Consumes: Gate 1 job slot and setup action (PAP-78), Forgejo runners (PAP-50, soft), VPS profile numbers (PAP-25, soft). Consumed by: PAP-295, PAP-296, PAP-297, PAP-350, PAP-351, PAP-352 (`compose-smoke` in their DoDs), PAP-42 local stack (same extension fields), PAP-253 nightly.\n\n**Definition of done**\n\n* Workflow green on the PAP-42 dev stack compose and on one spike compose; artefacts uploaded; budget table generated from artefacts.\n* Timeout path proven with a deliberately broken compose (screenshot); `docs/libraries/compose-smoke.md`; comments on PAP-214 and PAP-215; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: extension field parsing, result schema, budget sum and headroom.\n* Integration: workflow run on GitHub and on a Forgejo runner for the same compose file.\n* E2E: none.\n\n**Demo**\n\nDispatch `compose-smoke` on `ops/compose/jobs.yml`, watch the job wait for health, download the JSON and run the budget script to see the table with headroom. Under two minutes after pull.\n\n**Edge cases**\n\n* Compose needs privileged mode or host networking: `skipCi` with reason; measured by hand on staging.\n* Two services share a port: jobs run in isolated Docker networks per matrix entry.\n* Runner disk full from images: nightly prune step and a 15 GB guard before pulling.\n\n**Dependencies**\n\nNone hard (a reusable workflow file; ready on creation). Soft: PAP-78 (job slot and setup action; runs standalone until then), PAP-50, PAP-25, PAP-300, PAP-42. Informs PAP-295, PAP-296, PAP-350, PAP-351, PAP-352 (they run compose by hand if unmerged, then adopt the workflow).\n\n**Agent**\n\nBuilder: Forge (Ops Runner) with Scout. Reviewer: Sentinel (Security Auditor for secrets handling).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/libraries/facts-security-quality",
+   "title": "Extend `lib-facts` with OpenSSF Scorecard, deps.dev advisories, `publint` and `arethetypeswrong` checks feeding a `security` and a `packaging` rubric extra",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Core adoptions decided",
+   "dueDate": "2026-09-24",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-209"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-209's facts collector reads downloads, stars, license, types and size. It does not read what the OpenSSF Scorecard, deps.dev and the packaging linters already know: dangerous workflows, unpinned dependencies, known advisories, broken `exports` maps and wrong type resolution. Add those facts and two optional rubric extras so Scout rejects fragile packages before a spike is written.\n\n**Scope**\n\nIn: `scripts/lib-facts.ts` collectors `scorecard` (api.securityscorecards.dev), `depsdev` (advisories, dependents, OpenSSF score mirror), `publint` and `attw` (run against the fetched tarball in a temp dir); `facts.json` gains `security { scorecard, checks{}, advisories[] }` and `packaging { publint[], attw: { node16, bundler, esm } }`; rubric extras `security` and `packaging` in `rubric.yaml` (weight 0 by default, enabled per scorecard with `extras`); hard gate `openAdvisory: critical` added to PAP-209's gates; `docs/libraries/rubric.md` section. Out: our own SBOM and audit (PAP-80), supply-chain policy (PAP-358).\n\n**Spec**\n\n* Scorecard facts: overall score and the checks `Dangerous-Workflow`, `Pinned-Dependencies`, `Maintained`, `Vulnerabilities`, `Code-Review`, `Signed-Releases`; anchors: 4 at or above 7.0, 0 below 3.0 or `Dangerous-Workflow` failing.\n* Packaging anchors: 4 when `publint` has no errors and `attw` resolves in all three modes; 2 with warnings; 0 when types fail in `bundler` mode (the mode Vite uses).\n* Cache per package version for 7 days in `.cache/lib-facts/`; rate limits respected with backoff; unavailable APIs mark facts `stale` and never fail the CLI (matches PAP-209's rule).\n* `pnpm lib score` prints the two extras only when present; the ADR Alternatives table gains optional columns.\n* Non-npm candidates (crates, images): `security` from deps.dev where indexed, `packaging` `n/a`.\n\n**Interface contract**\n\nProvides: extended `facts.json` shape (Zod bump, additive), extras `security` and `packaging`, gate `openAdvisory`, collectors. Consumes: `lib-facts` and `RubricSchema` (PAP-209), `GITHUB_TOKEN` handling from PAP-209, license tiers for advisories context (PAP-211). Consumed by: PAP-212 to PAP-215 scorecards (re-run `--facts-only` is enough), PAP-216 `lib add` (facts filled), PAP-218 pre-scores, `r4/libraries/dependency-health-page`.\n\n**Definition of done**\n\n* Facts for the worked example (TanStack Table vs AG Grid) regenerated with the new fields; a fixture package with a critical advisory fails the gate; `publint` warnings appear in the rendered table.\n* `docs/libraries/rubric.md` updated; comment on PAP-209; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: collectors against recorded HTTP fixtures, anchor mapping, cache expiry, stale handling.\n* Integration: `pnpm lib score docs/libraries/examples/*.yaml` in Gate 1 still exits 0.\n* E2E: none.\n\n**Demo**\n\nRun `pnpm lib facts @tanstack/react-table` and read the Scorecard score, then run it on a package with a known advisory and see the `openAdvisory` gate fail. Under one minute.\n\n**Edge cases**\n\n* Package not on GitHub: Scorecard `n/a`, extra drops and rescales per PAP-209.\n* Monorepo package: Scorecard of the repo, packaging of the package.\n* Advisory withdrawn: cache invalidated on the next run; scorecard re-rendered.\n\n**Dependencies**\n\nHard: PAP-209. Soft: PAP-211, PAP-80.\n\n**Agent**\n\nBuilder: Scout (Library Evaluator). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/libraries/dependency-hygiene",
+   "title": "Monorepo dependency hygiene: pnpm `catalog:` for shared versions, `syncpack` alignment, `pnpm dedupe --check`, `knip` unused dependencies in Gate 1",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Registry live",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-13",
+    "PAP-78"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra M\n\n**Goal**\n\nTwenty parallel sessions running `pnpm add` in twenty packages will produce three versions of `zod`, two of `@tanstack/react-query` and a dozen unused dependencies within a week. PAP-264 mentions a `knip` baseline and PAP-217 keeps versions fresh; nothing keeps them aligned. Adopt pnpm catalogs for shared versions and add the three checks that fail a PR before drift lands.\n\n**Scope**\n\nIn: `pnpm-workspace.yaml` `catalog:` (and named catalogs `react19`, `tooling`) for every dependency used by two or more packages, with a codemod moving existing `package.json` entries to `catalog:`; `.syncpackrc` (`versionGroups` mirroring the catalog, `semverGroups: pin`) and `pnpm syncpack lint` in Gate 1; `pnpm dedupe --check`; `knip.json` with the workspace plugins and the PAP-264 baseline, `pnpm knip --production` in Gate 1 with a baseline file and expiry like PAP-115's; Renovate (PAP-217) `pnpm.catalog` support enabled; `docs/libraries/dependency-hygiene.md`. Out: license tiers (PAP-211), vulnerability scanning (PAP-80), the registry (PAP-216).\n\n**Spec**\n\n* Rule: a dependency in two or more workspace packages must come from a catalog (`syncpack` `versionGroups` with `policy: sameRange`); a single-package dependency may pin locally; peer dependency ranges follow the catalog.\n* `knip` covers unused dependencies, unused exports of contract packages (reported, not failed, since contracts are APIs) and unresolved imports; `spikes/**` and `generated/**` ignored.\n* Baselines: `.knip-baseline.json` and `.syncpack-baseline.json` with `expires` 14 days ahead; growth needs the `dep-baseline` label, matching the PAP-115 pattern.\n* Gate 1 step `deps` runs the three checks in under 30 s warm and posts one sticky-comment section with the offending packages and the fix command (`pnpm syncpack fix-mismatches`, `pnpm dedupe`).\n* Registry link: `pnpm lib registry build` (PAP-216) reads the catalog as the source of `version` when present, so the registry shows one version per library.\n\n**Interface contract**\n\nProvides: catalogs, `.syncpackrc`, `knip.json`, Gate 1 step `deps`, baselines, codemod `scripts/deps/to-catalog.ts`, docs. Consumes: workspace layout (PAP-13), Gate 1 slot and sticky comment (PAP-78), `knip` baseline (PAP-264), Renovate preset (PAP-217). Consumed by: PAP-216 registry build, PAP-217 grouped upgrades (catalog bumps are one PR), PAP-439 dependency map (fewer duplicate nodes), every session that runs `pnpm add`.\n\n**Definition of done**\n\n* Template migrated to catalogs with zero `syncpack` mismatches; `pnpm dedupe --check` and `knip` clean with a committed baseline; Gate 1 step green on `main` and red on a seeded PR adding a second `zod` range (screenshot).\n* `docs/libraries/dependency-hygiene.md` (how to add a dependency); CLAUDE.md gains one line; CHANGELOG entry; comment on PAP-217 about catalog support.\n\n**Test plan**\n\n* Unit: codemod on a fixture workspace; baseline expiry logic.\n* Integration: the three checks in CI on both forges; timing under 30 s.\n* E2E: none.\n\n**Demo**\n\nAdd `zod@^3` to one package while the catalog says `^4`, push, watch the `deps` step fail with the fix command; run `pnpm syncpack fix-mismatches` and see green. Under two minutes.\n\n**Edge cases**\n\n* Library needing two majors during a migration (React 19 and a legacy tool): named catalog per major with an expiry note in the registry.\n* Tauri Rust crates: out of scope for syncpack; `cargo deny` bans duplicate crate versions in PAP-211's `deny.toml`.\n* Generated `package.json` in `spikes/`: ignored by all three checks.\n\n**Dependencies**\n\nHard: PAP-13, PAP-78. Soft: PAP-264, PAP-217, PAP-216, PAP-439.\n\n**Agent**\n\nBuilder: Scout (Library Evaluator) with Forge (Ops Runner). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/libraries/library-usage-notes",
+   "title": "Adopted-library usage notes: one `docs/libraries/notes/<id>.md` per adopted library with import conventions, banned APIs, gotchas and version pin, linted against the registry",
+   "type": "Docs",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Registry live",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-216"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Docs M\n\n**Goal**\n\nThe registry says what we adopted and why; it does not tell a cold session how to use it here: which import path, which APIs are off limits, which version quirk cost a day last time. Agent-friendliness is a rubric criterion for the library; this issue is the agent-friendliness of our adoption. One short note per adopted library, generated as a skeleton, filled by the adopting issue, linted so none is missing.\n\n**Scope**\n\nIn: `docs/libraries/notes/<registryId>.md` with frontmatter `{ library, version (from lockfile), owner, adr, llmsTxt?, updated }` and fixed sections `Use it for`, `Import`, `Do not`, `Gotchas`, `Patterns` (links to our code), `Upgrade notes`; `pnpm lib notes scaffold <id>` writing the skeleton from the registry entry and facts (`docsUrl`, `llms.txt` when the package publishes one); registry check rule `adopted` without notes is a warning for 7 days then an error; notes rendered in the PAP-128 docs engine under Reference and included in `llms-full.txt` (`r4/collab/agent-readable-docs`); the first twenty notes for the current production dependencies. Out: full API docs (link out), the registry itself.\n\n**Spec**\n\n* `Do not` lines are machine-readable: `- ban: lodash` or `- ban: moment#format` so `r4/libraries/library-guardrails-lint` can generate lint rules from them.\n* Notes are under 400 words; `docs:lint` (PAP-128) enforces the section list and the word cap; `version` is refreshed by `pnpm lib registry build` and a stale note (version behind the lockfile by a major) is flagged `needs-review`.\n* Skeleton fills `Use it for` from the registry `reasons`, `Import` from the package `exports` map (deep imports listed), `Upgrade notes` from PAP-217's last summary comment when one exists.\n* The PAP-109 memory loader and PAP-92 playbook point sessions at `docs/libraries/notes/` before they write code against a library; PAP-105's `page-from-spec` skill lists the relevant notes for the components a spec uses.\n* Twenty seed notes cover at least: react, @tanstack/router, @tanstack/react-query, drizzle-orm, zod, @orpc/server, better-auth, yjs, @hocuspocus/provider, @tiptap/core, @xyflow/react, tailwindcss, @base-ui-components/react (or the PAP-212 winner), vitest, playwright, pg-boss, electric-sql, biome, storybook, @modelcontextprotocol/sdk.\n\n**Interface contract**\n\nProvides: notes folder and frontmatter schema, `pnpm lib notes scaffold|check`, `ban:` grammar, registry check rule, twenty seed notes. Consumes: registry entries and facts (PAP-216, PAP-209), docs engine and lint (PAP-128), lockfile versions, Renovate summaries (PAP-217, soft). Consumed by: `r4/libraries/library-guardrails-lint`, PAP-109 memory, PAP-92 playbook, PAP-105 skills, PAP-218 (notes for new adoptions), `r4/collab/agent-readable-docs`.\n\n**Definition of done**\n\n* Twenty notes merged, lint clean, rendered in the docs engine (screenshots at 375 and 1280); a registry entry without notes trips the check on a fixture.\n* Sentinel reviews five notes for accuracy against the current code; `docs/libraries/notes/README.md`; CHANGELOG entry; comments on PAP-92 and PAP-109.\n\n**Test plan**\n\n* Unit: skeleton generation from a fixture entry, section lint, `ban:` parsing, staleness detection.\n* Integration: `pnpm lib registry check` with and without notes.\n* E2E: none.\n\n**Demo**\n\nRun `pnpm lib notes scaffold @xyflow/react`, fill two gotchas, run `pnpm docs:lint`, open the note in `/_app/docs/reference/libraries`. Under two minutes.\n\n**Edge cases**\n\n* Library adopted but only used in `dev` context: notes still required, shorter template.\n* Two registry entries for one npm scope (`@radix-ui/*` unified): one note per registry id with aliases.\n* Note contradicts an ADR: lint cannot know; reviewer checklist item in PAP-79.\n\n**Dependencies**\n\nHard: PAP-216. Soft: PAP-128, PAP-209, PAP-217, PAP-109, PAP-92, PAP-105.\n\n**Agent**\n\nBuilder: Scout (Library Evaluator) with Quill. Reviewer: Sentinel (Code Reviewer) and Nova (accuracy of five notes).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/libraries/library-guardrails-lint",
+   "title": "Library guardrails as lint: generated `no-restricted-imports` from rejected and replaced registry entries plus `ban:` lines in usage notes, wired into Gate 1",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Registry live",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-216",
+    "r4/libraries/library-usage-notes"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nThe registry knows we rejected `moment` and replaced `@radix-ui/*` with the unified package; the lockfile check (PAP-216) catches the dependency, but not the import of a banned API from an allowed library, nor a transitive package imported directly. Turn registry status and the notes' `ban:` lines into lint rules so the guardrail fires in the editor and in Gate 1, with the reason and the replacement in the message.\n\n**Scope**\n\nIn: generator `pnpm lib guardrails build` in `tools/libraries/guardrails.ts` writing `biome.generated.jsonc` (Biome `noRestrictedImports` with per-path messages) and, for patterns Biome cannot express (member bans like `lodash/cloneDeep` deep paths or `moment#format`), an ESLint flat-config fragment `eslint.guardrails.generated.js` run only on changed files in Gate 1; sources: registry entries with status `rejected|replaced|deprecated` (message from `reasons` and `replacedBy`), `ban:` lines from usage notes, and the PAP-305 boundary map's cross-module bans re-exported for one message format; drift check `pnpm lib guardrails --check`; `docs/libraries/guardrails.md`. Out: the boundary lint itself (PAP-305, PAP-439), formatting.\n\n**Spec**\n\n* Message format: `<pkg> is <status> in the registry: <reason>. Use <replacedBy> (docs/libraries/notes/<id>.md).`; every message links a note or an ADR.\n* Direct import of a transitive dependency not in the package's own `package.json` is banned (`no-extraneous-dependencies` equivalent) with the hint to `pnpm add` it and register it.\n* Waivers: `// paperos-allow: <pkg> <PAP-n>` on the import line, counted and listed in the weekly re-audit (PAP-306); expired ADR waivers (PAP-211 style) fail.\n* Generation is deterministic and runs in `pnpm lib registry build`; Gate 1 fails when the generated config is stale.\n* Performance: Biome part costs nothing extra; the ESLint fragment runs on the PR's changed files only, under 20 s.\n\n**Interface contract**\n\nProvides: generated Biome and ESLint fragments, `pnpm lib guardrails build|--check`, waiver grammar, docs. Consumes: registry statuses and `replacedBy` (PAP-216), `ban:` lines (`r4/libraries/library-usage-notes`), boundary rules (PAP-305, soft), Gate 1 lint step (PAP-78). Consumed by: Gate 1, PAP-306 re-audit (waiver count), PAP-217 (a replaced package's upgrade PR is closed with the guardrail message), PAP-218 (new rejections become rules on merge).\n\n**Definition of done**\n\n* Seeded import of a `rejected` package fails Gate 1 with the registry message; a `ban:` member import fails; a waiver with an ADR passes; generated config drift is red.\n* `docs/libraries/guardrails.md`; CHANGELOG entry; Linear comment with the red run screenshot.\n\n**Test plan**\n\n* Unit: rule generation from fixture registry and notes, message format, waiver parsing and expiry.\n* Integration: Biome and ESLint runs on a fixture package with violations; changed-files filter.\n* E2E: none.\n\n**Demo**\n\nMark `moment` as `rejected` with `replacedBy: date-fns` in a fixture registry, run `pnpm lib guardrails build`, import `moment` in a file and read the Biome message pointing at the note. Under one minute.\n\n**Edge cases**\n\n* Library replaced but still used in 40 files: rules generated as warnings for 14 days (registry `deprecated` window), then errors.\n* Type-only import of a banned package: still banned (R8 spirit).\n* Spikes importing rejected libraries on purpose: `spikes/**` excluded.\n\n**Dependencies**\n\nHard: PAP-216, `r4/libraries/library-usage-notes`. Soft: PAP-305, PAP-78, PAP-306, PAP-217.\n\n**Agent**\n\nBuilder: Scout (Library Evaluator). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/libraries/patch-fork-policy",
+   "title": "Patch and fork policy: `pnpm patch` rules, `patches/` entries in the registry with upstream PR link and expiry, CI check that every patch is registered",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Registry live",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-216",
+    "PAP-211"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nAn agent that hits a library bug at 3 a.m. will run `pnpm patch`, fix it locally and move on. Six months later nobody knows why `patches/foo@1.2.3.patch` exists or whether upstream fixed it. PAP-215 already says `fork` needs Justin; extend the same governance down to patches: every patch has a registry row, an upstream link and an expiry, checked in CI.\n\n**Scope**\n\nIn: `docs/libraries/patch-policy.md` (when to patch, when to fork, when to vendor; upstream-first rule); registry entry extension `patches[] { file, reason, upstreamIssue, upstreamPr?, expires, owner }` (PAP-216 schema, additive); `pnpm lib patch add <pkg> --reason --upstream <url>` wrapping `pnpm patch-commit` and writing the registry row; check `pnpm lib registry check` rule: every file in `patches/` and every `pnpm.patchedDependencies` entry has a row, no row without a file, expired patches fail; Renovate (PAP-217) config to open a `patch-review` issue when the patched package upgrades; `docs/libraries/patch-policy.md`. Out: forks (Needs Justin per PAP-215), vendoring of whole products.\n\n**Spec**\n\n* Patch rules: allowed only for bugs with an upstream issue link filed by us or found; maximum 200 changed lines; expiry 90 days, renewable once by the owner with a comment; a second renewal needs an ADR.\n* `patchedDependencies` in `package.json` must pin the exact version the patch was made for; Renovate bumps that touch a patched package are labelled `needs-patch-review` and never automerge (PAP-217 rule).\n* Fork path: `fork` status in the registry (PAP-216) requires an accepted ADR with Justin among deciders; the fork lives in `imagine-os/<upstream>-fork` with a `FORK.md` diff summary regenerated weekly.\n* Vendored snippets (copy of a small MIT function) are `docs/registry/trivial.yaml` entries with the source URL and license text.\n* License: a patch keeps the upstream license; `THIRD_PARTY_NOTICES.md` (PAP-211) lists patched packages with the patch file name.\n\n**Interface contract**\n\nProvides: policy doc, registry `patches[]` field, `pnpm lib patch add`, check rules, Renovate label rule. Consumes: registry schema and check (PAP-216), notices generator (PAP-211), Renovate preset (PAP-217, soft), ADR process (PAP-130). Consumed by: PAP-217, PAP-306 re-audit (expiring patches), PAP-358 supply-chain policy (patched packages are pinned by digest), Scout sessions.\n\n**Definition of done**\n\n* Policy merged; a fixture patch without a row fails the check; an expired row fails; `pnpm lib patch add` writes both files; notices list the patch.\n* `docs/libraries/patch-policy.md`; CHANGELOG entry; comment on PAP-217 with the label rule.\n\n**Test plan**\n\n* Unit: check rules with fixtures, expiry with a fake clock, line-count guard.\n* Integration: `pnpm lib patch add` on a fixture package in a temp workspace.\n* E2E: none.\n\n**Demo**\n\nRun `pnpm lib patch add left-pad --reason 'null input' --upstream https://github.com/x/y/issues/1`, edit, commit, run the check clean; set `expires` to yesterday and see it fail. Under two minutes.\n\n**Edge cases**\n\n* Patch for a package under `spikes/`: ignored.\n* Upstream merged the fix: Renovate PR carries `needs-patch-review`; the check reminds the owner to drop the patch when the version matches `upstreamPr` release.\n* Patch touches a license header: rejected by the line filter.\n\n**Dependencies**\n\nHard: PAP-216, PAP-211. Soft: PAP-217, PAP-130, PAP-358, PAP-306.\n\n**Agent**\n\nBuilder: Scout (Library Evaluator). Reviewer: Sentinel (Code Reviewer) with Atlas on the policy text.\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/libraries/dependency-health-page",
+   "title": "Dependency health page: outdated versions, pending majors, advisories, license mix, bundle share and review-due entries rendered from the registry and CI reports",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Staff"
+   ],
+   "milestone": "Registry live",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-216"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-216 lists what we use, PAP-217 mirrors Renovate's dashboard into a Linear issue, PAP-80 writes `security.json`, PAP-211 writes `licenses.json` and PAP-87 measures bundle weight. Justin and Scout have to read five artefacts to answer 'how healthy are our dependencies'. Render one page from those files.\n\n**Scope**\n\nIn: `/_app/docs/registry/health` (MDX plus a small React table via PAP-128, like PAP-216's page) built from `registry.json`, `reports/licenses.json` (PAP-211), `reports/security.json` (PAP-80, soft), PAP-87's `size-limit` output and the `outdated` snapshot written by a nightly `pnpm outdated --json` job; sections: outdated (minor, major), advisories by severity, license mix pie (dataviz palette), top-20 bundle contributors, review-due and stale-facts entries, patches expiring (`r4/libraries/patch-fork-policy`); `pnpm lib health` CLI printing the same as a table; `health.json` artefact for PAP-89's digest. Out: fixing anything, Renovate configuration (PAP-217), the registry page itself.\n\n**Spec**\n\n* Data freshness stamped per source; a missing source renders a placeholder naming the owning issue (same pattern as `r4/collab/docs-reference-hub`).\n* Outdated job (PAP-43 cron nightly) writes `docs/.generated/outdated.json` from `pnpm outdated --json` and `cargo outdated` when `Cargo.lock` exists; diff against yesterday produces the 'new majors' list.\n* Bundle share: per-dependency gzip attribution from the analyzer JSON PAP-87 already produces for key routes, top 20 with the route they weigh on.\n* Thresholds: red when any critical advisory is open or more than five majors pending for over 30 days; amber for review-due; the summary line feeds PAP-89's release digest as one row.\n* Page is `audience: [developer, staff]`; `pnpm lib health --json` is what PAP-306's weekly re-audit reads.\n\n**Interface contract**\n\nProvides: health page, `pnpm lib health`, `health.json`, nightly outdated job. Consumes: `registry.json` (PAP-216), `licenses.json` (PAP-211), `security.json` (PAP-80, soft), size-limit output (PAP-87, soft), facts (PAP-209), jobs (PAP-43), docs rendering (PAP-128), dataviz palette (PAP-170 guidance). Consumed by: PAP-89 digest, PAP-306 re-audit, PAP-217 (links from the dashboard issue), Justin.\n\n**Definition of done**\n\n* Page renders from real artefacts on `main` with placeholders for missing ones; thresholds proven with a seeded critical advisory; screenshots at 375, 1024 and 1920 in light and dark; axe clean.\n* `health.json` consumed by a PAP-89 fixture; `docs/libraries/health.md`; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: source merging, threshold logic, bundle attribution parsing, diff of outdated snapshots.\n* Integration: nightly job writes the snapshot on the compose stack.\n* E2E (Playwright): open the page, filter outdated to majors, click through to a registry entry.\n\n**Demo**\n\nOpen `/_app/docs/registry/health`, read the summary line, expand pending majors, click `@tanstack/react-query` and land on its registry entry and note. Under one minute.\n\n**Edge cases**\n\n* No `Cargo.lock` yet: Rust section hidden with a notice.\n* Analyzer JSON absent on a PR build: bundle section reads the last `main` artefact.\n* Thousands of transitive advisories: grouped by direct dependency.\n\n**Dependencies**\n\nHard: PAP-216. Soft: PAP-211, PAP-80, PAP-87, PAP-43, PAP-128, PAP-89, PAP-306, `r4/libraries/patch-fork-policy`.\n\n**Agent**\n\nBuilder: Scout (Library Evaluator) with Nova on the table. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/libraries/import-census",
+   "title": "Import census: `pnpm lib census` records which modules and files import each adopted library, refreshes migration-cost estimates and adds a swap-impact column to the registry",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Registry live",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-216",
+    "PAP-439"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nThe module system exists so we can swap things. Swapping a library is the same question one level down: who imports `@xyflow/react`, from how many files, through which modules? PAP-216 records `usedBy` at the package level from the lockfile; the dependency map (PAP-439) walks module imports. Join them into a census that makes the registry's `migrationCostHours` a number with evidence.\n\n**Scope**\n\nIn: `pnpm lib census` in `tools/libraries/census.ts` walking the import graph PAP-439 already builds (dependency-cruiser JSON) plus a `ts-morph` pass for named imports, writing `docs/.generated/library-census.json` `{ library: { modules[], files, namedImports: { name: count }, deepImports[], firstSeen } }`; registry build merges `census` into each entry and computes `swapImpact: low|medium|high` (files and modules thresholds) and a refreshed `migrationCostHours` estimate (`files * 0.25 + modules * 2`, overridable); registry page column and filter; `docs/libraries/census.md`. Out: performing swaps, the dependency map itself.\n\n**Spec**\n\n* Named-import counts show which API surface we depend on (`useReactFlow: 14, Background: 3`), the input for a swap ADR's 'what we actually use' section and for `r4/libraries/library-usage-notes` `Import` sections.\n* Deep imports (`lodash/cloneDeep`, `@tiptap/core/dist/x`) are listed separately; more than three deep imports raise `swapImpact` one level and add a note suggestion.\n* `firstSeen` from git blame of the first import line, so the census can say a library crept in without a registry entry (fed to PAP-216's check as a warning).\n* Runs in `pnpm lib registry build` in under 20 s on the template; committed output drift-checked by the existing `registry-drift` job.\n* Module boundary: census only reports; if a library appears in two modules that should share it through a contract, the note is a hint for PAP-439's owners, not an error here.\n\n**Interface contract**\n\nProvides: `library-census.json`, `swapImpact`, refreshed `migrationCostHours`, registry column. Consumes: dependency-cruiser output and module map (PAP-439), registry build (PAP-216), `ts-morph`. Consumed by: PAP-442 swap playbook (impact input), `r4/libraries/library-usage-notes`, `r4/libraries/dependency-health-page`, ADRs proposing replacements, PAP-306 re-audit.\n\n**Definition of done**\n\n* Census generated for the template; three known libraries show plausible counts (spot check by reviewer); registry page shows `swapImpact` with a filter; drift job covers the output.\n* `docs/libraries/census.md`; CHANGELOG entry; comment on PAP-442.\n\n**Test plan**\n\n* Unit: named import extraction fixtures (default, namespace, type-only, re-export), impact thresholds, cost formula and override.\n* Integration: run on the template repo in CI within budget.\n* E2E: none.\n\n**Demo**\n\nRun `pnpm lib census`, open the JSON for `@tanstack/react-table`, read the named imports, then open the registry filtered to `swapImpact: high`. Under one minute.\n\n**Edge cases**\n\n* Library imported only in `generated/**`: counted separately as `generated` so a codegen change fixes it, not a migration.\n* Dynamic `import()`: counted with the literal specifier; non-literal specifiers listed as `unknown`.\n* Type-only imports: counted, flagged `typeOnly` (cheap to swap).\n\n**Dependencies**\n\nHard: PAP-216, PAP-439. Soft: PAP-442, PAP-306.\n\n**Agent**\n\nBuilder: Scout (Library Evaluator). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/libraries/oss-licenses-page",
+   "title": "In-app open source licenses: public `/_public/licenses` page and desktop About dialog rendering `THIRD_PARTY_NOTICES.md` per bundle",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Registry live",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-211"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-211 generates `THIRD_PARTY_NOTICES.md` and bundles it into Tauri resources. Attribution licenses (MIT, Apache, OFL for fonts) require the notice to be visible to end users, which a file inside an app bundle is not. Render it: one public page every generated app ships, and the desktop About dialog.\n\n**Scope**\n\nIn: route `/_public/licenses` (page spec `public/licenses.spec.yaml`, `layout.template: public`, `seo.noindex: false`) rendering the notices grouped by license with search and a per-bundle switch (web, desktop) from the JSON form PAP-211 emits (`reports/notices.json`); Tauri About dialog (`apps/desktop`, PAP-255 menu) opening the same content in a window with the app version from `/__version`; footer link in the customer portal shell (PAP-62) and the landing template (`r4/spec-builder/page-spec-templates`); `docs/libraries/notices.md`. Out: generating notices (PAP-211), license decisions.\n\n**Spec**\n\n* Notices JSON: `{ bundle, generatedAt, packages: [{ name, version, license, licenseText?, repository, notice? }] }`; page virtualises the list (700+ packages), groups by SPDX id, shows the full text on expand, and includes fonts and icons (OFL, ISC) as PAP-211 requires.\n* Generated at build by PAP-211's notices step; the page reads a static import so it works offline in Tauri and on GitHub Pages demos (PAP-15).\n* About dialog: app name, version and SHA, link to the changelog (PAP-133) and the licenses window; menu item `Help > About PaperOS` (PAP-255).\n* Tenant branding (PAP-75) applies; the page is exempt from tenant module toggles (always present).\n* Page is registered with the spec validator like any page; conformance test asserts the list renders and the public access.\n\n**Interface contract**\n\nProvides: `/_public/licenses` page spec and view, `LicensesList`, About dialog, footer slot fill `shell.footer.links:licenses`. Consumes: `notices.json` (PAP-211), public layout (PAP-16), Tauri menu (PAP-255), version endpoint (PAP-26), changelog route (PAP-133), branding (PAP-75), slots (PAP-438). Consumed by: PAP-363 starter kit (footer), PAP-256 installers (attribution requirement), every generated app.\n\n**Definition of done**\n\n* Page renders 700 packages under 1 s at 375 and 1280 (virtualised); About dialog opens on Linux desktop with version and licenses; screenshots in light and dark; axe clean.\n* Conformance test green; `docs/libraries/notices.md`; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: grouping and search, JSON shape validation.\n* Integration: build produces `notices.json` for web and desktop bundles; static import resolves offline.\n* E2E (Playwright): open `/_public/licenses` anonymously, search `react`, expand a license text; Tauri smoke opens About.\n\n**Demo**\n\nOpen `/_public/licenses` in a private window, search `tiptap`, expand the MIT text, then open Help > About in the desktop build. Under one minute.\n\n**Edge cases**\n\n* Package with `SEE LICENSE IN` text (tldraw): full file text rendered from the notice.\n* Notices missing at dev time: page shows 'run `pnpm licenses:notices`' in dev, never in production builds (build fails instead).\n* Two bundles differ (desktop-only crates): switch shows both lists.\n\n**Dependencies**\n\nHard: PAP-211. Soft: PAP-16, PAP-255, PAP-26, PAP-133, PAP-75, PAP-438, PAP-363.\n\n**Agent**\n\nBuilder: Scout (Library Evaluator) with Iris. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/libraries/adopt-workflow-cli",
+   "title": "Adoption workflow CLI: `pnpm lib adopt <pkg>` chains facts, scorecard, ADR draft, registry entry, usage note and guardrails in one guided run",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Registry live",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-209",
+    "PAP-216",
+    "PAP-130",
+    "r4/libraries/library-usage-notes"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nBorrow-before-build is five commands across four issues: `lib facts`, `lib score`, `adr new`, `lib add`, `lib notes scaffold`. An agent under a turn budget will skip two of them. One command that walks the steps in order, stops at the gates and leaves a PR-ready set of files is what makes the process the default rather than the exception.\n\n**Scope**\n\nIn: `pnpm lib adopt <npm|crate:|image:> [--status trialing|adopted] [--issue PAP-n] [--yes]` in `tools/libraries/adopt.ts` (clack prompts) running: facts (PAP-209 plus `r4/libraries/facts-security-quality`), scorecard scaffold with extras prompt and `pnpm lib score` validation, hard-gate check (license tier via PAP-211, advisories, types), ADR draft via `pnpm adr new` with the Alternatives table pre-filled, registry entry via `pnpm lib add`, usage note skeleton, guardrails rebuild, and a final `pnpm lib registry check`; `--yes` accepts defaults for agents; JSON last line `{ ok, files[], gates{}, nextSteps[] }`; skill `.claude/skills/adopt-library/SKILL.md` (PAP-105 format) wrapping it. Out: the underlying tools, decisions (the ADR still needs review).\n\n**Spec**\n\n* Gate behaviour: a failing hard gate stops the run before any file is written and prints the reason and the PAP-211 waiver path; `--force` writes with `status: candidate` and a `gatesFailed[]` note for review.\n* Order is fixed; each step is idempotent so a re-run after fixing a gate continues from the first missing file.\n* `adopted` requires an accepted ADR: the CLI can only write `trialing` or `candidate`; promotion to `adopted` stays with PAP-216's transition rule after ADR acceptance.\n* Branch and commit: `lib/<id>` with PAP-46 trailers when `--issue` is given; the PR body lists the scorecard table (PAP-49 template).\n* Budget: no model calls; under 60 s excluding network.\n\n**Interface contract**\n\nProvides: `pnpm lib adopt`, skill `adopt-library`, JSON result shape. Consumes: `lib facts|score` (PAP-209), tiers (PAP-211), `adr new` (PAP-130), `lib add|registry check` (PAP-216), `lib notes scaffold`, `lib guardrails build`, trailers and PR template (PAP-46, PAP-49), skill lint (PAP-105). Consumed by: Scout sessions, PAP-218 (candidate entries), PAP-118 and PAP-105 skills when a spec needs a new library, PAP-217 (major upgrade to a new package is an adoption).\n\n**Definition of done**\n\n* `pnpm lib adopt @tanstack/react-virtual --status trialing --yes` on a scratch branch writes scorecard, ADR draft, registry entry, note and guardrails and passes the registry check; an SSPL fixture stops at the gate.\n* Skill listed for Scout in `skills.json`; `docs/libraries/adopting.md`; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: step ordering and idempotency with a mocked filesystem, gate stop, JSON output.\n* Integration: full run in a temp workspace against recorded facts.\n* E2E: none.\n\n**Demo**\n\nRun the adopt command on a small package, watch the six steps, open the ADR draft with the pre-filled table, run `pnpm lib registry check`. Under two minutes.\n\n**Edge cases**\n\n* Package already in the registry: offers `update` (refresh facts and note) instead of duplicating.\n* ADR numbering collision on a parallel branch: PAP-130's lint handles it at merge.\n* Non-npm candidate: skips packaging checks, asks for the image or crate source.\n\n**Dependencies**\n\nHard: PAP-209, PAP-216, PAP-130, `r4/libraries/library-usage-notes`. Soft: PAP-211, `r4/libraries/facts-security-quality`, `r4/libraries/library-guardrails-lint`, PAP-46, PAP-49, PAP-105, PAP-218.\n\n**Agent**\n\nBuilder: Scout (Library Evaluator). Reviewer: Sentinel (Code Reviewer) with Atlas on the process.\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/libraries/library-cost-model",
+   "title": "Library and service cost model: paid tiers, seats, renewal dates and monthly cost per registry entry with a line in the daily burn report",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Registry live",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-216",
+    "PAP-98"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 (Execution Schedule stretch pool; NJ-14 can reinstate). Not claimable before 10-01.\n\nThe registry records why we adopted AG Grid Community, tldraw or Resend; it does not record that the next tier costs money, when the trial ends or what the VPS services cost per month. PAP-98 reports Claude credit burn daily. Add the software line so Justin sees one number.\n\n**Scope**\n\nIn: registry entry field `cost { model: free|open-core|per-seat|usage|flat, tier, monthlyUsd, seats?, renewsAt?, cancelBy?, owner, notes }` (PAP-216 schema, additive); `pnpm lib costs` printing the monthly total by category and the next 30 days of renewals; `docs/.generated/costs.json`; one line in PAP-98's daily report (`Software: $x/mo, renewals: n`) and a `costs` section on `r4/libraries/dependency-health-page`; notification kind `library.renewal_due` 14 days before `cancelBy` to the owner. Out: invoices and payments (business-core), Claude credits (PAP-98).\n\n**Spec**\n\n* Costs are estimates entered by the owner from the vendor's public page with a URL; `verifiedAt` date; stale after 90 days (warning).\n* Self-hosted services (MinIO, Hocuspocus) carry `monthlyUsd: 0` and an `infraShare` note pointing at the PAP-296 resource budget instead.\n* Currency in `Money` wire form (PAP-302) converted to USD at entry time; `renewsAt` drives the notification.\n* Totals appear in the PAP-89 release digest once a week and in the PAP-98 daily report.\n* No secrets or account ids in the registry; billing portals are linked by URL only.\n\n**Interface contract**\n\nProvides: `cost` field, `pnpm lib costs`, `costs.json`, digest and burn-report lines, kind `library.renewal_due`. Consumes: registry schema and build (PAP-216), burn report (PAP-98), notification core (`r4/collab/notification-core`), `Money` (PAP-302), resource budget (PAP-296). Consumed by: PAP-98, PAP-89, Justin.\n\n**Definition of done**\n\n* Ten entries carry costs; `pnpm lib costs` totals them; a fixture renewal 10 days out triggers the kind; burn report shows the line on staging.\n* `docs/libraries/costs.md`; CHANGELOG entry.\n\n**Test plan**\n\n* Unit: schema, totals, staleness, renewal window.\n* Integration: notification kind fires through the core with the `/__test` clock.\n* E2E: none.\n\n**Demo**\n\nRun `pnpm lib costs`, read the total and the next renewal, open the health page costs section. Under one minute.\n\n**Edge cases**\n\n* Vendor changes pricing: owner edits with a new `verifiedAt`; history in git.\n* Free tier with hard limits (Resend 3k emails): `model: usage` with the limit in notes and a PAP-40 alert suggestion.\n* Owner leaves the roster: reassigned to Scout by the check.\n\n**Dependencies**\n\nHard: PAP-216, PAP-98. Soft: `r4/collab/notification-core`, PAP-302, PAP-296, PAP-89. Deferred: v0.2.\n\n**Agent**\n\nBuilder: Scout (Library Evaluator). Reviewer: Sentinel (Code Reviewer) with Ledger checking the numbers.\n\n**Size**\n\nS: half a session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-216",
+   "section": "Spec",
+   "append": "Entry gains optional `patches[]` (`r4/libraries/patch-fork-policy`), `census` and `swapImpact` (`r4/libraries/import-census`) and `cost` (`r4/libraries/library-cost-model`, deferred); `version` is read from the pnpm `catalog:` when `r4/libraries/dependency-hygiene` lands. Check rule: `adopted` without `docs/libraries/notes/<id>.md` warns for 7 days after adoption, then errors."
+  },
+  {
+   "identifier": "PAP-218",
+   "section": "Spec",
+   "append": "Scan sources include MCP servers (npm keyword `mcp`, the official registry when public) and Claude Code skills or plugins relevant to open issues; candidates of those kinds are routed to PAP-210 (catalog entry) and PAP-105 (skills) instead of the library registry, with the same one-comment-per-issue rule."
+  },
+  {
+   "identifier": "PAP-214",
+   "section": "Spec",
+   "append": "`compose-smoke` is the reusable workflow from `r4/libraries/compose-smoke-workflow`; children declare `x-paperos.healthcheck` and `x-paperos.warmupSeconds` in their compose files so the budget table is generated from artefacts. If the workflow is unmerged when a child starts, run the same commands by hand and record numbers in `results/backend-*.json` in the workflow's result schema."
+  },
+  {
+   "identifier": "PAP-352",
+   "section": "Scope",
+   "append": "Time-box guard: if the two spikes consume the 4 hours, write the ADR with provisional modes for Cal.com and Formbricks and mark the borrow reference docs and embed contracts for those two as follow-up comments on PAP-188 and PAP-100 rather than exceeding the box; the nine-row matrix must still be complete."
+  },
+  {
+   "identifier": "PAP-212",
+   "section": "Spec",
+   "append": "Build the five candidates on the shared harness (`r4/libraries/spike-harness-kit`) when merged: `spikes/ui-kits/candidates/<lib>/`, `pnpm spike ui-kits --bench --shots`; results in `results/summary.json` feed `pnpm lib score --facts-from`. If the kit is unmerged on 09-17, build inline and move the routes into the kit shape before closing."
+  },
+  {
+   "identifier": "PAP-217",
+   "section": "Spec",
+   "append": "Renovate `pnpm.catalog` support enabled so catalog bumps (`r4/libraries/dependency-hygiene`) arrive as one PR per group; PRs touching a package listed in registry `patches[]` get label `needs-patch-review` and never automerge (`r4/libraries/patch-fork-policy`)."
+  },
+  {
+   "identifier": "PAP-209",
+   "section": "Spec",
+   "append": "Optional extras `security` (OpenSSF Scorecard, advisories) and `packaging` (`publint`, `attw`) from `r4/libraries/facts-security-quality`; hard gate `openAdvisory: critical`. `pnpm lib score --facts-from <dir>` reads spike-kit `results/summary.json` so measured FPS and bundle numbers populate `facts` without retyping."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "app-shell",
+   "title": "Embedded OSS product kit: SSO from Better Auth to an embedded service, iframe or API embed slot, theming hand-off and tenant mapping",
+   "why": "PAP-352 writes embed contracts for every `embed` verdict (Chatwoot, Listmonk likely); no project owns the runtime that honours them."
+  },
+  {
+   "targetProject": "quality",
+   "title": "PAP-80 emits `security.json` advisories per direct dependency and a CycloneDX SBOM path the registry health page can read",
+   "why": "r4/libraries/dependency-health-page and the census join on package name and version."
+  },
+  {
+   "targetProject": "agents",
+   "title": "PAP-105 `page-from-spec` skill lists the usage notes for the libraries a spec's components depend on",
+   "why": "r4/libraries/library-usage-notes only helps if sessions read them before coding."
+  },
+  {
+   "targetProject": "pm-linear",
+   "title": "PAP-306 weekly re-audit reads `pnpm lib health --json`, guardrail waiver counts and expiring patches",
+   "why": "Three libraries issues produce machine-readable health; the re-audit is where drift becomes issues."
+  },
+  {
+   "targetProject": "module-system",
+   "title": "PAP-442 swap playbook consumes `swapImpact` and named-import counts from the library census for library-level swaps",
+   "why": "Swapping a library follows the same seven steps as swapping a module; the census gives step 1 its evidence."
+  }
+ ]
+}
