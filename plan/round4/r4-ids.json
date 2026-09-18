@@ -1,0 +1,1677 @@
+{
+ "r4/agents/anthropic-rate-limit-governor": {
+  "id": "da9ec9cf-5159-48f7-bffd-fbc80b1493c8",
+  "identifier": "PAP-720",
+  "url": "https://linear.app/paperos/issue/PAP-720/anthropic-rate-limit-governor-in-the-runtime-shared-output-tokens-per"
+ },
+ "r4/agents/character-bundles-and-enforce-scope-hook": {
+  "id": "61e80a8d-17a9-4d41-a267-12299de37851",
+  "identifier": "PAP-709",
+  "url": "https://linear.app/paperos/issue/PAP-709/least-privilege-per-character-runtime-bundles-settingsjson-mcpjson"
+ },
+ "r4/agents/character-linear-identity-and-attribution": {
+  "id": "d7e6e6d1-5e68-4bb7-85c6-b8d4e9b5da9a",
+  "identifier": "PAP-722",
+  "url": "https://linear.app/paperos/issue/PAP-722/character-identity-in-linear-decide-and-configure-how-characters"
+ },
+ "r4/agents/character-onboarding-and-retirement-wizard": {
+  "id": "22e70cb5-0cd6-40ff-ac1d-9abd660f184b",
+  "identifier": "PAP-721",
+  "url": "https://linear.app/paperos/issue/PAP-721/character-onboarding-and-retirement-pnpm-agents-new-name-lead-lead"
+ },
+ "r4/agents/claude-code-plugin-packaging": {
+  "id": "8a54a43b-3a3e-4e4d-bbc3-c2702040921c",
+  "identifier": "PAP-715",
+  "url": "https://linear.app/paperos/issue/PAP-715/package-the-paperos-agent-org-as-a-claude-code-plugin-agents-skills"
+ },
+ "r4/agents/deny-list-policy-file-and-hook": {
+  "id": "438c2d94-7227-40ec-9f98-ba329d67b144",
+  "identifier": "PAP-711",
+  "url": "https://linear.app/paperos/issue/PAP-711/deny-list-opssecurityagent-denyyaml-with-45-rules-across-eleven-areas"
+ },
+ "r4/agents/docs-context-pack-and-cache-friendly-prompts": {
+  "id": "60143e98-b7d6-4b5a-8e00-c5f99a56a9b8",
+  "identifier": "PAP-716",
+  "url": "https://linear.app/paperos/issue/PAP-716/context-packs-generate-a-token-budgeted-cache-stable-read-first-bundle"
+ },
+ "r4/agents/injection-eval-suite-and-canaries": {
+  "id": "f077d548-22c4-466c-989d-57e0df321f51",
+  "identifier": "PAP-714",
+  "url": "https://linear.app/paperos/issue/PAP-714/prompt-injection-canary-tokens-in-fixtures-and-secret-maps-with-proxy"
+ },
+ "r4/agents/least-privilege-probe-suite-and-matrix": {
+  "id": "b92ff214-8a49-4ee1-b94c-85d2bd6ee007",
+  "identifier": "PAP-710",
+  "url": "https://linear.app/paperos/issue/PAP-710/least-privilege-nightly-probe-suite-one-allowed-and-one-forbidden"
+ },
+ "r4/agents/prompt-change-control-and-experiments": {
+  "id": "7f73c4e1-7308-4e01-9dab-2f8ce6702b48",
+  "identifier": "PAP-719",
+  "url": "https://linear.app/paperos/issue/PAP-719/prompt-change-control-a-pr-that-changes-a-character-prompt-skill-or"
+ },
+ "r4/agents/request-approval-mcp-interception-and-backstops": {
+  "id": "a0843102-1c10-4721-b648-97569bdaeaee",
+  "identifier": "PAP-712",
+  "url": "https://linear.app/paperos/issue/PAP-712/deny-list-the-request-approval-skill-filing-a-needs-justin-card-mcp"
+ },
+ "r4/agents/second-runtime-adapter-spike": {
+  "id": "fd5d91b3-b943-4f01-8f82-2f4b03826ada",
+  "identifier": "PAP-724",
+  "url": "https://linear.app/paperos/issue/PAP-724/research-spike-a-second-agentruntimeport-adapter-openhands-or-a-hosted"
+ },
+ "r4/agents/session-end-guard-hooks": {
+  "id": "8ae9d871-7657-4a6f-9810-5ef7205bb176",
+  "identifier": "PAP-717",
+  "url": "https://linear.app/paperos/issue/PAP-717/session-end-guard-stop-and-sessionend-hooks-that-validate-the-footer"
+ },
+ "r4/agents/session-to-eval-task-capture": {
+  "id": "3f54c593-1edb-466b-8559-8e5e473fc87e",
+  "identifier": "PAP-723",
+  "url": "https://linear.app/paperos/issue/PAP-723/capture-real-sessions-as-eval-tasks-pnpm-evals-capture-session-id"
+ },
+ "r4/agents/skills-library-second-wave": {
+  "id": "ff8e4be4-58b5-4de1-ac0d-233f5c444d1d",
+  "identifier": "PAP-718",
+  "url": "https://linear.app/paperos/issue/PAP-718/skills-library-second-wave-decompose-brief-edge-case-plan-threat-model"
+ },
+ "r4/agents/trust-tiers-wrapper-scanner-and-actor-verification": {
+  "id": "e1e303db-d3be-4dfe-9007-62f98f4d49d1",
+  "identifier": "PAP-713",
+  "url": "https://linear.app/paperos/issue/PAP-713/prompt-injection-trust-tier-classifier-untrusted-wrapping-in-the"
+ },
+ "r4/app-shell/cli-linear-seeding": {
+  "id": "56e81e4a-7ee8-4ff7-b58b-a924293fc185",
+  "identifier": "PAP-503",
+  "url": "https://linear.app/paperos/issue/PAP-503/paperos-create-linear-seeding-project-with-milestones-starter-issues"
+ },
+ "r4/app-shell/client-telemetry": {
+  "id": "f55ca65c-89cb-4900-af3b-c1f089c003bf",
+  "identifier": "PAP-510",
+  "url": "https://linear.app/paperos/issue/PAP-510/client-telemetry-web-vitals-route-timings-feature-usage-events-and-a"
+ },
+ "r4/app-shell/desktop-os-integration": {
+  "id": "2c1bd66b-3138-4653-a171-b348dbf537c4",
+  "identifier": "PAP-513",
+  "url": "https://linear.app/paperos/issue/PAP-513/desktop-os-integration-native-notifications-with-actions-dock-and"
+ },
+ "r4/app-shell/dev-environment-bootstrap": {
+  "id": "088631f6-9a85-4847-b550-604e2eb7a5b6",
+  "identifier": "PAP-509",
+  "url": "https://linear.app/paperos/issue/PAP-509/developer-environment-bootstrap-devcontainer-pnpm-setup-paperos-dev"
+ },
+ "r4/app-shell/flags-settings-page": {
+  "id": "c3cf4811-08fd-4e55-9b7c-2529ecb45e2b",
+  "identifier": "PAP-501",
+  "url": "https://linear.app/paperos/issue/PAP-501/flags-settings-page-settingsflags-kill-switches-per-tenant-and-per"
+ },
+ "r4/app-shell/i18n-translate-skill": {
+  "id": "d4c4286f-a9e5-4c59-a83c-fc524bf4bb25",
+  "identifier": "PAP-504",
+  "url": "https://linear.app/paperos/issue/PAP-504/translation-skill-and-catalog-ci-claudeskillstranslate-producing"
+ },
+ "r4/app-shell/linux-packaging": {
+  "id": "d329327d-c7d4-44e6-a072-811183754354",
+  "identifier": "PAP-518",
+  "url": "https://linear.app/paperos/issue/PAP-518/linux-distribution-channels-flatpak-manifest-on-flathub-compatible"
+ },
+ "r4/app-shell/mobile-universal-links": {
+  "id": "01ffb576-12a3-4836-982b-b5605b406dd8",
+  "identifier": "PAP-514",
+  "url": "https://linear.app/paperos/issue/PAP-514/mobile-universal-links-and-android-app-links-apple-app-site"
+ },
+ "r4/app-shell/native-push-registration": {
+  "id": "426da400-c4a3-4357-b440-70451db46865",
+  "identifier": "PAP-516",
+  "url": "https://linear.app/paperos/issue/PAP-516/native-push-registration-apns-and-fcm-behind"
+ },
+ "r4/app-shell/onboarding-funnel-admin": {
+  "id": "0e0bf9ec-c3d5-45e2-b287-c40cd6274729",
+  "identifier": "PAP-506",
+  "url": "https://linear.app/paperos/issue/PAP-506/onboarding-funnel-for-staff-adminonboarding-tenants-by-step-reached"
+ },
+ "r4/app-shell/pr-preview-environments": {
+  "id": "bcf96aac-3e83-4cf8-a057-3acff2b62e5c",
+  "identifier": "PAP-505",
+  "url": "https://linear.app/paperos/issue/PAP-505/per-pr-preview-environments-previewyml-coolify-preview-application"
+ },
+ "r4/app-shell/public-seo-prerender": {
+  "id": "cbeab8dc-3b15-442b-bd69-2b8c7d3b10a0",
+  "identifier": "PAP-517",
+  "url": "https://linear.app/paperos/issue/PAP-517/public-route-prerendering-build-time-static-html-for-public-routes"
+ },
+ "r4/app-shell/shell-layout-presets": {
+  "id": "425928de-8714-4ff9-adc9-5069fe34a089",
+  "identifier": "PAP-511",
+  "url": "https://linear.app/paperos/issue/PAP-511/shell-layout-presets-and-session-restore-persisted-panel-sizes-and"
+ },
+ "r4/app-shell/starter-kit-demo-seed": {
+  "id": "4786352f-bf77-4325-b5a3-d673a9b27648",
+  "identifier": "PAP-507",
+  "url": "https://linear.app/paperos/issue/PAP-507/deterministic-demo-tenant-seed-seeddemotenantdb-appspec-paperos-seed"
+ },
+ "r4/app-shell/store-distribution": {
+  "id": "b4b2ce13-194d-4d65-afbf-4f7568083741",
+  "identifier": "PAP-515",
+  "url": "https://linear.app/paperos/issue/PAP-515/store-distribution-pipeline-testflight-and-google-play-internal"
+ },
+ "r4/app-shell/tauri-crash-reporting": {
+  "id": "fc97e3db-d0a7-4aa3-a66f-c203250a8ea3",
+  "identifier": "PAP-502",
+  "url": "https://linear.app/paperos/issue/PAP-502/tauri-crash-reporting-rust-panic-hook-and-tauri-plugin-log-forwarding"
+ },
+ "r4/app-shell/tauri-e2e-harness": {
+  "id": "0bea63a8-1d21-4f07-abca-2f0f0622650b",
+  "identifier": "PAP-508",
+  "url": "https://linear.app/paperos/issue/PAP-508/tauri-webdriver-e2e-harness-tauri-driver-on-linux-ci-test-helpers-for"
+ },
+ "r4/app-shell/template-fixture-repo": {
+  "id": "09295135-d10e-4db6-b654-3af9c398399e",
+  "identifier": "PAP-512",
+  "url": "https://linear.app/paperos/issue/PAP-512/fixture-template-repository-paperos-template-fixture-with-pinned-tags"
+ },
+ "r4/app-shell/upgrade-codemods-fleet": {
+  "id": "0e66041a-d8df-428c-86bb-69feeb5f494e",
+  "identifier": "PAP-499",
+  "url": "https://linear.app/paperos/issue/PAP-499/template-codemod-runner-templatescodemodsfrom-tots-and-paperos-upgrade"
+ },
+ "r4/app-shell/upgrade-package-registry": {
+  "id": "4f1443e1-4785-46ec-b72b-48580ed054fa",
+  "identifier": "PAP-498",
+  "url": "https://linear.app/paperos/issue/PAP-498/publish-paperos-packages-to-the-forgejo-npm-registry-on-every-template"
+ },
+ "r4/app-shell/warm-pool-job": {
+  "id": "423c230a-1701-4905-9397-28a9f22e96e2",
+  "identifier": "PAP-500",
+  "url": "https://linear.app/paperos/issue/PAP-500/warm-pool-job-nightly-warm-poolyml-and-paperos-pool-filldrainreconcile"
+ },
+ "r4/business-core/bank-feed-port-and-statement-import": {
+  "id": "eb1ea329-b23f-471a-8bc4-f9d2655f3ec5",
+  "identifier": "PAP-770",
+  "url": "https://linear.app/paperos/issue/PAP-770/bank-feed-port-with-a-fixture-adapter-and-statement-import-csv-ofx"
+ },
+ "r4/business-core/bank-reconciliation-matching": {
+  "id": "d0ea59ec-08db-46d0-b5b6-d15a1c7d2d3f",
+  "identifier": "PAP-771",
+  "url": "https://linear.app/paperos/issue/PAP-771/bank-reconciliation-automatic-matching-rules-suggested-matches-split"
+ },
+ "r4/business-core/budgets-and-variance": {
+  "id": "a01e9e6b-74dd-49b4-b315-ab03e2dac00b",
+  "identifier": "PAP-780",
+  "url": "https://linear.app/paperos/issue/PAP-780/budgets-and-variance-per-account-and-per-dimension-budgets-by-period"
+ },
+ "r4/business-core/cash-forecast-scenarios": {
+  "id": "eaf69f88-df59-4dac-b465-d3ce4f511a1a",
+  "identifier": "PAP-789",
+  "url": "https://linear.app/paperos/issue/PAP-789/cash-forecast-scenarios-13-week-projection-from-open-ar-and-ap"
+ },
+ "r4/business-core/contractors-and-1099": {
+  "id": "300d993a-143b-4a2c-9e2c-3badbb180e0e",
+  "identifier": "PAP-781",
+  "url": "https://linear.app/paperos/issue/PAP-781/contractor-payments-and-1099-tracking-contractor-onboarding-through"
+ },
+ "r4/business-core/customer-statements": {
+  "id": "d70d3a60-09a8-493d-8b03-f3e45d9bd0f0",
+  "identifier": "PAP-776",
+  "url": "https://linear.app/paperos/issue/PAP-776/customer-statements-and-account-balances-per-party-statement-of"
+ },
+ "r4/business-core/deposits-retainers-installments": {
+  "id": "f63c94c2-2412-4b7d-aebb-3f55cfa35778",
+  "identifier": "PAP-777",
+  "url": "https://linear.app/paperos/issue/PAP-777/deposits-retainers-and-installment-plans-partial-payment-schedules-on"
+ },
+ "r4/business-core/discounts-and-promo-codes": {
+  "id": "bd87d21b-feaa-42e2-9a2b-342b30ce05da",
+  "identifier": "PAP-778",
+  "url": "https://linear.app/paperos/issue/PAP-778/discounts-and-promotion-codes-tenant-level-coupon-rules-for-quotes"
+ },
+ "r4/business-core/disputes-radar-evidence": {
+  "id": "aad608cf-2eb1-4e00-aaa5-9f571272f871",
+  "identifier": "PAP-779",
+  "url": "https://linear.app/paperos/issue/PAP-779/disputes-and-fraud-controls-stripe-radar-rules-per-tenant-dispute"
+ },
+ "r4/business-core/document-refunds-and-credit-balance": {
+  "id": "fda1fbbc-0a05-4758-95a3-9237168c3806",
+  "identifier": "PAP-786",
+  "url": "https://linear.app/paperos/issue/PAP-786/refunds-and-customer-credit-balances-refund-a-paid-document-through"
+ },
+ "r4/business-core/finance-demo-seed": {
+  "id": "392497e2-b15d-4b96-8817-a5ee8c0a4c29",
+  "identifier": "PAP-767",
+  "url": "https://linear.app/paperos/issue/PAP-767/finance-demo-seed-twelve-months-of-balanced-journals-invoices-bills"
+ },
+ "r4/business-core/finance-permissions-and-roles": {
+  "id": "b5a43ca9-5235-41a7-8a61-10ea629abf1b",
+  "identifier": "PAP-768",
+  "url": "https://linear.app/paperos/issue/PAP-768/finance-permission-set-and-role-presets-bookkeeper-accountant-read"
+ },
+ "r4/business-core/fx-rates-and-conversion": {
+  "id": "92e809b7-721c-4042-b751-11d207d2d895",
+  "identifier": "PAP-766",
+  "url": "https://linear.app/paperos/issue/PAP-766/exchange-rate-table-and-fx-service-daily-rates-job-with-a-fixture"
+ },
+ "r4/business-core/inventory-stock-and-cogs": {
+  "id": "e9ce02b8-5f36-4281-9e20-80ec5afc9660",
+  "identifier": "PAP-775",
+  "url": "https://linear.app/paperos/issue/PAP-775/inventory-stock-levels-and-cogs-stock-movements-per-location-weighted"
+ },
+ "r4/business-core/item-catalogue": {
+  "id": "34120c86-d898-4ab8-bfb9-da01e7d639ac",
+  "identifier": "PAP-774",
+  "url": "https://linear.app/paperos/issue/PAP-774/item-catalogue-products-and-services-with-sku-prices-per-currency"
+ },
+ "r4/business-core/ledger-dimensions-registry": {
+  "id": "0e9bd2ff-b86b-4662-9d0f-a24a739e4acd",
+  "identifier": "PAP-769",
+  "url": "https://linear.app/paperos/issue/PAP-769/ledger-dimension-registry-department-location-project-and-class"
+ },
+ "r4/business-core/payroll-filings-forms-and-deductions": {
+  "id": "2de71d51-d54a-45f3-bd19-18e08d3efdf2",
+  "identifier": "PAP-787",
+  "url": "https://linear.app/paperos/issue/PAP-787/payroll-filings-year-end-forms-and-deduction-codes-provider-filing"
+ },
+ "r4/business-core/purchase-orders-and-receiving": {
+  "id": "dc39e0fa-c5f0-48fb-b794-e17623e3b15b",
+  "identifier": "PAP-773",
+  "url": "https://linear.app/paperos/issue/PAP-773/purchase-orders-and-receiving-po-editor-from-vendor-items-approval"
+ },
+ "r4/business-core/recurring-invoices-dunning": {
+  "id": "494ca361-d1f1-4802-8ae8-cec696f36cfa",
+  "identifier": "PAP-765",
+  "url": "https://linear.app/paperos/issue/PAP-765/recurring-invoice-schedules-dunning-ladder-with-late-fees-and-saved"
+ },
+ "r4/business-core/revenue-recognition": {
+  "id": "c702844a-a276-4d8a-bdca-f4cc2b938ee5",
+  "identifier": "PAP-785",
+  "url": "https://linear.app/paperos/issue/PAP-785/revenue-recognition-schedules-deferred-revenue-for-prepaid-periods-and"
+ },
+ "r4/business-core/stripe-terminal-pos": {
+  "id": "12ec7a10-bff2-4df0-93a4-7a1fb228f6e3",
+  "identifier": "PAP-783",
+  "url": "https://linear.app/paperos/issue/PAP-783/point-of-sale-with-stripe-terminal-in-person-checkout-screen-from-the"
+ },
+ "r4/business-core/tenant-metered-billing": {
+  "id": "43d92824-8449-4c26-8594-cd8e60e25c19",
+  "identifier": "PAP-788",
+  "url": "https://linear.app/paperos/issue/PAP-788/metered-billing-for-tenants-own-customers-usage-meters-on-items-usage"
+ },
+ "r4/business-core/timesheets-to-payroll-hours": {
+  "id": "8cc7aaca-8a0c-48bc-98b6-4d67d6dc9159",
+  "identifier": "PAP-782",
+  "url": "https://linear.app/paperos/issue/PAP-782/timesheets-and-time-off-time-entries-with-approval-pto-policies-and"
+ },
+ "r4/business-core/vendor-bills-and-ap-payments": {
+  "id": "d28fa501-f93d-4138-a056-af88cdc40af3",
+  "identifier": "PAP-772",
+  "url": "https://linear.app/paperos/issue/PAP-772/vendor-bills-and-accounts-payable-bill-entry-and-approval-due-date"
+ },
+ "r4/business-core/year-end-close": {
+  "id": "fc73c551-02ae-42a8-9f32-01a96390a2c8",
+  "identifier": "PAP-784",
+  "url": "https://linear.app/paperos/issue/PAP-784/year-end-close-and-closing-entries-retained-earnings-roll-forward"
+ },
+ "r4/collab/agent-readable-docs": {
+  "id": "04086034-2571-479b-ad4f-870a2ec1d090",
+  "identifier": "PAP-727",
+  "url": "https://linear.app/paperos/issue/PAP-727/agent-readable-docs-llmstxt-raw-markdown-endpoint-per-page-pnpm-docs"
+ },
+ "r4/collab/announcements-banners": {
+  "id": "570a9d0e-f7b0-4d23-970f-7375c95cd95c",
+  "identifier": "PAP-730",
+  "url": "https://linear.app/paperos/issue/PAP-730/in-app-announcements-and-maintenance-banners-staff-authored-audience"
+ },
+ "r4/collab/ask-paperos": {
+  "id": "16d1f128-6373-403f-bf72-3d2f5167ee77",
+  "identifier": "PAP-735",
+  "url": "https://linear.app/paperos/issue/PAP-735/ask-paperos-retrieval-augmented-answers-over-docs-adrs-specs-and"
+ },
+ "r4/collab/build-journals": {
+  "id": "ce15fc07-c597-4cbc-adc5-1b8f736a8412",
+  "identifier": "PAP-728",
+  "url": "https://linear.app/paperos/issue/PAP-728/build-journals-generate-a-docs-page-per-issue-from-the-prompt-log-with"
+ },
+ "r4/collab/canvas-diff-embeds": {
+  "id": "1869543a-827f-4a1a-915c-b7eeacdfbb5c",
+  "identifier": "PAP-731",
+  "url": "https://linear.app/paperos/issue/PAP-731/canvas-diff-mode-and-embeds-highlight-graph-changes-between-two-spec"
+ },
+ "r4/collab/collab-demo-seeds": {
+  "id": "b9281f5f-7501-4355-8f49-bdc1250b8450",
+  "identifier": "PAP-729",
+  "url": "https://linear.app/paperos/issue/PAP-729/collab-demo-seeds-deterministic-fixtures-for-comments-notifications"
+ },
+ "r4/collab/comment-email-replies": {
+  "id": "fe72091e-69f3-4c9a-a4a4-ff0d9f17fd60",
+  "identifier": "PAP-736",
+  "url": "https://linear.app/paperos/issue/PAP-736/reply-to-comment-and-mention-emails-by-email-per-thread-reply-address"
+ },
+ "r4/collab/customer-comment-triage": {
+  "id": "c6a7f69b-f67a-4993-987a-e412f5647922",
+  "identifier": "PAP-734",
+  "url": "https://linear.app/paperos/issue/PAP-734/staff-comment-triage-unanswered-customer-threads-as-a-saved-view-with"
+ },
+ "r4/collab/docs-authoring-kit": {
+  "id": "63a1c1ba-d63e-4532-a7a4-12aeb60f3f54",
+  "identifier": "PAP-733",
+  "url": "https://linear.app/paperos/issue/PAP-733/docs-authoring-kit-and-freshness-pnpm-docs-new-template-diataxis"
+ },
+ "r4/collab/docs-i18n": {
+  "id": "1e328301-6516-459b-a6ff-ccc18590511d",
+  "identifier": "PAP-738",
+  "url": "https://linear.app/paperos/issue/PAP-738/docs-localisation-docslocale-folders-with-fallback-to-the-default"
+ },
+ "r4/collab/docs-reference-hub": {
+  "id": "f9c3fc5c-465d-47d5-9539-459e71c53240",
+  "identifier": "PAP-732",
+  "url": "https://linear.app/paperos/issue/PAP-732/reference-hub-in-the-docs-engine-one-sidebar-section-for-openapi-the"
+ },
+ "r4/collab/docs-suggestion-mode": {
+  "id": "f5f2ad7f-5645-46bb-b384-ea1fa8400211",
+  "identifier": "PAP-737",
+  "url": "https://linear.app/paperos/issue/PAP-737/suggestion-mode-and-publish-review-for-runtime-docs-tracked-changes"
+ },
+ "r4/collab/notification-core": {
+  "id": "48e076e3-9c1c-47e6-bf06-7e1de60aaa58",
+  "identifier": "PAP-725",
+  "url": "https://linear.app/paperos/issue/PAP-725/notification-core-kinds-registry-event-bus-subscriber-worker"
+ },
+ "r4/collab/watchers-subscriptions": {
+  "id": "6333dcad-c822-432d-9e56-4be26a9d3162",
+  "identifier": "PAP-726",
+  "url": "https://linear.app/paperos/issue/PAP-726/follow-model-watch-records-threads-and-docs-with-auto-follow-rules-and"
+ },
+ "r4/data-layer/document-previews": {
+  "id": "9a131fab-dfb7-4d52-a620-561b2a0e0001",
+  "identifier": "PAP-577",
+  "url": "https://linear.app/paperos/issue/PAP-577/document-previews-pdf-and-office-thumbnails-and-page-renders-through-a"
+ },
+ "r4/data-layer/entity-factory": {
+  "id": "7770ead1-043e-428a-a35e-32b4fa800f08",
+  "identifier": "PAP-568",
+  "url": "https://linear.app/paperos/issue/PAP-568/build-the-entity-factory-defineentity-yields-the-drizzle-repository"
+ },
+ "r4/data-layer/events-core": {
+  "id": "a4f07f52-db9f-4d0d-887f-41db89591ccf",
+  "identifier": "PAP-555",
+  "url": "https://linear.app/paperos/issue/PAP-555/domain-event-envelope-definetopic-registry-in-transaction-publish"
+ },
+ "r4/data-layer/events-outbox-dispatcher": {
+  "id": "5dcdb8f1-8295-450d-8cdd-7c76331b9fd9",
+  "identifier": "PAP-556",
+  "url": "https://linear.app/paperos/issue/PAP-556/outbox-dispatcher-job-eventsdispatch-per-subject-ordering-fan-out-to"
+ },
+ "r4/data-layer/idempotency-batch": {
+  "id": "3a23780c-37d2-41ca-81c7-e987088aa57c",
+  "identifier": "PAP-557",
+  "url": "https://linear.app/paperos/issue/PAP-557/idempotency-middleware-idempotency-key-contract-idempotency-keys-table"
+ },
+ "r4/data-layer/jobs-admin": {
+  "id": "68e365d9-3e7e-4605-bff3-fd017b34489e",
+  "identifier": "PAP-565",
+  "url": "https://linear.app/paperos/issue/PAP-565/adminjobs-staff-page-and-jobslistgetrequeuecancel-procedures-with-dead"
+ },
+ "r4/data-layer/jobs-core": {
+  "id": "185e387f-8007-4526-ad10-7d74c20a2269",
+  "identifier": "PAP-564",
+  "url": "https://linear.app/paperos/issue/PAP-564/paperosjobs-core-on-pg-boss-definejob-enqueue-schedule-withidempotency"
+ },
+ "r4/data-layer/local-data-protection": {
+  "id": "86ac8432-ef7b-46ff-90da-44bad9c373d8",
+  "identifier": "PAP-572",
+  "url": "https://linear.app/paperos/issue/PAP-572/local-data-protection-for-pglite-and-tauri-caches-sign-out-and"
+ },
+ "r4/data-layer/maintenance-mode": {
+  "id": "1dae20a1-c2a5-41b3-a516-e5dedd59b147",
+  "identifier": "PAP-575",
+  "url": "https://linear.app/paperos/issue/PAP-575/platform-maintenance-and-read-only-mode-maintenance-flag-api-503-with"
+ },
+ "r4/data-layer/migration-safety": {
+  "id": "6cd29b33-c249-4981-a6f7-c46ccce605ad",
+  "identifier": "PAP-569",
+  "url": "https://linear.app/paperos/issue/PAP-569/migration-safety-squawk-style-lint-for-generated-sql-expand-contract"
+ },
+ "r4/data-layer/pgaudit-db-health": {
+  "id": "27daa843-af5b-440d-8c94-0b132f372d6a",
+  "identifier": "PAP-573",
+  "url": "https://linear.app/paperos/issue/PAP-573/enable-pgaudit-for-ddl-role-and-bypass-sessions-and-add-database"
+ },
+ "r4/data-layer/pii-registry": {
+  "id": "5123c2fb-66a9-4306-82aa-c287b704edd0",
+  "identifier": "PAP-559",
+  "url": "https://linear.app/paperos/issue/PAP-559/pii-drizzle-column-annotation-and-registry-generated-piijson-the"
+ },
+ "r4/data-layer/platform-backups": {
+  "id": "b1f03575-7261-4ead-880a-cbab0afb0b43",
+  "identifier": "PAP-562",
+  "url": "https://linear.app/paperos/issue/PAP-562/platform-backup-jobs-restic-for-minio-buckets-hourly-orchestrator"
+ },
+ "r4/data-layer/platform-dr-drill": {
+  "id": "7509f3c3-397b-4dea-8caf-554df9407096",
+  "identifier": "PAP-563",
+  "url": "https://linear.app/paperos/issue/PAP-563/monthly-platform-disaster-recovery-drill-opsdrplatform-drillsh-fresh"
+ },
+ "r4/data-layer/preview-databases": {
+  "id": "4fab0568-28f4-408f-91e7-4ab3ee8495cd",
+  "identifier": "PAP-570",
+  "url": "https://linear.app/paperos/issue/PAP-570/ephemeral-preview-databases-template-cloned-per-pr-and-per-preview"
+ },
+ "r4/data-layer/rate-limits": {
+  "id": "8d3f1d94-c9ce-4c0c-a9fc-bc5ea6881654",
+  "identifier": "PAP-558",
+  "url": "https://linear.app/paperos/issue/PAP-558/postgres-backed-rate-limiting-rate-limit-bucket-paperosrate-limit-hit"
+ },
+ "r4/data-layer/retention-jobs": {
+  "id": "bea59628-410a-468b-88fa-1ee4f074257e",
+  "identifier": "PAP-560",
+  "url": "https://linear.app/paperos/issue/PAP-560/retention-policy-opsdataretentionyaml-the-nightly-retentionrun-job"
+ },
+ "r4/data-layer/search-keyword": {
+  "id": "5ad882c6-03a7-47c5-96c9-e0934fc33b97",
+  "identifier": "PAP-566",
+  "url": "https://linear.app/paperos/issue/PAP-566/search-registry-and-keyword-search-registersearchable-search-document"
+ },
+ "r4/data-layer/search-semantic": {
+  "id": "2a95e712-b9ac-4456-a8bf-a137fff6aff6",
+  "identifier": "PAP-567",
+  "url": "https://linear.app/paperos/issue/PAP-567/semantic-and-hybrid-search-embeddingprovider-searchembed-job-pgvector"
+ },
+ "r4/data-layer/tenant-pitr-restore": {
+  "id": "40534a27-4d7e-4de2-86ed-55f7de47935d",
+  "identifier": "PAP-576",
+  "url": "https://linear.app/paperos/issue/PAP-576/tenant-scoped-point-in-time-restore-pitr-into-a-scratch-database"
+ },
+ "r4/data-layer/tenant-purge": {
+  "id": "aa9b7ac5-68c3-4298-b02b-b96b890c6202",
+  "identifier": "PAP-561",
+  "url": "https://linear.app/paperos/issue/PAP-561/export-first-tenant-hard-purge-job-tenantpurge-fk-order-deletion"
+ },
+ "r4/data-layer/tenant-sequences": {
+  "id": "b29c4e48-ead8-4497-8282-3c9e176cdc91",
+  "identifier": "PAP-571",
+  "url": "https://linear.app/paperos/issue/PAP-571/per-tenant-sequences-and-human-readable-keys-definesequence-gapless"
+ },
+ "r4/data-layer/upload-scanning": {
+  "id": "d3100580-2046-4d4a-919c-8c21c7e4c693",
+  "identifier": "PAP-574",
+  "url": "https://linear.app/paperos/issue/PAP-574/malware-scanning-for-uploads-clamav-sidecar-filesscan-job-quarantined"
+ },
+ "r4/design-system/cell-renderer-registry-and-cells": {
+  "id": "98ea9a69-e0fb-4cfc-95f8-cb15eddf7580",
+  "identifier": "PAP-655",
+  "url": "https://linear.app/paperos/issue/PAP-655/cell-renderer-registry-and-the-20-read-only-cells-with-intl-formatting"
+ },
+ "r4/design-system/data-display-components": {
+  "id": "931ee440-5248-4954-b3b9-38091d5fe064",
+  "identifier": "PAP-656",
+  "url": "https://linear.app/paperos/issue/PAP-656/data-display-components-badge-tag-avatarstack-timeline-emptystate"
+ },
+ "r4/design-system/dataviz-tokens-and-microcharts": {
+  "id": "bb9c7ba7-f138-4a86-9ef8-60ea3460de8d",
+  "identifier": "PAP-665",
+  "url": "https://linear.app/paperos/issue/PAP-665/dataviz-tokens-and-micro-charts-categorical-sequential-and-diverging"
+ },
+ "r4/design-system/date-time-pickers": {
+  "id": "b77bc544-6484-457b-9458-8d64a287d201",
+  "identifier": "PAP-659",
+  "url": "https://linear.app/paperos/issue/PAP-659/date-time-date-range-date-time-and-relative-date-pickers-on"
+ },
+ "r4/design-system/density-modes": {
+  "id": "bc9a3714-c4a4-4049-b1a0-7b28c7e4c739",
+  "identifier": "PAP-669",
+  "url": "https://linear.app/paperos/issue/PAP-669/density-modes-compact-default-and-comfortable-as-a-runtime-setting"
+ },
+ "r4/design-system/design-lint-rules": {
+  "id": "9adf3e60-631d-4399-b021-57805766129f",
+  "identifier": "PAP-668",
+  "url": "https://linear.app/paperos/issue/PAP-668/design-lint-rules-in-gate-1-no-raw-colours-no-arbitrary-spacing-tokens"
+ },
+ "r4/design-system/form-layout-and-unsaved-changes": {
+  "id": "8d94f074-104e-4dfe-83b9-8f5955a73d7b",
+  "identifier": "PAP-667",
+  "url": "https://linear.app/paperos/issue/PAP-667/form-layout-and-unsaved-changes-guard-formlayout-formsection"
+ },
+ "r4/design-system/form-state-adapters": {
+  "id": "48646ca9-9647-4ce7-963b-f178563ccb92",
+  "identifier": "PAP-660",
+  "url": "https://linear.app/paperos/issue/PAP-660/form-state-adapters-useappform-over-react-hook-form-with-zod-form-and"
+ },
+ "r4/design-system/media-preview-and-lightbox": {
+  "id": "58db1dd7-44c8-4bc1-8647-978cee5d3316",
+  "identifier": "PAP-671",
+  "url": "https://linear.app/paperos/issue/PAP-671/media-components-image-with-variants-and-blur-up-filepreview-for"
+ },
+ "r4/design-system/navigation-components": {
+  "id": "2e6dc105-10ca-4338-832e-5752ed96838b",
+  "identifier": "PAP-661",
+  "url": "https://linear.app/paperos/issue/PAP-661/navigation-components-navlist-with-nesting-and-router-aware-active"
+ },
+ "r4/design-system/reflow-zoom-text-spacing-audit": {
+  "id": "edc71450-aad7-4f00-8582-b8c44a0959ed",
+  "identifier": "PAP-670",
+  "url": "https://linear.app/paperos/issue/PAP-670/reflow-zoom-and-text-spacing-audit-400-percent-zoom-at-320-css-px-200"
+ },
+ "r4/design-system/specialised-inputs": {
+  "id": "6cdd5b16-d8c1-4a77-9982-7f4d2ecea6cd",
+  "identifier": "PAP-663",
+  "url": "https://linear.app/paperos/issue/PAP-663/specialised-inputs-numberinput-passwordinput-otpinput-searchinput"
+ },
+ "r4/design-system/static-data-table": {
+  "id": "f77f2cb3-30fc-4a74-86dd-c9d4a0a4c132",
+  "identifier": "PAP-664",
+  "url": "https://linear.app/paperos/issue/PAP-664/static-datatable-uidatatable-for-spec-pages-and-settings-lists"
+ },
+ "r4/design-system/surface-and-feedback-components": {
+  "id": "c99ae0d1-d02d-4075-b7b1-eb9b56d1c057",
+  "identifier": "PAP-662",
+  "url": "https://linear.app/paperos/issue/PAP-662/surface-and-feedback-components-card-accordion-inlinealert-callout"
+ },
+ "r4/design-system/tenant-branding-settings-and-logo": {
+  "id": "a16479ad-c76f-4847-b4a3-2ab1aaa880fa",
+  "identifier": "PAP-658",
+  "url": "https://linear.app/paperos/issue/PAP-658/tenant-branding-tenantbranding-schema-and-procedures"
+ },
+ "r4/design-system/theme-provider-and-brand-theme-generator": {
+  "id": "cc8da381-fdfe-4327-b74f-59c49b3df1b1",
+  "identifier": "PAP-657",
+  "url": "https://linear.app/paperos/issue/PAP-657/themeprovider-with-no-flash-boot-light-dark-hc-and-system-modes-and"
+ },
+ "r4/design-system/typography-components-and-prose": {
+  "id": "11b9cf5d-4460-4a67-8aea-a940acf59789",
+  "identifier": "PAP-666",
+  "url": "https://linear.app/paperos/issue/PAP-666/typography-components-text-heading-with-decoupled-level-and-size-prose"
+ },
+ "r4/design-system/ui-package-versioning-and-deprecation": {
+  "id": "e7bd4851-2e78-44a2-9588-c4cf3e0e72e0",
+  "identifier": "PAP-672",
+  "url": "https://linear.app/paperos/issue/PAP-672/paperosui-versioning-and-deprecation-policy-changesets-since-and"
+ },
+ "r4/forge/bootstrap-check-mode": {
+  "id": "44e3f9e1-c551-41bd-9130-b69e815bd9f8",
+  "identifier": "PAP-526",
+  "url": "https://linear.app/paperos/issue/PAP-526/forge-bootstrap-check-drift-detection-with-per-step-diff-output-and"
+ },
+ "r4/forge/code-search": {
+  "id": "7bc4f8ab-ab99-4cc8-bdb2-5b853c31608a",
+  "identifier": "PAP-535",
+  "url": "https://linear.app/paperos/issue/PAP-535/enable-forgejo-code-indexing-and-expose-forgesearch-in-forgeport-for"
+ },
+ "r4/forge/dependent-branches": {
+  "id": "d65de72d-af6f-43c0-ab07-6ff4698632e3",
+  "identifier": "PAP-528",
+  "url": "https://linear.app/paperos/issue/PAP-528/dependent-branch-tooling-for-the-branch-start-rule-worktreesh-new-base"
+ },
+ "r4/forge/dr-cron-and-report": {
+  "id": "8cb488c2-6bca-4fcd-8d06-e08e964f3100",
+  "identifier": "PAP-525",
+  "url": "https://linear.app/paperos/issue/PAP-525/dr-drill-scheduling-and-reporting-monthly-forgejo-actions-cron"
+ },
+ "r4/forge/forge-observability": {
+  "id": "6d5783ac-027c-4280-86d8-9b3abfbcaa61",
+  "identifier": "PAP-534",
+  "url": "https://linear.app/paperos/issue/PAP-534/forge-observability-forgejo-and-runner-metrics-in-grafana-mirror-lag"
+ },
+ "r4/forge/git-credential-helper": {
+  "id": "0b91ce5c-e403-432a-8763-f903b7c36d05",
+  "identifier": "PAP-533",
+  "url": "https://linear.app/paperos/issue/PAP-533/paperos-git-credential-git-credential-helper-and-ssh-configuration"
+ },
+ "r4/forge/github-app-identities": {
+  "id": "6d652ac8-8e65-46b9-8f17-582e9bdb74a7",
+  "identifier": "PAP-521",
+  "url": "https://linear.app/paperos/issue/PAP-521/github-app-paperos-agents-installation-on-imagine-os"
+ },
+ "r4/forge/lfs-and-artifacts": {
+  "id": "f5442a38-322c-4113-9f29-4efed65278f4",
+  "identifier": "PAP-529",
+  "url": "https://linear.app/paperos/issue/PAP-529/git-lfs-on-both-forges-with-mirror-support-large-file-and-repository"
+ },
+ "r4/forge/merge-automation": {
+  "id": "7330da4e-91f7-4835-886c-ff4e4a99c789",
+  "identifier": "PAP-527",
+  "url": "https://linear.app/paperos/issue/PAP-527/merge-automation-for-agent-pull-requests-auto-merge-when-gates-are"
+ },
+ "r4/forge/mirror-drift-monitor": {
+  "id": "75ac4200-ade3-4127-8dbb-0166cf163170",
+  "identifier": "PAP-520",
+  "url": "https://linear.app/paperos/issue/PAP-520/mirror-drift-monitor-hourly-mirror-checkts-comparing-heads-and-tags-on"
+ },
+ "r4/forge/playwright-runner-image": {
+  "id": "601a1515-1b54-4fa5-9178-0200acd8c1c4",
+  "identifier": "PAP-532",
+  "url": "https://linear.app/paperos/issue/PAP-532/forgejo-runner-heavy-profile-with-a-playwright-browsers-image-so-gates"
+ },
+ "r4/forge/portability-checker": {
+  "id": "232bcf3a-2b3a-4ccf-9b05-f78f8ac06c8b",
+  "identifier": "PAP-519",
+  "url": "https://linear.app/paperos/issue/PAP-519/check-workflow-portabilityts-github-only-action-detection-github"
+ },
+ "r4/forge/push-protection": {
+  "id": "cc52a2b1-1d33-4537-b0b6-ea0e7e362e8b",
+  "identifier": "PAP-530",
+  "url": "https://linear.app/paperos/issue/PAP-530/secret-push-protection-gitleaks-pre-commit-through-lefthook-forgejo"
+ },
+ "r4/forge/release-forgejo-provider": {
+  "id": "6348a7c8-5b05-4176-9d29-e021bf175ca0",
+  "identifier": "PAP-522",
+  "url": "https://linear.app/paperos/issue/PAP-522/release-please-forgejo-provider-shim-dual-forge-tags-and-releases"
+ },
+ "r4/forge/repo-cleanup": {
+  "id": "babb39c6-a4ca-4f85-aa85-1fa63355af57",
+  "identifier": "PAP-531",
+  "url": "https://linear.app/paperos/issue/PAP-531/forge-cleanup-ttl-labelled-throwaway-repos-gp-drill-slot-cli-sandbox"
+ },
+ "r4/forge/runner-autoscaling": {
+  "id": "ef05a5b8-6abc-4bc2-9e67-bbe31bf75d1f",
+  "identifier": "PAP-536",
+  "url": "https://linear.app/paperos/issue/PAP-536/ephemeral-runner-autoscaling-start-docker-runners-on-a-second-hetzner"
+ },
+ "r4/forge/supply-chain-install-policy": {
+  "id": "7a73bcb1-5c1d-4b19-b932-cdab6b6415de",
+  "identifier": "PAP-523",
+  "url": "https://linear.app/paperos/issue/PAP-523/install-and-pin-policy-pnpm-minimum-release-age-ignore-scripts"
+ },
+ "r4/forge/supply-chain-provenance": {
+  "id": "a8f82f22-c76a-42e3-a9e9-8176da932c08",
+  "identifier": "PAP-524",
+  "url": "https://linear.app/paperos/issue/PAP-524/provenance-and-signatures-slsa-attestations-and-cosign-signing-for"
+ },
+ "r4/growth/booking-pages-and-availability": {
+  "id": "136d2457-71bb-429b-99fc-046102037993",
+  "identifier": "PAP-798",
+  "url": "https://linear.app/paperos/issue/PAP-798/booking-pages-and-availability-public-scheduling-links-with"
+ },
+ "r4/growth/consent-compliance-centre": {
+  "id": "44a6c0f1-1055-4ddd-b99e-60c8dc36fd7e",
+  "identifier": "PAP-791",
+  "url": "https://linear.app/paperos/issue/PAP-791/consent-and-marketing-compliance-centre-consent-records-per-channel"
+ },
+ "r4/growth/contact-company-merge-and-dedup": {
+  "id": "5adf2036-daea-48b6-890b-4bc1fd069d7b",
+  "identifier": "PAP-796",
+  "url": "https://linear.app/paperos/issue/PAP-796/contact-and-company-merge-and-duplicate-detection-fuzzy-duplicate"
+ },
+ "r4/growth/contact-enrichment-port": {
+  "id": "758002ec-1b30-4f48-b316-bf68b50a8d7f",
+  "identifier": "PAP-802",
+  "url": "https://linear.app/paperos/issue/PAP-802/contact-and-company-enrichment-port-provider-adapter-interface-with-a"
+ },
+ "r4/growth/crm-schema-routers-page-specs": {
+  "id": "51d7e312-f03c-4051-9ccf-916a38038913",
+  "identifier": "PAP-790",
+  "url": "https://linear.app/paperos/issue/PAP-790/crm-schema-routers-datasets-search-registrations-and-the-three-page"
+ },
+ "r4/growth/crm-tasks-followups-my-day": {
+  "id": "eee0ed6c-3bd1-4dd1-b634-f06d682f88d6",
+  "identifier": "PAP-795",
+  "url": "https://linear.app/paperos/issue/PAP-795/crm-tasks-and-follow-ups-task-activities-with-due-dates-and-assignees"
+ },
+ "r4/growth/deal-products-and-quotes": {
+  "id": "f7bc994a-06d2-4a05-834e-39d949d18ca5",
+  "identifier": "PAP-810",
+  "url": "https://linear.app/paperos/issue/PAP-810/deal-products-and-quote-from-deal-line-items-on-deals-from-the-finance"
+ },
+ "r4/growth/email-broadcast-campaigns": {
+  "id": "1e2b626c-88bf-4f64-afe1-46b1f5048122",
+  "identifier": "PAP-799",
+  "url": "https://linear.app/paperos/issue/PAP-799/email-broadcast-campaigns-one-off-sends-to-a-segment-with-template"
+ },
+ "r4/growth/email-engagement-tracking": {
+  "id": "615d9185-43aa-49f2-93cb-296cd076c6c4",
+  "identifier": "PAP-800",
+  "url": "https://linear.app/paperos/issue/PAP-800/email-engagement-tracking-privacy-respecting-open-pixel-and-click"
+ },
+ "r4/growth/email-sync-gmail-outlook": {
+  "id": "677b5ba4-8077-426e-a6fe-a921835d327a",
+  "identifier": "PAP-797",
+  "url": "https://linear.app/paperos/issue/PAP-797/email-logging-and-mailbox-sync-bcc-to-crm-address-gmail-and-microsoft"
+ },
+ "r4/growth/experiments-and-ab-tests": {
+  "id": "075d2a44-f37e-4961-a89d-6f3329920c56",
+  "identifier": "PAP-809",
+  "url": "https://linear.app/paperos/issue/PAP-809/experiments-and-ab-tests-deterministic-assignment-by-anonymous-or"
+ },
+ "r4/growth/help-center-knowledge-base": {
+  "id": "f78877b7-ef24-449b-bd54-a5484a4328af",
+  "identifier": "PAP-805",
+  "url": "https://linear.app/paperos/issue/PAP-805/public-help-center-articles-from-the-docs-engine-with-categories"
+ },
+ "r4/growth/in-app-messages-and-announcements": {
+  "id": "e3dbb129-9e7a-4b28-9154-1a9ab6f38705",
+  "identifier": "PAP-808",
+  "url": "https://linear.app/paperos/issue/PAP-808/in-app-messages-and-announcements-banner-modal-and-tooltip-messages"
+ },
+ "r4/growth/lead-forms-embed-and-submit-pipeline": {
+  "id": "a3551931-e3a3-4ef4-b0a0-c17289290e38",
+  "identifier": "PAP-793",
+  "url": "https://linear.app/paperos/issue/PAP-793/lead-forms-form-builder-8-kb-embed-script-public-submit-endpoint-with"
+ },
+ "r4/growth/lead-scoring-and-routing": {
+  "id": "e179f26f-3209-4f71-89e7-2978496c9d9c",
+  "identifier": "PAP-801",
+  "url": "https://linear.app/paperos/issue/PAP-801/lead-scoring-and-routing-fit-and-engagement-score-rules-lifecycle"
+ },
+ "r4/growth/nps-csat-and-review-requests": {
+  "id": "99574220-64f4-41ba-acf6-9e85bf9417e2",
+  "identifier": "PAP-804",
+  "url": "https://linear.app/paperos/issue/PAP-804/nps-and-csat-surveys-and-review-requests-one-question-surveys-after"
+ },
+ "r4/growth/outbound-sandbox-ledger": {
+  "id": "e445972f-0ded-4ea2-9217-0f9d19f8b32a",
+  "identifier": "PAP-792",
+  "url": "https://linear.app/paperos/issue/PAP-792/outbound-sandbox-ledger-one-record-of-every-email-sms-social-post-and"
+ },
+ "r4/growth/sales-dashboard-and-forecast": {
+  "id": "24b767b8-779b-42a8-aca4-418aa5add01a",
+  "identifier": "PAP-811",
+  "url": "https://linear.app/paperos/issue/PAP-811/sales-dashboard-and-forecast-pipeline-funnel-win-rate-velocity"
+ },
+ "r4/growth/short-links-and-qr": {
+  "id": "59689e99-e262-41c1-a328-090244b8a20f",
+  "identifier": "PAP-803",
+  "url": "https://linear.app/paperos/issue/PAP-803/short-links-and-qr-codes-first-party-lcode-redirects-with-click"
+ },
+ "r4/growth/social-analytics-report": {
+  "id": "d6bc23d0-7892-4492-a37c-e0fbdfc96296",
+  "identifier": "PAP-812",
+  "url": "https://linear.app/paperos/issue/PAP-812/social-analytics-report-per-post-and-per-account-metrics-history"
+ },
+ "r4/growth/support-ai-reply-drafts": {
+  "id": "74bd640b-5931-43ab-b8d5-acd208b2d1f5",
+  "identifier": "PAP-806",
+  "url": "https://linear.app/paperos/issue/PAP-806/support-ai-reply-drafts-and-faq-bot-grounded-suggested-replies-for"
+ },
+ "r4/growth/support-sla-and-business-hours": {
+  "id": "695dd335-9c77-40ff-ae1b-e1a1edcc61a4",
+  "identifier": "PAP-807",
+  "url": "https://linear.app/paperos/issue/PAP-807/support-sla-policies-and-business-hours-first-response-and-resolution"
+ },
+ "r4/growth/webflow-landing-publisher-and-editor": {
+  "id": "a03f328f-4ff0-40a4-aafa-7d3edae6802b",
+  "identifier": "PAP-794",
+  "url": "https://linear.app/paperos/issue/PAP-794/landing-page-editor-and-webflow-publisher-block-content-model-cms"
+ },
+ "r4/identity/access-checker": {
+  "id": "ee67e55c-cf4d-4478-a55e-49ca5a9aa23d",
+  "identifier": "PAP-596",
+  "url": "https://linear.app/paperos/issue/PAP-596/console-access-checker-pick-a-principal-action-and-resource-see-the"
+ },
+ "r4/identity/agent-attribution-quotas": {
+  "id": "fbed189d-b9a3-486a-8277-65645dc2dc30",
+  "identifier": "PAP-587",
+  "url": "https://linear.app/paperos/issue/PAP-587/agent-attribution-and-quotas-x-paperos-actor-header-audit-fields-for"
+ },
+ "r4/identity/agent-keys": {
+  "id": "78a5256d-4a69-402c-97b6-057df85e96a5",
+  "identifier": "PAP-586",
+  "url": "https://linear.app/paperos/issue/PAP-586/agent-users-synced-from-the-roster-better-auth-apikey-with-the-pos"
+ },
+ "r4/identity/auth-abuse-controls": {
+  "id": "035df3aa-05fb-4665-8180-30d6c8b2868e",
+  "identifier": "PAP-592",
+  "url": "https://linear.app/paperos/issue/PAP-592/sign-in-and-sign-up-abuse-controls-turnstile-challenge-on-public-auth"
+ },
+ "r4/identity/console-admin-pages": {
+  "id": "d77dc299-57c8-41f4-b941-50a87de3eca8",
+  "identifier": "PAP-583",
+  "url": "https://linear.app/paperos/issue/PAP-583/seven-console-admin-pages-with-specs-overview-members-roles-audit"
+ },
+ "r4/identity/console-frame": {
+  "id": "3fad0c34-65b4-4246-a183-c5f7f78aa3d2",
+  "identifier": "PAP-582",
+  "url": "https://linear.app/paperos/issue/PAP-582/console-layout-and-slots-fromappspec-navigation-tenant-and-workspace"
+ },
+ "r4/identity/custom-roles": {
+  "id": "270158ce-3457-4dcb-8ec3-35bf6a75e5b2",
+  "identifier": "PAP-588",
+  "url": "https://linear.app/paperos/issue/PAP-588/custom-roles-and-permission-sets-tenant-defined-roles-extending-a-base"
+ },
+ "r4/identity/delegated-authority": {
+  "id": "1428945c-1009-49d4-88e6-44583cd097bb",
+  "identifier": "PAP-594",
+  "url": "https://linear.app/paperos/issue/PAP-594/delegated-authority-for-agents-actingfor-evaluation-as-the"
+ },
+ "r4/identity/device-flow-login": {
+  "id": "3b77a735-4fb0-4121-a34c-be1f1cbf6e82",
+  "identifier": "PAP-597",
+  "url": "https://linear.app/paperos/issue/PAP-597/cli-and-headless-login-oauth-device-authorization-flow-for-paperos"
+ },
+ "r4/identity/field-permissions": {
+  "id": "a0371de6-0215-4644-8f49-f49e8925db7d",
+  "identifier": "PAP-590",
+  "url": "https://linear.app/paperos/issue/PAP-590/field-level-permissions-policy-fields-allow-and-deny-lists-response"
+ },
+ "r4/identity/mfa-recovery": {
+  "id": "a97ac714-a013-4613-8e3f-3ea43fc3ef28",
+  "identifier": "PAP-580",
+  "url": "https://linear.app/paperos/issue/PAP-580/totp-second-factor-with-backup-codes-the-authrecover-flow-that"
+ },
+ "r4/identity/partner-managed-tenants": {
+  "id": "7897afff-916c-4a44-9bd5-4c12806c50cc",
+  "identifier": "PAP-598",
+  "url": "https://linear.app/paperos/issue/PAP-598/partner-managed-tenants-partner-organisation-links-delegated"
+ },
+ "r4/identity/permission-propagation": {
+  "id": "a4273cf3-27bc-4b59-80e5-d0c88d88f8bc",
+  "identifier": "PAP-591",
+  "url": "https://linear.app/paperos/issue/PAP-591/permission-change-propagation-permissionchanged-topic-versioned-server"
+ },
+ "r4/identity/portal-account-pages": {
+  "id": "1e2d6fe2-3c6f-422e-87a8-c61b66dc26d3",
+  "identifier": "PAP-585",
+  "url": "https://linear.app/paperos/issue/PAP-585/portal-profile-security-billing-stub-and-notification-preference-pages"
+ },
+ "r4/identity/portal-frame": {
+  "id": "f80ac712-c7b8-4a5d-99fe-3c2202243c9c",
+  "identifier": "PAP-584",
+  "url": "https://linear.app/paperos/issue/PAP-584/portal-layout-with-top-bar-bottom-tab-bar-and-left-rail-portalnav-from"
+ },
+ "r4/identity/resource-grants": {
+  "id": "ad739786-4245-47fc-9cd6-c3b202c98541",
+  "identifier": "PAP-589",
+  "url": "https://linear.app/paperos/issue/PAP-589/per-resource-grants-and-share-links-resource-grant-table-hasrelation"
+ },
+ "r4/identity/service-principals": {
+  "id": "1f55ea5c-aef5-404c-8587-cba945849ace",
+  "identifier": "PAP-593",
+  "url": "https://linear.app/paperos/issue/PAP-593/internal-service-principals-service-users-for-the-worker-collab-server"
+ },
+ "r4/identity/session-policy": {
+  "id": "5362a9c2-9d8d-402c-b01d-c8930fe8a6b3",
+  "identifier": "PAP-595",
+  "url": "https://linear.app/paperos/issue/PAP-595/tenant-session-and-mfa-policy-per-audience-idle-and-absolute-timeouts"
+ },
+ "r4/identity/sessions-stepup": {
+  "id": "12669ca7-8f7d-44ec-bd87-3b3ab57ec85d",
+  "identifier": "PAP-581",
+  "url": "https://linear.app/paperos/issue/PAP-581/session-and-device-listing-with-revoke-requirerecentauth-step-up-with"
+ },
+ "r4/identity/tenancy-core": {
+  "id": "aed99353-7a6f-4eee-9c25-070de1d79ebe",
+  "identifier": "PAP-578",
+  "url": "https://linear.app/paperos/issue/PAP-578/organization-plugin-mapped-onto-tenants-and-workspaces-withtenant"
+ },
+ "r4/identity/tenancy-ui": {
+  "id": "d0ff46e9-776e-417c-b1f8-f201bc709cc5",
+  "identifier": "PAP-579",
+  "url": "https://linear.app/paperos/issue/PAP-579/invitations-with-email-and-invitedollartoken-tenantswitcher-usetenant"
+ },
+ "r4/input/accessibility-input-preferences": {
+  "id": "f0aed06f-53b4-48eb-a569-23e45b03e988",
+  "identifier": "PAP-647",
+  "url": "https://linear.app/paperos/issue/PAP-647/accessibility-input-preferences-settingsaccessibility-with-single-key"
+ },
+ "r4/input/clipboard-port": {
+  "id": "3db75be2-8061-4588-a42a-8c4394f20932",
+  "identifier": "PAP-643",
+  "url": "https://linear.app/paperos/issue/PAP-643/clipboard-port-typed-copy-and-paste-with-a-paperos-mime-payload-plain"
+ },
+ "r4/input/command-context-menus": {
+  "id": "31637fb0-cc3f-4dc3-a917-b49d043648a6",
+  "identifier": "PAP-642",
+  "url": "https://linear.app/paperos/issue/PAP-642/command-driven-context-menus-right-click-long-press-and-the"
+ },
+ "r4/input/dictation-targets-and-voice-ui": {
+  "id": "e1d7ade3-c2fe-4b50-a22c-23f84b0c2ea8",
+  "identifier": "PAP-654",
+  "url": "https://linear.app/paperos/issue/PAP-654/dictation-targets-and-voice-ui-dictationtarget-adapters-for-inputs-and"
+ },
+ "r4/input/gesture-recognisers-and-arena": {
+  "id": "3a280b15-0228-41db-8941-3bcfb271ef93",
+  "identifier": "PAP-651",
+  "url": "https://linear.app/paperos/issue/PAP-651/gesture-recognisers-and-arena-usetap-uselongpress-useswipe-usepinch"
+ },
+ "r4/input/macros-and-command-chains": {
+  "id": "542bc0c3-0cf6-46af-b293-ca7dd432f590",
+  "identifier": "PAP-648",
+  "url": "https://linear.app/paperos/issue/PAP-648/macros-record-a-sequence-of-commands-into-a-named-macro-bind-it-to-a"
+ },
+ "r4/input/mobile-gesture-components-and-haptics": {
+  "id": "cac2e28b-ce5e-438b-a50f-d932fb94b4ff",
+  "identifier": "PAP-652",
+  "url": "https://linear.app/paperos/issue/PAP-652/mobile-gesture-components-and-haptics-swipeablerow-pinchzoomview"
+ },
+ "r4/input/multi-window-command-and-focus-routing": {
+  "id": "b8724837-b39d-42b4-926c-e8601807a033",
+  "identifier": "PAP-646",
+  "url": "https://linear.app/paperos/issue/PAP-646/multi-window-command-and-focus-routing-per-window-scope-roots-global"
+ },
+ "r4/input/native-menu-from-command-manifest": {
+  "id": "b46b9eee-0513-45d1-8700-d0743e7ab231",
+  "identifier": "PAP-649",
+  "url": "https://linear.app/paperos/issue/PAP-649/native-menu-and-tray-items-generated-from-the-command-manifest-with"
+ },
+ "r4/input/playwright-input-fixtures": {
+  "id": "4462c02b-85a2-41f5-a168-e74c93ee5297",
+  "identifier": "PAP-644",
+  "url": "https://linear.app/paperos/issue/PAP-644/shared-playwright-input-fixtures-presschord-sequence-touch-gestures"
+ },
+ "r4/input/switch-access-scanning": {
+  "id": "d2e8f576-7172-4056-8218-284dddc7bab6",
+  "identifier": "PAP-650",
+  "url": "https://linear.app/paperos/issue/PAP-650/switch-access-scanning-single-and-dual-switch-auto-scan-over"
+ },
+ "r4/input/undo-manager": {
+  "id": "f538c331-2207-4438-9b42-52b2141dce20",
+  "identifier": "PAP-641",
+  "url": "https://linear.app/paperos/issue/PAP-641/global-undo-manager-scoped-undo-and-redo-stacks-coalescing-yjs"
+ },
+ "r4/input/virtual-keyboard-viewport": {
+  "id": "ea378cd0-12ec-4fd7-ab35-54ee9cb2ab35",
+  "identifier": "PAP-645",
+  "url": "https://linear.app/paperos/issue/PAP-645/virtual-keyboard-handling-on-mobile-visualviewport-tracking-keyboard"
+ },
+ "r4/input/voice-backend-and-intent-matching": {
+  "id": "f56ffa28-7e5d-4731-90a5-8229f43e7589",
+  "identifier": "PAP-653",
+  "url": "https://linear.app/paperos/issue/PAP-653/voice-backend-and-intent-matching-speechbackend-interface"
+ },
+ "r4/libraries/adopt-workflow-cli": {
+  "id": "53b96179-e6b8-410e-ac43-ac3f0bf3bdf9",
+  "identifier": "PAP-763",
+  "url": "https://linear.app/paperos/issue/PAP-763/adoption-workflow-cli-pnpm-lib-adopt-pkg-chains-facts-scorecard-adr"
+ },
+ "r4/libraries/compose-smoke-workflow": {
+  "id": "1a3e29d3-d48c-46a8-8136-19d250e3481f",
+  "identifier": "PAP-754",
+  "url": "https://linear.app/paperos/issue/PAP-754/reusable-compose-smoke-workflow-matrix-over-opscompose-and-spikesoss"
+ },
+ "r4/libraries/dependency-health-page": {
+  "id": "500b7da8-5d2e-43e1-a0b5-e527b70e7250",
+  "identifier": "PAP-760",
+  "url": "https://linear.app/paperos/issue/PAP-760/dependency-health-page-outdated-versions-pending-majors-advisories"
+ },
+ "r4/libraries/dependency-hygiene": {
+  "id": "5ea3462a-f1ee-49b1-9774-ed06a72de7fc",
+  "identifier": "PAP-756",
+  "url": "https://linear.app/paperos/issue/PAP-756/monorepo-dependency-hygiene-pnpm-catalog-for-shared-versions-syncpack"
+ },
+ "r4/libraries/facts-security-quality": {
+  "id": "8be8556d-0cfa-4add-8a03-cf96c5afe3ca",
+  "identifier": "PAP-755",
+  "url": "https://linear.app/paperos/issue/PAP-755/extend-lib-facts-with-openssf-scorecard-depsdev-advisories-publint-and"
+ },
+ "r4/libraries/import-census": {
+  "id": "e074e4e3-f9de-4eb0-938a-1ce5f6261b26",
+  "identifier": "PAP-761",
+  "url": "https://linear.app/paperos/issue/PAP-761/import-census-pnpm-lib-census-records-which-modules-and-files-import"
+ },
+ "r4/libraries/library-cost-model": {
+  "id": "5d870ac4-74e2-448e-82f5-14c30a2bf614",
+  "identifier": "PAP-764",
+  "url": "https://linear.app/paperos/issue/PAP-764/library-and-service-cost-model-paid-tiers-seats-renewal-dates-and"
+ },
+ "r4/libraries/library-guardrails-lint": {
+  "id": "899296de-f362-40b3-b241-339adb63db5c",
+  "identifier": "PAP-758",
+  "url": "https://linear.app/paperos/issue/PAP-758/library-guardrails-as-lint-generated-no-restricted-imports-from"
+ },
+ "r4/libraries/library-usage-notes": {
+  "id": "1ad9f6cc-d863-4ea0-8b8f-5dd7f138668c",
+  "identifier": "PAP-757",
+  "url": "https://linear.app/paperos/issue/PAP-757/adopted-library-usage-notes-one-docslibrariesnotesidmd-per-adopted"
+ },
+ "r4/libraries/oss-licenses-page": {
+  "id": "41e033b5-256d-4460-9d60-2a64937bfdde",
+  "identifier": "PAP-762",
+  "url": "https://linear.app/paperos/issue/PAP-762/in-app-open-source-licenses-public-publiclicenses-page-and-desktop"
+ },
+ "r4/libraries/patch-fork-policy": {
+  "id": "2041d753-9215-43fa-b447-f6cbe930ad99",
+  "identifier": "PAP-759",
+  "url": "https://linear.app/paperos/issue/PAP-759/patch-and-fork-policy-pnpm-patch-rules-patches-entries-in-the-registry"
+ },
+ "r4/libraries/spike-harness-kit": {
+  "id": "16e0a743-df6e-4c6f-95f4-a7935771eae6",
+  "identifier": "PAP-753",
+  "url": "https://linear.app/paperos/issue/PAP-753/spike-harness-kit-spikes-kit-with-route-per-candidate-vite-template"
+ },
+ "r4/migration/accounting-csv-recipes-freshbooks-wave-zoho": {
+  "id": "f07bfbd5-4086-4d8b-9344-4aad237bb6a5",
+  "identifier": "PAP-828",
+  "url": "https://linear.app/paperos/issue/PAP-828/accounting-csv-recipes-for-freshbooks-wave-and-zoho-books-guided"
+ },
+ "r4/migration/ai-mapping-assistant": {
+  "id": "18c4c73e-20d3-4546-a1b1-37e7614a508e",
+  "identifier": "PAP-822",
+  "url": "https://linear.app/paperos/issue/PAP-822/ai-mapping-assistant-claude-suggested-field-mappings-types-and"
+ },
+ "r4/migration/airtable-automations-conversion": {
+  "id": "4f085827-3470-4d7e-a481-2ee65949db77",
+  "identifier": "PAP-832",
+  "url": "https://linear.app/paperos/issue/PAP-832/airtable-automations-conversion-read-automation-definitions-from-a"
+ },
+ "r4/migration/asana-trello-jira-connectors": {
+  "id": "3a72c056-7067-4b42-b7de-2281570a80aa",
+  "identifier": "PAP-825",
+  "url": "https://linear.app/paperos/issue/PAP-825/asana-trello-and-jira-import-into-the-pm-module-api-connectors-for"
+ },
+ "r4/migration/clickup-connector-and-markup-mapping": {
+  "id": "ce9751d0-b20a-46b6-a207-d76079506c5f",
+  "identifier": "PAP-817",
+  "url": "https://linear.app/paperos/issue/PAP-817/clickup-connector-spaces-folders-lists-tasks-subtasks-custom-fields"
+ },
+ "r4/migration/connector-conformance-harness-and-scaffold": {
+  "id": "c879e76a-209f-40e8-85b4-eb074c578ebd",
+  "identifier": "PAP-814",
+  "url": "https://linear.app/paperos/issue/PAP-814/connector-conformance-harness-and-scaffold-connectorconformance-vitest"
+ },
+ "r4/migration/contacts-import-google-outlook-vcard": {
+  "id": "71282037-87e0-4f7c-a4a8-dc06cf656d18",
+  "identifier": "PAP-824",
+  "url": "https://linear.app/paperos/issue/PAP-824/contacts-import-from-google-contacts-outlook-people-and-vcard-files"
+ },
+ "r4/migration/drive-dropbox-files-import": {
+  "id": "90d642dd-06d3-4fc2-8893-c7a7c4914a45",
+  "identifier": "PAP-823",
+  "url": "https://linear.app/paperos/issue/PAP-823/files-import-from-google-drive-dropbox-and-onedrive-folder-picker"
+ },
+ "r4/migration/import-duplicate-detection-and-merge-preview": {
+  "id": "839f8ddf-9681-4214-976f-28d1cea54471",
+  "identifier": "PAP-821",
+  "url": "https://linear.app/paperos/issue/PAP-821/import-duplicate-detection-and-merge-preview-fuzzy-matching-of"
+ },
+ "r4/migration/importer-test-accounts-and-fixture-workspaces": {
+  "id": "4f0faf09-0eca-4754-bdd9-8787d22b92e2",
+  "identifier": "PAP-813",
+  "url": "https://linear.app/paperos/issue/PAP-813/importer-test-accounts-and-fixture-workspaces-idempotent-seed-scripts"
+ },
+ "r4/migration/linear-connector-and-pm-mapping": {
+  "id": "a798dd9f-45fb-475c-aacf-ecbf44742047",
+  "identifier": "PAP-816",
+  "url": "https://linear.app/paperos/issue/PAP-816/linear-connector-teams-states-labels-projects-cycles-issues-comments"
+ },
+ "r4/migration/migration-verification-dashboard-and-cutover": {
+  "id": "cbbeb41a-7698-4a26-a762-7de6c50af204",
+  "identifier": "PAP-830",
+  "url": "https://linear.app/paperos/issue/PAP-830/migration-verification-dashboard-and-cutover-checklist-source-versus"
+ },
+ "r4/migration/packs-wave-2-law-real-estate-property-construction-ecommerce": {
+  "id": "057ee91a-d861-4c9c-9dd7-cf437dcd46d5",
+  "identifier": "PAP-818",
+  "url": "https://linear.app/paperos/issue/PAP-818/author-business-packs-wave-2-law-firm-real-estate-brokerage-property"
+ },
+ "r4/migration/packs-wave-3-nonprofit-school-church-gym-salon": {
+  "id": "a7fc9791-0994-4c44-b242-0054e4a4bbc7",
+  "identifier": "PAP-819",
+  "url": "https://linear.app/paperos/issue/PAP-819/author-business-packs-wave-3-nonprofit-school-church-gym-and-salon"
+ },
+ "r4/migration/placeholder-users-and-invite-conversion": {
+  "id": "7b8847be-87cf-4abb-a4ee-da950fdceac3",
+  "identifier": "PAP-831",
+  "url": "https://linear.app/paperos/issue/PAP-831/placeholder-users-from-imports-and-invite-conversion-people-matched-by"
+ },
+ "r4/migration/salesforce-and-pipedrive-crm-import": {
+  "id": "72826a10-0f66-4e3a-bc96-dfa89e617161",
+  "identifier": "PAP-826",
+  "url": "https://linear.app/paperos/issue/PAP-826/salesforce-and-pipedrive-crm-import-pipedrive-api-connector-salesforce"
+ },
+ "r4/migration/scheduled-resync-and-sync-status": {
+  "id": "23c33c1b-65bf-484b-94cc-f98a581d536e",
+  "identifier": "PAP-820",
+  "url": "https://linear.app/paperos/issue/PAP-820/scheduled-re-sync-and-sync-status-per-source-routines-calling"
+ },
+ "r4/migration/shopify-woocommerce-square-import": {
+  "id": "50f7d441-2e87-442b-a2a6-60107600ed4e",
+  "identifier": "PAP-827",
+  "url": "https://linear.app/paperos/issue/PAP-827/commerce-import-from-shopify-woocommerce-and-square-products-and"
+ },
+ "r4/migration/source-oauth-connections-and-token-refresh": {
+  "id": "b9485833-23d9-46c4-81c8-72352719a819",
+  "identifier": "PAP-815",
+  "url": "https://linear.app/paperos/issue/PAP-815/source-connections-shared-oauth-connect-flow-encrypted-token-storage"
+ },
+ "r4/migration/template-pack-from-tenant": {
+  "id": "7e6c00ef-6ce0-4976-b483-575b7aeee89c",
+  "identifier": "PAP-829",
+  "url": "https://linear.app/paperos/issue/PAP-829/template-pack-from-a-tenant-export-a-tenants-structure-tables-views"
+ },
+ "r4/module-system/affected-module-ci": {
+  "id": "33b3124a-2e96-4635-8c2f-6decc4a31ec3",
+  "identifier": "PAP-550",
+  "url": "https://linear.app/paperos/issue/PAP-550/affected-module-ci-derive-changed-modules-from-the-dependency-map-and"
+ },
+ "r4/module-system/conformance-normaliser": {
+  "id": "f09bad1b-974b-4b2f-8167-273c2fc9f060",
+  "identifier": "PAP-541",
+  "url": "https://linear.app/paperos/issue/PAP-541/conformance-output-normaliser-and-fixture-lock-placeholder-rules-for"
+ },
+ "r4/module-system/contract-diff": {
+  "id": "9207144f-9803-4cc1-b8a9-696d491fa9af",
+  "identifier": "PAP-544",
+  "url": "https://linear.app/paperos/issue/PAP-544/pnpm-contractdiff-breaking-change-detector-compare-zod-schemas-port"
+ },
+ "r4/module-system/kernel-devtools": {
+  "id": "7da44242-afe2-4dad-a7e3-a667ece3ff3b",
+  "identifier": "PAP-549",
+  "url": "https://linear.app/paperos/issue/PAP-549/kernel-devtools-devmodules-page-with-the-dependency-graph-bindings-and"
+ },
+ "r4/module-system/kernel-integrations": {
+  "id": "cb417e62-1494-4b25-a289-d36d5d1c1894",
+  "identifier": "PAP-537",
+  "url": "https://linear.app/paperos/issue/PAP-537/kernel-host-integrations-hono-request-scope-middleware-react"
+ },
+ "r4/module-system/kernel-otel": {
+  "id": "67973d42-73d0-4af4-94f3-1efdbfaa3d28",
+  "identifier": "PAP-547",
+  "url": "https://linear.app/paperos/issue/PAP-547/kernel-instrumentation-one-opentelemetry-span-per-port-call-tagged"
+ },
+ "r4/module-system/lifecycle-and-health": {
+  "id": "ee12c390-83d3-467b-a62e-c7a15bfafb3f",
+  "identifier": "PAP-546",
+  "url": "https://linear.app/paperos/issue/PAP-546/module-lifecycle-and-health-onboot-onready-onstop-hooks-in-bind"
+ },
+ "r4/module-system/module-scaffold": {
+  "id": "df6a846d-1e0c-483a-b0ce-158a262259f9",
+  "identifier": "PAP-543",
+  "url": "https://linear.app/paperos/issue/PAP-543/paperos-module-new-id-scaffold-the-contract-package-manifest"
+ },
+ "r4/module-system/module-settings-ui": {
+  "id": "c746d400-4682-4885-91b3-2630e07120b2",
+  "identifier": "PAP-553",
+  "url": "https://linear.app/paperos/issue/PAP-553/auto-generated-module-settings-forms-from-settingsschema-at"
+ },
+ "r4/module-system/modules-settings-page": {
+  "id": "16e6b3be-8e9e-4c05-a112-1bc7447b7a8c",
+  "identifier": "PAP-538",
+  "url": "https://linear.app/paperos/issue/PAP-538/settingsmodules-staff-page-bound-implementations-per-module-tenant"
+ },
+ "r4/module-system/port-resilience": {
+  "id": "52bfa82c-e625-44b4-808d-d79a75a08c72",
+  "identifier": "PAP-548",
+  "url": "https://linear.app/paperos/issue/PAP-548/port-resilience-timeouts-circuit-breaker-and-degraded-fallbacks-for"
+ },
+ "r4/module-system/port-usage-tracking": {
+  "id": "b6018465-826f-476c-ac61-f7e4972cbb86",
+  "identifier": "PAP-552",
+  "url": "https://linear.app/paperos/issue/PAP-552/port-usage-tracking-derive-requiresports-from-static-analysis-of"
+ },
+ "r4/module-system/sample-module": {
+  "id": "9e5c498d-db36-406a-acf8-e58c33bbc85d",
+  "identifier": "PAP-542",
+  "url": "https://linear.app/paperos/issue/PAP-542/reference-module-sample-paperoscontract-sample-with-good-bad-and-v2"
+ },
+ "r4/module-system/schema-fixture-factory": {
+  "id": "b6ea937f-67da-4290-b253-8236daac5c81",
+  "identifier": "PAP-551",
+  "url": "https://linear.app/paperos/issue/PAP-551/schema-fixture-factory-fixtureforschema-seed-overrides-generating"
+ },
+ "r4/module-system/service-swap-drill": {
+  "id": "a0373184-160b-409e-92a7-e9c236b4dc29",
+  "identifier": "PAP-554",
+  "url": "https://linear.app/paperos/issue/PAP-554/second-swap-drill-swap-the-forge-module-to-a-read-only-github-adapter"
+ },
+ "r4/module-system/swap-linear-umbrella": {
+  "id": "7a02a28c-202b-489b-81e4-aad8e3bf4ca8",
+  "identifier": "PAP-539",
+  "url": "https://linear.app/paperos/issue/PAP-539/swap-cli-linear-integration-umbrella-and-per-step-issues-through"
+ },
+ "r4/module-system/test-kernel": {
+  "id": "8b572cef-3fa3-48c0-b549-7dc95972c8e4",
+  "identifier": "PAP-545",
+  "url": "https://linear.app/paperos/issue/PAP-545/kernel-test-kit-createtestkernel-modules-doubles-tenant-actor-wiring"
+ },
+ "r4/module-system/ydoc-converter": {
+  "id": "fca47ec3-761d-47d4-a653-b48f577fbf10",
+  "identifier": "PAP-540",
+  "url": "https://linear.app/paperos/issue/PAP-540/yjs-document-schema-versioning-ydocversion-in-the-document-meta"
+ },
+ "r4/pm-linear/always-on-operations-and-morning-report": {
+  "id": "868f8236-478b-4317-99d3-e8ba48ba05fc",
+  "identifier": "PAP-706",
+  "url": "https://linear.app/paperos/issue/PAP-706/247-operations-watchdog-and-auto-restart-for-the-orchestrator-capacity"
+ },
+ "r4/pm-linear/chunk-progress-report": {
+  "id": "153ff0c5-cca0-45f9-ba6e-6ef9a2dcc0e3",
+  "identifier": "PAP-705",
+  "url": "https://linear.app/paperos/issue/PAP-705/chunk-progress-in-the-burn-report-which-dollar2500-chunk-is-active"
+ },
+ "r4/pm-linear/due-dates-slack-and-risk-alerts": {
+  "id": "f274058b-287b-4805-b6ff-0e05f9b21357",
+  "identifier": "PAP-694",
+  "url": "https://linear.app/paperos/issue/PAP-694/set-due-dates-from-milestone-targets-compute-remaining-critical-path"
+ },
+ "r4/pm-linear/issue-attachments-and-evidence-bundle": {
+  "id": "3eb325a0-016c-42dd-80af-c3e3de50d036",
+  "identifier": "PAP-699",
+  "url": "https://linear.app/paperos/issue/PAP-699/attach-prs-gate-reports-screenshots-recordings-and-the-digest-to"
+ },
+ "r4/pm-linear/issue-templates-per-type-and-card": {
+  "id": "87f94120-83e2-4ea0-a0be-e377e4bc4147",
+  "identifier": "PAP-700",
+  "url": "https://linear.app/paperos/issue/PAP-700/linear-issue-templates-per-type-build-spec-research-review-infra-docs"
+ },
+ "r4/pm-linear/linear-cycles-weekly-and-auto-assignment": {
+  "id": "25cd475a-814d-4450-9590-be7b611772f2",
+  "identifier": "PAP-693",
+  "url": "https://linear.app/paperos/issue/PAP-693/enable-one-week-cycles-on-team-pap-assign-every-scheduled-issue-to-the"
+ },
+ "r4/pm-linear/linear-estimates-and-size-labels": {
+  "id": "0fa7aca2-9f4d-4bdf-aa71-ce0343f37262",
+  "identifier": "PAP-692",
+  "url": "https://linear.app/paperos/issue/PAP-692/enable-fibonacci-estimates-on-team-pap-and-backfill-every-issues"
+ },
+ "r4/pm-linear/linear-github-integration-and-state-automation": {
+  "id": "2ee56170-c4d6-4306-8acb-d10d739a41de",
+  "identifier": "PAP-702",
+  "url": "https://linear.app/paperos/issue/PAP-702/configure-linears-github-integration-for-imagine-os-branch-name-format"
+ },
+ "r4/pm-linear/linear-initiatives-rollup": {
+  "id": "b9219fa7-788f-483d-96c7-a59885c88596",
+  "identifier": "PAP-695",
+  "url": "https://linear.app/paperos/issue/PAP-695/create-linear-initiatives-for-the-v010-release-the-v02-deferred-set"
+ },
+ "r4/pm-linear/linear-triage-enable-and-intake-state-machine": {
+  "id": "49040e0e-b008-4d1f-95a5-35066f8763ee",
+  "identifier": "PAP-696",
+  "url": "https://linear.app/paperos/issue/PAP-696/enable-linear-triage-on-team-pap-with-a-triage-state-make-pap-307"
+ },
+ "r4/pm-linear/orchestrator-promotion-pass": {
+  "id": "baa1864e-7d2b-4418-80ab-cd811b0bd51b",
+  "identifier": "PAP-691",
+  "url": "https://linear.app/paperos/issue/PAP-691/orchestrator-backlog-to-ready-for-claude-promotion-pass-under-the"
+ },
+ "r4/pm-linear/pipeline-sla-timers": {
+  "id": "2902838b-5380-4055-aa0b-c2660d024fd5",
+  "identifier": "PAP-703",
+  "url": "https://linear.app/paperos/issue/PAP-703/pipeline-sla-timers-in-the-orchestrator-needs-justin-default-deadline"
+ },
+ "r4/pm-linear/pipeline-views-as-code": {
+  "id": "a32d508e-ab38-4380-a3e4-1aa25c9b3138",
+  "identifier": "PAP-701",
+  "url": "https://linear.app/paperos/issue/PAP-701/workspace-views-as-code-create-the-pipeline-views-ready-by-slack-in"
+ },
+ "r4/pm-linear/pm-model-initiatives-updates-cycles-rollups": {
+  "id": "270edbdd-74f6-4b5d-bf1f-2107fb7eed3f",
+  "identifier": "PAP-707",
+  "url": "https://linear.app/paperos/issue/PAP-707/extend-the-pm-data-model-with-initiatives-project-updates-and-health"
+ },
+ "r4/pm-linear/pm-sync-initiatives-cycles-attachments": {
+  "id": "ef369b4c-b19b-4e80-a0e2-0b9c2865453a",
+  "identifier": "PAP-708",
+  "url": "https://linear.app/paperos/issue/PAP-708/linear-sync-mirror-initiatives-project-updates-and-health-cycles"
+ },
+ "r4/pm-linear/project-updates-and-health-by-atlas": {
+  "id": "51b4ec34-836b-40bc-8987-3d2c0f0fab31",
+  "identifier": "PAP-698",
+  "url": "https://linear.app/paperos/issue/PAP-698/atlas-posts-a-linear-project-update-every-monday-per-project-with"
+ },
+ "r4/pm-linear/session-model-and-effort-routing": {
+  "id": "074787ec-3c3a-4a1f-8308-8256ed8c4988",
+  "identifier": "PAP-704",
+  "url": "https://linear.app/paperos/issue/PAP-704/session-model-and-effort-routing-read-the-issues-model-and-effort"
+ },
+ "r4/pm-linear/slack-voice-memo-intake": {
+  "id": "69287dcd-79f5-44af-aba1-a8f989c62883",
+  "identifier": "PAP-697",
+  "url": "https://linear.app/paperos/issue/PAP-697/slack-voice-memo-and-message-intake-transcribe-audio-posted-in-paperos"
+ },
+ "r4/quality/api-fuzzing-nightly": {
+  "id": "175d2dc5-a6ee-401f-9f63-5ac6285a02eb",
+  "identifier": "PAP-684",
+  "url": "https://linear.app/paperos/issue/PAP-684/api-fuzzing-nightly-schemathesis-against-the-openapi-document-with"
+ },
+ "r4/quality/cross-browser-functional-smoke": {
+  "id": "70bee165-ad84-40a9-98df-23341d342d69",
+  "identifier": "PAP-687",
+  "url": "https://linear.app/paperos/issue/PAP-687/cross-browser-functional-smoke-run-the-smoke-e2e-tag-on-webkit-and"
+ },
+ "r4/quality/dast-zap-nightly-and-authenticated-scans": {
+  "id": "6ef4c190-ed75-467c-b974-d798bea71889",
+  "identifier": "PAP-675",
+  "url": "https://linear.app/paperos/issue/PAP-675/dast-nightly-zap-baseline-weekly-authenticated-full-scan-per-seeded"
+ },
+ "r4/quality/desktop-tauri-smoke": {
+  "id": "fb9128c5-9dea-40ce-af2e-96b57f7d7ec4",
+  "identifier": "PAP-690",
+  "url": "https://linear.app/paperos/issue/PAP-690/desktop-smoke-via-tauri-driver-on-linux-launch-the-packaged-app-sign"
+ },
+ "r4/quality/diff-coverage-gate": {
+  "id": "5b14eb09-cc0f-4220-9e0e-aff84cf3acec",
+  "identifier": "PAP-681",
+  "url": "https://linear.app/paperos/issue/PAP-681/diff-coverage-gate-per-pr-patch-coverage-from-vitest-lcov-80-percent"
+ },
+ "r4/quality/docs-and-spec-reviewer": {
+  "id": "68328460-da35-4e39-9961-26dc437169df",
+  "identifier": "PAP-677",
+  "url": "https://linear.app/paperos/issue/PAP-677/docs-and-spec-reviewer-definition-fourth-gate-2-reviewer-for-prs-that"
+ },
+ "r4/quality/gate-metrics-and-pipeline-health": {
+  "id": "4e248c2c-df4e-4728-9fc2-2bc39fb42e07",
+  "identifier": "PAP-680",
+  "url": "https://linear.app/paperos/issue/PAP-680/gate-metrics-and-pipeline-health-qa-gate-runs-table-duration-and-pass"
+ },
+ "r4/quality/migration-safety-gate": {
+  "id": "bac4ffa4-e682-4a39-a879-5805c0d0b51c",
+  "identifier": "PAP-682",
+  "url": "https://linear.app/paperos/issue/PAP-682/migration-safety-gate-lint-drizzle-migrations-for-destructive-ddl"
+ },
+ "r4/quality/mutation-testing-nightly": {
+  "id": "7ed2a47b-967d-45a9-bd6f-b6f085afab08",
+  "identifier": "PAP-686",
+  "url": "https://linear.app/paperos/issue/PAP-686/mutation-testing-nightly-with-stryker-on-packagescore"
+ },
+ "r4/quality/pseudo-locale-and-rtl-visual-run": {
+  "id": "4502f192-ca10-4de1-88d5-4737fb052c8c",
+  "identifier": "PAP-688",
+  "url": "https://linear.app/paperos/issue/PAP-688/pseudo-locale-and-rtl-visual-run-capture-the-gate-3-page-set-in-en-xa"
+ },
+ "r4/quality/qa-evidence-browser": {
+  "id": "bb07f7de-fc2f-477b-9592-7cefe36464e7",
+  "identifier": "PAP-689",
+  "url": "https://linear.app/paperos/issue/PAP-689/qa-evidence-browser-staff-page-qa-that-lists-prs-and-release"
+ },
+ "r4/quality/quality-handbook": {
+  "id": "c824e2cb-ee6e-423f-b4ea-2fc5e2b0afef",
+  "identifier": "PAP-685",
+  "url": "https://linear.app/paperos/issue/PAP-685/quality-handbook-one-page-that-explains-the-four-gates-how-to-read-a"
+ },
+ "r4/quality/quality-sandbox-repo-and-seeded-defects": {
+  "id": "151c6465-415a-47bc-93f7-77b990e9b7bb",
+  "identifier": "PAP-678",
+  "url": "https://linear.app/paperos/issue/PAP-678/create-the-quality-sandbox-repo-imagine-ospaperos-qa-sandbox-with-the"
+ },
+ "r4/quality/recorded-http-fixtures-kit": {
+  "id": "56f5462e-ea40-48a5-9d81-07ab6c38e33f",
+  "identifier": "PAP-683",
+  "url": "https://linear.app/paperos/issue/PAP-683/recorded-http-fixtures-kit-one-msw-recorder-and-fixture-store-for"
+ },
+ "r4/quality/review-fix-loop": {
+  "id": "cd571904-8f19-4d5e-8dca-d4c23549bb84",
+  "identifier": "PAP-679",
+  "url": "https://linear.app/paperos/issue/PAP-679/review-fix-loop-turn-a-gate-2-request-changes-into-a-builder-re-queue"
+ },
+ "r4/quality/security-alert-rules-routing-digest": {
+  "id": "3eaf12b5-4285-432e-9e5b-4ad73700e64f",
+  "identifier": "PAP-674",
+  "url": "https://linear.app/paperos/issue/PAP-674/security-telemetry-rules-engine-s0-routing-to-the-pinned-alerts-issue"
+ },
+ "r4/quality/security-event-catalogue-emitters": {
+  "id": "054703d1-b271-4979-bb7a-21072b400c4d",
+  "identifier": "PAP-673",
+  "url": "https://linear.app/paperos/issue/PAP-673/security-telemetry-event-catalogue-emitters-in-api-auth-orchestrator"
+ },
+ "r4/quality/security-regression-suite": {
+  "id": "5159ee83-e02c-4b97-8654-a1c6810886ba",
+  "identifier": "PAP-676",
+  "url": "https://linear.app/paperos/issue/PAP-676/security-regression-suite-30-control-tagged-tests-headers-csrf-idor"
+ },
+ "r4/realtime/conflict-ux-impl": {
+  "id": "a7ff436a-6ccc-4c54-b4c3-6dfeeb9ad332",
+  "identifier": "PAP-608",
+  "url": "https://linear.app/paperos/issue/PAP-608/implement-the-conflict-ux-useconflicts-on-reconciler-events"
+ },
+ "r4/realtime/connection-status": {
+  "id": "be3a9ad6-037d-4636-96bc-9400e52447b1",
+  "identifier": "PAP-609",
+  "url": "https://linear.app/paperos/issue/PAP-609/unified-connection-status-useconnectionstatus-composing-hocuspocus"
+ },
+ "r4/realtime/doc-history": {
+  "id": "03ed16e8-d2f9-4933-8f12-8a078ce343b5",
+  "identifier": "PAP-607",
+  "url": "https://linear.app/paperos/issue/PAP-607/yjs-document-history-periodic-and-named-snapshots-a-version-list-with"
+ },
+ "r4/realtime/editor-core": {
+  "id": "29cc27f4-6415-4ecb-9f74-adf108ce6d11",
+  "identifier": "PAP-603",
+  "url": "https://linear.app/paperos/issue/PAP-603/richtexteditor-core-tiptap-3-with-yjs-collaboration-and-carets-room"
+ },
+ "r4/realtime/editor-features": {
+  "id": "4dd4fdc0-14dc-4eda-aef8-f7fb05f9adcf",
+  "identifier": "PAP-604",
+  "url": "https://linear.app/paperos/issue/PAP-604/editor-features-toolbar-and-bubble-menu-on-design-system-primitives"
+ },
+ "r4/realtime/ephemeral-signals": {
+  "id": "cdf306fa-c29c-475a-8f6f-2516ff2df6e9",
+  "identifier": "PAP-611",
+  "url": "https://linear.app/paperos/issue/PAP-611/ephemeral-signals-over-awareness-typing-indicators-for-comments-and"
+ },
+ "r4/realtime/headless-client": {
+  "id": "f7511509-d969-46ce-9d1f-a86dae0545cb",
+  "identifier": "PAP-610",
+  "url": "https://linear.app/paperos/issue/PAP-610/headless-yjs-client-for-agents-and-jobs-openroomheadlessroom"
+ },
+ "r4/realtime/live-events-channel": {
+  "id": "5b56db31-fe54-428d-8618-8e57bb526ee8",
+  "identifier": "PAP-599",
+  "url": "https://linear.app/paperos/issue/PAP-599/live-event-table-publishliveevent-per-user-electric-shape-with-sse"
+ },
+ "r4/realtime/load-harness": {
+  "id": "b1d736ee-bdfb-4ecf-b2a1-b9a43ab8b198",
+  "identifier": "PAP-601",
+  "url": "https://linear.app/paperos/issue/PAP-601/collab-load-harness-k6-xk6-websockets-connection-load-node-pool-of-yjs"
+ },
+ "r4/realtime/load-runs-tuning": {
+  "id": "36d7df1b-8419-460a-a854-559c990bb68a",
+  "identifier": "PAP-602",
+  "url": "https://linear.app/paperos/issue/PAP-602/staging-load-runs-against-the-five-scenarios-tuning-knobs-with-before"
+ },
+ "r4/realtime/presence-components": {
+  "id": "12407d8d-bb44-4f10-972e-03da20b4f415",
+  "identifier": "PAP-606",
+  "url": "https://linear.app/paperos/issue/PAP-606/presenceavatars-livecursor-selectionhighlight-and-viewersbadge-on"
+ },
+ "r4/realtime/presence-core": {
+  "id": "7a9a3206-4603-4363-92b6-778054a4938b",
+  "identifier": "PAP-605",
+  "url": "https://linear.app/paperos/issue/PAP-605/presenceprovider-on-ephemeral-page-rooms-the-awareness-payload-schema"
+ },
+ "r4/realtime/test-kit": {
+  "id": "72b0d364-76fa-434c-9cf5-a7f0d982660f",
+  "identifier": "PAP-612",
+  "url": "https://linear.app/paperos/issue/PAP-612/realtime-test-kit-in-memory-yjs-provider-awareness-simulator-fake"
+ },
+ "r4/realtime/web-push": {
+  "id": "9118cfe2-8427-4b96-a23c-6b85843f6097",
+  "identifier": "PAP-600",
+  "url": "https://linear.app/paperos/issue/PAP-600/web-push-and-desktop-notifications-vapid-keys-push-subscription"
+ },
+ "r4/spec-builder/analytics-events-section": {
+  "id": "ab733717-7d05-4076-b795-09268d37dc47",
+  "identifier": "PAP-752",
+  "url": "https://linear.app/paperos/issue/PAP-752/spec-analytics-section-product-events-per-action-and-view-compiled"
+ },
+ "r4/spec-builder/entity-backend-codegen": {
+  "id": "83ab8db2-d606-4c17-8df1-b9069de0565c",
+  "identifier": "PAP-741",
+  "url": "https://linear.app/paperos/issue/PAP-741/generate-the-backend-from-entities-drizzle-tables-with-rls-a-reviewed"
+ },
+ "r4/spec-builder/entity-field-grammar": {
+  "id": "c243ebd0-e66d-409c-8415-77aca79237f4",
+  "identifier": "PAP-739",
+  "url": "https://linear.app/paperos/issue/PAP-739/define-the-entity-field-grammar-in-appspecyaml-field-types-constraints"
+ },
+ "r4/spec-builder/flags-modules-compile": {
+  "id": "59422bbd-fea8-4a28-9119-76151552e302",
+  "identifier": "PAP-744",
+  "url": "https://linear.app/paperos/issue/PAP-744/compile-flags-and-modules-sections-route-guards-through-the-flag"
+ },
+ "r4/spec-builder/msw-fixtures-from-data": {
+  "id": "d309fabe-ab4b-4f90-a569-21952c01ec2f",
+  "identifier": "PAP-747",
+  "url": "https://linear.app/paperos/issue/PAP-747/generate-msw-handlers-and-fixture-rows-from-the-data-section-for"
+ },
+ "r4/spec-builder/mutation-input-constraints": {
+  "id": "b4bf35d4-ac0e-4f86-9b63-0e3ee0194e4e",
+  "identifier": "PAP-742",
+  "url": "https://linear.app/paperos/issue/PAP-742/mutation-input-constraints-and-form-derivation-typed-input-fields-with"
+ },
+ "r4/spec-builder/page-budgets": {
+  "id": "af79ebfd-0656-4977-9911-c5250ac781dd",
+  "identifier": "PAP-746",
+  "url": "https://linear.app/paperos/issue/PAP-746/per-page-performance-budgets-from-specs-budgets-section-compiled-into"
+ },
+ "r4/spec-builder/page-spec-templates": {
+  "id": "5bf6f34e-9e94-45dd-9fbb-ec2ff85876e7",
+  "identifier": "PAP-750",
+  "url": "https://linear.app/paperos/issue/PAP-750/page-spec-templates-paperos-spec-new-template"
+ },
+ "r4/spec-builder/reverse-codegen-infer": {
+  "id": "418d1693-9ba5-469d-9fde-12974b896a72",
+  "identifier": "PAP-749",
+  "url": "https://linear.app/paperos/issue/PAP-749/reverse-codegen-paperos-spec-infer-route-drafts-a-page-spec-from-an"
+ },
+ "r4/spec-builder/schema-v1-1-extensions": {
+  "id": "9d6e575d-7ea5-45f4-a70e-c1714e5df0ff",
+  "identifier": "PAP-740",
+  "url": "https://linear.app/paperos/issue/PAP-740/page-spec-v11-sections-flags-modules-comments-help-seo-budgets-with"
+ },
+ "r4/spec-builder/seo-public-metadata": {
+  "id": "507bb9ab-be8b-45f4-9550-2601464b2436",
+  "identifier": "PAP-745",
+  "url": "https://linear.app/paperos/issue/PAP-745/public-page-metadata-from-specs-seo-section-to-head-tags-open-graph"
+ },
+ "r4/spec-builder/spec-diff-pr-comment": {
+  "id": "1bb0aacb-bcdd-4e9c-8f49-4ac48f784788",
+  "identifier": "PAP-743",
+  "url": "https://linear.app/paperos/issue/PAP-743/semantic-spec-diff-section-level-changes-access-matrix-delta-and"
+ },
+ "r4/spec-builder/spec-fixture-corpus": {
+  "id": "fd52b3e5-0411-4878-9b54-5eb6dd5722fd",
+  "identifier": "PAP-748",
+  "url": "https://linear.app/paperos/issue/PAP-748/synthetic-spec-corpus-generator-300-valid-page-specs-and-60-page"
+ },
+ "r4/spec-builder/spec-versioning-tooling": {
+  "id": "ebb7cddf-62ee-400c-b2fc-08f2e74d48b4",
+  "identifier": "PAP-751",
+  "url": "https://linear.app/paperos/issue/PAP-751/spec-versioning-tooling-version-registry-codemod-helpers-paperos-spec"
+ },
+ "r4/tables/agent-computed-field": {
+  "id": "2fcc6b6c-5395-4a2d-8d94-7f252a5551df",
+  "identifier": "PAP-637",
+  "url": "https://linear.app/paperos/issue/PAP-637/agent-computed-field-type-a-prompt-template-over-record-fields-filled"
+ },
+ "r4/tables/chart-view-echarts": {
+  "id": "9e7d7b8c-7cf2-4a5b-958a-0af36d84ab5c",
+  "identifier": "PAP-621",
+  "url": "https://linear.app/paperos/issue/PAP-621/chart-view-on-echarts-bar-stacked-bar-line-area-pie-donut-and-number"
+ },
+ "r4/tables/conditional-formatting": {
+  "id": "5f2e1824-0cbe-4a39-bc6e-26a9cccb238a",
+  "identifier": "PAP-626",
+  "url": "https://linear.app/paperos/issue/PAP-626/conditional-formatting-row-and-cell-colour-rules-from-filtertree"
+ },
+ "r4/tables/demo-pages-and-seed-data": {
+  "id": "98e698a1-7237-4883-8b1c-2645d23b6b43",
+  "identifier": "PAP-615",
+  "url": "https://linear.app/paperos/issue/PAP-615/demo-routes"
+ },
+ "r4/tables/duplicate-detection-and-merge": {
+  "id": "ad8811df-049c-4c94-b40f-417295569b70",
+  "identifier": "PAP-632",
+  "url": "https://linear.app/paperos/issue/PAP-632/duplicate-detection-and-record-merge-find-duplicates-by-fields-with"
+ },
+ "r4/tables/extended-chart-types": {
+  "id": "662b83c9-ebfd-4dba-8a4d-083a202c5c8b",
+  "identifier": "PAP-636",
+  "url": "https://linear.app/paperos/issue/PAP-636/extended-chart-types-scatter-histogram-funnel-gauge-heatmap-and-combo"
+ },
+ "r4/tables/extension-guide-docs": {
+  "id": "7309d4c8-fe30-4818-a6bf-4daa62086d7f",
+  "identifier": "PAP-631",
+  "url": "https://linear.app/paperos/issue/PAP-631/write-the-views-engine-extension-guide-adding-a-field-type-a-view-kind"
+ },
+ "r4/tables/extra-field-types": {
+  "id": "29192e89-821a-4347-aa5d-4ff79e8bc7ab",
+  "identifier": "PAP-627",
+  "url": "https://linear.app/paperos/issue/PAP-627/additional-field-types-richtext-tiptap-json-duration-time-progress-and"
+ },
+ "r4/tables/field-level-permissions": {
+  "id": "abc66c6c-be18-4587-87ae-f6225c59d402",
+  "identifier": "PAP-638",
+  "url": "https://linear.app/paperos/issue/PAP-638/field-level-permissions-on-custom-datasets-per-field-read-and-write-by"
+ },
+ "r4/tables/filter-builder-component": {
+  "id": "40bb29f2-a6b3-47f7-81c9-012a761851da",
+  "identifier": "PAP-617",
+  "url": "https://linear.app/paperos/issue/PAP-617/filterbuilder-nested-andor-groups-per-type-operators-relative-dates"
+ },
+ "r4/tables/form-view-runtime-and-public-submit": {
+  "id": "76a81934-8cf3-4928-a012-78749e10688d",
+  "identifier": "PAP-620",
+  "url": "https://linear.app/paperos/issue/PAP-620/form-view-runtime-and-builder-formspec-conditional-fields-drafts"
+ },
+ "r4/tables/gallery-and-list-views": {
+  "id": "0739b0b4-ab77-4426-9844-257ec550ac7a",
+  "identifier": "PAP-619",
+  "url": "https://linear.app/paperos/issue/PAP-619/gallery-and-list-views-cover-cards-with-virtualised-rows-dense-phone"
+ },
+ "r4/tables/geocoding-job": {
+  "id": "c8caded4-2e3a-46b3-ab6c-2beafd2169e8",
+  "identifier": "PAP-640",
+  "url": "https://linear.app/paperos/issue/PAP-640/geocoding-job-fill-geo-fields-from-address-fields-through-a-provider"
+ },
+ "r4/tables/grid-fill-handle": {
+  "id": "ed040539-ae7e-45fb-b92d-78f7f6a35563",
+  "identifier": "PAP-630",
+  "url": "https://linear.app/paperos/issue/PAP-630/grid-fill-handle-drag-to-fill-down-or-across-a-range-with-copy-series"
+ },
+ "r4/tables/grid-find-and-replace": {
+  "id": "1363d888-13b2-42c0-994a-38dfd7a1ee92",
+  "identifier": "PAP-629",
+  "url": "https://linear.app/paperos/issue/PAP-629/grid-find-and-replace-search-within-the-current-view-match-navigation"
+ },
+ "r4/tables/map-view-maplibre-and-geo-field": {
+  "id": "7dd1675b-9151-4d24-954a-bd881eb6bc62",
+  "identifier": "PAP-622",
+  "url": "https://linear.app/paperos/issue/PAP-622/map-view-on-maplibre-gl-with-the-geo-field-type-clustering-bounds"
+ },
+ "r4/tables/pivot-summary-view": {
+  "id": "a1d5bf47-421e-4d7f-92a3-d5e7957fab29",
+  "identifier": "PAP-635",
+  "url": "https://linear.app/paperos/issue/PAP-635/pivot-summary-view-rows-and-columns-from-two-group-fields-aggregate"
+ },
+ "r4/tables/public-view-links-and-embeds": {
+  "id": "369a465e-1aca-413b-b5c5-6381fb7330a8",
+  "identifier": "PAP-624",
+  "url": "https://linear.app/paperos/issue/PAP-624/public-view-links-and-embeds-view-share-tokens-password-and-expiry"
+ },
+ "r4/tables/record-templates-and-field-defaults": {
+  "id": "36de54d7-19ec-4d11-b66e-682a67b9344b",
+  "identifier": "PAP-628",
+  "url": "https://linear.app/paperos/issue/PAP-628/record-templates-and-field-default-values-fielddefdefaultvalue-with"
+ },
+ "r4/tables/records-crud-procedures": {
+  "id": "3d53ee50-589a-4a2f-a142-06b94a196eb0",
+  "identifier": "PAP-613",
+  "url": "https://linear.app/paperos/issue/PAP-613/records-crud-procedures-for-custom-datasets"
+ },
+ "r4/tables/saved-views-switcher-and-audience-defaults": {
+  "id": "8d10d06b-8477-4cde-adb9-c5934520f8f9",
+  "identifier": "PAP-623",
+  "url": "https://linear.app/paperos/issue/PAP-623/saved-views-views-crud-personal-vs-shared-visibility-viewswitcher-per"
+ },
+ "r4/tables/scheduled-view-snapshots": {
+  "id": "8476f4ae-57fd-4246-8dee-92a98f106490",
+  "identifier": "PAP-639",
+  "url": "https://linear.app/paperos/issue/PAP-639/scheduled-view-snapshots-email-or-slack-a-view-or-dashboard-export-on"
+ },
+ "r4/tables/system-fields": {
+  "id": "b15fcc9a-bd02-4ccf-ac0b-11ad9fda4846",
+  "identifier": "PAP-616",
+  "url": "https://linear.app/paperos/issue/PAP-616/system-field-types-autonumber-createdtime-lastmodifiedtime-createdby"
+ },
+ "r4/tables/tree-hierarchy-grid": {
+  "id": "cb7f84f9-981e-4a68-97b1-e566f26fbc53",
+  "identifier": "PAP-633",
+  "url": "https://linear.app/paperos/issue/PAP-633/hierarchy-in-grid-and-list-parent-relation-field-drives-indented-sub"
+ },
+ "r4/tables/view-export-csv-xlsx-ics-print": {
+  "id": "99b033b8-02d7-44d7-a245-8cc4e1a9aa68",
+  "identifier": "PAP-625",
+  "url": "https://linear.app/paperos/issue/PAP-625/export-any-view-as-csv-xlsx-json-or-ics-honouring-filters-sorts-and"
+ },
+ "r4/tables/view-renderer-registry-and-host": {
+  "id": "5f55109b-43be-4bd8-95d5-c1ca78ac2241",
+  "identifier": "PAP-614",
+  "url": "https://linear.app/paperos/issue/PAP-614/view-renderer-registry-and-viewhost-registerviewkind-one-viewhost-spec"
+ },
+ "r4/tables/view-toolbar-sort-group-aggregates": {
+  "id": "b7000c3d-b235-4b58-b093-42d37c467b1a",
+  "identifier": "PAP-618",
+  "url": "https://linear.app/paperos/issue/PAP-618/viewtoolbar-sorteditor-groupeditor-aggregatefooter-picker"
+ },
+ "r4/tables/workload-view": {
+  "id": "8fc40f72-031e-4183-bcf5-8b4469e289bf",
+  "identifier": "PAP-634",
+  "url": "https://linear.app/paperos/issue/PAP-634/workload-view-capacity-per-person-per-period-from-an-assignee-field"
+ }
+}
