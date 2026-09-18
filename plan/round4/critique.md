@@ -163,3 +163,35 @@ Each brief is self-contained for one agent editing Linear through the API (`line
 ## 6. After-fix integrity (14:40Z snapshot)
 
 All field checks 0; cycles 0; milestone and dueDate inversions 0; deferred → scheduled 0; Ready blocked/umbrella/deferred 0; child milestone mismatch 0; umbrella-due-before-last-child 0; hard-dependency drift 0 of 901; `r4/` keys in bodies 0; fresh-umbrella inbound propagation gaps 0; new-project issues without a path to their contract or the kernel 0; Backlog leaves with no gate 1 (PAP-754, intended). Open by design: 53 fresh umbrellas (19 single-child), 126 unpropagated umbrella outbound edges, 82 Triage skeletons, 504 scheduled session-days. Mutations this pass: 444 description updates, 59 relations created, 2 milestone/dueDate updates, 0 deletions, 0 state changes (`changes/critique-fixes.json`).
+
+
+## 7. After final fixes (snapshot `critique-snapshot-final.json`, 2026-09-18T14:54:47Z)
+
+Applied by `critique-tools/final_fixes.py` (log `changes/final-fixes.json`, 241 mutations, 0 failures, 0 deletions):
+
+- **FIX-R4-1**: all 19 single-child fresh umbrellas judged from the two descriptions; in every case the child is an add-on (an integration, monitor, settings page, CI shim or reporting layer), so option (b) was applied to all 19: child de-parented (`parentId: null`, note in its Dependencies), `parent blocks child` created (19 relations, none inverted a milestone or a due date, none made a cycle), parent's Model and Reasoning-effort labels and estimate (3 points each) restored from the 12:50Z inventory and `issue-fields.json`, the split comment amended. None of the 19 had been Ready for Claude in the 12:50Z inventory (all Backlog), so no state was restored. Umbrellas 105 -> 86, leaves 796 -> 815; `fresh_umbrellas_single_child` 19 -> 0.
+- **FIX-R4-3**: the last-child rule applied to every umbrella with children: 155 `Clast blocks D` edges over 86 umbrellas (fresh snapshot after FIX-R4-1; 0 skips: no candidate edge would have made a cycle, a milestone or due-date inversion or a deferred -> scheduled edge), plus 1 propagation where a new edge landed on another umbrella (PAP-328 -> PAP-381's child). The rule sentence was added to the Dependencies section of PAP-92 and PAP-96 (marker `_Round 4 critique fix (2026-09-18):_`). `new_umbrella_unpropagated_outbound` 126 -> 0.
+- **FIX-R4-8**: PAP-754 (`compose-smoke`, zero inbound blockers, no children, not Deferred) promoted Backlog -> Ready for Claude in cycle C1 with the comment `promoted: no blockers (round 4 critique)`. Ready 29 -> 30.
+- **FIX-R4-9**: the five new projects (assistant, workflows, engagement, commerce, platform-ops) got `targetDate` 2026-10-16 (their latest milestone; was 2026-10-01) and the content line "v0.1 scope is the first milestone (2026-10-01); the later milestones are v0.2 (deferred)" at the top.
+
+| Check | After final fixes |
+|---|---|
+| Issues / specified / Triage | 983 / 901 / 82 |
+| Leaves / umbrellas (specified) | 815 / 86 |
+| `blocks` relations | 3275 |
+| States | Backlog 871, Ready for Claude 30, Triage 82 |
+| Deferred | 204 |
+| Cycles / milestone inversions / dueDate inversions | 0 / 0 / 0 |
+| Deferred -> scheduled edges | 0 |
+| Ready blocked / umbrella / Deferred / outside C1 | 0 / 0 / 0 / 0 |
+| Backlog with cycle / promotable Backlog leaves | 0 / 0 |
+| Leaf label / estimate / dueDate defects; umbrella with Model, Effort or estimate | 0 / 0 / 0; 0 |
+| Child project / milestone mismatch; umbrella due before last child | 0 / 0; 0 |
+| Description sections missing; hard-dependency drift; `r4/` keys in bodies | 0 / 0 / 0 |
+| Fresh umbrellas / single-child fresh umbrellas | 34 / 0 |
+| Fresh-umbrella unpropagated inbound / outbound edges | 0 / 0 |
+| New-project issues without inbound blockers | 0 |
+| Children with no inbound blocker | 1 (PAP-555, Ready for Claude by design) |
+| Triage duplicates | 1 (PAP-950 vs PAP-70, noted) |
+
+Still open by design: FIX-R4-2 (504 scheduled session-days for 208 of capacity), FIX-R4-7 (82 Triage skeletons), FIX-R4-10 (five hand-rolled approval steps not yet amended to consume `ApprovalPort`).
