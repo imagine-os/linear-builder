@@ -1,0 +1,1684 @@
+{
+ "project": "tables",
+ "projectName": "Table & Views Engine",
+ "benchmarks": [
+  "Airtable (field types, view types, interface designer, automations, sync, extensions: pivot, chart, dedupe, page designer)",
+  "Notion databases (relations, rollups, templates, linked views, galleries, status groups, formulas 2.0)",
+  "ClickUp views (List, Board, Box, Calendar, Gantt, Table, Timeline, Workload, Activity, Map, Mind Map, Whiteboard, Doc, Chat, Form, Embed) and custom fields",
+  "Baserow",
+  "NocoDB",
+  "Smartsheet",
+  "Monday.com",
+  "Coda"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "View model ViewSpec superset schema",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-161",
+    "PAP-483"
+   ],
+   "note": "Ten kinds, filters as FilterTree, strict Zod"
+  },
+  {
+   "feature": "Parity checklist vs Airtable/Notion/ClickUp/Baserow/NocoDB",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-162"
+   ],
+   "note": "250-400 row CSV; this matrix adds Monday, Smartsheet, Coda rows"
+  },
+  {
+   "feature": "Query compiler to SQL with keyset cursors",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-335",
+    "PAP-336",
+    "PAP-337"
+   ],
+   "note": "100k-row bench"
+  },
+  {
+   "feature": "Electric shapes for live grids",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-336",
+    "PAP-270"
+   ],
+   "note": "Eligibility rules"
+  },
+  {
+   "feature": "Records CRUD API for custom datasets",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/records-crud-procedures"
+   ],
+   "note": "Referenced by 164/342/333/334/169, owned by nobody"
+  },
+  {
+   "feature": "View renderer registry and universal ViewHost",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/view-renderer-registry-and-host"
+   ],
+   "note": "Contract declares registerViewKind; no runtime owner"
+  },
+  {
+   "feature": "Demo routes and deterministic seed",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/demo-pages-and-seed-data"
+   ],
+   "note": "Every DoD cites /demo/*"
+  },
+  {
+   "feature": "Field types: text, number, currency, percent, date, checkbox, rating, url, email, phone",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-338"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Field types: select, multiSelect, user, attachment",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-339"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Field types: relation, lookup, rollup, formula storage",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-340"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Field types: geo, button",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-170",
+    "PAP-388"
+   ],
+   "note": "geo now in the map child"
+  },
+  {
+   "feature": "System fields: autonumber, created/modified time and by",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/system-fields"
+   ],
+   "note": "Airtable, Baserow, NocoDB, Monday all ship them"
+  },
+  {
+   "feature": "Field types: rich text, duration, time, progress, json",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/extra-field-types"
+   ],
+   "note": "Notion rich text, ClickUp progress, Baserow duration"
+  },
+  {
+   "feature": "Status field with todo/in-progress/done groups (Notion status)",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-339"
+   ],
+   "note": "Amendment: option groups on select"
+  },
+  {
+   "feature": "Field validation options (min, max, pattern, length)",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-338"
+   ],
+   "note": "Amendment"
+  },
+  {
+   "feature": "Field description and help text",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-161"
+   ],
+   "note": "Amendment: FieldDef.description"
+  },
+  {
+   "feature": "Field default values (static and dynamic)",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/record-templates-and-field-defaults"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Record templates (Notion/ClickUp)",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/record-templates-and-field-defaults"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Field type conversion with lossiness report",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-340",
+    "PAP-332"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "In-app schema editor (tables and fields)",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-332"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Lookup and rollup with filtered linked records",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-340"
+   ],
+   "note": "Amendment: filter on lookup/rollup"
+  },
+  {
+   "feature": "Create linked record inline from relation picker",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-340"
+   ],
+   "note": "Amendment: allowCreate"
+  },
+  {
+   "feature": "Barcode / QR field",
+   "status": "gap",
+   "coveredBy": [],
+   "note": "wontdo for v0.1; parity row only"
+  },
+  {
+   "feature": "AI/agent-computed field",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/agent-computed-field"
+   ],
+   "note": "Deferred"
+  },
+  {
+   "feature": "Field-level permissions per audience",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-172",
+    "r4/tables/field-level-permissions"
+   ],
+   "note": "Public shares hide fields; per-audience rules deferred"
+  },
+  {
+   "feature": "Grid: virtualisation, selection, keyboard",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-341"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Grid: inline edit, optimistic commit",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-342"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Grid: TSV copy/paste ranges",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-342",
+    "r4/input/clipboard-port"
+   ],
+   "note": "Typed clipboard payload from input"
+  },
+  {
+   "feature": "Grid: fill handle / drag to fill",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/grid-fill-handle"
+   ],
+   "note": "Airtable and spreadsheets"
+  },
+  {
+   "feature": "Grid: find and replace",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/grid-find-and-replace"
+   ],
+   "note": "Airtable ships it"
+  },
+  {
+   "feature": "Grid: column resize, reorder, hide, freeze",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-343"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Grid: grouping headers and aggregate footer",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-343",
+    "PAP-336"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Grid: row heights and density",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-341",
+    "r4/design-system/density-modes"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Grid: undo/redo stack for edits",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-342",
+    "r4/input/undo-manager"
+   ],
+   "note": "Amendment: register edits in the undo manager"
+  },
+  {
+   "feature": "Grid: RTL and touch range selection",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-341"
+   ],
+   "note": "Amendment"
+  },
+  {
+   "feature": "Grid: context menus from commands",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-343",
+    "r4/input/command-context-menus"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Filter builder with nested AND/OR and per-type operators",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/filter-builder-component",
+    "PAP-166"
+   ],
+   "note": "Split from PAP-166"
+  },
+  {
+   "feature": "Relative dates and dynamic values (current user)",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/filter-builder-component",
+    "PAP-279"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Multi-sort, multi-level group, aggregates UI",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/view-toolbar-sort-group-aggregates",
+    "PAP-166"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Quick filter chips and view search",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/filter-builder-component",
+    "r4/tables/view-toolbar-sort-group-aggregates"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Temporary URL-held filters for viewers",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/view-toolbar-sort-group-aggregates"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Conditional formatting / record colouring",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/conditional-formatting"
+   ],
+   "note": "Airtable, Smartsheet, ClickUp, Monday"
+  },
+  {
+   "feature": "Kanban with swimlanes, WIP limits, drag",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-167",
+    "PAP-331"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Calendar month/week/day/agenda",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-344"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Timeline with lanes and zoom",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-345"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Gantt with dependencies and critical path",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-346"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Gallery view",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/gallery-and-list-views"
+   ],
+   "note": "Split from PAP-169"
+  },
+  {
+   "feature": "List view for phones",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/gallery-and-list-views"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Form view with conditional logic and public submit",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/form-view-runtime-and-public-submit"
+   ],
+   "note": "Split from PAP-169"
+  },
+  {
+   "feature": "Chart view (bar, line, area, pie, donut, number)",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/chart-view-echarts"
+   ],
+   "note": "Split from PAP-170"
+  },
+  {
+   "feature": "Extended charts (scatter, histogram, funnel, gauge, heatmap, combo)",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/extended-chart-types"
+   ],
+   "note": "Deferred"
+  },
+  {
+   "feature": "Map view with clustering and bounds filter",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/map-view-maplibre-and-geo-field"
+   ],
+   "note": "Split from PAP-170"
+  },
+  {
+   "feature": "Geocoding of address fields",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/geocoding-job"
+   ],
+   "note": "Deferred"
+  },
+  {
+   "feature": "Hierarchy / sub-items / tree grid (ClickUp, Notion, Smartsheet)",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/tree-hierarchy-grid"
+   ],
+   "note": "Deferred"
+  },
+  {
+   "feature": "Workload / Box view (ClickUp, Monday)",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/workload-view"
+   ],
+   "note": "Deferred"
+  },
+  {
+   "feature": "Pivot / summary table (Airtable ext, Coda, Smartsheet)",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/pivot-summary-view"
+   ],
+   "note": "Deferred"
+  },
+  {
+   "feature": "Activity view",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-333",
+    "PAP-38"
+   ],
+   "note": "Per-record timeline; no cross-dataset activity view (v0.2)"
+  },
+  {
+   "feature": "Doc, Chat, Whiteboard, Mind map views (ClickUp)",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-128",
+    "PAP-197",
+    "PAP-132"
+   ],
+   "note": "Owned by collab and growth; mind map wontdo"
+  },
+  {
+   "feature": "Files view (Monday) / attachments gallery",
+   "status": "partial",
+   "coveredBy": [
+    "r4/tables/gallery-and-list-views",
+    "PAP-339"
+   ],
+   "note": "Gallery over attachment cover; no dedicated files view"
+  },
+  {
+   "feature": "Embed view / iframe block",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-386"
+   ],
+   "note": "Amendment: embed block kind"
+  },
+  {
+   "feature": "Saved views, personal vs shared",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/saved-views-switcher-and-audience-defaults"
+   ],
+   "note": "Split from PAP-172"
+  },
+  {
+   "feature": "Per-audience default views",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/saved-views-switcher-and-audience-defaults"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "View locking",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/saved-views-switcher-and-audience-defaults"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Public links and embeds with password and expiry",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/public-view-links-and-embeds"
+   ],
+   "note": "Split from PAP-172"
+  },
+  {
+   "feature": "Export view as CSV/XLSX/JSON",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/view-export-csv-xlsx-ics-print"
+   ],
+   "note": "PAP-205 is tenant archive, not per-view"
+  },
+  {
+   "feature": "ICS feed for calendar views",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/view-export-csv-xlsx-ics-print"
+   ],
+   "note": "ClickUp/Notion calendar sync"
+  },
+  {
+   "feature": "Print view",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-387",
+    "r4/tables/view-export-csv-xlsx-ics-print"
+   ],
+   "note": "Dashboards had print; views get /print/v/:id"
+  },
+  {
+   "feature": "Scheduled snapshots to email/Slack",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/scheduled-view-snapshots"
+   ],
+   "note": "Deferred"
+  },
+  {
+   "feature": "Import CSV/Excel/Sheets into a table",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-200",
+    "PAP-199"
+   ],
+   "note": "Migration project"
+  },
+  {
+   "feature": "Sync tables from external sources (Airtable sync)",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-199",
+    "PAP-417",
+    "PAP-202"
+   ],
+   "note": "Cross-project suggestion: scheduled re-sync"
+  },
+  {
+   "feature": "Formula engine (80+ functions, Airtable/Notion syntax)",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-382",
+    "PAP-383",
+    "PAP-384"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Formula editor with autocomplete",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-383"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Formula server-side compile and cache",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-384"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Dashboards with drag layout",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-385"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Dashboard blocks and cross-filter bus",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-386"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Dashboard print, lazy, permission tiles",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-387"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Number/KPI blocks with sparkline",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-386",
+    "r4/design-system/dataviz-tokens-and-microcharts"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Automations: triggers and runtime",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-388"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Automations: actions catalogue",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-389"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Automations: builder, run log, templates",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-390"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Record detail page and panel",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-333",
+    "PAP-343"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Record history with undo",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-333"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Comments on records",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-131",
+    "PAP-333"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Cell-level comments (Smartsheet)",
+   "status": "gap",
+   "coveredBy": [],
+   "note": "Cross-project suggestion to collab: cell anchor grammar"
+  },
+  {
+   "feature": "Attachments tab and previews",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-333",
+    "r4/design-system/media-preview-and-lightbox"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Bulk edit, delete, trash, restore",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-334"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Duplicate detection and merge",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/duplicate-detection-and-merge"
+   ],
+   "note": "Deferred; Airtable Dedupe ext, CRM merge"
+  },
+  {
+   "feature": "Duplicate record and view",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-342",
+    "r4/tables/saved-views-switcher-and-audience-defaults"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Offline edits and conflict UX",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-272",
+    "PAP-144",
+    "PAP-167"
+   ],
+   "note": "Data-layer and realtime own it"
+  },
+  {
+   "feature": "Live multiplayer presence in grid cells",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-141",
+    "PAP-143"
+   ],
+   "note": "Cross-project suggestion to realtime"
+  },
+  {
+   "feature": "Views performance budget (p95)",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-337",
+    "PAP-242"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Accessibility: role=grid, announcements",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-341",
+    "PAP-152"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "External REST API and SDK for records",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-269",
+    "PAP-222",
+    "r4/tables/records-crud-procedures"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Agent access to views (MCP tool)",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-291",
+    "PAP-60"
+   ],
+   "note": "Cross-project suggestion to agents"
+  },
+  {
+   "feature": "Extension guide for adding kinds and types",
+   "status": "gap",
+   "coveredBy": [
+    "r4/tables/extension-guide-docs"
+   ],
+   "note": "Cold-session onboarding"
+  },
+  {
+   "feature": "Module contract, conformance, wiring",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-483",
+    "PAP-486",
+    "PAP-489"
+   ],
+   "note": ""
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/tables/records-crud-procedures",
+   "title": "Records CRUD procedures for custom datasets: records.list|get|create|update|archive|restore with FieldDef validation, idempotency and audit reason",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Grid with sort, filter, group",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "dueDate": "2026-09-28",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-338",
+    "PAP-161",
+    "PAP-268",
+    "PAP-304"
+   ],
+   "blocks": [
+    "PAP-342",
+    "PAP-334",
+    "PAP-333",
+    "PAP-169",
+    "PAP-332"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nOwn the `records.*` router that PAP-342, PAP-333, PAP-334 and PAP-169 call but no issue builds: typed oRPC procedures over `record.data jsonb` for custom datasets, validated by the dataset's `FieldDef[]`, RLS-scoped, idempotent, audited and mirrored into Electric shapes.\n\n**Scope**\n\nIn: `packages/views/src/records/{router,validate,serialize}.ts`; procedures `records.list|get|create|update|archive|restore|duplicate`; Zod input schemas derived at request time from `FieldDef[]` (`fieldDefsToZod(dataset)`); `record` table indexes; OpenAPI tags; `callAs` fixtures; `docs/views/records-api.md`.\n\nOut: bulk endpoints and trash UI (PAP-334), history and undo (PAP-333), entity-dataset routers (their modules), `views.query` (PAP-337).\n\n**Spec**\n\n* Procedures are `tenantProcedure`s (PAP-268): `records.list({ datasetRef, filter?: FilterTree, sort?, cursor?, limit<=100 })` delegates to `compileView` with an ad-hoc `ViewSpec`; `records.get({ datasetRef, id })`; `records.create({ datasetRef, data, position? })`; `records.update({ datasetRef, id, patch, expectedVersion? })`; `records.archive|restore({ datasetRef, id })`; `records.duplicate({ datasetRef, id, includeAttachments })`.\n* `validateRecord(dataset, data)` (PAP-338) runs before every write; errors are `VALIDATION` with `details: [{ path: fieldKey, issue }]`; unknown keys are stripped, `computed` fields rejected with `FIELD_READONLY`, `required` enforced on create and on patches that null a field.\n* Writes set `record.version = version + 1`; `expectedVersion` mismatch returns 409 `{ code: 'CONFLICT', server: row }` so PAP-272 and PAP-144 can merge; `Idempotency-Key` honoured through PAP-304 for `create` and `duplicate`.\n* Every write passes `toPredicate(actor, '<dataset>.update')` (PAP-228) and RLS; agents must send `X-PaperOS-Reason`; audit rows (PAP-38) carry `before/after/diff` per field key.\n* Row cap 100 KB and 500 fields enforced server-side (PAP-161); `position` uses fractional indexing; `archive` sets `deleted_at` (PAP-32 `softDelete`) and emits `record.deleted`; `create|update` emit `record.created|updated` with changed keys only (PAP-303 envelope).\n* Shape invalidation: after a write the router calls `shapes.touch(datasetRef)` so PAP-336 shapes and `useViewQuery` refetch; REST mirror via PAP-269.\n\n**Interface contract**\n\nProvides: `records.*` procedures, `fieldDefsToZod(dataset)`, `RecordDTO` (`{ id, version, data, createdAt, updatedAt, createdBy }`), error codes `FIELD_READONLY`, `RECORD_TOO_LARGE`, OpenAPI section, `seedRecords(datasetRef, n)` test helper. Consumes: `dataset|field|record` tables and `registerDataset` (PAP-161), `validateRecord` and casts (PAP-338), `compileView` (PAP-335), `tenantProcedure` and `callAs` (PAP-268), idempotency (PAP-304), audit (PAP-38), `toPredicate` (PAP-228), event envelope (PAP-303). Consumed by PAP-342 editing, PAP-334 bulk, PAP-333 history, PAP-169 `forms.submit`, PAP-332 schema editor, PAP-199 importers.\n\n**Definition of done**\n\n* All seven procedures merged with OpenAPI docs; `docs/views/records-api.md` with one curl example per procedure.\n* Cross-tenant harness (PAP-34) extended with `records.get|update` as two tenants: zero leakage.\n* Bench: 1,000 sequential `records.update` calls p95 under 40 ms on the compose stack; result table in the PR.\n* CHANGELOG entry; Linear comment on PAP-342, PAP-334, PAP-333, PAP-169 naming the procedure signatures they now import.\n\n**Test plan**\n\n* Unit: `fieldDefsToZod` for every FieldType in the registry (valid and invalid sample per type); required-on-null patch; computed-field rejection; 100 KB cap; version increment and `CONFLICT` body; idempotent create returns the same id.\n* Integration: `callAs(owner)` creates, updates with a stale `expectedVersion` (409), archives and restores; `callAs(viewer)` gets `FORBIDDEN` on update and `NOT_FOUND` on a foreign tenant; audit row diff matches the patch; `record.updated` event payload lists only changed keys.\n* E2E: none directly (PAP-342 grid editing exercises the router end to end).\n\n**Demo**\n\nReviewer runs `pnpm tsx scripts/records-demo.ts` creating a five-field dataset, inserts three records, patches one with a stale version and prints the 409 body, then archives and restores a record while tailing `audit_event`. Under two minutes.\n\n**Edge cases**\n\n* Patch renames a select option id that no longer exists: stored as-is, flagged `unknownOption` in the response warnings, never rejected (PAP-339 semantics).\n\n**Dependencies**\n\nPAP-338 (hard, `validateRecord`), PAP-161 (hard, tables), PAP-268 (hard, `tenantProcedure`), PAP-304 (hard, idempotency; interim in-memory store from PAP-35 acceptable if PAP-304 is In Review). Soft: PAP-38, PAP-228, PAP-303, PAP-336. Blocks PAP-342, PAP-334, PAP-333, PAP-169, PAP-332.\n\n**Agent**\n\nBuilder: Nova (Views Engineer) with Forge (Schema Wright) on indexes. Reviewer: Sentinel (Security Auditor, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/view-renderer-registry-and-host",
+   "title": "View renderer registry and ViewHost: registerViewKind, one <ViewHost spec /> that renders any kind, kind switcher and per-kind options panel",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Grid with sort, filter, group",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "dueDate": "2026-09-28",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-161",
+    "PAP-341"
+   ],
+   "blocks": [
+    "PAP-167",
+    "PAP-169",
+    "PAP-170",
+    "PAP-386",
+    "PAP-102",
+    "PAP-189",
+    "PAP-172"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nBuild the runtime half of the `ViewRendererRegistry` that `@paperos/contract-tables` (PAP-483) declares: `registerViewKind()` so each view issue plugs in without touching a switch statement, a single `<ViewHost spec onSpecChange />` that dashboards, page specs, PM boards and CRM render through, a kind switcher (\"Show as grid | kanban | calendar ...\") and a generic options panel driven by each kind's Zod options schema.\n\n**Scope**\n\nIn: `packages/views/src/host/{registry,ViewHost,KindSwitcher,OptionsPanel,fallback}.tsx`; `registerViewKind({ kind, label, icon, component, optionsSchema, requiredFieldTypes, supports: { groups, aggregates, onFilter, embedded, print } })`; `getViewKind(kind)`; `ViewHost` embedded and full modes; `UnknownKindFallback`; `docs/views/adding-a-view-kind.md`.\n\nOut: the view components themselves (PAP-165 to PAP-170), saved-view CRUD and switcher of saved views (PAP-172), dashboard block chrome (PAP-386).\n\n**Spec**\n\n* Registry is a module-level map filled at boot by each view package's `register.ts`; duplicate kind ids throw; `kernel` binding in PAP-489 exposes the same map through the contract port so other modules never import `packages/views`.\n* `<ViewHost spec datasetRef mode='full'|'embedded' onSpecChange onFilter? toolbarSlot? />` resolves the kind, validates `spec.options` against `optionsSchema` (invalid options fall back to defaults with a dev warning), lazy-loads the component chunk, and renders `EmptyState`, `LoadingPage` and `ErrorState` (PAP-71, PAP-234) around it.\n* `KindSwitcher` lists registered kinds whose `requiredFieldTypes` the dataset satisfies (calendar needs a `date`, kanban a `select|user|relation limitOne`, map a `geo`); switching converts the spec with `convertViewKind(spec, toKind)` keeping filter, sorts and field visibility, dropping incompatible options with a toast listing them.\n* `OptionsPanel` renders form controls from the kind's Zod schema (`z.enum` to Select, `fieldId` refinements to a field picker filtered by type) through PAP-233 form adapters; kinds may override with a custom panel.\n* Commands `view.kind.<kind>` and `view.options.open` registered in PAP-151; the host emits `view.rendered { kind, datasetRef, rows, ms }` telemetry (PAP-40).\n\n**Interface contract**\n\nProvides: `registerViewKind`, `getViewKind`, `listViewKinds(dataset)`, `<ViewHost />`, `<KindSwitcher />`, `<OptionsPanel />`, `convertViewKind`, `ViewKindDefinition` type (mirrors the contract), telemetry topic `view.rendered`. Consumes: `ViewSpec`, `viewSpecSchema` and fixtures (PAP-161), `GridView` as the first registered kind (PAP-341), field type registry for `requiredFieldTypes` (PAP-338), state components (PAP-71, PAP-234), form adapters (PAP-233), commands (PAP-151). Consumed by PAP-167, PAP-168, PAP-169, PAP-170 (each registers), PAP-386 blocks, PAP-172 switcher, PAP-119 inline views, PAP-102 PM boards, PAP-189 CRM views.\n\n**Definition of done**\n\n* Grid registered through the registry and `/demo/grid` renders via `ViewHost` with no direct `GridView` import outside `packages/views`.\n* Storybook `views/host` shows the ten kinds (registered ones live, unregistered ones as the fallback tile); screenshots at 375, 1024, 1920 in three themes; axe clean.\n* `docs/views/adding-a-view-kind.md` walks through registering a kind in under 40 lines; CHANGELOG; Linear comment on PAP-167, PAP-169, PAP-170 asking them to register instead of exporting.\n\n**Test plan**\n\n* Unit: registry duplicate and unknown kind; `listViewKinds` filtering by dataset field types; `convertViewKind` for every kind pair on the ten fixtures (filter and sorts preserved, incompatible options reported); options fallback on invalid options.\n* Integration: PM `issue` entity dataset renders grid and kanban through `ViewHost` with `spec.kind` switched at runtime; embedded mode inside a 300 px container hides the toolbar.\n* E2E: switch `/demo/grid` to kanban from the switcher, change an option in the panel, reload and see both persisted through `onSpecChange`; keyboard-only run of the same.\n\n**Demo**\n\nReviewer opens `/demo/grid`, presses `mod+k`, runs \"Show as kanban\", opens the options panel to pick the group field, then switches back to grid and sees filters intact. Under two minutes.\n\n**Edge cases**\n\n* Kind registered after first render (lazy module): host re-renders on the registry's change event, no page reload.\n* Dataset loses the field a kind requires (field archived): switcher greys the kind with the reason; open views of that kind render the fallback with \"pick another field\".\n\n**Dependencies**\n\nPAP-161 (hard, fixtures and schema), PAP-341 (hard, first kind). Soft: PAP-338, PAP-233, PAP-234, PAP-151. Blocks PAP-167, PAP-169, PAP-170, PAP-386, PAP-172, PAP-102, PAP-189 (they register kinds or render through the host).\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Code Reviewer, Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/demo-pages-and-seed-data",
+   "title": "Demo routes /demo/{grid,kanban,calendar,timeline,gantt,gallery,list,form,map,chart,dashboard} with a deterministic 100k-row seed and two demo datasets",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Grid with sort, filter, group",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-28",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-337",
+    "PAP-161"
+   ],
+   "blocks": [
+    "PAP-167",
+    "PAP-168",
+    "PAP-169",
+    "PAP-170",
+    "PAP-173"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nEvery tables spec demos against `/demo/<kind>` and a 100k-row seed, yet no issue owns those routes or the datasets behind them. Ship them once so eleven view issues, Gate 3 screenshots and the golden-path drill all point at the same deterministic data.\n\n**Scope**\n\nIn: `apps/web/src/routes/demo/*.tsx` page specs (`specs/pages/demo/*.page.spec.yaml`) rendering `<ViewHost />` per kind; `packages/views/scripts/seed.ts` (`pnpm views:seed --rows 100000 --tenant demo`) using `@faker-js/faker` 9.x with a fixed seed and the per-type `generators.ts` of `r4/app-shell/starter-kit-demo-seed` once it lands (this issue adds the 100k-row views profile); two datasets: custom `projects_tasks` (every field type, self-relation for Gantt, `geo`, status select) and entity `memberships`; `views.json` with one saved view per kind; a `/demo` index page.\n\nOut: view components, marketing demo content, production seeding (PAP-367 onboarding), business template packs (PAP-427).\n\n**Spec**\n\n* Seed is deterministic (`faker.seed(42)`, UUIDv7 from a fixed clock) so screenshots are stable across runs; sizes `--rows 1000` for e2e and `100000` for the bench (PAP-337 `seedViews(n)` becomes a thin wrapper).\n* `projects_tasks` fields: title (text), notes (longText), status (select with status groups), priority (select), owner (user), reviewers (multiSelect of users), due (date), start (date), end (date), estimate (number), budget (currency, mixed currencies), done (checkbox), rating, url, email, phone, attachments, parent (relation self, `limitOne`), depends_on (relation self), client (relation to `clients`), client_city (lookup), hours (rollup sum), location (geo), progress (percent), created_at, updated_at.\n* Routes are page specs with `access: staff`, `data: { views: [...] }` so PAP-119 and PAP-120 generate them; each page mounts `ViewHost` in full mode with the saved view for that kind and a `DemoBanner` explaining the dataset.\n* Reset endpoint `POST /__test/demo/reset` (PAP-240 test mode only) restores the seed in under 20 s for e2e isolation.\n* Demo tenant `demo` and users `owner@demo`, `staff@demo`, `viewer@demo` from PAP-58 fixtures; the customer audience sees only `/demo/form` and `/demo/gallery`.\n\n**Interface contract**\n\nProvides: routes `/demo/*`, `pnpm views:seed`, `demoDatasets` fixture module (`projects_tasks`, `clients`), `resetDemo()` test helper, `views.json` saved specs consumed by Gate 3 (PAP-82) and the golden-path drill (PAP-29). Consumes: `ViewHost` (`r4/tables/view-renderer-registry-and-host`, soft: until it lands the route renders `GridView` directly), `records.*` (`r4/tables/records-crud-procedures`), `registerDataset` and tables (PAP-161), `seedViews` (PAP-337), test mode (PAP-240), tenants and users (PAP-58), page spec codegen (PAP-120, soft).\n\n**Definition of done**\n\n* `pnpm views:seed --rows 100000` completes under 90 s on the compose stack and is idempotent (second run no duplicates).\n* All eleven routes render (kinds not yet built show the registry fallback tile) at 375, 1024, 1920 in three themes; screenshots attached; axe clean on the index page.\n* Gate 3 config (PAP-82) lists the routes; `docs/views/demo.md`; CHANGELOG; Linear comment on every view issue linking its route.\n\n**Test plan**\n\n* Unit: seed determinism (two runs produce identical row hashes); field coverage assertion (every registered FieldType appears in `projects_tasks`); mixed-currency distribution.\n* Integration: `views.query` over the seed returns 100,000 rows in count; `resetDemo()` restores after a deletion; RLS: `viewer@demo` cannot read `clients`.\n* E2E: open `/demo`, click each tile, assert the page title and the presence of `ViewHost`; customer session gets `DeniedState` on `/demo/grid`.\n\n**Demo**\n\nReviewer runs `pnpm views:seed --rows 1000`, opens `/demo`, tours grid and form, then runs the reset endpoint and sees the edited row revert. Under two minutes.\n\n**Edge cases**\n\n* Seed run against a tenant that already has custom data: refuses unless `--force`, never touches non-demo datasets.\n* 100k rows on a laptop with 4 GB Postgres: batches of 5,000 with `COPY`, progress bar, resumable.\n* A view kind removes an option (schema bump): `views.json` migrated by `migrateViewSpec` on load with a test.\n\n**Dependencies**\n\nPAP-337 (hard, `seedViews` and procedures), PAP-161 (hard). Soft: `r4/tables/view-renderer-registry-and-host`, `r4/tables/records-crud-procedures`, `r4/app-shell/starter-kit-demo-seed` (shared generators and demo tenant convention), PAP-240, PAP-58, PAP-120. Feeds the demo step of PAP-341 (soft); blocks the demo steps of PAP-167, PAP-168, PAP-169, PAP-170, PAP-173.\n\n**Agent**\n\nBuilder: Nova (Views Engineer) with Quill (Page Spec Writer) on the page specs. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/system-fields",
+   "title": "System field types: autonumber, createdTime, lastModifiedTime, createdBy, lastModifiedBy as read-only computed FieldTypes",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Staff"
+   ],
+   "milestone": "Grid with sort, filter, group",
+   "parent": "PAP-164",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-28",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-338",
+    "PAP-161"
+   ],
+   "blocks": [
+    "PAP-332",
+    "PAP-199"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nAdd the five metadata field types Airtable, Baserow, NocoDB and Monday all ship and PAP-164's seventeen omit: `autonumber`, `createdTime`, `lastModifiedTime`, `createdBy`, `lastModifiedBy`. They are `computed: true`, need no storage in `record.data`, and are what importers (PAP-199) map \"Created\" and \"Item ID\" columns onto.\n\n**Scope**\n\nIn: `packages/views/src/fields/{autonumber,createdTime,lastModifiedTime,createdBy,lastModifiedBy}.ts`; `record.seq bigint` column with a per-dataset sequence; compiler casts in PAP-335 `ops`; conversion matrix rows; Storybook stories.\n\nOut: `button` (PAP-388), `geo` (PAP-170), rich text and duration (`r4/tables/extra-field-types`), per-field \"last modified\" (Airtable's field-scoped variant; matrix row `wontdo` with ADR note).\n\n**Spec**\n\n* `autonumber`: `record.seq` assigned by `nextval('record_seq_<dataset_id>')` on insert inside `records.create`; options `{ prefix?, padding? }` format only; sortable, filterable with number ops, never editable; sequence created by `datasets.create` and dropped on purge.\n* `createdTime|lastModifiedTime` map to `record.created_at|updated_at` with `date` ops and `includeTime: true`; `createdBy|lastModifiedBy` map to `record.created_by|updated_by` (add `updated_by` column, set by `records.update`) rendered with the `user` cell.\n* `defineFieldType` gains `storage: 'data' | 'column'` with `column` name; PAP-335 `resolveDataset` reads columns for `column` storage instead of `record.data -> key`.\n* Editors are `null`; cells reuse `number`, `dateTime`, `user` renderers (PAP-71); `validateRecord` rejects writes with `FIELD_READONLY`; `convertFieldType` allows only system → `text|number|date` snapshots (lossy: freezes values).\n* Importers map source system columns to these types by name heuristics documented in `docs/views/field-types.md`.\n\n**Interface contract**\n\nProvides: five FieldTypes, `storage` option on `defineFieldType`, `record.seq` and `record.updated_by` migration, cast entries for PAP-335. Consumes: framework child (PAP-338), tables (PAP-161), compiler dataset resolution (PAP-335), `user` cell (PAP-71), `records.*` write path (`r4/tables/records-crud-procedures`, soft: until it lands the audit trigger sets `updated_by`). Consumed by PAP-332 (field picker), PAP-199 (import mapping), PAP-333 (header metadata).\n\n**Definition of done**\n\n* Five types registered with stories screenshotted at 375, 1024, 1920 in three themes; migration with RLS unchanged; conversion matrix updated.\n* Compiler test: filter and sort by each type through `views.query` against the oracle; `autonumber` gapless within a transaction test.\n* `docs/views/field-types.md` section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: per-type parse/format; readonly rejection; prefix and padding formatting; snapshot conversion lossiness report.\n* Integration: 1,000 concurrent inserts produce unique sequential numbers; `updated_by` reflects the acting agent principal; RLS harness on the new columns.\n* E2E: add an Autonumber and a Created by column in `/demo/grid` from the column menu, sort by Created time, filter Last modified by to \"me\".\n\n**Demo**\n\nReviewer inserts \"Task ID\" (autonumber, prefix `T-`) into the demo grid, creates two rows and sees `T-1001`, `T-1002`, then groups by Created by. Under two minutes.\n\n**Edge cases**\n\n* Import with existing ids: `autonumber` restarts from `max(seq)+1`, never reuses.\n* Record restored from trash keeps its number.\n* Deleted user in `createdBy`: \"Former member\" chip (PAP-339 rule).\n* Duplicate record: new number, new created metadata.\n\n**Dependencies**\n\nPAP-338 (hard), PAP-161 (hard), PAP-335 (soft, `storage: column` cast). Blocks PAP-332, PAP-199.\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/tables/filter-builder-component",
+   "title": "FilterBuilder: nested AND/OR groups, per-type operators, relative dates, dynamic values and the sentence renderer, reusable by segments and automations",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Grid with sort, filter, group",
+   "parent": "PAP-166",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "dueDate": "2026-09-28",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-343",
+    "PAP-279",
+    "PAP-233"
+   ],
+   "blocks": [
+    "PAP-174",
+    "PAP-195",
+    "PAP-390",
+    "r4/tables/view-toolbar-sort-group-aggregates"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nSplit PAP-166 so the zero-slack chain (PAP-163 → 165 → 166 → 173/174) gets its widest-consumed component first: the standalone `FilterBuilder` that edits a `FilterTree` for views, segments (PAP-195) and automation conditions (PAP-174), with per-type operators from the field registry, relative-date and dynamic-value editors and a screen-reader sentence renderer.\n\n**Scope**\n\nIn: `packages/views/src/controls/filter/{FilterBuilder,ConditionRow,GroupRow,ValueEditor,RelativeDateEditor,sentence}.tsx`; `useFilterTreeReducer`; quick-filter chips; URL compression helper `encodeTempFilter` with `lz-string`.\n\nOut: toolbar, sort, group and aggregate editors (sibling `r4/tables/view-toolbar-sort-group-aggregates`), grammar (PAP-279), saved views (PAP-172).\n\n**Spec**\n\n* Renders `FilterTree` rows `[field] [op] [value]`; groups indent with their own and/or toggle; depth max 5; operators from `fieldTypes[type].filterOps` (PAP-338) plus `extraOperators` prop for hosts.\n* Value editors by type: text input, number, currency with code, date with `RelativeDatePicker` (PAP-233) emitting `{ kind: 'relative', unit, amount, anchor }`, select and multiSelect via Combobox with option colours, user picker with `{ ref: 'currentUser' }`, relation picker searching the target dataset, checkbox tri-state, empty/not-empty need no value.\n* Reducer actions `add|remove|move|nest|unnest|setField|setOp|setValue|toggleConjunction`; changing a field resets op to the first valid op and clears an incompatible value; edits debounced 300 ms before `onChange`.\n* Drag reorder through `SortableList` (PAP-329) with keyboard fallback (PAP-330); every row has a remove button and an accessible name from `describe(tree)` (PAP-279).\n* Quick filters: fields with `options.quickFilter` render as chips building `isAnyOf`; overflow into \"+n\".\n* `encodeTempFilter(tree)` produces the `?f=` param under 2 KB, else falls back to session storage with a warning.\n\n**Interface contract**\n\nProvides: `<FilterBuilder tree onChange fields extraOperators? maxDepth? compact? />`, `useFilterTreeReducer`, `<QuickFilterChips />`, `encodeTempFilter|decodeTempFilter`, `<RelativeDateEditor />`. Consumes: `FilterTree`, `describe()` and in-memory evaluator (PAP-279), `filterOps` and editors (PAP-338, PAP-339, PAP-340), `RelativeDatePicker` (PAP-233), Popover, Combobox (PAP-237, PAP-238), drag (PAP-329, PAP-330). Host: grid toolbar (PAP-343 `ColumnMenu` filter entry). Consumed by PAP-195 segments, PAP-174 conditions (PAP-390 builder), PAP-172 share dialog preview.\n\n**Definition of done**\n\n* Vitest and Playwright below green; Storybook stories (empty, nested, every value editor) at 375, 768, 1280 in three themes; axe clean; focus returns to the trigger on close.\n* Builder output compiles through PAP-335 for every operator of every type against the 1k-row seed and matches the oracle.\n* `docs/views/controls.md` operator table generated from the registry; CHANGELOG; Linear comment on PAP-195 and PAP-390 with the props.\n\n**Test plan**\n\n* Unit: reducer transitions; depth 6 rejected; field change resets op and value; relative date payload shape; `lz-string` round trip; sentence snapshots for ten trees.\n* Integration: every `(type, op)` pair from the registry produces a tree that compiles and returns the oracle's row set.\n* E2E: build a three-level nested filter with a relative date and a `currentUser` condition, reorder two rows by keyboard, verify the grid count; 375 px sheet variant.\n\n**Demo**\n\nReviewer adds \"Status is any of Open, Blocked\", nests an \"or\" group with \"Due is within next 7 days\" and \"Owner is me\", reorders with the keyboard and hears the sentence announced. Under two minutes.\n\n**Edge cases**\n\n* Field deleted while open: row shows \"field deleted\" with remove; tree stays valid with `orphaned`.\n* Contradictory filters allowed, count 0 shown by the host.\n* Formula field: ops from its result type; `#ERROR` rows never match.\n* RTL: indentation and drag semantics flip.\n\n**Dependencies**\n\nPAP-343 (hard, host menu), PAP-279 (hard), PAP-233 (hard, relative dates). Soft: PAP-329, PAP-330. Blocks the toolbar sibling, PAP-174, PAP-390, PAP-195.\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Edge Case Hunter, Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/view-toolbar-sort-group-aggregates",
+   "title": "ViewToolbar, SortEditor, GroupEditor, AggregateFooter picker, FieldVisibilityMenu, SearchBox and temporary URL view state",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Grid with sort, filter, group",
+   "parent": "PAP-166",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-28",
+   "deferred": false,
+   "blockedBy": [
+    "r4/tables/filter-builder-component",
+    "PAP-343"
+   ],
+   "blocks": [
+    "PAP-172",
+    "PAP-173"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nComplete PAP-166: the toolbar every view kind hosts, with the sort, group, field-visibility and row-height controls, the aggregate picker for the footer, the search box and the temporary URL-held view state for people without `view.update`.\n\n**Scope**\n\nIn: `packages/views/src/controls/{ViewToolbar,SortEditor,GroupEditor,AggregatePicker,FieldVisibilityMenu,RowHeightMenu,SearchBox}.tsx`; `useTempViewState()`; toolbar slot registration for `ViewHost`; commands `view.sort.add`, `view.group.add`, `view.search.focus`, `view.fields.toggle`.\n\nOut: `FilterBuilder` (sibling), saved-view switcher and share button contents (PAP-172), automation and segment hosts.\n\n**Spec**\n\n* Toolbar layout: left `[Views] [Search]`, right `[Fields] [Filter n] [Sort n] [Group n] [Row height] [Share]`; under 768 px collapses to one \"Options\" bottom sheet with tabs; badge counts from the spec.\n* `SortEditor`: max 5 sorts, per-row direction, nulls-last toggle, \"manual order\" option for custom datasets (uses `position`); `GroupEditor`: max 3 levels, `expandMulti` for multiSelect, per-level aggregate function, collapse-all.\n* `AggregatePicker` lists `fieldTypes[type].aggregations` for the column and writes `spec.aggregations[fieldId]`; `FieldVisibilityMenu` toggles `fields[].visible`, drag reorders `fields[].order` (PAP-329), \"hide all / show all\", search.\n* `SearchBox` writes `spec.search` over visible text fields (`ILIKE` until PAP-39, then `tsvector`), debounced 300 ms, `Escape` clears, `/` focuses via command.\n* `useTempViewState()` layers `?f=&s=&g=&q=` over the saved spec for users without `view.update`; \"Save to view\" button appears only with permission; the count badge reads `views.count`.\n* Toolbar registers into `ViewHost`'s `toolbarSlot` so every kind gets the same controls; kinds declare which controls they support (`supports.groups`).\n\n**Interface contract**\n\nProvides: the seven components, `useTempViewState`, toolbar slot fill, commands above, `ToolbarControl` extension type for other modules (PAP-172 adds Share). Consumes: `FilterBuilder` (sibling), grid column layout and footer (PAP-343), `views.count|groups` (PAP-337), `aggregations` per type (PAP-338), Popover, Sheet, Menu (PAP-237), drag (PAP-329), `ViewHost` slot (`r4/tables/view-renderer-registry-and-host`, soft), search (PAP-39, soft). Consumed by PAP-172 and PAP-173.\n\n**Definition of done**\n\n* Playwright flows below green; Storybook per control at 375, 768, 1024, 1440, 1920 in three themes; axe clean.\n* URL round trip and permission gating tested; `docs/views/controls.md` toolbar section; CHANGELOG; Linear comment with demo and replay.\n\n**Test plan**\n\n* Unit: sort and group reducers (limits, duplicates blocked, manual order only on custom datasets); aggregate options per type; URL codec; permission gating of Save.\n* Integration: toolbar changes flow through `onSpecChange` and re-render the grid via the compiler with matching counts.\n* E2E: sort by two fields, group by owner then status, change the footer to sum, hide three fields and reorder one, search, then reload as a viewer and confirm the URL state persists without a Save button; 375 px sheet variant; keyboard-only run.\n\n**Demo**\n\nReviewer groups the demo grid by owner, adds a second sort, switches the budget footer to sum, searches \"invoice\" and watches the count badge update. Under two minutes.\n\n**Edge cases**\n\n* Group field archived: level removed with a toast, spec migrated.\n* 40 quick chips overflow into a popover.\n* URL over 2 KB falls back to session storage with a warning.\n* Search on a dataset with no text fields: box disabled with tooltip.\n\n**Dependencies**\n\n`r4/tables/filter-builder-component` (hard), PAP-343 (hard). Soft: PAP-329, PAP-39, `r4/tables/view-renderer-registry-and-host`. Blocks PAP-172, PAP-173.\n\n**Agent**\n\nBuilder: Nova (Views Engineer); Iris on control styling. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/gallery-and-list-views",
+   "title": "Gallery and list views: cover cards with virtualised rows, dense phone list with swipe actions and grouped headers",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "All view types",
+   "parent": "PAP-169",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-29",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-337",
+    "PAP-339",
+    "r4/tables/view-renderer-registry-and-host"
+   ],
+   "blocks": [
+    "r4/tables/form-view-runtime-and-public-submit"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-169: the two presentation views. Gallery is the card grid with covers directories and catalogues use; list is the dense vertical feed that makes every dataset usable at 320 px and inside sidebars, and whose rows the calendar agenda (PAP-344) reuses.\n\n**Scope**\n\nIn: `packages/views/src/views/gallery/{GalleryView,GalleryCard,register}.tsx`, `views/list/{ListView,ListRow,register}.tsx`; options schemas; `onFilter` on group headers; Storybook stories.\n\nOut: form view and public submission (sibling), card template editor beyond field pick (PAP-167 `CardTemplateEditor` reused), attachment lightbox (design-system).\n\n**Spec**\n\n* Gallery options `{ coverField?, coverFit: 'cover'|'contain', cardSize: 'sm'|'md'|'lg', cardFields (max 6), titleField?, showEmptyFields, colorField? }`; CSS `grid-template-columns: repeat(auto-fill, minmax(200|280|360px, 1fr))`, rows virtualised with `@tanstack/react-virtual`; cover from an attachment's `variants.md` (PAP-37) or a url field; click opens `RecordPanel` (PAP-343); keyboard grid navigation.\n* List options `{ titleField, subtitleField?, metaFields (max 3), avatarField?, dense }`; rows 56 or 72 px; grouped sticky headers with counts from `views.groups`; two configurable swipe actions (leading, trailing) via `SwipeableRow` (PAP-154) with the same actions in an overflow Menu; works at 320 px.\n* Both register through `registerViewKind` with `requiredFieldTypes: []`, `supports: { groups: true, onFilter: true, embedded: true }`; pages of 50 with \"Load more\" and prefetch.\n* Group header click emits `onFilter({ fieldId, op: 'is', value })` for dashboards; empty states from PAP-71 with the `empty` illustration.\n\n**Interface contract**\n\nProvides: `<GalleryView />`, `<ListView />`, `ListRow` (reused by PAP-344 agenda), options schemas `galleryOptionsSchema`, `listOptionsSchema`, registrations. Consumes: `views.query|groups` (PAP-337), cells and attachment variants (PAP-339, PAP-37), `RecordPanel` (PAP-343), `SwipeableRow` (PAP-154, soft: overflow Menu only until it lands), `ViewHost` registry (`r4/tables/view-renderer-registry-and-host`), `EmptyState` (PAP-71). Consumed by PAP-344, PAP-189 contacts, PAP-62 portal lists.\n\n**Definition of done**\n\n* Vitest and Playwright below green; stories at 320, 375, 768, 1024, 1440, 1920 in three themes; axe clean.\n* `docs/views/gallery-list.md`; CHANGELOG; Linear comment with `/demo/gallery` and `/demo/list`.\n\n**Test plan**\n\n* Unit: options validation; card field truncation; row height selection; swipe action config; group header aggregation.\n* Integration: 10k-record seed renders gallery with under 60 DOM cards and list with under 40 DOM rows; group headers match `views.groups`.\n* E2E: scroll the gallery to card 5,000 under 2 s, open a record, switch to list at 375 px, swipe a row to archive (touch emulation) and undo from the toast; keyboard-only run.\n\n**Demo**\n\nReviewer opens `/demo/gallery`, resizes cards to large, switches to list on a phone viewport and swipes a row. Under two minutes.\n\n**Edge cases**\n\n* Missing or failed cover: placeholder illustration, no layout shift.\n* Title field archived: falls back to the first text field with a banner.\n* RTL: swipe directions and card order flip.\n* Offline: cached pages render, swipe actions queue through the outbox (PAP-272) with a pending badge.\n\n**Dependencies**\n\nPAP-337 (hard), PAP-339 (hard, attachment cells), `r4/tables/view-renderer-registry-and-host` (hard). Soft: PAP-154, PAP-343, PAP-272. Feeds PAP-344 agenda rows (soft); blocks the form sibling (shared card styles).\n\n**Agent**\n\nBuilder: Nova (Views Engineer); Iris on card styling. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/form-view-runtime-and-public-submit",
+   "title": "Form view runtime and builder: FormSpec, conditional fields, drafts, public /f/:token submission with honeypot, Turnstile and rate limits",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "All view types",
+   "parent": "PAP-169",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "dueDate": "2026-09-29",
+   "deferred": false,
+   "blockedBy": [
+    "r4/tables/records-crud-procedures",
+    "PAP-338",
+    "r4/tables/gallery-and-list-views"
+   ],
+   "blocks": [
+    "PAP-388",
+    "PAP-193",
+    "PAP-160"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nSecond half of PAP-169 and the only public write path in the views engine: a form view that creates records, with a builder panel, conditional logic, drafts, and a hardened public route. PAP-160 and PAP-193 depend on it.\n\n**Scope**\n\nIn: `packages/views/src/views/form/{FormView,FormBuilder,FormField,register}.tsx`; `FormSpec` Zod; procedure `forms.submit`; route `/f/:token` page spec; event `form.submitted`; `docs/views/forms.md` with a security note.\n\nOut: payments in forms, multi-page forms, file limits beyond PAP-37, share token issuance (PAP-172; internal-only until then), notifications on submit (PAP-174).\n\n**Spec**\n\n* `FormSpec = { fields: { fieldId, label?, help?, required, placeholder?, hiddenWhen?: FilterTree, prefillParam? }[], title, description, submitLabel, successMessage, redirectUrl?, allowMultiple, honeypot: true, captcha?: 'turnstile' }` stored in `spec.options`.\n* Rendering: one PAP-338/339 editor per row in form mode wrapped in PAP-233 `Form` adapters; validation on blur then submit through `validateRecord`; draft saved per form id in `localStorage` (try/catch, cleared on success); Markdown via `marked` + `dompurify`.\n* `hiddenWhen` evaluated client-side with PAP-279's in-memory evaluator and re-evaluated server-side; hidden required fields are not required; prefill from `?p.<param>=` only for fields with `prefillParam`.\n* `forms.submit({ token, values, honeypot, turnstileToken? })`: validates a `public` share token of kind `form` (PAP-172 shape; internal `viewId` path for signed-in users), 30 per minute per IP (PAP-304), strips unknown and hidden fields, rejects a filled honeypot silently as success, verifies Turnstile when configured, creates through `records.create` as service principal `form-submitter` with `audit_event.reason = 'form:<viewId>'` and emits `form.submitted { viewId, recordId, values }`.\n* Public page uses tenant branding (PAP-75) and the PaperOS footer unless entitlement `whiteLabel` (PAP-178); unpublished or revoked token renders a friendly 410; idempotency key per draft prevents double submit.\n* Builder: drag reorder fields (PAP-329), toggle required, edit label and help, set `hiddenWhen` with `FilterBuilder`, preview at 375 and 1024, copy public link.\n\n**Interface contract**\n\nProvides: `<FormView />`, `<FormBuilder />`, `FormSpec`, `forms.submit`, event `form.submitted` (declared with `defineTopic`, consumed by PAP-388 triggers and PAP-193), route `/f/:token`, registration `kind: 'form'`. Consumes: `records.create` (`r4/tables/records-crud-procedures`), editors and `validateRecord` (PAP-338, PAP-339), form adapters (PAP-233), `FilterBuilder` and evaluator (`r4/tables/filter-builder-component`, PAP-279), share tokens (PAP-172, soft), rate limits (PAP-304), theming (PAP-75), entitlements (PAP-178, soft), card styles (sibling).\n\n**Definition of done**\n\n* Vitest, integration and Playwright below green; Storybook for form and builder at 320, 375, 768, 1024, 1440, 1920 in three themes with two tenant brands; axe clean with label and error associations verified.\n* Security review (Sentinel Security Auditor) sign-off comment on the public path; `docs/views/forms.md`; CHANGELOG; Linear comment with a live public form on the demo tenant.\n\n**Test plan**\n\n* Unit: `FormSpec` validation; `hiddenWhen` logic; prefill parsing; honeypot; idempotency key derivation; Markdown sanitisation (script and `javascript:` stripped).\n* Integration: `forms.submit` with valid, expired, revoked and non-form tokens; hidden-field injection stripped; 31st request in a minute rejected; record created under `form-submitter` with the audit reason; `form.submitted` payload matches the schema.\n* E2E: fill the demo form with two errors then success from a fresh browser context; draft survives reload; RTL locale layout; builder reorders a field by keyboard and toggles conditional visibility.\n\n**Demo**\n\nReviewer opens the builder, marks Email required, hides Budget unless Type is \"Project\", copies the public link into a private window, submits with one invalid email, fixes it and sees the card appear in `/demo/gallery`. Under two minutes.\n\n**Edge cases**\n\n* Relation field on a public form: hidden unless `form-submitter` may read targets; builder warns.\n* 50 MB upload: rejected by PAP-37 limits with a clear message; partial uploads cleaned.\n* Turnstile unavailable: submissions rejected with retry guidance, never silently accepted.\n* Double-click submit: single record via the idempotency key.\n\n**Dependencies**\n\n`r4/tables/records-crud-procedures` (hard), PAP-338 (hard), sibling gallery/list (hard, shared styles and registration order). Soft: PAP-172 (tokens; internal path first), PAP-304, PAP-75, PAP-178, PAP-329. Blocks PAP-388 (`form.submitted` trigger), PAP-193, PAP-160 (feedback form).\n\n**Agent**\n\nBuilder: Nova (Views Engineer); Iris on form styling. Reviewer: Sentinel (Security Auditor, Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/chart-view-echarts",
+   "title": "Chart view on ECharts: bar, stacked bar, line, area, pie, donut and number bound to views.groups with onFilter emission and table fallback",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "All view types",
+   "parent": "PAP-170",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-29",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-337",
+    "PAP-293",
+    "r4/tables/view-renderer-registry-and-host"
+   ],
+   "blocks": [
+    "PAP-386",
+    "r4/tables/map-view-maplibre-and-geo-field"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nChart half of PAP-170: the analytic view every dashboard block and finance report needs, bound to compiler groups and aggregates, themed from tokens, keyboard-operable and cross-filter aware from day one.\n\n**Scope**\n\nIn: `packages/views/src/views/chart/{ChartView,series,theme,register}.tsx`; chart options schema; `buildSeries`, `buildEchartsTheme(tokens)`; PNG and CSV export; \"View as table\" fallback; Storybook per chart type.\n\nOut: map view and `geo` type (sibling), extended chart types (`r4/tables/extended-chart-types`), dashboard block chrome (PAP-386), sparkline micro-charts (design-system dataviz issue).\n\n**Spec**\n\n* Options `{ chartType: 'bar'|'stackedBar'|'line'|'area'|'pie'|'donut'|'number', xField, seriesField?, yAggregate: { fieldId?, fn }, bucket?: 'day'|'week'|'month'|'quarter'|'year', sortBy: 'x'|'y', limit (default 20, remainder \"Other\"), colorScheme, showLegend, showDataLabels, goal? }`.\n* ECharts 5.x via `echarts/core` importing only `BarChart, LineChart, PieChart, GridComponent, TooltipComponent, LegendComponent, CanvasRenderer`; chart chunk under 250 KB gzip (`size-limit`); theme built at runtime from `--pos-color-dataviz-*` tokens (design-system dataviz issue; interim mapping from `--pos-color-*` ramps) and rebuilt on `theme.changed`.\n* Data from `views.groups` (one or two levels) with date bucketing compiled in PAP-336; zero-fill of missing buckets; `number` reads `views.query` aggregates with previous-period comparison when `xField` is a date bucket; axes and tooltips format through the field type `format` (currency per series).\n* Click emits `onFilter({ fieldId: xField, op: 'is', value })`; active element highlighted; legend toggles series; keyboard: Tab to chart, arrows across categories, Enter filters, `aria-label` summarises min, max and total; \"View as table\" renders the same aggregates in a static table.\n* Export: `getDataURL` PNG at 2x and CSV of aggregated rows; registered as `kind: 'chart'` with `requiredFieldTypes: []`, `supports: { onFilter: true, embedded: true, print: true }`.\n\n**Interface contract**\n\nProvides: `<ChartView spec datasetRef onFilter activeFilter? />`, `buildSeries(groups, options)`, `buildEchartsTheme(tokens)`, `chartOptionsSchema`, `FilterCondition` emission contract shared with PAP-386 and PAP-186, `exportChartPng|Csv`. Consumes: `views.groups|query` (PAP-337), date bucketing (PAP-336), `format` (PAP-338), tokens (PAP-66), theme change event (PAP-75), `ViewHost` registry, ECharts ADR (PAP-293), `EmptyState` (PAP-71). Consumed by PAP-386, PAP-183, PAP-186.\n\n**Definition of done**\n\n* Vitest, Playwright and `size-limit` green; WebGL not required; stories per type at 375, 768, 1024, 1440, 1920 in light, dark and high contrast; palette contrast validated with the dataviz checker.\n* `docs/views/chart.md`; CHANGELOG; Linear comment with `/demo/chart`.\n\n**Test plan**\n\n* Unit: series shaping for one and two levels; \"Other\" bucketing; zero-fill of date gaps; period comparison; per-currency series split; theme mapping.\n* Integration: chart bound to the 50k-row seed renders from `views.groups` within 500 ms server time; bundle check.\n* E2E: switch bar to stacked bar by owner, click a bar and assert the emitted condition, toggle the legend, open \"View as table\" and compare totals; keyboard category navigation; number chart shows a delta.\n\n**Demo**\n\nReviewer opens `/demo/chart`, buckets by month, stacks by status, clicks a bar and sees the filter chip, then exports PNG. Under two minutes.\n\n**Edge cases**\n\n* Negative values in a pie: refused with a bar suggestion.\n* Mixed currencies: one series per currency, never summed blindly.\n* 10k distinct x values: top 20 plus \"Other\" with a note.\n* Colour-blind users: patterns in high contrast, legend always textual.\n* Reduced motion: no entry animation.\n\n**Dependencies**\n\nPAP-337 (hard), PAP-293 (hard, ECharts ADR; default ECharts if not merged by 09-26), `r4/tables/view-renderer-registry-and-host` (hard). Soft: PAP-66, PAP-75, design-system dataviz tokens. Blocks PAP-386 and the map sibling (shared export and registration helpers).\n\n**Agent**\n\nBuilder: Nova (Views Engineer) with Iris (dataviz palette). Reviewer: Sentinel (Visual Inspector, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/map-view-maplibre-and-geo-field",
+   "title": "Map view on MapLibre GL with the geo field type, clustering, bounds filter and rectangle select",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "All view types",
+   "parent": "PAP-170",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-29",
+   "deferred": false,
+   "blockedBy": [
+    "r4/tables/chart-view-echarts",
+    "PAP-338",
+    "PAP-293"
+   ],
+   "blocks": [
+    "PAP-386"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nMap half of PAP-170: register the `geo` field type and a map view plotting records on vector tiles with clustering, a compiled bounding-box filter and cross-filter emission, so field-service, retail and clinic templates can see records on a map.\n\n**Scope**\n\nIn: `packages/views/src/fields/geo.ts` (`{ lat, lng, label? }`); `views/map/{MapView,cluster,bounds,register}.tsx`; btree indexes on `lat|lng` casts; `isWithin` filter op; PNG export; no-WebGL fallback list.\n\nOut: geocoding of address fields (`r4/tables/geocoding-job`), choropleths, custom tile hosting beyond a PMTiles hook, routing.\n\n**Spec**\n\n* `geo` type: value `{ lat: number, lng: number, label?: string }`, parse from \"lat, lng\" strings and GeoJSON points, cell shows a static thumbnail or `lat, lng`, editor is a pin-drop mini map plus inputs; ops `isEmpty|isNotEmpty|isWithin(bounds)`; `sql.cast` extracts `(data->'location'->>'lat')::float8`.\n* Map options `{ geoField, labelField?, colorField?, cluster: boolean, fitToData, basemap: 'light'|'dark'|'auto' }`; MapLibre GL JS 4.x with the OpenFreeMap `liberty` style, `basemap: auto` follows `data-theme`; hook `tiles.url` in config for self-hosted PMTiles.\n* Data via `views.query` with the visible bounds compiled as `isWithin` on indexed casts (PAP-335 `ensureIndex`); page 2,000 points; `cluster: true` uses MapLibre clustering; above 50,000 matching rows the view asks for a filter first.\n* Click a pin opens `RecordPanel`; Shift+drag rectangle emits `onFilter({ fieldId: geoField, op: 'isWithin', value: bounds })`; keyboard: Tab to the map, arrows pan, `+`/`-` zoom, Enter on a focused pin opens; `aria-label` lists visible count.\n* Export: canvas PNG (`preserveDrawingBuffer` only during export); registered as `kind: 'map'` with `requiredFieldTypes: ['geo']`, lazy chunk.\n\n**Interface contract**\n\nProvides: `geo` FieldType, `<MapView />`, `mapOptionsSchema`, `isWithin` op, `boundsToFilter(bounds)`, registration. Consumes: field framework and cells (PAP-338), compiler ops and `ensureIndex` (PAP-335), `views.query` (PAP-337), `RecordPanel` (PAP-343), MapLibre ADR (PAP-293), export helpers and registration pattern (chart sibling), `ViewHost` registry. Consumed by PAP-386 dashboards, PAP-427 business packs (clinic, retail).\n\n**Definition of done**\n\n* Vitest and Playwright green with WebGL enabled in the Playwright image; stories at 375, 768, 1024, 1440, 1920 in three themes; map chunk lazy and under 400 KB gzip.\n* `docs/views/map.md` with the tile hosting note; CHANGELOG; Linear comment with `/demo/map`.\n\n**Test plan**\n\n* Unit: geo parse from string and GeoJSON; bounds filter compilation; cluster option validation; theme-to-basemap mapping.\n* Integration: bounds query uses the btree index (`EXPLAIN`); 10,000 seeded points cluster within 500 ms client time.\n* E2E: open `/demo/map`, click a cluster to zoom, Shift-drag a rectangle and see the filter chip, open a pin's record, switch theme and see the basemap follow.\n\n**Demo**\n\nReviewer opens `/demo/map`, clicks a cluster, draws a rectangle around a city and watches the grid block (in `/demo/dashboard`) filter to those rows. Under two minutes.\n\n**Edge cases**\n\n* No WebGL (kiosks, CI without GPU): static coordinate list with an explanation and the same `onFilter` from a bounds form.\n* Records without coordinates: counted in an \"unplaced\" chip, filterable.\n* Antimeridian-crossing bounds: split into two ranges.\n* Tile server unreachable: pins still render on a blank canvas with a banner.\n\n**Dependencies**\n\n`r4/tables/chart-view-echarts` (hard, shared helpers), PAP-338 (hard), PAP-293 (hard, MapLibre ADR; default MapLibre if not merged by 09-26). Soft: PAP-343. Blocks PAP-386.\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/saved-views-switcher-and-audience-defaults",
+   "title": "Saved views: views.* CRUD, personal vs shared visibility, ViewSwitcher, per-audience defaults and view locking",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 1,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "View sharing, formulas, dashboards",
+   "parent": "PAP-172",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-343",
+    "PAP-229",
+    "PAP-62",
+    "r4/tables/view-toolbar-sort-group-aggregates"
+   ],
+   "blocks": [
+    "PAP-385",
+    "r4/tables/public-view-links-and-embeds"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-172 and the part PAP-173 waits on: views as permissioned, persisted objects. CRUD procedures, personal versus shared visibility, the switcher that lists what the actor may see, per-audience defaults per dataset and view locking. Public links move to the sibling so this can land without the security review gating it.\n\n**Scope**\n\nIn: table `view_default`; procedures `views.list|create|update|duplicate|delete|reorder|setDefault|resolveDefault|lock`; `ViewSwitcher`, `ViewSettingsSheet`; permission actions `view.read|update|delete|lock`; commands `view.switch|new|duplicate`; `page.spec.yaml` `views.default` pin.\n\nOut: public tokens, `/v/:token`, embeds and passwords (sibling), per-field permissions (PAP-59 and `r4/tables/field-level-permissions`).\n\n**Spec**\n\n* `visibility`: `personal` (owner only), `shared` (workspace policies via `can()`), `public` reserved for the sibling. New views are personal; making shared requires `view.share`; `view` rows use PAP-161's table with `position` fractional index.\n* `view_default (tenant_id, dataset_ref jsonb, audience_id, view_id, position)`; `resolveDefault(datasetRef, actor)` picks the most specific matching audience (PAP-62 segments), else the first shared view by position, else a fresh personal grid; `page.spec.yaml` `views.default: <viewId|slug>` pins one for a page.\n* `locked: true` blocks `spec` changes except for `view.lock` holders; temporary URL filters (`useTempViewState`) still work; the toolbar shows a lock chip with the reason.\n* `ViewSwitcher` groups \"Your views / Shared / Public\", search, drag reorder (PAP-329), rename inline, icon per kind from the registry; `mod+shift+v` opens it; `views.duplicate` copies the spec into a personal view.\n* Owner leaves the tenant (membership removed event, PAP-58): personal views deleted, shared views transferred to the workspace owner by a PAP-43 job; audit events `view.default.changed`, `view.locked`.\n* Permission matrix for the four actions generated through PAP-63's matrix generator.\n\n**Interface contract**\n\nProvides: procedures above, `<ViewSwitcher datasetRef />`, `<ViewSettingsSheet viewId />`, `resolveDefault`, `useCurrentView()`, commands, audit topics, `ViewDefault` type. Consumes: grid host and toolbar (PAP-343, `r4/tables/view-toolbar-sort-group-aggregates`), `can()` and `useCan` (PAP-229), audiences (PAP-62), audit (PAP-38), drag (PAP-329), jobs (PAP-43), `ViewHost` registry for icons. Consumed by PAP-385 dashboards, PAP-183 saved reports, PAP-189 per-audience CRM defaults, the public sibling.\n\n**Definition of done**\n\n* Vitest, integration and Playwright green; permission matrix committed; stories at 375, 768, 1024, 1440, 1920 in three themes; axe clean.\n* `docs/views/saved-views.md`; CHANGELOG; Linear comment with demo.\n\n**Test plan**\n\n* Unit: default resolution precedence (specific audience beats general beats first shared beats fresh); lock semantics; reorder positions; duplicate naming (\"Copy of\").\n* Integration: `callAs(member)` cannot update a shared view without `view.update`; membership removal transfers shared views and deletes personal ones; RLS harness on `view_default`.\n* E2E: create a personal view, share it, set it as the default for the customer audience, sign in as a customer and land on it, lock it and try to change a filter as staff (temporary only); keyboard-only run; 375 px sheet.\n\n**Demo**\n\nReviewer creates \"Open tasks\" from the demo grid, shares it, sets it as default for the Customer audience, then opens the portal as the demo customer and lands on it. Under two minutes.\n\n**Edge cases**\n\n* Two audiences match: most specific wins, ties by `position`.\n* Default points at a deleted view: falls back to the next rule and self-heals the row.\n* Page-spec pin references a personal view: validator error in PAP-115.\n* Rename to an existing name: allowed, slug uniquified.\n\n**Dependencies**\n\nPAP-343 (hard), PAP-229 (hard), PAP-62 (hard, audiences), `r4/tables/view-toolbar-sort-group-aggregates` (hard, Share and Views slots). Soft: PAP-38, PAP-43, PAP-329. Blocks PAP-385 and the public sibling; PAP-183 and PAP-189 consume it softly (their milestones are earlier).\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/public-view-links-and-embeds",
+   "title": "Public view links and embeds: view_share tokens, password and expiry, allowed_fields projection, /v/:token and /embed/v/:token with CSP and rate limits",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "View sharing, formulas, dashboards",
+   "parent": "PAP-172",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "r4/tables/saved-views-switcher-and-audience-defaults",
+    "PAP-304",
+    "PAP-178"
+   ],
+   "blocks": [
+    "r4/tables/view-export-csv-xlsx-ics-print"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nSecond half of PAP-172, the anonymous read path: share a view as a link or iframe embed with expiry, password, field projection and export control, executed as the `public-viewer` service principal with strict limits. Public forms (PAP-169 sibling) reuse the same token table.\n\n**Scope**\n\nIn: table `view_share`; procedures `views.share|revoke|listShares|publicQuery|publicMeta`; `ShareViewDialog`; routes `/v/:token`, `/embed/v/:token`; `PublicViewPage`; CSP `frame-ancestors` middleware; audit topics; `docs/views/sharing.md` security section.\n\nOut: saved views and defaults (sibling), comments on public views, public export formats beyond CSV (`r4/tables/view-export-csv-xlsx-ics-print`).\n\n**Spec**\n\n* `view_share (id, tenant_id, view_id, token, kind: 'link'|'embed'|'form', password_hash?, expires_at?, allow_export, allowed_fields jsonb, allowed_origins text[], created_by, revoked_at, view_count, last_viewed_at)`; token 32 bytes base64url, indexed, shown once; `argon2id` password.\n* `views.publicQuery({ token, cursor, tempFilter? })` resolves the share, sets `tenantId` from it, runs PAP-337's query as service principal `public-viewer` with `allowed_fields` projection and `canEditRecords = []`; 120 per minute per IP and 10k per day per token (PAP-304 buckets); password sets a signed 24 h cookie scoped to the token.\n* Public views on RLS entity datasets return zero rows unless an explicit `public-viewer` allow policy exists (PAP-228); the dialog previews the count and warns \"will show 0 records\".\n* `/embed/v/:token` sends `Content-Security-Policy: frame-ancestors <allowed_origins>` only; `/v/:token` sends `frame-ancestors 'none'`; both `X-Robots-Tag: noindex` unless `allow_index`; `?theme=light|dark` on embeds.\n* Public view count is entitlement `publicViews` (PAP-178) through `assertWithinLimit`; audit `view.share.created|revoked`, `view.public.password_failed` (rate-limited to avoid log floods).\n* `ShareViewDialog`: kind, expiry presets, password, export toggle, hidden fields multi-select, origins list for embeds, copy link and iframe snippet `<iframe src=\".../embed/v/{token}?theme=\" />`.\n\n**Interface contract**\n\nProvides: procedures above, `<ShareViewDialog viewId />`, `PublicViewPage`, `ViewShare` type (reused by the form sibling for `kind: 'form'`), embed snippet, CSP middleware `frameAncestorsFor(share)`, audit topics. Consumes: saved views (sibling), `views.query` (PAP-337), rate limits (PAP-304), entitlements (PAP-178), `toPredicate` policies (PAP-228), theming (PAP-75), audit (PAP-38), `ViewHost` embedded mode. Consumed by the form sibling, the export issue, PAP-193 landing pages.\n\n**Definition of done**\n\n* Vitest, integration and Playwright green; embed page at 320 and 1024 plus dialog at 375, 768, 1280 in three themes; axe clean.\n* Security review comment (Sentinel Security Auditor) covering token entropy, password handling, CSP, RLS zero-row rule; `docs/views/sharing.md`; CHANGELOG; Linear comment with a live public link.\n\n**Test plan**\n\n* Unit: token entropy and one-time display; share validation; `allowed_fields` projection; CSP header builder; expiry maths.\n* Integration: valid, expired, revoked, wrong-password, field-stripped cases through `publicQuery`; 121st request in a minute rejected; RLS entity view returns zero rows without an allow policy; entitlement limit enforced under 20 parallel creates.\n* E2E: share the demo grid with a password and a hidden field, open `/v/:token` in a fresh context, enter the password, confirm the field is absent, embed in a test page with and without an allowed origin (blank via CSP), revoke and reload to 410.\n\n**Demo**\n\nReviewer shares the demo grid publicly with a password and hidden Budget, opens the link privately, enters the password, confirms Budget is missing, then revokes and sees the 410 page. Under two minutes.\n\n**Edge cases**\n\n* Owner leaves the tenant: shares transferred with the view (sibling rule), tokens unchanged.\n* Token pasted into a Slack unfurl: `publicMeta` returns title only, never rows.\n* Password brute force: 10 failures per token per hour then 429 with `Retry-After`.\n* Export on a public view: CSV capped at 10k rows and rate-limited (format details in the export issue).\n\n**Dependencies**\n\n`r4/tables/saved-views-switcher-and-audience-defaults` (hard), PAP-304 (hard, rate limits), PAP-178 (soft, limit). Soft: PAP-228, PAP-75, PAP-38. Blocks the export issue; the form view's public path adopts the token table softly (it ships an internal path first).\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Security Auditor, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/view-export-csv-xlsx-ics-print",
+   "title": "Export any view as CSV, XLSX, JSON or ICS honouring filters, sorts and visible fields, streamed as a job with a print route /print/v/:id",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "View sharing, formulas, dashboards",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-337",
+    "PAP-343",
+    "PAP-43"
+   ],
+   "blocks": [
+    "PAP-205"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nAirtable, Notion, ClickUp and Baserow all let a user download the view they are looking at. PAP-205 exports the whole tenant and PAP-172 caps a public CSV, but nobody owns per-view export: the current filter, sort, group and visible fields, formatted per field type, as CSV, XLSX, JSON or (for calendar views) an ICS feed, plus a printable render.\n\n**Scope**\n\nIn: `packages/views/src/export/{export,csv,xlsx,json,ics,print}.ts`; procedure `views.export({ viewId | spec, format, tempFilter?, locale })` returning `{ jobId }` above 2,000 rows or the file inline below; `ExportMenu` in the toolbar; route `/print/v/:id`; ICS subscribe URL `/ics/v/:token.ics` behind a share token.\n\nOut: tenant-wide archives (PAP-205), scheduled deliveries (`r4/tables/scheduled-view-snapshots`), PDF templates (PAP-235), import.\n\n**Spec**\n\n* Rows come from PAP-337 procedures paged at 200 with the actor's predicate; only `fields[].visible` columns in `order`; values formatted with `fieldTypes[type].format(value, options, locale)`; raw ISO and minor units in JSON; relations export the target title, attachments a signed URL valid 24 h (PAP-37).\n* CSV RFC 4180 with UTF-8 BOM option, `csv-stringify` 6.x; XLSX via `exceljs` 4.x streaming writer with typed number and date cells and a header row; JSON as `{ view, fields, rows }`; ICS via `ical-generator` 8.x for `calendar|timeline|gantt` kinds mapping `startField|endField|allDay`, `UID` = record id, `SEQUENCE` = version.\n* Above 2,000 rows the export runs as a PAP-43 job writing to PAP-37 storage with progress, cancel and a `file.ready` event; the toolbar shows a progress toast and a download link; files expire after 7 days.\n* Groups: CSV and XLSX add a leading group column per level; XLSX collapses groups with outline levels; aggregates land in a final row when `includeAggregates`.\n* Public views (`r4/tables/public-view-links-and-embeds`) export only when `allow_export`, capped at 10k rows and rate-limited; ICS subscribe URLs are share tokens of kind `link` and refresh on every fetch.\n* `/print/v/:id` renders the view without chrome via `ViewHost` `mode: 'print'` with page-break-avoid on rows, A4 and Letter `@page`, used by PAP-183 reports; commands `view.export.csv|xlsx|json|ics|print`.\n\n**Interface contract**\n\nProvides: `views.export`, `<ExportMenu />`, `exportView(spec, format, ctx)` stream helper, `/print/v/:id`, `/ics/v/:token.ics`, event `view.exported { viewId, format, rows }`. Consumes: `views.query|groups` (PAP-337), column layout and toolbar slot (PAP-343, `r4/tables/view-toolbar-sort-group-aggregates`), `format` per type (PAP-338), jobs (PAP-43), files (PAP-37), share tokens (`r4/tables/public-view-links-and-embeds`), print CSS defaults (PAP-66). Consumed by PAP-183 reports, PAP-205 (reuses the writers), PAP-189 contact export.\n\n**Definition of done**\n\n* Four formats and the print route green in Vitest and Playwright; 100k-row export completes as a job under 60 s on the compose stack with progress; screenshots of the menu and print route at 375, 1024, 1920.\n* `docs/views/export.md`; CHANGELOG; Linear comment with sample files attached.\n\n**Test plan**\n\n* Unit: CSV quoting and BOM; XLSX cell typing (number, date, boolean); JSON raw shapes; ICS all-day and timed events across DST; group column emission; visible-field projection.\n* Integration: export as a viewer excludes rows the predicate hides; public view without `allow_export` gets `FORBIDDEN`; job cancel leaves no orphan file.\n* E2E: filter the demo grid, export CSV inline and open it, export 100k rows as XLSX via the job toast, subscribe to the calendar ICS in a test client, print `/print/v/:id` to PDF and assert page count.\n\n**Demo**\n\nReviewer filters the demo grid to one owner, exports XLSX, opens it in LibreOffice showing typed dates, then copies the ICS URL of `/demo/calendar` into a calendar app. Under two minutes.\n\n**Edge cases**\n\n* Formula `#ERROR` cells export as empty with a warnings sheet.\n* Mixed-currency sum aggregate exports one row per currency.\n* Locale `de`: CSV uses `;` delimiter when `locale.decimal === ','` and the user did not override.\n* Attachment URL expiry: re-export regenerates; documented.\n\n**Dependencies**\n\nPAP-337 (hard), PAP-343 (hard), PAP-43 (hard, jobs). Soft: PAP-37, `r4/tables/public-view-links-and-embeds`, PAP-338. Blocks PAP-205 (writer reuse); PAP-183 adopts the print route softly.\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/conditional-formatting",
+   "title": "Conditional formatting: row and cell colour rules from FilterTree conditions, select-colour rows and progress bars in cells across grid, kanban, calendar and gallery",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "All view types",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-29",
+   "deferred": false,
+   "blockedBy": [
+    "r4/tables/filter-builder-component",
+    "PAP-343"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nAirtable record colouring, Smartsheet and Excel conditional formatting, ClickUp status colours and Monday colour columns all answer \"which rows need my attention\" at a glance. Add rule-based formatting to `ViewSpec` that every kind renders consistently.\n\n**Scope**\n\nIn: `ViewSpec.formats: { id, name, when: FilterTree, style: { rowColor?, cellColors?: Record<fieldId, tokenName>, bold?, strike?, icon? }, order }[]` plus `colorBy?: { fieldId }` shortcut; `FormatRulesPanel` in the toolbar; `useRowFormat(record)` hook evaluated client-side with PAP-279's in-memory evaluator; number and percent cell option `showBar`.\n\nOut: formatting in exports (`r4/tables/view-export-csv-xlsx-ics-print` may read `rowColor`), per-user formats, formulas returning colours.\n\n**Spec**\n\n* Rules evaluate top to bottom; the first matching rule sets `rowColor`, later rules may still add `cellColors`; colours are semantic token names (`accent-100`, `warning-100`, `danger-100`, `success-100`, `neutral-100`, `info-100`) so themes and high contrast stay correct; never raw hex.\n* `colorBy: { fieldId }` on a select field tints rows with the option colour (Airtable-style); kanban cards, calendar events, gallery card borders and grid rows read the same `useRowFormat` result; timeline and Gantt bars use `rowColor` as the bar colour.\n* Evaluation is client-side per visible row (max 200 rules, memoised per record version); rules referencing `currentUser` or relative dates re-evaluate on a 60 s ticker.\n* `showBar` on number and percent fields draws a `MiniBar` behind the value scaled to `options.max` or the column max in view (`AggregateFooter` `max`); respects `prefers-reduced-motion` and forced colours (pattern fill).\n* Accessibility: colour never alone; a rule may set `icon` (from PAP-68) and the row gets `aria-description` with the rule name; screen reader announces \"Overdue\" from the rule name.\n* Panel: `FilterBuilder` for `when`, colour swatches, preview count via `views.count`, drag reorder (PAP-329); commands `view.format.add`.\n\n**Interface contract**\n\nProvides: `formats` and `colorBy` schema additions (PAP-161 minor bump, `migrateViewSpec` step), `useRowFormat`, `<FormatRulesPanel />`, `MiniBar` usage contract, token-name palette `formatColors`. Consumes: `FilterBuilder` and evaluator (`r4/tables/filter-builder-component`, PAP-279), grid row and cell renderers (PAP-343), select option colours (PAP-339), tokens (PAP-66), icons (PAP-68), `views.count` (PAP-337). Consumed by PAP-167, PAP-344, PAP-345, PAP-346, gallery (`r4/tables/gallery-and-list-views`) through the hook.\n\n**Definition of done**\n\n* Schema bump merged with migration test; grid and kanban render formats; stories at 375, 1024, 1920 in light, dark and high contrast (patterns visible); axe clean including `aria-description`.\n* `docs/views/conditional-formatting.md`; CHANGELOG; Linear comment with screenshots.\n\n**Test plan**\n\n* Unit: rule ordering and first-match semantics; token-name validation rejects hex; memoisation by record version; `showBar` scaling with negative and null values.\n* Integration: 200 rules over 1,000 visible rows evaluate under 16 ms per frame (bench).\n* E2E: add \"Due before today and Status is not Done → danger\" in `/demo/grid`, see rows tint, switch to kanban and calendar and see the same records coloured, toggle high contrast and see patterns.\n\n**Demo**\n\nReviewer adds an overdue rule and a `colorBy` status shortcut, scrolls the grid, then opens the calendar where the same events are red. Under two minutes.\n\n**Edge cases**\n\n* Rule references a deleted field: greyed with \"field deleted\", skipped at evaluation.\n* Conflicting row colours from two rules: first wins, panel shows the shadowing hint.\n* Print route: colours kept, patterns forced.\n* Public views: formats apply, rule names hidden if they reference hidden fields.\n\n**Dependencies**\n\n`r4/tables/filter-builder-component` (hard), PAP-343 (hard). Soft: PAP-339, PAP-68, PAP-329. Blocks nothing hard; the time and kanban views adopt the hook when it lands.\n\n**Agent**\n\nBuilder: Nova (Views Engineer) with Iris on palette. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/extra-field-types",
+   "title": "Additional field types: richText (Tiptap JSON), duration, time, progress and json with cells, editors, casts and conversions",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Staff"
+   ],
+   "milestone": "All view types",
+   "parent": "PAP-164",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-29",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-340",
+    "PAP-142"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nClose the parity rows the seventeen core types leave open against Airtable (rich long text, duration), Notion (rich text everywhere), Baserow and NocoDB (duration, time, JSON) and ClickUp and Monday (manual progress): five more `defineFieldType` entries importers can map onto without lossy conversion to text.\n\n**Scope**\n\nIn: `packages/views/src/fields/{richText,duration,time,progress,json}.ts`; cells and editors; compiler casts and ops; conversion matrix rows; `docs/views/field-types.md` update.\n\nOut: system metadata types (`r4/tables/system-fields`), agent-computed fields, barcode and QR (matrix `wontdo` with ADR), collaborative editing of `richText` cells in the grid (single-user editor; PAP-142 rooms only in the record page).\n\n**Spec**\n\n* `richText`: stores Tiptap JSON (PAP-142 schema subset: paragraphs, marks, lists, links, mentions) plus a derived `text` for search and `ILIKE`; cell renders the first 200 characters of plain text; editor is a compact Tiptap instance in a Popover (PAP-142 `RichTextEditor`), full editor in `RecordPanel`; `sql.cast` reads `data->'notes'->>'text'`.\n* `duration`: integer seconds; options `{ format: 'h:mm' | 'h:mm:ss' | 'decimalHours' | 'days' }`; parse accepts `1h 30m`, `1:30`, `90m`; ops are number ops; aggregations `sum|avg|min|max`; formula type `number` with `DURATION_FORMAT`.\n* `time`: wall-clock `HH:mm[:ss]` without date, stored as text, cast `::time`; editor is PAP-233 `TimeField`; ops `is|isBefore|isAfter|isBetween`; sorts correctly across midnight by option `dayStartsAt`.\n* `progress`: number 0..1 with `{ display: 'bar' | 'ring' | 'percent', color? }`; cell reuses PAP-71 `progress` renderer; editor slider (PAP-236) and numeric input; may be `computed` from a rollup (`fn: 'avgChecked'`).\n* `json`: arbitrary JSON up to 16 KB with a CodeMirror editor (PAP-383 dependency for the language mode), pretty cell with copy; ops `isEmpty|contains(path, value)` via `jsonb @>`; excluded from grouping.\n* Conversions: `longText ↔ richText` (Markdown round trip via `marked`), `number ↔ duration|progress`, `text ↔ time` (lossy when unparsable), anything → `json` (wraps), `json` → `text` (stringifies).\n\n**Interface contract**\n\nProvides: five FieldTypes, `durationParse|durationFormat`, `richTextToPlain`, conversion matrix rows, casts for PAP-335. Consumes: relational child and `convertFieldType` (PAP-340), Tiptap editor (PAP-142), `TimeField` (PAP-233), `progress` cell (PAP-71), CodeMirror mode (PAP-383, soft), compiler ops (PAP-335). Consumed by PAP-199 mapping, PAP-417 Notion import (rich text), PAP-427 packs.\n\n**Definition of done**\n\n* Five types with stories at 375, 1024, 1920 in three themes; axe clean; per-type parse, format, validate, ops and cast tests; conversion pairs tested.\n* `docs/views/field-types.md` and the parity CSV (PAP-162) updated; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: duration parsing table (`1h 30m`, `1:30`, `90m`, `1.5h`); time midnight ordering; rich text plain derivation and Markdown round trip; json size cap; progress clamp.\n* Integration: each type round-trips create, edit and filter through `views.query`; `richText` search hits through `ILIKE` on the derived text.\n* E2E: add a rich text and a duration column in `/demo/grid`, type `1h 30m`, bold a word in the notes popover, filter duration greater than one hour.\n\n**Demo**\n\nReviewer adds Notes (rich text) and Effort (duration), formats a note, sums Effort in the footer and sees `12:30`. Under two minutes.\n\n**Edge cases**\n\n* Rich text with a mention of a removed user: rendered as plain text chip.\n* Duration over 24 h in `h:mm` format: `36:15`, never wraps.\n* Time in a tenant with `dayStartsAt: 06:00`: `02:00` sorts after `23:00`.\n* JSON above 16 KB: `VALIDATION` with size.\n\n**Dependencies**\n\nPAP-340 (hard, conversion routine), PAP-142 (hard for `richText`; the other four may land first). Soft: PAP-233, PAP-71, PAP-383, PAP-335. PAP-199 maps these types when they exist (soft).\n\n**Agent**\n\nBuilder: Nova (Views Engineer); Iris on editors. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/record-templates-and-field-defaults",
+   "title": "Record templates and field default values: FieldDef.defaultValue with dynamic tokens, per-dataset record templates and the New record menu",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "All view types",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-29",
+   "deferred": false,
+   "blockedBy": [
+    "r4/tables/records-crud-procedures",
+    "PAP-332"
+   ],
+   "blocks": [
+    "PAP-427"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nNotion database templates, Airtable default values and ClickUp task templates let a team create consistent records in one click. Give every dataset field defaults (static or dynamic) and a set of named record templates that pre-fill fields, honoured by the grid, kanban inline add, forms and importers.\n\n**Scope**\n\nIn: `FieldDef.defaultValue?: { kind: 'static', value } | { kind: 'dynamic', token: 'now' | 'today' | 'currentUser' | 'nextNumber' | 'fromParam' }`; table `record_template (tenant_id, dataset_id, name, icon, values jsonb, position, audience_id?)`; procedures `recordTemplates.*`; `NewRecordMenu`; `applyDefaults(dataset, partial, ctx)` used server-side by `records.create`.\n\nOut: page templates and business packs (PAP-426, PAP-427 consume this), automation-created records (PAP-389 calls `applyDefaults` too), template marketplace.\n\n**Spec**\n\n* `applyDefaults` fills missing keys in this order: template values, field `defaultValue`, type default; dynamic tokens resolve server-side in the actor timezone; `fromParam` reads `?p.<key>=` on forms and deep links; defaults never override explicit values or `computed` fields.\n* `FieldEditor` (PAP-332) gains a Default section per type: static input via the type's editor, dynamic token select where the type allows (`date` → `today|now`, `user` → `currentUser`, `autonumber` never).\n* Record templates: values validated against `FieldDef[]` at save; `audience_id` limits who sees a template (PAP-62); `NewRecordMenu` replaces every \"+ New\" (grid footer, kanban column, gallery, list) with a split button: default create, or pick a template; `mod+shift+n` opens it.\n* Templates may set relation fields to `{ ref: 'context' }` so a template used from a filtered kanban column or a related-records block inherits the column value or parent record.\n* Import (PAP-199) and `records.create` share `applyDefaults`; the audit diff marks defaulted keys with `source: 'default' | 'template:<id>'`.\n* Business packs (PAP-427) ship templates in the pack format (PAP-426 `recordTemplates` array).\n\n**Interface contract**\n\nProvides: `defaultValue` schema addition (PAP-161 minor bump), `applyDefaults`, `recordTemplates.list|create|update|delete|reorder`, `<NewRecordMenu datasetRef context />`, `RecordTemplate` type for PAP-426. Consumes: `records.create` (`r4/tables/records-crud-procedures`), `FieldEditor` (PAP-332), editors per type (PAP-338, PAP-339), audiences (PAP-62), kanban and grid add affordances (PAP-167, PAP-343). Consumed by PAP-427 packs, PAP-199 importers, PAP-389 `record.create` action.\n\n**Definition of done**\n\n* Defaults and templates green in Vitest, integration and Playwright; stories at 375, 1024, 1920 in three themes; axe clean.\n* `docs/views/record-templates.md`; CHANGELOG; Linear comment on PAP-426 with the template shape.\n\n**Test plan**\n\n* Unit: `applyDefaults` precedence; dynamic token resolution with a fixed clock and actor; `fromParam` parsing and type coercion; template validation rejects unknown fields.\n* Integration: create through the API with no body gets defaults; kanban inline add in the Done column applies the template plus the column value; audit diff carries `source`.\n* E2E: set Status default to Open and Owner to current user, add a \"Bug\" template, create from the kanban column split button, verify both fields; keyboard-only run.\n\n**Demo**\n\nReviewer sets defaults on two fields, creates a \"Client onboarding\" template with five values, then adds a record from the grid footer using it. Under two minutes.\n\n**Edge cases**\n\n* Template references an archived field: value dropped with a warning badge on the template.\n* Default `currentUser` on a public form: unresolved, left empty.\n* Template audience mismatch: hidden from the menu, API returns `FORBIDDEN`.\n* `nextNumber` on a non-autonumber field: validation error at save.\n\n**Dependencies**\n\n`r4/tables/records-crud-procedures` (hard), PAP-332 (hard, `FieldEditor`). Soft: PAP-62, PAP-167, PAP-343. Blocks PAP-427 packs (soft: packs can ship without templates).\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/grid-find-and-replace",
+   "title": "Grid find and replace: search within the current view, match navigation, per-type replace with preview and batch write",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Grid with sort, filter, group",
+   "parent": "PAP-165",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-28",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-342",
+    "r4/tables/records-crud-procedures"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nAirtable and every spreadsheet let a user press `mod+f` inside the grid, step through matching cells and replace text in bulk. The toolbar `SearchBox` filters rows; this adds in-place find with match highlighting and a replace flow that previews before writing.\n\n**Scope**\n\nIn: `views/grid/{FindReplaceBar,useFindMatches}.tsx`; commands `grid.find`, `grid.findNext|findPrev`, `grid.replace`; server-side match count via `views.count` with a `contains` filter across text-like fields; batch write through `records.update` in chunks of 200 (PAP-342 chunking).\n\nOut: regex replace (option flagged `deferred`), replace across datasets, find in non-grid kinds (they use the toolbar search).\n\n**Spec**\n\n* `mod+f` inside a focused grid opens the bar (browser find stays on `mod+shift+f`, documented in the `?` sheet); typing highlights matches in loaded rows (`mark` elements, case-insensitive, diacritics-folded with `Intl.Collator`); Enter and Shift+Enter move focus to the next or previous match, scrolling virtualised rows into view.\n* Field scope: all visible `text|longText|email|url|phone|select|multiSelect` columns by default, narrowable to one column from the column menu; matches in select options match by option name.\n* Replace: input plus \"Replace\" and \"Replace all (n)\"; preview lists up to 20 before and after values; writes go through `records.update` with `expectedVersion`; conflicts skipped and reported; every write is one audit row with reason `find-replace:<sessionId>`.\n* Counts beyond loaded rows come from `views.count` with a `contains` condition so the bar says \"12 of 3,204 matches, 40 loaded\"; \"Replace all\" above 200 rows runs as a PAP-334-style batch with progress and an undo toast.\n* Read-only users get find without replace; commands are `agentCallable: false`.\n\n**Interface contract**\n\nProvides: `<FindReplaceBar />`, `useFindMatches`, commands above, `foldForSearch(text)` helper reused by the toolbar `SearchBox`. Consumes: editing and chunked writes (PAP-342), `records.update` (`r4/tables/records-crud-procedures`), `views.count` (PAP-337), selection and keyboard reducer (PAP-341), undo toast (PAP-334, soft), commands (PAP-151).\n\n**Definition of done**\n\n* Playwright flows green; unit tests for folding and match navigation; screenshots of the bar at 375, 1024, 1920; axe clean (matches announced as \"match 3 of 12\").\n* Keyboard map in `docs/views/grid.md` updated; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: diacritic folding; match ordering across columns and virtual rows; replace preview construction; conflict skipping.\n* Integration: replace across 1,000 rows writes exactly the matching rows and one audit row each.\n* E2E: press `mod+f` in `/demo/grid`, type a client name, step through matches, replace all in one column, undo from the toast.\n\n**Demo**\n\nReviewer finds \"Acme\" across the demo grid, steps through three matches, replaces with \"Acme Corp\" in the Client column and undoes it. Under two minutes.\n\n**Edge cases**\n\n* Match inside a collapsed group: group expands on navigation.\n* Row deleted between preview and replace: skipped and counted.\n* Formula and computed columns: matched, never replaced (greyed).\n* Empty search string: bar shows count 0, replace disabled.\n\n**Dependencies**\n\nPAP-342 (hard), `r4/tables/records-crud-procedures` (hard). Soft: PAP-334, PAP-151.\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/tables/grid-fill-handle",
+   "title": "Grid fill handle: drag to fill down or across a range with copy, series and pattern detection for numbers and dates",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Grid with sort, filter, group",
+   "parent": "PAP-165",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-28",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-342"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nAirtable's fill handle and every spreadsheet's drag-to-fill are how people set fifty cells in one gesture. Add the handle to the grid selection with copy and series modes, writing through the same chunked path as paste.\n\n**Scope**\n\nIn: `views/grid/{FillHandle,fillSeries}.tsx`; handle on the selection's bottom-right corner; `computeFill(source: Cell[][], target: Range, mode)`; `mod+d` fill down command; touch handle at coarse pointer sizes.\n\nOut: formula auto-fill (formula fields are computed), fill across grouped boundaries when groups differ (refused with a hint), auto-complete suggestions.\n\n**Spec**\n\n* Handle appears on a single cell or rectangular range selection (PAP-341 `{ anchor, focus }`); dragging vertically or horizontally previews the fill with a ghost range; release writes via PAP-342's chunked `records.update` with progress and cancel above 200 rows.\n* Modes: `copy` (default for text, select, checkbox, relation) repeats the source pattern; `series` (default for `number`, `currency`, `date`, `autonumber`-like text with trailing digits) extends linear differences: `1, 2 → 3, 4`, `Jan 1, Jan 8 → Jan 15` (calendar arithmetic in the actor timezone), `Task 1 → Task 2`; `Alt` while dragging toggles the mode; a chip shows the active mode.\n* Writes respect `validateRecord` per row; denied or invalid rows are skipped and reported in the progress toast; all writes carry reason `fill:<sessionId>` and register with the undo stack as one entry.\n* Coarse pointer: handle is 24 px and drag uses the PAP-150 `usePointerSurface` with long-press to start; keyboard: `mod+d` fills the selection from its first row, `mod+r` fills right.\n* Read-only and computed columns show no handle; frozen column boundary does not stop the drag.\n\n**Interface contract**\n\nProvides: `<FillHandle />`, `computeFill`, commands `grid.fillDown|fillRight`, `FillMode` type. Consumes: selection model and keyboard reducer (PAP-341), chunked writes and optimistic commit (PAP-342), field `parse|format` (PAP-338), pointer surface (PAP-150), undo manager (`r4/input/undo-manager`, soft: falls back to the revert toast).\n\n**Definition of done**\n\n* Unit tests for series detection across types; Playwright drag and keyboard fills; screenshots at 1024 and 1920 plus a touch capture at 768; axe clean.\n* `docs/views/grid.md` keyboard map updated; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: series detection (numbers, dates across month ends and DST, trailing digits); copy pattern cycling; range clamping to visible columns; skipped-row accounting.\n* Integration: fill 500 rows writes in chunks with one undo entry.\n* E2E: select two dated cells in `/demo/grid`, drag the handle down twenty rows, see weekly dates, `Alt` to switch to copy, release, then `mod+z`.\n\n**Demo**\n\nReviewer types 1 and 2 in Estimate, drags the handle down ten rows to get 3 to 12, then fills a status across a column with `mod+d`. Under two minutes.\n\n**Edge cases**\n\n* Source range contains mixed types across columns: each column fills independently.\n* Drag past the last loaded row: prefetches pages, capped at 1,000 rows per drag with a hint.\n* Currency series with mixed currencies: refused, copy mode offered.\n* Row deleted mid-fill: skipped, counted.\n\n**Dependencies**\n\nPAP-342 (hard). Soft: PAP-150, `r4/input/undo-manager`.\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/tables/extension-guide-docs",
+   "title": "Write the views engine extension guide: adding a field type, a view kind, a filter operator, an aggregate and a dashboard block, with a checklist per contract port",
+   "type": "Docs",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "View sharing, formulas, dashboards",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Haiku 4.5",
+   "modelId": "claude-haiku-4-5-20251001",
+   "effort": "low",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-483",
+    "r4/tables/view-renderer-registry-and-host",
+    "PAP-338"
+   ],
+   "blocks": [
+    "PAP-489"
+   ],
+   "description": "**Model / Effort:** Haiku 4.5 (`claude-haiku-4-5-20251001`) / low — Docs S\n\n**Goal**\n\nA cold builder session asked to add a Monday-style \"World clock\" field or a new view kind must not reverse-engineer six specs. Write the one guide that maps each extension point of `@paperos/contract-tables` to files, registration calls, tests and conformance fixtures, and index the `docs/views/` folder.\n\n**Scope**\n\nIn: `docs/views/README.md` (index of every `docs/views/*.md` with one line each); `docs/views/extending.md` with five walkthroughs; `docs/views/checklists.md` (per-port checklist: field type, view kind, filter op, aggregate, block, automation action); templates under `packages/views/templates/{field-type,view-kind}.ts` used by a `pnpm views:new field <name>` generator (plop or a 60-line script).\n\nOut: API reference (typedoc from PAP-445), guideline prose (PAP-76), parity CSV (PAP-162).\n\n**Spec**\n\n* Each walkthrough is executable: file paths, the `defineFieldType` or `registerViewKind` call, the tests to add (parse/format, ops oracle, story, conformance fixture in `packages/contracts/tables/fixtures/`), the docs row to update and the parity CSV row; ends with the commands to run (`pnpm --filter views test`, `pnpm conformance:tables`).\n* Checklists are Markdown task lists a PR can paste; each item names the failing check if skipped (for example \"missing story → `umbrella.test.ts` fails\").\n* `pnpm views:new field <name>` scaffolds `fields/<name>.ts`, a story, a test and a fixture from the templates; `pnpm views:new kind <name>` scaffolds `views/<name>/{View,register,options}.tsx`.\n* The index lists documents in reading order and marks which contract port each covers, matching the port list in PAP-483.\n* Under 1,200 words per page; every code block type-checks via `pnpm docs:check-snippets` (extracts TS blocks and compiles them against the workspace).\n\n**Interface contract**\n\nProvides: `docs/views/README.md`, `docs/views/extending.md`, `docs/views/checklists.md`, generator `pnpm views:new`, snippet check script. Consumes: contract port list (PAP-483), registry API (`r4/tables/view-renderer-registry-and-host`), field framework (PAP-338), conformance fixture layout (PAP-486), docs engine rendering (PAP-128, soft). Consumed by PAP-489 (module page links), PAP-105 page-from-spec skill, every future tables session.\n\n**Definition of done**\n\n* Three docs merged and rendering in the docs engine or Storybook fallback; generator produces a compiling field type and view kind that pass their scaffolded tests.\n* Snippet check green in CI; CHANGELOG; Linear comment with links.\n\n**Test plan**\n\n* Unit: generator output compiles and its tests run; snippet extractor handles fenced blocks with `ts` and `tsx`.\n* Dry run: a fresh session follows `extending.md` to add a `year` field type in under 30 minutes (timed, recorded in the PR).\n* E2E: none (docs).\n\n**Demo**\n\nReviewer runs `pnpm views:new field year`, follows the checklist, runs the tests and sees the new type in Storybook. Under two minutes.\n\n**Edge cases**\n\n* Guide drifts from code: snippet check fails the PR that changed the API.\n* Generator name collides with an existing type: refuses.\n* Docs engine not yet live: Storybook MDX fallback under `Guides/`.\n\n**Dependencies**\n\nPAP-483 (hard, port list), `r4/tables/view-renderer-registry-and-host` (hard), PAP-338 (hard). Soft: PAP-486, PAP-128. Blocks PAP-489 (module page links to the guide).\n\n**Agent**\n\nBuilder: Quill (Page Spec Writer) with Nova reviewing accuracy. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/tables/duplicate-detection-and-merge",
+   "title": "Duplicate detection and record merge: find duplicates by fields with fuzzy matching, review pairs and merge with field-level choice",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "View sharing, formulas, dashboards",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-30",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-334",
+    "PAP-333"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 (NJ-19 scope freeze; reinstate via NJ-14). Airtable's Dedupe extension and every CRM's merge flow prevent the second \"Acme Corp\". Add duplicate detection over chosen fields with fuzzy matching and a merge dialog that keeps one record, re-points relations and trashes the rest.\n\n**Scope**\n\nIn: `packages/views/src/dedupe/{DedupeWizard,MergeDialog,match}.ts`; procedures `records.findDuplicates({ datasetRef, fields, strategy })` (job above 5k rows), `records.merge({ keepId, mergeIds, fieldChoices })`; `pg_trgm` similarity for text fields.\n\nOut: automatic merging without review, cross-dataset dedupe, import-time dedupe (PAP-199 has its own preview).\n\n**Spec**\n\n* Strategies per field: `exact`, `caseInsensitive`, `normalized` (trim, fold diacritics, strip punctuation), `fuzzy` (`similarity() > 0.8` via `pg_trgm`), `emailDomain`; groups computed with a `GROUP BY` on the normalised expression or a self-join for fuzzy, capped at 10k rows inline, otherwise a PAP-43 job.\n* Wizard: pick fields and strategies, run, review groups as side-by-side records with differing fields highlighted, choose the survivor and per-field values, merge or skip; keyboard-operable.\n* `records.merge` runs in one transaction: writes chosen values to `keepId`, repoints every inbound relation and comment anchor (PAP-131 `entity:` grammar) to `keepId`, trashes `mergeIds` (PAP-334 soft delete with reason `merge:<keepId>`), writes one audit row per merged record; undo restores from trash and reverses the repoint within 30 days.\n* History (PAP-333) shows a \"Merged from\" entry with links; CRM (PAP-189) exposes the wizard on contacts and companies.\n\n**Interface contract**\n\nProvides: `records.findDuplicates`, `records.merge`, `<DedupeWizard datasetRef />`, `<MergeDialog />`, `normalizeForMatch(value, strategy)`. Consumes: trash and restore (PAP-334), history (PAP-333), relations (PAP-340), comments repoint (PAP-131), jobs (PAP-43), `pg_trgm` extension (PAP-32 migration). Consumed by PAP-189.\n\n**Definition of done**\n\n* Wizard and merge green in Vitest, integration and Playwright; screenshots at 375, 1024, 1920; axe clean; `docs/views/dedupe.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: normalisation strategies; group construction; field-choice merge builder; undo plan generation.\n* Integration: merge repoints 50 inbound relations and 5 comment threads in one transaction; restore reverses; fuzzy job over 20k rows completes under 60 s.\n* E2E: run the wizard on the demo clients, merge two Acme records choosing the newer phone, open the survivor's history, undo.\n\n**Demo**\n\nReviewer finds duplicate clients by fuzzy name, merges a pair and sees relations follow. Under two minutes.\n\n**Edge cases**\n\n* Survivor and merged record both linked from the same relation field with `limitOne`: keep survivor, report.\n* Merge across a posted ledger reference (PAP-179): blocked with explanation.\n* Group larger than 50: paginated review.\n\n**Dependencies**\n\nPAP-334 (hard), PAP-333 (hard). Soft: PAP-131, PAP-189. `r4/growth/contact-company-merge-and-dedup` ships the CRM-specific flow first (consent and external refs); this issue generalises `records.merge` to any dataset and reuses its scoring and `MergeDialog`. Deferred; nothing waits on it.\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/tree-hierarchy-grid",
+   "title": "Hierarchy in grid and list: parent relation field drives indented sub-rows, expand and collapse, drag to re-parent and rollups along the tree",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "All view types",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-29",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-343",
+    "PAP-340",
+    "PAP-331"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 (NJ-19; reinstate via NJ-14). ClickUp subtasks, Notion sub-items and Smartsheet hierarchy rows show work as a tree. Let a self-relation with `limitOne` act as `hierarchyField` so the grid and list render indented children with expand and collapse, drag to re-parent and tree-aware rollups.\n\n**Scope**\n\nIn: `ViewSpec.options.hierarchyField` for `grid|list`; `compileTree` (recursive CTE, depth cap 10) in PAP-335; `TreeRow` indentation and toggles; re-parent via PAP-331 drop with `canDrop` preventing cycles; PM issues (PAP-102) as first consumer.\n\nOut: mind map view, Gantt summary bars (PAP-346 reads `hierarchyField` later), cross-dataset trees.\n\n**Spec**\n\n* Root rows are those whose `hierarchyField` is empty or whose parent is filtered out (shown flat with a \"parent hidden\" chip); children load per parent via `views.query` with `groupPath`-style parent filter, page 100; expansion state persisted in `spec.options.expanded[]`.\n* Sorting applies within siblings; grouping is disabled while `hierarchyField` is set (toast explains); aggregates in a parent row summarise its subtree through a `rollup` over the self-relation when `showSubtreeTotals`.\n* Re-parent: drag a row onto another (PAP-331 `canDrop` rejects ancestors and depth over 10), keyboard `Alt+Right|Left` indents and outdents; writes the relation and `position` optimistically.\n* Accessibility: `role=\"treegrid\"`, `aria-level`, `aria-expanded`, `aria-setsize`; screen reader announces level on focus.\n* Compiler: `WITH RECURSIVE` path array for `sortPath`, cycle guard by path containment; `EXPLAIN` on the 100k seed shows the relation index.\n\n**Interface contract**\n\nProvides: `hierarchyField` option, `compileTree`, `<TreeRow />`, commands `grid.indent|outdent|expand|collapse`. Consumes: grid columns and group headers (PAP-343), relation type (PAP-340), drag (PAP-331), compiler core (PAP-335). Consumed by PAP-102 issues, PAP-427 packs.\n\n**Definition of done**\n\n* Treegrid green in Vitest, integration and Playwright on a 5-level seed; screenshots at 375, 1024, 1920; axe treegrid rules clean; `docs/views/hierarchy.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: path sort; cycle detection; depth cap; indent/outdent reducer.\n* Integration: recursive CTE on 100k rows with 10k roots under 150 ms p95.\n* E2E: expand a parent, indent a sibling by keyboard, drag a row under another, see totals update.\n\n**Demo**\n\nReviewer switches the demo tasks grid to hierarchy by `parent`, expands two levels and re-parents a task by drag. Under two minutes.\n\n**Edge cases**\n\n* Parent in trash: children shown as roots with a chip.\n* Import creates a cycle: rows flagged, tree renders the cycle members flat.\n\n**Dependencies**\n\nPAP-343 (hard), PAP-340 (hard), PAP-331 (hard). Deferred; nothing waits on it.\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/workload-view",
+   "title": "Workload view: capacity per person per period from an assignee field and an effort field, with over-allocation highlighting",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "All view types",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-29",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-345",
+    "PAP-336"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 (NJ-19; reinstate via NJ-14). ClickUp Workload and Box views and Monday's Workload widget answer \"who is overloaded next week\". Build an eleventh view kind on the timeline engine: one lane per assignee, one cell per period, filled by summed effort against a capacity.\n\n**Scope**\n\nIn: `views/workload/{WorkloadView,register}.tsx`; options `{ assigneeField (user), effortField? (number|duration; default count), startField, endField?, period: 'day'|'week', capacity: { default, perUser: Record<userId, number> } }`; compiler: two-level groups (assignee, period bucket) with `sum`; drag a bar to another lane to reassign.\n\nOut: resource levelling suggestions, vacations and calendars (capacity is a number), cross-dataset workloads.\n\n**Spec**\n\n* Lanes from `views.groups` level 1 on `assigneeField` (unassigned lane last); cells from level 2 bucketed by `period` over the visible range (PAP-344 `TimeScale`); effort spread evenly across the days a record spans when `endField` exists.\n* Cell fill = sum / capacity; colours `success` under 80 percent, `warning` 80 to 100, `danger` over 100 with the overflow number; clicking a cell emits `onFilter` for the assignee and period so a grid block lists the items.\n* Rows expand to show the underlying bars (PAP-345 renderer); dragging a bar to another lane writes `assigneeField`; keyboard `Alt+Up|Down` reassigns.\n* Capacity per user editable inline by `dataset.manage` holders and stored in `spec.options`; default 40 h per week or 5 items.\n\n**Interface contract**\n\nProvides: `<WorkloadView />`, `workloadOptionsSchema`, registration `kind: 'workload'`, `spreadEffort(record, period)`. Consumes: timeline engine and bars (PAP-345, PAP-344), groups and aggregates (PAP-336), `user` cells (PAP-339), `ViewHost` registry.\n\n**Definition of done**\n\n* View green in Vitest and Playwright on the demo seed; screenshots at 768, 1024, 1920 in three themes; axe clean; `docs/views/workload.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: effort spreading across spans and DST; capacity colours; bucket alignment with week start.\n* Integration: two-level groups over 10k rows return within 300 ms.\n* E2E: switch the demo tasks to workload by owner, see an over-allocated week, drag a bar to another owner and see both cells update.\n\n**Demo**\n\nReviewer opens workload by owner for the next four weeks, spots a red cell, clicks it to list the tasks and reassigns one. Under two minutes.\n\n**Edge cases**\n\n* Records without dates: excluded with a count chip.\n* Multi-user assignee (multiSelect): effort split equally, documented.\n\n**Dependencies**\n\nPAP-345 (hard), PAP-336 (hard). Deferred; nothing waits on it.\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/pivot-summary-view",
+   "title": "Pivot summary view: rows and columns from two group fields, aggregate cells, totals, drill-through and CSV export",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "View sharing, formulas, dashboards",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-30",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-336",
+    "r4/tables/chart-view-echarts"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 (NJ-19; reinstate via NJ-14). Airtable's Pivot extension, Coda and Smartsheet summaries and every spreadsheet pivot are the fastest way to see revenue by client by month. Build a pivot view kind on the compiler's two-level groups with aggregate cells and drill-through.\n\n**Scope**\n\nIn: `views/pivot/{PivotView,register}.tsx`; options `{ rowField, columnField?, bucket?, values: { fieldId?, fn }[] (max 3), showTotals, sortBy }`; sticky row and column headers; drill-through emits `onFilter` for both axes; CSV export via the export issue.\n\nOut: nested row fields beyond two levels, calculated pivot fields, charting (use chart view).\n\n**Spec**\n\n* Data from `views.groups` level 1 (rows) and level 2 (columns) with all `values` aggregates in one query per row page (page 100 rows, 50 columns with \"Other\"); date `bucket` shares PAP-336 compilation; totals row and column from a separate aggregate query.\n* Cells format through the field type (currency per currency: one cell per currency stacked); empty cells render an em dash; clicking a cell emits `onFilter([{ rowField is x }, { columnField is y }])` so a grid block lists the underlying records.\n* Keyboard: grid navigation reusing PAP-341's reducer over a static grid; `aria-rowindex|colindex`; copy a range as TSV (PAP-342 clipboard).\n* Registered as `kind: 'pivot'` with `supports: { onFilter, embedded, print }`; column count above 200 asks for a filter.\n\n**Interface contract**\n\nProvides: `<PivotView />`, `pivotOptionsSchema`, registration, `buildPivotMatrix(groups)`. Consumes: groups and aggregates (PAP-336), export writers (`r4/tables/view-export-csv-xlsx-ics-print`), chart sibling's registration helpers, grid reducer (PAP-341), clipboard (PAP-342).\n\n**Definition of done**\n\n* Pivot green in Vitest and Playwright; screenshots at 768, 1024, 1920 in three themes; axe clean; `docs/views/pivot.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: matrix building with sparse columns; totals; per-currency stacking; \"Other\" column.\n* Integration: budget by client by month over the 100k seed under 500 ms server time.\n* E2E: pivot budget by client by month, click a cell and see the grid block filter, export CSV.\n\n**Demo**\n\nReviewer builds Budget by Client by Quarter, clicks a cell to drill through, exports. Under two minutes.\n\n**Edge cases**\n\n* Row field with 10k distinct values: paginated rows.\n* Column bucket week with ISO week start per tenant setting.\n\n**Dependencies**\n\nPAP-336 (hard), `r4/tables/chart-view-echarts` (hard). Deferred; nothing waits on it.\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/extended-chart-types",
+   "title": "Extended chart types: scatter, histogram, funnel, gauge, heatmap and combo bar-line with shared series builder",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "View sharing, formulas, dashboards",
+   "parent": "PAP-170",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-30",
+   "deferred": true,
+   "blockedBy": [
+    "r4/tables/chart-view-echarts"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 (NJ-19; reinstate via NJ-14). ClickUp, Monday and Airtable dashboards offer scatter, funnel, gauge and heatmap widgets beyond bars and lines. Extend the chart view with six more types on the same series builder and theme.\n\n**Scope**\n\nIn: `views/chart/types/{scatter,histogram,funnel,gauge,heatmap,combo}.ts`; options additions `{ yField2?, bins?, stages?, min, max, thresholds? }`; ECharts modules added lazily; stories.\n\nOut: 3D charts, geographic charts (map view), custom ECharts option passthrough.\n\n**Spec**\n\n* `scatter`: two number fields per record (no aggregation, cap 5,000 points, sample with note); `histogram`: `bins` over a number field compiled as `width_bucket` in PAP-336; `funnel`: ordered `stages` from a select field's option order with conversion percentages; `gauge`: single aggregate against `min|max|thresholds`; `heatmap`: two group fields with a `sum|count` intensity and a sequential dataviz palette; `combo`: bars for `yAggregate` and a line for `yField2` aggregate on a second axis.\n* All types emit `onFilter` on click where an axis maps to a field; keyboard navigation per category as in the base issue; `View as table` fallback for each.\n* Chunk budget: each type is a separate `import()` so the base chart chunk stays under 250 KB.\n\n**Interface contract**\n\nProvides: six chart types registered into `chartTypes`, `histogramBins(field, bins)` compiler helper, sequential palette usage contract. Consumes: chart base (`r4/tables/chart-view-echarts`), compiler aggregates (PAP-336), dataviz tokens (design-system).\n\n**Definition of done**\n\n* Six types with stories at 375, 1024, 1920 in three themes; palette contrast validated; `size-limit` per chunk; `docs/views/chart.md` updated; CHANGELOG.\n\n**Test plan**\n\n* Unit: bins compilation; funnel ordering and percentages; gauge thresholds; heatmap matrix; combo dual axis.\n* Integration: histogram over 100k rows via `width_bucket` under 300 ms.\n* E2E: switch a chart through all six types, click a funnel stage and see the filter chip.\n\n**Demo**\n\nReviewer turns the demo chart into a funnel by status and a heatmap of client by month. Under two minutes.\n\n**Edge cases**\n\n* Funnel with stages missing records: zero bars kept for order.\n* Heatmap over 50 by 50 cells: labels thinned.\n\n**Dependencies**\n\n`r4/tables/chart-view-echarts` (hard). Deferred; nothing waits on it.\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/tables/agent-computed-field",
+   "title": "Agent-computed field type: a prompt template over record fields filled by a scoped agent job with cost units, caching and manual override",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "View sharing, formulas, dashboards",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "dueDate": "2026-09-30",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-389",
+    "PAP-340",
+    "PAP-111"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 (NJ-19; reinstate via NJ-14). Airtable AI fields, Notion AI autofill and Baserow's AI field let a table summarise, classify or draft from other columns. PaperOS has agents as principals; give tables an `agent` field type that fills from a prompt template through the existing `agent.run` action with budgets, caching and audit.\n\n**Scope**\n\nIn: `fields/agent.ts` with options `{ prompt (template over `{Field}` refs), outputType: 'text'|'select'|'number'|'boolean', model: 'haiku'|'sonnet', trigger: 'onChange'|'manual', dependsOn: fieldId[] }`; job `fields.agent.compute` batching 20 records per call; `record.agent_cache jsonb` with input hash; manual override with a lock icon; cost units to PAP-111 budgets.\n\nOut: agent tools or web access from a field, free-form chat per record, training.\n\n**Spec**\n\n* Compute runs only server-side as the `tables-agent` principal with `agentCallable` restricted to the `agent.run` action (PAP-389) at the tenant's daily field budget; results cached by hash of the dependency values; recompute on dependency change when `trigger: 'onChange'`, else via a \"Recompute\" button (bulk from the column menu, capped 1,000 per run).\n* Output validated against `outputType` (select must match an option name, number parsed); failures render `#AGENT` with the error; every compute writes an audit row with prompt hash, model, tokens and cost.\n* Prompt template shares the PAP-171 expression subset for references; PII fields (PAP-355 `pii` annotation) are excluded unless the tenant setting `agentFields.allowPii` is on; injection defences from PAP-299 wrap record content as untrusted.\n* Overrides: a user can edit the value, which locks it (`agent_cache.locked`); unlock recomputes.\n\n**Interface contract**\n\nProvides: `agent` FieldType, job `fields.agent.compute`, procedures `fields.agentRecompute`, cost telemetry `field.agent.computed`. Consumes: action runtime and `agent.run` (PAP-389), computed storage and conversions (PAP-340), budgets and kill switch (PAP-111), PII annotations (PAP-355), injection defences (PAP-299), jobs (PAP-43).\n\n**Definition of done**\n\n* Type green in Vitest and integration with a mock model; stories at 375, 1024, 1920; audit and budget tests; `docs/views/agent-fields.md` with the privacy note; CHANGELOG; Security Auditor sign-off.\n\n**Test plan**\n\n* Unit: template rendering; hash and cache; output validation per type; PII exclusion; lock semantics.\n* Integration: 100 changed records produce five batched calls; budget exhaustion pauses with a banner; kill switch stops the job.\n* E2E: add a \"Summary\" agent field over Notes, edit a note, watch the summary refresh, override and lock it.\n\n**Demo**\n\nReviewer adds a sentiment select filled by an agent over the notes column and recomputes ten rows. Under two minutes.\n\n**Edge cases**\n\n* Model unavailable: `#AGENT` with retry schedule, never blocks other writes.\n* Dependency field converted: cache invalidated, recompute queued.\n\n**Dependencies**\n\nPAP-389 (hard), PAP-340 (hard), PAP-111 (hard). Soft: PAP-355, PAP-299. Deferred; nothing waits on it.\n\n**Agent**\n\nBuilder: Nova (Views Engineer) with Atlas on budgets. Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/field-level-permissions",
+   "title": "Field-level permissions on custom datasets: per-field read and write by audience compiled into projections, editors and validators",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "View sharing, formulas, dashboards",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "dueDate": "2026-09-30",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-229",
+    "r4/tables/records-crud-procedures",
+    "PAP-332"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 (NJ-19; reinstate via NJ-14). Airtable field permissions and ClickUp custom-field permissions hide salary from staff and cost from customers on the same table. Add per-field `read|write` audience rules on custom datasets, enforced in the query projection, the record procedures, editors and forms, not only hidden in the UI.\n\n**Scope**\n\nIn: `FieldDef.permissions?: { read?: AudienceId[], write?: AudienceId[] }` (PAP-161 minor bump); `fieldMask(actor, dataset)` used by PAP-335 projections, `records.*` validation, `views.publicQuery`, export and forms; `FieldEditor` permissions section; `can('field.read', { datasetId, fieldId })` explain.\n\nOut: entity datasets (their page specs and PAP-59 policies own field access), row-level rules (RLS and `toPredicate`), column-level encryption (PAP-353).\n\n**Spec**\n\n* Absent `permissions` means inherit dataset access; `read` lists audiences that may see the field; `write` must be a subset of `read`; owners and admins always pass.\n* Compiler: unreadable fields are removed from `SELECT` and from filter and sort compilation (a filter on an unreadable field yields `FORBIDDEN`, never a silent empty result); aggregates on unreadable fields hidden.\n* Procedures: `records.create|update` strip unreadable keys from responses and reject writes to unwritable keys with `FIELD_FORBIDDEN`; bulk (PAP-334) and import (PAP-199) call the same mask.\n* UI: hidden columns are absent from the field menu (not merely unchecked); editors for read-only fields render the read-only cell with a lock tooltip and `explain()` in dev; forms omit the fields.\n* Audit: permission changes write `field.permissions.changed`; the permission matrix generator (PAP-63) gains a per-dataset field matrix.\n\n**Interface contract**\n\nProvides: `FieldDef.permissions`, `fieldMask`, error `FIELD_FORBIDDEN`, `FieldPermissionsEditor`, matrix export. Consumes: `can()` and audiences (PAP-229, PAP-62), records procedures (`r4/tables/records-crud-procedures`), `FieldEditor` (PAP-332), compiler core (PAP-335), export and public query (export issue, public links issue).\n\n**Definition of done**\n\n* Mask enforced in compiler, procedures, export and forms with the cross-tenant harness extended; matrix generated; stories at 375, 1024, 1920; `docs/views/field-permissions.md`; CHANGELOG; Security Auditor sign-off.\n\n**Test plan**\n\n* Unit: mask computation; subset rule; filter on unreadable field forbidden; response stripping.\n* Integration: `callAs(customer)` never receives the salary key through query, get, export or form; write rejected; owner sees all.\n* E2E: restrict Budget to Staff, sign in as the demo customer, confirm the column, filter option and export omit it.\n\n**Demo**\n\nReviewer restricts Budget to Staff and shows the customer portal view without it, then tries a filter via the API and reads `FIELD_FORBIDDEN`. Under two minutes.\n\n**Edge cases**\n\n* Formula depends on an unreadable field: formula readable only if all inputs readable, else hidden.\n* Lookup across datasets: target field's mask applies too.\n\n**Dependencies**\n\nPAP-229 (hard), `r4/tables/records-crud-procedures` (hard), PAP-332 (hard). Deferred; nothing waits on it.\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/tables/scheduled-view-snapshots",
+   "title": "Scheduled view snapshots: email or Slack a view or dashboard export on a cron with the recipient's permissions",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "View sharing, formulas, dashboards",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-30",
+   "deferred": true,
+   "blockedBy": [
+    "r4/tables/view-export-csv-xlsx-ics-print",
+    "PAP-388",
+    "PAP-136"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 (NJ-19; reinstate via NJ-14). Airtable, ClickUp and Monday send a saved view or dashboard to a channel every Monday. Compose the existing pieces: automation schedule trigger, export writers, dashboard print route and the notification centre.\n\n**Scope**\n\nIn: automation action `view.snapshot({ viewId | dashboardId, format: 'csv'|'xlsx'|'pdf'|'png', recipients: userId[] | channel })` registered via PAP-389 `defineAction`; \"Schedule\" entry in the export menu that creates an automation with a schedule trigger; per-recipient rendering.\n\nOut: public distribution, inline HTML tables in email (attachment only), retention beyond 7 days.\n\n**Spec**\n\n* The action runs once per recipient as that recipient's principal (PAP-60 impersonation for system jobs with audit reason `snapshot:<automationId>`) so permissions and field masks apply; files via the export issue or `/print/d/:id` PDF (PAP-387) and PNG through the Gate 3 Playwright image.\n* Delivery through PAP-136 kinds `view.snapshot` (in-app with attachment, email, Slack webhook); attachments over 10 MB become a signed link.\n* Schedule UI: preset (daily, weekly, monthly) plus cron, timezone from tenant; the export menu shows existing schedules with pause and delete.\n* Idempotent per `(automation_id, trigger_event_id)` via PAP-388; failures surface in the run log.\n\n**Interface contract**\n\nProvides: action `view.snapshot`, `ScheduleSnapshotDialog`, notification kind `view.snapshot`. Consumes: export writers (`r4/tables/view-export-csv-xlsx-ics-print`), schedule trigger and runtime (PAP-388), actions (PAP-389), notifications (PAP-136), print route (PAP-387), impersonation (PAP-60).\n\n**Definition of done**\n\n* Action and dialog green in Vitest, integration and Playwright with a fixed clock; screenshots at 375 and 1280; `docs/views/snapshots.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: recipient fan-out; format selection; size threshold to link.\n* Integration: weekly schedule across a DST boundary fires once; recipient without access receives a \"no access\" note, not data.\n* E2E: schedule the demo dashboard weekly to two users, advance the clock, open the in-app notification with the PDF.\n\n**Demo**\n\nReviewer schedules a CSV of Open tasks every Monday, fires it manually and opens the email in Mailpit. Under two minutes.\n\n**Edge cases**\n\n* View deleted: automation disabled with reason.\n* Recipient removed from tenant: skipped, run continues.\n\n**Dependencies**\n\nExport issue (hard), PAP-388 (hard), PAP-136 (hard). Soft: PAP-389, PAP-387, PAP-60. Deferred; nothing waits on it.\n\n**Agent**\n\nBuilder: Nova (Views Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/tables/geocoding-job",
+   "title": "Geocoding job: fill geo fields from address fields through a provider adapter (Nominatim self-hosted or Mapbox) with caching and rate limits",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "View sharing, formulas, dashboards",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-30",
+   "deferred": true,
+   "blockedBy": [
+    "r4/tables/map-view-maplibre-and-geo-field",
+    "PAP-43",
+    "PAP-121"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 (NJ-19; reinstate via NJ-14). A map view is only useful if addresses become coordinates. Add a geocoding provider port and a job that fills `geo` fields from configured address fields, with caching so imports of 10k customers do not cost 10k calls.\n\n**Scope**\n\nIn: `GeocodingPort { geocode(address) -> { lat, lng, precision } | null }` in `contract-tables`; adapters `nominatim` (self-hosted container in `ops/compose`, default) and `mapbox` (API key via PAP-121 connector); `geo` option `{ sourceFields: fieldId[], autoGeocode }`; job `fields.geocode` batched 50 with provider rate limits; `geocode_cache (hash, result)` table.\n\nOut: reverse geocoding, address validation UI, routing, autocomplete inputs.\n\n**Spec**\n\n* On record create or update touching `sourceFields`, enqueue a geocode when `autoGeocode`; a \"Geocode all\" column-menu action runs the job over the view's rows (cap 10k per run, progress and cancel).\n* Cache keyed by normalised address hash with 90-day TTL; results carry `precision` (`rooftop|street|city`) shown as a pin style; failures leave `geo` empty and write `geocode_failed` in a warnings column visible in the record panel.\n* Provider rate limits per adapter (Nominatim 1 rps, Mapbox per key) enforced by PAP-43 concurrency and `pg-boss` throttling; costs recorded as connector usage (PAP-121).\n* Privacy: addresses flagged `pii` (PAP-355) are geocoded only through the self-hosted adapter unless the tenant enables external providers.\n\n**Interface contract**\n\nProvides: `GeocodingPort`, adapters, job `fields.geocode`, `geo.sourceFields` option, `geocode_cache`. Consumes: `geo` type and map view (map issue), jobs (PAP-43), connector registry and secrets (PAP-121), PII annotations (PAP-355), compose stack (PAP-42).\n\n**Definition of done**\n\n* Port, two adapters and job green with recorded HTTP fixtures; Nominatim container in compose; `docs/views/geocoding.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: address normalisation and hashing; precision mapping; TTL expiry; PII routing rule.\n* Integration: 1,000 records with 300 distinct addresses produce 300 provider calls; cancel mid-run leaves consistent rows.\n* E2E: enable auto-geocode on the demo clients, edit an address, see the pin move on `/demo/map`.\n\n**Demo**\n\nReviewer runs \"Geocode all\" on 50 demo clients and watches the map fill in. Under two minutes.\n\n**Edge cases**\n\n* Ambiguous address: lowest precision stored with a warning.\n* Provider down: retries on the jobs schedule, banner in the map view.\n\n**Dependencies**\n\nMap issue (hard), PAP-43 (hard), PAP-121 (hard). Soft: PAP-355, PAP-42. Deferred; nothing waits on it.\n\n**Agent**\n\nBuilder: Nova (Views Engineer) with Forge on the container. Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-161",
+   "section": "Spec",
+   "append": "* Round 4 additions (minor bump, `migrateViewSpec` step v3): `FieldDef.description?: string` (rendered as a header tooltip and form help), `FieldDef.group?: string` (the `FieldGroup` PAP-333 and `r4/design-system/form-layout-and-unsaved-changes` render), `FieldDef.defaultValue?` (shape owned by `r4/tables/record-templates-and-field-defaults`), `FieldDef.permissions?` (reserved for `r4/tables/field-level-permissions`), and `ViewSpec.formats?` plus `colorBy?` (owned by `r4/tables/conditional-formatting`). Reserve the keys now so later issues do not fork the schema; validators accept and ignore them until their owners land."
+  },
+  {
+   "identifier": "PAP-340",
+   "section": "Spec",
+   "append": "* Round 4: `lookup` and `rollup` options gain `filter?: FilterTree` evaluated over the linked records before projection or aggregation (Airtable's conditional rollups, Notion's filtered rollups); compiles into the lateral join's `WHERE`. The relation editor gains `allowCreate: boolean` so a user can type a new title and create the target record inline through `records.create` (`r4/tables/records-crud-procedures`) with the target dataset's defaults applied."
+  },
+  {
+   "identifier": "PAP-339",
+   "section": "Spec",
+   "append": "* Round 4: `select` options may carry `group?: 'todo' | 'inProgress' | 'done'` and the field option `kind: 'status'` (Notion status semantics). Kanban reads `done` for completion styling, WIP limits skip `done` columns, the Gantt `progressField` may derive from it, and importers map ClickUp and Linear statuses onto the groups. Grouping by a status field orders groups todo, inProgress, done."
+  },
+  {
+   "identifier": "PAP-338",
+   "section": "Spec",
+   "append": "* Round 4: per-type validation options in `optionsSchema`: `text|longText { minLength?, maxLength?, pattern?: string (RegExp source, anchored, 200 char cap) }`, `number|currency|percent { min?, max?, step? }`, `date { min?, max?, allowPast?, allowFuture? }`, `attachment { maxFiles?, accept?: string[] }`, `multiSelect|relation|user { minItems?, maxItems? }`. `validateRecord` enforces them with `VALIDATION` details and the editors surface them inline; `FieldEditor` (PAP-332) exposes them in a Validation section."
+  },
+  {
+   "identifier": "PAP-341",
+   "section": "Edge cases",
+   "append": "* Round 4: RTL locales flip frozen columns to the end edge, `Home`/`End` and arrow semantics follow reading direction, and the scroll shadow mirrors (Playwright `ar-EG` run). Touch range selection: a long-press on a cell starts a selection with draggable corner handles (PAP-154 recognisers) and a floating bulk bar; a two-finger drag still scrolls. Chord matching ignores `keydown` while `event.isComposing` so IME users are not interrupted."
+  },
+  {
+   "identifier": "PAP-342",
+   "section": "Spec",
+   "append": "* Round 4: every committed edit registers with the shared undo manager (`r4/input/undo-manager`) as one entry per cell commit (coalesced while typing into the same cell), and paste or bulk-set as one entry, so `mod+z` reverts the last edit through the inverse patch and `mod+shift+z` re-applies; the revert-on-rejection toast reuses the manager's `UndoToast`. Editors commit on `Enter` only after IME composition ends (`isComposing === false`). Clipboard operations go through the typed `ClipboardPort` (`r4/input/clipboard-port`) with the `records` payload kind; TSV remains the plain-text fallback."
+  },
+  {
+   "identifier": "PAP-386",
+   "section": "Spec",
+   "append": "* Round 4: two more block kinds. `embed` renders an iframe from a URL restricted to the tenant's `allowedEmbedOrigins` allowlist (settings, default empty) with `sandbox=\"allow-scripts allow-same-origin\"`, no cross-filter participation and a static placeholder in print; `image` renders a PAP-37 file with `fit` and optional caption. Both are listed in the block picker under Content."
+  },
+  {
+   "identifier": "PAP-166",
+   "section": "Scope",
+   "append": "Round 4: this issue becomes an umbrella for two children, `r4/tables/filter-builder-component` (the standalone `FilterBuilder`, quick chips, relative dates and URL codec, reused by PAP-195 and PAP-174) and `r4/tables/view-toolbar-sort-group-aggregates` (toolbar, sort, group, aggregate, field visibility, search and temporary view state). The umbrella keeps the integration test and `docs/views/controls.md`; the Size line \"one to two sessions\" is superseded by the two M children. Definition of done gains: the operator table in the docs is generated from the field registry and a test fails when a registered `(type, op)` pair is missing from the builder."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "collab",
+   "title": "Cell-level comment anchors: extend the anchor grammar with `cell:<datasetRef>:<recordId>:<fieldId>` and a grid cell comment indicator",
+   "why": "Smartsheet and Excel comment on cells; PAP-131's grammar stops at `entity:` and the grid (PAP-343) can only show record-level threads. The tables engine will render an indicator if collab owns the anchor."
+  },
+  {
+   "targetProject": "realtime",
+   "title": "Cell-level presence in grids and boards: who is viewing or editing which record and field, from the PAP-141 awareness layer",
+   "why": "Airtable and Google Sheets show collaborator cursors per cell; PAP-141 covers pages and PAP-143 record streams, but no issue projects awareness onto `GridView` cells or kanban cards."
+  },
+  {
+   "targetProject": "migration",
+   "title": "Scheduled re-sync of external sources into datasets (Airtable sync tables equivalent) on the PAP-199 connectors with change detection and conflict policy",
+   "why": "Airtable Sync and Coda sync tables keep a dataset mirrored from Notion, Airtable or Stripe; PAP-199 imports once and PAP-417/PAP-423 connectors have the auth, so a scheduled incremental run belongs to migration."
+  },
+  {
+   "targetProject": "agents",
+   "title": "MCP tool server exposing `views.query`, `records.*` and `views.export` to agent sessions through the contract ports with `can()` and audit reasons",
+   "why": "Characters should read and edit tables through the same permissioned API as humans; PAP-291 covers commands and PAP-60 keys, but no issue gives sessions a typed views tool."
+  },
+  {
+   "targetProject": "quality",
+   "title": "Add `views.query`, `views.groups` and `records.update` p95 to the PAP-242 performance budgets with the 100k-row seed from `r4/tables/demo-pages-and-seed-data`",
+   "why": "PAP-337's bench proves the compiler once; the release-candidate k6 smoke should keep it honest as field types and formulas land."
+  },
+  {
+   "targetProject": "spec-builder",
+   "title": "Page spec `views:` section renders through `ViewHost` and accepts any registered kind; codegen emits `ui.dataTable` for arrays under 500 rows and a view for datasets",
+   "why": "PAP-119 inlines view specs and PAP-120 emits `ui.dataTable`; the registry (`r4/tables/view-renderer-registry-and-host`) and the DataTable decision table (`r4/design-system/static-data-table`) give codegen one rule to follow."
+  }
+ ]
+}

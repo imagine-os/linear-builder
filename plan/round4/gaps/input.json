@@ -1,0 +1,850 @@
+{
+ "project": "input",
+ "projectName": "Multi-Input Control & Accessibility",
+ "benchmarks": [
+  "Figma (shortcuts, context menus, multi-window)",
+  "Linear (command palette, keymaps, sequences)",
+  "VS Code (command registry, keybindings, macros, native menus)",
+  "Raycast (global hotkey)",
+  "Superhuman",
+  "Excel and Google Sheets (grid keyboard, fill, clipboard)",
+  "macOS Accessibility (Switch Control, Sticky Keys, Dwell)",
+  "Windows Ease of Access",
+  "iOS and Android accessibility (VoiceOver, TalkBack, Switch Access)",
+  "WCAG 2.2 AA (2.1.4, 2.2.1, 2.5.7, 2.5.8)"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "Unified input event abstraction (mouse, touch, pen, gamepad)",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-150",
+    "PAP-476"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Wheel and trackpad normalisation, mouse buttons back/forward",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-150"
+   ],
+   "note": "Amendment"
+  },
+  {
+   "feature": "IME composition safety in matcher and editors",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-289"
+   ],
+   "note": "Amendment"
+  },
+  {
+   "feature": "Command registry, scopes, chord and sequence matcher",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-289"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Command palette and help sheet",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-290"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Agent execution endpoint and default commands",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-291"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Context menus from the registry (right-click, long-press, Shift+F10)",
+   "status": "gap",
+   "coveredBy": [
+    "r4/input/command-context-menus"
+   ],
+   "note": "Linear/Figma/VS Code pattern"
+  },
+  {
+   "feature": "Native desktop menu bar from the command manifest",
+   "status": "gap",
+   "coveredBy": [
+    "r4/input/native-menu-from-command-manifest"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "OS-level global hotkey and tray",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-255"
+   ],
+   "note": "Tray Show/Quit in PAP-255; global hotkey owned by app-shell r4/app-shell/desktop-os-integration (v0.2)"
+  },
+  {
+   "feature": "Keymap presets (default, Vim, Linear) and rebinding",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-153"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Macros / recorded command chains",
+   "status": "gap",
+   "coveredBy": [
+    "r4/input/macros-and-command-chains"
+   ],
+   "note": "Named in the brief"
+  },
+  {
+   "feature": "Undo/redo manager shared by grid, canvas, docs",
+   "status": "gap",
+   "coveredBy": [
+    "r4/input/undo-manager"
+   ],
+   "note": "edit.undo|redo commands exist without a stack"
+  },
+  {
+   "feature": "Clipboard port with typed payloads",
+   "status": "gap",
+   "coveredBy": [
+    "r4/input/clipboard-port"
+   ],
+   "note": "Grid, canvas, cross-window drags"
+  },
+  {
+   "feature": "Focus regions, roving tabindex, skip links, F6",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-152"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Live announcer",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-152"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Multi-window command and focus routing",
+   "status": "gap",
+   "coveredBy": [
+    "r4/input/multi-window-command-and-focus-routing"
+   ],
+   "note": "Brief: multi-monitor"
+  },
+  {
+   "feature": "Touch gesture recognisers and arena",
+   "status": "covered",
+   "coveredBy": [
+    "r4/input/gesture-recognisers-and-arena"
+   ],
+   "note": "Split from PAP-154"
+  },
+  {
+   "feature": "Mobile components: swipe row, pinch zoom, pull to refresh, bottom sheet",
+   "status": "covered",
+   "coveredBy": [
+    "r4/input/mobile-gesture-components-and-haptics"
+   ],
+   "note": "Split from PAP-154"
+  },
+  {
+   "feature": "Haptics",
+   "status": "covered",
+   "coveredBy": [
+    "r4/input/mobile-gesture-components-and-haptics",
+    "PAP-260"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Virtual keyboard inset and focused-field visibility",
+   "status": "gap",
+   "coveredBy": [
+    "r4/input/virtual-keyboard-viewport"
+   ],
+   "note": "Forms unusable on phones otherwise"
+  },
+  {
+   "feature": "Touch targets 44px audit",
+   "status": "covered",
+   "coveredBy": [
+    "r4/input/mobile-gesture-components-and-haptics",
+    "PAP-73"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Drag-and-drop sensors and SortableList",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-329"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Keyboard drag alternative and announcements",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-330"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Kanban DnD, grid DnD, drop zones, cross-window drag",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-331"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Native OS file drop (Tauri)",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-331"
+   ],
+   "note": "Amendment"
+  },
+  {
+   "feature": "Pen and stylus with pressure",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-157"
+   ],
+   "note": "Deferred"
+  },
+  {
+   "feature": "Gamepad and TV spatial navigation",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-158"
+   ],
+   "note": "Deferred"
+  },
+  {
+   "feature": "Switch access scanning",
+   "status": "gap",
+   "coveredBy": [
+    "r4/input/switch-access-scanning"
+   ],
+   "note": "Deferred; named in the brief"
+  },
+  {
+   "feature": "Voice backend seam and intent matching",
+   "status": "covered",
+   "coveredBy": [
+    "r4/input/voice-backend-and-intent-matching"
+   ],
+   "note": "Split from PAP-159"
+  },
+  {
+   "feature": "Dictation into fields and voice UI",
+   "status": "covered",
+   "coveredBy": [
+    "r4/input/dictation-targets-and-voice-ui"
+   ],
+   "note": "Split from PAP-159"
+  },
+  {
+   "feature": "Text-to-speech / read aloud",
+   "status": "gap",
+   "coveredBy": [],
+   "note": "wontdo v0.1; screen readers cover"
+  },
+  {
+   "feature": "Screen reader testing NVDA/VoiceOver/TalkBack",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-156",
+    "PAP-371"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Accessibility statement and ACR",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-160"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "WCAG 2.1.4 single-key shortcut disable/remap",
+   "status": "gap",
+   "coveredBy": [
+    "r4/input/accessibility-input-preferences"
+   ],
+   "note": "Conformance requirement"
+  },
+  {
+   "feature": "Sticky-key chords, key repeat, dwell click, timing extensions",
+   "status": "gap",
+   "coveredBy": [
+    "r4/input/accessibility-input-preferences"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Always-visible focus ring and font scale preference",
+   "status": "gap",
+   "coveredBy": [
+    "r4/input/accessibility-input-preferences"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Reduced motion preference",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-72"
+   ],
+   "note": "Design system"
+  },
+  {
+   "feature": "High contrast theme",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-75"
+   ],
+   "note": "Design system"
+  },
+  {
+   "feature": "Zoom and reflow",
+   "status": "covered",
+   "coveredBy": [
+    "r4/design-system/reflow-zoom-text-spacing-audit"
+   ],
+   "note": "Design system"
+  },
+  {
+   "feature": "Playwright input fixtures (chords, gestures, gamepad, drag)",
+   "status": "gap",
+   "coveredBy": [
+    "r4/input/playwright-input-fixtures"
+   ],
+   "note": "Every e2e re-implements them"
+  },
+  {
+   "feature": "Input telemetry by modality",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-291"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Keyboard hint overlay and onboarding",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-380",
+    "PAP-290"
+   ],
+   "note": "Collab owns the overlay"
+  },
+  {
+   "feature": "Spreadsheet-style grid keyboard (F2, Tab, Enter)",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-341",
+    "PAP-342"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Eye tracking / BCI",
+   "status": "gap",
+   "coveredBy": [],
+   "note": "Non-goal per project description"
+  },
+  {
+   "feature": "Module contract, conformance, wiring",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-476",
+    "PAP-479",
+    "PAP-482"
+   ],
+   "note": ""
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/input/undo-manager",
+   "title": "Global undo manager: scoped undo and redo stacks, coalescing, Yjs UndoManager bridge, toast integration and the edit.undo|redo commands",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Keyboard and command system",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "dueDate": "2026-09-23",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-289",
+    "PAP-150"
+   ],
+   "blocks": [
+    "PAP-342",
+    "PAP-334",
+    "PAP-144",
+    "PAP-132"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nPAP-291 registers `edit.undo|redo` as default commands and four issues (PAP-342 grid edits, PAP-334 bulk undo toast, PAP-144 conflict undo, PAP-157 ink) each invent their own undo. Build the one `UndoManager` every surface pushes into, so `mod+z` reverts the last thing the user did wherever they are, including remote-write reverts through the outbox.\n\n**Scope**\n\nIn: `packages/input/src/undo/{UndoManager,useUndoable,scopes,yjsBridge,toast}.ts`; `registerUndoable({ label, do, undo, coalesceKey?, scope? })`; scope stack aligned with `CommandScopeProvider` (global → page → editor); Yjs `UndoManager` adapter for Tiptap and canvas docs; `UndoToast` integration (\"Undone: Set Status\" with Redo); telemetry; `docs/platform/input/undo.md`.\n\nOut: server-side history and per-field undo UI (PAP-333), trash (PAP-334), conflict merge UI (PAP-144), text-field native undo inside `<input>` (browser owns it while focused).\n\n**Spec**\n\n* `UndoManager` keeps one stack per scope (max 200 entries, 10 min TTL); `mod+z` and `mod+shift+z` (and `mod+y` on Windows) run `edit.undo|redo` against the innermost scope with entries, falling back outward; `allowInInput: false` so native text undo wins while typing.\n* `registerUndoable` returns a handle; `do()` runs immediately unless `deferred`, `undo()` must be idempotent and may be async (optimistic writes revert via `mutate` inverse patches from PAP-272); failures surface a toast and drop the entry; `coalesceKey` merges consecutive entries within 800 ms (typing into one cell).\n* Yjs bridge: `bindYjsUndo(doc, scope, { trackedOrigins })` wraps `y-undo-manager` so document edits and record edits share one keyboard path; capture timeout 500 ms; user-scoped origins so a collaborator's edits are never undone.\n* Every undo or redo pushes a `UndoToast` (PAP-237 toast queue) with the label and the inverse action; the PAP-334 bulk toast and PAP-144 banner register their inverse through this API instead of custom toasts.\n* Remote invalidation: an entry whose target row version changed remotely (PAP-143 `record.updated` with a different actor) is marked stale; undoing it asks \"Row changed since; undo anyway?\" and records both versions in the audit reason `undo:<entryId>`.\n* Commands `edit.undo|redo|undoHistory` (history popover listing the last 20 labels); telemetry `undo.performed { scope, label, stale }`.\n\n**Interface contract**\n\nProvides: `UndoManager`, `useUndoable`, `useUndoStack(scope)`, `bindYjsUndo`, `UndoEntry` type, `UndoHistoryPopover`, commands, contract port `UndoPort` for `@paperos/contract-input`. Consumes: command registry and scope stack (PAP-289), modality (PAP-150), toast (PAP-237), `mutate` inverse patches (PAP-272), Yjs docs (PAP-140, PAP-142; `r4/realtime/editor-core` exposes the Tiptap undo origin), record change events (PAP-143). Consumed by PAP-342, PAP-334, PAP-144, PAP-132 canvas, PAP-157 ink, `r4/tables/grid-fill-handle`, `r4/tables/grid-find-and-replace`.\n\n**Definition of done**\n\n* Grid cell edit, kanban move (via `onMove`) and a Tiptap comment edit all undo with `mod+z` on the sample pages; history popover works; screenshots at 375 and 1280 in three themes.\n* `docs/platform/input/undo.md` with the integration recipe; changelog; Linear comment on PAP-342, PAP-334, PAP-144 naming the API.\n\n**Test plan**\n\n* Unit: stack limits and TTL; scope fallback order; coalescing window; async undo failure drops the entry; stale detection; Yjs bridge captures and ignores foreign origins (fake timers).\n* Integration: optimistic `records.update` then undo produces the inverse patch and one audit row with the reason; redo re-applies.\n* E2E: edit three cells in `/demo/grid`, press `mod+z` three times and `mod+shift+z` once, open the history popover; type in a comment and confirm native undo still works while focused; second user's edit marks an entry stale.\n\n**Demo**\n\nReviewer edits a cell, moves a kanban card, presses `mod+z` twice watching both revert with toasts, then opens the history popover and redoes one. Under two minutes.\n\n**Edge cases**\n\n* Undo after navigating away: page-scoped stack cleared, global entries kept.\n* Entry whose row was deleted remotely: skipped with a toast \"Record no longer exists\".\n* Two windows (PAP-145): stacks are per window; a `window bus` note documents why they do not merge.\n* Reduced motion: toast without slide.\n\n**Dependencies**\n\nPAP-289 (hard, scopes and commands), PAP-150 (hard, chord). Soft: PAP-237, PAP-272, PAP-142, PAP-143. Blocks PAP-342, PAP-334, PAP-144, PAP-132 (they adopt the manager).\n\n**Agent**\n\nBuilder: Nova (Product Systems Engineer). Reviewer: Sentinel (Edge Case Hunter, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/input/command-context-menus",
+   "title": "Command-driven context menus: right-click, long-press and the ContextMenu key render scoped commands for records, cells, cards, nodes and selections",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Keyboard and command system",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-23",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-289",
+    "PAP-237"
+   ],
+   "blocks": [
+    "PAP-343",
+    "PAP-167",
+    "PAP-132"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nLinear, Figma and VS Code show the same actions in the palette, the shortcut sheet and the right-click menu because all three read one registry. PAP-237 ships a `Menu` with a context trigger and PAP-154 suppresses the native long-press menu, but nothing turns registered commands into a context menu for a target. Build that bridge once so grids, boards, canvas and lists never hand-write menus.\n\n**Scope**\n\nIn: `packages/input/src/commands/{ContextMenu,useContextTarget}.tsx`; `defineCommand` extension `menu?: { group, order, showIn: ['context','toolbar','palette'] }`; `<CommandContextMenu scope target />`; `useContextTarget(ref, { kind, id, selection })`; keyboard opener (`ContextMenu` key, `Shift+F10`); touch long-press via PAP-154 `useLongPress`.\n\nOut: menu rendering primitives (PAP-237), toolbar rendering (view toolbar issue), the palette (PAP-290).\n\n**Spec**\n\n* Right-click, long-press (500 ms, coarse pointer) or `Shift+F10` on an element with `useContextTarget` opens `Menu` at the pointer (or anchored to the element for keyboard) listing `registry.list(ctx)` filtered to `menu.showIn` containing `context`, grouped by `menu.group` with separators, ordered by `menu.order`, with `ShortcutHint` from the effective keymap (PAP-153 seam).\n* `ctx.target = { kind: 'record'|'cell'|'card'|'node'|'row'|'selection', id, datasetRef?, fieldId?, count }` so `when(ctx)` guards can hide \"Delete\" for read-only rows and pluralise labels (\"Delete 3 records\").\n* Native menu preserved when no command matches or when the target is a link or editable text without `allowInInput` commands; `preventDefault` only when the menu opens.\n* Focus returns to the target on close; `Escape` closes; submenus for `menu.group` with more than eight items; `agentCallable` unaffected.\n* Stories: grid cell, kanban card, canvas node targets in three themes; performance under 8 ms to open with 300 registered commands.\n\n**Interface contract**\n\nProvides: `<CommandContextMenu />`, `useContextTarget`, `menu` extension on `CommandDef`, `ContextTarget` type (exported in `contract-input`). Consumes: registry `list|execute` and scopes (PAP-289), `Menu` (PAP-237), `useLongPress` (PAP-154, soft: pointer fallback), effective chords (PAP-153, soft), `LiveAnnouncer` (PAP-152). Consumed by PAP-343 column and row menus, PAP-167 cards, PAP-132 canvas nodes, gallery and list rows.\n\n**Definition of done**\n\n* Menus open on the three sample targets by mouse, touch emulation and keyboard; screenshots at 375 and 1280 in three themes; axe clean; changelog; docs section in `docs/platform/input/commands.md`; Linear comment on PAP-343 and PAP-167.\n\n**Test plan**\n\n* Unit: filtering by `showIn` and `when`; grouping and ordering; pluralised labels from `count`; native fallback decision table.\n* Component: open by right-click and `Shift+F10`, focus restore, submenu keyboard navigation.\n* E2E: right-click a row in `/demo/grid`, run Duplicate; long-press a kanban card on a touch context; `Shift+F10` on a focused cell; a viewer session sees no Delete.\n\n**Demo**\n\nReviewer right-clicks a grid row, reads the same commands as `mod+k` shows with shortcuts, long-presses a card on the phone viewport and opens the same menu by keyboard. Under two minutes.\n\n**Edge cases**\n\n* Right-click during a drag: ignored.\n* Target unmounts while open: menu closes, focus to region entry (PAP-152).\n* RTL: submenu opens to the left.\n* Multi-select of mixed kinds: only commands valid for all targets.\n\n**Dependencies**\n\nPAP-289 (hard), PAP-237 (hard). Soft: PAP-154, PAP-153, PAP-152. Blocks PAP-343, PAP-167, PAP-132 (they consume instead of hand-writing menus).\n\n**Agent**\n\nBuilder: Nova (Product Systems Engineer). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/input/clipboard-port",
+   "title": "Clipboard port: typed copy and paste with a PaperOS MIME payload, plain-text and TSV fallbacks, Tauri clipboard plugin and permission handling",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Keyboard and command system",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-23",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-289"
+   ],
+   "blocks": [
+    "PAP-342",
+    "PAP-331",
+    "PAP-132"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nGrid ranges (PAP-342), canvas nodes (PAP-132), kanban cards and cross-window drags (PAP-331) all need copy and paste, and each would call `navigator.clipboard` differently. Provide one `ClipboardPort` with a typed PaperOS payload, sensible fallbacks and the Tauri plugin behind it so paste between windows, apps and devices behaves the same everywhere.\n\n**Scope**\n\nIn: `packages/input/src/clipboard/{port,web,tauri,payload}.ts`; `ClipboardPort { write(payload), read(): Promise<ClipboardPayload> }`; payload `{ kind, version, items, text, html?, tsv? }` under MIME `web application/x-paperos+json` plus `text/plain` and `text/html`; commands `edit.copy|cut|paste` with `allowInInput: false`; permission and unsupported-browser handling.\n\nOut: rich text clipboard inside Tiptap (PAP-142 owns), file paste to uploads (PAP-37 hook only), OS clipboard history.\n\n**Spec**\n\n* `write(payload)` uses `ClipboardItem` with the custom `web ` MIME when supported (Chromium), else writes `text/plain` (TSV or plain) and stores the typed payload in an in-memory `lastCopied` cache keyed by a hash embedded in the text as a trailing zero-width marker; `read()` prefers the custom MIME, then matches the marker to `lastCopied`, then falls back to parsing `text/plain` as TSV.\n* Tauri: `@tauri-apps/plugin-clipboard-manager` adapter reads and writes text and HTML; the typed payload rides in HTML as a `data-paperos-payload` attribute; the same marker scheme covers cross-window paste within one app instance through PAP-145 `WindowBus` `clipboard.sync`.\n* Permission: `read()` requires a user gesture; denied or unsupported reads reject with `CLIPBOARD_UNAVAILABLE` and the caller shows a paste field fallback (grid opens a textarea to paste into); Firefox and WebKitGTK paths tested.\n* Payload kinds registered with `defineClipboardKind({ kind, schema, toText, fromText? })`: `records` (PAP-342), `canvasNodes` (PAP-132), `cards`; `version` allows upcasting; cut records `write` then run the consumer's delete on successful paste only.\n* Security: pasted payloads are validated with Zod before use; HTML is never injected; a payload from another tenant (embedded `tenantId`) is refused with a toast.\n\n**Interface contract**\n\nProvides: `ClipboardPort`, `useClipboard()`, `defineClipboardKind`, `ClipboardPayload` (in `contract-input`), commands `edit.copy|cut|paste`, `PasteFallbackField`. Consumes: commands (PAP-289), Tauri plugin capability (PAP-19, PAP-260 for mobile), `WindowBus` (PAP-145, soft), `Zod` schemas from consumers. Consumed by PAP-342 (TSV ranges become the `records` kind), PAP-331 (cross-window transfer fallback), PAP-132, PAP-167.\n\n**Definition of done**\n\n* Copy and paste of grid ranges between two tabs and between the web app and a Tauri window recorded; fallback field proven on Firefox; screenshots of the fallback at 375 and 1280.\n* `docs/platform/input/clipboard.md`; changelog; Linear comment on PAP-342 and PAP-132 with the kind registration recipe.\n\n**Test plan**\n\n* Unit: payload encode and decode with marker; kind registry validation; TSV fallback parse (quotes, newlines); tenant refusal; version upcast hook.\n* Integration: Playwright Chromium grants clipboard permissions and round-trips the custom MIME; Firefox project exercises the marker fallback; Tauri Linux smoke via `tauri-driver`.\n* E2E: copy three grid rows, paste into a second tab's grid (typed), paste into a textarea (TSV), paste a spreadsheet range into the grid (parsed), deny permission and use the fallback field.\n\n**Demo**\n\nReviewer copies a range in `/demo/grid`, pastes it into a second window as typed records and into a plain text field as TSV, then denies clipboard permission and pastes through the fallback. Under two minutes.\n\n**Edge cases**\n\n* Payload over 1 MB: text carries a reference id and the full payload stays in `lastCopied` (same session only), documented.\n* Cut then paste fails validation: nothing deleted.\n* Paste of `text/html` from Excel: parsed as TSV via the HTML table.\n* Clipboard read on iOS Safari without gesture: fallback field.\n\n**Dependencies**\n\nPAP-289 (hard), PAP-19 (soft: the Tauri adapter lands after the web adapter). Soft: PAP-145, PAP-260. Blocks PAP-342, PAP-331, PAP-132.\n\n**Agent**\n\nBuilder: Nova (Product Systems Engineer) with Forge (Tauri Smith). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/input/playwright-input-fixtures",
+   "title": "Shared Playwright input fixtures: pressChord, sequence, touch gestures, pen, gamepad mock, drag helpers and input-modality assertions for every e2e and gate",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Keyboard and command system",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-23",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-150"
+   ],
+   "blocks": [
+    "PAP-341",
+    "PAP-167",
+    "PAP-155",
+    "PAP-156",
+    "PAP-83"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nEvery input, tables and quality spec writes Playwright tests that press chords, long-press, pinch, drag by keyboard or mock a gamepad, and each will write those helpers again. Ship `@paperos/input/testing` once so tests read like the specs and Gate 3 and PAP-156 reuse the same gestures.\n\n**Scope**\n\nIn: `packages/input/src/testing/{chords,touch,pen,gamepad,drag,modality,index}.ts` exported as `@paperos/input/testing`; Playwright fixtures `test.extend({ input })`; CDP helpers for touch and pen; `expectModality(page, 'keyboard')`; `touchTargets(page)` (moved here from PAP-154's plan); docs page.\n\nOut: the input runtime itself, visual baselines (PAP-246), device farms (PAP-371).\n\n**Spec**\n\n* `input.pressChord(page, 'mod+shift+k')` resolves `mod` per the page's `navigator.platform` and uses `keyboard.press`; `input.sequence(page, 'g i', { gapMs })`; `input.holdKey(page, 'Space', ms)`.\n* `input.tap|longPress|swipe|pinch|pan(page, locator, opts)` via `page.touchscreen` and CDP `Input.dispatchTouchEvent` with realistic timing and slop; `input.pen(page, locator, strokes, { pressure })` via `Input.dispatchMouseEvent` with `pointerType: 'pen'`; `input.gamepad(page)` installs a `navigator.getGamepads` mock with `press(button)`, `stick(x, y)` and `connect|disconnect`.\n* `input.dragKeyboard(page, handle, moves)` runs the PAP-330 grammar; `input.dragPointer(page, from, to, { steps })`; `input.expectAnnouncement(page, /Moved/)` reads the shared `LiveAnnouncer` region; `input.expectModality(page, 'keyboard'|'pointer')` reads `data-input-*` from PAP-150.\n* Fixtures are pure Playwright with no app import so quality packages can depend on them without pulling React; typed and documented with one example per helper.\n* CI: fixture self-tests run against a static HTML page in the package (no app) so they never block on app builds.\n\n**Interface contract**\n\nProvides: `@paperos/input/testing` package entry, the `input` Playwright fixture, `touchTargets(page)` audit helper (consumed by PAP-82 as planned in PAP-154), `expectAnnouncement`. Consumes: `data-input-*` attributes and thresholds (PAP-150), test-mode hooks (PAP-240), `LiveAnnouncer` DOM contract (PAP-152, soft), keyboard grammar (PAP-330, soft). Consumed by PAP-341, PAP-167, PAP-155 children, PAP-156 Tier 1, PAP-83 video flows, PAP-86, tables view e2e.\n\n**Definition of done**\n\n* Package published in the workspace with self-tests green on Chromium, Firefox and WebKit projects (touch and pen on Chromium only, documented).\n* PAP-329 or PAP-341 test rewritten to use the fixture as the reference; `docs/platform/input/testing.md`; changelog; Linear comment on PAP-82, PAP-83, PAP-156.\n\n**Test plan**\n\n* Unit: chord resolution per platform; touch event sequencing timing; gamepad mock state machine.\n* Self-test page: each helper produces the expected DOM events (recorded by an inline listener) on three browsers.\n* E2E: none beyond self-tests (consumers exercise it).\n\n**Demo**\n\nReviewer runs `pnpm --filter input test:e2e` and watches the self-test page log a chord, a pinch, a pen stroke with pressure and a gamepad press. Under one minute.\n\n**Edge cases**\n\n* Firefox lacks CDP: touch helpers skip with a clear message, never silently pass.\n* `mod` on Linux in a macOS-emulated UA: resolved from the page, not the runner.\n* Headless WebKit ignores `pointerType: 'pen'`: documented limitation.\n* Announcement region absent: assertion fails with guidance to mount `LiveAnnouncer`.\n\n**Dependencies**\n\nPAP-150 (hard), PAP-240 (soft, test-mode hooks). Soft: PAP-152, PAP-330. Blocks the e2e steps of PAP-341, PAP-167, PAP-155, PAP-156 and PAP-83.\n\n**Agent**\n\nBuilder: Nova (Product Systems Engineer) with Sentinel (Visual Inspector). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/input/virtual-keyboard-viewport",
+   "title": "Virtual keyboard handling on mobile: visualViewport tracking, keyboard-inset CSS, focused-field scroll-into-view and bottom-sheet and toolbar repositioning",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Touch, pen, gamepad",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-27",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-152",
+    "PAP-260"
+   ],
+   "blocks": [
+    "PAP-169",
+    "PAP-154"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nForms, comments, the palette and grid editors are unusable on phones when the on-screen keyboard covers the focused field or the submit button. Own the one place that tracks the virtual keyboard and exposes its inset so every layout, sheet and sticky bar adjusts.\n\n**Scope**\n\nIn: `packages/input/src/viewport/{useVirtualKeyboard,KeyboardInsetProvider,scrollIntoViewSafe}.ts`; CSS variable `--pos-keyboard-inset`; `interactive-widget=resizes-content` meta in `apps/web/index.html`; Tauri mobile plugin bridge for keyboard events (PAP-260); focus policy in PAP-152 extended with `ensureVisible`.\n\nOut: custom on-screen keyboards (PAP-158 `SpatialKeyboard`), desktop, IME candidate windows.\n\n**Spec**\n\n* `useVirtualKeyboard()` returns `{ open, height, animating }` from `visualViewport` resize and scroll events (fallback: `innerHeight` delta over 150 px with a focused editable), debounced 50 ms; Tauri iOS and Android report through the plugin `keyboardWillShow|Hide` with the frame height.\n* `KeyboardInsetProvider` writes `--pos-keyboard-inset` on `<html>` and toggles `data-keyboard-open`; `BottomSheet` (PAP-154), `CommandBar` full-screen mode (PAP-70), grid `BulkBar` (PAP-342), form sticky actions and toast position read it via `padding-bottom: max(env(safe-area-inset-bottom), var(--pos-keyboard-inset))`.\n* `scrollIntoViewSafe(el)` scrolls the nearest scroll container so the element sits above the inset with 16 px margin, after the keyboard animation ends; PAP-152's focus policy calls it on every programmatic focus of an editable.\n* `Enter` on a single-line field in a form submits only when `enterKeyHint` says so; `enterkeyhint` and `inputmode` attributes set by PAP-236 inputs from field type (`numeric`, `email`, `tel`, `decimal`).\n* Body scroll lock while a sheet is open must not fight the keyboard: lock uses `overflow: hidden` on the scroll container, never `position: fixed` on `body`.\n\n**Interface contract**\n\nProvides: `useVirtualKeyboard`, `KeyboardInsetProvider`, `scrollIntoViewSafe`, CSS variable and data attribute contract, `inputmode` mapping table for field types. Consumes: focus policy (PAP-152), mobile plugin bridge and safe areas (PAP-260), `BottomSheet` (PAP-154), `CommandBar` (PAP-70), inputs (PAP-236). Consumed by PAP-169 forms, PAP-154 sheets, PAP-342 grid editing, PAP-131 comment composer.\n\n**Definition of done**\n\n* Demo form and comment composer stay visible with the keyboard open on iOS Safari, Android Chrome and both Tauri mobile builds (device or emulator video attached).\n* Playwright with `hasTouch` and a mocked `visualViewport` proves the inset and scroll; screenshots at 375 with keyboard open and closed; `docs/platform/input/virtual-keyboard.md`; changelog.\n\n**Test plan**\n\n* Unit: height derivation from viewport events; debounce; fallback heuristic; `scrollIntoViewSafe` maths with nested scroll containers.\n* Component: `BottomSheet` snap points shrink by the inset; sticky form actions reposition within one frame.\n* E2E: focus the last field of the demo form at 375 with a mocked 300 px keyboard, assert it is visible above the inset and the submit button is reachable; palette input stays visible.\n\n**Demo**\n\nReviewer opens the demo form on the Android emulator, taps the last field, sees it scroll above the keyboard with the submit bar riding on top, then opens the palette. Under two minutes.\n\n**Edge cases**\n\n* Landscape phone with 320 px height: sheet minimum snap adapts (PAP-154 rule) and the inset can exceed 50 percent.\n* Keyboard closes while a toast animates: toast repositions after the animation.\n* `visualViewport` unsupported (old WebView): fallback heuristic with a dev warning.\n* Hardware keyboard on a tablet: no inset, `data-keyboard-open` stays false.\n\n**Dependencies**\n\nPAP-152 (hard, focus policy hook), PAP-260 (hard for the native bridge; web path may land first). Soft: PAP-154, PAP-70, PAP-236. Blocks PAP-169 forms on mobile, PAP-154 sheet behaviour.\n\n**Agent**\n\nBuilder: Nova (Product Systems Engineer) with Forge (Tauri Smith) on the plugin. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/input/multi-window-command-and-focus-routing",
+   "title": "Multi-window command and focus routing: per-window scope roots, global command forwarding over the WindowBus, focus.nextWindow and palette in detached panels",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Voice and accessibility certification",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-289",
+    "PAP-152",
+    "PAP-145",
+    "PAP-262"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nJustin's brief puts multi-monitor first. PAP-262 detaches panels into OS windows and PAP-145 syncs state, but nothing says what `mod+k`, `F6` or a page-scoped command does in a detached inspector. Define and build the routing so every window has a working palette, shortcuts fire in the focused window, and global commands reach the right place.\n\n**Scope**\n\nIn: `packages/input/src/windows/{WindowScopeRoot,commandRouter,focusWindows}.ts`; a `CommandScopeProvider` root per window with `windowId` from PAP-262; `WindowBus` messages `command.forward { id, args, targetWindowId | 'main' | 'focused' }` and `focus.request`; commands `focus.nextWindow|prevWindow`, `window.detach|dock|list`; palette mounting in every window (PAP-290); shortcut sheet per window; docs section.\n\nOut: window manager itself (PAP-262), web pop-out fallback mechanics (PAP-263; this issue only consumes its `windowId`), cross-window drag payloads (PAP-331 uses the bus directly).\n\n**Spec**\n\n* Each window mounts `WindowScopeRoot` which registers the window's commands under `window:<id>`; `registry.list(ctx)` in a detached window shows global commands plus that window's page and component scopes; commands flagged `windowScope: 'main'` (for example `nav.*`, `ui.toggleSidebar`) are forwarded to the main window over the bus and the result echoed back; `windowScope: 'any'` runs locally.\n* Shortcuts fire only in the OS-focused window (document `visibilityState` and `hasFocus`); the palette opens in the window that received `mod+k`; `?` shows that window's effective commands.\n* `focus.nextWindow` cycles PaperOS windows via PAP-262 `WindowManager.focus(id)` (Tauri) or `window.focus()` on pop-outs (PAP-263), announcing the window title (PAP-152 `LiveAnnouncer`); `F6` cycles regions within a window only (PAP-152 rule).\n* Undo stacks (`r4/input/undo-manager`) and keymaps (PAP-153 `keymap.changed`) stay per window; the router carries `sourceWindowId` so telemetry can attribute commands.\n* Window loss: if the main window closes, the oldest detached window becomes `main` (bus election reuses PAP-272 leader election); forwarded commands time out after 2 s with a toast.\n\n**Interface contract**\n\nProvides: `WindowScopeRoot`, `useWindowId()`, `forwardCommand`, `windowScope` extension on `CommandDef`, bus message schemas `command.forward|result`, `focus.request`, commands `focus.nextWindow|prevWindow`, `window.*`. Consumes: registry and scopes (PAP-289), palette (PAP-290), focus regions and announcer (PAP-152), `WindowBus` (PAP-145), `WindowManager` ids and `focus` (PAP-262), pop-out ids (PAP-263), leader election (PAP-272, soft). Consumed by PAP-263, PAP-331, PAP-153, `r4/input/undo-manager`.\n\n**Definition of done**\n\n* Detach the inspector on Tauri Linux and on the web pop-out fallback: palette opens in both windows, `nav.goToInbox` from the detached window navigates the main window, `focus.nextWindow` cycles with announcements; recording attached.\n* `docs/platform/input/multi-window.md` with the routing table; changelog; Linear comment on PAP-262, PAP-263, PAP-145.\n\n**Test plan**\n\n* Unit: routing decision table (`windowScope` × focused window); election on main loss; timeout handling; per-window registry isolation.\n* Integration: two Playwright pages in one context using the pop-out fallback exchange `command.forward` and `result` within 100 ms; a shortcut pressed in the unfocused page does not fire.\n* E2E: pop out the inspector, press `mod+k` there, run \"Toggle theme\" (any) and \"Go to inbox\" (main), press `focus.nextWindow` back to main, close main and confirm the pop-out becomes main.\n\n**Demo**\n\nReviewer detaches the record inspector to a second monitor, presses `mod+k` in it, runs a navigation that changes the main window, then cycles windows with the keyboard hearing each title. Under two minutes.\n\n**Edge cases**\n\n* Bus unavailable (BroadcastChannel blocked): forwarded commands fall back to running locally with a warning.\n* Same chord bound to a window command and a main command: focused window wins.\n* Detached window in a different tenant (PAP-58 switch): commands refused with `TENANT_MISMATCH`.\n* Kiosk parallel-browser mode (PAP-23): every window is `main` for its display; documented.\n\n**Dependencies**\n\nPAP-289 (hard), PAP-152 (hard), PAP-145 (hard), PAP-262 (hard for Tauri; the pop-out path via PAP-263 is soft and may land first). Soft: PAP-290, PAP-272. Feeds PAP-263 and PAP-331 softly (their milestones are earlier; they ship without routing and adopt it).\n\n**Agent**\n\nBuilder: Nova (Product Systems Engineer) with Forge (Tauri Smith). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/input/accessibility-input-preferences",
+   "title": "Accessibility input preferences: /settings/accessibility with single-key shortcut disable (WCAG 2.1.4), sticky-key chords, key repeat, hover and dwell delays, always-visible focus, timing extensions",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Voice and accessibility certification",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-153",
+    "PAP-152",
+    "PAP-72"
+   ],
+   "blocks": [
+    "PAP-160"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nWCAG 2.1.4 requires that single-character shortcuts can be turned off or remapped, 2.2.1 that timing is adjustable, and motor-impaired users need chords without simultaneous presses. PAP-153 remaps keys and PAP-72 handles motion, but no page collects these preferences or feeds them to the registry, focus ring and toasts. PAP-160 must point at it.\n\n**Scope**\n\nIn: `/settings/accessibility` page spec and `AccessibilitySettingsPage`; `user_preferences.accessibility jsonb` (PAP-33 extension) `{ singleKeyShortcuts: 'on'|'off'|'modifierOnly', stickyChords, keyRepeatDelayMs, hoverDelayMs, dwellClickMs?, focusRing: 'auto'|'always', timing: 'default'|'extended'|'none', motion (link to PAP-72), fontScale }`; registry and focus integrations; `useA11yPrefs()`.\n\nOut: screen-reader testing (PAP-156), switch scanning (`r4/input/switch-access-scanning`), OS-level settings, spatial navigation (PAP-158).\n\n**Spec**\n\n* `singleKeyShortcuts: 'off'` makes the PAP-289 matcher ignore chords without a modifier (sequences like `g i` included) except inside `role=grid|listbox|tree` composites where arrow-style keys are native; `'modifierOnly'` rebinds them to `alt+<key>` through the PAP-153 resolver layer `a11y` (highest precedence below user overrides).\n* `stickyChords`: modifiers pressed and released within 2 s latch for the next key (`Ctrl`, then `K` opens the palette); a status-bar glyph shows latched modifiers; implemented in the chord matcher, not the OS.\n* `keyRepeatDelayMs` throttles `repeat` key events in roving lists and grids; `hoverDelayMs` feeds Tooltip (PAP-237) and hover cards; `dwellClickMs` (optional, off by default) activates the hovered focusable after the delay with a visible progress ring for head-pointer users.\n* `focusRing: 'always'` shows the ring on `:focus` not only `:focus-visible` (PAP-152 `FocusRing`); `timing: 'extended'` multiplies toast durations by 3 and disables auto-dismiss under `'none'` (PAP-237 `useToast` reads it); session timeout warnings (PAP-57) get 10 minutes instead of 2.\n* `fontScale` 1 to 1.5 sets `--pos-font-scale` consumed by PAP-66 type tokens; every preference persists through PAP-143 and applies within one frame; the page itself is operable with every setting on.\n* Preferences mirror as `data-a11y-*` on `<html>` for CSS; an `a11y.prefs.changed` window message (PAP-145) keeps windows aligned.\n\n**Interface contract**\n\nProvides: `AccessibilitySettingsPage` (spec id `app.settingsAccessibility`), `useA11yPrefs()`, `A11yPrefs` Zod schema (in `contract-input`), matcher hooks `shortcutPolicy`, `stickyChords`, CSS variables `--pos-font-scale`, `data-a11y-*` attributes, procedures `preferences.accessibility.get|set`. Consumes: keymap resolver layers (PAP-153), chord matcher (PAP-289), focus ring and announcer (PAP-152), motion setting (PAP-72), toast durations (PAP-237), tooltip delay (PAP-237), type tokens (PAP-66), preferences storage and sync (PAP-33, PAP-143), settings route (PAP-63). Consumed by PAP-160 (statement links and criteria 2.1.4, 2.2.1), PAP-156 (protocol runs with `singleKeyShortcuts: off`).\n\n**Definition of done**\n\n* Every preference demonstrably changes behaviour in the template app; Playwright proves 2.1.4 (single-key shortcut ignored when off, remapped under modifierOnly) and 2.2.1 (toast persists under `none`); screenshots at 375, 768, 1280 in three themes; axe clean.\n* `docs/platform/a11y/input-preferences.md` mapped to WCAG criteria; changelog; Linear comment on PAP-160 with the criteria mapping.\n\n**Test plan**\n\n* Unit: matcher policy matrix (shortcut kind × setting × focused role); sticky latch timing with fake timers; dwell activation and cancel on move; toast duration multiplier; font scale clamp.\n* Integration: `preferences.accessibility.set` persists and reaches a second context within 2 s; RLS scopes to the user.\n* E2E: turn single-key shortcuts off and confirm `g i` does nothing while `mod+k` works; enable sticky chords and open the palette with sequential `Ctrl` then `K`; set timing to none and see a toast stay; enable dwell and activate a button by hovering.\n\n**Demo**\n\nReviewer opens `/settings/accessibility`, switches shortcuts to modifier-only, sees the help sheet update to `alt+g alt+i`, enables sticky chords and opens the palette pressing keys one at a time. Under two minutes.\n\n**Edge cases**\n\n* Preference conflicts with a user keymap override: override wins, page shows the conflict.\n* Font scale 1.5 at 320 px: layouts reflow per PAP-70 container queries.\n\n**Dependencies**\n\nPAP-153 (hard, resolver layer), PAP-152 (hard), PAP-72 (hard, motion link). Soft: PAP-237, PAP-66, PAP-143, PAP-63, PAP-145. Blocks PAP-160; PAP-156 adopts the variant softly.\n\n**Agent**\n\nBuilder: Iris (Motion and Input Stylist) with Nova on the matcher. Reviewer: Sentinel (Edge Case Hunter, Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/input/macros-and-command-chains",
+   "title": "Macros: record a sequence of commands into a named macro, bind it to a chord or palette entry, share per workspace and expose it to agents",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "Voice and accessibility certification",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-291",
+    "PAP-153"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nJustin's brief lists macros under multi-input control. Excel, VS Code and Keyboard Maestro let a power user record several steps into one shortcut. Because every action is already a command (PAP-151), a macro is a list of command invocations with arguments, recorded from the telemetry stream and replayed through the registry.\n\n**Scope**\n\nIn: `packages/input/src/macros/{recorder,player,store,MacroPanel}.ts`; `Macro = { id, name, steps: { commandId, args, waitFor?: 'idle'|'navigation'|ms }[], scope, binding?: Chord[], visibility: 'personal'|'workspace', agentCallable }`; recorder toggled by `macro.record.start|stop`; player with step-by-step progress and abort; `/settings/keyboard` Macros tab; palette entries `macro:<id>`; procedures `macros.*`.\n\nOut: conditional logic and loops (use automations, PAP-174), pointer-coordinate recording, cross-app macros.\n\n**Spec**\n\n* Recording listens to `command.executed` events (PAP-291) for the current window and captures `{ commandId, args }` with argument values serialised through `argsSchema`; commands flagged `macroSafe: false` (destructive without confirm, `agent.*`) are recorded as a confirm step instead of their args.\n* Playback runs `registry.execute(step.commandId, step.args, 'macro')` sequentially, awaiting `waitFor` (default `idle` = no pending mutations from PAP-272 and no route transition) with a 10 s per-step timeout; a failing step stops the macro, shows the step index and offers retry or skip; the whole run is one undo entry (`r4/input/undo-manager`).\n* Bindings resolve through PAP-153's resolver as a `macros` layer between user overrides and page overrides; conflicts surface in the same UI; palette lists macros with a distinct icon and the step count.\n* Storage: `user_preferences.macros` for personal, `workspace_macro` table for shared (`macro.share` permission), synced via PAP-143; export and import JSON with the PAP-153 keymap format.\n* Agents: `agentCallable: true` macros run through `commands.execute` as a virtual command `macro:<id>` with the same audit rows per step (PAP-291).\n\n**Interface contract**\n\nProvides: `Macro` schema (in `contract-input`), `MacroRecorder`, `MacroPlayer`, `useMacros()`, `MacroPanel`, procedures `macros.list|create|update|delete|share`, commands `macro.record.start|stop`, `macro.run`. Consumes: telemetry and execute endpoint (PAP-291), resolver layer (PAP-153), palette (PAP-290), undo manager (`r4/input/undo-manager`), idle detection (PAP-272), preferences sync (PAP-143), workspace permissions (PAP-229). Consumed by PAP-159 voice (\"run macro X\"), PAP-158 gamepad bindings.\n\n**Definition of done**\n\n* Record a three-step macro on the sample list page, bind it and run it by chord, palette and agent key; recording attached; screenshots of the Macros tab at 768 and 1280 in three themes; axe clean.\n* `docs/platform/input/macros.md`; changelog; Linear comment.\n\n**Test plan**\n\n* Unit: recorder filtering and serialisation; `macroSafe` handling; player sequencing, timeouts and abort; binding layer precedence; import validation.\n* Integration: `callAs(agent)` runs an `agentCallable` macro producing one audit row per step; a non-callable macro returns `NOT_CALLABLE`.\n* E2E: record \"filter to my open tasks, group by status, open the first record\", stop, bind to `mod+shift+1`, reload, run it; break a step and see the failure UI.\n\n**Demo**\n\nReviewer records a three-step macro in the demo grid, binds it and replays it with one chord, then runs it through `pnpm agent:cmd macro:<id>`. Under two minutes.\n\n**Edge cases**\n\n* Command removed in a later release: step marked unknown, macro disabled with a fix-it link.\n* Recording while another macro plays: refused.\n* Step needs an argument prompt (entity picker): recorded value reused; `promptOnRun: true` re-asks.\n* Workspace macro edited by two users: last write wins, both notified.\n\n**Dependencies**\n\nPAP-291 (hard, telemetry and execute), PAP-153 (hard, binding layer). Soft: PAP-290, PAP-272, PAP-143, `r4/input/undo-manager`.\n\n**Agent**\n\nBuilder: Nova (Product Systems Engineer). Reviewer: Sentinel (Security Auditor, Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/input/native-menu-from-command-manifest",
+   "title": "Native menu and tray items generated from the command manifest with keymap-synced accelerators, routed through the command registry",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Touch, pen, gamepad",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-27",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-291",
+    "PAP-153",
+    "PAP-255"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-255 ships a static Tauri menu (File, Edit, View, Window, Help) and a tray with Show and Quit. A desktop app whose menu does not know the app's commands feels like a website in a frame. Generate the menu items from `commands.manifest.json`, keep accelerators in sync with the user's keymap, and route activation through the registry so the menu, the palette and the shortcut sheet never disagree. The OS-level global hotkey is owned by `r4/app-shell/desktop-os-integration` (v0.2) and is out of scope here.\n\n**Scope**\n\nIn: `packages/input/src/native/{menuModel,menuBridge}.ts`; Rust side `apps/desktop/src-tauri/src/menu.rs` extended to rebuild from a JSON model sent over `invoke('set_menu_model')`; `buildMenuModel(manifest, effectiveBindings, platform)`; `menu.activate` event routed to `registry.execute(id, {}, 'menu')`; tray quick actions (`record.new`, `sync.pause|resume`) appended to PAP-255's tray; capability entries; docs.\n\nOut: global shortcut and OS notifications (`r4/app-shell/desktop-os-integration`), base menu and tray scaffold (PAP-255), macOS Services and Touch Bar, Windows jump lists, mobile (no menus), web (no-op adapter).\n\n**Spec**\n\n* `buildMenuModel` produces `{ label, items: [{ id, label, accelerator?, enabled, checked?, submenu? }] }` from commands whose `menu.showIn` (PAP-289 amendment) includes `native`; `menu.group` maps to a top-level menu (`file|edit|view|go|window|help`); `Edit` keeps the native `undo|redo|cut|copy|paste|selectAll` items, routed to `edit.*` commands when a PaperOS surface is focused and left to the webview otherwise.\n* Accelerators come from PAP-153's `resolveBindings` formatted per platform (`CmdOrCtrl+K`), rebuilt on `keymap.changed`; conflicts with reserved OS accelerators are dropped with a dev warning; items whose `when(ctx)` is false are disabled, never removed (stable layout), re-evaluated on Tauri's `menu-will-open` with a 300 ms cache.\n* Activation: Rust emits `menu.activate { id }`; the focused window's scope root (`r4/input/multi-window-command-and-focus-routing`, soft: main window until it lands) runs the command; results and errors surface as the same toasts the palette uses; telemetry `command.executed { source: 'menu' }` (PAP-291).\n* Tray: two quick actions appended to PAP-255's Show and Quit, built from `agentCallable: false` commands flagged `menu.showIn: ['tray']`; clicking the icon toggles the main window (PAP-255 behaviour unchanged).\n* Web and mobile adapters are no-ops with a test asserting they never call `invoke`; accessibility relies on native menus being screen-reader native, and every item mirrors a palette command so the web build loses nothing.\n\n**Interface contract**\n\nProvides: `buildMenuModel`, `NativeMenuAdapter` (Tauri and no-op), `set_menu_model` command, `menu.activate` event schema, tray action registration, `MenuPort` in `contract-input`. Consumes: manifest and execute endpoint (PAP-291), effective bindings (PAP-153), `menu` metadata (PAP-289 amendment, `r4/input/command-context-menus`), Tauri menu and tray scaffold (PAP-255), window routing (soft), sync status (PAP-272, soft). Consumed by PAP-257 (deep-link actions, soft), the app-shell desktop OS integration.\n\n**Definition of done**\n\n* Desktop build on Linux and macOS shows a Go menu whose accelerators change when the keymap preset changes; View → Toggle theme runs through the registry; recordings attached; Windows via PAP-371 or documented as untested.\n* `docs/platform/input/native-menus.md`; changelog; Linear comment on PAP-255 and PAP-257.\n\n**Test plan**\n\n* Unit: menu model generation per platform (`Cmd` vs `Ctrl` labels, macOS app menu placement); `enabled` cache; reserved accelerator drop; tray action filter.\n* Integration: `tauri-driver` smoke on Linux activates View → Toggle theme and asserts the DOM theme; `keymap.changed` triggers exactly one `set_menu_model` call.\n* E2E: none on web (no-op adapter test only).\n\n**Demo**\n\nReviewer opens the desktop build, switches the keymap to Linear and watches the Go menu accelerators change, picks Edit → Undo after a grid edit, and pauses sync from the tray. Under two minutes.\n\n**Edge cases**\n\n* Command hidden by `when`: item disabled, layout stable.\n* Two windows: the menu targets the focused window; the Window menu lists them via PAP-262.\n* Manifest changes at runtime (module enabled): menu rebuilt within one frame.\n* Tray unsupported (some Linux desktops): quick actions hidden, PAP-255 fallback applies.\n\n**Dependencies**\n\nPAP-291 (hard), PAP-153 (hard), PAP-255 (hard, menu and tray scaffold). Soft: `r4/input/command-context-menus`, `r4/input/multi-window-command-and-focus-routing`, PAP-272, PAP-257. Blocks nothing.\n\n**Agent**\n\nBuilder: Nova (Product Systems Engineer) with Forge (Tauri Smith) on Rust. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/input/switch-access-scanning",
+   "title": "Switch access scanning: single and dual switch auto-scan over focusables and groups with highlight, timing and an on-screen action menu",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer"
+   ],
+   "milestone": "Voice and accessibility certification",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-30",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-152",
+    "r4/input/accessibility-input-preferences",
+    "PAP-158"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 (NJ-19 scope freeze; reinstate via NJ-14). The brief names accessibility switch input. Users with one or two switches (mapped to `Space` and `Enter`, a Bluetooth switch interface or a gamepad button) need scanning: the app highlights groups then items in turn and the switch selects. Build it on the focus regions and spatial groups already planned.\n\n**Scope**\n\nIn: `packages/input/src/switch/{ScanController,ScanHighlight,ActionMenu}.ts`; modes `auto` (timer advances) and `step` (switch 1 advances, switch 2 selects); group scanning (regions → groups → items) using PAP-152 regions and PAP-158 `FocusGroup`s; `ActionMenu` after selection (activate, long-press, scroll, back, palette); settings in `/settings/accessibility` (`r4/input/accessibility-input-preferences`).\n\nOut: hardware drivers (OS maps switches to keys), eye tracking, text entry beyond PAP-158's `SpatialKeyboard`.\n\n**Spec**\n\n* Scan order: regions in `F6` order, then `FocusGroup`s, then focusable items inside the group; `auto` interval 500 to 5,000 ms with a visible countdown ring; loop count before returning to region level (default 2).\n* Highlight is a high-contrast overlay (4 px ring from PAP-158's TV theme) plus `aria-live` announcement of the item's accessible name; the scanned item receives real focus only on selection so screen readers are not flooded.\n* Selection opens `ActionMenu` for elements with more than one action (links, editable cells); single-action elements activate directly with a `click`; `ActionMenu` itself is scanned.\n* Switch inputs: keyboard `Space` and `Enter` by default, remappable to gamepad buttons through PAP-158's mapping or any chord via PAP-153; a gamepad button press works even without spatial mode.\n* Exit: hold switch 1 for 3 s or the `ActionMenu` \"Turn off scanning\"; state persists per user.\n\n**Interface contract**\n\nProvides: `ScanController`, `useSwitchScanning()`, `ScanHighlight`, `ActionMenu`, settings keys `switch.*`, commands `switch.toggle`. Consumes: regions and announcer (PAP-152), `FocusGroup` and TV ring (PAP-158), preferences page (`r4/input/accessibility-input-preferences`), keymap chords (PAP-153), gamepad events (PAP-150).\n\n**Definition of done**\n\n* Template app operable end to end (navigate, open a record, edit a select, run a palette command) with a single switch in auto mode and two switches in step mode; recording attached; screenshots at 1024 and 1920; `docs/platform/a11y/switch-access.md`; changelog.\n\n**Test plan**\n\n* Unit: scan order construction from fixtures; timer and loop maths with fake timers; action menu decision per element kind.\n* Integration: scanning across a virtualised grid loads rows as it advances.\n* E2E: enable scanning, auto-scan into the sidebar, select Inbox, scan into the list, open a record, exit with a long press.\n\n**Demo**\n\nReviewer enables single-switch scanning at 1,000 ms and drives the demo app with the space bar only. Under two minutes.\n\n**Edge cases**\n\n* Element scrolled out of view: scrolled in before highlight.\n* Dialog opens: scan restarts at the dialog root.\n\n**Dependencies**\n\nPAP-152 (hard), `r4/input/accessibility-input-preferences` (hard), PAP-158 (hard, groups; deferred too). Deferred; nothing waits on it.\n\n**Agent**\n\nBuilder: Iris (Motion and Input Stylist) with Nova. Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/input/gesture-recognisers-and-arena",
+   "title": "Gesture recognisers and arena: useTap, useLongPress, useSwipe, usePinch, usePan, usePullToRefresh, useEdgeSwipe on the pointer surface with ownership arbitration",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer"
+   ],
+   "milestone": "Touch, pen, gamepad",
+   "parent": "PAP-154",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-27",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-150"
+   ],
+   "blocks": [
+    "r4/input/mobile-gesture-components-and-haptics",
+    "PAP-329",
+    "PAP-345"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-154, testable entirely in Vitest and Playwright on Linux: the recogniser hooks and the `GestureArena` that decides whether a touch is a scroll, a swipe or a pan, so the phone components in the sibling and the views (timeline pinch, kanban drag) share one arbitration model.\n\n**Scope**\n\nIn: `packages/input/src/gestures/{arena,useTap,useLongPress,useSwipe,usePinch,usePan,usePullToRefresh,useEdgeSwipe,types}.ts`; `GestureArena` and `useGestureArena()`; `@use-gesture/react` only for pinch and wheel maths if the PAP-150 ADR chose it; `touch-action` guidance table; unit and Playwright suites.\n\nOut: components, haptics and device videos (sibling), pen behaviour (PAP-157), reordering (PAP-155).\n\n**Spec**\n\n* Every recogniser builds on `usePointerSurface` (PAP-150) and emits `start|move|end|cancel` with `GestureState { pointers, delta, velocity, scale, center, direction }`; thresholds from PAP-150 `THRESHOLDS` (tap slop 8/12 px, long-press 500 ms, drag start 4/10 px).\n* `GestureArena`: recognisers claim ownership after direction lock (10 px); vertical intent yields to native scroll (`touch-action: pan-y`), horizontal locks to swipe or pan; a third finger is ignored; nested arenas resolve innermost first, and pull-to-refresh is claimed only when the outer scroll container is at top.\n* `usePinch`: scale 0.5 to 8 with `ctrl`+wheel desktop equivalent and double-tap toggle, emitting `viewport { scale, x, y }` for PAP-132 and PAP-345; `usePan`: momentum with friction 0.95 and rubber-band at bounds; `useEdgeSwipe`: 20 px edge zones with the OS back gesture respected on iOS.\n* Long-press suppresses the native context menu only when a handler claims it; a long-press on a link keeps the native menu.\n* All recognisers accept `enabled` and `disabledWhen: 'reducedMotion'`-style options and return spreadable handlers plus state; SSR safe.\n\n**Interface contract**\n\nProvides: recogniser hooks, `GestureArena`, `useGestureArena()`, `GestureState`, `touch-action` table (docs), `viewport` event type. Consumes: `usePointerSurface`, `THRESHOLDS`, capabilities (PAP-150). Consumed by the sibling, PAP-329 (long-press to drag), PAP-345 (pinch zoom), PAP-132 canvas, `r4/tables/gallery-and-list-views`.\n\n**Definition of done**\n\n* Vitest and Playwright suites green on Linux; `docs/platform/input/gestures.md` arbitration table; changelog; Linear comment with the API for PAP-345 and PAP-132.\n\n**Test plan**\n\n* Unit: arena arbitration with synthetic pointer sequences (vertical then horizontal locks direction, third finger ignored, nested pull-to-refresh claimed only at outer scroll top); threshold and velocity maths; momentum and rubber-band; pinch scale clamps; double-tap timing.\n* Playwright `hasTouch` at 320, 375 and 768 using `@paperos/input/testing`: swipe reveals a test surface while a vertical drag scrolls; CDP two-finger pinch scales; long-press fires at 500 ms and not at 400 ms.\n* E2E: none beyond the Playwright suite (the sibling covers components).\n\n**Demo**\n\nReviewer opens the Storybook gesture playground at 375 with touch emulation, swipes, pinches and long-presses while the arena panel shows which recogniser owns the gesture. Under two minutes.\n\n**Edge cases**\n\n* Swipe that turns: direction locks after 10 px.\n* `pointercancel` from the browser during scroll: gesture cancels cleanly.\n* Pinch with one finger lifted: continues as pan from the remaining pointer.\n* Landscape 320 px height: edge zones scale to 16 px.\n\n**Dependencies**\n\nPAP-150 (hard). Blocks the sibling, PAP-329 (soft: long-press helper), PAP-345 (soft: pinch).\n\n**Agent**\n\nBuilder: Nova (Product Systems Engineer). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/input/mobile-gesture-components-and-haptics",
+   "title": "Mobile gesture components and haptics: SwipeableRow, PinchZoomView, PullToRefresh, BottomSheet, haptic() over the Tauri plugin and the touch-target audit",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer"
+   ],
+   "milestone": "Touch, pen, gamepad",
+   "parent": "PAP-154",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-27",
+   "deferred": false,
+   "blockedBy": [
+    "r4/input/gesture-recognisers-and-arena",
+    "PAP-260",
+    "PAP-237",
+    "PAP-152"
+   ],
+   "blocks": [
+    "r4/tables/gallery-and-list-views",
+    "PAP-167"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nSecond half of PAP-154: the four phone components lists, canvases and sheets need, the `haptic()` port mapped to Tauri mobile, and the 44 px touch-target audit, proven on the Android and iOS builds with video.\n\n**Scope**\n\nIn: `packages/ui/src/mobile/{SwipeableRow,PinchZoomView,PullToRefresh,BottomSheet}.tsx` with `meta.ts` spec ids; `packages/input/src/haptics.ts` (`haptic(kind)` over `@tauri-apps/plugin-haptics`, `navigator.vibrate`, else no-op); Playwright `touchTargets(page)` audit run over all `packages/ui` stories; device videos.\n\nOut: recognisers and arena (sibling), OS webview navigation gestures, desktop drawers (PAP-70).\n\n**Spec**\n\n* `SwipeableRow leading trailing onCommit`: reveal at 30 percent, commit at 60 percent or velocity over 0.5 px/ms; actions duplicated in an overflow `Menu` (PAP-237) for non-touch and screen readers; announces \"Actions revealed\" (PAP-152 announcer); `haptic('impact-light')` on commit.\n* `PinchZoomView`: single transform layer, scale 0.5 to 8, double-tap toggles 1× and 2×, `ctrl`+wheel on desktop, emits `viewport` for PAP-132 and PAP-141; `PullToRefresh onRefresh`: spinner from PAP-71 `Skeleton` tokens, `haptic('selection')` at threshold, respects reduced motion.\n* `BottomSheet snapPoints onDismiss`: drag handle, snap by velocity, focus trap from PAP-152 `FocusScope`, falls back to `Dialog` above `md`; reads `--pos-keyboard-inset` (`r4/input/virtual-keyboard-viewport`); `inert` on the page behind.\n* `haptic(kind)` kinds `selection|impact-light|impact-medium|success|warning|error`; only on commits, at most 10 per second, disabled by the PAP-72 motion setting `never` and by user preference; silent no-op when unavailable.\n* Touch-target audit: every interactive element at least 44 × 44 CSS px under `pointer: coarse` (24 px with spacing allowed per WCAG 2.5.8 exception, documented per component); failures fail `storybook:test`.\n\n**Interface contract**\n\nProvides: four components with spec ids `ui.swipeableRow`, `ui.pinchZoomView`, `ui.pullToRefresh`, `ui.bottomSheet`; `haptic()` and `HapticKind` (in `contract-input` as `HapticPort`); `touchTargets(page)` audit results artefact. Consumes: recognisers and arena (sibling), haptics plugin and safe areas (PAP-260), `Menu` and `Dialog` (PAP-237), focus trap and announcer (PAP-152), keyboard inset (`r4/input/virtual-keyboard-viewport`, soft), motion setting (PAP-72). Consumed by `r4/tables/gallery-and-list-views` (swipe), PAP-167 (kanban pager), PAP-132 (pinch), PAP-70 (sheet mode).\n\n**Definition of done**\n\n* Tauri Android and iOS builds demonstrate swipe, pinch, long-press menu and pull-to-refresh with haptics; device or emulator video attached; touch-target audit passes on all stories.\n* Storybook stories under `iphone14` and `ipad` viewports with axe and a reduced-motion variant; Gate 3 captures at 320, 375 and 768 in both themes; changelog; Linear comment with videos.\n\n**Test plan**\n\n* Unit: swipe commit maths; snap-point selection by velocity; haptic rate limit and no-op path; sheet fallback decision by container width.\n* Playwright `hasTouch` via `@paperos/input/testing`: swipe reveals and commits; pinch scales; sheet snaps and dismisses; `context.setOffline` does not break pull-to-refresh error state.\n* E2E: on the Android emulator build (nightly, PAP-371 or local): swipe a row to archive and feel the tick, pull to refresh, open a bottom sheet and dismiss by drag.\n\n**Demo**\n\nOn the Android emulator, reviewer swipes a row left to reveal Archive, long-presses a card for its menu, pinches the canvas, pulls the list down to refresh; on desktop the same row exposes the actions in its overflow menu. Under two minutes.\n\n**Edge cases**\n\n* Haptics denied or unsupported: silent no-op, no permission prompt loop.\n* Sheet at 320 px landscape: minimum snap adapts.\n* Swipe on an RTL locale: leading and trailing flip.\n* Pull-to-refresh inside a nested scroll: claimed only at outer top (sibling rule).\n\n**Dependencies**\n\nSibling recognisers (hard), PAP-260 (hard for haptics and device proofs; web fallbacks may land first), PAP-237 (hard), PAP-152 (hard). Soft: `r4/input/virtual-keyboard-viewport`, PAP-72. Blocks gallery/list swipe actions and PAP-167's phone pager.\n\n**Agent**\n\nBuilder: Nova (Product Systems Engineer) with Forge (Tauri Smith) for device builds. Reviewer: Sentinel (Visual Inspector (device videos), Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/input/voice-backend-and-intent-matching",
+   "title": "Voice backend and intent matching: SpeechBackend interface, WebSpeechBackend and MockBackend, transcript normalisation, fuzzy command matching and slot extraction",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Voice and accessibility certification",
+   "parent": "PAP-159",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-291",
+    "PAP-153"
+   ],
+   "blocks": [
+    "r4/input/dictation-targets-and-voice-ui"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-159, fully testable offline: the `SpeechBackend` seam (Web Speech now, Whisper later), a `MockBackend` for tests, and the intent layer that turns a transcript into a command with arguments using the manifest, keymap aliases and fuzzy scoring.\n\n**Scope**\n\nIn: `packages/input/src/voice/{backend,webSpeech,mock,normalize,match,slots}.ts`; `SpeechBackend { start, stop, onPartial, onFinal, onError, capabilities }`; `matchCommand(transcript, manifest, aliases, ctx)`; slot extraction for people (`MentionSource`), status values, numbers and dates (`chrono-node` 2.x); tenant settings `voice.enabled`, `voice.logTranscripts`; ADR note on the Whisper reopen criteria.\n\nOut: UI, dictation into fields and the palette entry (sibling), wake words, text-to-speech, Whisper server.\n\n**Spec**\n\n* `WebSpeechBackend` wraps `SpeechRecognition` with `continuous`, `interimResults`, `lang` from PAP-27 locale, auto-restart on Chrome's ~60 s silence stop while held; `capabilities` reports `{ supported, continuous, offline: false }`; `MockBackend.inject(transcript, { final })` for tests exposed as `window.__paperosVoice` in test mode (PAP-240).\n* Normalisation: lowercase, strip punctuation, number words to digits, remove fillers (\"please\", \"um\"), map spoken symbols; command phrases from `title`, `keywords`, `voice.phrases` and PAP-153 aliases.\n* Score = 0.6 × Jaro-Winkler token similarity + 0.4 × double-metaphone match; threshold 0.75; exactly one candidate above threshold runs, several within 0.05 return a chooser list, none returns `{ none: true, transcript }`; only `final` transcripts are matched.\n* Slots: `argsSchema` fields typed `user` resolve through `MentionSource` (PAP-142) with fuzzy name match, `enum` fields match option labels, numbers and dates via `chrono-node` in the actor timezone; missing required slots return `{ needsArgs: [...] }` for the UI to prompt.\n* Privacy: no audio stored; transcripts logged (PAP-129 prompt-log kind `voice`) only when `voice.logTranscripts`; `voice.enabled=false` unregisters the provider; every matched command runs through `registry.execute(id, args, 'voice')` so audit and telemetry apply.\n\n**Interface contract**\n\nProvides: `SpeechBackend` interface (in `contract-input` as `VoiceRoutePort`), `WebSpeechBackend`, `MockBackend`, `normalizeTranscript`, `matchCommand`, `extractSlots`, settings keys, telemetry `voice.matched { score, chooser }`. Consumes: manifest and execute (PAP-291), aliases (PAP-153), `MentionSource` (PAP-142, soft: user list fallback), tenant settings (PAP-33), locale (PAP-27), test mode (PAP-240), prompt log (PAP-129, soft). Consumed by the sibling UI.\n\n**Definition of done**\n\n* Matcher fixtures (exact, near, homophones \"Bo\"/\"Beau\", none, multi-slot) green; `WebSpeechBackend` manual Chrome run recorded; `docs/platform/input/voice.md` sections on matching, privacy and the Whisper reopen criteria; changelog.\n\n**Test plan**\n\n* Unit: normalisation table; scoring thresholds and chooser window; slot extraction for people, enums, numbers, dates including relative (\"next Friday\"); auto-restart logic with fake timers; settings gating.\n* Integration: `MockBackend` through the registry executes `nav.goToInbox` with source `voice` and an audit row; disabled tenant → provider unregistered.\n* E2E: none (sibling).\n\n**Demo**\n\nReviewer runs `pnpm tsx scripts/voice-match.ts 'assign this to bo'` and reads the matched command, score and extracted user, then repeats with a near tie to see the chooser list. Under one minute.\n\n**Edge cases**\n\n* Chrome sends audio to Google: documented in the privacy statement text; tenants may disable.\n* Two commands with identical titles in sibling scopes: focused scope wins before scoring.\n* Non-English locale without a phrase list: matching falls back to titles in that locale (PAP-27 catalogs).\n* Transcript with a number word (\"two\"): parsed as a slot only when the schema expects a number.\n\n**Dependencies**\n\nPAP-291 (hard), PAP-153 (hard, aliases). Soft: PAP-142, PAP-33, PAP-27, PAP-240, PAP-129. Blocks the sibling.\n\n**Agent**\n\nBuilder: Nova (Product Systems Engineer). Reviewer: Sentinel (Security Auditor (privacy gating), Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/input/dictation-targets-and-voice-ui",
+   "title": "Dictation targets and voice UI: DictationTarget adapters for inputs and Tiptap, spoken punctuation, VoiceButton with push-to-talk, listening indicator, chooser and confirmation",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Voice and accessibility certification",
+   "parent": "PAP-159",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "r4/input/voice-backend-and-intent-matching",
+    "PAP-142",
+    "PAP-290"
+   ],
+   "blocks": [
+    "PAP-158"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nSecond half of PAP-159: what the user sees and types with. Dictation into any field with spoken punctuation and undo, the push-to-talk button and indicator, the chooser when two commands tie, confirmation for risky commands and the palette entry.\n\n**Scope**\n\nIn: `packages/input/src/voice/{VoiceProvider,useVoice,DictationTarget,adapters/{input,tiptap},VoiceButton,ListeningIndicator,VoiceChooser}.tsx`; command extension `voice: { phrases?, confirm? }` behaviour; palette entries \"Start dictation\", \"Voice commands help\"; settings toggles; docs browser matrix.\n\nOut: backend and matching (sibling), TV hold-space mode (PAP-158 consumes), TTS.\n\n**Spec**\n\n* `DictationTarget { insert(text), deleteLast(n), getContext() }` with adapters for `<input>`/`<textarea>` (selection-aware insert) and `RichTextEditor` (PAP-142 insertion API); spoken punctuation table (\"comma\", \"period\", \"new line\", \"question mark\", localised via PAP-27); auto-capitalisation after sentence ends; \"undo that\" removes the last utterance through `r4/input/undo-manager`.\n* `VoiceButton`: push-to-talk on `mod+shift+v` (hold) or click-to-toggle; states idle, listening, processing, denied, unsupported (tooltip names supported browsers); listening indicator uses icon, text and a waveform (`Presence` from PAP-72, static under reduced motion); partial transcript chip; state announced via PAP-152 announcer.\n* Command flow: `final` → `matchCommand` → one candidate runs and toasts \"Ran: Open inbox\"; several open `VoiceChooser` (a listbox, also keyboard-operable); `confirm: true` commands ask \"Say yes or click Confirm\"; `needsArgs` opens the palette's argument prompt (PAP-290) pre-filled.\n* Dictation mode is entered from the palette or by saying \"start dictation\" while a target is focused; commands are not matched while dictating except \"stop dictation\" and \"undo that\".\n* Everything voice does is possible by keyboard; the button hides when `voice.enabled=false`; microphone entitlement for Tauri mobile through PAP-260.\n\n**Interface contract**\n\nProvides: `VoiceProvider`, `useVoice()`, `DictationTarget` and adapters (reused by PAP-158 `SpatialKeyboard`), `VoiceButton`, `ListeningIndicator`, `VoiceChooser`, palette entries, `voice` command extension semantics. Consumes: backend and matcher (sibling), `RichTextEditor` insertion API (PAP-142), palette argument prompts (PAP-290), undo manager (`r4/input/undo-manager`, soft), motion presets (PAP-72), announcer (PAP-152), microphone entitlement (PAP-260, soft). Consumed by PAP-158.\n\n**Definition of done**\n\n* \"Open inbox\", \"create record\", \"assign to Bo\" and \"mark done\" run on the sample pages in Chrome; dictation into a form field and a Tiptap comment with punctuation works; demo video attached.\n* Screenshots of indicator, chooser and denied state at 375 and 1280 in three themes; axe clean; `docs/platform/input/voice.md` UI and browser matrix; changelog; Linear comment.\n\n**Test plan**\n\n* Unit: punctuation and capitalisation rules; adapter insert and deleteLast on inputs and a Tiptap doc; mode transitions (idle, listening, dictating); chooser selection.\n* Component: `VoiceButton` states with axe; reduced-motion story has no waveform animation.\n* E2E: with `MockBackend` injected at 375 and 1280: commands run and toast, chooser appears for near ties, confirmation blocks until \"yes\", dictation inserts into an input and a comment with \"comma\" and \"new line\", \"undo that\" removes the last utterance, out-of-scope command refused with \"Not available here\".\n\n**Demo**\n\nReviewer holds `mod+shift+v`, says \"open inbox\", releases and watches navigation; clicks into a comment, chooses \"Start dictation\" and dictates a sentence with punctuation, then says \"undo that\". Under two minutes.\n\n**Edge cases**\n\n* Permission denied: disabled state with instructions, no re-prompt loop.\n* Focus moves during dictation: target follows focus only to another editable; otherwise dictation pauses.\n* Noisy finals with low scores: toast with the transcript and a \"Search commands\" action.\n* WebKitGTK (Tauri Linux) lacks `SpeechRecognition`: button shows unsupported; tested.\n\n**Dependencies**\n\nSibling backend (hard), PAP-142 (hard for the Tiptap adapter; input adapter may land first), PAP-290 (hard, argument prompts). Soft: `r4/input/undo-manager`, PAP-72, PAP-152, PAP-260. Blocks PAP-158 (`DictationTarget` reuse).\n\n**Agent**\n\nBuilder: Nova (Product Systems Engineer) with Iris on the indicator. Reviewer: Sentinel (Visual Inspector, Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-150",
+   "section": "Spec",
+   "append": "* Round 4: `wheel` events are normalised to `{ deltaX, deltaY, deltaMode: 'pixel', isTrackpad, ctrlKey }` (line and page modes converted with 16 px and viewport height factors, trackpad inferred from fractional deltas and burst cadence) so pinch-zoom via `ctrl`+wheel and inertial scrolling behave the same in every consumer. Mouse buttons 3 and 4 (`buttons` bits 8 and 16) emit `key`-like events `MouseBack` and `MouseForward` that PAP-291 maps to `nav.back|forward`. `key` events carry `isComposing`; consumers must ignore chords while it is true."
+  },
+  {
+   "identifier": "PAP-289",
+   "section": "Spec",
+   "append": "* Round 4: the matcher ignores `keydown` while `event.isComposing` is true and the 229 keyCode, and resets pending sequences on composition start. The registry accepts a `root` id so each OS window mounts its own scope root (`r4/input/multi-window-command-and-focus-routing`); `CommandDef` gains optional `menu?: { group, order, showIn: ('context'|'toolbar'|'palette'|'native')[] }` (consumed by `r4/input/command-context-menus` and `r4/input/native-menu-from-command-manifest`), `windowScope?: 'any'|'main'`, `macroSafe?: boolean` and `undoable?: boolean` metadata; all appear in `commands.manifest.json`."
+  },
+  {
+   "identifier": "PAP-331",
+   "section": "Spec",
+   "append": "* Round 4: `DropZone` also accepts native OS file drops in Tauri through `getCurrentWebview().onDragDropEvent` (paths converted with `convertFileSrc` and read through the fs plugin scope), showing the same hover state as web `dragover`; on web the `DataTransfer` files path is unchanged. Items dropped from another PaperOS window prefer the `dnd.transfer` bus message and fall back to the typed clipboard payload (`r4/input/clipboard-port`) when the bus is unavailable."
+  },
+  {
+   "identifier": "PAP-153",
+   "section": "Spec",
+   "append": "* Round 4: the resolver gains two fixed layers between presets and user overrides: `a11y` (written by `r4/input/accessibility-input-preferences`: with `singleKeyShortcuts: 'off'` every modifier-less chord and sequence resolves to `null`; with `'modifierOnly'` they resolve to `alt+<key>`) and `macros` (`r4/input/macros-and-command-chains`). The settings page shows the active layer that produced each effective chord, and the export format includes `layers` so imports are faithful."
+  },
+  {
+   "identifier": "PAP-159",
+   "section": "Edge cases",
+   "append": "* Round 4: WebKitGTK (Tauri Linux desktop) and Firefox expose no `SpeechRecognition`; `capabilities.supported` is false, the button renders the unsupported state and the Playwright WebKit project asserts it. The children `r4/input/voice-backend-and-intent-matching` and `r4/input/dictation-targets-and-voice-ui` split this issue; the umbrella keeps the Chrome and Android real-microphone recording as its integration evidence."
+  },
+  {
+   "identifier": "PAP-156",
+   "section": "Test plan",
+   "append": "* Round 4: the protocol runs each flow twice on Tier 1, once with default input preferences and once with `singleKeyShortcuts: 'off'` and `focusRing: 'always'` from `r4/input/accessibility-input-preferences`, and every flow is also recorded keyboard-only through PAP-83's video replay using `@paperos/input/testing` (`r4/input/playwright-input-fixtures`) so the ACR (PAP-160) can cite a replay per criterion."
+  },
+  {
+   "identifier": "PAP-154",
+   "section": "Definition of done",
+   "append": "* Round 4: this issue is an umbrella for `r4/input/gesture-recognisers-and-arena` and `r4/input/mobile-gesture-components-and-haptics`. Device video is required from the second child only; the first child's evidence is the Linux Playwright touch suite. If no emulator is available in CI by 09-27, Playwright `hasTouch` runs count as the acceptance for the milestone and the device video is filed as a follow-up comment, never silently skipped."
+  },
+  {
+   "identifier": "PAP-160",
+   "section": "Spec",
+   "append": "* Round 4: the statement links `/settings/accessibility` (`r4/input/accessibility-input-preferences`) as the mechanism for criteria 2.1.4 (character key shortcuts), 2.2.1 (timing adjustable) and 1.4.4 (resize text via `fontScale`); `criteria-map.json` gains `type: 'prefs'` sources pointing at that page's Playwright evidence and `type: 'reflow'` sources from `r4/design-system/reflow-zoom-text-spacing-audit` for 1.4.4, 1.4.10 and 1.4.12."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "collab",
+   "title": "PAP-380 keyboard hint overlay reads `commands.manifest.json` and effective chords from the PAP-153 resolver instead of a static list",
+   "why": "Otherwise the overlay drifts from keymaps and macros; the input project exposes `useEffectiveChord` for exactly this."
+  },
+  {
+   "targetProject": "quality",
+   "title": "Gate 3 records a keyboard-only replay of each critical flow using `@paperos/input/testing`",
+   "why": "The brief asks for video replays across sizes; a keyboard-only track proves 2.1.1 per flow and feeds PAP-160's ACR."
+  },
+  {
+   "targetProject": "app-shell",
+   "title": "Tauri capabilities for `menu`, `tray` and `clipboard-manager` plugin calls in PAP-255 and PAP-260 with per-platform notes",
+   "why": "`r4/input/native-menu-from-command-manifest` and `r4/input/clipboard-port` need the capabilities declared in the shell's Tauri config, which app-shell owns; the global shortcut stays with `r4/app-shell/desktop-os-integration`."
+  },
+  {
+   "targetProject": "realtime",
+   "title": "WindowBus message catalogue entries for `command.forward|result`, `focus.request`, `clipboard.sync` and `a11y.prefs.changed` in PAP-145",
+   "why": "The input project defines the payload schemas; PAP-145 should register them so the bus validates and documents them."
+  }
+ ]
+}

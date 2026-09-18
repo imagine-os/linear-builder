@@ -1,0 +1,1032 @@
+{
+ "project": "design-system",
+ "projectName": "Design System",
+ "benchmarks": [
+  "Radix UI and Base UI",
+  "shadcn/ui and Radix Themes",
+  "Material 3",
+  "Atlassian Design System",
+  "Shopify Polaris",
+  "IBM Carbon",
+  "GitHub Primer",
+  "Microsoft Fluent 2",
+  "Ant Design",
+  "Mantine",
+  "W3C DTCG tokens",
+  "WCAG 2.2 AA (1.4.4, 1.4.10, 1.4.12)"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "DTCG tokens: colour, type, space, radius, motion, elevation",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-66"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "z-index scale tokens",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-66"
+   ],
+   "note": "Amendment"
+  },
+  {
+   "feature": "Component-level tokens (button radius, etc.)",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-236"
+   ],
+   "note": "Amendment"
+  },
+  {
+   "feature": "Density tokens and runtime density setting",
+   "status": "gap",
+   "coveredBy": [
+    "r4/design-system/density-modes"
+   ],
+   "note": "Linear/Gmail/Atlassian"
+  },
+  {
+   "feature": "Dataviz palettes (categorical, sequential, diverging) with CVD validation",
+   "status": "gap",
+   "coveredBy": [
+    "r4/design-system/dataviz-tokens-and-microcharts"
+   ],
+   "note": "PAP-170 assumes them"
+  },
+  {
+   "feature": "Micro-charts: Sparkline, MiniBar, ProgressRing",
+   "status": "gap",
+   "coveredBy": [
+    "r4/design-system/dataviz-tokens-and-microcharts"
+   ],
+   "note": "Stat slot, number blocks"
+  },
+  {
+   "feature": "Headless primitives + Tailwind v4 conventions",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-236"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Form controls (Button, Input, Checkbox, Radio, Switch, Slider, Field)",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-236"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Overlays (Dialog, AlertDialog, Popover, Tooltip, Menu, Toast)",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-237"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Selection and navigation (Select, Combobox, Tabs, Avatar, Separator)",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-238"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Navigation: NavList, Breadcrumb, Pagination, Link, Stepper, Kbd",
+   "status": "gap",
+   "coveredBy": [
+    "r4/design-system/navigation-components"
+   ],
+   "note": "Shells would each invent them"
+  },
+  {
+   "feature": "Surfaces and feedback: Card, Accordion, InlineAlert, Callout, Progress, Spinner, ScrollArea, Toolbar, SegmentedControl, HoverCard",
+   "status": "gap",
+   "coveredBy": [
+    "r4/design-system/surface-and-feedback-components"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Specialised inputs: Number, Password, OTP, Search, ColorPicker, FileUpload, TagInput, Rating",
+   "status": "gap",
+   "coveredBy": [
+    "r4/design-system/specialised-inputs"
+   ],
+   "note": "Auth, branding, attachments need them"
+  },
+  {
+   "feature": "Date, time, range, relative pickers",
+   "status": "covered",
+   "coveredBy": [
+    "r4/design-system/date-time-pickers"
+   ],
+   "note": "Split from PAP-233"
+  },
+  {
+   "feature": "Form-state adapters (react-hook-form + Zod)",
+   "status": "covered",
+   "coveredBy": [
+    "r4/design-system/form-state-adapters"
+   ],
+   "note": "Split from PAP-233"
+  },
+  {
+   "feature": "Form layout, sections, sticky actions, unsaved-changes guard",
+   "status": "gap",
+   "coveredBy": [
+    "r4/design-system/form-layout-and-unsaved-changes"
+   ],
+   "note": "PAP-333 references FieldGroup"
+  },
+  {
+   "feature": "Layout: AppFrame, SplitPane, Inspector, CommandBar, ResponsiveGrid",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-70"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Responsive helpers (useContainerSize, Responsive)",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-70"
+   ],
+   "note": "Amendment"
+  },
+  {
+   "feature": "Cell renderer registry and 20 cells",
+   "status": "covered",
+   "coveredBy": [
+    "r4/design-system/cell-renderer-registry-and-cells"
+   ],
+   "note": "Split from PAP-71"
+  },
+  {
+   "feature": "Data display: Badge, Tag, AvatarStack, Timeline, EmptyState, Skeleton, Stat, KeyValue, RelativeTime, Money",
+   "status": "covered",
+   "coveredBy": [
+    "r4/design-system/data-display-components"
+   ],
+   "note": "Split from PAP-71"
+  },
+  {
+   "feature": "Static DataTable (ui.dataTable)",
+   "status": "gap",
+   "coveredBy": [
+    "r4/design-system/static-data-table"
+   ],
+   "note": "Codegen emits it; unowned since round 2"
+  },
+  {
+   "feature": "State components (Error, Denied, Offline, IntegrationUnavailable, Loading, NotFound)",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-234"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Typography components: Text, Heading, Prose, Code",
+   "status": "gap",
+   "coveredBy": [
+    "r4/design-system/typography-components-and-prose"
+   ],
+   "note": "Docs and rich text need Prose"
+  },
+  {
+   "feature": "Media: Image, FilePreview, Lightbox",
+   "status": "gap",
+   "coveredBy": [
+    "r4/design-system/media-preview-and-lightbox"
+   ],
+   "note": "Attachments, screenshots"
+  },
+  {
+   "feature": "Icons and illustrations",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-68"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Motion system and transitions",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-72"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Reduced motion",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-72"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Storybook with a11y, viewport, interaction tests",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-69"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Storybook density and forced-colors globals",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-69"
+   ],
+   "note": "Amendment"
+  },
+  {
+   "feature": "Automated axe and ARIA snapshot audit",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-73"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Forced-colors and RTL in the a11y scan matrix",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-73"
+   ],
+   "note": "Amendment"
+  },
+  {
+   "feature": "Reflow (1.4.10), zoom (1.4.4), text spacing (1.4.12) audit",
+   "status": "gap",
+   "coveredBy": [
+    "r4/design-system/reflow-zoom-text-spacing-audit"
+   ],
+   "note": "axe cannot see these"
+  },
+  {
+   "feature": "Manual screen reader passes",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-156"
+   ],
+   "note": "Input project"
+  },
+  {
+   "feature": "Component spec IDs and props schemas",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-74"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Component versioning, deprecation, codemods, status page",
+   "status": "gap",
+   "coveredBy": [
+    "r4/design-system/ui-package-versioning-and-deprecation"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Design lint (no raw colours, spacing, icons)",
+   "status": "gap",
+   "coveredBy": [
+    "r4/design-system/design-lint-rules"
+   ],
+   "note": "Keeps 20 agents on tokens"
+  },
+  {
+   "feature": "Theme modes light/dark/hc/system with no-flash boot",
+   "status": "covered",
+   "coveredBy": [
+    "r4/design-system/theme-provider-and-brand-theme-generator"
+   ],
+   "note": "Split from PAP-75"
+  },
+  {
+   "feature": "Per-tenant brand theming and generator",
+   "status": "covered",
+   "coveredBy": [
+    "r4/design-system/theme-provider-and-brand-theme-generator"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Branding settings page, Logo, SVG sanitising",
+   "status": "covered",
+   "coveredBy": [
+    "r4/design-system/tenant-branding-settings-and-logo"
+   ],
+   "note": "Split from PAP-75"
+  },
+  {
+   "feature": "Email and PDF theme kit",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-235"
+   ],
+   "note": "Deferred"
+  },
+  {
+   "feature": "Guidelines and machine-readable rules",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-76"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Figma/token round-trip decision",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-77"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "RTL logical properties in components",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-236",
+    "PAP-67"
+   ],
+   "note": ""
+  },
+  {
+   "feature": "Component copy i18n hook",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-236",
+    "PAP-27"
+   ],
+   "note": "Amendment: useUiStrings"
+  },
+  {
+   "feature": "Print styles for components",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-75",
+    "PAP-235"
+   ],
+   "note": "Light forced; kit deferred"
+  },
+  {
+   "feature": "Coachmark / product tour components",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-380"
+   ],
+   "note": "Collab builds; cross-project suggestion to use ui.coachmark"
+  },
+  {
+   "feature": "Notification and inbox UI",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-136"
+   ],
+   "note": "Collab owns"
+  },
+  {
+   "feature": "Rich text editor chrome",
+   "status": "partial",
+   "coveredBy": [
+    "PAP-142"
+   ],
+   "note": "Realtime owns"
+  },
+  {
+   "feature": "Charts and maps",
+   "status": "covered",
+   "coveredBy": [
+    "r4/tables/chart-view-echarts",
+    "r4/tables/map-view-maplibre-and-geo-field"
+   ],
+   "note": "Tables owns views; DS owns palette"
+  },
+  {
+   "feature": "Module contract, conformance, wiring",
+   "status": "covered",
+   "coveredBy": [
+    "PAP-459",
+    "PAP-460",
+    "PAP-461"
+   ],
+   "note": ""
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/design-system/cell-renderer-registry-and-cells",
+   "title": "Cell renderer registry and the 20 read-only cells with Intl formatting utilities and density support",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Tokens and primitives",
+   "parent": "PAP-71",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-22",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-238",
+    "PAP-302"
+   ],
+   "blocks": [
+    "PAP-338",
+    "PAP-341",
+    "r4/design-system/data-display-components"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-71 and the part the grid critical path waits on (PAP-71 → PAP-338 → PAP-341): the `registerCell|getCell` registry, the twenty read-only cell renderers aligned with PAP-164's type names, and the `Intl` formatters they share, so field types and the grid can land without the rest of the data-display set.\n\n**Scope**\n\nIn: `packages/ui/src/data/cells/{registry,types,*.tsx}`; `LocaleProvider` consumption; `formatMoney|formatDate|formatNumber|formatDuration`; `Truncate` (needed by cells); `meta.ts` for `ui.truncate`; gallery story `Data/Cells`.\n\nOut: Badge, Tag, AvatarStack, Timeline, EmptyState, Skeleton, Stat, KeyValue, RelativeTime, Money component (sibling), editors (PAP-164), charts.\n\n**Spec**\n\n* Registry: `registerCell(type, renderer)`, `getCell(type)` falling back to `text` with one dev warning; types `text, longText, number, currency, percent, date, dateTime, boolean, select, multiSelect, user, relation, url, email, phone, rating, attachment, progress, json, formula`; the `CellType` union is exported and re-checked against PAP-164's `FieldType` in a contract test.\n* `Cell` signature `({ value, field, row, density: 'compact'|'default'|'comfortable' }) => ReactNode` exporting `{ Cell, align, defaultWidth }`; compact renders a single line with `Truncate` and a tooltip; comfortable wraps up to three lines.\n* `Money` cell and `formatMoney` accept `{ amountMinor: bigint | number | string, currency }` (PAP-302 shape, minor units, never floats) with `currencyDisplay: 'narrowSymbol'`; `formatDate` takes ISO-8601 UTC strings and date-only values without zone shift; numerals follow the locale (`ar-EG` Eastern Arabic digits).\n* `select` and `multiSelect` cells render option chips with the token palette from PAP-339's option colours; `user` renders Avatar (PAP-238) plus name; `attachment` renders up to three thumbnails and `+n`; `formula` dispatches on the result type and renders `#ERROR` states; `json` pretty-prints one line with copy.\n* Null, undefined and empty render an em dash; every cell sets `title` for truncated content and `data-cell-type`; RTL uses logical properties.\n* Perf: rendering 1,000 cells of each type under 50 ms in a Vitest bench (no per-cell `Intl` construction; formatters cached per locale).\n\n**Interface contract**\n\nProvides: `registerCell`, `getCell`, `CellRenderer`, `CellType`, twenty cells, `formatMoney`, `formatDate`, `formatNumber`, `formatDuration`, `Truncate` (`ui.truncate`), `cellDensity` tokens. Consumes: Avatar and Tooltip (PAP-238, PAP-237), `Money` and ISO conventions (PAP-302; interim from PAP-175's `moneySchema`), `LocaleProvider` (PAP-27, soft: `en-US` fallback), option colours (PAP-339, soft: default palette). Consumed by PAP-338 to PAP-340, PAP-341, sibling components, PAP-183 reports.\n\n**Definition of done**\n\n* Twenty cells merged with stories at compact, default and comfortable; Vitest formatting for en-US, en-GB, de-DE, ja-JP, ar-EG with negative, zero and huge values; contract test against PAP-164's union.\n* Gallery screenshots at 375, 768, 1280, 1920 light and dark plus RTL (`ar-EG`); axe clean; `docs/design/data-display.md` renderer contract section; changelog; Linear comment on PAP-338 and PAP-341.\n\n**Test plan**\n\n* Unit: every formatter × five locales; bigint-as-string inputs; date-only no zone shift; registry fallback warning once; density line clamps.\n* Bench: 1,000 cells per type under 50 ms; formatter cache hit rate.\n* E2E: none (Storybook interaction tests cover tooltips on truncation).\n\n**Demo**\n\nReviewer opens Storybook `Data/Cells`, switches density to compact, then locale to `ar-EG` and watches numerals and currency placement change. Under one minute.\n\n**Edge cases**\n\n* Values beyond `MAX_SAFE_INTEGER` arrive as strings and format correctly.\n* Unknown cell type: `text` renderer with a dev warning.\n* Unbroken URLs wrap with `overflow-wrap: anywhere` inside `Truncate`.\n* Attachment with a failed variant: broken-image placeholder, retry handled by PAP-339.\n\n**Dependencies**\n\nPAP-238 (hard, Avatar), PAP-302 (hard for `Money`; interim import allowed). Soft: PAP-27, PAP-339. Blocks PAP-338, PAP-341 and the sibling.\n\n**Agent**\n\nBuilder: Iris (Component Crafter) with Nova agreeing the renderer contract. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/design-system/data-display-components",
+   "title": "Data display components: Badge, Tag, AvatarStack, Timeline, EmptyState, Skeleton, Stat, KeyValue, RelativeTime and Money",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Tokens and primitives",
+   "parent": "PAP-71",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-22",
+   "deferred": false,
+   "blockedBy": [
+    "r4/design-system/cell-renderer-registry-and-cells",
+    "PAP-68"
+   ],
+   "blocks": [
+    "PAP-234",
+    "PAP-333",
+    "PAP-386"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nSecond half of PAP-71: the ten shared read-only components dashboards, feeds and detail pages compose, built on the formatters and cells from the sibling so numbers, dates, users and statuses look identical everywhere.\n\n**Scope**\n\nIn: `packages/ui/src/data/{Badge,Tag,AvatarStack,Timeline,EmptyState,Skeleton,Stat,KeyValue,RelativeTime,Money}.tsx` with `meta.ts` spec ids and stories; shared 30 s ticker for `RelativeTime`; `Data/Gallery` story.\n\nOut: cells and formatters (sibling), the other page states (PAP-234), charts and sparklines (`r4/design-system/dataviz-tokens-and-microcharts` provides `Sparkline` for `Stat`'s slot).\n\n**Spec**\n\n* `Badge` tones `neutral|accent|success|warning|danger|info`, sizes `sm|md`, optional dot and count; `Tag` removable with keyboard (`Backspace` and a button), colour from the option palette, `maxWidth` truncation.\n* `AvatarStack` max 4 visible, `+N` overflow with a Tooltip listing 20 then \"and N more\"; deterministic fallback colour from PAP-238 Avatar; `size` inherits.\n* `Timeline` groups `{ id, at, actor, icon?, title, body?, href? }` by local day with sticky day headers, `RelativeTime` per item, virtualised beyond 200 items; `EmptyState` variants `empty|noResults|success` with illustrations (PAP-68) and primary and secondary actions; `error|offline|noPermission` delegate to PAP-234.\n* `Skeleton` shapes `text|avatar|block|tableRow|card`, shimmer respects reduced motion (PAP-72 `useReducedMotion`), wrapper `aria-busy`; `Stat` label, value, delta with direction and tone, `sparkline` slot, `size`; `KeyValue` definition list with copy buttons and `columns` 1 or 2; `RelativeTime` on one shared interval with absolute time in `title` and `<time dateTime>`; `Money` component wraps `formatMoney` with tabular numerals and negative styling.\n* All components forward refs, accept `className`, expose `data-tone`, use logical properties for RTL.\n\n**Interface contract**\n\nProvides: components with spec ids `ui.badge`, `ui.tag`, `ui.avatarStack`, `ui.timeline`, `ui.emptyState`, `ui.skeleton`, `ui.stat`, `ui.keyValue`, `ui.relativeTime`, `ui.money`; `useTicker(30_000)` shared hook. Consumes: formatters and `Truncate` (sibling), Avatar, Tooltip, Button (PAP-238, PAP-237, PAP-236), illustrations (PAP-68), reduced motion (PAP-72, soft), `Sparkline` (`r4/design-system/dataviz-tokens-and-microcharts`, soft slot). Consumed by PAP-234 states, PAP-333 activity timeline, PAP-386 `NumberBlock`, PAP-62 portal, PAP-41 data dictionary, PAP-186.\n\n**Definition of done**\n\n* Ten components merged with stories for every variant; `play` tests for Tag remove and AvatarStack overflow tooltip; `vitest-axe` clean.\n* Gallery screenshots at 375, 768, 1280, 1920 light and dark; RTL story; perf assertion that 1,000 `RelativeTime` share one interval; `docs/design/data-display.md`; changelog; Linear comment.\n\n**Test plan**\n\n* Unit: Badge and Tag variants snapshot; AvatarStack slicing and tooltip list; Timeline day grouping across DST; Stat delta sign and tone; KeyValue copy.\n* Interaction: Tag remove by keyboard; AvatarStack overflow tooltip lists 20 then \"and N more\"; Timeline virtualisation keeps under 60 DOM items.\n* E2E: none (Storybook).\n\n**Demo**\n\nReviewer opens Storybook `Data/Gallery`, switches to compact density and dark, hovers a 6-person AvatarStack, removes a Tag by keyboard and watches RelativeTime tick. Under one minute.\n\n**Edge cases**\n\n* 500 avatars: slice first `max`, tooltip capped.\n* Timeline item without actor: icon only, no empty avatar.\n* Stat with a null delta: no arrow, muted placeholder.\n* Skeleton inside a live region: `aria-busy` prevents announcement floods.\n\n**Dependencies**\n\nSibling cells (hard), PAP-68 (hard, illustrations). Soft: PAP-72, dataviz issue. Blocks PAP-234, PAP-333, PAP-386.\n\n**Agent**\n\nBuilder: Iris (Component Crafter). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/design-system/theme-provider-and-brand-theme-generator",
+   "title": "ThemeProvider with no-flash boot, light, dark, hc and system modes, and generateBrandTheme producing contrast-validated OKLCH ramps",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Themable per tenant with docs",
+   "parent": "PAP-75",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-66"
+   ],
+   "blocks": [
+    "r4/design-system/tenant-branding-settings-and-logo",
+    "PAP-461",
+    "PAP-235"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-75, pure code with no procedures or uploads: the runtime theme switch that never flashes, and the palette generator that turns one accent into a full tenant theme that still passes every PAP-66 contrast pair. Storybook's theme toolbar (PAP-69) and the wire issue (PAP-461) consume it.\n\n**Scope**\n\nIn: `packages/ui/src/theme/{ThemeProvider,useTheme,boot,generateBrandTheme,inject,inlineCss}.ts`; boot script for `apps/web/index.html`; `pos.settings.theme` storage key; `data-theme` and `data-tenant` attribute contracts; hc token finalisation; `brandingToInlineCss`; Storybook toolbar hook.\n\nOut: branding table, procedures, settings page, Logo and SVG sanitising (sibling), email and PDF kit (PAP-235), per-page themes.\n\n**Spec**\n\n* Boot script (inline, under 600 bytes) reads `localStorage['pos.settings.theme']` in try/catch and `matchMedia('(prefers-color-scheme: dark)')`, sets `data-theme` on `<html>` before first paint; `ThemeProvider` hydrates from the attribute, exposes `{ mode, setMode, resolved }`, listens to `matchMedia` changes in `system` mode, and calls Tauri `window.setTheme` when present.\n* `generateBrandTheme({ accent, neutral?, radius?, font? })` derives an 11-step OKLCH ramp at lightness `97, 93, 85, 75, 65, 55, 47, 39, 31, 23, 15` with a chroma curve from the accent; dark maps inverted; hc clamps `fg` to L 10 or 98 and doubles border widths; it nudges lightness until every PAP-66 semantic pair passes 4.5:1 or 3:1 and returns `{ css, failures: [{ token, ratio, required }] }`.\n* `injectTenantTheme(css, tenantId?)` replaces one `<style id=\"pos-tenant-theme\">` atomically, scoped to `[data-tenant=\"<id>\"]` or `:root`, under 6 KB; uses the same `--pos-` variable names as PAP-66, never new ones.\n* `brandingToInlineCss(branding)` returns inline-safe hex values (OKLCH to sRGB via `culori` `clampChroma`) for PAP-235 and PAP-89 digest HTML.\n* Print media forces light; `forced-colors: active` leaves system colours untouched; the Storybook `globalTypes.theme` toolbar sets the attribute through this provider.\n\n**Interface contract**\n\nProvides: `ThemeProvider`, `useTheme()`, `generateBrandTheme()`, `injectTenantTheme()`, `brandingToInlineCss()`, `TenantBranding` Zod schema (colour subset), `data-theme|data-tenant` contracts, `pos.settings.theme` key, `ThemePort` implementation for `contract-design-system`. Consumes: tokens, semantic pairs and `tokens:check` maths (PAP-66), `culori`. Consumed by the sibling settings page, PAP-69 toolbar, PAP-461 wire, PAP-235, PAP-82 theme fixture, PAP-18 `theme_color`.\n\n**Definition of done**\n\n* No flash on first paint for light, dark, hc and system (Playwright screenshot at first paint, all four); `generateBrandTheme` for 20 random accents passes all contrast pairs after nudging (Vitest); CSS size cap tested.\n* `docs/design/theming.md` sections on modes and generation; changelog; Linear comment on PAP-69 and PAP-461.\n\n**Test plan**\n\n* Unit: ramp generation; nudge convergence within 20 iterations; near-white and near-black accents fall back to a neutral-tinted ramp with a warning; hex conversion and gamut clamp; boot script parsing with a blocked `localStorage`.\n* Integration: `injectTenantTheme` for two tenants in two windows does not bleed (jsdom documents).\n* E2E: mode switch persists across reload; system mode follows a `matchMedia` emulation change; print emulation forces light.\n\n**Demo**\n\nReviewer flips the mode through light, dark, hc and system in the template app with no flash on reload, then runs `pnpm tsx scripts/brand-theme.ts '#7c3aed'` and reads the generated CSS and zero failures. Under one minute.\n\n**Edge cases**\n\n* `localStorage` throws (private mode): boot script falls back to system with no error.\n* Accent with chroma outside sRGB: clamped, noted in `failures` as a warning.\n* Theme changed in another tab: `storage` event re-syncs.\n* hc mode with a tenant accent: accent kept only where it passes 7:1, else system accent.\n\n**Dependencies**\n\nPAP-66 (hard). Blocks the sibling, PAP-461, PAP-235; PAP-69's toolbar sets the attribute directly until this lands (soft).\n\n**Agent**\n\nBuilder: Iris (Token Keeper). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/design-system/tenant-branding-settings-and-logo",
+   "title": "Tenant branding: tenant.branding schema and procedures, /org/settings/branding page with live preview and contrast report, Logo component and SVG sanitising",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Themable per tenant with docs",
+   "parent": "PAP-75",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "r4/design-system/theme-provider-and-brand-theme-generator",
+    "PAP-37",
+    "PAP-229",
+    "PAP-63"
+   ],
+   "blocks": [
+    "PAP-235",
+    "PAP-193",
+    "PAP-62"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nSecond half of PAP-75: persist a tenant's brand and let an owner change it safely. The `branding` column and procedures, the settings page with live preview and the contrast failure list, the `Logo` component and the SVG upload path that a security reviewer signs off.\n\n**Scope**\n\nIn: `tenant.branding jsonb` schema `{ logoFileId, logoDarkFileId?, accent, neutral?, radius?, fontFamily?, defaultMode }`; procedures `branding.get|update` gated by `can('tenant.branding.update')`; `BrandingSettingsPage` and its spec fragment, mounted by identity's console at `/console/settings/branding` (`r4/identity/console-admin-pages`); `Logo`; SVG sanitising with `dompurify`; font allowlist; PGlite cache for offline first paint.\n\nOut: theme generation and provider (sibling), custom CSS injection, font uploads (allowlist only), email and PDF (PAP-235).\n\n**Spec**\n\n* `branding.update` validates with the `TenantBranding` schema, runs `generateBrandTheme` server-side and stores the resulting `css` alongside the input so clients never regenerate; emits `theme.changed { tenantId }` (contract topic) which PAP-143 shapes deliver to open sessions; audit row with before and after.\n* Fonts: allowlist of 12 Google fonts plus system stacks, loaded with `font-display: swap` and self-hosted through PAP-37 storage at build time (no runtime Google requests); unknown family rejected.\n* `Logo` picks light or dark variant by resolved theme, falls back to the tenant name in the accent colour, sizes `sm|md|lg`; SVG uploads max 512 KB sanitised on upload (`dompurify` with the SVG profile, external references and scripts stripped, `viewBox` required) and re-served as `image/svg+xml` with `Content-Security-Policy: sandbox`; PNG and WebP accepted through PAP-37 variants.\n* Settings page: colour pickers (design-system `ColorPicker` from `r4/design-system/specialised-inputs`, soft: native `<input type=color>` fallback), logo upload with preview, live preview of Button, Badge, Card, Nav and a grid row re-themed within one frame of a change, contrast failure list showing the adjusted colour, reset to defaults, save with confirmation.\n* Offline first load: branding cached in PGlite (PAP-36) and applied by the boot path; tenant switch (PAP-58) swaps the injected style without reload.\n\n**Interface contract**\n\nProvides: `TenantBranding` full schema, `branding.get|update`, `BrandingSettingsPage` (`app.settingsBranding`), `Logo` (`ui.logo`), `sanitizeSvg()`, font allowlist `brandFonts`, topic `theme.changed`. Consumes: `generateBrandTheme` and injection (sibling), `tenant` table (PAP-33), procedures (PAP-268), files (PAP-37), permissions (PAP-229), console route (PAP-63, `r4/identity/console-admin-pages`), shapes (PAP-143, soft), PGlite cache (PAP-36, soft), `ColorPicker` (soft). Consumed by PAP-62 portal, PAP-235, PAP-193 landing pages, PAP-180 PDFs.\n\n**Definition of done**\n\n* Settings page screenshots at 375, 768, 1280, 1920 in three themes; live preview within one frame (video); tenant switch re-themes without reload (e2e with two tenants).\n* Security review of SVG sanitising with a fixture corpus (Sentinel Security Auditor comment); `docs/design/theming.md` branding section; changelog; Linear comment with before and after screenshots.\n\n**Test plan**\n\n* Unit: schema validation; font allowlist; sanitiser strips `<script>`, `on*` attributes, external `href` and `<foreignObject>` from fixtures; `Logo` variant selection.\n* Integration: `branding.update` denied for `member`; audit row present; `theme.changed` emitted; second session receives the new CSS within 2 s.\n* E2E: pick a purple accent and upload the sample logo as owner, watch the console re-theme live, switch to the second tenant and back, reload offline and see the cached branding.\n\n**Demo**\n\nReviewer opens `/console/settings/branding` as the seeded owner, picks a purple accent, uploads the sample logo, watches the preview and the console re-theme, then switches tenant. Under two minutes.\n\n**Edge cases**\n\n* Malicious SVG: stripped; if nothing renderable remains, upload rejected with a raster fallback offer.\n* Accent nearly white or black: sibling fallback with the warning surfaced in the failure list.\n\n**Dependencies**\n\nSibling provider (hard), PAP-37 (hard, uploads), PAP-229 (hard, permission), PAP-63 (hard, settings route). Soft: PAP-33, PAP-268, PAP-143, PAP-36, specialised inputs. Blocks PAP-235, PAP-193, PAP-62 branding.\n\n**Agent**\n\nBuilder: Iris (Token Keeper). Reviewer: Sentinel (Security Auditor (uploads), Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/design-system/date-time-pickers",
+   "title": "Date, time, date-range, date-time and relative-date pickers on @internationalized/date with locale, zone and DST correctness",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Component library covers app shell needs",
+   "parent": "PAP-233",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "dueDate": "2026-09-25",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-237",
+    "PAP-236",
+    "PAP-212"
+   ],
+   "blocks": [
+    "PAP-338",
+    "r4/tables/filter-builder-component",
+    "PAP-344",
+    "r4/design-system/form-state-adapters"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-233 and the part the field types (PAP-338) and filter builder wait on: six date and time pickers whose values never pass through a JS `Date`, correct across locales, zones, DST and leap days, with the relative-date shape the shared filter grammar stores.\n\n**Scope**\n\nIn: `packages/ui/src/pickers/{Calendar,DatePicker,DateRangePicker,TimeField,DateTimeField,RelativeDatePicker}.tsx` on the PAP-212 primitive's date components or `react-aria-components` (`DateField`, `Calendar`, `RangeCalendar`) as fallback; `@internationalized/date` values; `meta.ts` spec ids; stories at seven widths.\n\nOut: form adapters (sibling), recurring-schedule editors, natural-language date parsing (`chrono-node` lives in voice), non-Gregorian beyond `Intl` support.\n\n**Spec**\n\n* Values are `CalendarDate`, `Time`, `CalendarDateTime` or `ZonedDateTime` from `@internationalized/date`; serialised as ISO strings at the boundary (`toISODate`, `toISOTime`, `toAbsoluteString`); date-only values never shift across zones.\n* `DatePicker { value, onChange, min, max, granularity: 'day'|'minute', locale?, timeZone?, presets?, isDateUnavailable? }`: typed input with segment editing (arrow keys change segments, typing advances), `Popover` (PAP-237) calendar with ARIA APG grid keyboard model, month and year quick jump, today button; under 768 px the calendar opens in a full-screen sheet.\n* `DateRangePicker`: two-month calendar on wide viewports, start and end segments, presets (today, last 7 days, this month, last quarter, custom); `TimeField`: 12 or 24 hour by locale, seconds by `granularity`; `DateTimeField`: date plus time plus a zone badge when user and tenant zones differ.\n* `RelativeDatePicker` emits `{ kind: 'relative', unit, amount, anchor }` or an absolute range, matching PAP-279's relative-date shape exactly (fixture round trip) so PAP-166 filters and PAP-195 segments store one shape.\n* Validation: min and max clamp with messages; unavailable dates skip on keyboard; invalid typed segments keep the field invalid with `aria-invalid` and a message; reduced motion disables popover transitions.\n\n**Interface contract**\n\nProvides: components with spec ids `ui.datePicker`, `ui.dateRangePicker`, `ui.timeField`, `ui.dateTimeField`, `ui.relativeDatePicker`, `ui.calendar`; types `DateValue`, `RelativeRange`; helpers `toISODate`, `parseISODate`. Consumes: Popover, Field, Input, Button (PAP-237, PAP-236), primitive library decision (PAP-212; React Aria fallback), tokens (PAP-66), `LocaleProvider` (PAP-27, soft), relative-date fixture (PAP-279). Consumed by PAP-338 date type, filter builder, PAP-344 calendar navigation, PAP-180 invoices, PAP-58 invitation expiry, the sibling adapters.\n\n**Definition of done**\n\n* Six components merged with stories for every state and RTL; `vitest-axe` clean; formatting and parsing tests for en-US, en-GB, de-DE, ja-JP, ar-EG with DST boundaries and leap day; `RelativeRange` round-trips through the PAP-279 fixture.\n* Screenshots of `Pickers` stories at 320, 375, 768, 1024, 1280, 1536, 1920 light and dark; `docs/design/forms-and-dates.md` pickers section; changelog; Linear comment on PAP-338 and PAP-166.\n\n**Test plan**\n\n* Unit: segment editing; min and max clamping; unavailable date skipping; preset resolution at quarter and year boundaries; DST (`America/Los_Angeles`, `Europe/Berlin`) and leap day; 12 and 24 hour parsing.\n* Interaction (`play`): open picker, arrow to a date, Enter selects, Escape closes returning focus; range selection by keyboard; segment typing advances.\n* E2E: none (Storybook).\n\n**Demo**\n\nReviewer opens Storybook `Pickers/DatePicker`, types a date by keyboard only, opens the calendar with `Alt+Down`, picks \"last quarter\" in the range story, switches locale to `de-DE` and RTL `ar-EG`. Under two minutes.\n\n**Edge cases**\n\n* Paste of `2026-13-01`: rejected segment, field stays invalid with message.\n* Locale with non-Gregorian calendar (`fa-IR`): calendar follows `Intl` calendar; documented limits.\n* User and tenant zones differ: `DateTimeField` shows the zone badge; storage in UTC with zone recorded.\n* Reduced motion: no popover transitions.\n\n**Dependencies**\n\nPAP-237 (hard, Popover), PAP-236 (hard, Field and Input), PAP-212 (soft, dated fallback to React Aria if not merged by 09-22). Soft: PAP-27, PAP-279. Blocks PAP-338, the filter builder, PAP-344 and the sibling.\n\n**Agent**\n\nBuilder: Iris (Component Crafter). Reviewer: Sentinel (Code Reviewer, Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/design-system/form-state-adapters",
+   "title": "Form-state adapters: useAppForm over react-hook-form with Zod, Form and FormField bindings, FieldArray with keyboard reorder, async validation and server error mapping",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Component library covers app shell needs",
+   "parent": "PAP-233",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-25",
+   "deferred": false,
+   "blockedBy": [
+    "r4/design-system/date-time-pickers",
+    "PAP-236"
+   ],
+   "blocks": [
+    "r4/design-system/form-layout-and-unsaved-changes",
+    "r4/tables/form-view-runtime-and-public-submit",
+    "PAP-120"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nSecond half of PAP-233: the thin layer that connects `Field` and every control to `react-hook-form` with Zod so codegen (PAP-120), the form view and settings pages write forms the same way, with arrays, async rules and server errors mapped by path.\n\n**Scope**\n\nIn: `packages/ui/src/forms/{useAppForm,Form,FormField,FieldArray,asyncRule,serverErrors}.tsx`; `meta.ts` spec ids `ui.form`, `ui.fieldArray`; stories `Forms/Invoice example`.\n\nOut: pickers (sibling), form layout components and unsaved-changes guard (`r4/design-system/form-layout-and-unsaved-changes`), validation copy guidelines (PAP-76 `DS-FORM-*`).\n\n**Spec**\n\n* `useAppForm(schema, { defaultValues, mode: 'onBlur' })` wraps `react-hook-form` 7.x with `@hookform/resolvers/zod` and returns typed `register`, `control`, `handleSubmit`, `errors` mapped to `Field.error`, `formState`, plus `setServerErrors(errorMap)` mapping `{ path, issue }[]` (PAP-267 `details` shape) onto fields and a form-level alert.\n* `Form` renders `<form noValidate>` with `aria-describedby` to the form-level alert; `FormField name render` binds any control (`Input`, `Select`, `Combobox`, `DatePicker`, `Switch`) through `Controller` with `Field` label, description and error wiring; `disabled` while submitting.\n* `FieldArray name` renders rows with add, remove and keyboard reorder (`Alt+Up|Down`, announced via PAP-152 when present), virtualised beyond 200 rows, per-row errors.\n* `asyncRule(fn, { debounceMs: 400 })` sets `validating` on the Field, cancels stale calls, surfaces the result as an error or clears it; validation timing on blur then on submit per `DS-FORM-03`.\n* Values for dates are the sibling's `DateValue` types; `Money` fields use minor-unit strings; the resolver never sees JS `Date`.\n\n**Interface contract**\n\nProvides: `useAppForm`, `Form`, `FormField`, `FieldArray`, `asyncRule`, `setServerErrors`, spec ids `ui.form`, `ui.fieldArray`, types `AppForm<T>`. Consumes: controls and `Field` (PAP-236, PAP-238), pickers (sibling), error body shape (PAP-267), announcer (PAP-152, soft). Consumed by PAP-120 codegen forms, `r4/tables/form-view-runtime-and-public-submit`, `r4/design-system/form-layout-and-unsaved-changes`, PAP-75 settings page, PAP-224 auth pages.\n\n**Definition of done**\n\n* Adapters merged with the invoice example story (line items `FieldArray`, async email check, server error mapping); `vitest-axe` clean; screenshots at 375 and 1280 light and dark.\n* `docs/design/forms-and-dates.md` forms section; changelog; Linear comment on PAP-120 naming the import path.\n\n**Test plan**\n\n* Unit: resolver mapping of nested paths; `setServerErrors` path matching including array indices; async rule debounce and cancellation with fake timers; `FieldArray` reorder maths.\n* Interaction (`play`): submit with an invalid email shows the on-blur error; add two rows and reorder by keyboard; async validator shows `validating` then error.\n* E2E: none (Storybook).\n\n**Demo**\n\nReviewer opens Storybook `Forms/Invoice example`, adds two line items, reorders one by keyboard, submits with an invalid email and watches the on-blur error, then triggers a mocked server error mapped to the customer field. Under one minute.\n\n**Edge cases**\n\n* Server error path not in the form: shown in the form-level alert.\n* 10,000-row `FieldArray`: virtualised rows over 200, reorder still announced.\n* Schema with transforms: values passed to `onSubmit` are the transformed output.\n* Submitting while an async rule is pending: waits, then proceeds or shows the error.\n\n**Dependencies**\n\nSibling pickers (hard, date values), PAP-236 (hard). Soft: PAP-267, PAP-152. Blocks the form layout issue, the form view and PAP-120 forms.\n\n**Agent**\n\nBuilder: Iris (Component Crafter). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/design-system/navigation-components",
+   "title": "Navigation components: NavList with nesting and router-aware active state, Breadcrumb, Pagination, Link, Stepper and Kbd",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Component library covers app shell needs",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-25",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-238",
+    "PAP-70",
+    "PAP-68"
+   ],
+   "blocks": [
+    "PAP-63",
+    "PAP-62",
+    "PAP-120"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nPolaris, Atlassian, Carbon and Primer all ship navigation primitives; PaperOS's twenty core components and layout frames leave the sidebar list, breadcrumbs and pagination for each shell to invent. Build them once so the console (PAP-63), portal (PAP-62) and codegen (PAP-120) render navigation from `app.spec.yaml` identically.\n\n**Scope**\n\nIn: `packages/ui/src/navigation/{NavList,NavItem,NavGroup,Breadcrumb,Pagination,Link,Stepper,Kbd}.tsx` with `meta.ts` spec ids and stories; router adapter `useActiveMatch` for TanStack Router (PAP-16) without importing the router in `packages/ui` (adapter injected by the shell).\n\nOut: `AppFrame` and drawers (PAP-70), command palette (PAP-290), tabs (PAP-238), tenant switcher (PAP-63 owns its data).\n\n**Spec**\n\n* `NavList` vertical list with `NavGroup` (collapsible, remembers state in `localStorage` under `pos.nav.<appId>`, try/catch), `NavItem { href, icon: IconName, label, badge?, exact? }`, nested items to depth 3 with indentation, `aria-current=\"page\"` from `useActiveMatch`, roving tabindex (PAP-152 hook when present, native Tab otherwise), collapsed rail mode showing icons with tooltips at `sidebar` container widths under 80 px.\n* `Breadcrumb` from `{ label, href? }[]` with overflow into a Menu when more than four crumbs or when the container is narrow, `aria-label=\"Breadcrumb\"`, current item not a link; `Pagination` cursor mode (`hasPrev`, `hasNext`, page size select) and page mode (numbers with ellipsis), `aria-label` per control, keyboard operable.\n* `Link` wraps the router link adapter with external detection (`rel=\"noopener\"`, external icon), `variant: 'inline'|'standalone'`, visited styling off by default; `Stepper` horizontal and vertical with states `complete|current|upcoming|error`, clickable when `linear: false`, `aria-current=\"step\"`.\n* `Kbd` renders chords from PAP-150 `formatChord(platform)` (`⌘K` on macOS, `Ctrl+K` elsewhere) with `<kbd>` semantics; used by `ShortcutHint` (PAP-290) and the help sheet.\n* All components use logical properties (RTL), tokens only, sizes `sm|md`, and register `meta.ts` with `slots` so codegen can place `NavList` into `AppFrame.nav`.\n\n**Interface contract**\n\nProvides: components with spec ids `ui.navList`, `ui.navItem`, `ui.navGroup`, `ui.breadcrumb`, `ui.pagination`, `ui.link`, `ui.stepper`, `ui.kbd`; `NavAdapterProvider` (router adapter injection); `useActiveMatch`. Consumes: Menu, Tooltip, Select (PAP-237, PAP-238), `AppFrame` container names (PAP-70), `Icon` (PAP-68), `formatChord` (PAP-150, soft), roving tabindex (PAP-152, soft), router slot contract (PAP-16, adapter only). Consumed by PAP-63 console, PAP-62 portal, PAP-120 codegen navigation, PAP-290 `ShortcutHint`, PAP-367 onboarding wizard (Stepper).\n\n**Definition of done**\n\n* Eight components merged with stories including collapsed rail, nested groups, overflow breadcrumb and RTL; `play` tests for NavGroup collapse, Pagination keyboard and Stepper navigation; `vitest-axe` clean.\n* Screenshots at 320, 375, 768, 1024, 1280, 1536, 1920 light and dark; `docs/design/navigation.md`; changelog; Linear comment on PAP-63 and PAP-62.\n\n**Test plan**\n\n* Unit: active match with `exact` and nested routes; breadcrumb overflow decision by count and width; pagination ellipsis maths; chord formatting per platform; group state persistence with a throwing `localStorage`.\n* Interaction: collapse and expand a group by keyboard; rail mode tooltips; pagination page-size change announces.\n* E2E: none (Storybook; shells cover routing).\n\n**Demo**\n\nReviewer opens Storybook `Navigation/NavList playground`, collapses the sidebar container to rail width, expands a nested group by keyboard, then opens `Breadcrumb` with eight crumbs at 375 and sees the overflow menu. Under one minute.\n\n**Edge cases**\n\n* Two items match the current route: deepest wins.\n* Badge count over 99: `99+`.\n* Stepper with 12 steps at 320 px: vertical fallback.\n* External link inside Tauri: opens in the system browser via the shell adapter (PAP-19).\n\n**Dependencies**\n\nPAP-238 (hard), PAP-70 (hard, container names), PAP-68 (hard, icons). Soft: PAP-150, PAP-152, PAP-16. Blocks PAP-63, PAP-62 navigation and PAP-120's navigation emission.\n\n**Agent**\n\nBuilder: Iris (Component Crafter). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/design-system/surface-and-feedback-components",
+   "title": "Surface and feedback components: Card, Accordion, InlineAlert, Callout, Progress, Spinner, ScrollArea, Toolbar, SegmentedControl and HoverCard",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Component library covers app shell needs",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-25",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-238",
+    "PAP-72"
+   ],
+   "blocks": [
+    "PAP-234",
+    "PAP-386",
+    "r4/tables/view-toolbar-sort-group-aggregates"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nEvery design system in the benchmark set (shadcn, Radix Themes, Material 3, Polaris, Carbon) ships these ten; PaperOS pages would otherwise compose them from divs. They are what dashboards, settings pages, record panels and the view toolbar are built from.\n\n**Scope**\n\nIn: `packages/ui/src/surfaces/{Card,Accordion,InlineAlert,Callout,Progress,Spinner,ScrollArea,Toolbar,SegmentedControl,HoverCard}.tsx` with `meta.ts` spec ids and stories.\n\nOut: Toast (PAP-237), banners tied to page states (PAP-234 `OfflineBanner`), Tabs (PAP-238), data display (PAP-71 children).\n\n**Spec**\n\n* `Card` with `header`, `media`, `footer` slots, `interactive` variant (whole card focusable with one action), `tone`, elevation from PAP-66 shadows; `Accordion` single or multiple, `Collapse` animation from PAP-72, `Home/End` and arrows per APG, `lazy` panels.\n* `InlineAlert` tones `info|success|warning|danger` with icon, title, body, actions and optional dismiss (`role=\"alert\"` only for danger, `role=\"status\"` otherwise, never auto-dismissed); `Callout` is the muted documentation variant with an accent bar.\n* `Progress` linear and circular, determinate (`value`, `max`, `aria-valuenow`) and indeterminate, `size`, `tone`, label slot; `Spinner` sizes `xs..lg` with `aria-label`, hidden under 300 ms delay to avoid flashes (`delayMs`).\n* `ScrollArea` custom scrollbars on the primitive library's `ScrollArea` with `type: 'auto'|'always'|'scroll'`, RTL and touch native fallback, shadow hints at edges; `Toolbar` `role=\"toolbar\"` with roving tabindex, `orientation`, overflow into a Menu when children exceed the width (`ResizeObserver`), `ToolbarSeparator`.\n* `SegmentedControl` (toggle group) single or multiple selection, icon-only mode with tooltips, keyboard per radio group semantics; `HoverCard` for previews (record, user) with 300 ms delay, focusable trigger fallback (`Enter` opens), never for essential content.\n\n**Interface contract**\n\nProvides: components with spec ids `ui.card`, `ui.accordion`, `ui.inlineAlert`, `ui.callout`, `ui.progress`, `ui.spinner`, `ui.scrollArea`, `ui.toolbar`, `ui.segmentedControl`, `ui.hoverCard`. Consumes: Menu, Tooltip, Popover (PAP-237), Button (PAP-236), `Collapse` and `useReducedMotion` (PAP-72), tokens (PAP-66), roving tabindex (PAP-152, soft). Consumed by PAP-234 states, PAP-386 block chrome, the view toolbar issue, PAP-333 record panel, PAP-62 and PAP-63 shells, PAP-76 guideline embeds.\n\n**Definition of done**\n\n* Ten components merged with stories for every variant; `play` tests for Accordion keyboard, Toolbar overflow and SegmentedControl; `vitest-axe` clean.\n* Screenshots at 320, 375, 768, 1024, 1280, 1536, 1920 light and dark; RTL story; `docs/design/components.md` entries with when-to-use lines; changelog.\n\n**Test plan**\n\n* Unit: Accordion state modes; Toolbar overflow computation; Progress clamp and aria values; Spinner delay with fake timers; SegmentedControl selection modes.\n* Interaction: Accordion arrows and Home/End; Toolbar roving and overflow menu; HoverCard opens on focus and closes on Escape.\n* E2E: none (Storybook).\n\n**Demo**\n\nReviewer opens Storybook `Surfaces/Gallery`, shrinks the Toolbar story until items overflow into the menu, tabs through an Accordion, and hovers a HoverCard by keyboard. Under one minute.\n\n**Edge cases**\n\n* Card with an interactive variant containing buttons: nested interactive content warned in dev, inner buttons stop propagation.\n* InlineAlert inside a live region: `role=\"status\"` avoids double announcement.\n* ScrollArea on touch: native scrolling, custom bars hidden.\n* Toolbar in RTL: overflow menu anchors to the start edge.\n\n**Dependencies**\n\nPAP-238 (hard, primitives complete), PAP-72 (hard, `Collapse`). Soft: PAP-152. Blocks PAP-234, PAP-386 and the view toolbar issue.\n\n**Agent**\n\nBuilder: Iris (Component Crafter). Reviewer: Sentinel (Visual Inspector, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/design-system/specialised-inputs",
+   "title": "Specialised inputs: NumberInput, PasswordInput, OTPInput, SearchInput, ColorPicker, FileUpload with progress and crop, TagInput and RatingInput",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Component library covers app shell needs",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-25",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-238",
+    "PAP-37"
+   ],
+   "blocks": [
+    "r4/design-system/tenant-branding-settings-and-logo",
+    "PAP-339"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nThe nine form controls in PAP-236 cover text and toggles; auth pages need OTP and password fields, the branding page needs a colour picker, attachments need an upload control with progress, select editors need chips. Build the eight specialised inputs the benchmark systems ship so no page hand-rolls one.\n\n**Scope**\n\nIn: `packages/ui/src/inputs/{NumberInput,PasswordInput,OTPInput,SearchInput,ColorPicker,FileUpload,TagInput,RatingInput}.tsx` with `meta.ts` spec ids, stories, `Field` integration and `useAppForm` compatibility.\n\nOut: date and time (PAP-233 children), rich text (PAP-142), combobox internals (PAP-238), drag-and-drop sensors (PAP-329; `FileUpload` uses native drop with an optional `DropZone` upgrade).\n\n**Spec**\n\n* `NumberInput`: locale-aware parsing and formatting via `Intl.NumberFormat` (`de-DE` `1.234,5`), stepper buttons and `ArrowUp|Down` with `step` and `shift` ×10, `min|max|precision`, `inputmode=\"decimal\"`, optional unit or currency adornment, minor-unit mode for `Money` (string in and out).\n* `PasswordInput`: reveal toggle with `aria-pressed`, optional strength meter (zxcvbn-ts, lazy), caps-lock hint; `OTPInput`: n boxes (default 6), paste of a full code distributes, auto-advance and backspace, `autocomplete=\"one-time-code\"`, single hidden input for screen readers, `onComplete`.\n* `SearchInput`: leading icon, clear button, `Escape` clears, optional `shortcut` hint (`Kbd`), `loading` state, debounced `onSearch`; `RatingInput`: stars or custom icon, `max`, half steps, keyboard arrows, `aria-valuetext` (\"3 of 5\").\n* `ColorPicker`: OKLCH-aware picker with hue and lightness planes, hex and OKLCH text inputs, swatches from the token ramps, eyedropper when `EyeDropper` exists, live contrast readout against `bg.surface` using PAP-66's `tokens:check` maths; value is a hex string.\n* `FileUpload`: click or drop (native `dragover`), `accept`, `multiple`, `maxSize`, per-file progress from PAP-37 `uploadFile`, retry, remove, image preview with an optional crop step (`react-easy-crop`, aspect presets for avatars and logos) producing a Blob; `TagInput`: chips with remove, `Combobox` suggestions (PAP-238), `allowCustom`, paste splitting on commas, max tags, chips reorder by keyboard.\n* All controls forward refs, expose `data-invalid|data-disabled`, work inside `Field`, and follow the 44 px coarse-pointer rule.\n\n**Interface contract**\n\nProvides: components with spec ids `ui.numberInput`, `ui.passwordInput`, `ui.otpInput`, `ui.searchInput`, `ui.colorPicker`, `ui.fileUpload`, `ui.tagInput`, `ui.ratingInput`; `parseLocaleNumber`, `formatLocaleNumber`. Consumes: Field, Input, Button (PAP-236), Combobox (PAP-238), Popover (PAP-237), `Icon` (PAP-68), uploads and variants (PAP-37), contrast maths (PAP-66), `Kbd` (`r4/design-system/navigation-components`, soft). Consumed by the branding page, PAP-224 auth pages (OTP, password), PAP-339 `multiSelect` editor (`TagInput`) and attachment editor (`FileUpload`), PAP-338 number and rating editors, PAP-58 avatars.\n\n**Definition of done**\n\n* Eight controls merged with stories for every state and RTL; `play` tests for OTP paste, NumberInput stepping, TagInput keyboard and FileUpload progress with a mocked uploader; `vitest-axe` clean.\n* Screenshots at 320, 375, 768, 1024, 1280, 1536, 1920 light and dark; `docs/design/forms-and-dates.md` inputs section; changelog; Linear comment on PAP-224 and PAP-339.\n\n**Test plan**\n\n* Unit: locale number parse and format for five locales; OTP paste distribution; rating half steps and `aria-valuetext`; colour conversions and contrast readout; tag paste splitting; file size and type validation.\n* Interaction: reveal password; OTP auto-advance and backspace; NumberInput shift-step; crop step produces a blob of the requested aspect.\n* E2E: none (Storybook; consumers cover flows).\n\n**Demo**\n\nReviewer opens Storybook `Inputs/Gallery`, pastes a six-digit code into OTPInput, steps a NumberInput in `de-DE`, picks a colour and reads the contrast badge, drops an image into FileUpload and crops it. Under two minutes.\n\n**Edge cases**\n\n* Paste of `1,234.56` into a `de-DE` NumberInput: parsed with a preview of the interpretation before commit.\n* `EyeDropper` unsupported: button hidden.\n* Upload fails mid-way: retry keeps the queue order; removed files abort their request.\n* OTP on iOS: `autocomplete=\"one-time-code\"` autofill fills all boxes.\n\n**Dependencies**\n\nPAP-238 (hard), PAP-37 (hard for real uploads; mocked uploader in stories). Soft: navigation `Kbd`. Blocks the branding page (ColorPicker, FileUpload) and PAP-339 (TagInput, FileUpload); PAP-224 swaps in `OTPInput` when it lands (soft).\n\n**Agent**\n\nBuilder: Iris (Component Crafter). Reviewer: Sentinel (Code Reviewer, Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/design-system/static-data-table",
+   "title": "Static DataTable (ui.dataTable) for spec pages and settings lists: sortable columns, selection, sticky header, responsive card collapse, no compiler or virtualisation",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Component library covers app shell needs",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-25",
+   "deferred": false,
+   "blockedBy": [
+    "r4/design-system/cell-renderer-registry-and-cells",
+    "PAP-238"
+   ],
+   "blocks": [
+    "PAP-120",
+    "PAP-125",
+    "PAP-64"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nCodegen and the example specs (PAP-120, PAP-125) emit `ui.dataTable`, and the round-2 audit flagged that neither design-system nor tables owns it. The views grid (PAP-165) is the heavy, compiler-bound engine; settings lists, permission matrices, API key tables and small admin lists need a light static table over an in-memory array. Build it with an explicit boundary so nobody reaches for the wrong one.\n\n**Scope**\n\nIn: `packages/ui/src/data/table/{DataTable,columns,useTableSort,useRowSelection,ResponsiveRows}.tsx`; `meta.ts` `ui.dataTable`; `@tanstack/react-table` 8.x core only (sorting, selection, column sizing), no virtualiser; stories and docs with the \"when to use DataTable vs GridView\" table.\n\nOut: server pagination, filtering UI, grouping, inline editing, virtualisation (all PAP-165 and the views engine), CSV export (consumers call the export issue's writers).\n\n**Spec**\n\n* `DataTable<T> { columns: ColumnDef<T>[], rows: T[], getRowId, sort?, onSortChange?, selection?, onSelectionChange?, density, caption, emptyState?, maxRows = 500 }`; above `maxRows` it renders the first 500 with a banner pointing at `GridView` (dev warning); cells render via `getCell(type)` when a column declares `type`, else a custom `cell`.\n* Semantics: `<table>` with `<caption>` (visually hidden allowed), `<th scope=\"col\">` with `aria-sort`, sticky header inside a `ScrollArea`, row selection checkboxes with a header tri-state and `Shift+click` ranges, keyboard sort on `Enter|Space`, focusable rows when `onRowClick`.\n* Responsive: below the `md` container width rows collapse into cards (`ResponsiveRows`) using the first column as the title and the rest as `KeyValue` pairs; `priority` on columns hides low-priority columns first before collapsing.\n* Densities `compact|default|comfortable` share tokens with the grid (PAP-341) so mixed pages look consistent; zebra optional; column `align` and `width` (px or fr); `loading` renders `Skeleton` rows; empty renders `EmptyState`.\n* Spec mapping: `meta.ts` props schema lets `page.spec.yaml` declare columns `{ key, label, type, sortable }` bound to a data section array (PAP-119); codegen emits `DataTable` for `list` layouts under 500 rows without a view spec and `GridView` otherwise, documented in PAP-120's template.\n\n**Interface contract**\n\nProvides: `DataTable`, `ColumnDef` helper `col()`, `useTableSort`, `useRowSelection`, spec id `ui.dataTable` with props schema, docs decision table. Consumes: cells and formatters (`r4/design-system/cell-renderer-registry-and-cells`), Checkbox, Menu (PAP-236, PAP-237), `ScrollArea`, `KeyValue`, `Skeleton`, `EmptyState` (surface and data-display issues, soft: plain fallbacks), tokens shared with the grid (PAP-341, agreement only). Consumed by PAP-120 codegen, PAP-125 examples, PAP-64 permission matrix pages, PAP-222 API keys page, PAP-63 admin lists.\n\n**Definition of done**\n\n* Component merged with stories (sortable, selectable, responsive collapse, loading, empty, 500-row cap banner); `play` tests for sort and selection; `vitest-axe` clean including `aria-sort` and header scope.\n* Screenshots at 320, 375, 768, 1024, 1280, 1536, 1920 light and dark; `docs/design/data-display.md` \"DataTable vs GridView\" table; changelog; Linear comment on PAP-120 and PAP-125.\n\n**Test plan**\n\n* Unit: sort comparators per cell type (numbers, dates, strings with locale collation, nulls last); selection reducer with shift ranges; priority-based column hiding; cap banner.\n* Interaction: keyboard sort toggles `aria-sort`; header checkbox tri-state; cards mode at a narrow container.\n* E2E: none (Storybook; consumers cover pages).\n\n**Demo**\n\nReviewer opens Storybook `Data/DataTable`, sorts by amount, selects three rows with Shift, shrinks the container and watches rows become cards, then loads the 600-row story and reads the GridView banner. Under one minute.\n\n**Edge cases**\n\n* Column type `currency` with mixed currencies: sorted by minor amount within currency, then currency code.\n* Rows change while selected: selection keyed by `getRowId`, orphans dropped.\n* RTL: sticky header shadow and alignment flip.\n* Print: cards mode disabled, full table with repeated header.\n\n**Dependencies**\n\n`r4/design-system/cell-renderer-registry-and-cells` (hard), PAP-238 (hard). Soft: surface and data-display issues, PAP-341 (token agreement). Blocks PAP-120, PAP-125, PAP-64.\n\n**Agent**\n\nBuilder: Iris (Component Crafter) with Nova agreeing the GridView boundary. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/design-system/dataviz-tokens-and-microcharts",
+   "title": "Dataviz tokens and micro-charts: categorical, sequential and diverging palettes validated in three themes, chart theme builder and Sparkline, MiniBar, ProgressRing components",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Staff"
+   ],
+   "milestone": "Component library covers app shell needs",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-25",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-66",
+    "PAP-293"
+   ],
+   "blocks": [
+    "r4/tables/chart-view-echarts",
+    "PAP-386"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nPAP-170 says \"the dataviz palette mapped onto `--pos-color-*`\" and PAP-71's `Stat` has a sparkline slot, but no issue defines the palette tokens, validates them for contrast and colour-vision deficiency, or ships the tiny inline charts that stats, cells and dashboard number blocks need without loading ECharts. Own that here so every chart in the platform reads as one system.\n\n**Scope**\n\nIn: `packages/ui/tokens/dataviz.tokens.json` (DTCG) with `color.dataviz.categorical.1-12`, `sequential.{accent,neutral}.1-9`, `diverging.1-11`, `semantic.{positive,negative,neutral}`; `pnpm tokens:check-dataviz` (contrast against `bg.surface` and pairwise distinguishability with a CVD simulation via `culori`); `buildChartTheme(tokens)` (library-agnostic object plus an ECharts adapter); `packages/ui/src/dataviz/{Sparkline,MiniBar,ProgressRing,Legend}.tsx` in inline SVG.\n\nOut: full chart views (`r4/tables/chart-view-echarts`), map styles, print palettes (PAP-235).\n\n**Spec**\n\n* Categorical palette: 12 OKLCH hues at matched lightness per theme, ordered so the first six are maximally distinguishable under deuteranopia and protanopia simulation (pairwise ΔE > 20 in the simulated space); dark and hc variants; hc doubles as patterns (`fill` hatch ids) exported alongside colours.\n* Sequential ramps derive from the accent and neutral ramps of PAP-66; diverging joins `danger` and `success` through neutral; every step passes 3:1 against `bg.surface` for large marks and the checker reports failures per theme.\n* `buildChartTheme(tokens)` returns `{ palette, grid, axis, tooltip, font, radius }` from resolved tokens and an `echartsTheme(theme)` adapter; regenerated on `theme.changed`; the dataviz skill's validator rules (form, colour, mark) are encoded as tests where checkable.\n* `Sparkline { data, width, height, tone, showLast }` inline SVG with `<title>` summary, no axes, under 1 KB DOM; `MiniBar { value, max, tone }` for cells and conditional formatting bars; `ProgressRing { value, max, size, label }` with `role=\"progressbar\"`; `Legend { items, onToggle }` textual legend with patterns in hc; all respect reduced motion (no draw animation).\n* Tokens compile through PAP-66's Style Dictionary build into `--pos-color-dataviz-*`; TypeScript export `dataviz` in `tokens.ts`.\n\n**Interface contract**\n\nProvides: dataviz DTCG tokens and CSS variables, `tokens:check-dataviz`, `buildChartTheme`, `echartsTheme`, components with spec ids `ui.sparkline`, `ui.miniBar`, `ui.progressRing`, `ui.chartLegend`, pattern ids for hc. Consumes: token build and contrast maths (PAP-66), chart library ADR (PAP-293), theme change (theme provider issue, soft). Consumed by `r4/tables/chart-view-echarts`, PAP-386 `NumberBlock`, `Stat` (data-display issue), `r4/tables/conditional-formatting` (`MiniBar`), PAP-186.\n\n**Definition of done**\n\n* Tokens merged and compiled; checker green in light, dark and hc with the CVD report attached; four components with stories; `vitest-axe` clean.\n* Screenshots of the palette swatches and micro-charts at 375 and 1280 in three themes; `docs/design/dataviz.md` (palette usage rules, when to use which ramp); changelog; Linear comment on PAP-170 and PAP-386.\n\n**Test plan**\n\n* Unit: palette ordering under CVD simulation; contrast per step per theme; `buildChartTheme` token resolution; sparkline path generation with nulls; progress ring arc maths.\n* Snapshot: `echartsTheme(light)` JSON committed and diffed.\n* E2E: none (Storybook).\n\n**Demo**\n\nReviewer opens Storybook `Foundations/Dataviz`, toggles the deuteranopia simulation decorator and confirms the first six categories stay distinct, switches to hc and sees patterns, then reads a Sparkline's title. Under one minute.\n\n**Edge cases**\n\n* More than 12 series: colours cycle with a lighter tint and the legend warns.\n* Sparkline with a single point: renders a dot.\n* Tenant accent close to a categorical hue: sequential ramp still derives; categorical stays fixed (documented).\n* Forced colours: SVG uses `CanvasText` and patterns.\n\n**Dependencies**\n\nPAP-66 (hard), PAP-293 (soft, adapter target; ECharts assumed). Blocks the chart view and PAP-386; the data-display `Stat` slot consumes `Sparkline` softly.\n\n**Agent**\n\nBuilder: Iris (Token Keeper) with the dataviz plugin. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/design-system/typography-components-and-prose",
+   "title": "Typography components: Text, Heading with decoupled level and size, Prose for MDX and rich text, Code and inline Kbd styling on the type tokens",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Component library covers app shell needs",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-25",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-66",
+    "PAP-236"
+   ],
+   "blocks": [
+    "PAP-142",
+    "PAP-76"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-66 defines the type scale but nothing turns it into components, so agents write `text-xl font-semibold` by hand and headings drift. Ship `Text`, `Heading` and `Prose` so pages, docs (PAP-128) and rich text (PAP-142) share one typographic system, and `Code` so snippets and inline keys look the same everywhere.\n\n**Scope**\n\nIn: `packages/ui/src/typography/{Text,Heading,Prose,Code}.tsx` with `meta.ts` spec ids; `prose.css` scoped styles for MDX and Tiptap output; `useHeadingLevel` context; stories with the full scale.\n\nOut: fonts and tokens (PAP-66), the `Kbd` component (navigation issue; `Prose` styles `<kbd>`), `RichTextEditor` chrome (PAP-142), reading-width guidelines prose (PAP-76).\n\n**Spec**\n\n* `Text { size: 'xs'..'xl', weight, tone: 'default'|'muted'|'subtle'|'danger'|..., truncate?, lineClamp?, as }` maps to PAP-66 type tokens only; tabular numerals option; `Heading { level: 1..6, size?: 'sm'..'4xl', as? }` decouples semantic level from visual size, and `HeadingLevelProvider` auto-increments levels in nested sections so codegen never emits skipped levels.\n* `Prose` applies a scoped stylesheet (`.pos-prose`) for headings, paragraphs, lists, tables, blockquotes, code, images, `<kbd>`, links and footnotes rendered by MDX (PAP-128) and Tiptap JSON (PAP-142); measure 65ch, vertical rhythm on the 4 px grid, `size: 'sm'|'md'|'lg'`, dark and hc variants, RTL-safe (logical margins), print styles.\n* `Code { inline?, language?, wrap? }` for inline and block code with tokens for background and border; block mode integrates with the highlighter the docs engine chooses (Shiki via PAP-128, soft) through a `highlight` prop, defaulting to plain.\n* Fluid display sizes use PAP-66 `clamp()` tokens; `--pos-font-scale` (from `r4/input/accessibility-input-preferences`) multiplies the scale; text never below 12 px.\n* Lint hook: the design lint issue flags raw `text-*`/`font-*` utilities outside `packages/ui` in favour of these components.\n\n**Interface contract**\n\nProvides: components with spec ids `ui.text`, `ui.heading`, `ui.prose`, `ui.code`; `HeadingLevelProvider`, `useHeadingLevel`; `prose.css`. Consumes: type tokens and fluid sizes (PAP-66), `cn` and conventions (PAP-236), `--pos-font-scale` (a11y preferences, soft), highlighter (PAP-128, soft). Consumed by PAP-128 docs engine, PAP-142 rich text rendering, PAP-76 guideline pages, PAP-234 states, PAP-120 codegen headings.\n\n**Definition of done**\n\n* Four components merged with stories (full scale, nested heading levels, Prose sample document in three sizes and RTL); `vitest-axe` clean including heading order.\n* Screenshots at 375, 768, 1280 light, dark and hc; `docs/design/typography.md`; changelog; Linear comment on PAP-128 and PAP-142.\n\n**Test plan**\n\n* Unit: size and tone class mapping; heading level auto-increment and clamp at 6; line clamp; `Prose` size variants snapshot.\n* Docs: an MDX fixture and a Tiptap JSON fixture render through `Prose` with identical computed styles for matching elements.\n* E2E: none (Storybook).\n\n**Demo**\n\nReviewer opens Storybook `Typography/Prose`, switches size and RTL, then opens `Heading/Nested sections` and inspects that levels increment automatically. Under one minute.\n\n**Edge cases**\n\n* Heading level beyond 6: clamped with a dev warning.\n* Prose inside a card at 320 px: measure collapses to container width.\n* Font scale 1.5: display sizes clamp to viewport.\n* Forced colours: links keep underline.\n\n**Dependencies**\n\nPAP-66 (hard), PAP-236 (hard). Soft: a11y preferences, PAP-128. Blocks PAP-142 output styling and PAP-76 pages; PAP-128 adopts `Prose` when it lands (soft).\n\n**Agent**\n\nBuilder: Iris (Component Crafter). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/design-system/form-layout-and-unsaved-changes",
+   "title": "Form layout and unsaved-changes guard: FormLayout, FormSection, FieldGroup, FormActions sticky bar, dirty-state indicator and useUnsavedChangesGuard with router and beforeunload blocking",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Component library covers app shell needs",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-25",
+   "deferred": false,
+   "blockedBy": [
+    "r4/design-system/form-state-adapters",
+    "PAP-70"
+   ],
+   "blocks": [
+    "PAP-333",
+    "PAP-120",
+    "PAP-124"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-333 references a `FieldGroup`, every settings page needs a sticky save bar, and nothing stops a user navigating away from a half-edited form. Ship the layout pieces and the guard once so codegen and the record page get consistent forms and never lose edits silently.\n\n**Scope**\n\nIn: `packages/ui/src/forms/{FormLayout,FormSection,FieldGroup,FormActions,DirtyIndicator,useUnsavedChangesGuard}.tsx` with `meta.ts` spec ids; router-agnostic `blocker` adapter injected by the shell (TanStack Router `useBlocker` in `apps/web`); `beforeunload` handling; stories.\n\nOut: form state (PAP-233 child), autosave semantics (consumers), conflict UX (PAP-144).\n\n**Spec**\n\n* `FormLayout { columns: 1|2, gap }` with responsive collapse to one column under the `md` container width; `FormSection { title, description, collapsible? }` with `Heading` levels from the typography issue; `FieldGroup { label, description, orientation }` groups related fields under a `fieldset`/`legend` and is the shape PAP-333 uses for record field groups and PAP-161's `FieldDef.group`.\n* `FormActions { primary, secondary, tertiary?, sticky }`: sticky bottom bar inside the nearest scroll container with a top shadow when content scrolls beneath, `padding-bottom` honouring `--pos-keyboard-inset` and safe areas, `DirtyIndicator` (\"Unsaved changes\") when the form is dirty, primary disabled while submitting with a `Spinner`.\n* `useUnsavedChangesGuard(isDirty, { message })`: blocks in-app navigation through the injected router blocker with an `AlertDialog` (Stay, Discard, Save when `onSave` given), sets `beforeunload` while dirty, disarms on submit success, integrates with `useAppForm` via `formState.isDirty`; multi-window aware (PAP-145) so closing a detached window with a dirty form prompts.\n* Accessibility: the dialog is the PAP-237 `AlertDialog` with initial focus on Stay; `DirtyIndicator` uses `role=\"status\"` announced once; sticky bar never covers the last field (scroll padding).\n* Codegen contract: PAP-120 wraps generated `form` layouts in `FormLayout` and emits `FormActions` with the spec's actions; `states.dirty` from the page spec maps to the guard.\n\n**Interface contract**\n\nProvides: components with spec ids `ui.formLayout`, `ui.formSection`, `ui.fieldGroup`, `ui.formActions`, `ui.dirtyIndicator`; `useUnsavedChangesGuard`; `NavigationBlockerProvider` adapter contract. Consumes: `useAppForm` (form adapters), `AlertDialog` (PAP-237), `Heading` (typography issue, soft), scroll containers and safe areas (PAP-70), keyboard inset (`r4/input/virtual-keyboard-viewport`, soft), window bus (PAP-145, soft). Consumed by PAP-333 record fields, PAP-120 codegen, PAP-124 spec editor save flow, the branding settings page.\n\n**Definition of done**\n\n* Components and guard merged with stories (two-column, collapsible sections, sticky actions with dirty state, guard dialog); `play` test for the guard dialog; `vitest-axe` clean.\n* Screenshots at 375, 768, 1280 light and dark; `docs/design/forms-and-dates.md` layout and guard section; changelog; Linear comment on PAP-333 and PAP-120.\n\n**Test plan**\n\n* Unit: dirty detection wiring; guard arm and disarm sequence; `beforeunload` registration only while dirty; sticky shadow state from scroll position.\n* Integration (apps/web): navigate away from a dirty form shows the dialog; Discard proceeds; Save calls `onSave` then proceeds; submit success disarms.\n* E2E: edit the demo settings form, press the browser back button, choose Stay, save, then navigate freely.\n\n**Demo**\n\nReviewer edits a field in the branding settings page, clicks a sidebar link, gets the Stay, Discard or Save dialog, saves and leaves. Under one minute.\n\n**Edge cases**\n\n* Form unmounts while dirty due to a route redirect from the server: guard disarms, no orphan dialog.\n* Two dirty forms on one page: one combined prompt.\n* Keyboard open on mobile: sticky bar rides above the inset.\n* Print: sticky bar hidden.\n\n**Dependencies**\n\n`r4/design-system/form-state-adapters` (hard), PAP-70 (hard, scroll containers). Soft: typography issue, virtual keyboard issue, PAP-145. Blocks PAP-333, PAP-120 form layouts, PAP-124.\n\n**Agent**\n\nBuilder: Iris (Component Crafter). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/design-system/design-lint-rules",
+   "title": "Design lint rules in Gate 1: no raw colours, no arbitrary spacing, tokens-only utilities, registered icons only, motion and focus rules, with autofix and an allowlist",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Component library covers app shell needs",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-25",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-66",
+    "PAP-68",
+    "PAP-78"
+   ],
+   "blocks": [
+    "PAP-244",
+    "PAP-76"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nTwenty parallel agent sessions will each pick a slightly different blue unless the build refuses. PAP-66 lints token files and PAP-72 bans `transition: all`, but nothing checks application code. Add the design lint rules that keep generated pages on tokens and registered parts, wired into Gate 1 and readable by the spec-conformance reviewer.\n\n**Scope**\n\nIn: `ops/lint/design/` as a Biome plugin (GritQL) or ESLint flat-config package if Biome cannot express a rule; rules `no-raw-color`, `no-arbitrary-spacing`, `no-unregistered-icon`, `no-raw-typography`, `prefer-ui-component` (raw `<button>`, `<input>`, `<table>` in `apps/**` and `packages/**` outside `packages/ui`), `no-inline-style-color`, `no-transition-all` (moves here from PAP-72), `no-raw-control-height` (literal control heights outside `packages/ui`, see density modes); autofix where deterministic; `design-lint.allow.json` with expiry; Gate 1 job.\n\nOut: a11y linting (PAP-73 axe and `eslint-plugin-jsx-a11y` via PAP-78), spec validation (PAP-115), vision checks (PAP-84).\n\n**Spec**\n\n* `no-raw-color`: flags hex, `rgb()`, `hsl()`, `oklch()` literals and Tailwind palette utilities (`bg-red-500`) in TSX, CSS and Tailwind `@apply`; allowed: `var(--pos-*)`, token utilities from PAP-66's `@theme`; autofix maps the nearest token by OKLCH distance when within ΔE 5, else reports.\n* `no-arbitrary-spacing`: flags `p-[13px]`, `mt-[7px]`, raw `px` in `style` for spacing properties; allowed values from the 4 px scale; `no-raw-typography`: flags `text-[..]`, `font-[..]` and raw `font-size` outside `packages/ui`, pointing at `Text` and `Heading`.\n* `no-unregistered-icon`: any `<Icon name=\"...\" />` or `icon:` in specs must exist in PAP-68's `icon-names.json`; `prefer-ui-component`: raw interactive elements suggest the `ui.*` equivalent with a fixable import when props map one to one.\n* Allowlist entries `{ rule, path, reason, expires }` fail the build when expired; the report `design-lint.json` follows the PAP-239 artefact shape so PAP-244 (spec-conformance reviewer) can cite rule ids, which are also listed in PAP-76's `rules.json` as `checkable: 'lint'`.\n* Runs on changed files in Gate 1 under 30 s; `pnpm lint:design --fix` locally; rules documented with Do and Don't in `docs/design/lint.md`.\n\n**Interface contract**\n\nProvides: lint package `@paperos/design-lint`, rule ids `DS-LINT-*`, `design-lint.json` artefact, allowlist schema, Gate 1 job `design-lint`. Consumes: token names and `@theme` (PAP-66), `icon-names.json` (PAP-68), Gate 1 job slot and Biome config (PAP-78), artefact schema (PAP-239, soft), `rules.json` ids (PAP-76, soft). Consumed by PAP-244 reviewer prompts, PAP-76 (checkable rules), every builder session.\n\n**Definition of done**\n\n* Eight rules with tests (passing and failing fixtures each); autofix proven on a seeded raw-colour commit; Gate 1 job green on the template and failing on the seed.\n* `docs/design/lint.md`; changelog; Linear comment on PAP-244 and PAP-76 with the rule id list.\n\n**Test plan**\n\n* Unit: each rule's positive and negative fixtures; token nearest-match autofix; allowlist expiry; artefact schema validity.\n* CI: job runtime under 30 s on a 200-file diff; seeded violation fails the PR (reverted commit as proof).\n* E2E: none.\n\n**Demo**\n\nReviewer adds `className=\"bg-[#ff0000] p-[13px]\"` to a page, runs `pnpm lint:design` and reads two findings with token suggestions, then `--fix` replaces the colour. Under one minute.\n\n**Edge cases**\n\n* Colour inside an SVG illustration file: `illustrations/**` allowlisted by path.\n* Third-party component class names: only PaperOS packages and apps are scanned.\n* Dynamic class strings (`clsx(cond && 'bg-...')`): scanned as string literals; template expressions reported at low confidence.\n* Tokens renamed: rule reads the generated `tokens.ts`, no hard-coded list.\n\n**Dependencies**\n\nPAP-66 (hard), PAP-68 (hard, icon names), PAP-78 (hard, Gate 1). Soft: PAP-239, PAP-76. Blocks PAP-244's rule citations and PAP-76's `checkable: lint` entries.\n\n**Agent**\n\nBuilder: Iris (Token Keeper) with Sentinel (Code Reviewer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/design-system/density-modes",
+   "title": "Density modes: compact, default and comfortable as a runtime setting with density tokens for control heights, spacing and row heights, applied by every component",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Themable per tenant with docs",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-66",
+    "PAP-238",
+    "PAP-72"
+   ],
+   "blocks": [
+    "PAP-76"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nLinear, Gmail and Atlassian let users pick a density; PAP-71's cells and PAP-165's grid each take a `density` prop, but there is no global setting and no token layer, so a compact grid sits inside a comfortable form. Define density as tokens and a user setting every component honours.\n\n**Scope**\n\nIn: `packages/ui/tokens/density.tokens.json` (`control.height.{sm,md,lg}`, `space.inline`, `space.stack`, `row.height`, `font.size.body` per mode); `data-density` attribute contract and `DensityProvider` with `pos.settings.density` persisted per user; component updates to read density tokens instead of fixed sizes; Storybook toolbar global; `SettingRow` for PAP-62 and PAP-63 settings.\n\nOut: per-view row height (PAP-165 keeps it, defaulting from the density), per-tenant density defaults (v0.2), typography scale (a11y font scale is separate).\n\n**Spec**\n\n* Modes `compact|default|comfortable` map control heights to 28/32/36, 32/40/48 and 36/44/52 px, stack spacing 8/12/16, inline 6/8/12, body 13/14/15 px; coarse pointers force a 44 px minimum hit area regardless of mode (`@media (pointer: coarse)`), so compact on touch changes spacing, not targets.\n* Tokens compile through PAP-66's build into `--pos-density-*` variables redefined under `[data-density=\"compact\"]` and `[data-density=\"comfortable\"]`; components reference `var(--pos-control-height-md)` instead of literal rem sizes (PAP-236, PAP-238, PAP-70, data display and surfaces updated in this issue).\n* `DensityProvider` reads the user setting (PAP-33 `user_preferences.density`, synced via PAP-143), applies `data-density` on `<html>` (or a subtree via `scope`), exposes `useDensity()`; grid and cells default their `density` prop from it; the Storybook toolbar sets the same attribute.\n* Motion durations shorten by 20 percent in compact (PAP-72 reads `useDensity`); illustrations shrink one size in compact `EmptyState`.\n* Visual regression: Gate 3 (PAP-82) adds density to its matrix for the component gallery only, not every page.\n\n**Interface contract**\n\nProvides: density tokens and CSS variables, `DensityProvider`, `useDensity()`, `data-density` contract, `pos.settings.density` key, `DensitySettingRow`. Consumes: token build (PAP-66), components to update (PAP-236, PAP-238, PAP-70, PAP-71 children, surfaces), motion (PAP-72), preferences and sync (PAP-33, PAP-143, soft), Storybook toolbar (PAP-69). Consumed by PAP-341 default row height, PAP-76 density guideline page, PAP-62 and PAP-63 settings.\n\n**Definition of done**\n\n* Tokens merged and every core component renders correctly in three densities (gallery story screenshots at 375 and 1280 in three densities and two themes); touch minimum proven with the PAP-154 audit under `pointer: coarse` in compact.\n* `docs/design/density.md`; changelog; Linear comment on PAP-341 and PAP-76.\n\n**Test plan**\n\n* Unit: token resolution per mode; provider persistence with a throwing `localStorage`; coarse-pointer override; scope attribute on a subtree.\n* Visual: gallery at three densities; axe target-size rule under coarse pointer in compact.\n* E2E: switch density in settings, reload, confirm the grid row height and form controls changed together.\n\n**Demo**\n\nReviewer switches the Storybook density toolbar through the three modes on the All components story, then changes the setting in the template app and sees the grid and a settings form tighten together. Under one minute.\n\n**Edge cases**\n\n* Component with a hard-coded height left behind: lint rule `no-raw-control-height` (design lint issue) catches it.\n* Density scope inside a scope: innermost wins.\n* Compact on a phone: targets stay 44 px, spacing tightens.\n* Print: default density forced.\n\n**Dependencies**\n\nPAP-66 (hard), PAP-238 (hard, components complete), PAP-72 (hard, motion hook). Soft: PAP-33, PAP-143, PAP-69, PAP-82. Blocks PAP-76 density page.\n\n**Agent**\n\nBuilder: Iris (Token Keeper). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/design-system/reflow-zoom-text-spacing-audit",
+   "title": "Reflow, zoom and text-spacing audit: 400 percent zoom at 320 CSS px, 200 percent text-only zoom, WCAG 1.4.12 text-spacing injection and 1.4.10 reflow over every story and template page",
+   "type": "Review",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Customer"
+   ],
+   "milestone": "Themable per tenant with docs",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-73",
+    "PAP-70",
+    "PAP-69"
+   ],
+   "blocks": [
+    "PAP-160"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Review S\n\n**Goal**\n\nPAP-73's axe scan cannot see reflow and text-spacing failures: content clipped at 320 CSS px (WCAG 1.4.10), layouts that break at 200 percent text zoom (1.4.4) and components that truncate when line height and letter spacing grow (1.4.12). Run those checks over every story and template page, fix the findings and leave a CI job so they never return. PAP-160's conformance report needs these three criteria evaluated.\n\n**Scope**\n\nIn: `pnpm --filter ui a11y:reflow` Playwright script: viewport 320 × 256 (400 percent zoom equivalent) and 1280 with `deviceScaleFactor`, text-only zoom emulation via root `font-size: 200%`, and the 1.4.12 CSS injection (`line-height: 1.5; letter-spacing: 0.12em; word-spacing: 0.16em; p { margin-bottom: 2em }`); detectors for horizontal overflow (`scrollWidth > clientWidth` on `html` and named containers), clipped text (`scrollHeight > clientHeight` with `overflow: hidden` and no truncation intent flag), overlapping boxes; fix PRs; `meta.a11y.reflowAuditedAt`; Gate 1 job on `packages/ui` changes.\n\nOut: axe rules (PAP-73), manual AT (PAP-156), page-level app audits beyond the template's example routes.\n\n**Spec**\n\n* Detectors run per story from `storybook-static/index.json` (PAP-69) and per template route (PAP-86 flow list) in both themes; intentional truncation is declared with `data-truncate-intent` (set by `Truncate` and `lineClamp`) and excluded; horizontal scroll inside `data-scroll-x` containers (tables, toolbars) is allowed only when the container has a visible affordance.\n* Findings map to PAP-79 severities: content unreachable or clipped is S1, overlap S2, minor spacing S3; each finding carries story id, width, theme, mode (`reflow|zoom|spacing`), selector and a screenshot crop into `reflow-report.json` (PAP-239 artefact kind `a11y`).\n* Fixes land in the owning components (PAP-70 frames, PAP-238 Tabs overflow, data display, surfaces, pickers) with `min-width: 0` and `overflow-wrap` corrections, container-query breakpoints and `clamp()` typography; guidelines rule `DS-RESP-*` added to PAP-76's `rules.json`.\n* Results feed PAP-160's `criteria-map.json` sources for 1.4.4, 1.4.10 and 1.4.12 as `type: reflow`; the job runs on `packages/ui` PRs under 3 minutes with story-hash caching and nightly on the template.\n\n**Interface contract**\n\nProvides: `a11y:reflow` script, `reflow-report.json`, `data-truncate-intent` and `data-scroll-x` DOM contracts, `meta.a11y.reflowAuditedAt`, Gate 1 job `a11y-reflow`. Consumes: Storybook index (PAP-69), frames and containers (PAP-70), severity taxonomy (PAP-79), artefact schema (PAP-239), flow routes (PAP-86), `Truncate` (cells issue). Consumed by PAP-160 (criteria 1.4.4, 1.4.10, 1.4.12), PAP-84 vision rubric, PAP-76 rules.\n\n**Definition of done**\n\n* Zero S1 and S2 findings across all stories and the template's example routes in both themes; fix PRs merged or linked; job green and failing on a seeded fixed-width component.\n* Screenshots of five representative stories at 320 × 256 and with text-spacing injected; `docs/design/accessibility.md` reflow section; changelog; Linear comment on PAP-160 with the criteria mapping.\n\n**Test plan**\n\n* Unit: detector logic on fixture DOMs (overflow, clipped, overlap, intent flags); severity mapping; report schema validity.\n* Seeded regressions: a `width: 600px` card and a `white-space: nowrap` label each produce the expected S1.\n* E2E: the script itself over the story index and the template routes (Chromium).\n\n**Demo**\n\nReviewer runs `pnpm --filter ui a11y:reflow --story ui-appframe--playground` and opens the report showing zero findings, then adds `white-space: nowrap` to a nav label, reruns and reads the S1 with a crop. Under two minutes.\n\n**Edge cases**\n\n* Virtualised lists report `scrollHeight` beyond viewport by design: `data-scroll-y` intent excludes them.\n* Storybook decorators at 320 px: container-width decorator forced to 100 percent.\n* Fonts not loaded in CI: `document.fonts.ready` awaited before measuring.\n* RTL: overflow detection uses `scrollLeft` normalised.\n\n**Dependencies**\n\nPAP-73 (hard, shares the scan harness), PAP-70 (hard), PAP-69 (hard). Soft: PAP-79, PAP-239, PAP-86. Blocks PAP-160's evaluation of three criteria.\n\n**Agent**\n\nBuilder: Sentinel (Visual Inspector) audits; Iris (Component Crafter) fixes. Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/design-system/media-preview-and-lightbox",
+   "title": "Media components: Image with variants and blur-up, FilePreview for images, PDF, video, audio and office fallbacks, and an accessible Lightbox with zoom and swipe",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Themable per tenant with docs",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-237",
+    "PAP-37",
+    "PAP-154"
+   ],
+   "blocks": [
+    "PAP-137"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nAttachment cells (PAP-339), the record attachments tab (PAP-333) and screenshot annotation (PAP-137) each need to show a file bigger than a thumbnail. Ship one `Image`, one `FilePreview` and one `Lightbox` on PAP-37's variants so previews behave and announce the same way everywhere.\n\n**Scope**\n\nIn: `packages/ui/src/media/{Image,FilePreview,Lightbox}.tsx` with `meta.ts` spec ids and stories; PDF via the browser viewer in an iframe with a download fallback; video and audio via native elements with tokens-styled controls; office and unknown types via an icon card with download.\n\nOut: upload (specialised inputs `FileUpload`), ink annotation layer (PAP-157), image editing beyond crop (specialised inputs), a custom PDF renderer.\n\n**Spec**\n\n* `Image { fileId | src, alt, variant: 'sm'|'md'|'lg'|'original', aspectRatio?, fit, blurUp, loading }`: picks the PAP-37 variant URL, shows a blurred `sm` placeholder while `md|lg` loads, reserves space by `aspectRatio` to avoid layout shift, `alt` required (`decorative` prop for empty alt), error fallback icon.\n* `FilePreview { file }` switches on MIME: images through `Image`, `application/pdf` in a sandboxed iframe (`sandbox=\"allow-scripts allow-same-origin\"` only when same-origin signed URL) with a `Download` button and page count from metadata when available, `video/*` and `audio/*` with native controls and captions track support, everything else as a card (icon by type, name, size, Download and Open).\n* `Lightbox { items, index, onClose }`: PAP-237 `Dialog` full-screen, arrows and swipe (PAP-154 `useSwipe`) between items, `PinchZoomView` (mobile gesture components) for images with `+`/`-` keys on desktop, caption from `file.name` and alt, item counter announced (\"2 of 5\"), download and open-in-new-tab actions, focus trap and return, `Escape` closes, reduced motion disables slide.\n* Signed URLs minted per request (PAP-37) are used as-is and refreshed on 403 by a retry hook; previews never embed raw storage URLs.\n* Sizes and chrome use tokens; RTL flips arrow semantics.\n\n**Interface contract**\n\nProvides: components with spec ids `ui.image`, `ui.filePreview`, `ui.lightbox`; `useSignedUrl(fileId, variant)`; MIME switch table. Consumes: Dialog, Tooltip (PAP-237), file rows, variants and signed URLs (PAP-37), `useSwipe` (gesture recognisers issue) and `PinchZoomView` (mobile gesture components, soft: zoom buttons only until it lands), `Icon` (PAP-68). Consumed by PAP-339 attachment cells and editor, PAP-333 attachments tab, PAP-137 screenshot annotation viewer, PAP-131 comment attachments.\n\n**Definition of done**\n\n* Three components merged with stories (image states, each preview type, lightbox with five mixed items); `play` tests for lightbox keyboard navigation and focus return; `vitest-axe` clean.\n* Screenshots at 375, 768, 1280 light and dark; `docs/design/media.md`; changelog; Linear comment on PAP-339 and PAP-333.\n\n**Test plan**\n\n* Unit: variant selection; MIME switch; signed URL refresh on 403; counter announcement text; aspect ratio reservation.\n* Interaction: arrows and swipe change items; Escape returns focus to the thumbnail; PDF iframe sandbox attributes asserted.\n* E2E: none (Storybook; consumers cover flows).\n\n**Demo**\n\nReviewer opens Storybook `Media/Lightbox`, arrows through an image, a PDF and a video, pinches the image on the touch viewport, presses Escape and sees focus return. Under one minute.\n\n**Edge cases**\n\n* Variant still `pending` (PAP-37 processing): blur-up placeholder with a spinner, `file.ready` event swaps it.\n* PDF blocked by CSP in an embed context: download card fallback.\n* Video without captions: warning in dev, `aria-describedby` notes it.\n* 1,000 attachments in a lightbox: items lazy, only neighbours preloaded.\n\n**Dependencies**\n\nPAP-237 (hard), PAP-37 (hard), PAP-154 children (hard for swipe; keyboard-only until then). Soft: PAP-68. Blocks PAP-137 viewer; PAP-339 and PAP-333 adopt the lightbox softly (their milestones are earlier).\n\n**Agent**\n\nBuilder: Iris (Component Crafter). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/design-system/ui-package-versioning-and-deprecation",
+   "title": "@paperos/ui versioning and deprecation policy: changesets, since and deprecated metadata, rename codemods, visual baseline update flow and the component status page",
+   "type": "Docs",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Themable per tenant with docs",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Haiku 4.5",
+   "modelId": "claude-haiku-4-5-20251001",
+   "effort": "low",
+   "dueDate": "2026-09-30",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-74",
+    "PAP-459",
+    "PAP-52"
+   ],
+   "blocks": [
+    "PAP-461"
+   ],
+   "description": "**Model / Effort:** Haiku 4.5 (`claude-haiku-4-5-20251001`) / low — Docs S\n\n**Goal**\n\nSixty components will change under twenty agents. Without a written policy, a renamed prop breaks codegen output silently. Define how `@paperos/ui` versions, deprecates and removes, generate a component status page from `meta.ts`, and give agents a codemod path so a rename is one command.\n\n**Scope**\n\nIn: `docs/design/versioning.md`; `.changeset` config for `packages/ui` and `packages/tokens` (independent semver in the workspace, `0.x` until RC per `docs/module-system.md` 2.1); `meta.ts` fields `since`, `deprecated: { since, replaceWith, removeIn }` enforced by a test; `pnpm ui:codemod <from> <to>` (jscodeshift transform for component and prop renames, driven by `deprecated.replaceWith`); generated `docs/design/status.md` (component, spec id, since, status `alpha|stable|deprecated`, a11y audited, reflow audited); Gate 3 baseline update rule for intentional visual changes.\n\nOut: the contract package versioning itself (PAP-459 and the module system), release tagging (PAP-52), Storybook deploy (PAP-69).\n\n**Spec**\n\n* Policy: additive props and new components are minor; prop removal or rename is a deprecation for at least one minor with a console warning in dev and a codemod entry, then removal in the next minor; `0.x` semantics per the module system document; the `contract-design-system` version bumps only when a spec id or props schema changes.\n* `meta.ts` test: every component has `since`; `deprecated` entries need `replaceWith` and `removeIn`; `registry.json` (PAP-74) carries both so PAP-115's validator warns on deprecated ids and PAP-120 codegen never emits them.\n* Codemod: `pnpm ui:codemod ui.button:variant=ghost ui.button:variant=subtle` and `pnpm ui:codemod ui.oldCard ui.card` rewrite TSX imports and JSX props across `apps/**` and `packages/**`, and page specs (`specs/**/*.yaml`) through a YAML-aware pass; dry run by default.\n* Visual baselines: an intentional change adds the `visual-change` label and the PR body lists affected story ids; PAP-246's update flow accepts new baselines only with that label; documented as the one way to change what a component looks like.\n* Status page regenerated in CI from `registry.json` and `meta.a11y`; linked from Storybook's docs landing and PAP-76 guidelines.\n\n**Interface contract**\n\nProvides: `docs/design/versioning.md`, changeset config, `meta.ts` schema additions, `pnpm ui:codemod`, `docs/design/status.md` generator, the `visual-change` label convention. Consumes: `meta.ts` and `registry.json` (PAP-74), contract versioning rules (PAP-459, module system doc), release automation (PAP-52), baseline flow (PAP-246, soft), validator and codegen (PAP-115, PAP-120, soft). Consumed by PAP-461 wire (deprecation window), PAP-92 playbook, every component PR.\n\n**Definition of done**\n\n* Policy doc merged and linked from `docs/design/components.md`; `meta.ts` test enforces `since`; codemod renames a seeded component across a fixture app and a page spec; status page generated in CI.\n* Changeset config produces a version bump PR on a seeded change; changelog; Linear comment on PAP-74 and PAP-461.\n\n**Test plan**\n\n* Unit: meta schema test; codemod transforms on TSX and YAML fixtures (import, JSX, prop rename, dry run); status page generation determinism.\n* CI: changeset bump on a seeded change; status page diff fails when `registry.json` changed without regeneration.\n* E2E: none.\n\n**Demo**\n\nReviewer deprecates a prop in a fixture component's `meta.ts`, runs the codemod over the fixture app in dry-run and then for real, and opens the regenerated status page showing the deprecation. Under one minute.\n\n**Edge cases**\n\n* Codemod hits a spread props usage: reports as manual, never rewrites blindly.\n* Component deprecated but still emitted by an old page spec: validator warning with the replacement.\n* Version bump of tokens without ui: independent changesets, both documented.\n\n**Dependencies**\n\nPAP-74 (hard, `meta.ts` and registry), PAP-459 (hard, versioning rules), PAP-52 (hard, release automation). Soft: PAP-246, PAP-115, PAP-120. Blocks PAP-461's deprecation-window step.\n\n**Agent**\n\nBuilder: Quill (Changelog Scribe) with Iris. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-66",
+   "section": "Spec",
+   "append": "* Round 4: add `zIndex.{base 0, raised 10, sticky 100, dropdown 1000, overlay 1100, modal 1200, popover 1300, toast 1400, tooltip 1500}` tokens (`--pos-z-*`) so overlays never hard-code stacking; reserve the `color.dataviz.*` namespace (owned by `r4/design-system/dataviz-tokens-and-microcharts`) and the `density.*` namespace (owned by `r4/design-system/density-modes`) in the build config so their files compile through the same pipeline; `--pos-font-scale` (default 1) multiplies the type scale for `r4/input/accessibility-input-preferences`."
+  },
+  {
+   "identifier": "PAP-236",
+   "section": "Spec",
+   "append": "* Round 4: a component token layer `--pos-<component>-<prop>` (for example `--pos-button-radius`, `--pos-control-height-md`) defined in `packages/ui/tokens/components.tokens.json` with values aliased to core tokens, so tenants (PAP-75) and density modes can retune components without touching classes; components reference these instead of literal sizes. All user-visible strings inside components (Close, Clear, Loading, Show password) come from `useUiStrings()` with an `en` default so PAP-27 catalogs can override them. Inputs set `autocomplete`, `inputmode` and `enterkeyhint` from a `purpose` prop (`email`, `tel`, `otp`, `search`, `decimal`)."
+  },
+  {
+   "identifier": "PAP-73",
+   "section": "Spec",
+   "append": "* Round 4: the scan matrix adds `forced-colors: active` emulation (Windows High Contrast; asserts focus rings, borders and icons remain visible via `CanvasText`), a `dir=\"rtl\"` pass for every story and a 200 percent root font-size pass; reflow, zoom and text-spacing detection lives in `r4/design-system/reflow-zoom-text-spacing-audit`, which shares this harness and report format."
+  },
+  {
+   "identifier": "PAP-70",
+   "section": "Interface contract",
+   "append": "* Round 4: also provides `useContainerSize(ref)` (named container query results as `{ width, name, matches: { sm, md, lg } }`), `<Responsive above=\"md\" | below=\"md\">` (container-based show/hide, `display: contents` wrapper) and `useAppFrameRegions()` returning the landmark elements so PAP-152 registers `FocusRegion`s without querying the DOM. Slot fills register `data-focus-region` automatically."
+  },
+  {
+   "identifier": "PAP-71",
+   "section": "Scope",
+   "append": "Round 4: this issue is an umbrella for `r4/design-system/cell-renderer-registry-and-cells` (registry, twenty cells, formatters, `Truncate`) and `r4/design-system/data-display-components` (the ten components). The cells child lands first because PAP-338 and PAP-341 wait on it. `Stat`'s `sparkline` slot expects the `Sparkline` from `r4/design-system/dataviz-tokens-and-microcharts`; until it lands the slot renders nothing. The umbrella keeps the gallery screenshots and `docs/design/data-display.md`."
+  },
+  {
+   "identifier": "PAP-74",
+   "section": "Spec",
+   "append": "* Round 4: `defineComponentMeta` gains `a11y` (already planned) plus `density: ('compact'|'default'|'comfortable')[]` support flags, `since` and `deprecated: { since, replaceWith, removeIn }` (enforced by `r4/design-system/ui-package-versioning-and-deprecation`), and `rtl: 'tested' | 'n/a'`. Reserved ids for round-4 components: `ui.dataTable`, `ui.navList`, `ui.breadcrumb`, `ui.pagination`, `ui.card`, `ui.accordion`, `ui.inlineAlert`, `ui.numberInput`, `ui.otpInput`, `ui.colorPicker`, `ui.fileUpload`, `ui.text`, `ui.heading`, `ui.prose`, `ui.sparkline`, `ui.image`, `ui.lightbox`, `ui.formLayout`, `ui.formActions` (full lists in the owning issues); the validator treats them as known-but-pending until their `meta.ts` exists."
+  },
+  {
+   "identifier": "PAP-69",
+   "section": "Spec",
+   "append": "* Round 4: `globalTypes` also expose `density` (`compact|default|comfortable`, sets `data-density` via `r4/design-system/density-modes`), `forcedColors` (emulates `forced-colors: active` through the Chromium `emulateMedia` in the Vitest browser provider and a CSS class fallback in the manager) and `fontScale` (sets `--pos-font-scale`), so PAP-73, the reflow audit and PAP-246 baselines can iterate the same toolbar values; `index.json` records the globals each story opts into via `parameters.matrix`."
+  },
+  {
+   "identifier": "PAP-76",
+   "section": "Spec",
+   "append": "* Round 4: a thirteenth page `navigation-patterns` (sidebar vs tabs vs breadcrumb, pagination vs infinite scroll, when a Stepper) referencing `r4/design-system/navigation-components`, and a `data-tables` page (DataTable vs GridView decision, from `r4/design-system/static-data-table`); rule namespaces `DS-NAV-*`, `DS-DENS-*` (density) and `DS-RESP-*` (reflow findings from `r4/design-system/reflow-zoom-text-spacing-audit`); `checkable: 'lint'` rules must name a `DS-LINT-*` rule id from `r4/design-system/design-lint-rules`."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "collab",
+   "title": "PAP-380 product tour uses design-system `ui.coachmark` and `ui.spotlight` components rather than its own overlay",
+   "why": "A coachmark is a Popover variant with a step counter; if collab builds it privately it will not follow tokens, density or reduced motion. Iris can add the two components to `r4/design-system/surface-and-feedback-components` if collab agrees."
+  },
+  {
+   "targetProject": "quality",
+   "title": "PAP-246 story baselines add `forced-colors`, RTL and `density: compact` projects for the component gallery",
+   "why": "PAP-73 and the reflow audit emulate them; baselines that ignore them let regressions through."
+  },
+  {
+   "targetProject": "app-shell",
+   "title": "PAP-27 i18n provides the catalog hook behind `useUiStrings()` and pseudo-locale testing of component copy",
+   "why": "Component strings (Close, Clear, Loading) must be translatable; the design system exposes the hook, app-shell owns catalogs."
+  },
+  {
+   "targetProject": "identity",
+   "title": "PAP-224 auth pages consume `ui.otpInput`, `ui.passwordInput` and `ui.stepper` from `r4/design-system/specialised-inputs` and navigation components",
+   "why": "Avoids a second OTP field and keeps sign-in visually identical to the rest of the app."
+  }
+ ]
+}
