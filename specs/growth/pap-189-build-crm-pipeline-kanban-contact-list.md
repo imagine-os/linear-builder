@@ -11,14 +11,17 @@ milestone: "CRM core"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-165", "PAP-167", "PAP-187", "PAP-333", "PAP-343", "PAP-483"]
-blocks: ["PAP-491"]
+blockedBy: ["PAP-165", "PAP-167", "PAP-187", "PAP-333", "PAP-343", "PAP-483", "PAP-614", "PAP-630", "PAP-790", "PAP-791"]
+blocks: ["PAP-491", "PAP-795", "PAP-796", "PAP-810", "PAP-811"]
 key: "growth/crm-views"
 url: "https://linear.app/paperos/issue/PAP-189/build-crm-pipeline-kanban-contact-list-and-company-views-on-the-tables"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:32.576Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:35.814Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-189: Build CRM pipeline (kanban), contact list and company views on the tables engine

@@ -11,14 +11,17 @@ milestone: "Kernel and lint live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-239", "PAP-433"]
-blocks: ["PAP-442", "PAP-450", "PAP-451", "PAP-452", "PAP-457", "PAP-460", "PAP-463", "PAP-468", "PAP-469", "PAP-470", "PAP-477", "PAP-478", "PAP-479", "PAP-486", "PAP-487", "PAP-488", "PAP-494", "PAP-495"]
+blockedBy: ["PAP-433", "PAP-542"]
+blocks: ["PAP-442", "PAP-450", "PAP-451", "PAP-452", "PAP-457", "PAP-460", "PAP-463", "PAP-468", "PAP-469", "PAP-470", "PAP-477", "PAP-478", "PAP-479", "PAP-486", "PAP-487", "PAP-488", "PAP-494", "PAP-495", "PAP-539", "PAP-541", "PAP-543", "PAP-545", "PAP-845", "PAP-860", "PAP-875", "PAP-891", "PAP-906"]
 key: "module-system/conformance-runner"
 url: "https://linear.app/paperos/issue/PAP-441/build-the-conformance-test-runner-and-golden-fixture-kit"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:30.303Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:38.608Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-441: Build the conformance test runner and golden fixture kit: `defineConformanceSuite`, capability handling, normalisation, `conformance.json` artefact and Gate 1 step
@@ -76,6 +79,12 @@ Provides: `defineConformanceSuite`, fixture kit and lock, normaliser, `paperos m
 
 Blocked by module-system/manifest-schema, PAP-239.
 
+*Round 4 amendment (2026-09-18):*
+
+* The sample suite and its two implementations are delivered by PAP-542 (hard); the normaliser and `fixtures.lock` by PAP-541 (hard, shared with PAP-435). Blocks PAP-545 and PAP-543.
+
+*Round 4 (2026-09-18): PAP-239 soft: the gate artifact contract (09-25) lands after the kernel milestone (09-22), same pattern as the PAP-239 -> PAP-97 softening on 2026-09-17; until it lands, PAP-441 ships its own* `conformance.json` *schema in the package and adopts* `packages/contracts` *gate schemas when PAP-239 lands. The* `blocks` *relation PAP-239 -> PAP-441 was removed.*
+
 **Agent**
 
 Built by Sentinel. Reviewed by Forge and Atlas.
@@ -87,3 +96,8 @@ M
 **Demo**
 
 Reviewer runs `paperos module conformance sample --impl good,bad` and sees `good` all green, `bad` failing three cases, and the diff table by case id; opens the `conformance.json` in the contact sheet. Under a minute.
+
+*Round 4 critique fix (2026-09-18):* resolved 4 round-4 file keys in this description to Linear identifiers: `r4/module-system/conformance-normaliser` = PAP-541, `r4/module-system/module-scaffold` = PAP-543, `r4/module-system/sample-module` = PAP-542, `r4/module-system/test-kernel` = PAP-545.
+*Round 4 critique fix (2026-09-18):* PAP-239 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it.
+
+*Round 4 critique fix (2026-09-18):* PAP-541 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-541.

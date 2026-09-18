@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-33", "PAP-55", "PAP-433"]
-blocks: ["PAP-60", "PAP-61", "PAP-220", "PAP-457", "PAP-458"]
+blocks: ["PAP-60", "PAP-61", "PAP-220", "PAP-457", "PAP-458", "PAP-580", "PAP-586"]
 key: "module/identity/contract"
 url: "https://linear.app/paperos/issue/PAP-456/publish-paperoscontract-identity-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:09.044Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:05.613Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-456: Publish @paperos/contract-identity v0.1 with manifest

@@ -6,7 +6,7 @@ Full blueprint (architecture diagram, org chart, timeline, budget chart, full in
 
 PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop (Linux/macOS/Windows) and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, and business plumbing (payments, ledger, payroll, CRM) already wired. It is built and reviewed primarily by a roster of Claude agent characters working from Linear, behind a four-gate automated quality pipeline, so that by 2026-10-01 a new app goes from blank screen to running product in hours, and Justin only ever reviews release candidates, not pull requests.
 
-**Ten-second summary:** 17 projects, 267 spec-complete issues (534 blocking relations), 51 milestones, 25 issues Ready for Claude today, 26 documents, 14 days to the 2026-10-01 deadline. Round 2 details below.
+**Ten-second summary:** 23 projects (5 new in round 4), 991 issues in team PAP (983 canonical: 901 spec-complete, 82 in Triage; 3,275 blocking relations), 69 milestones, 5 initiatives, 30 issues Ready for Claude today, 2,214 Fibonacci points, 29 documents, 13 days to the 2026-10-01 deadline. Round 4 details below.
 
 ## Key decisions
 
@@ -129,6 +129,61 @@ Precision is 5 everywhere; the remaining deficit is buildability, mostly caused 
 6. Pending documents deduplicated: 10 twins merged, one obsolete issue removed, runtime sandbox rewritten.
 7. Read-first path: this section list, `Read first` lines on 9 P0 issues, `Contract source` citations on 29 issues.
 8. Promotion rule: PAP-96 promotes Backlog → Ready when every blocker is Done or In Review with a PR (branch-start rule); `BLOCKED_BY_OPEN` is an error.
+
+## Round 4 (2026-09-18, snapshot 2026-09-18T14:58Z)
+
+Justin asked to "make the Linear plan better and better: fill in the plan further, use more features of Linear if possible, get more detailed on sub-features, identify any features you missed." Round 4 benchmarked every project against the brief and the best products in its category (18 per-project digests in `plan/round4/digest/`, one cross-cutting capability map of 167 capabilities), filed the gaps as issues and amendments, created five projects for what no module owned, turned on the Linear features the workspace had left off, re-ran the schedule and chunk model over the expanded graph, then critiqued the result and applied the mechanical fixes. Every Linear mutation is logged in `plan/round4/changes/` (seven files); the prompts and replies are in `docs/prompts/round-4-2026-09-18.md`. Page: [https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU](https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU) (v5), mirrored at https://imagine-os.github.io/linear-builder/.
+
+| Fact | Round 3 end (09-18 morning) | After round 4 (14:58Z) |
+|---|---|---|
+| Non-archived issues in team PAP | 493 (485 canonical) | 991 (983 canonical: 901 specified, 82 Triage skeletons) |
+| Projects / milestones / initiatives | 18 / 54 / 0 | 23 / 69 / 5 |
+| Leaves / umbrellas (specified issues) | 445 / 40 | 815 / 86 |
+| `blocks` relations | 1,224 | 3,275 (zero cycles, zero milestone or due-date inversions, zero deferred -> scheduled edges) |
+| Ready for Claude (none with an open blocker) | 29 | 30 |
+| Issues labelled `Deferred` (v0.2, priority 4, no due date) | 49 | 204 |
+| Estimates / due dates / cycles | none | 815 leaves estimated (2,214 points; S 2, M 3, L 5), 697 due dates, cycle C1 active with the 30 Ready issues |
+| Chunk labels (mix B) | none | Chunk 1..5 on the 601 scheduled leaves (135 / 125 / 136 / 143 / 62) |
+| Templates / views / project updates and links | 1 / 6 / 0 | 8 / 18 / 23 updates, 69 links |
+| Documents | 27 | 29 (this section as a document, plus "How PaperOS uses Linear") |
+| Scheduled leaf work (S 0.5, M 1, L 2 session-days) | about 223 | 504 (see risk FIX-R4-2) |
+| Chunk plan, mix B (recommended) | 4 chunks, $7,909 list, $158 to Justin, 37.3 h | 5 chunks, $10,450 list, $209 to Justin, 38.6 h at 16 builders 24/7; v0.2 set +$3,418 / +$68 |
+| Chunk plan, mix A (all Fable 5.1) | 5 chunks, $11,166 / $223 | 8 chunks, $18,522 / $370 |
+
+**Linear features turned on** (`docs/linear-features.md`, "How PaperOS uses Linear" in Linear): Fibonacci estimates on every leaf; due dates from the schedule and milestones; one-week cycles (C1 Foundation & core systems, C2 Business layer & hardening, C3 v0.2 stretch) with `cycleIssueAutoAssignStarted`, under the rule that cycles hold in-flight work only and planned timing lives in due dates and Chunk labels; a Triage state where Slack, GitHub and agent-found items land for Atlas; five initiatives (A new app in ten minutes, The agent org runs the build, Product surfaces for every audience, Business-ready for any business, Operate, measure and comply) owning the 23 projects; lead, priority, health, three resource links and a first update on every project; the `Surface` label group made exclusive and a `Chunk` label group; six issue templates and a project template; twelve shared views (Needs Justin, Ready for Claude by project, Umbrellas, Deferred, Blocked, Current cycle, Chunk 1-5, Triage inbox). Features the Basic plan lacks (SLAs, customer requests, insights, asks, team initiatives) carry a named substitute.
+
+**Five new projects** (one contract-publish issue, one keystone model spec and one wire issue each, all depending on the kernel PAP-433 and the shared contracts; 19 issues scheduled for 2026-10-01, 56 deferred to v0.2 at priority 4; project target dates 2026-10-16, content line "v0.1 scope is the first milestone (2026-10-01); the later milestones are v0.2 (deferred)"):
+
+1. **Tenant AI Assistant & Business Agents** (`assistant`, 14 issues): grounded chat with cited answers, retrieval, actions with confirmation, copilots and tenant-configurable business characters behind a `ModelProviderPort`.
+2. **Workflows, Approvals, Forms, Documents & E-Signature** (`workflows`, 15): workflow model and run engine, approvals framework (`ApprovalPort`) and My Tasks inbox scheduled; form builder, document templates and e-signature deferred.
+3. **Scheduling, Messaging & Customer Engagement** (`engagement`, 15): booking engine and scheduling model on the shared recurrence engine (PAP-908); messaging channels, help center, surveys, memberships and loyalty deferred.
+4. **Commerce, Operations & Vertical Packs** (`commerce`, 16): catalog, inventory and the commerce domain model scheduled; orders, POS, purchasing, projects and time, HR shifts, assets, marketplace and the vertical packs deferred.
+5. **Platform Operations, Analytics & Compliance** (`platform-ops`, 15): control framework mapping the security issues to SOC 2, GDPR and HIPAA, super-admin console and status page scheduled; product analytics, experiments, abuse controls, compliance evidence and residency deferred.
+
+**Twelve gaps the round closed** (from the digests; the page's Round 4 section lists the issues per gap):
+
+1. Tenant AI assistant: nobody could talk to the product -> project `assistant`.
+2. Workflows and approvals: processes stopped at one table and five issues hand-rolled approvals -> project `workflows` (see risk FIX-R4-10).
+3. Forms, documents and signatures were invoices only -> form builder, document templates and e-signature in `workflows` (v0.2).
+4. Customer engagement: the customer was won and then forgotten -> project `engagement`.
+5. Commerce and operations: finance had no operations under it -> project `commerce`.
+6. Platform operations and compliance: no console for PaperOS, controls unmapped -> project `platform-ops`.
+7. Data layer: no generic entity path, migrations never rehearsed, no lost-device story -> `defineEntity()`, migration safety lint and dry run, cache wipe on sign-out, per-PR databases, tenant sequences.
+8. Identity: authorization stopped at roles and rows -> custom roles, resource grants, field permissions, permission propagation, delegated authority, device-flow login.
+9. Tables and views: the `records.*` write path was owned by nobody and every DoD pointed at demo pages nobody built -> records write path, view renderer registry, demo pages and seed, export, conditional formatting, system fields.
+10. Quality and forge: gate DoDs rehearsed against a sandbox nobody created; no merge queue, no review fix loop -> gate sandbox and defect catalogue, review fix loop, migration gate, merge automation, dependent branches.
+11. Agent org and pipeline: P0 security issues each hid two sessions; cold sessions read 150 KB; Linear's planning features unused -> security issues split, character identity card, context packs under 8k tokens, plugin packaging, session-end guard hooks, every Linear feature above.
+12. Small shared engines owned by nobody -> recurrence engine PAP-908, CDN and edge cache PAP-909, SMS channel PAP-910, labels and barcodes PAP-911, settings registry PAP-912, OAuth provider apps PAP-913; FX rates, bank feeds, scheduled view delivery, address field, file scanning and bulk campaigns folded into their existing issues (PAP-766, PAP-770, PAP-639, PAP-622, PAP-574, PAP-799).
+
+**Project scores, round 2 after -> round 4 after** (coverage + precision + buildability + testability, max 20): app-shell 18 -> 17, data-layer 19 -> 19, forge 18 -> 18, identity 19 -> 19, design-system 20 -> 20, quality 19 -> 19, pm-linear 16 -> 18, agents 17 -> 19, spec-builder 19 -> 19, collab 17 -> 19, realtime 18 -> 19, input 18 -> 18, tables 18 -> 19, business-core 17 -> 18, growth 16 -> 18, migration 16 -> 18, libraries 19 -> 20: **304 -> 317 of 340** over the 17 projects scored in round 2; module-system 18 and the five new projects 16, 16, 16, 15, 16 bring the total to **414 of 460 over 23 projects**. Coverage is 5 everywhere; the deficit is buildability (capacity) and the precision of the new projects' contract shapes, which are not yet in the Contracts document. Full critique with the check tables: `plan/round4/critique.md`.
+
+**Critique fixes applied** (`plan/round4/changes/critique-fixes.json`, `final-fixes.json`): 443 descriptions had their `r4/<project>/<key>` file keys replaced with identifiers; 52 hard dependencies named in text but missing from the graph were created (4 kept soft with a note); two children moved to their parent's milestone; the 19 single-child umbrellas created that day were unwound (child de-parented, `parent blocks child`, labels and estimate restored) so PAP-434, PAP-441, PAP-26, PAP-47, PAP-48 and fourteen more are claimable leaves again; 156 last-child edges give every umbrella's dependents a real gate (rule sentence in PAP-92 and PAP-96); PAP-754 promoted; the five new projects re-dated. All integrity checks are 0 after the fixes.
+
+**Open risks from the critique** (briefs in `plan/round4/critique.md` section 4):
+
+* **FIX-R4-2, capacity.** The 601 scheduled leaves sum to 504 session-days against about 208 of capacity (16 builders, 13 days); 119 session-days are due on 09-30. Either the schedule model moves 250-300 session-days of P2 work to `Deferred` before promotion starts, or the calendar is not honest. The chunk model's 38.6 h assumes 24/7 builders and the branch-start rule.
+* **FIX-R4-7, Triage.** 82 Triage skeletons carry a Goal and a Source only; Atlas should accept, fold or decline each before 09-22 and record the decisions in `plan/round4/unfiled-suggestions.md`.
+* **FIX-R4-10, approvals.** The approvals framework (PAP-849) exists, but the five issues that hand-roll an approval step (expense approval, deal stage approval, import commit approval, PAP-192, PAP-94) have not been amended to consume `ApprovalPort`, so the platform would ship six approval implementations.
 
 ## Documents (read in this order)
 

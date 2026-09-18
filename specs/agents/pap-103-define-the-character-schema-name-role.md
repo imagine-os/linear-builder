@@ -12,13 +12,16 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-104", "PAP-105", "PAP-284", "PAP-466"]
+blocks: ["PAP-104", "PAP-105", "PAP-284", "PAP-466", "PAP-842"]
 key: "agents/character-schema"
 url: "https://linear.app/paperos/issue/PAP-103/define-the-character-schema-name-role-reportsto-tools-mcp-servers"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:23.263Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:51:01.890Z"
 model: "claude-fable-5-1"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-24"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-103: Define the character schema: name, role, reportsTo, tools, MCP servers, access scopes, plugins, skills, memory, escalation rules
@@ -42,6 +45,10 @@ Define the single typed shape every Claude character is declared in, so roster f
 * Scope registry `scopes.ts`: the normalised union of every `access` string in plan.json (`linear:admin`, `repo:write:packages/ui`, `stripe:write:test`...); unknown scopes fail.
 * Known tools list with `lastVerified` date; `pnpm agents validate` warns when older than 30 days.
 * Fixtures: `fixtures/valid/atlas.yaml`, `fixtures/invalid/*.yaml`, one per rule with expected code; `.vscode/settings.json` wires the JSON Schema to `packages/agents/characters/*.yaml`.
+
+*Round 4 amendment (2026-09-18):*
+
+* Effort and model precedence (round 4, aligns with CLAUDE.md): `effort` enum is `low | medium | high | max`; `xhigh` in existing sheets maps to `high` (documented alias accepted by the parser, normalised on build). A character's `model` and `effort` are defaults only: the issue's `Model` and `Effort` labels override them for the session (`resolveModel()` in the pm-linear round-4 routing issue), and `fallbackModel` participates in the overload chain, never in refusal handling.
 
 **Interface contract**
 

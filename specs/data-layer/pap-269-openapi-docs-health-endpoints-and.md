@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-35"
 children: []
 blockedBy: ["PAP-268"]
-blocks: ["PAP-36", "PAP-39", "PAP-40", "PAP-119", "PAP-129", "PAP-163", "PAP-193", "PAP-222", "PAP-242", "PAP-311", "PAP-335"]
+blocks: ["PAP-36", "PAP-39", "PAP-40", "PAP-119", "PAP-129", "PAP-163", "PAP-193", "PAP-222", "PAP-242", "PAP-311", "PAP-312", "PAP-335", "PAP-366", "PAP-431", "PAP-501", "PAP-546", "PAP-566", "PAP-684", "PAP-793"]
 key: "child/PAP-35/14"
 url: "https://linear.app/paperos/issue/PAP-269/openapi-docs-health-endpoints-and-staging-deploy-of-appsapi"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:12.445Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:28.067Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-269: OpenAPI docs, health endpoints and staging deploy of apps/api

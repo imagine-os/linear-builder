@@ -11,14 +11,17 @@ milestone: "Disaster recovery proven"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-47", "PAP-50"]
-blocks: []
+blockedBy: ["PAP-47", "PAP-50", "PAP-519", "PAP-520"]
+blocks: ["PAP-525"]
 key: "forge/dr-drill"
 url: "https://linear.app/paperos/issue/PAP-53/run-a-disaster-recovery-drill-rebuilding-all-repos-and-ci-from-forgejo"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:04.546Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:51.032Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-53: Run a disaster-recovery drill rebuilding all repos and CI from Forgejo backups with GitHub offline
@@ -61,6 +64,10 @@ Consumes: `repos.yml` (PAP-47), runner compose (PAP-50), backups and `restore.sh
 * Gate 1 PR passed on the restored forge without GitHub access (run URL and screenshot).
 * RTO and RPO reported; missed targets have linked follow-up issues; monthly cron configured with first run date; runbook merged; Sentinel (Edge Case Hunter) reviews; Linear comment with headline numbers.
 
+*Round 4 amendment (2026-09-18):*
+
+* Phase 7 runs Gate 1 and, once PAP-532 exists, Gate 3 at three widths on the restored forge with `heavy` capacity requested from the drill host; the report records which gates ran. \* Post-restore checks include `forge bootstrap --check` over `repos.yml` (PAP-526), `git lfs fsck` on one repo (PAP-529) and a `cosign verify` of the restored registry image (PAP-524).
+
 **Test plan**
 
 * Unit: `bats` for phase ordering and `--keep`; manifest comparison with a fixture containing one mismatch.
@@ -91,3 +98,7 @@ Executed by Forge (Ops Runner); Sentinel (Edge Case Hunter) reviews the report.
 **Size**
 
 M: one script and one real run with evidence.
+
+*Round 4 critique fix (2026-09-18):* resolved 4 round-4 file keys in this description to Linear identifiers: `r4/forge/bootstrap-check-mode` = PAP-526, `r4/forge/lfs-and-artifacts` = PAP-529, `r4/forge/playwright-runner-image` = PAP-532, `r4/forge/supply-chain-provenance` = PAP-524.
+
+*Round 4 critique fix (2026-09-18):* PAP-525 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-525.

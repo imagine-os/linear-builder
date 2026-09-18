@@ -6,19 +6,22 @@ projectName: "Multi-Input Control & Accessibility"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Keyboard and command system"
 state: "Backlog"
 parent: "PAP-151"
 children: []
 blockedBy: ["PAP-290"]
-blocks: ["PAP-153", "PAP-159", "PAP-165", "PAP-482"]
+blocks: ["PAP-153", "PAP-159", "PAP-165", "PAP-341", "PAP-482", "PAP-629", "PAP-648", "PAP-649", "PAP-653", "PAP-838", "PAP-852", "PAP-897"]
 key: "input/commands/agent-endpoint-defaults"
 url: "https://linear.app/paperos/issue/PAP-291/agent-execution-endpoint-telemetry-and-default-commands"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:18.179Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:25.802Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-291: Agent execution endpoint, telemetry and default commands

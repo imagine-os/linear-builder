@@ -6,19 +6,22 @@ projectName: "Multi-Input Control & Accessibility"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Keyboard and command system"
 state: "Backlog"
 parent: null
-children: ["PAP-289", "PAP-290", "PAP-291"]
+children: ["PAP-290", "PAP-291", "PAP-289"]
 blockedBy: ["PAP-67", "PAP-150", "PAP-238"]
-blocks: ["PAP-153", "PAP-159", "PAP-165", "PAP-341"]
+blocks: ["PAP-153", "PAP-159", "PAP-165", "PAP-341", "PAP-629", "PAP-653"]
 key: "input/command-registry"
 url: "https://linear.app/paperos/issue/PAP-151/build-the-global-command-registry-with-keyboard-shortcuts-command"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:15.052Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:57:08.425Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-151: Build the global command registry with keyboard shortcuts, command palette and per-page scoping

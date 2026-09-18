@@ -10,15 +10,18 @@ surfaces: ["Developer"]
 milestone: "Disaster recovery proven"
 state: "Backlog"
 parent: null
-children: ["PAP-276", "PAP-277", "PAP-278"]
+children: ["PAP-276", "PAP-278", "PAP-277"]
 blockedBy: ["PAP-16", "PAP-45", "PAP-275"]
 blocks: []
 key: "forge/in-app-git"
 url: "https://linear.app/paperos/issue/PAP-54/expose-repo-browsing-diffs-and-commit-history-inside-paperos-via-the"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:11.731Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:56:50.418Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-54: Expose repo browsing, diffs and commit history inside PaperOS via the Forgejo API

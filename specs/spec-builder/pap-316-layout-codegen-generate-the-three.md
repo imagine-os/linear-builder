@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-120"
 children: []
 blockedBy: ["PAP-314", "PAP-315"]
-blocks: ["PAP-29"]
+blocks: ["PAP-29", "PAP-362", "PAP-375"]
 key: "spec-builder/layout-codegen/examples"
 url: "https://linear.app/paperos/issue/PAP-316/layout-codegen-generate-the-three-example-specs-screenshot-seven"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:25.483Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:06.735Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-316: Layout codegen: generate the three example specs, screenshot seven widths and pass conformance with zero manual edits

@@ -6,19 +6,22 @@ projectName: "Design System"
 phase: "P1"
 type: "Spec"
 priority: 1
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Component library covers app shell needs"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-67", "PAP-114", "PAP-238"]
-blocks: ["PAP-120", "PAP-314", "PAP-459"]
+blocks: ["PAP-120", "PAP-314", "PAP-459", "PAP-672", "PAP-749"]
 key: "design-system/component-spec-mapping"
 url: "https://linear.app/paperos/issue/PAP-74/map-every-component-to-a-spec-builder-component-id-with-props-schema"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:11.291Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:39.325Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-74: Map every component to a spec-builder component ID with props schema so page specs reference real components
@@ -43,6 +46,10 @@ Give every design-system component a stable spec ID and a machine-readable props
 * `registry.json`: `{ version, generatedAt, components: { [specId]: { displayName, category, schema, slots, events, a11y, deprecated?, since } } }`, committed and drift-checked in Gate 1.
 * Resolver: `import.meta.glob('../../ui/src/**/meta.ts')` in dev, generated static map in prod to preserve tree-shaking.
 * Interim YAML usage until PAP-114 fixes key names: `components: - id: ui.button  props: { variant: primary, size: md }  slot: main  events: { onClick: actions.save }`.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: `defineComponentMeta` gains `a11y` (already planned) plus `density: ('compact'|'default'|'comfortable')[]` support flags, `since` and `deprecated: { since, replaceWith, removeIn }` (enforced by PAP-672), and `rtl: 'tested' | 'n/a'`. Reserved ids for round-4 components: `ui.dataTable`, `ui.navList`, `ui.breadcrumb`, `ui.pagination`, `ui.card`, `ui.accordion`, `ui.inlineAlert`, `ui.numberInput`, `ui.otpInput`, `ui.colorPicker`, `ui.fileUpload`, `ui.text`, `ui.heading`, `ui.prose`, `ui.sparkline`, `ui.image`, `ui.lightbox`, `ui.formLayout`, `ui.formActions` (full lists in the owning issues); the validator treats them as known-but-pending until their `meta.ts` exists.
 
 **Interface contract**
 
@@ -86,3 +93,5 @@ Iris (Component Crafter) with Quill (Page Spec Writer) owning the YAML shape. Re
 **Size**
 
 M.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/design-system/ui-package-versioning-and-deprecation` = PAP-672.

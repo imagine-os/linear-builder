@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-119"
 children: []
 blockedBy: ["PAP-114", "PAP-269", "PAP-279"]
-blocks: ["PAP-312", "PAP-313"]
+blocks: ["PAP-312", "PAP-313", "PAP-742"]
 key: "spec-builder/data-section/schema"
 url: "https://linear.app/paperos/issue/PAP-311/data-section-zod-schema-shared-filtertree-import-and-validator-rules"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:23.268Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:24.173Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-311: Data section: Zod schema, shared FilterTree import and validator rules

@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "Airtable, Notion, ClickUp importers"
 state: "Backlog"
 parent: null
-children: []
+children: ["PAP-817", "PAP-816"]
 blockedBy: ["PAP-100", "PAP-199", "PAP-201", "PAP-349"]
 blocks: []
 key: "migration/clickup-linear"
 url: "https://linear.app/paperos/issue/PAP-204/import-clickup-and-linear-workspaces-into-the-pm-module"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:56.327Z"
-model: "claude-sonnet-5"
-effort: "low"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:51:38.302Z"
+model: null
+effort: null
+estimate: null
+dueDate: null
+cycle: null
 ---
 
 # PAP-204: Import ClickUp and Linear workspaces into the PM module

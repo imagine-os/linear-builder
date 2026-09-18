@@ -11,14 +11,17 @@ milestone: "Spec editor UI"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-115", "PAP-312", "PAP-314", "PAP-434", "PAP-435", "PAP-467", "PAP-470"]
+blockedBy: ["PAP-115", "PAP-312", "PAP-314", "PAP-434", "PAP-435", "PAP-467", "PAP-470", "PAP-537", "PAP-538"]
 blocks: []
 key: "module/spec-builder/wire"
 url: "https://linear.app/paperos/issue/PAP-473/wire-spec-builder-behind-the-module-registry-with-an-adapter-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:19.841Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:04.234Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-473: Wire spec-builder behind the module registry with an adapter and feature flag

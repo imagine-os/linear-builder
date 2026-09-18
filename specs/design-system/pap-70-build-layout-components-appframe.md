@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-16", "PAP-67", "PAP-238", "PAP-447"]
-blocks: ["PAP-124", "PAP-152", "PAP-376"]
+blocks: ["PAP-124", "PAP-152", "PAP-290", "PAP-318", "PAP-376", "PAP-661", "PAP-667", "PAP-670", "PAP-837"]
 key: "design-system/layout-components"
 url: "https://linear.app/paperos/issue/PAP-70/build-layout-components-appframe-splitpane-inspector-commandbar"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:02.243Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:42.485Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-70: Build layout components: AppFrame, SplitPane, Inspector, CommandBar, ResponsiveGrid
@@ -48,6 +51,10 @@ Build the structural components page specs place content into: `AppFrame`, `Spli
 * Provides: components with spec IDs `ui.appFrame`, `ui.splitPane`, `ui.inspector`, `ui.commandBar`, `ui.responsiveGrid`, `ui.drawer`, `ui.sheet`; `useAppFrame()`; slot names `nav`, `sidebar`, `main`, `inspector`, `statusbar`, `commandbar`, `banner` (the contract PAP-16 layouts and PAP-120 codegen `useLayout` use); container names; persistence key format.
 * Requires: PAP-236 Button, PAP-238 Tabs, PAP-237 Sheet behaviour, PAP-16 slot contract, PAP-14 breakpoints (soft).
 * Consumers: PAP-63 console, PAP-62 portal, PAP-124 spec editor, PAP-152 focus rules, PAP-21 detach buttons, PAP-151 palette, PAP-165 record panel.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: also provides `useContainerSize(ref)` (named container query results as `{ width, name, matches: { sm, md, lg } }`), `<Responsive above="md" | below="md">` (container-based show/hide, `display: contents` wrapper) and `useAppFrameRegions()` returning the landmark elements so PAP-152 registers `FocusRegion`s without querying the DOM. Slot fills register `data-focus-region` automatically.
 
 **Definition of done**
 

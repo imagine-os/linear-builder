@@ -6,19 +6,22 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Agent", "Developer"]
+surfaces: ["Agent"]
 milestone: "Comments and canvas"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-105", "PAP-128"]
-blocks: []
+blocks: ["PAP-842"]
 key: "collab/rules-skills-registry"
 url: "https://linear.app/paperos/issue/PAP-134/surface-rules-claudemd-policies-and-skills-as-browsable-editable"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:32.304Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:27.606Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-134: Surface rules (CLAUDE.md, policies) and skills as browsable, editable objects in-app with version history
@@ -57,6 +60,9 @@ Exposes: `RuleObject { id, kind: rule|skill|agent|policy, path, title, descripti
 * Usage tab shows real sessions from a seeded prompt log.
 * Screenshots at 320, 375, 768, 1024, 1280, 1536 and 1920 in light and dark; axe clean; `docs/collab/rules-registry.md`; CHANGELOG entry; Linear comment with screenshots.
 * Justin reviews one rule in-app and comments on it.
+
+*Round 4 amendment (2026-09-18):*
+"Justin reviews one rule in-app" is evidence, not a gate: if no review has happened by RC2 (09-28), attach a Quill review comment on a real rule instead and do not hold the issue in In Review for it.
 
 **Test plan**
 

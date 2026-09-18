@@ -11,14 +11,17 @@ milestone: "Payroll adapter and cash dashboard"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-37", "PAP-175", "PAP-179", "PAP-394"]
-blocks: []
+blockedBy: ["PAP-37", "PAP-175", "PAP-179", "PAP-394", "PAP-766"]
+blocks: ["PAP-882", "PAP-883"]
 key: "business-core/expense-capture"
 url: "https://linear.app/paperos/issue/PAP-185/add-expense-capture-with-receipt-ocr-and-ledger-posting"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:49.458Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:36.042Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-185: Add expense capture with receipt OCR and ledger posting

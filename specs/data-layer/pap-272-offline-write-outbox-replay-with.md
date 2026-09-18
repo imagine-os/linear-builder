@@ -6,19 +6,22 @@ projectName: "Data Layer & Database"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Local-first sync working"
 state: "Backlog"
 parent: "PAP-36"
 children: []
 blockedBy: ["PAP-268", "PAP-271"]
-blocks: ["PAP-143", "PAP-327"]
+blocks: ["PAP-143", "PAP-327", "PAP-609"]
 key: "child/PAP-36/17"
 url: "https://linear.app/paperos/issue/PAP-272/offline-write-outbox-replay-with-backoff-leader-election-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:12.707Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:27.893Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-272: Offline write outbox, replay with backoff, leader election and SyncIndicator

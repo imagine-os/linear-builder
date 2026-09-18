@@ -11,14 +11,17 @@ milestone: "Business migrations"
 state: "Backlog"
 parent: "PAP-206"
 children: []
-blockedBy: ["PAP-179", "PAP-199", "PAP-201", "PAP-484"]
+blockedBy: ["PAP-179", "PAP-199", "PAP-201", "PAP-349", "PAP-394", "PAP-484", "PAP-766"]
 blocks: ["PAP-424"]
 key: "child/PAP-206/0"
 url: "https://linear.app/paperos/issue/PAP-423/stripe-connector-and-mapping-customers-to-crm-catalog-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:38.913Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:24.416Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-423: Stripe connector and mapping: customers to CRM, catalog and subscriptions to billing, invoices, fees, tax, refunds and payouts to ledger postings
@@ -40,6 +43,9 @@ Out: QuickBooks and Xero (child 2), wizard and trial balance gate (child 3).
 * Amounts in minor units in transaction currency with base-currency equivalent from the invoice rate or the finance rates table.
 * Missing balance transactions fall back to `application_fee` or zero with a warning.
 * Existing CRM contact with the same email is linked, not duplicated.
+
+*Round 4 amendment (2026-09-18):*
+Round 4: 'the finance rates table' is `fin_fx_rate` from PAP-766; call `fx.rateAt(invoice.created, currency, functional)` for base equivalents and mark lines `stale: true` when the rate is more than three business days old. Never store a rate computed from Stripe amounts as a platform rate.
 
 **Interface contract**
 
@@ -77,3 +83,5 @@ Built by Scout (Import Mapper) with Ledger (Bookkeeper) owning posting rules. Re
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/business-core/fx-rates-and-conversion` = PAP-766.

@@ -11,14 +11,17 @@ milestone: "Touch, pen, gamepad"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-73", "PAP-86", "PAP-152"]
+blockedBy: ["PAP-73", "PAP-86", "PAP-152", "PAP-644"]
 blocks: ["PAP-160"]
 key: "input/screen-reader"
 url: "https://linear.app/paperos/issue/PAP-156/test-and-fix-the-screen-reader-experience-nvda-voiceover-talkback-for"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:40.415Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:43.340Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-156: Test and fix the screen reader experience (NVDA, VoiceOver, TalkBack) for core flows
@@ -66,6 +69,10 @@ Exposes: protocol doc, snapshot format above (consumed by PAP-160's `criteria-ma
 * Tier 2 nightly: guidepup VoiceOver on `macos-15`, NVDA on the Windows VM (Firefox, Chrome), one flow per theme and one in the Tauri iOS webview; TalkBack videos attached manually.
 * Flakes: retry once, then quarantine per PAP-90 with a visible `partial` flag.
 
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: the protocol runs each flow twice on Tier 1, once with default input preferences and once with `singleKeyShortcuts: 'off'` and `focusRing: 'always'` from PAP-647, and every flow is also recorded keyboard-only through PAP-83's video replay using `@paperos/input/testing` (PAP-644) so the ACR (PAP-160) can cite a replay per criterion.
+
 **Demo**
 
 Open the latest `screen-reader-results` report and read the matrix; run `pnpm e2e:a11y --tier 1 --flow create-record` locally and watch the ARIA snapshot diff; play the 30-second TalkBack clip of creating a record. Under two minutes.
@@ -88,3 +95,5 @@ Builder: Sentinel (Visual Inspector runs the protocol; Code Reviewer prepares fi
 **Size**
 
 M: protocol and automation are bounded; the fix list is capped by severity rules.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/input/accessibility-input-preferences` = PAP-647, `r4/input/playwright-input-fixtures` = PAP-644.

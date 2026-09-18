@@ -11,14 +11,17 @@ milestone: "Orchestrator claims and ships issues"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-441", "PAP-465"]
+blockedBy: ["PAP-441", "PAP-465", "PAP-541"]
 blocks: ["PAP-471"]
 key: "module/pm-linear/conformance"
 url: "https://linear.app/paperos/issue/PAP-468/conformance-test-suite-for-pm-linear-contract"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:15.156Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:04.657Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-468: Conformance test suite for pm-linear contract

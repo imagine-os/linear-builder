@@ -6,7 +6,7 @@ projectName: "Migration & Import Tools"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Import framework and CSV"
 state: "Backlog"
 parent: null
@@ -15,10 +15,13 @@ blockedBy: ["PAP-199", "PAP-349"]
 blocks: ["PAP-413"]
 key: "migration/csv-excel"
 url: "https://linear.app/paperos/issue/PAP-200/import-csv-excel-and-google-sheets-with-type-inference"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:54.580Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:35.577Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-200: Import CSV, Excel and Google Sheets with type inference
@@ -78,6 +81,9 @@ Reviewer drops `fixtures/csv/contacts-messy.csv` on an empty table, sees the del
 * Mixed locales in one column (`1,5` and `1.5`): text with warning and locale override.
 * Password-protected or corrupt Excel: error before the wizard.
 * Google token expires mid-stream: one refresh, then resumable `failed`.
+
+*Round 4 amendment (2026-09-18):*
+Round 4: the `xlsx` (SheetJS) npm package is stale (0.18.5, known advisories); use the vendor's own registry build (0.20+) pinned by URL under the PAP-211 license check, or drop `.xls` and show a 'save as .xlsx' hint. Decide in the PR and record it in the spreadsheet docs.
 
 **Dependencies**
 

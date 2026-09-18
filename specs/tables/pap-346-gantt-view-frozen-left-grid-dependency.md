@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-168"
 children: []
 blockedBy: ["PAP-345"]
-blocks: []
+blocks: ["PAP-798", "PAP-883"]
 key: "tables/time/gantt"
 url: "https://linear.app/paperos/issue/PAP-346/gantt-view-frozen-left-grid-dependency-arrows-critical-path-progress"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:33.783Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:01.756Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-346: Gantt view: frozen left grid, dependency arrows, critical path, progress and working days

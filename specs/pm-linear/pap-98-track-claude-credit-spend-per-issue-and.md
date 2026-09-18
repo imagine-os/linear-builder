@@ -11,14 +11,17 @@ milestone: "Orchestrator claims and ships issues"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-96", "PAP-283"]
-blocks: ["PAP-111", "PAP-113"]
+blockedBy: ["PAP-96", "PAP-283", "PAP-691", "PAP-692", "PAP-704"]
+blocks: ["PAP-111", "PAP-113", "PAP-698", "PAP-705", "PAP-706", "PAP-720", "PAP-764", "PAP-844"]
 key: "pm-linear/credit-metering"
 url: "https://linear.app/paperos/issue/PAP-98/track-claude-credit-spend-per-issue-and-project-and-post-a-daily-burn"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:18.010Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:39.928Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-98: Track Claude credit spend per issue and project and post a daily burn report to Linear
@@ -41,6 +44,10 @@ Know at all times how much of the roughly $10,000 of credit has been spent, by w
 * `budgets(scope_type: "area" | "project" | "character", scope_key, allocated_usd, spent_usd, updated_at)` seeded from plan.json shares of `totalUsd` (default 10000); area from Type label (Spec and Research to planning with Research split at 5 percent, Build and Infra to building, Review to review, Docs to docs).
 * Report from `templates/burn-report.md`: totals, per area vs share, top ten issues, cache hit ratio, 14-day ASCII sparkline, under 3000 characters; posted daily 06:00 UTC to the pinned `Burn report` issue.
 * Reconciliation job compares with CSV in `ops/metering/console/` on a 48 h window; drift above 10 percent flags the report.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4 fields: `usage_events.model` is the served model from `resolveModel()` (labels first), and `usage_events.estimate` carries the issue's Linear estimate so the report shows cost per point; the daily report gains the `Chunk n of 4` section from PAP-705 and a planned-versus-served model mix line.
 
 **Interface contract**
 
@@ -86,3 +93,5 @@ Built by Atlas (lead); reviewed by Sentinel (Code Reviewer).
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/pm-linear/chunk-progress-report` = PAP-705.

@@ -10,15 +10,18 @@ surfaces: ["Customer"]
 milestone: "Agent principals and enterprise"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-16", "PAP-58", "PAP-438", "PAP-447"]
-blocks: []
+children: ["PAP-584", "PAP-585"]
+blockedBy: ["PAP-16", "PAP-58", "PAP-438", "PAP-447", "PAP-578", "PAP-579", "PAP-658", "PAP-661"]
+blocks: ["PAP-623", "PAP-841", "PAP-865", "PAP-887"]
 key: "identity/customer-portal-shell"
 url: "https://linear.app/paperos/issue/PAP-62/ship-the-customer-facing-portal-shell-login-profile-billing-entry"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:29.637Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:38.010Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-62: Ship the customer-facing portal shell (login, profile, billing entry) separate from the staff console
@@ -41,6 +44,9 @@ Ship the reference customer-facing surface every app inherits: a portal at `/por
 * Components: `PortalNav`, `AccountStatusCard`, `SettingRow`, `DangerZone` from PAP-67 and PAP-71; copy in `apps/web/src/portal/copy.ts`.
 * States: loading (Skeleton), empty, error, offline via PAP-234 components; forms validate with Zod shared with the API; unsaved-changes prompt; PWA install banner on home after the second visit (PAP-18).
 * Theming: PAP-75 runtime theme when present, else default tokens; logo falls back to app name.
+
+*Round 4 amendment (2026-09-18):*
+Work is split into PAP-584 and PAP-585; `registerPortalSection(id, component)` lets PAP-177 (billing), PAP-136 (preferences) and PAP-221 (legal) replace stubbed sections without editing the portal package. Delete account routes to PAP-221 when present, else `users.requestDeletion` with the PAP-432 grace explanation.
 
 **Interface contract**
 
@@ -87,3 +93,5 @@ Quill (Page Spec Writer) writes the six specs first; Iris (Component Crafter) bu
 **Size**
 
 M.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/identity/portal-account-pages` = PAP-585, `r4/identity/portal-frame` = PAP-584.

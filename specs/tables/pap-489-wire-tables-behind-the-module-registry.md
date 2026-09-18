@@ -11,14 +11,17 @@ milestone: "View sharing, formulas, dashboards"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-337", "PAP-340", "PAP-343", "PAP-434", "PAP-435", "PAP-483", "PAP-486"]
-blocks: ["PAP-266"]
+blockedBy: ["PAP-337", "PAP-340", "PAP-343", "PAP-434", "PAP-435", "PAP-483", "PAP-486", "PAP-537", "PAP-538", "PAP-631"]
+blocks: []
 key: "module/tables/wire"
 url: "https://linear.app/paperos/issue/PAP-489/wire-tables-behind-the-module-registry-with-an-adapter-and-feature"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:45.792Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:01.301Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-489: Wire tables behind the module registry with an adapter and feature flag
@@ -75,6 +78,8 @@ Provides: `tables` bound in the kernel as `@paperos/contract-tables` provider `d
 **Dependencies**
 
 Blocked by `module/tables/contract`, `module/tables/conformance`, `module-system/registry-di`, `module-system/flag-swap` and PAP-337, PAP-340, PAP-343. Blocks PAP-266.
+
+*Round 4 (2026-09-18): PAP-266 soft: this issue no longer blocks PAP-266 because the tables wire issue lands (09-30/10-01) after the* `--without` *milestone (09-29); PAP-266 proceeds (PAP-266's removal matrix covers modules whose wire issue has merged; PAP-489 adds its module to the matrix and to* `paperos create --without` *when it lands) and reconciles when this issue lands.*
 
 **Agent**
 

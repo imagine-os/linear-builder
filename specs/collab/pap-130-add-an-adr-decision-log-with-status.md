@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-128"]
-blocks: []
+blocks: ["PAP-763"]
 key: "collab/decision-log"
 url: "https://linear.app/paperos/issue/PAP-130/add-an-adrdecision-log-with-status-alternatives-and-links-to-issues"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:30.122Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:39.949Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-130: Add an ADR/decision log with status, alternatives and links to issues

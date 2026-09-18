@@ -6,7 +6,7 @@ projectName: "Version Control & Forge Independence"
 phase: "P0"
 type: "Docs"
 priority: 2
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Forgejo live and mirrored"
 state: "Backlog"
 parent: null
@@ -15,10 +15,13 @@ blockedBy: ["PAP-46"]
 blocks: []
 key: "forge/pr-templates"
 url: "https://linear.app/paperos/issue/PAP-49/author-pr-template-linking-linear-issue-page-spec-screenshots-and-the"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:02.432Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:36.288Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-20"
+cycle: null
 ---
 
 # PAP-49: Author PR template linking Linear issue, page spec, screenshots and the review-gate checklist
@@ -42,6 +45,10 @@ Out: reviewer agents (PAP-81), screenshot capture (PAP-82); this reserves their 
 * `.github/PULL_REQUEST_TEMPLATE.md` and `.forgejo/PULL_REQUEST_TEMPLATE.md`; sections as level-2 headings with an HTML comment each: Linear (`Closes PAP-<n>` plus title); Specs (files or `No spec changes (infra/docs)`); Summary (three to six plain bullets); Screenshots (seven widths from PAP-14 by light and dark, or `Not applicable (no UI change)`); Test plan (commands and results); Review gates (checkboxes for Gate 1 static, Gate 2 correctness, security, spec conformance, Gate 3 visual, Gate 4 edge cases, ticked only by bots via the checks API); Risk and rollback; Interface changes (new: any change to a contract listed in an issue's Interface contract section).
 * `pr-body.ts` fills Linear and Specs from the Linear API and `git diff --name-only`.
 * `pr-lint` (GitHub Action and Forgejo workflow) fails on missing Linear key, missing required headings, or hand-ticked gate boxes.
+
+*Round 4 amendment (2026-09-18):*
+
+* `pr-lint` also warns above 800 changed lines (excluding generated paths from `ownership.yaml` and lockfiles) and fails above 2,000 without the `large-change` label set by Atlas; draft PRs skip the Screenshots requirement until marked ready. \* New section `Stacked on` (list of base PRs) written by `pr-body.ts` when `.paperos/branch.json` exists (PAP-528).
 
 **Interface contract**
 
@@ -91,3 +98,5 @@ Built by Quill (Changelog Scribe) for the template, Forge for scripts. Reviewed 
 **Size**
 
 S: two templates, two small scripts.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/forge/dependent-branches` = PAP-528.

@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P2"
 type: "Build"
 priority: 3
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: []
-blocks: []
+blockedBy: ["PAP-25", "PAP-35", "PAP-178", "PAP-269"]
+blocks: ["PAP-865", "PAP-868", "PAP-905", "PAP-909"]
 key: "gap/app-shell/custom-domains"
 url: "https://linear.app/paperos/issue/PAP-431/add-per-tenant-custom-domains-on-demand-tls-in-caddy-host-based-tenant"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:58.019Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:51.012Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-431: Add per-tenant custom domains: on-demand TLS in Caddy, host-based tenant resolution in api-layer, DNS verification UI

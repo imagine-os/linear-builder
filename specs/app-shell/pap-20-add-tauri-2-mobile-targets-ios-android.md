@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Developer"]
+surfaces: ["Developer"]
 milestone: "Desktop and mobile shells build"
 state: "Backlog"
 parent: null
-children: ["PAP-258", "PAP-259", "PAP-260"]
+children: ["PAP-260", "PAP-258", "PAP-259"]
 blockedBy: ["PAP-14", "PAP-17", "PAP-19", "PAP-257"]
-blocks: ["PAP-154"]
+blocks: ["PAP-154", "PAP-651"]
 key: "app-shell/tauri-mobile"
 url: "https://linear.app/paperos/issue/PAP-20/add-tauri-2-mobile-targets-ios-android-with-platform-capability-shims"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:52.715Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:56:44.114Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-20: Add Tauri 2 mobile targets (iOS, Android) with platform capability shims

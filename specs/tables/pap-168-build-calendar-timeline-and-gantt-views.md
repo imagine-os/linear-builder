@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "All view types"
 state: "Backlog"
 parent: null
-children: ["PAP-344", "PAP-345", "PAP-346"]
-blockedBy: ["PAP-163", "PAP-337"]
-blocks: []
+children: ["PAP-346", "PAP-344", "PAP-345"]
+blockedBy: ["PAP-163", "PAP-337", "PAP-615"]
+blocks: ["PAP-798"]
 key: "tables/calendar-timeline-gantt"
 url: "https://linear.app/paperos/issue/PAP-168/build-calendar-timeline-and-gantt-views-with-dependencies"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:43.760Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:48:33.614Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-168: Build calendar, timeline and Gantt views with dependencies

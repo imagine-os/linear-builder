@@ -6,19 +6,22 @@ projectName: "Table & Views Engine"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Staff", "Customer"]
+surfaces: ["Staff"]
 milestone: "View sharing, formulas, dashboards"
 state: "Backlog"
 parent: "PAP-174"
 children: []
 blockedBy: ["PAP-121", "PAP-388"]
-blocks: ["PAP-390"]
+blocks: ["PAP-390", "PAP-637", "PAP-838", "PAP-848", "PAP-852", "PAP-856"]
 key: "tables/automations/actions"
 url: "https://linear.app/paperos/issue/PAP-389/action-catalogue-with-scope-classes-template-expressions-connectorcall"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:46.672Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:17.687Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-389: Action catalogue with scope classes, template expressions, connector.call, agent.run, delay and branch

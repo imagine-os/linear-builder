@@ -10,15 +10,18 @@ surfaces: ["Developer"]
 milestone: "Scale and offline tested"
 state: "Backlog"
 parent: null
-children: []
+children: ["PAP-601", "PAP-602"]
 blockedBy: ["PAP-140", "PAP-143", "PAP-328"]
 blocks: []
 key: "realtime/load-test"
 url: "https://linear.app/paperos/issue/PAP-147/load-test-500-concurrent-users-per-room-and-10k-rooms-tune-persistence"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:37.456Z"
-model: "claude-opus-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:42.196Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-147: Load test 500 concurrent users per room and 10k rooms; tune persistence and scaling
@@ -58,6 +61,9 @@ Exposes: `load/baseline.json` `{ scenario, metric, p50, p95, max, unit }[]`, `lo
 * Targets met or an ADR (PAP-130) records the accepted limit with a follow-up issue.
 * Nightly job green three consecutive nights with a summary comment here; dashboard screenshot on the PR; docs; changelog; Linear comment with the report link.
 
+*Round 4 amendment (2026-09-18):*
+Make the second-host dependency explicit: if the PAP-50 second runner host is not available before 2026-09-30, scenarios (a) and (c) run at 50 percent scale from the VPS, are marked `partial` in `load/baseline.json`, and a follow-up issue schedules the full run; the nightly job still runs (b), (d) and (e) at full scale. Work is split into PAP-601 and PAP-602.
+
 **Test plan**
 
 * Unit: token-set correctness checker on synthetic client texts (missing, duplicated, all present); baseline comparison flags a 25 percent regression and passes 15 percent.
@@ -87,3 +93,5 @@ Builder: Sentinel (Edge Case Hunter) writes the harness; Forge (Ops Runner) appl
 **Size**
 
 M: harness is straightforward; tuning iterations vary.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/realtime/load-harness` = PAP-601, `r4/realtime/load-runs-tuning` = PAP-602.

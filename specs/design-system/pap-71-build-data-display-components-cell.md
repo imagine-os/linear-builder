@@ -10,15 +10,18 @@ surfaces: ["Developer"]
 milestone: "Tokens and primitives"
 state: "Backlog"
 parent: null
-children: []
+children: ["PAP-655", "PAP-656"]
 blockedBy: ["PAP-67", "PAP-238", "PAP-302"]
-blocks: ["PAP-164", "PAP-165", "PAP-234", "PAP-338", "PAP-341"]
+blocks: ["PAP-164", "PAP-165", "PAP-234", "PAP-338", "PAP-341", "PAP-627", "PAP-629"]
 key: "design-system/data-display"
 url: "https://linear.app/paperos/issue/PAP-71/build-data-display-components-cell-renderers-badge-avatarstack"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:09.620Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:38.410Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-71: Build data display components: cell renderers, Badge, AvatarStack, Timeline, EmptyState, Skeleton
@@ -33,6 +36,9 @@ Provide the shared read-only visuals tables, dashboards, feeds and detail pages 
 
 * In: `packages/ui/src/data/` components, cell renderer registry `data/cells/` for 20 types, `Intl` formatting utilities on `LocaleProvider`, `meta.ts` spec IDs, gallery story.
 * Out: editable cells (PAP-165 editors), charts (PAP-170), tables, avatar upload, the other page states (PAP-234 builds ErrorState, DeniedState, OfflineBanner and friends; `EmptyState` stays here).
+
+*Round 4 amendment (2026-09-18):*
+Round 4: this issue is an umbrella for PAP-655 (registry, twenty cells, formatters, `Truncate`) and PAP-656 (the ten components). The cells child lands first because PAP-338 and PAP-341 wait on it. `Stat`'s `sparkline` slot expects the `Sparkline` from PAP-665; until it lands the slot renders nothing. The umbrella keeps the gallery screenshots and `docs/design/data-display.md`.
 
 **Spec**
 
@@ -87,3 +93,5 @@ Iris (Component Crafter) with Nova (Views Engineer) agreeing the renderer contra
 **Size**
 
 M.
+
+*Round 4 critique fix (2026-09-18):* resolved 3 round-4 file keys in this description to Linear identifiers: `r4/design-system/cell-renderer-registry-and-cells` = PAP-655, `r4/design-system/data-display-components` = PAP-656, `r4/design-system/dataviz-tokens-and-microcharts` = PAP-665.

@@ -10,15 +10,18 @@ surfaces: ["Developer"]
 milestone: "Record sync and conflict UX"
 state: "Backlog"
 parent: null
-children: ["PAP-326", "PAP-327", "PAP-328"]
+children: ["PAP-327", "PAP-326", "PAP-328"]
 blockedBy: ["PAP-36", "PAP-272"]
-blocks: ["PAP-144", "PAP-147", "PAP-148", "PAP-381"]
+blocks: ["PAP-144", "PAP-147", "PAP-148", "PAP-381", "PAP-599", "PAP-601"]
 key: "realtime/record-sync"
 url: "https://linear.app/paperos/issue/PAP-143/stream-record-changes-via-electric-shapes-to-all-connected-clients-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:14.946Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:57:07.586Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-143: Stream record changes via Electric shapes to all connected clients and reconcile with local writes

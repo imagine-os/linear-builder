@@ -11,14 +11,17 @@ milestone: "Edge-case hunting and release trains"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-243", "PAP-248", "PAP-434", "PAP-435", "PAP-462", "PAP-463"]
+blockedBy: ["PAP-243", "PAP-248", "PAP-434", "PAP-435", "PAP-462", "PAP-463", "PAP-537", "PAP-538"]
 blocks: []
 key: "module/quality/wire"
 url: "https://linear.app/paperos/issue/PAP-464/wire-quality-behind-the-module-registry-with-an-adapter-and-feature"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:14.760Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:04.732Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-464: Wire quality behind the module registry with an adapter and feature flag

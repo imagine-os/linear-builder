@@ -11,14 +11,17 @@ milestone: "Visual and video gates"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-82", "PAP-239", "PAP-248", "PAP-462"]
+blockedBy: ["PAP-82", "PAP-239", "PAP-243", "PAP-248", "PAP-462"]
 blocks: []
 key: "quality/screenshot-annotation"
 url: "https://linear.app/paperos/issue/PAP-84/have-a-vision-agent-inspect-screenshots-for-overflow-misalignment"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:13.216Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:31:01.574Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-84: Have a vision agent inspect screenshots for overflow, misalignment, contrast and truncation and post annotated findings
@@ -43,6 +46,10 @@ Turn Gate 3's pixels into review findings: a vision-capable Claude agent inspect
 * Cross-width: one call receives the same page at all seven widths to spot content missing at one width; identical defects across widths dedupe into one finding listing widths.
 * Annotation: boxes and numbered labels in the accent colour, `<id>.annotated.png` beside originals, a composite findings sheet per PR, uploaded with the visual report.
 * Cost: downscale to 1 568 px longest side, at most 60 images per PR (diffs, then new, then sample), $4 cap with a sampling notice; runs after PAP-82 via `workflow_run`, under 6 minutes.
+
+*Round 4 amendment (2026-09-18):*
+
+* Focus mode (round 4): `inspectScreenshots({ focus?: ('truncation'|'mirroring'|'overflow'|'contrast')[] })` restricts the prompt and the rubric subset for special runs such as the pseudo-locale and RTL capture; findings from a focused run carry `focus` in `vision.json` so the digest groups them separately from the default PR run.
 
 **Interface contract**
 

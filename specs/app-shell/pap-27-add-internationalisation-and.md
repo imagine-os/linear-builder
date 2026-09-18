@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff", "Developer"]
+surfaces: ["Developer"]
 milestone: "Desktop and mobile shells build"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-13", "PAP-66", "PAP-302"]
-blocks: ["PAP-126", "PAP-375"]
+blocks: ["PAP-126", "PAP-375", "PAP-504", "PAP-688", "PAP-738", "PAP-863", "PAP-908"]
 key: "app-shell/i18n-l10n"
 url: "https://linear.app/paperos/issue/PAP-27/add-internationalisation-and-localisation-icu-message-catalogs-locale"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:56.184Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:44.318Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-27: Add internationalisation and localisation: ICU message catalogs, locale negotiation, Intl formatting helpers, RTL layout flip, pseudo-locale testing and an agent translation skill
@@ -100,3 +103,5 @@ Built by Forge (Platform Engineer) with Iris on RTL components. Reviewed by Quil
 **Size**
 
 M: one package, a lint rule and a skill.
+
+*Round 4 critique fix (2026-09-18):* PAP-504 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-504.

@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-96"
 children: []
 blockedBy: ["PAP-46", "PAP-91", "PAP-92"]
-blocks: ["PAP-282", "PAP-283", "PAP-471"]
+blocks: ["PAP-282", "PAP-283", "PAP-471", "PAP-679", "PAP-691", "PAP-703", "PAP-704"]
 key: "pm-linear/orchestrator/claims"
 url: "https://linear.app/paperos/issue/PAP-281/orchestrator-linear-polling-atomic-claim-and-state-transitions"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:15.623Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:49.101Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-281: Orchestrator: Linear polling, atomic claim and state transitions
@@ -33,6 +36,10 @@ Build the half of the orchestrator that talks to Linear: the poll loop that read
 
 * In: repo skeleton `imagine-os/paperos-orchestrator` (Node 22, pnpm, Biome, Vitest, Drizzle), `src/linear/`, `src/db/` with migrations, `src/loop.ts` with a pluggable `pickNext()` (FIFO by priority then age until PAP-99), `linearComment()`, config loading.
 * Out: worktrees and sessions (PAP-282), HTTP and deployment (PAP-283), webhooks (PAP-97).
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: the promotion work package moves out of this issue into its own child of PAP-96, `Orchestrator: Backlog to Ready for Claude promotion pass` (PAP-691), blocked by this issue and PAP-93. This child keeps the poll loop, claims, transitions, `linearComment()` and tables at Size M; it exposes `loop.registerPass(name, fn)` so the promotion pass (and later the SLA evaluator) plug into the cycle without editing `loop.ts`.
 
 **Spec**
 
@@ -79,6 +86,10 @@ Run `pnpm dev`, move a rehearsal issue to `Ready for Claude`, watch the log prin
 
 Blocked by PAP-91, PAP-92 (through the parent). Blocks the two sibling children.
 
+*Round 4 amendment (2026-09-18):*
+
+* Soft dependency (round 4): PAP-722 (character-linear-identity-and-attribution) would block this issue but sits in a later milestone (2026-09-24 > 2026-09-22); no `blocks` relation was created. Build against its interface and reconcile when it lands.
+
 **Agent**
 
 Built by Atlas (Dispatcher sub-agent); reviewed by Sentinel.
@@ -86,3 +97,5 @@ Built by Atlas (Dispatcher sub-agent); reviewed by Sentinel.
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/pm-linear/orchestrator-promotion-pass` = PAP-691.

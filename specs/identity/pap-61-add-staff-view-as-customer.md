@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-38", "PAP-59", "PAP-229", "PAP-456"]
-blocks: []
+blocks: ["PAP-894"]
 key: "identity/impersonation"
 url: "https://linear.app/paperos/issue/PAP-61/add-staff-view-as-customer-impersonation-with-full-audit-trail"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:09.044Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:37.875Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-61: Add staff 'view as customer' impersonation with full audit trail
@@ -42,6 +45,9 @@ Let authorised staff see exactly what a customer sees, read-only by default and 
 * Banner: `ImpersonationBanner` in `packages/ui`, mounted in the `banner` slot of both shells: fixed top, warning tokens, "Viewing as Ada Lovelace (customer) - read-only - 27:14 remaining - Stop", countdown announced every 5 minutes, persists across navigation and Tauri windows (PAP-145 broadcast).
 * Audit: every request during impersonation writes `actorId = target`, `impersonatorId = staff`, `reason`, `impersonationId` (PAP-38); `impersonation.started` and `impersonation.ended` events; customers see "Account access history" on `/portal/security` (PAP-62, PAP-220); tenants may hide it, default visible.
 * Review page `/console/security/impersonations` (spec `specs/pages/console/impersonations.spec.yaml`) listing sessions with links to audit events.
+
+*Round 4 amendment (2026-09-18):*
+Realtime boundary: an impersonation session in `read` mode connects to Hocuspocus rooms with `connection.readOnly = true` and never publishes awareness under the customer's identity (the collab server reads `session.impersonation` through `verifySessionToken`); `write` mode publishes awareness as "Support (viewing as Ada)". `impersonation.start|stop` publish `permission.changed` so open rooms and shapes re-evaluate (PAP-591).
 
 **Interface contract**
 
@@ -86,3 +92,5 @@ Forge for procedures and middleware; Iris (Component Crafter) for the banner. Re
 **Size**
 
 M.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/identity/permission-propagation` = PAP-591.

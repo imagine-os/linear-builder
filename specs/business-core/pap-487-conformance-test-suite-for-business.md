@@ -11,14 +11,17 @@ milestone: "Ledger and reports"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-441", "PAP-484"]
+blockedBy: ["PAP-441", "PAP-484", "PAP-541", "PAP-767"]
 blocks: ["PAP-490"]
 key: "module/business-core/conformance"
 url: "https://linear.app/paperos/issue/PAP-487/conformance-test-suite-for-business-core-contract"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:44.061Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:01.407Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-487: Conformance test suite for business-core contract

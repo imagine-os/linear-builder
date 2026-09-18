@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "View sharing, formulas, dashboards"
 state: "Backlog"
 parent: null
-children: ["PAP-385", "PAP-386", "PAP-387"]
-blockedBy: ["PAP-155", "PAP-165", "PAP-170", "PAP-172", "PAP-331", "PAP-343"]
-blocks: ["PAP-186"]
+children: ["PAP-386", "PAP-385", "PAP-387"]
+blockedBy: ["PAP-155", "PAP-165", "PAP-170", "PAP-172", "PAP-331", "PAP-343", "PAP-615", "PAP-618", "PAP-622", "PAP-624", "PAP-630"]
+blocks: ["PAP-186", "PAP-811", "PAP-812", "PAP-830", "PAP-869", "PAP-897", "PAP-899"]
 key: "tables/dashboard-blocks"
 url: "https://linear.app/paperos/issue/PAP-173/compose-views-into-dashboard-pages-with-drag-arranged-blocks-and-cross"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:45.708Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:49:32.055Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-173: Compose views into dashboard pages with drag-arranged blocks and cross-filters

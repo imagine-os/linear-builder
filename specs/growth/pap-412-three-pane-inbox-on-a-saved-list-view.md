@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-197"
 children: []
 blockedBy: ["PAP-411"]
-blocks: []
+blocks: ["PAP-806", "PAP-807", "PAP-840", "PAP-867", "PAP-898"]
 key: "growth/support/console-ui"
 url: "https://linear.app/paperos/issue/PAP-412/three-pane-inbox-on-a-saved-list-view-conversation-view-contact"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:52.379Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:13.692Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-412: Three-pane inbox on a saved list view, conversation view, contact sidebar, assignment, snooze, macros, shortcuts and metrics

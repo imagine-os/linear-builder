@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-96"
 children: []
 blockedBy: ["PAP-25", "PAP-281", "PAP-282"]
-blocks: ["PAP-97", "PAP-98", "PAP-99"]
+blocks: ["PAP-97", "PAP-98", "PAP-99", "PAP-706"]
 key: "pm-linear/orchestrator/deploy"
 url: "https://linear.app/paperos/issue/PAP-283/orchestrator-deployment-on-coolify-status-endpoint-and-runbook"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:17.197Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:26.629Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-283: Orchestrator: deployment on Coolify, `/status` endpoint and runbook

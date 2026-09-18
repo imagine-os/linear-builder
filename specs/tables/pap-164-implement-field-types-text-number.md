@@ -10,15 +10,18 @@ surfaces: ["Developer"]
 milestone: "Grid with sort, filter, group"
 state: "Backlog"
 parent: null
-children: ["PAP-338", "PAP-339", "PAP-340"]
-blockedBy: ["PAP-67", "PAP-71", "PAP-161", "PAP-233", "PAP-238", "PAP-302"]
-blocks: ["PAP-165", "PAP-171", "PAP-199", "PAP-332", "PAP-341", "PAP-347", "PAP-382"]
+children: ["PAP-627", "PAP-616", "PAP-340", "PAP-338", "PAP-339"]
+blockedBy: ["PAP-67", "PAP-71", "PAP-161", "PAP-233", "PAP-238", "PAP-302", "PAP-656", "PAP-660"]
+blocks: ["PAP-165", "PAP-171", "PAP-199", "PAP-332", "PAP-341", "PAP-344", "PAP-347", "PAP-382", "PAP-629"]
 key: "tables/field-types"
 url: "https://linear.app/paperos/issue/PAP-164/implement-field-types-text-number-currency-date-select-multi-select"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:43.225Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:51:43.040Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-164: Implement field types: text, number, currency, date, select, multi-select, relation, lookup, rollup, formula, attachment, user, checkbox, rating, URL, email, phone

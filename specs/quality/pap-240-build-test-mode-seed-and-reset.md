@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-32", "PAP-57", "PAP-224"]
-blocks: ["PAP-64", "PAP-82", "PAP-85", "PAP-86", "PAP-87", "PAP-122", "PAP-247", "PAP-250", "PAP-357", "PAP-363"]
+blocks: ["PAP-64", "PAP-82", "PAP-83", "PAP-85", "PAP-86", "PAP-87", "PAP-122", "PAP-247", "PAP-250", "PAP-357", "PAP-363", "PAP-507", "PAP-675", "PAP-676", "PAP-684", "PAP-690", "PAP-729"]
 key: "quality/test-mode-seed"
 url: "https://linear.app/paperos/issue/PAP-240/build-test-mode-seed-and-reset-endpoints-testseed-testreset-with"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:05.095Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:19.736Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-240: Build test-mode seed and reset endpoints (`/__test/seed`, `/__test/reset`) with deterministic fixtures per audience, before Gate 3

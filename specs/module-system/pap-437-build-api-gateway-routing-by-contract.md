@@ -11,14 +11,17 @@ milestone: "Contracts and conformance wired"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-267", "PAP-268", "PAP-434"]
-blocks: ["PAP-442"]
+blockedBy: ["PAP-267", "PAP-268", "PAP-434", "PAP-537"]
+blocks: ["PAP-442", "PAP-539"]
 key: "module-system/gateway-routing"
 url: "https://linear.app/paperos/issue/PAP-437/build-api-gateway-routing-by-contract-mount-contract-routers-resolve"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:50:07.195Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:08.869Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-437: Build API gateway routing by contract: mount contract routers, resolve the bound implementation per request, `X-PaperOS-Impl` canary and response adapters

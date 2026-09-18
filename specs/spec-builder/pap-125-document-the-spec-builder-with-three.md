@@ -11,14 +11,17 @@ milestone: "Spec editor UI"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-115"]
-blocks: []
+blockedBy: ["PAP-115", "PAP-664"]
+blocks: ["PAP-750"]
 key: "spec-builder/spec-docs"
 url: "https://linear.app/paperos/issue/PAP-125/document-the-spec-builder-with-three-fully-specified-example-pages"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:29.661Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:40.252Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-125: Document the spec builder with three fully specified example pages (customer list, staff dashboard, agent console)

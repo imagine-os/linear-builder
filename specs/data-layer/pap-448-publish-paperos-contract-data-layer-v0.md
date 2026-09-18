@@ -11,14 +11,17 @@ milestone: "Postgres + Drizzle baseline"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-33", "PAP-279", "PAP-302", "PAP-303", "PAP-433"]
-blocks: ["PAP-100", "PAP-175", "PAP-187", "PAP-347", "PAP-451", "PAP-454"]
+blockedBy: ["PAP-33", "PAP-279", "PAP-302", "PAP-303", "PAP-433", "PAP-555", "PAP-556"]
+blocks: ["PAP-100", "PAP-175", "PAP-187", "PAP-347", "PAP-451", "PAP-454", "PAP-790"]
 key: "module/data-layer/contract"
 url: "https://linear.app/paperos/issue/PAP-448/publish-paperoscontract-data-layer-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:04.437Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:07.625Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-448: Publish @paperos/contract-data-layer v0.1 with manifest

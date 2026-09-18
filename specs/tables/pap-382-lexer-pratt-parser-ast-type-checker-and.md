@@ -11,14 +11,17 @@ milestone: "View sharing, formulas, dashboards"
 state: "Backlog"
 parent: "PAP-171"
 children: []
-blockedBy: ["PAP-162", "PAP-164"]
-blocks: ["PAP-383"]
+blockedBy: ["PAP-162", "PAP-164", "PAP-627"]
+blocks: ["PAP-383", "PAP-839"]
 key: "tables/formula/parser-typecheck"
 url: "https://linear.app/paperos/issue/PAP-382/lexer-pratt-parser-ast-type-checker-and-the-definefunction-catalogue"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:43.916Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:55:56.132Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-382: Lexer, Pratt parser, AST, type checker and the defineFunction catalogue

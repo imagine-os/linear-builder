@@ -15,10 +15,13 @@ blockedBy: []
 blocks: ["PAP-140", "PAP-475"]
 key: "realtime/realtime-research"
 url: "https://linear.app/paperos/issue/PAP-139/benchmark-yjs-vs-automerge-vs-loro-for-document-crdt-and-write-an-adr"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:33.081Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:57:06.683Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-25"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-139: Benchmark Yjs vs Automerge vs Loro for document CRDT and write an ADR

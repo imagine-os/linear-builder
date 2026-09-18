@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-91"]
-blocks: ["PAP-306", "PAP-307", "PAP-465"]
+blocks: ["PAP-306", "PAP-307", "PAP-465", "PAP-691", "PAP-700"]
 key: "pm-linear/issue-contract"
 url: "https://linear.app/paperos/issue/PAP-93/define-the-issue-contract-spec-link-acceptance-criteria-surfaces"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:16.934Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:41.292Z"
 model: "claude-fable-5-1"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-20"
+cycle: null
 ---
 
 # PAP-93: Define the issue contract (spec link, acceptance criteria, surfaces, definition of done) enforced by a Linear webhook validator
@@ -87,6 +90,10 @@ Move a fixture issue with a missing Definition of done to `Ready for Claude`; wi
 **Dependencies**
 
 Blocked by PAP-91. Soft: PAP-97. Consumed by PAP-96 (claim re-validation and promotion check 4), PAP-99, PAP-118.
+
+*Round 4 amendment (2026-09-18):*
+
+* Soft dependency (round 4): PAP-683 (recorded-http-fixtures-kit) would block this issue but sits in a later milestone (2026-09-25 > 2026-09-20); no `blocks` relation was created. Build against its interface and reconcile when it lands.
 
 **Agent**
 

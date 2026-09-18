@@ -15,10 +15,13 @@ blockedBy: ["PAP-104", "PAP-199", "PAP-287", "PAP-332", "PAP-334", "PAP-349"]
 blocks: []
 key: "migration/migration-agent"
 url: "https://linear.app/paperos/issue/PAP-208/create-the-migration-agent-character-that-interviews-users-about"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:56.636Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:34.868Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-10-01"
+cycle: null
 ---
 
 # PAP-208: Create the migration agent character that interviews users about current tools and runs the imports
@@ -49,6 +52,9 @@ Out: building importers, live sync, migrating credentials, sources the tenant ha
 * The agent sees at most 20 dry-run examples per field.
 * Session cap 90 minutes or budget; resumable plan saved via PAP-109.
 * Conversation follows tenant locale; JSON stays English.
+
+*Round 4 amendment (2026-09-18):*
+Round 4 security correction: tenant owners are not Linear users, and the Security Model treats only Justin's Linear comments as T1. Remove the 'owner's Linear comment `approve <run_id>`' path for tenants; approval tokens are minted only by the in-app button under an owner principal (or `import.approve` permission). The Linear comment path remains solely for the PaperOS demo tenant when the comment `user.id` is Justin's.
 
 **Interface contract**
 

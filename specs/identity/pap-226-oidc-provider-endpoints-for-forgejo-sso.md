@@ -6,19 +6,22 @@ projectName: "Identity, Roles & Audiences"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Auth works across web and desktop"
 state: "Backlog"
 parent: "PAP-57"
 children: []
 blockedBy: ["PAP-223"]
-blocks: []
+blocks: ["PAP-230", "PAP-231", "PAP-511", "PAP-797", "PAP-815", "PAP-866", "PAP-900", "PAP-913"]
 key: "identity/better-auth/oidc-provider"
 url: "https://linear.app/paperos/issue/PAP-226/oidc-provider-endpoints-for-forgejo-sso"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:01.916Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:34.238Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-226: OIDC provider endpoints for Forgejo SSO

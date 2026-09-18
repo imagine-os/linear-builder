@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-96"
 children: []
 blockedBy: ["PAP-281"]
-blocks: ["PAP-283"]
+blocks: ["PAP-283", "PAP-704", "PAP-720"]
 key: "pm-linear/orchestrator/sessions"
 url: "https://linear.app/paperos/issue/PAP-282/orchestrator-worktree-lifecycle-and-claude-session-launch"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:15.737Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:49.251Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-282: Orchestrator: worktree lifecycle and Claude session launch
@@ -41,6 +44,14 @@ Turn a claim into a running Claude Code session: create or reuse the git worktre
 * Launch: `query()` from `@anthropic-ai/claude-agent-sdk` with `cwd`, `permissionMode`, `allowedTools`, `disallowedTools`, `mcpServers` from the PAP-106 bundle (default allowlist until it lands), `agents` from `.claude/agents`, `maxTurns` from PAP-111 (default 200), `model` from `roster.json`, `settingSources: ["project"]`, abort controller exposed.
 * Stream: every message to `sessions/<id>.ndjson` and `events`; `result` forwarded to PAP-98; last assistant text parsed for the footer and stored in `sessions.footer_json`.
 * Completion: `gh pr list --head <branch>` and Forgejo API; PR found calls `toInReview`; none found calls `retry` with the footer in the next prompt.
+
+*Round 4 amendment (2026-09-18):*
+
+* Model selection (round 4, aligns with CLAUDE.md): `launchSession` calls `resolveModel(issue, character, 'builder')` from `src/session/model-routing.ts`; precedence is the issue's `Model` and `Effort` labels, then the character's `model` and `effort` in `roster.json`, then Sonnet 5 / medium. The served model reported by the SDK is stored in `sessions.model_served` and the footer; on 529 or 429 storms the fallback chain Fable 5.1 to Opus 5 to Sonnet 5 applies after three attempts, never upward, and a refusal stop never falls back.
+
+*Round 4 amendment (2026-09-18):*
+
+* Prompt order and context pack (round 4): `renderPrompt` places, in this order, the system prompt, the character prompt, the memory block (PAP-109), the project context pack (PAP-716), the umbrella's Module boundary paragraph, then the issue body and untrusted blocks (PAP-299 wrapping), so the prefix is byte-identical across sessions of one character on one project and the prompt cache hits; a snapshot test asserts the order.
 
 **Interface contract**
 
@@ -86,3 +97,5 @@ Built by Atlas (Dispatcher sub-agent); reviewed by Sentinel.
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/agents/docs-context-pack-and-cache-friendly-prompts` = PAP-716.

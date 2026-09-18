@@ -11,14 +11,17 @@ milestone: "Acquisition analytics"
 state: "Backlog"
 parent: "PAP-197"
 children: []
-blockedBy: ["PAP-37", "PAP-187", "PAP-474"]
-blocks: ["PAP-411"]
+blockedBy: ["PAP-37", "PAP-187", "PAP-474", "PAP-790", "PAP-791"]
+blocks: ["PAP-411", "PAP-867"]
 key: "growth/support/email-threading"
 url: "https://linear.app/paperos/issue/PAP-410/support-schema-inbound-email-parsing-threading-heuristics-html"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:04.356Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:54.990Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-410: Support schema, inbound email parsing, threading heuristics, HTML sanitising, contact matching and outbound replies
@@ -47,6 +50,9 @@ Provides: schema, `support.conversations|messages|mailboxes.*`, inbound route, `
 
 * 30 fixture emails threaded and sanitised correctly; real email round trip on staging recorded.
 
+*Round 4 amendment (2026-09-18):*
+Round 4: the 30 fixture emails are the gate; the real staging round trip is attached when the mailbox DNS (NJ) exists and is otherwise `skipped: no-credentials`. Inbound fixtures must include one message with a prompt-injection payload in the body and assert it is wrapped as T3 untrusted content before any agent (PAP-192, PAP-806) reads it.
+
 **Test plan**
 
 * Unit: threading, stripping, sanitiser, matching precedence, status rules.
@@ -71,3 +77,5 @@ Builder: Beacon (CRM Builder). Reviewer: Sentinel (Security Auditor for sanitisa
 **Size**
 
 M: threading heuristics.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/growth/support-ai-reply-drafts` = PAP-806.

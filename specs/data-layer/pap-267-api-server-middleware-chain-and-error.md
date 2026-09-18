@@ -11,14 +11,17 @@ milestone: "Postgres + Drizzle baseline"
 state: "Backlog"
 parent: "PAP-35"
 children: []
-blockedBy: ["PAP-33"]
-blocks: ["PAP-268", "PAP-270", "PAP-304", "PAP-437", "PAP-454"]
+blockedBy: ["PAP-32", "PAP-33"]
+blocks: ["PAP-268", "PAP-270", "PAP-304", "PAP-327", "PAP-437", "PAP-454", "PAP-537", "PAP-557", "PAP-558", "PAP-575", "PAP-593", "PAP-599", "PAP-793", "PAP-846", "PAP-861", "PAP-876", "PAP-892", "PAP-907"]
 key: "child/PAP-35/12"
 url: "https://linear.app/paperos/issue/PAP-267/api-server-middleware-chain-and-error-mapping-appsapi-on-hono-4"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:12.234Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:31:01.574Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-267: API server, middleware chain and error mapping (apps/api on Hono 4)

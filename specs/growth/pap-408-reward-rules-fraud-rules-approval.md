@@ -11,14 +11,17 @@ milestone: "Acquisition analytics"
 state: "Backlog"
 parent: "PAP-196"
 children: []
-blockedBy: ["PAP-179", "PAP-181", "PAP-407"]
-blocks: ["PAP-409"]
+blockedBy: ["PAP-179", "PAP-181", "PAP-394", "PAP-407", "PAP-778"]
+blocks: ["PAP-409", "PAP-872", "PAP-887"]
 key: "growth/referral/rewards-payouts-ledger"
 url: "https://linear.app/paperos/issue/PAP-408/reward-rules-fraud-rules-approval-stripe-connect-transfers-ledger"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:51.916Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:24.416Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-408: Reward rules, fraud rules, approval, Stripe Connect transfers, ledger postings and monthly statements

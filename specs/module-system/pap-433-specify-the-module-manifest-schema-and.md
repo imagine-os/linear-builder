@@ -12,13 +12,16 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-264", "PAP-265", "PAP-434", "PAP-436", "PAP-438", "PAP-439", "PAP-440", "PAP-441", "PAP-445", "PAP-447", "PAP-448", "PAP-449", "PAP-456", "PAP-459", "PAP-462", "PAP-465", "PAP-466", "PAP-467", "PAP-474", "PAP-475", "PAP-476", "PAP-483", "PAP-484", "PAP-485", "PAP-492", "PAP-493"]
+blocks: ["PAP-264", "PAP-265", "PAP-434", "PAP-436", "PAP-438", "PAP-439", "PAP-440", "PAP-441", "PAP-445", "PAP-448", "PAP-449", "PAP-456", "PAP-459", "PAP-462", "PAP-465", "PAP-466", "PAP-467", "PAP-474", "PAP-475", "PAP-476", "PAP-483", "PAP-484", "PAP-485", "PAP-492", "PAP-493", "PAP-537", "PAP-541", "PAP-542", "PAP-543", "PAP-544", "PAP-551", "PAP-833", "PAP-847", "PAP-862", "PAP-877", "PAP-893"]
 key: "module-system/manifest-schema"
 url: "https://linear.app/paperos/issue/PAP-433/specify-the-module-manifest-schema-and-validator-provides-requires"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:49:47.383Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:55.964Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-22"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-433: Specify the module manifest schema and validator: provides, requires, capabilities, slots, events, owner and swap risk on top of PAP-264
@@ -50,6 +53,10 @@ Out: the registry runtime (registry issue), the compatibility matrix job, genera
 * `kind` is `runtime|service|tooling|process|kernel`; `swapRisk` is `low|medium|high|critical`; both required.
 * The validator is pure and synchronous (usable in Vite config and the server), as PAP-264 requires of `loadModules`.
 
+*Round 4 amendment (2026-09-18):*
+
+* Reserved extension fields validated when present: `secrets: string[]` (PAP-444), `lifecycle: { startupBudgetMs, healthIntervalMs, drainTimeoutMs }` (PAP-546), `resilience` per port (PAP-548) and `issues: string[]` (PAP-439 map); unknown fields still fail. `pnpm modules:validate --fix` is reserved for PAP-552.
+
 **Interface contract**
 
 Provides: `ModuleManifest` (extended), `defineModule`, `validateManifest`, `manifest.schema.json`, `pnpm modules:validate`, `pnpm gen:schemas`, the seventeen golden manifests. Consumes: PAP-264 base fields (soft; this issue lands first and PAP-264 adopts it), `plan.json` project keys, the roster names (PAP-103). Consumed by: every `Publish @paperos/contract-<module>` issue, the registry, the compatibility matrix, the dependency map, the docs generator, PAP-264, PAP-265, PAP-266.
@@ -78,6 +85,8 @@ Provides: `ModuleManifest` (extended), `defineModule`, `validateManifest`, `mani
 
 None hard; pure package on the PAP-13 layout (soft: PAP-13 for the workspace, PAP-264 for the base manifest shape, which this issue defines the extension of). Blocks PAP-264, PAP-265.
 
+*Round 4 (2026-09-18): PAP-447 soft: this issue no longer blocks PAP-447 because the manifest schema and validator (09-22, Ready, spec-complete) land after the app-shell scaffold milestone (09-20); PAP-447 proceeds (hand-write the app-shell manifest against the schema draft in PAP-433's Spec text; run the validator when PAP-433 merges) and reconciles when this issue lands.*
+
 **Agent**
 
 Built by Atlas. Reviewed by Forge and Sentinel.
@@ -89,3 +98,5 @@ S
 **Demo**
 
 Reviewer runs `pnpm modules:validate` and sees eighteen manifests green in a table with provides and requires counts; edits `tables` to require `@paperos/contract-collab ^0.2` and the run fails with `REQUIRES_RANGE_MISMATCH` naming both modules and versions. Under a minute.
+
+*Round 4 critique fix (2026-09-18):* resolved 3 round-4 file keys in this description to Linear identifiers: `r4/module-system/lifecycle-and-health` = PAP-546, `r4/module-system/port-resilience` = PAP-548, `r4/module-system/port-usage-tracking` = PAP-552.

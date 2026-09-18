@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-78", "PAP-305", "PAP-433"]
-blocks: ["PAP-306", "PAP-440", "PAP-445"]
+blocks: ["PAP-306", "PAP-440", "PAP-445", "PAP-550", "PAP-552", "PAP-761"]
 key: "module-system/dependency-lint-and-map"
 url: "https://linear.app/paperos/issue/PAP-439/add-the-module-dependency-lint-rules-r7-to-r11-and-the-generated"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:28.189Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:08.931Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-439: Add the module dependency lint rules (R7 to R11) and the generated, committed dependency map with Linear identifiers

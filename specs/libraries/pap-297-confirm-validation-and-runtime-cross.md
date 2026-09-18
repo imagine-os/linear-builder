@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-214"
 children: []
 blockedBy: ["PAP-296"]
-blocks: ["PAP-43"]
+blocks: ["PAP-43", "PAP-564"]
 key: "child/PAP-214/2"
 url: "https://linear.app/paperos/issue/PAP-297/confirm-validation-and-runtime-cross-link-confirmed-choices"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:20.222Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:10.341Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-297: Confirm validation and runtime, cross-link confirmed choices, consolidate ADRs, compose files and registry entries

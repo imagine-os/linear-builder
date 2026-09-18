@@ -15,10 +15,13 @@ blockedBy: ["PAP-79", "PAP-239", "PAP-433"]
 blocks: ["PAP-83", "PAP-84", "PAP-89", "PAP-137", "PAP-463", "PAP-464"]
 key: "module/quality/contract"
 url: "https://linear.app/paperos/issue/PAP-462/publish-paperoscontract-quality-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:13.216Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:05.465Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-462: Publish @paperos/contract-quality v0.1 with manifest
@@ -56,6 +59,10 @@ Requires (manifest `requires[]`): \* `@paperos/contract-forge` ^0.1 (PR and comm
 * `@paperos/contract-pm-linear` ^0.1 (issue refs, Needs Justin card shape)
 
 Rules: Zod 4 only, JSON Schema generated; no `z.bigint()` on wire schemas (PAP-302 codec); one sentence and one fixture per port method; `size-limit` under 50 KB minified; lint R9 passes; manifest `dependsOn` is derived from `requires`.
+
+*Round 4 amendment (2026-09-18):*
+
+* Artefact kind names (round 4 consistency fix): the contract exports exactly the kinds PAP-239 registers: `gate1`, `security`, `visual`, `videos`, `vision`, `edgecases`, `perf`, `review`, `review-cost`, `flakes-delta`, `certification`, `calibration`, `conformance`, plus the round-4 additions `coverage`, `migrations`, `mutation` and `e2e`. The names `edge.json` and `review.json` in the list above are aliases of `edgecases.json` and the `review` kind; the status registry is likewise the PAP-239 list plus `gate/2-docs`, `gate/1-coverage`, `gate/1-migrations` and `gate/dast`. A kind or status present in one file and not the other fails `pnpm contracts:build`.
 
 **Interface contract**
 

@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-151", "PAP-291", "PAP-476"]
-blocks: []
+blocks: ["PAP-647", "PAP-648", "PAP-649", "PAP-653"]
 key: "input/keymaps"
 url: "https://linear.app/paperos/issue/PAP-153/support-user-customizable-keymaps-with-presets-default-vim-style"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:05.711Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:43.076Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-153: Support user-customizable keymaps with presets (default, Vim-style, Linear-like) synced per user
@@ -47,6 +50,10 @@ Out: per-tenant keymaps, macros, mouse buttons, Tiptap internals.
 * Vim layer only where `role` is list, grid or tree; `Escape` returns to normal without blurring; mode shown in the status bar.
 * Recording ignores lone modifiers; sequences by pausing 1 s.
 * Import validated by Zod; unknown command IDs kept and greyed.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: the resolver gains two fixed layers between presets and user overrides: `a11y` (written by PAP-647: with `singleKeyShortcuts: 'off'` every modifier-less chord and sequence resolves to `null`; with `'modifierOnly'` they resolve to `alt+<key>`) and `macros` (PAP-648). The settings page shows the active layer that produced each effective chord, and the export format includes `layers` so imports are faithful.
 
 **Interface contract**
 
@@ -87,3 +94,5 @@ Builder: Nova. Reviewer: Sentinel (Code Reviewer, Edge Case Hunter for conflict 
 **Size**
 
 M: resolver is small; presets and settings UI carry the bulk.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/input/accessibility-input-preferences` = PAP-647, `r4/input/macros-and-command-chains` = PAP-648.

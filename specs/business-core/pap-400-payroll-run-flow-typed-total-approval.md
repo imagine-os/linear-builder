@@ -11,14 +11,17 @@ milestone: "Payroll adapter and cash dashboard"
 state: "Backlog"
 parent: "PAP-184"
 children: []
-blockedBy: ["PAP-179", "PAP-399"]
-blocks: []
+blockedBy: ["PAP-179", "PAP-394", "PAP-399", "PAP-768"]
+blocks: ["PAP-782", "PAP-787", "PAP-884"]
 key: "business-core/payroll/run-approve-post"
 url: "https://linear.app/paperos/issue/PAP-400/payroll-run-flow-typed-total-approval-webhook-status-transitions"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:49.670Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:24.416Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-10-01"
+cycle: null
 ---
 
 # PAP-400: Payroll run flow, typed-total approval, webhook status transitions, ledger posting and the paystub portal page

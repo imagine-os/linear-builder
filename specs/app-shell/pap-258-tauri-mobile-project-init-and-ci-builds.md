@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-20"
 children: []
 blockedBy: ["PAP-14", "PAP-255"]
-blocks: ["PAP-259"]
+blocks: ["PAP-259", "PAP-515"]
 key: "child/PAP-20/3"
 url: "https://linear.app/paperos/issue/PAP-258/tauri-mobile-project-init-and-ci-builds-android-debug-apk-ios"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:10.012Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:28.876Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-258: Tauri mobile project init and CI builds (Android debug APK, iOS simulator app)

@@ -11,14 +11,17 @@ milestone: "Themable per tenant with docs"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-75", "PAP-238", "PAP-434", "PAP-435", "PAP-459", "PAP-460"]
+blockedBy: ["PAP-75", "PAP-238", "PAP-434", "PAP-435", "PAP-459", "PAP-460", "PAP-537", "PAP-538", "PAP-657", "PAP-658", "PAP-672"]
 blocks: []
 key: "module/design-system/wire"
 url: "https://linear.app/paperos/issue/PAP-461/wire-design-system-behind-the-module-registry-with-an-adapter-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:11.367Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:06.015Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-461: Wire design-system behind the module registry with an adapter and feature flag

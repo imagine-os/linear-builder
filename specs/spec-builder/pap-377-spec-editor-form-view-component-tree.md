@@ -6,7 +6,7 @@ projectName: "Spec Builder"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Spec editor UI"
 state: "Backlog"
 parent: "PAP-124"
@@ -15,10 +15,13 @@ blockedBy: ["PAP-376"]
 blocks: []
 key: "spec-builder/spec-editor-ui/form"
 url: "https://linear.app/paperos/issue/PAP-377/spec-editor-form-view-component-tree-editor-and-two-way-sync-with-yaml"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:42.968Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:55:56.623Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-377: Spec editor: form view, component tree editor and two-way sync with YAML preserving comments

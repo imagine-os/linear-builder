@@ -11,14 +11,17 @@ milestone: "Stripe billing live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-33", "PAP-302", "PAP-448"]
-blocks: ["PAP-177", "PAP-179", "PAP-181", "PAP-184", "PAP-185", "PAP-392", "PAP-395", "PAP-399", "PAP-484"]
+blockedBy: ["PAP-33", "PAP-34", "PAP-302", "PAP-448"]
+blocks: ["PAP-177", "PAP-179", "PAP-181", "PAP-184", "PAP-185", "PAP-392", "PAP-395", "PAP-399", "PAP-484", "PAP-766", "PAP-767", "PAP-768", "PAP-770", "PAP-774", "PAP-782", "PAP-878"]
 key: "business-core/finance-data-model"
 url: "https://linear.app/paperos/issue/PAP-175/specify-the-finance-data-model-customers-vendors-employees-accounts"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:04.437Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:31:01.574Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-175: Specify the finance data model: customers, vendors, employees, accounts, transactions and periods across all business types
@@ -44,6 +47,9 @@ Out: journal posting (PAP-179), Stripe objects (PAP-177), payroll fields beyond 
 * `fin_period`: monthly, `status: open|closed|locked`, exclusion constraint against overlap.
 * `fin_transaction`: `kind: invoice|payment|refund|expense|payroll_run|transfer|adjustment|payout|fee`, `party_id?`, `occurred_at`, `amount_minor`, `currency`, `status`, `source { system, id }` unique per tenant, `memo`, `metadata`, `dimensions jsonb`.
 * All tables: `tenant_id` RLS (PAP-34), audit on write (PAP-38), registered as datasets (PAP-161).
+
+*Round 4 amendment (2026-09-18):*
+Round 4: `convert(rate)` takes a rate from `fin_fx_rate` owned by PAP-766; PAP-183, PAP-185, PAP-206 and PAP-423 must call `fx.rateAt` rather than keeping their own rates. Add `fin_item` (PAP-774) and `fin_dimension` (PAP-769) to the ER diagram as planned tables.
 
 **Interface contract**
 
@@ -89,3 +95,5 @@ Builder: Ledger (Bookkeeper). Reviewer: Forge (Schema Wright) on schema, Sentine
 **Size**
 
 M: schema and seeds are mechanical; the value is getting subtypes and mappings right.
+
+*Round 4 critique fix (2026-09-18):* resolved 3 round-4 file keys in this description to Linear identifiers: `r4/business-core/fx-rates-and-conversion` = PAP-766, `r4/business-core/item-catalogue` = PAP-774, `r4/business-core/ledger-dimensions-registry` = PAP-769.

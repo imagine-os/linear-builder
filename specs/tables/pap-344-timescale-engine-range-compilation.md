@@ -11,14 +11,17 @@ milestone: "All view types"
 state: "Backlog"
 parent: "PAP-168"
 children: []
-blockedBy: ["PAP-163"]
-blocks: ["PAP-345"]
+blockedBy: ["PAP-155", "PAP-163", "PAP-164", "PAP-331", "PAP-337", "PAP-627", "PAP-659"]
+blocks: ["PAP-345", "PAP-863", "PAP-865", "PAP-884"]
 key: "tables/time/engine-calendar"
 url: "https://linear.app/paperos/issue/PAP-344/timescale-engine-range-compilation-overlap-packing-and-the-calendar"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:33.431Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:29.647Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-344: TimeScale engine, range compilation, overlap packing and the calendar view (month, week, day, agenda)
@@ -64,6 +67,10 @@ Drag an event to next week in `/demo/calendar`, switch to week view and back.
 **Dependencies**
 
 PAP-163, PAP-164, PAP-155 (hard). Blocks siblings.
+
+*Round 4 amendment (2026-09-18):*
+
+* Soft dependency (round 4): PAP-908 (recurrence-engine) (new, phase 2) would block this issue but sits in a later milestone (2026-09-30 > 2026-09-29); no `blocks` relation was created. Build against its interface and reconcile when it lands.
 
 **Agent**
 

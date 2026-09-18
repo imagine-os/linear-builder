@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-13", "PAP-15"]
-blocks: []
+blocks: ["PAP-600"]
 key: "app-shell/pwa"
 url: "https://linear.app/paperos/issue/PAP-18/ship-installable-pwa-manifest-service-worker-and-offline-app-shell"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:52.148Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:45.656Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-20"
+cycle: null
 ---
 
 # PAP-18: Ship installable PWA manifest, service worker and offline app shell
@@ -88,6 +91,10 @@ Reviewer opens the Pages preview in Chrome, clicks Install, launches the standal
 * SW on localhost breaks HMR: `devOptions.enabled=false`.
 * Stale precache after a failed deploy: `cleanupOutdatedCaches`.
 * Browsers without SW: hooks return safe defaults.
+
+*Round 4 amendment (2026-09-18):*
+
+* Custom domains (PAP-431): the manifest is served from `/manifest.webmanifest` per host with the tenant's name, colours and icons from `tenant.branding`, cached 1 h; `start_url`, `scope` and `id` follow the host. The service worker never caches `/api/sync/shape` (Electric, PAP-270) or any response carrying `Set-Cookie` or `X-PaperOS-Env: test`.
 
 **Dependencies**
 

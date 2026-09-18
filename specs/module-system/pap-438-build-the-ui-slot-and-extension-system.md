@@ -6,19 +6,22 @@ projectName: "Module System & Swap Tooling"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Contracts and conformance wired"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-16", "PAP-433", "PAP-434"]
-blocks: ["PAP-62", "PAP-63", "PAP-265", "PAP-446"]
+blockedBy: ["PAP-16", "PAP-433", "PAP-434", "PAP-537"]
+blocks: ["PAP-62", "PAP-63", "PAP-265", "PAP-446", "PAP-549", "PAP-582", "PAP-584"]
 key: "module-system/ui-slots"
 url: "https://linear.app/paperos/issue/PAP-438/build-the-ui-slot-and-extension-system-in-the-shell-named-slots-with"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:50:07.195Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:09.545Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-438: Build the UI slot and extension system in the shell: named slots with Zod props, manifest-declared fills, guards, ordering and the `<Slot>` runtime
@@ -71,6 +74,10 @@ Provides: `ShellSlots` in `contract-app-shell`, `<Slot>`, `useSlotFills`, `regis
 * Two fills claim the same `order`: tie broken by module id; documented.
 * Slot rendered before the kernel has booted (SSR or first paint): renders the fallback; never throws.
 * Multi-window (PAP-262): each window renders its own slots; a fill can declare `windows: ['main']` to stay out of detached panels.
+
+*Round 4 amendment (2026-09-18):*
+
+* Fill throws during render: the per-fill error boundary reports through PAP-368 with `slot` and `module`, renders `ui.errorState` inline and the rest of the slot renders; a fill that throws three times in a minute is unregistered for the session (`slot.fill_disabled` telemetry). \* Fills are landmarks: `shell.nav` fills render inside `<nav>` with `aria-label` from the manifest `title`, checked by the PAP-73 audit.
 
 **Dependencies**
 

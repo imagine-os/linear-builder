@@ -10,15 +10,18 @@ surfaces: ["Developer"]
 milestone: "Grid with sort, filter, group"
 state: "Backlog"
 parent: null
-children: ["PAP-335", "PAP-336", "PAP-337"]
+children: ["PAP-337", "PAP-336", "PAP-335"]
 blockedBy: ["PAP-35", "PAP-59", "PAP-161", "PAP-228", "PAP-229", "PAP-269", "PAP-279"]
-blocks: ["PAP-165", "PAP-167", "PAP-168", "PAP-169", "PAP-170", "PAP-194", "PAP-195", "PAP-341", "PAP-344"]
+blocks: ["PAP-165", "PAP-167", "PAP-168", "PAP-169", "PAP-170", "PAP-171", "PAP-183", "PAP-194", "PAP-195", "PAP-341", "PAP-344", "PAP-619", "PAP-621", "PAP-629"]
 key: "tables/query-compiler"
 url: "https://linear.app/paperos/issue/PAP-163/build-the-view-query-compiler-from-view-model-to-sql-and-electric"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:49.637Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:57:10.625Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-163: Build the view query compiler from view model to SQL and Electric shapes with server-side pagination

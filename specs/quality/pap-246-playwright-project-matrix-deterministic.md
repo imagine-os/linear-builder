@@ -11,14 +11,17 @@ milestone: "Gates 1 and 2 on every PR"
 state: "Backlog"
 parent: "PAP-82"
 children: []
-blockedBy: ["PAP-14", "PAP-78"]
-blocks: ["PAP-247", "PAP-248"]
+blockedBy: ["PAP-14", "PAP-78", "PAP-678"]
+blocks: ["PAP-83", "PAP-247", "PAP-248", "PAP-685", "PAP-890"]
 key: "quality/playwright-matrix/projects-fixtures-stories"
 url: "https://linear.app/paperos/issue/PAP-246/playwright-project-matrix-deterministic-fixtures-and-storybook-story"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:07.337Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:16.618Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-246: Playwright project matrix, deterministic fixtures and Storybook story capture

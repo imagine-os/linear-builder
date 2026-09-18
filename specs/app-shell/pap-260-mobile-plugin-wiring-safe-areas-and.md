@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Developer"]
+surfaces: ["Developer"]
 milestone: "Desktop and mobile shells build"
 state: "Backlog"
 parent: "PAP-20"
 children: []
 blockedBy: ["PAP-17", "PAP-259"]
-blocks: ["PAP-154"]
+blocks: ["PAP-154", "PAP-514", "PAP-516", "PAP-645", "PAP-651", "PAP-652", "PAP-871", "PAP-881", "PAP-885", "PAP-911"]
 key: "child/PAP-20/5"
 url: "https://linear.app/paperos/issue/PAP-260/mobile-plugin-wiring-safe-areas-and-device-proofs-camera-haptics"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:10.181Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:28.190Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-260: Mobile plugin wiring, safe areas and device proofs (camera, haptics, biometrics, secure storage, share)

@@ -11,14 +11,17 @@ milestone: "Disaster recovery proven"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-47", "PAP-276", "PAP-434", "PAP-435", "PAP-449", "PAP-452"]
-blocks: []
+blockedBy: ["PAP-47", "PAP-434", "PAP-435", "PAP-449", "PAP-452", "PAP-520", "PAP-537", "PAP-538"]
+blocks: ["PAP-554"]
 key: "module/forge/wire"
 url: "https://linear.app/paperos/issue/PAP-455/wire-forge-behind-the-module-registry-with-an-adapter-and-feature-flag"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:08.096Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:56.716Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-455: Wire forge behind the module registry with an adapter and feature flag
@@ -76,6 +79,8 @@ Provides: `forge` bound in the kernel as `@paperos/contract-forge` provider `def
 
 Blocked by `module/forge/contract`, `module/forge/conformance`, `module-system/registry-di`, `module-system/flag-swap` and PAP-276, PAP-47. Blocks nothing in Linear yet; it is a precondition for any future rewrite of this module.
 
+*Round 4 (2026-09-18): PAP-276 soft: PAP-276 is deferred to v0.2 and must not block scheduled work; until it lands, wire the forge module with the adapters that exist (PAP-47, PAP-449, PAP-452); the forge client procedures join the adapter when PAP-276 is reinstated. The* `blocks` *relation PAP-276 -> PAP-455 was removed.*
+
 **Agent**
 
 Built by Forge (Version Control & Forge Independence owner). Reviewed by Sentinel and Forge (kernel).
@@ -87,3 +92,10 @@ M
 **Demo**
 
 Reviewer flips `module.forge.impl` from `forgejo` to `github` for the demo tenant and the in-app repo browser (PAP-277) keeps working against GitHub; flips back. Ninety seconds.
+
+*Round 4 amendment (2026-09-18):*
+
+* Clarification: at merge time the second implementation is the `next` stub named in Scope; the `forgejo` to `github` flip described here becomes possible only when the read-only GitHub adapter from PAP-554 (deferred) is bound. Until then the demo flips `default` to `next` for the demo tenant and shows `X-PaperOS-Impl: next` on `forge.*` procedures.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/module-system/service-swap-drill` = PAP-554.
+*Round 4 critique fix (2026-09-18):* PAP-276 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it.

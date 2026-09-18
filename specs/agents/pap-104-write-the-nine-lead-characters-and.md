@@ -10,15 +10,18 @@ surfaces: ["Agent"]
 milestone: "Roster defined and installed"
 state: "Backlog"
 parent: null
-children: ["PAP-284", "PAP-285", "PAP-286", "PAP-287"]
+children: ["PAP-286", "PAP-285", "PAP-284", "PAP-287"]
 blockedBy: ["PAP-103"]
-blocks: ["PAP-106", "PAP-108", "PAP-109", "PAP-110", "PAP-112", "PAP-113", "PAP-192", "PAP-208", "PAP-218", "PAP-308"]
+blocks: ["PAP-106", "PAP-108", "PAP-109", "PAP-110", "PAP-112", "PAP-113", "PAP-192", "PAP-208", "PAP-218", "PAP-308", "PAP-709", "PAP-842"]
 key: "agents/roster-v1"
 url: "https://linear.app/paperos/issue/PAP-104/write-the-nine-lead-characters-and-their-sub-characters-as"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:21.784Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:56:58.812Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-104: Write the nine lead characters and their sub-characters as .claude/agents definitions with system prompts

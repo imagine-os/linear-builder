@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-78", "PAP-219", "PAP-239"]
-blocks: ["PAP-357", "PAP-358"]
+blocks: ["PAP-357", "PAP-358", "PAP-524", "PAP-675", "PAP-676", "PAP-903"]
 key: "quality/security-scans"
 url: "https://linear.app/paperos/issue/PAP-80/add-dependency-audit-secret-scanning-semgrep-sast-and-container"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:12.421Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:41.575Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-80: Add dependency audit, secret scanning, Semgrep SAST and container scanning to CI

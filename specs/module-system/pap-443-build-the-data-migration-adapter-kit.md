@@ -11,14 +11,17 @@ milestone: "Shell swap drill passes"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-32", "PAP-43", "PAP-436"]
-blocks: []
+blockedBy: ["PAP-32", "PAP-43", "PAP-436", "PAP-564", "PAP-565"]
+blocks: ["PAP-540"]
 key: "module-system/migration-adapter-kit"
 url: "https://linear.app/paperos/issue/PAP-443/build-the-data-migration-adapter-kit-expand-contract-table-migrations"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:50:09.594Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:48.361Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-10-01"
+cycle: null
 ---
 
 # PAP-443: Build the data migration adapter kit: expand-contract table migrations with dual-write and backfill, event upcasters, API response adapters and Yjs document converters
@@ -88,3 +91,5 @@ M
 **Demo**
 
 Reviewer runs `paperos module migrate collab --plan` and sees the expand-contract checklist for a new comment column; runs the backfill on the seeded stack, kills the worker at 40 percent, restarts, and `verify` reports equal counts; tries to add a `DROP COLUMN` migration and the linter blocks it naming the open window. Three minutes.
+
+*Round 4 critique fix (2026-09-18):* PAP-540 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-540.

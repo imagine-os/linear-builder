@@ -6,19 +6,22 @@ projectName: "Data Layer & Database"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Local-first sync working"
 state: "Backlog"
 parent: null
-children: []
+children: ["PAP-565", "PAP-564"]
 blockedBy: ["PAP-32", "PAP-214", "PAP-297"]
-blocks: ["PAP-37", "PAP-39", "PAP-136", "PAP-174", "PAP-190", "PAP-191", "PAP-194", "PAP-199", "PAP-205", "PAP-221", "PAP-222", "PAP-324", "PAP-347", "PAP-355", "PAP-388", "PAP-391", "PAP-402", "PAP-404", "PAP-420", "PAP-443", "PAP-454"]
+blocks: ["PAP-37", "PAP-39", "PAP-136", "PAP-174", "PAP-190", "PAP-191", "PAP-194", "PAP-199", "PAP-205", "PAP-221", "PAP-222", "PAP-324", "PAP-347", "PAP-355", "PAP-370", "PAP-388", "PAP-391", "PAP-402", "PAP-404", "PAP-420", "PAP-432", "PAP-443", "PAP-454", "PAP-540", "PAP-560", "PAP-561", "PAP-566", "PAP-567", "PAP-574", "PAP-577", "PAP-625", "PAP-640", "PAP-725", "PAP-765", "PAP-766", "PAP-772", "PAP-791", "PAP-820", "PAP-835", "PAP-849", "PAP-851", "PAP-857", "PAP-864", "PAP-866", "PAP-894", "PAP-903", "PAP-908"]
 key: "data-layer/jobs-queue"
 url: "https://linear.app/paperos/issue/PAP-43/build-the-background-jobs-and-scheduler-package-pg-boss-with-retries"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:01.861Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:44.175Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-43: Build the background jobs and scheduler package (pg-boss) with retries, idempotency keys, cron, dead-letter queue and an admin view
@@ -73,6 +76,9 @@ Consumers by name: `files.variants` (PAP-37), `search.upsert|embed` (PAP-39), `a
 * Dead-letter requeue works; customer principal cannot open `/admin/jobs`.
 * PAP-37 variants converted to `packages/jobs` as the reference consumer.
 * `docs/platform/jobs.md`, ADR note, CHANGELOG, Linear comment with metrics screenshot.
+
+*Round 4 amendment (2026-09-18):*
+Add evidence items: (1) the worker exposes `/healthz` and `/metrics` and a missing heartbeat for 60 s in production fires an alert (PAP-40); (2) a job enqueued with `tenantId` runs its handler inside `withTenant` and the PAP-34 harness proves it cannot read another tenant (test); (3) enqueue from tenant A with `tenantId` of tenant B is refused with `FORBIDDEN`.
 
 **Test plan**
 

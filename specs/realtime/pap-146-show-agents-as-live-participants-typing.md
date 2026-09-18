@@ -6,19 +6,22 @@ projectName: "Multiplayer & Realtime"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Agent", "Staff"]
+surfaces: ["Agent"]
 milestone: "Scale and offline tested"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-60", "PAP-141", "PAP-475"]
+blockedBy: ["PAP-60", "PAP-141", "PAP-475", "PAP-586", "PAP-587", "PAP-605", "PAP-606"]
 blocks: []
 key: "realtime/agent-presence"
 url: "https://linear.app/paperos/issue/PAP-146/show-agents-as-live-participants-typing-editing-reviewing-with"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:05.711Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:26.416Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-146: Show agents as live participants (typing, editing, reviewing) with distinct visual identity

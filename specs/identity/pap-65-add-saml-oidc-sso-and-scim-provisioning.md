@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "Agent principals and enterprise"
 state: "Backlog"
 parent: null
-children: ["PAP-230", "PAP-231", "PAP-232"]
-blockedBy: ["PAP-58"]
+children: ["PAP-232", "PAP-230", "PAP-231"]
+blockedBy: ["PAP-58", "PAP-579"]
 blocks: []
 key: "identity/sso-scim"
 url: "https://linear.app/paperos/issue/PAP-65/add-samloidc-sso-and-scim-provisioning-for-enterprise-tenants"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:09.009Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:49:22.921Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-65: Add SAML/OIDC SSO and SCIM provisioning for enterprise tenants

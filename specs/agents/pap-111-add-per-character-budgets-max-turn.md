@@ -11,14 +11,17 @@ milestone: "Sub-agents, skills and evals live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-98", "PAP-298", "PAP-300", "PAP-466"]
-blocks: []
+blockedBy: ["PAP-98", "PAP-298", "PAP-300", "PAP-466", "PAP-712"]
+blocks: ["PAP-637", "PAP-802", "PAP-806", "PAP-822"]
 key: "agents/cost-controls"
 url: "https://linear.app/paperos/issue/PAP-111/add-per-character-budgets-max-turn-limits-and-a-kill-switch"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:13.042Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:29.525Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-111: Add per-character budgets, max-turn limits and a kill switch
@@ -41,6 +44,10 @@ Bound spend at every level so no runaway session or over-eager character can bur
 * In-flight: `liveTotal(sessionId)` from PAP-98; at 80 percent inject a wrap-up user turn asking for the handoff (PAP-108); at 100 percent abort through the SDK abort controller with a 20 s grace, commit `wip:`, push, post footer `status: "partial"`.
 * Kill switch: comment `KILL <PAP-key> | KILL <character> | KILL ALL [hard]` by Justin on any issue or the burn report; also `POST /kill` with an admin token; `/status` shows `paused`; `RESUME` reverses. The poll loop scans the burn-report comments every 30 s as a webhook fallback.
 * Reviewers (Sentinel subs) have a separate daily pool matching the 30 percent review share.
+
+*Round 4 amendment (2026-09-18):*
+
+* Sub-agent limits (round 4): a session may spawn at most six concurrent sub-agents and nest at most two levels; the parent's cap covers them (SDK cost already includes sub-agents) and a sub-agent inherits at most the parent's served model, never a dearer one. Exceeding fan-out or depth is denied by the PAP-106 hook (`Task` tool input inspected) and logged as `limit.fanout`. Kill semantics: `kill(session)` cascades to sub-agents through the same abort controller.
 
 **Interface contract**
 

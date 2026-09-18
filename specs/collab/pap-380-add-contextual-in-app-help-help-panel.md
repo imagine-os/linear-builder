@@ -6,19 +6,22 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P2"
 type: "Build"
 priority: 3
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Knowledge surfaced everywhere"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-128"]
-blocks: []
+blockedBy: ["PAP-128", "PAP-740"]
+blocks: ["PAP-868"]
 key: "collab/in-app-help"
 url: "https://linear.app/paperos/issue/PAP-380/add-contextual-in-app-help-help-panel-bound-to-page-spec-purpose-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:43.615Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:54.073Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-380: Add contextual in-app help: help panel bound to page spec `purpose` and docs deep links, first-visit product tour, keyboard hint overlay
@@ -76,6 +79,9 @@ Open the records page as a new user, step through the three-step tour, press `?`
 
 PAP-128 (hard). Soft: PAP-114, PAP-151, PAP-153, PAP-131, PAP-152, PAP-115, runtime docs store.
 
+*Round 4 amendment (2026-09-18):*
+The spec fields `help.docs[]` and `help.tour[]` are not in PAP-114 v1, whose unknown-key rule rejects them. Until PAP-740 lands, write them as `x-help: { docs, tour }` (passes through untouched) and read both spellings; the validator rule for doc paths registers against `x-help` first.
+
 **Agent**
 
 Built by Quill (Page Spec Writer) with Iris on the panel and tour. Reviewed by Sentinel (Visual Inspector).
@@ -83,3 +89,5 @@ Built by Quill (Page Spec Writer) with Iris on the panel and tour. Reviewed by S
 **Size**
 
 S: panel, tour and overlay over existing data.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/spec-builder/schema-v1-1-extensions` = PAP-740.

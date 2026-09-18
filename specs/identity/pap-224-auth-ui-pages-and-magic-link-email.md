@@ -6,19 +6,22 @@ projectName: "Identity, Roles & Audiences"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Auth works across web and desktop"
 state: "Backlog"
 parent: "PAP-57"
 children: []
 blockedBy: ["PAP-223"]
-blocks: ["PAP-58", "PAP-86", "PAP-140", "PAP-220", "PAP-240"]
+blocks: ["PAP-58", "PAP-86", "PAP-140", "PAP-220", "PAP-240", "PAP-579", "PAP-580", "PAP-581", "PAP-584", "PAP-592", "PAP-597"]
 key: "identity/better-auth/ui-pages-email"
 url: "https://linear.app/paperos/issue/PAP-224/auth-ui-pages-and-magic-link-email-delivery"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:01.740Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:34.090Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-224: Auth UI pages and magic-link email delivery

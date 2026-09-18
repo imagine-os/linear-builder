@@ -6,19 +6,22 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Comments and canvas"
 state: "Backlog"
 parent: "PAP-131"
 children: []
-blockedBy: ["PAP-317"]
+blockedBy: ["PAP-70", "PAP-317"]
 blocks: ["PAP-319"]
 key: "collab/comments/panel-pins-composer"
 url: "https://linear.app/paperos/issue/PAP-318/comment-panel-pins-and-composer-ui"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:25.683Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:30:59.972Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-318: Comment panel, pins and composer UI

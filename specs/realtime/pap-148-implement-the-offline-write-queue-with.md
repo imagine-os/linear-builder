@@ -11,14 +11,17 @@ milestone: "Scale and offline tested"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-143", "PAP-144", "PAP-304", "PAP-328"]
-blocks: []
+blockedBy: ["PAP-143", "PAP-144", "PAP-304", "PAP-328", "PAP-557", "PAP-558"]
+blocks: ["PAP-881"]
 key: "realtime/offline-queue"
 url: "https://linear.app/paperos/issue/PAP-148/implement-the-offline-write-queue-with-retry-ordering-and-user-visible"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:37.647Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:42.301Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-148: Implement the offline write queue with retry, ordering and user-visible sync status
@@ -52,6 +55,9 @@ Out: conflict UI (PAP-144, consumed), Yjs offline (`y-indexeddb`), uploads over 
 **Interface contract**
 
 Exposes: `enqueue({ procedure, input, entity: { table, id }, optimistic })`, `flush()`, `retry(id)`, `discard(id)`, `subscribe(cb)`, `useSyncStatus() -> { state, queued, failed, lastSyncedAt }`, `SyncStatusIndicator`, `SyncQueueSheet`, `OutboxItem` type, copy in `packages/collab/src/copy/sync.ts`; header `Idempotency-Key: <mutation_id>` and batch endpoint contract `{ calls: [{ id, procedure, input }] } -> { results: [{ id, ok, data | error }] }`. Consumes: PGlite and existing outbox (PAP-271, PAP-272), oRPC client and middleware (PAP-267, PAP-268), reconciler and events (PAP-143), `PendingWriteBadge` and `FailedWriteDialog` definitions (PAP-144), PWA lifecycle (PAP-18), mobile background shim (PAP-259), session refresh (PAP-223).
+
+*Round 4 amendment (2026-09-18):*
+Align with PAP-304 (now PAP-557): the batch endpoint is `POST /api/v1/rpc/batch { mutations: [{ id, procedure, input, idempotencyKey }] } -> { results: [{ id, ok, data | error }] }` (not `{ calls: [...] }`), the batch itself carries an `Idempotency-Key`, and 409 bodies are `{ code: 'CONFLICT', server: row }` per Contracts §4. Server-side the `idempotency_keys` table is owned there; this issue only sends the header and persists keys in `_outbox`.
 
 **Definition of done**
 
@@ -88,3 +94,5 @@ Builder: Nova (CRDT Engineer). Reviewer: Sentinel (Edge Case Hunter for network 
 **Size**
 
 M: focused package with many failure paths to test.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/data-layer/idempotency-batch` = PAP-557.

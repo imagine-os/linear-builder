@@ -15,10 +15,13 @@ blockedBy: ["PAP-240", "PAP-249"]
 blocks: ["PAP-251"]
 key: "quality/edge-case-hunter/executor-oracles"
 url: "https://linear.app/paperos/issue/PAP-250/playwright-executor-and-generic-oracles"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:07.739Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:18.234Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-250: Playwright executor and generic oracles

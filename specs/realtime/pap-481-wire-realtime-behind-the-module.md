@@ -11,14 +11,17 @@ milestone: "Scale and offline tested"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-140", "PAP-141", "PAP-326", "PAP-434", "PAP-435", "PAP-475", "PAP-478"]
-blocks: ["PAP-266"]
+blockedBy: ["PAP-140", "PAP-141", "PAP-326", "PAP-434", "PAP-435", "PAP-475", "PAP-478", "PAP-537", "PAP-538", "PAP-605", "PAP-606"]
+blocks: []
 key: "module/realtime/wire"
 url: "https://linear.app/paperos/issue/PAP-481/wire-realtime-behind-the-module-registry-with-an-adapter-and-feature"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:10.029Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:03.250Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-481: Wire realtime behind the module registry with an adapter and feature flag
@@ -75,6 +78,8 @@ Provides: `realtime` bound in the kernel as `@paperos/contract-realtime` provide
 **Dependencies**
 
 Blocked by `module/realtime/contract`, `module/realtime/conformance`, `module-system/registry-di`, `module-system/flag-swap` and PAP-140, PAP-141, PAP-326. Blocks PAP-266.
+
+*Round 4 (2026-09-18): PAP-266 soft: this issue no longer blocks PAP-266 because the realtime wire issue lands (09-30/10-01) after the* `--without` *milestone (09-29); PAP-266 proceeds (PAP-266's removal matrix covers modules whose wire issue has merged; PAP-481 adds its module to the matrix and to* `paperos create --without` *when it lands) and reconciles when this issue lands.*
 
 **Agent**
 

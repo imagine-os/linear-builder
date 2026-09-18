@@ -15,10 +15,13 @@ blockedBy: ["PAP-114", "PAP-117", "PAP-433"]
 blocks: ["PAP-249", "PAP-320", "PAP-361", "PAP-362", "PAP-470", "PAP-473"]
 key: "module/spec-builder/contract"
 url: "https://linear.app/paperos/issue/PAP-467/publish-paperoscontract-spec-builder-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:15.156Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:04.294Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-467: Publish @paperos/contract-spec-builder v0.1 with manifest

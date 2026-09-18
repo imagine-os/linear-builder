@@ -6,19 +6,22 @@ projectName: "Quality Pipeline"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Agent"]
 milestone: "Gates 1 and 2 on every PR"
 state: "Backlog"
 parent: "PAP-81"
 children: []
-blockedBy: ["PAP-78", "PAP-79", "PAP-239"]
-blocks: ["PAP-244", "PAP-245", "PAP-249", "PAP-464"]
+blockedBy: ["PAP-78", "PAP-79", "PAP-239", "PAP-678", "PAP-704"]
+blocks: ["PAP-84", "PAP-85", "PAP-244", "PAP-245", "PAP-249", "PAP-464", "PAP-677", "PAP-679", "PAP-685"]
 key: "quality/review-agents/harness"
 url: "https://linear.app/paperos/issue/PAP-243/review-harness-sdk-runner-input-assembly-finding-validation-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:06.902Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:29.821Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-243: Review harness: SDK runner, input assembly, finding validation and posting
@@ -40,6 +43,10 @@ Build the engine the three reviewers run on: a Claude Agent SDK runner with read
 * Context: diff, changed files with 40 lines of context, PR body, Linear issue text, referenced `page.spec.yaml`, `gate1.json`, `security.json`, `registry.json`, `rules.json`; cap 150k tokens, priority order documented, omissions logged; over 3 000 changed lines split by package; over 10 000 post S1 "PR too large".
 * Posting: `@octokit/rest` and the Gitea-compatible API; one review per reviewer, event `REQUEST_CHANGES` if any S0 or more than 3 S1 else `COMMENT`; inline comments carry `<!-- finding:<id> -->`; re-runs update in place; resolved findings get "Resolved in <sha>".
 * Statuses via contracts `GATE_STATUSES`; cost to `reports/review-cost.json` and the prompt log hook (PAP-107) when present.
+
+*Round 4 amendment (2026-09-18):*
+
+* Reviewer model routing (round 4, cost doc section 4b): `runReview()` does not hard-code `claude-fable-5-1`. It reads the PR's issue `Model` label through `linear.ids`: after an Opus 5 or Fable 5.1 builder the reviewer runs Opus 5 at `effort: high`; after a Sonnet 5 builder it runs Sonnet 5 at `high`; the QA gate summariser runs Haiku 4.5 at `low`; the four release-candidate reviews (PAP-254) run Fable 5.1 at `high`. The chosen model and effort are written into `review-cost.json` and the review footer so PAP-98 prices the run correctly.
 
 **Interface contract**
 

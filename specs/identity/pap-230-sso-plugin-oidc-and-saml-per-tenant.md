@@ -11,14 +11,17 @@ milestone: "Agent principals and enterprise"
 state: "Backlog"
 parent: "PAP-65"
 children: []
-blockedBy: ["PAP-58", "PAP-353"]
+blockedBy: ["PAP-57", "PAP-58", "PAP-226", "PAP-353", "PAP-579"]
 blocks: ["PAP-232"]
 key: "identity/sso-scim/sso-plugin-domains"
 url: "https://linear.app/paperos/issue/PAP-230/sso-plugin-oidc-and-saml-per-tenant-with-domain-verification"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:02.367Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:43.804Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-230: SSO plugin: OIDC and SAML per tenant with domain verification

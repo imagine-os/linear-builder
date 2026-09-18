@@ -6,19 +6,22 @@ projectName: "Identity, Roles & Audiences"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Roles and audiences enforced end to end"
 state: "Backlog"
 parent: null
-children: []
+children: ["PAP-580", "PAP-581"]
 blockedBy: ["PAP-57", "PAP-224", "PAP-456"]
-blocks: []
+blocks: ["PAP-858", "PAP-894", "PAP-902", "PAP-913"]
 key: "identity/session-device-management"
 url: "https://linear.app/paperos/issue/PAP-220/build-session-and-device-management-list-and-revoke-sessions-totp"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:09.044Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:47.838Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-220: Build session and device management: list and revoke sessions, TOTP fallback for passkeys, account recovery codes
@@ -56,6 +59,9 @@ Give every user control and a way back in: a security page listing active sessio
 * Screenshots of the security page at 320, 375, 768, 1024, 1280, 1536, 1920 light and dark in both shells; axe clean.
 * Sentinel Security Auditor signs off on code hashing and rate limits on `/auth/recover`; docs `docs/platform/account-security.md`; changelog under "Identity".
 
+*Round 4 amendment (2026-09-18):*
+Make the security sign-off concrete: `/auth/recover` and TOTP verification allow 5 attempts per 15 minutes per account and per IP, then lock with a neutral message (PAP-592 owns the lockout table); backup codes hashed with argon2id (memory 64 MB, iterations 3); a used TOTP step cannot be replayed within its window; tests for each. Work is split into PAP-580 and PAP-581.
+
 **Test plan**
 
 * Unit: TOTP verification window (±1 step), backup code single use, device label parser for 10 user agents.
@@ -86,3 +92,5 @@ Built by Forge (lead) with Iris (Component Crafter) on the page. Reviewed by Sen
 **Size**
 
 M: plugin wiring plus one dense settings page and a recovery flow.
+
+*Round 4 critique fix (2026-09-18):* resolved 3 round-4 file keys in this description to Linear identifiers: `r4/identity/auth-abuse-controls` = PAP-592, `r4/identity/mfa-recovery` = PAP-580, `r4/identity/sessions-stepup` = PAP-581.

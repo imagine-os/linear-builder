@@ -6,19 +6,22 @@ projectName: "Data Layer & Database"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Local-first sync working"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-33", "PAP-34", "PAP-35", "PAP-43", "PAP-59", "PAP-228", "PAP-269"]
-blocks: ["PAP-138"]
+children: ["PAP-566", "PAP-567"]
+blockedBy: ["PAP-33", "PAP-34", "PAP-35", "PAP-43", "PAP-59", "PAP-228", "PAP-269", "PAP-564", "PAP-565"]
+blocks: ["PAP-138", "PAP-735", "PAP-805", "PAP-835", "PAP-868"]
 key: "data-layer/search"
 url: "https://linear.app/paperos/issue/PAP-39/add-full-text-and-vector-search-tsvector-pgvector-over-any-entity"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:59.666Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:35.750Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-39: Add full-text and vector search (tsvector + pgvector) over any entity through a search registry
@@ -90,6 +93,9 @@ Reviewer types "acme" into the search box on the dashboard, sees workspace and m
 * Entity registered twice: boot error naming both packages.
 * Very long titles truncated in snippets, full on hover.
 
+*Round 4 amendment (2026-09-18):*
+Add: `vector(1024)` fixes the dimension per column, so a model with different dimensions is a migration (new column, backfill, swap), not a reindex; `pnpm search:migrate-dims` in PAP-567 owns it. Reindex on model change applies only to same-dimension models.
+
 **Dependencies**
 
 PAP-33, PAP-43 (hard), PAP-34, PAP-35 and PAP-59 (now encoded). Consumed by PAP-138, PAP-151, PAP-166, PAP-189.
@@ -101,3 +107,5 @@ Built by Forge (Schema Wright) with Nova on hooks. Reviewed by Sentinel.
 **Size**
 
 M: registry, table, triggers, one procedure and a component.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/data-layer/search-semantic` = PAP-567.

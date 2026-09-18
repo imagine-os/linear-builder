@@ -6,19 +6,22 @@ projectName: "Spec Builder"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Codegen and conformance tests"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-115", "PAP-119", "PAP-120", "PAP-122", "PAP-123", "PAP-467"]
-blocks: ["PAP-364", "PAP-430"]
+blockedBy: ["PAP-115", "PAP-119", "PAP-120", "PAP-122", "PAP-123", "PAP-313", "PAP-316", "PAP-467", "PAP-741"]
+blocks: ["PAP-364", "PAP-430", "PAP-498"]
 key: "gp/spec-builder/gen-pipeline"
 url: "https://linear.app/paperos/issue/PAP-362/build-paperos-gen-the-whole-app-generation-pipeline-that-runs-every"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:15.156Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:39.238Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-362: Build `paperos gen`: the whole-app generation pipeline that runs every generator in dependency order with a manifest, incremental cache, deterministic output and a `--check` drift mode
@@ -41,6 +44,9 @@ In:
 * Gate 1 job `gen-check` (PAP-78) replacing the per-generator drift jobs of PAP-120 and entity-pages.
 
 Out: the generators' own templates, watch mode (later), remote caching.
+
+*Round 4 amendment (2026-09-18):*
+Register the `db-schema`, `db-migration`, `routers` and `shapes` generators from PAP-741, plus `forms` (mutation constraints), `mocks`, `sitemap` and `budgets`, each as a ten-line adapter; order: `app` before `db-schema` before `routers` before `data-hooks`. The determinism test and `gen-check` cover them.
 
 **Spec**
 
@@ -93,3 +99,5 @@ M: a runner, manifest, nine thin adapters and CI wiring; the generators already 
 **Demo**
 
 Terminal recording of `paperos gen --json` on the clinic app showing the ordered timing table, then a spec edit and `paperos gen --check` naming the stale files.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/spec-builder/entity-backend-codegen` = PAP-741.

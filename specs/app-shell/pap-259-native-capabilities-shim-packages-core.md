@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-20"
 children: []
 blockedBy: ["PAP-17", "PAP-258"]
-blocks: ["PAP-260"]
+blocks: ["PAP-260", "PAP-516"]
 key: "child/PAP-20/4"
 url: "https://linear.app/paperos/issue/PAP-259/native-capabilities-shim-packagescorenative-with-web-fallbacks"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:10.097Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:28.918Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-259: Native capabilities shim (packages/core/native) with web fallbacks

@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "Grid with sort, filter, group"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-165", "PAP-233", "PAP-279", "PAP-343"]
-blocks: ["PAP-174", "PAP-195", "PAP-390"]
+children: ["PAP-618", "PAP-617"]
+blockedBy: ["PAP-165", "PAP-233", "PAP-279", "PAP-343", "PAP-630", "PAP-660"]
+blocks: ["PAP-174", "PAP-195", "PAP-390", "PAP-839"]
 key: "tables/filter-sort-group-ui"
 url: "https://linear.app/paperos/issue/PAP-166/build-the-filter-builder-andor-groups-multi-sort-and-multi-level"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:43.463Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:43.796Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-166: Build the filter builder (AND/OR groups), multi-sort and multi-level grouping UI with aggregates
@@ -34,6 +37,9 @@ Give every view Airtable-class controls: a filter builder with nested AND/OR gro
 In: `packages/views/src/controls/`: `ViewToolbar`, `FilterBuilder`, `SortEditor`, `GroupEditor`, `AggregateFooter`, `FieldVisibilityMenu`, `SearchBox`; relative date and dynamic value editors; temporary URL-held filters for users without `view.update`.
 
 Out: saved-view management (PAP-172), grammar definition (PAP-279), formula fields beyond their result type.
+
+*Round 4 amendment (2026-09-18):*
+Round 4: this issue becomes an umbrella for two children, PAP-617 (the standalone `FilterBuilder`, quick chips, relative dates and URL codec, reused by PAP-195 and PAP-174) and PAP-618 (toolbar, sort, group, aggregate, field visibility, search and temporary view state). The umbrella keeps the integration test and `docs/views/controls.md`; the Size line "one to two sessions" is superseded by the two M children. Definition of done gains: the operator table in the docs is generated from the field registry and a test fails when a registered `(type, op)` pair is missing from the builder.
 
 **Spec**
 
@@ -86,3 +92,5 @@ Builder: Nova (Views Engineer). Reviewer: Sentinel (Visual Inspector, Edge Case 
 **Size**
 
 M: UI over existing primitives; one to two sessions.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/tables/filter-builder-component` = PAP-617, `r4/tables/view-toolbar-sort-group-aggregates` = PAP-618.

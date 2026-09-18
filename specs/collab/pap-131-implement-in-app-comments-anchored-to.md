@@ -6,19 +6,22 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Comments and canvas"
 state: "Backlog"
 parent: null
-children: ["PAP-317", "PAP-318", "PAP-319"]
-blockedBy: ["PAP-59", "PAP-140", "PAP-142", "PAP-229", "PAP-302"]
-blocks: ["PAP-136", "PAP-137", "PAP-197", "PAP-323", "PAP-411"]
+children: ["PAP-319", "PAP-318", "PAP-317"]
+blockedBy: ["PAP-59", "PAP-140", "PAP-142", "PAP-229", "PAP-302", "PAP-603", "PAP-604"]
+blocks: ["PAP-136", "PAP-137", "PAP-197", "PAP-323", "PAP-411", "PAP-725", "PAP-840", "PAP-874"]
 key: "collab/comments"
 url: "https://linear.app/paperos/issue/PAP-131/implement-in-app-comments-anchored-to-any-entity-page-element-or-doc"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:14.827Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:49:27.366Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-131: Implement in-app comments anchored to any entity, page element or doc block with mentions and resolve

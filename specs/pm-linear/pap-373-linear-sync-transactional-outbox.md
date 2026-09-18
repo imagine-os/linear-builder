@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-101"
 children: []
 blockedBy: ["PAP-372"]
-blocks: ["PAP-374"]
+blocks: ["PAP-374", "PAP-708"]
 key: "pm-linear/linear-sync/outbound"
 url: "https://linear.app/paperos/issue/PAP-373/linear-sync-transactional-outbox-outbound-worker-and-loop-prevention"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:42.315Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:17.927Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-373: Linear sync: transactional outbox, outbound worker and loop prevention

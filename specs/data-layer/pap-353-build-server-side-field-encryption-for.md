@@ -6,19 +6,22 @@ projectName: "Data Layer & Database"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Tenant-safe and observable"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-17", "PAP-32"]
-blocks: ["PAP-190", "PAP-193", "PAP-222", "PAP-230"]
+blocks: ["PAP-190", "PAP-193", "PAP-222", "PAP-230", "PAP-794", "PAP-797", "PAP-815", "PAP-834", "PAP-858", "PAP-866", "PAP-867", "PAP-902"]
 key: "security/field-encryption"
 url: "https://linear.app/paperos/issue/PAP-353/build-server-side-field-encryption-for-stored-secrets-oauth-tokens"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:36.624Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:19.299Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-353: Build server-side field encryption for stored secrets (OAuth tokens, SCIM and webhook secrets, connector credentials, TOTP seeds) with envelope keys, key rotation and a leak scanner

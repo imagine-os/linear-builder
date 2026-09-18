@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-198", "PAP-200"]
-blocks: []
+blocks: ["PAP-826", "PAP-828"]
 key: "migration/monday-hubspot-recipes"
 url: "https://linear.app/paperos/issue/PAP-413/import-monday-and-hubspot-through-guided-csv-export-recipes-with"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:54.029Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:55:52.712Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-413: Import Monday and HubSpot through guided CSV export recipes with preset mappings (no API connector in this build)

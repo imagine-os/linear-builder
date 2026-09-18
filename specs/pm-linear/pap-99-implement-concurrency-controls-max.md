@@ -11,14 +11,17 @@ milestone: "Orchestrator claims and ships issues"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-96", "PAP-283"]
-blocks: ["PAP-306"]
+blockedBy: ["PAP-96", "PAP-283", "PAP-691"]
+blocks: ["PAP-306", "PAP-694"]
 key: "pm-linear/concurrency"
 url: "https://linear.app/paperos/issue/PAP-99/implement-concurrency-controls-max-parallel-sessions-file-lock-hints"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:18.179Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:31.064Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-99: Implement concurrency controls: max parallel sessions, file-lock hints and dependency-aware scheduling from dependsOn
@@ -42,6 +45,10 @@ Let twenty sessions run at once without merge storms or blocked work: the orches
 * Limits: `maxParallel` 12, `perRepo` 6, `perCharacter` 3 (Sentinel 6), optional `perProject`. `Urgent` bypasses `perProject` but not `maxParallel`.
 * Score: `priorityWeight + ageHours * 0.1 + unblocksCount * 2 + phaseWeight + starvationBonus`; `starvationBonus` when a project has been eligible six hours without a session.
 * Cycle detection on every poll; a cycle is reported once to `Needs Justin` deduped by cycle hash.
+
+*Round 4 amendment (2026-09-18):*
+
+* Eligibility rule alignment (round 4): the branch-start rule is not opt-in. A blocker counts as satisfied when it is `Done`, `Canceled`, `Duplicate`, or `In Review` with an open PR, exactly as PAP-93 `isOpen()` and the promotion pass define it; the `can-start-on-review` label is removed from this spec. `score()` gains `cycleBonus` (active Linear cycle first) and uses `issue_slack.slack_hours` from the due-dates issue as its first key when present.
 
 **Interface contract**
 
@@ -79,6 +86,10 @@ Run `pnpm scheduler:simulate --snapshot round2/linear-snapshot.json --parallel 1
 **Dependencies**
 
 Blocked by PAP-96. Uses PAP-93 parsing. Soft: PAP-111.
+
+*Round 4 amendment (2026-09-18):*
+
+* Soft dependency (round 4): PAP-720 (anthropic-rate-limit-governor) would block this issue but sits in a later milestone (2026-09-25 > 2026-09-22); no `blocks` relation was created. Build against its interface and reconcile when it lands.
 
 **Agent**
 

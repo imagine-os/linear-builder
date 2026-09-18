@@ -10,15 +10,18 @@ surfaces: ["Agent"]
 milestone: "Orchestrator claims and ships issues"
 state: "Backlog"
 parent: null
-children: ["PAP-281", "PAP-282", "PAP-283"]
-blockedBy: ["PAP-25", "PAP-46", "PAP-91", "PAP-92", "PAP-298"]
-blocks: ["PAP-97", "PAP-98", "PAP-99", "PAP-288", "PAP-300", "PAP-354"]
+children: ["PAP-691", "PAP-281", "PAP-283", "PAP-282"]
+blockedBy: ["PAP-25", "PAP-46", "PAP-91", "PAP-92"]
+blocks: ["PAP-97", "PAP-98", "PAP-99", "PAP-288", "PAP-300", "PAP-354", "PAP-562"]
 key: "pm-linear/orchestrator"
 url: "https://linear.app/paperos/issue/PAP-96/build-the-orchestrator-that-polls-ready-for-claude-spawns-one-claude"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:30.303Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:52.857Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-96: Build the orchestrator that polls Ready for Claude, spawns one Claude Code session per issue in a git worktree and moves states
@@ -39,6 +42,10 @@ Build the engine that turns Linear into running agents: a long-lived service tha
   * PAP-283: deployment, `/status` endpoint and runbook.
   * Promotion work package (lives inside PAP-281 and is built in the same session as the poll loop; if that child exists, claim the child): Backlog → Ready for Claude promotion under the branch-start rule, the `promotions` table, the `promoted:` comment, the `BASE_BRANCHES` prompt variable and the `pnpm linear:promote` CLI. Spec below under "Promotion".
 * Out: webhook receiver (PAP-97), metering (PAP-98), scheduling beyond fixed `maxParallel` (PAP-99), the PM data model (PAP-100), sandboxing (PAP-280).
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: children are PAP-281 (poll, claim, transitions), PAP-282 (worktree and launch), PAP-283 (deployment, `/status`, runbook) and the new promotion child (PAP-691), which carries the Promotion spec above verbatim; the umbrella's Definition of done keeps the promotion fixture test. Model and effort for launched sessions come from the issue's labels through `resolveModel()` (PAP-704), not from `roster.json` alone.
 
 **Spec**
 
@@ -100,6 +107,14 @@ Move a toy issue to `Ready for Claude`; within a minute `/status` shows a sessio
 
 Blocked by PAP-91, PAP-92, PAP-46, PAP-25. Soft: PAP-93 (`validateIssue` for promotion check 4; fallback in the Interface contract). Blocks PAP-97, PAP-98, PAP-99, PAP-288.
 
+*Round 4 amendment (2026-09-18):*
+
+* Soft dependency (round 4): PAP-712 (request-approval-mcp-interception-and-backstops) would block this issue but sits in a later milestone (2026-09-24 > 2026-09-22); no `blocks` relation was created. Build against its interface and reconcile when it lands.
+
+*Round 4 (2026-09-18): PAP-298 soft: the deny-list hook (09-24) lands after the orchestrator milestone (09-22); until it lands, the orchestrator ships with the hook policy file path and a stub* `PreToolUse` *hook; PAP-298 fills in the enforced policy. The* `blocks` *relation PAP-298 -> PAP-96 was removed.*
+
+*Round 4 critique fix (2026-09-18):* An umbrella's dependents are also blocked by its last child in build order: for every `P blocks D` the last child carries `Clast blocks D` (skipped only where it would create a cycle, a milestone inversion or a deferred -> scheduled edge), so the promotion pass gates D on the real work; the umbrella itself reaches In Review when that last child does.
+
 **Agent**
 
 Built by Atlas (Dispatcher sub-agent) with Forge (Ops Runner) for deployment; reviewed by Sentinel.
@@ -107,3 +122,5 @@ Built by Atlas (Dispatcher sub-agent) with Forge (Ops Runner) for deployment; re
 **Size**
 
 L (umbrella; children are M, M, S)
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/pm-linear/orchestrator-promotion-pass` = PAP-691, `r4/pm-linear/session-model-and-effort-routing` = PAP-704.

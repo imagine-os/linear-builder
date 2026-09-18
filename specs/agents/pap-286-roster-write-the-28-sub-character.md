@@ -15,10 +15,13 @@ blockedBy: ["PAP-284"]
 blocks: ["PAP-287"]
 key: "agents/roster-v1/sub-prompts"
 url: "https://linear.app/paperos/issue/PAP-286/roster-write-the-28-sub-character-prompts-and-delegation-descriptions"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:17.542Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:10.558Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-286: Roster: write the 28 sub-character prompts and delegation descriptions

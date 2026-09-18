@@ -11,14 +11,17 @@ milestone: "Acquisition analytics"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-43", "PAP-163", "PAP-187", "PAP-304", "PAP-337", "PAP-485"]
-blocks: []
+blockedBy: ["PAP-43", "PAP-163", "PAP-187", "PAP-304", "PAP-337", "PAP-485", "PAP-558", "PAP-565", "PAP-790", "PAP-791"]
+blocks: ["PAP-800", "PAP-801", "PAP-803", "PAP-809", "PAP-897"]
 key: "growth/attribution"
 url: "https://linear.app/paperos/issue/PAP-194/track-acquisition-analytics-utm-referral-funnel-with-a-privacy-first"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:38.913Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:45.128Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-194: Track acquisition analytics (UTM, referral, funnel) with a privacy-first event pipeline
@@ -46,6 +49,9 @@ Out: session replay, heatmaps, ad platform conversion APIs, multi-touch models b
 * Identify stitching attributes prior events with that `anonymous_id`; first touch is the earliest UTM or referrer, last touch the latest before conversion.
 * Rollups `attr_daily` refreshed by a PAP-43 job every 15 minutes; reports compile through PAP-163; revenue joins PAP-177 invoices via `crm_company.billing_customer_id`, unmatched shown as "Unattributed revenue".
 * Retention: raw events 13 months by partition drop; touches indefinite; `essential-only` consent mode disables stitching.
+
+*Round 4 amendment (2026-09-18):*
+Round 4 clarification: the revenue join must use tenant revenue, not PaperOS platform billing. Join `attr_touch.contact_id` to `fin_party` (via `crm_contact.party_id` from PAP-790) and sum `invoice.paid` postings from PAP-397 and connected charges from PAP-181; PAP-177 subscriptions are PaperOS's own revenue and belong only to the platform-admin funnel (PAP-367 `/admin/onboarding`).
 
 **Interface contract**
 
@@ -88,3 +94,5 @@ Builder: Beacon (CRM Builder) with Nova on rollups and views. Reviewer: Sentinel
 **Size**
 
 M: collector, SDK and rollups are compact; reports reuse the engine.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/growth/crm-schema-routers-page-specs` = PAP-790.

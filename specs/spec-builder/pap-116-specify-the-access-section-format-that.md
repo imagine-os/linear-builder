@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-59", "PAP-114", "PAP-229", "PAP-279"]
-blocks: ["PAP-64", "PAP-361"]
+blocks: ["PAP-64", "PAP-361", "PAP-743"]
 key: "spec-builder/access-section"
 url: "https://linear.app/paperos/issue/PAP-116/specify-the-access-section-format-that-compiles-to-permission-engine"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:27.306Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:28.943Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-116: Specify the access section format that compiles to permission-engine policies

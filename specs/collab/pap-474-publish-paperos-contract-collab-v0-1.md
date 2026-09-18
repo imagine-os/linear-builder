@@ -15,10 +15,13 @@ blockedBy: ["PAP-127", "PAP-128", "PAP-433"]
 blocks: ["PAP-135", "PAP-137", "PAP-138", "PAP-410", "PAP-477", "PAP-480"]
 key: "module/collab/contract"
 url: "https://linear.app/paperos/issue/PAP-474/publish-paperoscontract-collab-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:04.356Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:56.827Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-474: Publish @paperos/contract-collab v0.1 with manifest
@@ -59,6 +62,9 @@ Requires (manifest `requires[]`): \* `@paperos/contract-data-layer` ^0.1
 
 Rules: Zod 4 only, JSON Schema generated; no `z.bigint()` on wire schemas (PAP-302 codec); one sentence and one fixture per port method; `size-limit` under 50 KB minified; lint R9 passes; manifest `dependsOn` is derived from `requires`.
 
+*Round 4 amendment (2026-09-18):*
+`CommentAnchor` grammar includes six forms: `entity:`, `element:`, `doc:` (repo MDX path), `tdoc:` (runtime `doc_page` id, PAP-379), `canvas:`, `shot:`. Fixtures: three per form. `NotificationPort` exports `defineKind`, `notify`, `resolvePreferences` and the `Channel` interface as specified by PAP-725.
+
 **Interface contract**
 
 Provides: `@paperos/contract-collab@0.1.0` with the exports above; `module.manifest.json` valid against `manifest.schema.json`; `ownership.json` `contracts.collab`. Consumes: the manifest schema and validator (`module-system/manifest-schema`), contract-zero (`@paperos/core/types|filter|events`), the decisions in PAP-127 (Evaluate tldraw vs React Flow for the canvas and Tiptap vs B), PAP-128 (Build the docs engine: MDX docs stored in the repo, rendered). Consumed by: PAP-135 (prompt log browser), PAP-137 (screenshot annotations), PAP-138 (unified search), PAP-410 (support inbox), PAP-100 PM comments, PAP-216 library registry, and the module's conformance and wire issues.
@@ -96,3 +102,5 @@ M
 **Demo**
 
 Reviewer runs `pnpm contract:show collab`, parses the fifteen anchor fixtures and sees the malformed ones rejected with the grammar position. Under a minute.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/collab/notification-core` = PAP-725.

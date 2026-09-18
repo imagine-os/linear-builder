@@ -11,14 +11,17 @@ milestone: "Desktop and mobile shells build"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: []
-blocks: []
+blockedBy: ["PAP-19", "PAP-25", "PAP-257"]
+blocks: ["PAP-515"]
 key: "gap/app-shell/code-signing"
 url: "https://linear.app/paperos/issue/PAP-369/set-up-desktop-and-mobile-code-signing-and-notarisation-apple"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:40.346Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:51.012Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-369: Set up desktop and mobile code signing and notarisation (Apple Developer, Windows certificate, Android keystore) with one Needs Justin credential ask

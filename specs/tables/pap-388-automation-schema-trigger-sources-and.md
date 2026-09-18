@@ -6,19 +6,22 @@ projectName: "Table & Views Engine"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Staff", "Customer"]
+surfaces: ["Staff"]
 milestone: "View sharing, formulas, dashboards"
 state: "Backlog"
 parent: "PAP-174"
 children: []
-blockedBy: ["PAP-38", "PAP-43", "PAP-279"]
-blocks: ["PAP-389"]
+blockedBy: ["PAP-38", "PAP-43", "PAP-279", "PAP-565", "PAP-620"]
+blocks: ["PAP-389", "PAP-639", "PAP-848", "PAP-851"]
 key: "tables/automations/model-triggers"
 url: "https://linear.app/paperos/issue/PAP-388/automation-schema-trigger-sources-and-the-run-runtime-with-idempotency"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:46.318Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:17.528Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-388: Automation schema, trigger sources and the run runtime with idempotency, loop guard, limits and circuit breaker

@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-67"
 children: []
 blockedBy: ["PAP-236"]
-blocks: ["PAP-238"]
+blocks: ["PAP-238", "PAP-642", "PAP-652", "PAP-659", "PAP-671"]
 key: "design-system/primitives/overlays"
 url: "https://linear.app/paperos/issue/PAP-237/overlay-components-dialog-alertdialog-popover-tooltip-menu-toast"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:04.598Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:18.417Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-237: Overlay components: Dialog, AlertDialog, Popover, Tooltip, Menu, Toast

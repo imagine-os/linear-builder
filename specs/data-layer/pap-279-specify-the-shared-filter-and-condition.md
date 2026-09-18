@@ -12,13 +12,16 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-59", "PAP-116", "PAP-119", "PAP-163", "PAP-166", "PAP-174", "PAP-195", "PAP-227", "PAP-311", "PAP-335", "PAP-388", "PAP-448"]
+blocks: ["PAP-59", "PAP-116", "PAP-119", "PAP-163", "PAP-166", "PAP-174", "PAP-195", "PAP-227", "PAP-311", "PAP-335", "PAP-388", "PAP-448", "PAP-568", "PAP-617", "PAP-790", "PAP-833", "PAP-839", "PAP-847", "PAP-848", "PAP-862", "PAP-877", "PAP-893"]
 key: "gap/data-layer/filter-grammar"
 url: "https://linear.app/paperos/issue/PAP-279/specify-the-shared-filter-and-condition-grammar-packagescorefilter-one"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:14.942Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:57:31.272Z"
 model: "claude-fable-5-1"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-279: Specify the shared filter and condition grammar (`packages/core/filter`): one Zod FilterTree with SQL and in-memory evaluators

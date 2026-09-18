@@ -11,14 +11,17 @@ milestone: "Voice and accessibility certification"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-117", "PAP-156"]
-blocks: []
+blockedBy: ["PAP-117", "PAP-156", "PAP-620", "PAP-647", "PAP-670"]
+blocks: ["PAP-896", "PAP-904"]
 key: "input/a11y-statement"
 url: "https://linear.app/paperos/issue/PAP-160/publish-an-accessibility-statement-and-conformance-report-template-per"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:40.860Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:43.559Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 2
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-160: Publish an accessibility statement and conformance report template per app
@@ -47,6 +50,10 @@ Out: legal wording (Justin), EN 301 549 and Section 508 chapters (stubbed), thir
 * Every non-Supports row links a tracking issue or the generator fails.
 * Known limitations generated from open `a11y` issues' `publicSummary` (PAP-93 contract).
 * Statement passes axe and Flesch-Kincaid grade ≤ 9 (`text-readability`); report carries `generatedAt`, version (PAP-52) and hash; "Next review by" 90 days.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: the statement links `/settings/accessibility` (PAP-647) as the mechanism for criteria 2.1.4 (character key shortcuts), 2.2.1 (timing adjustable) and 1.4.4 (resize text via `fontScale`); `criteria-map.json` gains `type: 'prefs'` sources pointing at that page's Playwright evidence and `type: 'reflow'` sources from PAP-670 for 1.4.4, 1.4.10 and 1.4.12.
 
 **Interface contract**
 
@@ -88,3 +95,5 @@ Builder: Quill (Changelog Scribe for templates, Page Spec Writer for the docs pa
 **Size**
 
 S: templates and a generator over existing data; the discipline is in the criteria map.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/design-system/reflow-zoom-text-spacing-audit` = PAP-670, `r4/input/accessibility-input-preferences` = PAP-647.

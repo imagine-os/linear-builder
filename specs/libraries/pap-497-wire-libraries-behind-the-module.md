@@ -11,14 +11,17 @@ milestone: "Registry live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-211", "PAP-216", "PAP-434", "PAP-435", "PAP-493", "PAP-495"]
+blockedBy: ["PAP-211", "PAP-216", "PAP-434", "PAP-435", "PAP-493", "PAP-495", "PAP-537", "PAP-538"]
 blocks: []
 key: "module/libraries/wire"
 url: "https://linear.app/paperos/issue/PAP-497/wire-libraries-behind-the-module-registry-with-an-adapter-and-feature"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:46.799Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:00.965Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-497: Wire libraries behind the module registry with an adapter and feature flag

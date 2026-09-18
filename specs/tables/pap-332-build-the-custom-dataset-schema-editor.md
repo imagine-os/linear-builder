@@ -6,19 +6,22 @@ projectName: "Table & Views Engine"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Staff", "Customer"]
+surfaces: ["Staff"]
 milestone: "All view types"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-164", "PAP-165"]
-blocks: ["PAP-199", "PAP-208"]
+blockedBy: ["PAP-164", "PAP-165", "PAP-613", "PAP-616", "PAP-627", "PAP-630"]
+blocks: ["PAP-208", "PAP-628", "PAP-638"]
 key: "gap/tables/schema-editor"
 url: "https://linear.app/paperos/issue/PAP-332/build-the-custom-dataset-schema-editor-create-tables-and-fields-in-app"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:29.310Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:22.462Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-332: Build the custom dataset schema editor: create tables and fields in-app, reorder, field type conversion with a lossiness report and background backfill
@@ -74,6 +77,8 @@ Reviewer clicks "New table", adds four fields of different types, opens the grid
 **Dependencies**
 
 PAP-164 (hard), PAP-165 (hard, column menu), PAP-161, PAP-43, PAP-171 and PAP-178 (soft). Blocks PAP-199, PAP-208.
+
+*Round 4 (2026-09-18): PAP-199 soft: this issue no longer blocks PAP-199 because the in-app schema editor (09-29) lands after the import framework milestone (09-28); PAP-199 proceeds (the import framework creates tables and fields through the PAP-164 field-type API directly; adopt the schema editor's conversion helpers when PAP-332 lands) and reconciles when this issue lands.*
 
 **Agent**
 

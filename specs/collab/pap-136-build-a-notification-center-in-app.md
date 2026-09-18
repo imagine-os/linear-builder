@@ -6,19 +6,22 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Comments and canvas"
 state: "Backlog"
 parent: null
-children: ["PAP-323", "PAP-324", "PAP-325"]
-blockedBy: ["PAP-43", "PAP-131", "PAP-302", "PAP-303", "PAP-319", "PAP-436"]
-blocks: []
+children: ["PAP-725", "PAP-324", "PAP-325", "PAP-323"]
+blockedBy: ["PAP-43", "PAP-131", "PAP-302", "PAP-303", "PAP-319", "PAP-436", "PAP-555", "PAP-556", "PAP-564", "PAP-565"]
+blocks: ["PAP-513", "PAP-639", "PAP-795", "PAP-807", "PAP-849", "PAP-852", "PAP-855", "PAP-859", "PAP-865", "PAP-869", "PAP-870", "PAP-873", "PAP-874", "PAP-879", "PAP-880", "PAP-895", "PAP-910"]
 key: "collab/notifications"
 url: "https://linear.app/paperos/issue/PAP-136/build-a-notification-center-in-app-email-slack-with-per-audience"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:50:05.968Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:41.406Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-136: Build a notification center (in-app, email, Slack) with per-audience preferences
@@ -45,6 +48,9 @@ Out: push (planned realtime push transport), SMS, marketing email (PAP-191), Lin
 * Actor never notified of own action; recipients without access to the source are `suppressed`; idempotency key `(kind, source, recipient, bucket)`.
 * In-app row within 2 s of emit; email within 60 s outside digests; `issue.needs_justin` applies the PAP-94 batching rule.
 * Digests cap at 50 items; recipient expansion capped at 500.
+
+*Round 4 amendment (2026-09-18):*
+Work package 1 is the child issue PAP-725 (Opus 5 / high, blocked by PAP-43 and PAP-303 only). Because PAP-235 is Deferred, the `EmailChannel` ships a plain-HTML fallback template and switches to the PAP-235 kit when it lands. The `notification` row stores `ActorRef` (PAP-302) for the actor and `EntityRef` for the source, per Contracts §2.
 
 **Interface contract**
 
@@ -85,3 +91,5 @@ Built by Forge (Ops Runner) for the core and Slack with Nova on inbox and prefer
 **Size**
 
 L, planned as four work packages (M, M, S, S) that become child issues once the issue limit is lifted.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/collab/notification-core` = PAP-725.

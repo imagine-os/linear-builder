@@ -10,15 +10,18 @@ surfaces: ["Developer"]
 milestone: "Codegen and conformance tests"
 state: "Backlog"
 parent: null
-children: ["PAP-314", "PAP-315", "PAP-316"]
-blockedBy: ["PAP-74", "PAP-114", "PAP-234"]
+children: ["PAP-316", "PAP-315", "PAP-314"]
+blockedBy: ["PAP-74", "PAP-114", "PAP-234", "PAP-660", "PAP-661", "PAP-664", "PAP-667"]
 blocks: ["PAP-29", "PAP-362", "PAP-375"]
 key: "spec-builder/layout-codegen"
 url: "https://linear.app/paperos/issue/PAP-120/generate-page-scaffolds-layout-component-tree-loadingemptyerror-states"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:21.851Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:48:05.373Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-120: Generate page scaffolds (layout, component tree, loading/empty/error states) from specs

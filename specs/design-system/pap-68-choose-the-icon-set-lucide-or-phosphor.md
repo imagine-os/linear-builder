@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-66"]
-blocks: ["PAP-234"]
+blocks: ["PAP-234", "PAP-656", "PAP-661", "PAP-668"]
 key: "design-system/icons-illustrations"
 url: "https://linear.app/paperos/issue/PAP-68/choose-the-icon-set-lucide-or-phosphor-and-illustration-style-build-a"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:09.317Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:35.182Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-68: Choose the icon set (Lucide or Phosphor) and illustration style; build a tree-shaken Icon component

@@ -6,19 +6,22 @@ projectName: "Spec Builder"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Codegen and conformance tests"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-117", "PAP-118"]
+blockedBy: ["PAP-117", "PAP-118", "PAP-739"]
 blocks: ["PAP-364"]
 key: "gp/spec-builder/app-interview"
 url: "https://linear.app/paperos/issue/PAP-360/write-the-app-interview-skill-one-paragraph-idea-to-appspecyaml"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:37.806Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:52.238Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-360: Write the app interview skill: one paragraph idea to `app.spec.yaml` (business profile, audiences, entities, navigation, modules) in at most six questions with `--yes` defaults
@@ -50,6 +53,9 @@ Out: page-level interviews (PAP-118), writing page specs (entity-derived page sp
 * `navigation` gets one item per entity per audience that may read it plus the settings item for staff; icons from the PAP-72 icon set by keyword map, `layout-grid` fallback.
 * `neverHappen` answers are stored verbatim under `x-open-questions[].text` with `kind: constraint` and copied into `edgeCaseSeeds` for PAP-85.
 * Elapsed time from invocation to written file is stamped as checkpoint `C1` in `.paperos/golden-path.json` when the driver is present.
+
+*Round 4 amendment (2026-09-18):*
+Fields proposed by the interview use the `Field` grammar (PAP-739): money nouns become `currency` with `format.currency` from the profile, dates become `date` or `dateTime` by phrasing, people nouns become `relation(user)`, and every `email|phone` field gets `pii: high`.
 
 **Interface contract**
 
@@ -92,3 +98,5 @@ M: one skill, six scripts, three fixtures, one model prompt to tune.
 **Demo**
 
 Terminal recording: paragraph in, six proposals shown, `--yes`, `app.spec.yaml` printed and validated in under 90 seconds; attached to the PR and the Linear comment.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/spec-builder/entity-field-grammar` = PAP-739.

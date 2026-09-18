@@ -11,14 +11,17 @@ milestone: "Ledger and reports"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-165", "PAP-179", "PAP-180", "PAP-343", "PAP-394", "PAP-397", "PAP-483"]
-blocks: ["PAP-186"]
+blockedBy: ["PAP-163", "PAP-165", "PAP-179", "PAP-180", "PAP-337", "PAP-343", "PAP-394", "PAP-397", "PAP-483", "PAP-630", "PAP-765", "PAP-766", "PAP-767", "PAP-768", "PAP-769"]
+blocks: ["PAP-186", "PAP-776", "PAP-780", "PAP-784", "PAP-882"]
 key: "business-core/finance-reports"
 url: "https://linear.app/paperos/issue/PAP-183/generate-pandl-balance-sheet-cash-flow-and-arap-aging-as-table-views"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:32.576Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:29.647Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-183: Generate P&L, balance sheet, cash flow and AR/AP aging as table views
@@ -80,6 +83,13 @@ Reviewer opens `/finance/reports/pnl` on the seeded tenant, switches to "this qu
 
 PAP-179 (hard), PAP-180 (hard, aging and bills), PAP-165 and PAP-163 (hard), PAP-173 (number blocks and print), PAP-172 (saved views). Blocks PAP-186.
 
+*Round 4 amendment (2026-09-18):*
+Round 4: the `dimensions` parameter resolves keys and options through PAP-769 (soft; until it lands only free-form `department` from payroll postings is accepted). Textbook expected values come from PAP-767 so PAP-186 and PAP-487 agree to the cent.
+
+*Round 4 amendment (2026-09-18):*
+
+* Soft dependency (round 4): PAP-772 (vendor-bills-and-ap-payments) would block this issue but sits in a later milestone (2026-10-01 > 2026-09-29); no `blocks` relation was created. Build against its interface and reconcile when it lands.
+
 **Agent**
 
 Builder: Ledger (Bookkeeper). Reviewer: Sentinel (Code Reviewer, Edge Case Hunter); Quill reviews the derivation docs.
@@ -87,3 +97,5 @@ Builder: Ledger (Bookkeeper). Reviewer: Sentinel (Code Reviewer, Edge Case Hunte
 **Size**
 
 M: SQL and fixtures dominate; UI comes from the views engine.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/business-core/finance-demo-seed` = PAP-767, `r4/business-core/ledger-dimensions-registry` = PAP-769.

@@ -11,14 +11,17 @@ milestone: "Ledger and reports"
 state: "Backlog"
 parent: "PAP-179"
 children: []
-blockedBy: ["PAP-393"]
-blocks: ["PAP-180", "PAP-181", "PAP-183", "PAP-184", "PAP-185", "PAP-196", "PAP-206", "PAP-490"]
+blockedBy: ["PAP-393", "PAP-768"]
+blocks: ["PAP-180", "PAP-181", "PAP-183", "PAP-184", "PAP-185", "PAP-196", "PAP-206", "PAP-397", "PAP-400", "PAP-408", "PAP-423", "PAP-424", "PAP-490", "PAP-765", "PAP-771", "PAP-775", "PAP-827", "PAP-871", "PAP-872", "PAP-878", "PAP-880", "PAP-882", "PAP-886"]
 key: "business-core/ledger/rules-ui-trialbalance"
 url: "https://linear.app/paperos/issue/PAP-394/posting-rule-registry-with-the-first-five-rules-financejournal-ui"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:49.042Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:55:54.418Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-394: Posting rule registry with the first five rules, /finance/journal UI, trial balance and rebuildBalances

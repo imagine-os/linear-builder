@@ -11,14 +11,17 @@ milestone: "Record sync and conflict UX"
 state: "Backlog"
 parent: "PAP-143"
 children: []
-blockedBy: ["PAP-272", "PAP-326"]
-blocks: ["PAP-328"]
+blockedBy: ["PAP-267", "PAP-272", "PAP-326"]
+blocks: ["PAP-328", "PAP-608"]
 key: "realtime/record-sync/reconciler"
 url: "https://linear.app/paperos/issue/PAP-327/reconciler-for-optimistic-writes-and-conflict-events"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:28.654Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:30:59.972Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-327: Reconciler for optimistic writes and conflict events
@@ -43,6 +46,9 @@ Out: hooks (sibling 1), UI (PAP-144), retry (PAP-148).
 
 * Comparison is per field with type-aware equality (dates, decimals as strings, arrays order-insensitive for multi-select).
 * Remote rows apply before outbox replay after a reconnect.
+
+*Round 4 amendment (2026-09-18):*
+Column ownership: `packages/db` ships a `syncMeta()` column helper (from PAP-32 conventions) that adds `mutation_id uuid` and `updated_by uuid` to a table; the shape registry lint (PAP-326) refuses to register a table without it. The stamping middleware sets both from the request context; PAP-43 jobs stamp `updated_by = actorId ?? service id` so worker writes reconcile too.
 
 **Interface contract**
 

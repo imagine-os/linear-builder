@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-35"
 children: []
 blockedBy: ["PAP-33", "PAP-267", "PAP-302"]
-blocks: ["PAP-269", "PAP-272", "PAP-276", "PAP-437", "PAP-454"]
+blocks: ["PAP-269", "PAP-272", "PAP-276", "PAP-437", "PAP-454", "PAP-565", "PAP-566", "PAP-568", "PAP-590", "PAP-613", "PAP-741"]
 key: "child/PAP-35/13"
 url: "https://linear.app/paperos/issue/PAP-268/api-contract-package-core-routers-and-typed-client-with-callas-test"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:12.337Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:27.951Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-268: API contract package, core routers and typed client with callAs test utility

@@ -6,19 +6,22 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P2"
 type: "Build"
 priority: 3
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Knowledge surfaced everywhere"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-128", "PAP-142"]
-blocks: []
+blockedBy: ["PAP-128", "PAP-142", "PAP-603", "PAP-604"]
+blocks: ["PAP-737", "PAP-841", "PAP-868"]
 key: "collab/runtime-docs-store"
 url: "https://linear.app/paperos/issue/PAP-379/build-a-runtime-docs-store-for-tenant-authored-documents-yjs-backed"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:43.450Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:55:57.399Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-379: Build a runtime docs store for tenant-authored documents: Yjs-backed pages in Postgres with the same routes, search registration and comment anchors as repo MDX
@@ -46,6 +49,9 @@ Out: templates gallery, page-level permissions beyond audience, publishing to ex
 * Slugs unique per workspace; moves keep a redirect row.
 * `snapshot_text` from `richTextToPlain` for search; render uses `renderRichText` for public pages (no editor bundle).
 * Version history drawer reuses PAP-128's History UI with versions instead of commits.
+
+*Round 4 amendment (2026-09-18):*
+Anchor grammar: runtime doc blocks use `tdoc:<pageId>#<blockId>`, not `doc:<path>#<blockId>`, so repo MDX and tenant pages cannot collide on a path-like id; `CommentAnchor` in `@paperos/contract-collab` (PAP-474) gains the `tdoc:` form as a patch bump. `doc_page.slug` may not start with `t/` (reserved by the route).
 
 **Interface contract**
 

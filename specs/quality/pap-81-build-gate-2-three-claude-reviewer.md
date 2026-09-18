@@ -6,19 +6,22 @@ projectName: "Quality Pipeline"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Agent"]
 milestone: "Gates 1 and 2 on every PR"
 state: "Backlog"
 parent: null
-children: ["PAP-243", "PAP-244", "PAP-245"]
-blockedBy: ["PAP-78", "PAP-79", "PAP-239", "PAP-299"]
+children: ["PAP-677", "PAP-243", "PAP-244", "PAP-245"]
+blockedBy: ["PAP-78", "PAP-79", "PAP-239", "PAP-299", "PAP-713", "PAP-714"]
 blocks: ["PAP-85", "PAP-88", "PAP-241", "PAP-253"]
 key: "quality/review-agents"
 url: "https://linear.app/paperos/issue/PAP-81/build-gate-2-three-claude-reviewer-agents-correctness-security-spec"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:17.309Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:51:45.177Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-81: Build gate 2: three Claude reviewer agents (correctness, security, spec-conformance) posting structured PR reviews

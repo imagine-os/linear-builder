@@ -11,14 +11,17 @@ milestone: "Tenant-safe and observable"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-43", "PAP-267", "PAP-268", "PAP-434", "PAP-435", "PAP-448", "PAP-451"]
+blockedBy: ["PAP-43", "PAP-267", "PAP-268", "PAP-434", "PAP-435", "PAP-448", "PAP-451", "PAP-537", "PAP-538", "PAP-564", "PAP-565"]
 blocks: []
 key: "module/data-layer/wire"
 url: "https://linear.app/paperos/issue/PAP-454/wire-data-layer-behind-the-module-registry-with-an-adapter-and-feature"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:08.096Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:07.829Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-454: Wire data-layer behind the module registry with an adapter and feature flag

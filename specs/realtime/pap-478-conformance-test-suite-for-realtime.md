@@ -11,14 +11,17 @@ milestone: "Record sync and conflict UX"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-441", "PAP-475"]
+blockedBy: ["PAP-441", "PAP-475", "PAP-541"]
 blocks: ["PAP-481"]
 key: "module/realtime/conformance"
 url: "https://linear.app/paperos/issue/PAP-478/conformance-test-suite-for-realtime-contract"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:07.429Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:02.711Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-478: Conformance test suite for realtime contract

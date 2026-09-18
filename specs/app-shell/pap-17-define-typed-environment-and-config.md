@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-13"]
-blocks: ["PAP-20", "PAP-259", "PAP-260", "PAP-353", "PAP-444", "PAP-447"]
+blocks: ["PAP-20", "PAP-259", "PAP-260", "PAP-353", "PAP-366", "PAP-368", "PAP-404", "PAP-444", "PAP-447", "PAP-501", "PAP-502", "PAP-510", "PAP-813"]
 key: "app-shell/env-config"
 url: "https://linear.app/paperos/issue/PAP-17/define-typed-environment-and-config-layer-with-per-target-secret"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:51.729Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:40.693Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-20"
+cycle: null
 ---
 
 # PAP-17: Define typed environment and config layer with per-target secret storage (web, desktop keychain, mobile secure storage)

@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff", "Developer"]
+surfaces: ["Developer"]
 milestone: "Desktop and mobile shells build"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: []
-blocks: []
+blockedBy: ["PAP-16", "PAP-17"]
+blocks: ["PAP-502", "PAP-548", "PAP-898", "PAP-901"]
 key: "gap/app-shell/client-errors"
 url: "https://linear.app/paperos/issue/PAP-368/define-the-client-error-handling-and-crash-reporting-contract-error"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:40.257Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:46.168Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-368: Define the client error handling and crash reporting contract: error boundaries, error code catalogue, user-facing copy, browser and Tauri crash reports into observability
@@ -89,3 +92,5 @@ Built by Forge with Quill on copy. Reviewed by Sentinel (Code Reviewer).
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* PAP-502 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-502.

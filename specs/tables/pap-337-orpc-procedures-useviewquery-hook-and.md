@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-163"
 children: []
 blockedBy: ["PAP-336"]
-blocks: ["PAP-165", "PAP-167", "PAP-168", "PAP-169", "PAP-170", "PAP-194", "PAP-195", "PAP-489"]
+blocks: ["PAP-165", "PAP-167", "PAP-168", "PAP-169", "PAP-170", "PAP-171", "PAP-183", "PAP-194", "PAP-195", "PAP-341", "PAP-344", "PAP-489", "PAP-615", "PAP-619", "PAP-621", "PAP-625", "PAP-629"]
 key: "tables/compiler/api-hook-bench"
 url: "https://linear.app/paperos/issue/PAP-337/orpc-procedures-useviewquery-hook-and-the-100k-row-benchmark"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:31.280Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:22.021Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-337: oRPC procedures, useViewQuery hook and the 100k-row benchmark

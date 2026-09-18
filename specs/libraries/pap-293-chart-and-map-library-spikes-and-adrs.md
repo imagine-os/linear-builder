@@ -11,14 +11,17 @@ milestone: "Core adoptions decided"
 state: "Backlog"
 parent: "PAP-213"
 children: []
-blockedBy: ["PAP-292"]
-blocks: ["PAP-294"]
+blockedBy: ["PAP-209", "PAP-292"]
+blocks: ["PAP-294", "PAP-621", "PAP-622", "PAP-665"]
 key: "child/PAP-213/1"
 url: "https://linear.app/paperos/issue/PAP-293/chart-and-map-library-spikes-and-adrs-echarts-visx-recharts-observable"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:19.869Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:30:59.972Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-293: Chart and map library spikes and ADRs: ECharts, visx, Recharts, Observable Plot, Nivo, Chart.js; MapLibre GL and Leaflet with self-hosted tiles

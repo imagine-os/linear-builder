@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-161", "PAP-162", "PAP-433"]
-blocks: ["PAP-102", "PAP-183", "PAP-189", "PAP-333", "PAP-486", "PAP-489"]
+blocks: ["PAP-102", "PAP-183", "PAP-189", "PAP-333", "PAP-486", "PAP-489", "PAP-631"]
 key: "module/tables/contract"
 url: "https://linear.app/paperos/issue/PAP-483/publish-paperoscontract-tables-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:32.576Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:01.643Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-483: Publish @paperos/contract-tables v0.1 with manifest

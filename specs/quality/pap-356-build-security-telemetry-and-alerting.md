@@ -6,19 +6,22 @@ projectName: "Quality Pipeline"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Agent", "Staff", "Developer"]
+surfaces: ["Agent"]
 milestone: "Edge-case hunting and release trains"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-38", "PAP-97"]
-blocks: ["PAP-89"]
+children: ["PAP-674", "PAP-673"]
+blockedBy: ["PAP-38", "PAP-40", "PAP-97"]
+blocks: ["PAP-89", "PAP-895", "PAP-896", "PAP-900"]
 key: "security/security-telemetry"
 url: "https://linear.app/paperos/issue/PAP-356/build-security-telemetry-and-alerting-auth-anomalies-rls-denials-agent"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:37.127Z"
-model: "claude-opus-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:30:57.105Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-356: Build security telemetry and alerting: auth anomalies, RLS denials, agent policy and egress denials, canary hits, webhook signature failures and backup age routed to Linear with a weekly security digest

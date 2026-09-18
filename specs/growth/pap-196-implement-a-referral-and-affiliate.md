@@ -10,15 +10,18 @@ surfaces: ["Customer"]
 milestone: "Acquisition analytics"
 state: "Backlog"
 parent: null
-children: ["PAP-407", "PAP-408", "PAP-409"]
+children: ["PAP-407", "PAP-409", "PAP-408"]
 blockedBy: ["PAP-177", "PAP-179", "PAP-181", "PAP-394"]
 blocks: []
 key: "growth/referral-program"
 url: "https://linear.app/paperos/issue/PAP-196/implement-a-referral-and-affiliate-program-with-stripe-connect-payouts"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
 updatedAt: "2026-09-17T13:41:54.136Z"
 model: null
 effort: null
+estimate: null
+dueDate: null
+cycle: null
 ---
 
 # PAP-196: Implement a referral and affiliate program with Stripe Connect payouts

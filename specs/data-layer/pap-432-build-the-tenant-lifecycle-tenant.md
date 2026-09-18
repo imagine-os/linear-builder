@@ -6,19 +6,22 @@ projectName: "Data Layer & Database"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Staff", "Developer"]
+surfaces: ["Developer"]
 milestone: "Tenant-safe and observable"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: []
-blocks: []
+blockedBy: ["PAP-33", "PAP-43", "PAP-205", "PAP-422", "PAP-565"]
+blocks: ["PAP-900"]
 key: "gap/data-layer/tenant-lifecycle"
 url: "https://linear.app/paperos/issue/PAP-432/build-the-tenant-lifecycle-tenant-states-deletion-request-and-cancel"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:58.142Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:46.522Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-432: Build the tenant lifecycle: tenant states, deletion request and cancel flow with grace period, archive metadata, per-tenant storage and row quotas (the purge job itself is `security/retention-pii`)

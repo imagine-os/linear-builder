@@ -3,7 +3,7 @@
 // Linear snapshot, plus an artifact body (self-contained, no external scripts) when PAPEROS_ARTIFACT_OUT is set.
 //   node tools/blueprint/build_v4.js
 // Env: PAPEROS_REPO (repo root, default: two levels up), MODEL_EFFORT (path to model-effort.json), CHUNKS (path to
-// chunks.json, default plan/chunks.json), PAPEROS_ARTIFACT_OUT (artifact body path).
+// the chunk plan, default plan/round4/chunks-v2.json, the round-4 plan; plan/chunks.json is the round-3 plan), PAPEROS_ARTIFACT_OUT (artifact body path).
 // Blueprint v4: adds the graph-gallery views (objects map, lanes skill tree, radial tree, images, icons, objects 3D,
 // radial 3D) with shared filters and sorting, the Modules & plug points map and the $2,500 chunk plan.
 // Blueprint v5 (round 4): the five initiatives, the C1/C2/C3 cycle strip, the estimates view (points per project by
@@ -21,7 +21,7 @@ const plan = JSON.parse(read(path.join(ROOT, 'plan/plan.json')));
 const ids = JSON.parse(read(path.join(ROOT, 'plan/linear-ids.json')));
 const mePath = process.env.MODEL_EFFORT || path.join(ROOT, 'plan/model-effort.json');
 const me = fs.existsSync(mePath) ? JSON.parse(read(mePath)) : null;
-const chunksPath = process.env.CHUNKS || path.join(ROOT, 'plan/chunks.json');
+const chunksPath = process.env.CHUNKS || path.join(ROOT, 'plan/round4/chunks-v2.json');
 const chunksRaw = fs.existsSync(chunksPath) ? JSON.parse(read(chunksPath)) : null;
 const template = read(path.join(__dirname, 'template_v5.html'));
 const v4 = name => read(path.join(__dirname, 'v5', name));
@@ -245,7 +245,7 @@ if (chunksRaw) {
       deferred: d ? { label: d.label, count: d.issueCount, listCost: d.listCost, discountedCost: d.discountedCost, equivalentChunks: d.equivalentChunks, start: d.start, end: d.end, hours: d.hours, issues: Object.values(d.byProject || {}).flatMap(v => v.issues || []), byProject: Object.fromEntries(Object.entries(d.byProject || {}).map(([k2, v]) => [k2, (v.issues || []).length])), byBuilderModel: d.byBuilderModel || {}, nj: d.needsJustinBeforeStart || [], note: d.effortNote || '' } : null
     };
   }
-  chunks = { generatedAt: chunksRaw.generatedAt, snapshotTakenAt: chunksRaw.snapshotTakenAt, terms: chunksRaw.terms, recommended: 'B', mixes };
+  chunks = { generatedAt: chunksRaw.generatedAt, snapshotTakenAt: chunksRaw.snapshotTakenAt, terms: chunksRaw.terms, recommended: chunksRaw.canonicalMix || 'B', round: chunksRaw.round || 3, counts: chunksRaw.counts || null, wallClock: chunksRaw.wallClock || null, round3: chunksRaw.round3 || null, mixes };
 }
 
 /* ---------------- round 4: initiatives, cycles, estimates, what changed ---------------- */
@@ -387,7 +387,7 @@ const rows = meRows.map(([k, label]) => { const r = { label }; let tot = 0; for 
 const assigned = rows.reduce((a, r) => a + r.total, 0);
 const modelEffort = {
   rows, assigned, umbrellas: canonical.filter(i => i.ch.length).length, effs: ['low', 'medium', 'high', 'max'],
-  note: `Live Linear labels on the ${assigned} leaf issues (${TODAY} snapshot): Model and Effort labels follow scenario E of the cost estimate, Fable 5.1 on the keystone specs, Opus 5 on the scaffold, orchestrator, security and P0 core, Sonnet 5 elsewhere, plus the 65 round-3 module issues (Opus 5 or Sonnet 5, mostly high). The chunk plan below prices two alternative mixes on top of these labels: <b>mix B</b> runs Opus 5 builders with Fable 5.1 on every spec, review and release candidate ($7,909 list, <b>$158 to Justin</b>); mix A runs Fable 5.1 everywhere ($11,166 list, $223). Scenario E as labeled is about $3,700 list, $74 to Justin.${me ? '' : ''}`
+  note: `Live Linear labels on the ${assigned} leaf issues (${TODAY} snapshot): Model and Effort labels follow scenario E of the cost estimate, Fable 5.1 on the keystone specs, Opus 5 on the scaffold, orchestrator, security and P0 core, Sonnet 5 elsewhere, plus the round-3 module issues and the round-4 gap issues (Sonnet 5 or Opus 5, mostly high). The round-4 chunk plan below (plan/round4/chunks-v2.json) prices two mixes on top of these labels over the ${chunks ? chunks.mixes.B.totals.issues : 601} scheduled leaves: <b>mix B</b> runs the labelled builder models with Fable 5.1 on every spec, research, review and release candidate (${chunks ? '$' + Math.round(chunks.mixes.B.totals.listCost).toLocaleString('en-US') : '$10,450'} list, <b>${chunks ? '$' + Math.round(chunks.mixes.B.totals.discountedCost) : '$209'} to Justin</b>, ${chunks ? chunks.mixes.B.totals.chunks : 5} chunks, ${chunks ? chunks.mixes.B.totals.wallClockHours : 38.6} h at 16 builders); mix A runs Fable 5.1 everywhere (${chunks ? '$' + Math.round(chunks.mixes.A.totals.listCost).toLocaleString('en-US') : '$18,522'} list, ${chunks ? '$' + Math.round(chunks.mixes.A.totals.discountedCost) : '$370'}, ${chunks ? chunks.mixes.A.totals.chunks : 8} chunks). The deferred v0.2 set is an extra ${chunks && chunks.mixes.B.deferred ? '$' + Math.round(chunks.mixes.B.deferred.listCost).toLocaleString('en-US') + ' list, $' + Math.round(chunks.mixes.B.deferred.discountedCost) : '$3,418 list, $68'} in mix B. Round 3 priced 326 issues at $7,909 / $158 in 4 chunks.${me ? '' : ''}`
 };
 
 const footer = `<span>Built from <span class="mono">plan/linear-snapshot-live.json</span> taken ${snap.takenAt} by <span class="mono">tools/blueprint/build_v5.js</span>.</span><span>Linear is the system of record; where this page and an issue disagree, the issue wins.</span><span><a href="${PAGES}previous/index-v4.html">Previous version</a> · <a href="${REPO}">Source</a> · <a href="https://github.com/imagine-os/graph-gallery">Visual ideas: graph-gallery</a></span>`;

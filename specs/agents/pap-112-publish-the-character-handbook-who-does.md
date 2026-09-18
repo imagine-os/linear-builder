@@ -6,7 +6,7 @@ projectName: "Agent Characters & Orgs"
 phase: "P1"
 type: "Docs"
 priority: 2
-surfaces: ["Agent", "Staff"]
+surfaces: ["Agent"]
 milestone: "Sub-agents, skills and evals live"
 state: "Backlog"
 parent: null
@@ -15,10 +15,13 @@ blockedBy: ["PAP-104", "PAP-287"]
 blocks: []
 key: "agents/character-docs"
 url: "https://linear.app/paperos/issue/PAP-112/publish-the-character-handbook-who-does-what-how-to-summon-them-what"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:25.178Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:40.473Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-112: Publish the character handbook: who does what, how to summon them, what they may not do

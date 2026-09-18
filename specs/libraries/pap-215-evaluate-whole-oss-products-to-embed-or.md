@@ -6,19 +6,22 @@ projectName: "Library Discovery & Integration"
 phase: "P1"
 type: "Research"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Core adoptions decided"
 state: "Backlog"
 parent: null
-children: ["PAP-350", "PAP-351", "PAP-352"]
+children: ["PAP-351", "PAP-350", "PAP-352"]
 blockedBy: ["PAP-209"]
 blocks: []
 key: "libraries/oss-products"
 url: "https://linear.app/paperos/issue/PAP-215/evaluate-whole-oss-products-to-embed-or-fork-twenty-crm-nocodb-baserow"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:58.956Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:57:19.274Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-215: Evaluate whole OSS products to embed or fork (Twenty CRM, NocoDB, Baserow, Plane, Cal.com, Formbricks, Postiz)

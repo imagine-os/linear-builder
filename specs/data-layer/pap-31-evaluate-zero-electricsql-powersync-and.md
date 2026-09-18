@@ -15,10 +15,13 @@ blockedBy: []
 blocks: ["PAP-36", "PAP-271"]
 key: "data-layer/sync-research"
 url: "https://linear.app/paperos/issue/PAP-31/evaluate-zero-electricsql-powersync-and-replicache-for-local-first"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:57.127Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:56:46.139Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-31: Evaluate Zero, ElectricSQL, PowerSync and Replicache for local-first sync and write an ADR

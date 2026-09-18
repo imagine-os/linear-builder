@@ -11,14 +11,17 @@ milestone: "Spec editor UI"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-27", "PAP-120"]
+blockedBy: ["PAP-27", "PAP-120", "PAP-316", "PAP-504"]
 blocks: []
 key: "spec-builder/spec-i18n"
 url: "https://linear.app/paperos/issue/PAP-375/add-spec-level-internationalisation-message-ids-for-spec-copy-fields"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:42.647Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:39.238Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-375: Add spec-level internationalisation: message IDs for spec copy fields, extraction into catalogs, pseudo-locale validation rule

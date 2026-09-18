@@ -11,14 +11,17 @@ milestone: "Tokens and primitives"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-67", "PAP-238"]
-blocks: ["PAP-73", "PAP-76"]
+blockedBy: ["PAP-67", "PAP-236", "PAP-238"]
+blocks: ["PAP-73", "PAP-76", "PAP-670"]
 key: "design-system/storybook"
 url: "https://linear.app/paperos/issue/PAP-69/set-up-storybook-with-a11y-viewport-and-interaction-test-addons"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:09.412Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:31:04.483Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-69: Set up Storybook with a11y, viewport and interaction-test addons deployed to GitHub Pages
@@ -43,6 +46,10 @@ Stand up Storybook 9 for `packages/ui` as the living documentation, the componen
 * Vitest addon: `packages/ui/vitest.config.ts` adds the storybook project with the Playwright Chromium provider; CI job `storybook-test` in Gate 1.
 * Story naming `Category/Component`; ids stable and used as screenshot keys (`ui-button--all-variants`); tags `autodocs`, `visual` (opt-in for PAP-246), `proposal` (PAP-77).
 * Pages: build to `storybook-static`, copy into `storybook/` in the same `gh-pages` push as PAP-15, `/pr/<n>/storybook/` per PR, sticky PR comment gains a Storybook link; `viteFinal` sets `base` from `BASE_PATH`.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: `globalTypes` also expose `density` (`compact|default|comfortable`, sets `data-density` via PAP-669), `forcedColors` (emulates `forced-colors: active` through the Chromium `emulateMedia` in the Vitest browser provider and a CSS class fallback in the manager) and `fontScale` (sets `--pos-font-scale`), so PAP-73, the reflow audit and PAP-246 baselines can iterate the same toolbar values; `index.json` records the globals each story opts into via `parameters.matrix`.
 
 **Interface contract**
 
@@ -87,3 +94,5 @@ Iris with Forge (Ops Runner) on the workflow. Reviewed by Sentinel (Visual Inspe
 **Size**
 
 M.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/design-system/density-modes` = PAP-669.

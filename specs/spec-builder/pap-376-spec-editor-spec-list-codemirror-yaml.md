@@ -6,7 +6,7 @@ projectName: "Spec Builder"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Spec editor UI"
 state: "Backlog"
 parent: "PAP-124"
@@ -15,10 +15,13 @@ blockedBy: ["PAP-70", "PAP-114"]
 blocks: ["PAP-377", "PAP-378"]
 key: "spec-builder/spec-editor-ui/yaml"
 url: "https://linear.app/paperos/issue/PAP-376/spec-editor-spec-list-codemirror-yaml-editor-with-worker-validation"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:42.809Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:55:57.301Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-376: Spec editor: spec list, CodeMirror YAML editor with worker validation and save-to-PR flow

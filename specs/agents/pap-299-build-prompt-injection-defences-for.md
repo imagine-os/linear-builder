@@ -6,19 +6,22 @@ projectName: "Agent Characters & Orgs"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Agent"]
 milestone: "Roster defined and installed"
 state: "Backlog"
 parent: null
-children: []
+children: ["PAP-714", "PAP-713"]
 blockedBy: ["PAP-92", "PAP-97"]
-blocks: ["PAP-81", "PAP-109"]
+blocks: ["PAP-81", "PAP-109", "PAP-677", "PAP-834", "PAP-836", "PAP-843"]
 key: "security/prompt-injection"
 url: "https://linear.app/paperos/issue/PAP-299/build-prompt-injection-defences-for-agent-sessions-trust-tiers-for"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:20.520Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:50.572Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-299: Build prompt-injection defences for agent sessions: trust tiers for issues, comments and PRs, untrusted-content wrapping, actor-verified instructions, canary tokens and an injection eval suite
@@ -33,6 +36,10 @@ Every session reads text written by someone else: issue bodies, comments, PR des
 
 * In: `packages/agents/src/trust/` (tier classifier, wrapper, scanner), orchestrator prompt renderer changes (PAP-96 `renderPrompt`), webhook actor verification (PAP-97) for the PAP-94 reply grammar, spec-freeze hash for issues entering Ready for Claude, reviewer input hardening (PAP-81), memory-write review gate (PAP-109), canary tokens in fixtures and secrets, injection eval suite, `docs/security/prompt-injection.md`.
 * Out: model-level safety, the sandbox (PAP-280), the deny list (PAP-298), human phishing.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: split into two children, `Prompt injection: trust tiers, wrapper, scanner, actor verification and spec freeze` (PAP-713, M) and `Prompt injection: injection eval suite and canaries` (PAP-714, S); this issue is their umbrella. The `blocks` relation to PAP-81 moves to the eval-suite child (fork-PR reviews wait for the first green run) and the relation to PAP-109 to the tiers child.
 
 **Spec**
 
@@ -91,3 +98,5 @@ Built by Sentinel (Security Auditor sub-agent) with Atlas (Dispatcher) for rende
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/agents/injection-eval-suite-and-canaries` = PAP-714, `r4/agents/trust-tiers-wrapper-scanner-and-actor-verification` = PAP-713.

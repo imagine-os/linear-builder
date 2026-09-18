@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-45", "PAP-273"]
-blocks: ["PAP-22", "PAP-51", "PAP-53", "PAP-455"]
+blocks: ["PAP-22", "PAP-51", "PAP-53", "PAP-455", "PAP-500", "PAP-503", "PAP-520", "PAP-525", "PAP-526", "PAP-529", "PAP-531", "PAP-702"]
 key: "forge/mirror"
 url: "https://linear.app/paperos/issue/PAP-47/configure-bidirectional-push-mirroring-between-forgejo-and-the-github"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:02.243Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:41.991Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-20"
+cycle: null
 ---
 
 # PAP-47: Configure bidirectional push mirroring between Forgejo and the GitHub org imagine-os for all repos
@@ -96,3 +99,5 @@ Built by Forge (Ops Runner). Reviewed by Sentinel (Security Auditor on tokens; E
 **Size**
 
 M: two propagation paths and a monitor with timing evidence.
+
+*Round 4 critique fix (2026-09-18):* PAP-520 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-520.

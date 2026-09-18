@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-163"
 children: []
 blockedBy: ["PAP-335"]
-blocks: ["PAP-337"]
+blocks: ["PAP-337", "PAP-634", "PAP-635"]
 key: "tables/compiler/groups-shapes"
 url: "https://linear.app/paperos/issue/PAP-336/groups-aggregates-and-electric-shape-eligibility"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:31.195Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:04.444Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-336: Groups, aggregates and Electric shape eligibility

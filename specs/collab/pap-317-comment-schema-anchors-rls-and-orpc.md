@@ -6,19 +6,22 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Comments and canvas"
 state: "Backlog"
 parent: "PAP-131"
 children: []
-blockedBy: ["PAP-59", "PAP-140", "PAP-142", "PAP-229"]
-blocks: ["PAP-318", "PAP-480"]
+blockedBy: ["PAP-59", "PAP-140", "PAP-142", "PAP-229", "PAP-603", "PAP-604"]
+blocks: ["PAP-318", "PAP-480", "PAP-726", "PAP-729", "PAP-734"]
 key: "collab/comments/schema-rls-rpc"
 url: "https://linear.app/paperos/issue/PAP-317/comment-schema-anchors-rls-and-orpc-procedures"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:25.586Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:24.255Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-317: Comment schema, anchors, RLS and oRPC procedures

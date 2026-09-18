@@ -15,10 +15,13 @@ blockedBy: ["PAP-66"]
 blocks: []
 key: "design-system/figma-sync"
 url: "https://linear.app/paperos/issue/PAP-77/export-tokens-to-figma-variables-and-document-the-round-trip-or-record"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:11.963Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:33.642Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-77: Export tokens to Figma variables and document the round-trip, or record the decision to skip Figma

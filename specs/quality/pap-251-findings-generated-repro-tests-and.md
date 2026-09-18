@@ -11,14 +11,17 @@ milestone: "Visual and video gates"
 state: "Backlog"
 parent: "PAP-85"
 children: []
-blockedBy: ["PAP-250"]
-blocks: []
+blockedBy: ["PAP-250", "PAP-678"]
+blocks: ["PAP-684", "PAP-843"]
 key: "quality/edge-case-hunter/findings-repros-nightly"
 url: "https://linear.app/paperos/issue/PAP-251/findings-generated-repro-tests-and-nightly-library-run"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:07.825Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:29.663Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-251: Findings, generated repro tests and nightly library run

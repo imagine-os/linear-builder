@@ -11,14 +11,17 @@ milestone: "Agent principals and enterprise"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-35", "PAP-43", "PAP-59", "PAP-229", "PAP-269", "PAP-303", "PAP-304", "PAP-353"]
-blocks: []
+blockedBy: ["PAP-35", "PAP-43", "PAP-59", "PAP-229", "PAP-269", "PAP-303", "PAP-304", "PAP-353", "PAP-556", "PAP-557", "PAP-558", "PAP-565"]
+blocks: ["PAP-913"]
 key: "identity/tenant-api-keys-webhooks"
 url: "https://linear.app/paperos/issue/PAP-222/build-tenant-api-keys-and-outbound-webhooks-for-developers-scoped-keys"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:59.741Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:34.373Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-222: Build tenant API keys and outbound webhooks for developers: scoped keys, per-key limits, signed webhook deliveries with retries, developer settings page and generated TypeScript SDK

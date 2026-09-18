@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-13"]
-blocks: ["PAP-18", "PAP-365"]
+blocks: ["PAP-18", "PAP-365", "PAP-500", "PAP-517", "PAP-794"]
 key: "app-shell/gh-pages-demo"
 url: "https://linear.app/paperos/issue/PAP-15/set-up-github-pages-demo-deploy-for-every-app-with-per-pr-preview-urls"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:51.542Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:45.770Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-20"
+cycle: null
 ---
 
 # PAP-15: Set up GitHub Pages demo deploy for every app with per-PR preview URLs

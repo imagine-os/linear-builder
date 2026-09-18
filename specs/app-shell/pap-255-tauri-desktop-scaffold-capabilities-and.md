@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-19"
 children: []
 blockedBy: ["PAP-13"]
-blocks: ["PAP-256", "PAP-258"]
+blocks: ["PAP-256", "PAP-258", "PAP-502", "PAP-508", "PAP-513", "PAP-649"]
 key: "child/PAP-19/0"
 url: "https://linear.app/paperos/issue/PAP-255/tauri-desktop-scaffold-capabilities-and-plugins-appsdesktop-menu-tray"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:09.673Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:14.438Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-255: Tauri desktop scaffold, capabilities and plugins (apps/desktop, menu, tray, dev scripts)

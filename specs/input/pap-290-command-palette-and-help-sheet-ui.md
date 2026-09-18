@@ -6,19 +6,22 @@ projectName: "Multi-Input Control & Accessibility"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Keyboard and command system"
 state: "Backlog"
 parent: "PAP-151"
 children: []
-blockedBy: ["PAP-238", "PAP-289"]
-blocks: ["PAP-291"]
+blockedBy: ["PAP-70", "PAP-238", "PAP-289"]
+blocks: ["PAP-291", "PAP-654", "PAP-837"]
 key: "input/commands/palette-help-ui"
 url: "https://linear.app/paperos/issue/PAP-290/command-palette-and-help-sheet-ui"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:17.991Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:30:59.972Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-290: Command palette and help sheet UI

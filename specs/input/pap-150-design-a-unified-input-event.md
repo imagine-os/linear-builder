@@ -12,13 +12,16 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-151", "PAP-154", "PAP-155", "PAP-157", "PAP-158", "PAP-289", "PAP-329", "PAP-476"]
+blocks: ["PAP-151", "PAP-154", "PAP-155", "PAP-157", "PAP-158", "PAP-289", "PAP-329", "PAP-476", "PAP-641", "PAP-644", "PAP-651", "PAP-911"]
 key: "input/input-abstraction"
 url: "https://linear.app/paperos/issue/PAP-150/design-a-unified-input-event-abstraction-so-components-handle-mouse"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:38.289Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:50:53.773Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-23"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-150: Design a unified input event abstraction so components handle mouse, touch, pen and gamepad uniformly
@@ -49,6 +52,10 @@ Out: recognisers, drag-and-drop, spatial focus, voice, the command registry.
 * Gamepad: `requestAnimationFrame` polling emits `gamepad` events (standard mapping) and a synthetic `gamepad-cursor` pointer when PAP-158 enables cursor mode.
 * Pen: `pressure`, `tiltX/Y`, `twist`, barrel button as `buttons` bit 2; while a pen is active, touch presses on the same surface are ignored for 300 ms.
 * Biome rule `no-raw-touch-handlers` flags `onTouchStart`/`onMouseDown` in `packages/ui` and `packages/views`.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: `wheel` events are normalised to `{ deltaX, deltaY, deltaMode: 'pixel', isTrackpad, ctrlKey }` (line and page modes converted with 16 px and viewport height factors, trackpad inferred from fractional deltas and burst cadence) so pinch-zoom via `ctrl`+wheel and inertial scrolling behave the same in every consumer. Mouse buttons 3 and 4 (`buttons` bits 8 and 16) emit `key`-like events `MouseBack` and `MouseForward` that PAP-291 maps to `nav.back|forward`. `key` events carry `isComposing`; consumers must ignore chords while it is true.
 
 **Interface contract**
 

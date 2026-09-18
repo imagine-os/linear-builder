@@ -6,19 +6,22 @@ projectName: "Migration & Import Tools"
 phase: "P2"
 type: "Build"
 priority: 4
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Business migrations"
 state: "Backlog"
 parent: "PAP-207"
 children: []
-blockedBy: ["PAP-426"]
-blocks: ["PAP-428"]
+blockedBy: ["PAP-426", "PAP-628"]
+blocks: ["PAP-428", "PAP-818", "PAP-819", "PAP-888"]
 key: "child/PAP-207/1"
 url: "https://linear.app/paperos/issue/PAP-427/author-the-five-business-packs-agency-retail-saas-clinic-restaurant"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:57.474Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:11.071Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-427: Author the five business packs (agency, retail, SaaS, clinic, restaurant) with page specs, views, pipelines, charts of accounts, sample data and starter docs

@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-21"
 children: []
 blockedBy: ["PAP-14", "PAP-16"]
-blocks: ["PAP-262"]
+blocks: ["PAP-262", "PAP-511"]
 key: "child/PAP-21/6"
 url: "https://linear.app/paperos/issue/PAP-261/container-query-breakpoints-and-layout-hooks-from-the-device-matrix"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:10.305Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:28.251Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-261: Container-query breakpoints and layout hooks from the device matrix

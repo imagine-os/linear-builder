@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-25", "PAP-57", "PAP-59", "PAP-139", "PAP-224", "PAP-229"]
-blocks: ["PAP-131", "PAP-132", "PAP-141", "PAP-142", "PAP-145", "PAP-147", "PAP-317", "PAP-321", "PAP-354", "PAP-475", "PAP-481"]
+blocks: ["PAP-131", "PAP-132", "PAP-141", "PAP-142", "PAP-145", "PAP-147", "PAP-317", "PAP-321", "PAP-354", "PAP-475", "PAP-481", "PAP-540", "PAP-563", "PAP-601", "PAP-603", "PAP-605", "PAP-607", "PAP-609", "PAP-610", "PAP-612"]
 key: "realtime/yjs-server"
 url: "https://linear.app/paperos/issue/PAP-140/deploy-a-hocuspocus-yjs-server-with-auth-hook-postgres-persistence-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:33.214Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:41.490Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-140: Deploy a Hocuspocus (Yjs) server with auth hook, Postgres persistence and room-per-document
@@ -49,6 +52,9 @@ Out: presence UI (PAP-141), editors (PAP-142), load tuning (PAP-147), Electric r
 * Limits: 2 MB message, 20 MB document (`4413`, event `collab.document.too_large`), 100 connections per principal; permissions re-checked every 5 minutes and on `permission.changed`.
 * Rooms unload 30 s after the last connection; `DELETE /admin/rooms/:room` forces snapshot and unload.
 * Env via PAP-17: `COLLAB_DATABASE_URL`, `COLLAB_REDIS_URL?`, `COLLAB_PUBLIC_URL`, `AUTH_BASE_URL`.
+
+*Round 4 amendment (2026-09-18):*
+Add: (1) `createDocProvider` takes `getToken()` and on `4401` refreshes once and reconnects without losing buffered edits; (2) the provider listens to `visibilitychange`, `online` and Tauri `resume` and probes before retrying, using the shared `reconnectPolicy` from PAP-609; (3) permission re-check subscribes to the `permission.changed` topic (PAP-591) in addition to the 5-minute timer; (4) `verifySessionToken()` and `verifyApiKey()` come from PAP-223 and PAP-586 (amendment on PAP-223); (5) `yjs_updates` gains `principal_id` and `origin jsonb` so PAP-607 can attribute versions.
 
 **Interface contract**
 
@@ -90,3 +96,5 @@ Builder: Forge (Ops Runner) for deployment and persistence with Nova (CRDT Engin
 **Size**
 
 M: well-trodden library integration; auth, RLS and deployment must all be right.
+
+*Round 4 critique fix (2026-09-18):* resolved 4 round-4 file keys in this description to Linear identifiers: `r4/identity/agent-keys` = PAP-586, `r4/identity/permission-propagation` = PAP-591, `r4/realtime/connection-status` = PAP-609, `r4/realtime/doc-history` = PAP-607.

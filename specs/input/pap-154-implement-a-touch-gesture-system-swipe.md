@@ -10,15 +10,18 @@ surfaces: ["Customer"]
 milestone: "Touch, pen, gamepad"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-20", "PAP-150", "PAP-260", "PAP-476"]
-blocks: []
+children: ["PAP-652", "PAP-651"]
+blockedBy: ["PAP-20", "PAP-150", "PAP-260", "PAP-476", "PAP-645"]
+blocks: ["PAP-671"]
 key: "input/touch-gestures"
 url: "https://linear.app/paperos/issue/PAP-154/implement-a-touch-gesture-system-swipe-pinch-long-press-with-haptics"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:05.711Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:43.209Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-154: Implement a touch gesture system (swipe, pinch, long-press) with haptics on mobile targets
@@ -59,6 +62,10 @@ Exposes: recogniser hooks above with `GestureState` type, `GestureArena` and `us
 * Touch-target audit passes on all `packages/ui` stories.
 * `docs/platform/input/gestures.md` with the arbitration table; changelog; Linear comment with video and Storybook links.
 
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: this issue is an umbrella for PAP-651 and PAP-652. Device video is required from the second child only; the first child's evidence is the Linux Playwright touch suite. If no emulator is available in CI by 09-27, Playwright `hasTouch` runs count as the acceptance for the milestone and the device video is filed as a follow-up comment, never silently skipped.
+
 **Test plan**
 
 * Vitest: arena arbitration with synthetic pointer sequences (vertical then horizontal locks direction, third finger ignored, nested pull-to-refresh claimed only at outer scroll top), thresholds and velocity maths, haptic rate limit and no-op path.
@@ -88,3 +95,5 @@ Builder: Nova with Forge (Tauri Smith) for haptics and device builds. Reviewer: 
 **Size**
 
 M: recognisers are standard; device testing and arbitration take the time.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/input/gesture-recognisers-and-arena` = PAP-651, `r4/input/mobile-gesture-components-and-haptics` = PAP-652.

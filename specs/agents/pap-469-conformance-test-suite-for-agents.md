@@ -11,14 +11,17 @@ milestone: "Sub-agents, skills and evals live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-441", "PAP-466"]
-blocks: ["PAP-472"]
+blockedBy: ["PAP-441", "PAP-466", "PAP-541"]
+blocks: ["PAP-472", "PAP-724"]
 key: "module/agents/conformance"
 url: "https://linear.app/paperos/issue/PAP-469/conformance-test-suite-for-agents-contract"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:16.571Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:04.410Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-469: Conformance test suite for agents contract

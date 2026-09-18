@@ -6,19 +6,22 @@ projectName: "Quality Pipeline"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Agent"]
 milestone: "Gates 1 and 2 on every PR"
 state: "Backlog"
 parent: "PAP-81"
 children: []
-blockedBy: ["PAP-243"]
+blockedBy: ["PAP-243", "PAP-678"]
 blocks: ["PAP-85", "PAP-88", "PAP-241"]
 key: "quality/review-agents/security"
 url: "https://linear.app/paperos/issue/PAP-245/security-reviewer-definition-and-securityjson-ingestion"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:07.250Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:30.641Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-245: Security reviewer definition and security.json ingestion

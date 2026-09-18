@@ -11,14 +11,17 @@ milestone: "Voice and accessibility certification"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-289", "PAP-291", "PAP-329", "PAP-434", "PAP-435", "PAP-476", "PAP-479"]
-blocks: ["PAP-266"]
+blockedBy: ["PAP-289", "PAP-291", "PAP-329", "PAP-434", "PAP-435", "PAP-476", "PAP-479", "PAP-537", "PAP-538"]
+blocks: []
 key: "module/input/wire"
 url: "https://linear.app/paperos/issue/PAP-482/wire-input-behind-the-module-registry-with-an-adapter-and-feature-flag"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:10.029Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:02.826Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-482: Wire input behind the module registry with an adapter and feature flag
@@ -75,6 +78,8 @@ Provides: `input` bound in the kernel as `@paperos/contract-input` provider `def
 **Dependencies**
 
 Blocked by `module/input/contract`, `module/input/conformance`, `module-system/registry-di`, `module-system/flag-swap` and PAP-289, PAP-291, PAP-329. Blocks PAP-266.
+
+*Round 4 (2026-09-18): PAP-266 soft: this issue no longer blocks PAP-266 because the input wire issue lands (09-30/10-01) after the* `--without` *milestone (09-29); PAP-266 proceeds (PAP-266's removal matrix covers modules whose wire issue has merged; PAP-482 adds its module to the matrix and to* `paperos create --without` *when it lands) and reconciles when this issue lands.*
 
 **Agent**
 

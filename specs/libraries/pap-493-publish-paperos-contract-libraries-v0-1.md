@@ -15,10 +15,13 @@ blockedBy: ["PAP-209", "PAP-433"]
 blocks: ["PAP-216", "PAP-217", "PAP-218", "PAP-495", "PAP-497"]
 key: "module/libraries/contract"
 url: "https://linear.app/paperos/issue/PAP-493/publish-paperoscontract-libraries-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:29.575Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:20:59.904Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-493: Publish @paperos/contract-libraries v0.1 with manifest

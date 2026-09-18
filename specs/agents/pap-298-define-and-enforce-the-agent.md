@@ -6,19 +6,22 @@ projectName: "Agent Characters & Orgs"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Agent"]
 milestone: "Roster defined and installed"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-106", "PAP-210"]
-blocks: ["PAP-96", "PAP-111", "PAP-280"]
+children: ["PAP-712", "PAP-711"]
+blockedBy: ["PAP-106", "PAP-210", "PAP-709", "PAP-710"]
+blocks: ["PAP-111", "PAP-280", "PAP-903"]
 key: "security/agent-deny-list"
 url: "https://linear.app/paperos/issue/PAP-298/define-and-enforce-the-agent-destructive-action-deny-list-policy-file"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:20.407Z"
-model: "claude-opus-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:50.308Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-298: Define and enforce the agent destructive-action deny list: policy file, PreToolUse hook, MCP destructive-scope interception with Needs Justin escalation, and server-side backstops
@@ -33,6 +36,10 @@ Turn "agents must never do X" from folklore into one machine-readable policy enf
 
 * In: `ops/security/agent-deny.yaml` (the list), `packages/agent-policy` (loader, matcher, explain), extension of the PAP-106 `enforce-scope.ts` PreToolUse hook to consult it, MCP interception for tools whose catalog scope is `destructive` (PAP-210), a `request-approval` skill that files a Needs Justin decision card (PAP-94) instead of acting, the backstop matrix mapping each rule to the server-side control that enforces it independently, adversarial test suite, `docs/security/agent-deny-list.md`.
 * Out: OS sandboxing (PAP-280), least-privilege token minting (PAP-300), forge ruleset JSON itself (PAP-46), budget limits (PAP-111).
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: split into two children, `Deny list: policy file, matcher and hook extension` (PAP-711, M) and `Deny list: request-approval skill, MCP destructive interception and backstop matrix` (PAP-712, S); this issue is their umbrella and owns the adversarial-suite integration test and the `pnpm policy:backstops` CI gate.
 
 **Spec**
 
@@ -81,6 +88,8 @@ In a Forge session ask it to `git push --force origin main`; the hook denies wit
 
 Blocked by PAP-106 (hook and bundles), PAP-210 (scope classes). Blocks PAP-96 (launcher staleness check), PAP-111 (S0 hit escalation) and PAP-280 (the sandbox image ships the compiled `agent-deny.json`). Soft: PAP-94, PAP-46.
 
+*Round 4 (2026-09-18): PAP-96 soft: this issue no longer blocks PAP-96 because the deny-list hook (09-24) lands after the orchestrator milestone (09-22); PAP-96 proceeds (the orchestrator ships with the hook policy file path and a stub* `PreToolUse` *hook; PAP-298 fills in the enforced policy) and reconciles when this issue lands.*
+
 **Agent**
 
 Built by Sentinel (Security Auditor sub-agent) with Atlas (Dispatcher) for the launcher hook; reviewed by Atlas.
@@ -88,3 +97,5 @@ Built by Sentinel (Security Auditor sub-agent) with Atlas (Dispatcher) for the l
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/agents/deny-list-policy-file-and-hook` = PAP-711, `r4/agents/request-approval-mcp-interception-and-backstops` = PAP-712.

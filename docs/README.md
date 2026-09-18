@@ -1,16 +1,24 @@
 # Platform documents
 
-Markdown sources of the documents published to Linear (workspace `paperos`). Read them in the order the table gives. The Linear copy is the one sessions link to; these files are the same text at the time of the last round-2 edit (2026-09-17).
+Markdown sources of the documents published to Linear (workspace `paperos`). Read them in the order the table gives. The Linear copy is the one sessions link to; these files are the same text at the time of the last edit (round 4, 2026-09-18).
 
 | Order | Document | File | Linear |
 |---|---|---|---|
 | 1 | PaperOS Core Platform Blueprint | [`blueprint.md`](blueprint.md) | https://linear.app/paperos/document/paperos-core-platform-blueprint-0c2115fe48f1 |
 | 2 | Interface & Data Contracts | [`interface-and-data-contracts.md`](interface-and-data-contracts.md) | https://linear.app/paperos/document/paperos-interface-and-data-contracts-d40e6a4d227c |
+| 2b | PaperOS Module System (required reading since round 3) | [`module-system.md`](module-system.md) | https://linear.app/paperos/document/paperos-module-system-8007373cc6bb |
 | 3 | Project `Contract` sections | Linear project content (summaries in `../plan/plan.json`) | https://linear.app/paperos/team/PAP/projects |
 | 4 | Agent Roster (org chart and character index) | [`agent-roster.md`](agent-roster.md) | https://linear.app/paperos/document/paperos-agent-roster-org-chart-and-character-index-fc7ea7f41ff3 |
 | 5 | Security & Threat Model | [`security-and-threat-model.md`](security-and-threat-model.md) | https://linear.app/paperos/document/paperos-security-and-threat-model-51fd5fd8929c |
 | 6 | Execution Schedule | [`execution-schedule.md`](execution-schedule.md) | https://linear.app/paperos/document/paperos-execution-schedule-1fa3d38d6795 |
 | 7 | New App in Ten Minutes: the golden path | [`new-app-in-ten-minutes.md`](new-app-in-ten-minutes.md) | https://linear.app/paperos/document/new-app-in-ten-minutes-the-golden-path-0f49429f566e |
+| 8 | Build in $2,500 chunks (round-4 plan, mix A / mix B, what each chunk delivers) | [`build-chunks.md`](build-chunks.md) | repository only (raw plan `../plan/round4/chunks-v2.json`) |
+| 9 | Cost and duration estimate (token model, prices, scenarios; round-4 results in section 9) | [`cost-and-duration-estimate.md`](cost-and-duration-estimate.md) | repository only |
+| 10 | How PaperOS uses Linear (feature table, initiatives, views, templates, refusals) | [`linear-features.md`](linear-features.md) | https://linear.app/paperos/document/how-paperos-uses-linear-973de5aed4ed |
+| 11 | Round 4 (2026-09-18): gap analysis, new projects and Linear features (condensed from the Blueprint's Round 4 section) | [`blueprint.md`](blueprint.md) section "Round 4" | https://linear.app/paperos/document/round-4-2026-09-18-gap-analysis-new-projects-and-linear-features-0084f6efb0c3 |
+| 12 | Round 4 prompts and replies (Slack thread, as they happened) | [`prompts/round-4-2026-09-18.md`](prompts/round-4-2026-09-18.md) | repository only |
+
+The Blueprint document in Linear carries the Round 2 and Round 4 sections (the Round 4 section was appended on 2026-09-18 by `documentUpdate`; log `../plan/round4/changes/final-fixes.json`).
 
 ## Character sheets
 

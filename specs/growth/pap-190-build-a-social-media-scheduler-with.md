@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "Campaigns and social"
 state: "Backlog"
 parent: null
-children: ["PAP-401", "PAP-402", "PAP-403"]
-blockedBy: ["PAP-37", "PAP-43", "PAP-187", "PAP-188", "PAP-353"]
+children: ["PAP-401", "PAP-403", "PAP-402"]
+blockedBy: ["PAP-37", "PAP-43", "PAP-187", "PAP-188", "PAP-353", "PAP-565", "PAP-791"]
 blocks: []
 key: "growth/social-scheduler"
 url: "https://linear.app/paperos/issue/PAP-190/build-a-social-media-scheduler-with-adapters-x-linkedin-instagram"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:49.858Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:49:44.784Z"
 model: null
 effort: null
+estimate: null
+dueDate: null
+cycle: null
 ---
 
 # PAP-190: Build a social media scheduler with adapters (X, LinkedIn, Instagram, TikTok, YouTube) and an approval queue

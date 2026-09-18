@@ -11,14 +11,17 @@ milestone: "CI runs on both forges"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-441", "PAP-449"]
+blockedBy: ["PAP-441", "PAP-449", "PAP-541"]
 blocks: ["PAP-455"]
 key: "module/forge/conformance"
 url: "https://linear.app/paperos/issue/PAP-452/conformance-test-suite-for-forge-contract"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:05.578Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:07.414Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-452: Conformance test suite for forge contract

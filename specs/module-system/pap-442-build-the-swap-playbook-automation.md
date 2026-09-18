@@ -11,14 +11,17 @@ milestone: "Shell swap drill passes"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-435", "PAP-437", "PAP-440", "PAP-441"]
-blocks: ["PAP-430", "PAP-446"]
+blockedBy: ["PAP-435", "PAP-437", "PAP-440", "PAP-441", "PAP-538", "PAP-541", "PAP-542"]
+blocks: ["PAP-446", "PAP-539", "PAP-554"]
 key: "module-system/swap-cli"
 url: "https://linear.app/paperos/issue/PAP-442/build-the-swap-playbook-automation-paperos-module-swap-id-to-impl"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:50:09.594Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:48.066Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-10-01"
+cycle: null
 ---
 
 # PAP-442: Build the swap playbook automation: `paperos module swap <id> --to <impl>` walks propose, fork, conformance, shadow, canary, flip, remove with gates and rollback
@@ -49,6 +52,10 @@ Out: the actual second implementations, data migrations (adapter kit issue), UI 
 * Every command is idempotent and prints the state file path.
 * Destructive migrations before `remove` are detected (migration adapter kit metadata) and block with a Needs Justin instruction.
 
+*Round 4 amendment (2026-09-18):*
+
+* `--dry-run` evaluates every gate for the current step and prints the verdicts without writing the state file. \* The scripted sample swap uses PAP-542 (`good` to `v2`); Linear umbrella, step issues and the Needs Justin card are delivered by PAP-539 (soft; `--no-linear` until it lands). \* `contract:diff` (PAP-544) output is required evidence for step 1 when the contract version changed.
+
 **Interface contract**
 
 Provides: `paperos module swap`, `paperos module status`, `ops/swaps/*.json` state, `compat-windows.json` writer, swap umbrella issue creation. Consumes: flag swap mechanism, conformance runner and artefacts, gateway response adapters, compatibility matrix, PAP-88 release train timing, PAP-130 ADR format, `PmSourcePort` (pm-linear contract) for issues, PAP-94 Needs Justin card shape. Consumed by: the shell swap drill, any future rewrite, PAP-430 `paperos upgrade` (which reuses the step gating for template upgrades), Atlas's dispatch.
@@ -76,6 +83,8 @@ Provides: `paperos module swap`, `paperos module status`, `ops/swaps/*.json` sta
 
 Blocked by module-system/flag-swap, module-system/conformance-runner, module-system/gateway-routing, module-system/compat-matrix. Blocks PAP-430.
 
+*Round 4 (2026-09-18): PAP-430 soft: this issue no longer blocks PAP-430 because the swap playbook automation (10-01) lands after* `paperos upgrade` *(09-29); PAP-430 proceeds (*`paperos upgrade` *ships without module-swap awareness; PAP-442 adds the* `module swap` *hook into the upgrade flow when it lands) and reconciles when this issue lands.*
+
 **Agent**
 
 Built by Forge. Reviewed by Atlas and Sentinel.
@@ -87,3 +96,7 @@ M
 **Demo**
 
 Reviewer runs `paperos module swap sample --to v2 --step conformance` and it refuses because the ADR is missing; adds the ADR, reruns, and the CLI runs conformance for both impls, prints the diff and advances; `--rollback` flips the flag back and the state file shows the reason. Two minutes.
+
+*Round 4 critique fix (2026-09-18):* resolved 3 round-4 file keys in this description to Linear identifiers: `r4/module-system/contract-diff` = PAP-544, `r4/module-system/sample-module` = PAP-542, `r4/module-system/swap-linear-umbrella` = PAP-539.
+
+*Round 4 critique fix (2026-09-18):* PAP-539 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-539.

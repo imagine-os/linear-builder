@@ -11,14 +11,17 @@ milestone: "Visual and video gates"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-441", "PAP-462"]
+blockedBy: ["PAP-441", "PAP-462", "PAP-541"]
 blocks: ["PAP-464"]
 key: "module/quality/conformance"
 url: "https://linear.app/paperos/issue/PAP-463/conformance-test-suite-for-quality-contract"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:13.216Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:05.911Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-463: Conformance test suite for quality contract

@@ -11,14 +11,17 @@ milestone: "Registry live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-48", "PAP-78", "PAP-493"]
+blockedBy: ["PAP-48", "PAP-78", "PAP-493", "PAP-521"]
 blocks: []
 key: "libraries/upgrade-bot"
 url: "https://linear.app/paperos/issue/PAP-217/set-up-renovate-with-grouped-upgrades-and-agent-reviewed-changelog"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:42.001Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:46.943Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-217: Set up Renovate with grouped upgrades and agent-reviewed changelog summaries
@@ -49,6 +52,9 @@ Out: vulnerability detection (PAP-80; consumed here), major framework migrations
 * Summary comment (posted once, edited on update): packages and versions, release-note highlights, breaking changes found by grepping our code for removed APIs, bundle delta from PAP-87, license delta from `reports/licenses.json`, risk `low|medium|high`, verdict `merge|needs-work|hold`. `needs-work` on minors pushes a fix commit to the branch (`rebaseWhen: conflicted`); majors open a Backlog issue.
 * Cost guard: 40 turns and the PAP-111 per-PR budget (default $3); over budget posts `hold`.
 * Post-merge `pnpm lib registry build` updates versions.
+
+*Round 4 amendment (2026-09-18):*
+Renovate `pnpm.catalog` support enabled so catalog bumps (PAP-756) arrive as one PR per group; PRs touching a package listed in registry `patches[]` get label `needs-patch-review` and never automerge (PAP-759).
 
 **Interface contract**
 
@@ -92,3 +98,5 @@ Built by Scout (Library Evaluator) with Forge (Ops Runner) and Atlas (Merger). R
 **Size**
 
 M: config is quick; the summary workflow and automerge plumbing are the work.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/libraries/dependency-hygiene` = PAP-756, `r4/libraries/patch-fork-policy` = PAP-759.

@@ -11,14 +11,17 @@ milestone: "Ledger and reports"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-177", "PAP-180", "PAP-397"]
-blocks: []
+blockedBy: ["PAP-177", "PAP-180", "PAP-397", "PAP-765"]
+blocks: ["PAP-880"]
 key: "business-core/tax-compliance"
 url: "https://linear.app/paperos/issue/PAP-182/handle-sales-tax-and-vat-via-stripe-tax-and-store-tax-evidence"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:47.459Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:36.233Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-182: Handle sales tax and VAT via Stripe Tax and store tax evidence

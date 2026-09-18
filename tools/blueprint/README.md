@@ -4,7 +4,10 @@
 
 `build_v5.js` is the current builder: `node tools/blueprint/build_v5.js` renders `site/index.html`, `site/data.json` and,
 with `PAPEROS_ARTIFACT_OUT`, the self-contained artifact body. It reads the round-4 snapshot written by
-`tools/linear/round4/snapshot4.py` (estimates, due dates, cycles, initiatives, templates, views, team settings) plus
+`tools/linear/round4/snapshot4.py` (estimates, due dates, cycles, initiatives, templates, views, team settings), the round-4
+chunk plan `plan/round4/chunks-v2.json` (default since the closing pass of round 4; `CHUNKS=` points at another file such as
+the round-3 `plan/chunks.json`; `canonicalMix`, `counts`, `wallClock` and `round3` are passed through to the chunks section
+and the model / effort note), plus
 `plan/round4/merge-report.md`, `plan/round4/verify.md`, `plan/round4/gaps/cross-cutting.json` (keys and phases of the five
 new projects) and `docs/linear-features.md` (the Linear features table). On top of every v4 view it adds, in
 `template_v5.html` and `v5/round4.js` + `v5/round4.css`: an **Initiatives** section (five cards with linked projects,

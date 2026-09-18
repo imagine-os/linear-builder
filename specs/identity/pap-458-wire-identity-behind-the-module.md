@@ -11,14 +11,17 @@ milestone: "Agent principals and enterprise"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-58", "PAP-223", "PAP-227", "PAP-229", "PAP-434", "PAP-435", "PAP-456", "PAP-457"]
+blockedBy: ["PAP-58", "PAP-223", "PAP-227", "PAP-229", "PAP-434", "PAP-435", "PAP-456", "PAP-457", "PAP-537", "PAP-538", "PAP-578", "PAP-579"]
 blocks: []
 key: "module/identity/wire"
 url: "https://linear.app/paperos/issue/PAP-458/wire-identity-behind-the-module-registry-with-an-adapter-and-feature"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:10.325Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:06.412Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-458: Wire identity behind the module registry with an adapter and feature flag

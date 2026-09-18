@@ -10,15 +10,18 @@ surfaces: ["Agent"]
 milestone: "Sub-agents, skills and evals live"
 state: "Backlog"
 parent: null
-children: ["PAP-308", "PAP-309", "PAP-310"]
+children: ["PAP-310", "PAP-309", "PAP-308"]
 blockedBy: ["PAP-104", "PAP-105", "PAP-287"]
-blocks: []
+blocks: ["PAP-822"]
 key: "agents/eval-harness"
 url: "https://linear.app/paperos/issue/PAP-110/create-an-eval-harness-with-golden-tasks-per-character-scored-nightly"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:24.757Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:56:59.520Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-110: Create an eval harness with golden tasks per character, scored nightly, regressions flagged in Linear

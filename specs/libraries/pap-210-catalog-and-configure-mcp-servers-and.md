@@ -12,13 +12,16 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-121", "PAP-298"]
+blocks: ["PAP-121", "PAP-298", "PAP-711", "PAP-712"]
 key: "libraries/mcp-servers"
 url: "https://linear.app/paperos/issue/PAP-210/catalog-and-configure-mcp-servers-and-connectors-linear-github-stripe"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:56.798Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:57:18.775Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-20"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-210: Catalog and configure MCP servers and connectors (Linear, GitHub, Stripe, Notion, Drive, Webflow, Miro, Gamma) for agents

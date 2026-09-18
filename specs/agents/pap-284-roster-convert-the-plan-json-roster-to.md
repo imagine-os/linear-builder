@@ -15,10 +15,13 @@ blockedBy: ["PAP-103"]
 blocks: ["PAP-285", "PAP-286", "PAP-287"]
 key: "agents/roster-v1/yaml"
 url: "https://linear.app/paperos/issue/PAP-284/roster-convert-the-planjson-roster-to-37-validated-character-yaml"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:17.307Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:11.675Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-284: Roster: convert the plan.json roster to 37 validated character YAML files
@@ -41,6 +44,10 @@ Produce the structured half of the roster: one validated YAML per character (nin
 * Budgets: daily allowance split by area share (Sentinel tree 30 percent, Atlas 8, builders share the rest, research 5); `perSessionUsd` by role (lead 40, sub 15), `maxTurns` 200 lead, 80 sub.
 * `access[]` normalised to the PAP-103 scope registry; `mcpServers[]` from PAP-210 stub names; `skills[]` from PAP-105 ids; `memory.path` per character; escalation rules shared plus Atlas's cycle rule.
 * `pnpm agents tree` prints the org tree and diffs against plan.json structure.
+
+*Round 4 amendment (2026-09-18):*
+
+* Defaults (round 4): `roster.yaml` lead defaults follow the plan's per-issue rule rather than a flat Fable 5.1: leads default to `claude-opus-5` / `high` as the fallback when an issue carries no Model label, Sentinel reviewer subs to `claude-opus-5` / `high` in `plan` mode (Sonnet 5 / high when the builder was Sonnet, decided per review by `resolveModel`), read-mostly subs to `claude-sonnet-5` / `medium`; Fable 5.1 is reserved for the eight keystone specs and the four release-candidate reviews as labelled in Linear.
 
 **Interface contract**
 

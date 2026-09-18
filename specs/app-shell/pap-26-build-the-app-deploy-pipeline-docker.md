@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-13", "PAP-25", "PAP-30"]
-blocks: ["PAP-29", "PAP-86", "PAP-88", "PAP-253", "PAP-357", "PAP-358", "PAP-365"]
+blocks: ["PAP-29", "PAP-86", "PAP-88", "PAP-253", "PAP-357", "PAP-358", "PAP-365", "PAP-500", "PAP-505", "PAP-524", "PAP-675", "PAP-895", "PAP-905", "PAP-909"]
 key: "app-shell/app-deploy-pipeline"
 url: "https://linear.app/paperos/issue/PAP-26/build-the-app-deploy-pipeline-docker-images-for-appsweb-and-appsapi"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:55.957Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:41.238Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-26: Build the app deploy pipeline: Docker images for apps/web and apps/api, staging on merge to main, production on tag, per-PR previews and rollback via Coolify
@@ -50,6 +53,10 @@ Out: Pages static demo (PAP-15), desktop and mobile artifacts (PAP-19, PAP-20).
 * Concurrency `deploy-<env>` cancels superseded staging deploys; production never cancels.
 * Secrets injected by Coolify from sops (`ops/secrets/<env>-api.enc.yaml`); Trivy scan before push (PAP-80).
 * `paperos create` copies `deploy.yml` and `preview.yml` with resource names templated.
+
+*Round 4 amendment (2026-09-18):*
+
+* The `apps/web` image Caddyfile applies the PAP-219 header baseline: `Content-Security-Policy` with a per-response nonce for inline scripts, `Strict-Transport-Security`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy` and `frame-ancestors 'none'` except on `/embed/*` (PAP-172); a header snapshot test in CI compares against `ops/security/headers.json`. Preview environments are owned by PAP-505; this issue keeps staging, production and rollback.
 
 **Interface contract**
 
@@ -104,3 +111,7 @@ Built by Forge (Ops Runner). Reviewed by Sentinel (Security Auditor for secrets 
 **Size**
 
 M: two Dockerfiles, two workflows, one rollback script, all provable.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/app-shell/pr-preview-environments` = PAP-505.
+
+*Round 4 critique fix (2026-09-18):* PAP-505 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-505.

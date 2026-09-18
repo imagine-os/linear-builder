@@ -15,10 +15,13 @@ blockedBy: ["PAP-177", "PAP-484"]
 blocks: ["PAP-408"]
 key: "growth/referral/codes-attribution"
 url: "https://linear.app/paperos/issue/PAP-407/referral-programs-codes-rcode-route-attribution-window-and-the"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:38.913Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:14.223Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-407: Referral programs, codes, /r/{code} route, attribution window and the qualification worker
@@ -38,6 +41,9 @@ In: `referral_program`, `referral_code`, `referral`; `/r/{code}` click route; `r
 * Codes 8-character Crockford base32, vanity codes with a profanity filter; 30-day window, last click wins unless a code was entered at checkout.
 * Click route records an `attr_event` (PAP-194 channel `affiliate`), sets the token, redirects; signup (PAP-57 children) and Checkout (PAP-177) stamp `referral`.
 * Worker moves `signed_up` to `qualified` on the first paid invoice.
+
+*Round 4 amendment (2026-09-18):*
+Round 4 clarification: two referral modes exist. Tenant mode (v0.2 scope) attributes a tenant's own customers: 'signup' is portal registration (PAP-62, PAP-64) and 'first payment' is `invoice.paid` from PAP-397 or a connected charge from PAP-181. Platform mode (PaperOS recruiting tenants through PAP-57 signup and PAP-177 Checkout) reuses the same tables with `scope: platform` and is enabled only for the PaperOS demo tenant.
 
 **Interface contract**
 

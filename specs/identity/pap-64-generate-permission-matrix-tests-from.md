@@ -11,14 +11,17 @@ milestone: "Agent principals and enterprise"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-59", "PAP-116", "PAP-122", "PAP-229", "PAP-240"]
-blocks: []
+blockedBy: ["PAP-59", "PAP-116", "PAP-122", "PAP-229", "PAP-240", "PAP-664"]
+blocks: ["PAP-676", "PAP-808"]
 key: "identity/permission-tests"
 url: "https://linear.app/paperos/issue/PAP-64/generate-permission-matrix-tests-from-page-specs-covering-who-can-see"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:08.911Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:42.796Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-64: Generate permission matrix tests from page specs covering who can see and do what on every page

@@ -11,14 +11,17 @@ milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-22", "PAP-26", "PAP-28", "PAP-120", "PAP-266", "PAP-316", "PAP-429", "PAP-446"]
+blockedBy: ["PAP-22", "PAP-26", "PAP-28", "PAP-120", "PAP-266", "PAP-316", "PAP-429", "PAP-503", "PAP-505"]
 blocks: []
 key: "app-shell/new-app-drill"
 url: "https://linear.app/paperos/issue/PAP-29/run-the-blank-screen-to-running-app-drill-time-paperos-create-through"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:30.303Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:44.483Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-29: Run the blank-screen-to-running-app drill: time `paperos create` through first spec'd page, deploy and desktop build; record it; answer PAP-5 with numbers
@@ -86,6 +89,8 @@ Reviewer opens the report page, reads the five-row checkpoint table with times a
 **Dependencies**
 
 PAP-22, PAP-26, PAP-28, PAP-120 (hard). Soft: PAP-88 (the first run does not need the release train; weekly runs adopt it once it exists; the `blocks` relation from PAP-88 was removed on 2026-09-17, round-2 FIX-1), PAP-19, PAP-84, PAP-96, PAP-99, PAP-51. Feeds PAP-95 and every project through friction issues.
+
+*Round 4 (2026-09-18): PAP-446 soft: the shell swap drill (10-01) lands after the blank-screen drill (09-29); until it lands, the first blank-screen drill run uses the default shell only; weekly runs add the swap drill step once PAP-446 exists. The* `blocks` *relation PAP-446 -> PAP-29 was removed.*
 
 **Agent**
 

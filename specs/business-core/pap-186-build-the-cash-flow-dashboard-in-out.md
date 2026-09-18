@@ -11,14 +11,17 @@ milestone: "Payroll adapter and cash dashboard"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-173", "PAP-183", "PAP-387"]
-blocks: []
+blockedBy: ["PAP-173", "PAP-183", "PAP-387", "PAP-765", "PAP-767"]
+blocks: ["PAP-789"]
 key: "business-core/cash-dashboard"
 url: "https://linear.app/paperos/issue/PAP-186/build-the-cash-flow-dashboard-in-out-runway-upcoming-payroll-as-the"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:49.622Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:44.935Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-10-01"
+cycle: null
 ---
 
 # PAP-186: Build the cash-flow dashboard (in, out, runway, upcoming payroll) as the first dashboard-blocks consumer
@@ -43,6 +46,9 @@ Out: forecasting scenarios, bank sync (cash comes from `cash` and `stripe_balanc
 * Cross-filter: a week bar filters both grids; a party row opens the record panel; number blocks drill to `/finance/reports/*`.
 * Alerts via PAP-136 core to owners once per condition change.
 * Refresh every 5 minutes with "updated n min ago"; illustrated empty state for new tenants.
+
+*Round 4 amendment (2026-09-18):*
+Round 4 clarification: `finance.mrr` cannot read 'active subscriptions on the connected account' because PAP-181 creates no subscription model and PAP-177 subscriptions are PaperOS's own plans. Compute tenant MRR from active `fin_recurring_schedule` rows (PAP-765, normalised monthly) plus imported Stripe subscriptions when PAP-423 has run; show 'n/a' with an enable link when neither exists.
 
 **Interface contract**
 
@@ -84,3 +90,5 @@ Builder: Ledger (Bookkeeper) with Nova (Views Engineer) on engine gaps. Reviewer
 **Size**
 
 M: composition over existing pieces, but it exercises the whole finance and views stack.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/business-core/recurring-invoices-dunning` = PAP-765.

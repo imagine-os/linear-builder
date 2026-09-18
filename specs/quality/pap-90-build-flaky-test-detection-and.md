@@ -11,14 +11,17 @@ milestone: "Edge-case hunting and release trains"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-86"]
+blockedBy: ["PAP-86", "PAP-678"]
 blocks: []
 key: "quality/flake-quarantine"
 url: "https://linear.app/paperos/issue/PAP-90/build-flaky-test-detection-and-quarantine-so-agents-are-not-blocked-by"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:15.140Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:32.688Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-90: Build flaky-test detection and quarantine so agents are not blocked by nondeterminism
@@ -42,6 +45,10 @@ Stop nondeterministic tests from blocking twenty parallel agent sessions: detect
 * Quarantine: Vitest `isQuarantined(id)` wrapper in `packages/core/src/testing/quarantine.ts`; Playwright annotations plus a `quarantine` project running quarantined tests with `retries: 0`; visual tests informational; `expires` default 14 days, extended on activity; expired entries fail the collector.
 * Linear: issue `Flaky: <test id>` labelled `Bug` with evidence links, owner from `git blame` through `.mailmap` with `ops/quality/owners.yaml` overrides; template asks `test-bug` vs `product-bug` (product bugs become S1 findings); auto-close and un-quarantine under 0.05 over 30 runs.
 * Guardrail: quarantine above 5 percent of a suite fails the gate "too many quarantined". Dashboard `docs/quality/flakes.md` generated; weekly top-5 in PAP-89 section 3.
+
+*Round 4 amendment (2026-09-18):*
+
+* Environment keys (round 4): the score key gains `engine` (chromium, webkit, firefox) and `target` (web, desktop-linux) so cross-browser and desktop smoke flakes (round-4 issues) are scored and quarantined per environment; a test flaky on WebKit only stays active on Chromium.
 
 **Interface contract**
 

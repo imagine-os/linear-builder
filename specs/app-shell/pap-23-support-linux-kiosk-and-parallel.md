@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-21", "PAP-145", "PAP-263"]
-blocks: []
+blocks: ["PAP-871", "PAP-881"]
 key: "app-shell/linux-kiosk"
 url: "https://linear.app/paperos/issue/PAP-23/support-linux-kiosk-and-parallel-browser-mode-launching-synced-windows"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:55.281Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:45.428Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-23: Support Linux kiosk and parallel-browser mode launching synced windows across displays from one CLI flag

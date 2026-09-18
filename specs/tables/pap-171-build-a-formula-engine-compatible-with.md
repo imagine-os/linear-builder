@@ -10,15 +10,18 @@ surfaces: ["Developer"]
 milestone: "View sharing, formulas, dashboards"
 state: "Backlog"
 parent: null
-children: ["PAP-382", "PAP-383", "PAP-384"]
-blockedBy: ["PAP-162", "PAP-164", "PAP-340"]
+children: ["PAP-384", "PAP-383", "PAP-382"]
+blockedBy: ["PAP-162", "PAP-163", "PAP-164", "PAP-337", "PAP-340", "PAP-627"]
 blocks: []
 key: "tables/formula-engine"
 url: "https://linear.app/paperos/issue/PAP-171/build-a-formula-engine-compatible-with-common-airtable-and-notion"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:44.118Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:29.647Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-171: Build a formula engine compatible with common Airtable and Notion functions

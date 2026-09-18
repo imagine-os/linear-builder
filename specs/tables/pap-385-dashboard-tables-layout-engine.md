@@ -11,14 +11,17 @@ milestone: "View sharing, formulas, dashboards"
 state: "Backlog"
 parent: "PAP-173"
 children: []
-blockedBy: ["PAP-155", "PAP-172"]
+blockedBy: ["PAP-155", "PAP-172", "PAP-331", "PAP-623", "PAP-624"]
 blocks: ["PAP-386"]
 key: "tables/dashboard/model-grid"
 url: "https://linear.app/paperos/issue/PAP-385/dashboard-tables-layout-engine-breakpoint-layouts-and-drag-or-resize"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:45.858Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:29.647Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-385: Dashboard tables, layout engine, breakpoint layouts and drag or resize with keyboard moves

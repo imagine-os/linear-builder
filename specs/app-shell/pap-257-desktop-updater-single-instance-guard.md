@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Customer"]
+surfaces: ["Developer"]
 milestone: "Desktop and mobile shells build"
 state: "Backlog"
 parent: "PAP-19"
 children: []
-blockedBy: ["PAP-256"]
-blocks: ["PAP-20", "PAP-21", "PAP-24"]
+blockedBy: ["PAP-256", "PAP-508"]
+blocks: ["PAP-20", "PAP-21", "PAP-24", "PAP-262", "PAP-369", "PAP-514", "PAP-690"]
 key: "child/PAP-19/2"
 url: "https://linear.app/paperos/issue/PAP-257/desktop-updater-single-instance-guard-and-paperos-deep-links"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:09.902Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:48.647Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-257: Desktop updater, single-instance guard and paperos:// deep links
@@ -42,6 +45,10 @@ Out: OS signing, delta updates.
 * Single instance: second launch sends argv over the plugin channel; first instance focuses and handles any deep link in argv.
 * Deep link handler in `packages/core/src/native/desktop.ts`: `onDeepLink(cb)`; router navigates to the path after `open/`; unknown hosts (`paperos://auth/*`) are dispatched to registered handlers (PAP-57 registers `auth`).
 * Windows registry and macOS `Info.plist` scheme registration through the plugin; Linux `.desktop` `MimeType=x-scheme-handler/paperos`.
+
+*Round 4 amendment (2026-09-18):*
+
+* Update channels: `latest.json` is published per channel at `channels/<stable|beta>/latest.json`; the desktop app reads its channel from `tenant.settings.desktopChannel` (staff can opt a tenant into `beta`) with `stable` as default; `checkForUpdate({ channel })` and a Settings toggle. The manifest signature is additionally verified with cosign once PAP-524 lands.
 
 **Interface contract**
 
@@ -81,3 +88,5 @@ Built by Forge (Tauri Smith). Reviewed by Sentinel (Security Auditor for signatu
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/forge/supply-chain-provenance` = PAP-524.

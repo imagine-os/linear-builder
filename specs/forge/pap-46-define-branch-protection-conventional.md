@@ -6,19 +6,22 @@ projectName: "Version Control & Forge Independence"
 phase: "P0"
 type: "Spec"
 priority: 1
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Forgejo live and mirrored"
 state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-49", "PAP-52", "PAP-96", "PAP-133", "PAP-281", "PAP-449"]
+blocks: ["PAP-49", "PAP-52", "PAP-96", "PAP-133", "PAP-281", "PAP-449", "PAP-522", "PAP-527", "PAP-528", "PAP-530", "PAP-691"]
 key: "forge/branch-policy"
 url: "https://linear.app/paperos/issue/PAP-46/define-branch-protection-conventional-commits-and-worktree-per-issue"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:02.137Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:36.066Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-20"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-46: Define branch protection, conventional commits and worktree-per-issue conventions for parallel agents
@@ -44,6 +47,10 @@ Out: the orchestrator (PAP-96) and scheduler (PAP-102); release tagging (PAP-52)
 * Conventional Commits 1.0 types `feat`, `fix`, `docs`, `chore`, `refactor`, `test`, `perf`, `ci`, `build`; scope = package or app; mandatory trailers `Linear: PAP-<n>` and `Character: <Name>`; optional `Sub-Agent:` and `Co-Authored-By`; enforced by `commitlint` via `lefthook` `commit-msg` and again in PAP-78.
 * Rulesets: required PRs, required checks `ci / check`, linear history, signed commits preferred, bypass allowlist for the mirror token (PAP-47) and `bot-atlas` merges (PAP-48).
 * CODEOWNERS mirrored to `.forgejo/CODEOWNERS`; `ownership.json` generated from it for PAP-102's file-lock hints; cross-owner PRs need both bot reviews or the `cross-owner` label from Atlas.
+
+*Round 4 amendment (2026-09-18):*
+
+* Tag protection: `*-v*` tags may be created only by the release workflow identity (`bot-forge` on Forgejo, the `paperos-agents` App on GitHub); humans and other bots are rejected; documented in `branch-policy.md`. \* `worktree.sh new` accepts `--base <branch>[,<branch>]` (delivered by PAP-528) and installs the session git config from PAP-533 when the broker socket exists.
 
 **Interface contract**
 
@@ -95,3 +102,5 @@ Built by Forge (lead). Reviewed by Sentinel (Code Reviewer); Atlas confirms owne
 **Size**
 
 M: policy plus four scripts with tests.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/forge/dependent-branches` = PAP-528, `r4/forge/git-credential-helper` = PAP-533.

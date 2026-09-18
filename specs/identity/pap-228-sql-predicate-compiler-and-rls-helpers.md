@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-59"
 children: []
 blockedBy: ["PAP-34", "PAP-227"]
-blocks: ["PAP-39", "PAP-163", "PAP-335"]
+blocks: ["PAP-39", "PAP-163", "PAP-335", "PAP-566", "PAP-589", "PAP-596", "PAP-741", "PAP-835"]
 key: "identity/rbac-abac/sql-compiler-rls"
 url: "https://linear.app/paperos/issue/PAP-228/sql-predicate-compiler-and-rls-helpers"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:02.141Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:32.476Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-228: SQL predicate compiler and RLS helpers

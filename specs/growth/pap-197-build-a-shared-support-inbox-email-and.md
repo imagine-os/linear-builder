@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "Acquisition analytics"
 state: "Backlog"
 parent: null
-children: ["PAP-410", "PAP-411", "PAP-412"]
-blockedBy: ["PAP-37", "PAP-131", "PAP-187", "PAP-319"]
+children: ["PAP-412", "PAP-410", "PAP-411"]
+blockedBy: ["PAP-37", "PAP-131", "PAP-187", "PAP-319", "PAP-791"]
 blocks: []
 key: "growth/support-inbox"
 url: "https://linear.app/paperos/issue/PAP-197/build-a-shared-support-inbox-email-and-in-app-chat-linked-to-crm"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:54.255Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:45.393Z"
 model: null
 effort: null
+estimate: null
+dueDate: null
+cycle: null
 ---
 
 # PAP-197: Build a shared support inbox (email and in-app chat) linked to CRM contacts
@@ -83,6 +86,9 @@ Reviewer sends an email to the staging mailbox, watches it appear in the inbox l
 
 PAP-187 (hard), PAP-131 (hard), PAP-37 (hard), PAP-143 and PAP-141 (soft, polling fallback), PAP-64, PAP-191 (soft), PAP-151, PAP-136 core, mailbox DNS (Needs Justin).
 
+*Round 4 amendment (2026-09-18):*
+Round 4: help center articles (PAP-805), SLA policies (PAP-807) and AI reply drafts (PAP-806) extend this umbrella after its three children and depend on PAP-411 and PAP-412; none blocks the children.
+
 **Agent**
 
 Builder: Beacon (CRM Builder) with Nova on live chat. Reviewer: Sentinel (Security Auditor for sanitisation and permissions, Visual Inspector, Edge Case Hunter for threading), Quill.
@@ -94,3 +100,5 @@ L, split into three M children.
 **Pending issues**
 
 Bracketed references above are fully specified work packages that Linear refused to create on 2026-09-17 (`USAGE_LIMIT_EXCEEDED`, free-plan issue cap). Their specs live in the project document(s) [growth](<https://linear.app/paperos/document/round-2-pending-issues-growth-13-3fd4406e8012>) and they are created as issues by `round2/agent4/create_issues.py` once the workspace plan is upgraded.
+
+*Round 4 critique fix (2026-09-18):* resolved 3 round-4 file keys in this description to Linear identifiers: `r4/growth/help-center-knowledge-base` = PAP-805, `r4/growth/support-ai-reply-drafts` = PAP-806, `r4/growth/support-sla-and-business-hours` = PAP-807.

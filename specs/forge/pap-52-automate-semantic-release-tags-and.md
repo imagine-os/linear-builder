@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-46", "PAP-133"]
-blocks: ["PAP-358"]
+blocks: ["PAP-358", "PAP-498", "PAP-522", "PAP-524", "PAP-672"]
 key: "forge/release-tags"
 url: "https://linear.app/paperos/issue/PAP-52/automate-semantic-release-tags-and-changelog-generation-on-merge-to"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:02.722Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:50.717Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-52: Automate semantic release tags and changelog generation on merge to main
@@ -97,3 +100,5 @@ Built by Forge (lead) with Atlas (Merger) validating. Reviewed by Sentinel (Code
 **Size**
 
 M: configuration, one plugin, one provider shim, one checker.
+
+*Round 4 critique fix (2026-09-18):* PAP-522 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-522.

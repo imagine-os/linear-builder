@@ -12,13 +12,16 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-15", "PAP-16", "PAP-17", "PAP-18", "PAP-19", "PAP-26", "PAP-27", "PAP-42", "PAP-78", "PAP-255", "PAP-305", "PAP-434"]
+blocks: ["PAP-15", "PAP-16", "PAP-17", "PAP-18", "PAP-19", "PAP-26", "PAP-27", "PAP-42", "PAP-78", "PAP-255", "PAP-305", "PAP-434", "PAP-504", "PAP-505", "PAP-509", "PAP-512", "PAP-519", "PAP-537", "PAP-678", "PAP-683", "PAP-753", "PAP-756"]
 key: "app-shell/monorepo-scaffold"
 url: "https://linear.app/paperos/issue/PAP-13/scaffold-paperos-template-monorepo-with-pnpm-turborepo-strict"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:51.258Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:56:43.498Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-20"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-13: Scaffold paperos-template monorepo with pnpm, Turborepo, strict TypeScript and a Vite React 19 web app

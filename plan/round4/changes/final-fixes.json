@@ -2985,6 +2985,33 @@
    "at": "2026-09-18T14:54:35Z",
    "phase": "fix3prop",
    "relationId": "86b12a94-7974-471d-8caf-af5dce0eaa8e"
+  },
+  {
+   "kind": "documentCreate",
+   "identifier": "Round 4 (2026-09-18): gap analysis, new projects and Linear features",
+   "project": "Project Management & Claude Pipeline",
+   "url": "https://linear.app/paperos/document/round-4-2026-09-18-gap-analysis-new-projects-and-linear-features-0084f6efb0c3",
+   "ok": true,
+   "at": "2026-09-18T15:02:38Z",
+   "phase": "docs"
+  },
+  {
+   "kind": "documentCreate",
+   "identifier": "How PaperOS uses Linear",
+   "project": "Project Management & Claude Pipeline",
+   "url": "https://linear.app/paperos/document/how-paperos-uses-linear-973de5aed4ed",
+   "ok": true,
+   "at": "2026-09-18T15:02:38Z",
+   "phase": "docs"
+  },
+  {
+   "kind": "documentUpdate",
+   "identifier": "PaperOS Core Platform Blueprint",
+   "documentId": "91be37cd-6998-490c-8309-31817f4859c0",
+   "what": "appended the Round 4 section before Documents; refreshed the ten-second summary",
+   "ok": true,
+   "at": "2026-09-18T15:02:38Z",
+   "phase": "docs"
   }
  ],
  "skipped": [],
@@ -3333,5 +3360,5 @@
    "contentLine": true
   }
  ],
- "finishedAt": "2026-09-18T14:54:35Z"
+ "finishedAt": "2026-09-18T15:02:38Z"
 }

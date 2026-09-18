@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-199", "PAP-349"]
-blocks: ["PAP-202", "PAP-203", "PAP-204", "PAP-205", "PAP-206", "PAP-415", "PAP-417", "PAP-422", "PAP-423"]
+blocks: ["PAP-202", "PAP-203", "PAP-204", "PAP-205", "PAP-206", "PAP-415", "PAP-417", "PAP-422", "PAP-423", "PAP-816", "PAP-820", "PAP-821", "PAP-826", "PAP-827", "PAP-830", "PAP-831"]
 key: "migration/id-mapping"
 url: "https://linear.app/paperos/issue/PAP-201/persist-external-id-mappings-for-re-sync-and-incremental-imports"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:54.721Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:34.948Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-201: Persist external ID mappings for re-sync and incremental imports

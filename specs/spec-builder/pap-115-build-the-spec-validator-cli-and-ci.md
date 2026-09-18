@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-114"]
-blocks: ["PAP-118", "PAP-122", "PAP-125", "PAP-362", "PAP-473"]
+blocks: ["PAP-118", "PAP-122", "PAP-125", "PAP-362", "PAP-473", "PAP-749"]
 key: "spec-builder/validator"
 url: "https://linear.app/paperos/issue/PAP-115/build-the-spec-validator-cli-and-ci-check-that-fails-prs-whose-pages"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:27.192Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:29.025Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-115: Build the spec validator CLI and CI check that fails PRs whose pages lack or violate specs
@@ -41,6 +44,9 @@ Ship the `paperos-spec` CLI and CI job that make specs mandatory: every route in
 * Routes read from TanStack `routeTree.gen.ts`; exemptions in `specs/.validator-ignore`.
 * Baseline `specs/.validator-baseline.json` with an expiry date; growth requires label `spec-baseline`.
 * Cache by content hash in `node_modules/.cache/paperos-spec`; 300 specs under 2 s.
+
+*Round 4 amendment (2026-09-18):*
+Rule `SPEC_BAD_PROPS`: component `props` are validated against the PAP-74 registry JSON Schema for that id (Ajv, strict); skipped with one warning when the registry is absent. Rule `SPEC_TEMPLATE_PLACEHOLDER`: any `{{...}}` left in a spec is an error (templates issue).
 
 **Interface contract**
 

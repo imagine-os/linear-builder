@@ -15,10 +15,13 @@ blockedBy: []
 blocks: ["PAP-57", "PAP-223"]
 key: "identity/auth-research"
 url: "https://linear.app/paperos/issue/PAP-56/compare-better-auth-lucia-clerk-and-authjs-for-self-hosting"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:06.549Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:56:50.520Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-23"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-56: Compare Better Auth, Lucia, Clerk and Auth.js for self-hosting, organizations and passkeys; write ADR

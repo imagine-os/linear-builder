@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-202"
 children: []
 blockedBy: ["PAP-415"]
-blocks: []
+blocks: ["PAP-832"]
 key: "child/PAP-202/2"
 url: "https://linear.app/paperos/issue/PAP-416/airtable-view-mapping-and-wizard-steps-filterbyformula-parsing-kanban"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:54.333Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:13.952Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-416: Airtable view mapping and wizard steps: filterByFormula parsing, kanban, calendar, gallery and form views, side-by-side review

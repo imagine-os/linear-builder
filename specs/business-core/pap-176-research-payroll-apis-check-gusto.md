@@ -15,10 +15,13 @@ blockedBy: []
 blocks: ["PAP-184", "PAP-398"]
 key: "business-core/payroll-research"
 url: "https://linear.app/paperos/issue/PAP-176/research-payroll-apis-check-gusto-embedded-deel-rippling-for"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:46.235Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:36.953Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-27"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-176: Research payroll APIs (Check, Gusto Embedded, Deel, Rippling) for embeddability and pricing; write ADR

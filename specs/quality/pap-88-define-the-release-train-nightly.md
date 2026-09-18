@@ -6,19 +6,22 @@ projectName: "Quality Pipeline"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Edge-case hunting and release trains"
 state: "Backlog"
 parent: null
 children: ["PAP-252", "PAP-253", "PAP-254"]
-blockedBy: ["PAP-26", "PAP-81", "PAP-82", "PAP-94", "PAP-242", "PAP-244", "PAP-245", "PAP-248", "PAP-354"]
+blockedBy: ["PAP-26", "PAP-81", "PAP-82", "PAP-94", "PAP-242", "PAP-244", "PAP-245", "PAP-248", "PAP-354", "PAP-505", "PAP-527", "PAP-563", "PAP-677", "PAP-679"]
 blocks: ["PAP-89"]
 key: "quality/release-train"
 url: "https://linear.app/paperos/issue/PAP-88/define-the-release-train-nightly-staging-deploy-weekly-release"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:14.923Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:49:38.023Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-88: Define the release train: nightly staging deploy, weekly release candidate to Needs Justin with consolidated review report

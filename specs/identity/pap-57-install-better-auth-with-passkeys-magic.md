@@ -6,19 +6,22 @@ projectName: "Identity, Roles & Audiences"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Auth works across web and desktop"
 state: "Backlog"
 parent: null
-children: ["PAP-223", "PAP-224", "PAP-225", "PAP-226"]
+children: ["PAP-224", "PAP-225", "PAP-226", "PAP-223"]
 blockedBy: ["PAP-33", "PAP-56"]
-blocks: ["PAP-58", "PAP-86", "PAP-140", "PAP-220", "PAP-240"]
+blocks: ["PAP-58", "PAP-86", "PAP-140", "PAP-220", "PAP-230", "PAP-231", "PAP-240", "PAP-511", "PAP-578", "PAP-580", "PAP-797", "PAP-815", "PAP-866", "PAP-900"]
 key: "identity/better-auth"
 url: "https://linear.app/paperos/issue/PAP-57/install-better-auth-with-passkeys-magic-link-googlegithub-oauth-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:06.626Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:56:50.551Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-57: Install Better Auth with passkeys, magic link, Google/GitHub OAuth and sessions for web and Tauri

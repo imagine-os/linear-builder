@@ -6,19 +6,22 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Docs and prompt log stores"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-16"]
-blocks: ["PAP-41", "PAP-76", "PAP-109", "PAP-130", "PAP-134", "PAP-138", "PAP-203", "PAP-205", "PAP-216", "PAP-379", "PAP-380", "PAP-418", "PAP-420", "PAP-445", "PAP-474", "PAP-480"]
+blocks: ["PAP-41", "PAP-76", "PAP-109", "PAP-130", "PAP-134", "PAP-138", "PAP-203", "PAP-205", "PAP-216", "PAP-379", "PAP-380", "PAP-418", "PAP-419", "PAP-420", "PAP-445", "PAP-474", "PAP-480", "PAP-727", "PAP-728", "PAP-732", "PAP-733", "PAP-738", "PAP-805", "PAP-868", "PAP-904"]
 key: "collab/docs-engine"
 url: "https://linear.app/paperos/issue/PAP-128/build-the-docs-engine-mdx-docs-stored-in-the-repo-rendered-in-app"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:29.960Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:40.083Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-128: Build the docs engine: MDX docs stored in the repo, rendered in-app, searchable and versioned with git

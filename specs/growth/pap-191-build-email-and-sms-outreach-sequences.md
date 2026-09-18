@@ -11,14 +11,17 @@ milestone: "Campaigns and social"
 state: "Backlog"
 parent: null
 children: ["PAP-404", "PAP-405", "PAP-406"]
-blockedBy: ["PAP-43", "PAP-187"]
+blockedBy: ["PAP-43", "PAP-187", "PAP-565", "PAP-791"]
 blocks: []
 key: "growth/outreach-sequences"
 url: "https://linear.app/paperos/issue/PAP-191/build-email-and-sms-outreach-sequences-resend-twilio-with-warmup-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:51.789Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:49:44.784Z"
 model: null
 effort: null
+estimate: null
+dueDate: null
+cycle: null
 ---
 
 # PAP-191: Build email and SMS outreach sequences (Resend, Twilio) with warmup and reply detection

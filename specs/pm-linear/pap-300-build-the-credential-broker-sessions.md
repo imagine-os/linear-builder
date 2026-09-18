@@ -6,19 +6,22 @@ projectName: "Project Management & Claude Pipeline"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Agent", "Developer"]
+surfaces: ["Agent"]
 milestone: "Orchestrator claims and ships issues"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-25", "PAP-48", "PAP-96"]
-blocks: ["PAP-111", "PAP-280"]
+blockedBy: ["PAP-25", "PAP-48", "PAP-96", "PAP-521", "PAP-691"]
+blocks: ["PAP-111", "PAP-280", "PAP-533"]
 key: "security/credential-broker"
 url: "https://linear.app/paperos/issue/PAP-300/build-the-credential-broker-sessions-hold-no-raw-secrets-an-egress"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:20.606Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:08.128Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-300: Build the credential broker: sessions hold no raw secrets; an egress proxy injects short-lived per-session tokens (GitHub App, Forgejo, Linear proxy, PaperOS agent keys, Anthropic) with usage logs and one-command revoke-all

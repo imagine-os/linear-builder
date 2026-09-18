@@ -11,14 +11,17 @@ milestone: "Forgejo live and mirrored"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-45", "PAP-273", "PAP-301"]
-blocks: ["PAP-51", "PAP-106", "PAP-217", "PAP-300"]
+blockedBy: ["PAP-45", "PAP-273"]
+blocks: ["PAP-51", "PAP-106", "PAP-217", "PAP-300", "PAP-498", "PAP-521", "PAP-526", "PAP-527", "PAP-533", "PAP-709", "PAP-722", "PAP-813"]
 key: "forge/bot-accounts"
 url: "https://linear.app/paperos/issue/PAP-48/create-scoped-bot-accounts-and-deploy-keys-for-each-agent-character-on"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:30.303Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:43.103Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-20"
+cycle: null
 ---
 
 # PAP-48: Create scoped bot accounts and deploy keys for each agent character on both forges
@@ -88,6 +91,8 @@ Reviewer runs `pnpm tsx ops/forge/bots.ts audit` and reads the nine-row matrix, 
 
 PAP-45 (hard). Soft: PAP-104. Unblocks PAP-51, PAP-106, PAP-96; feeds PAP-47.
 
+*Round 4 (2026-09-18): PAP-301 soft: the founder root-of-trust hardening (09-23) lands after the forge milestone (09-20); until it lands, create the bot accounts and deploy keys with the current admin credentials; PAP-301 rotates and re-parents them when it lands. The* `blocks` *relation PAP-301 -> PAP-48 was removed.*
+
 **Agent**
 
 Built by Forge (Ops Runner). Reviewed by Sentinel (Security Auditor).
@@ -95,3 +100,5 @@ Built by Forge (Ops Runner). Reviewed by Sentinel (Security Auditor).
 **Size**
 
 M: one script, one App, a matrix and a rotation proof.
+
+*Round 4 critique fix (2026-09-18):* PAP-521 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-521.

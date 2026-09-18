@@ -6,7 +6,7 @@ projectName: "Identity, Roles & Audiences"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Auth works across web and desktop"
 state: "Backlog"
 parent: "PAP-57"
@@ -15,10 +15,13 @@ blockedBy: ["PAP-223"]
 blocks: []
 key: "identity/better-auth/tauri-session"
 url: "https://linear.app/paperos/issue/PAP-225/tauri-deep-link-and-secure-token-session-flow"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:01.817Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:47.947Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-225: Tauri deep-link and secure-token session flow
@@ -80,3 +83,5 @@ Built by Forge (Tauri Smith sub-agent). Reviewed by Sentinel (Security Auditor).
 **Size**
 
 M.
+
+*Round 4 critique fix (2026-09-18):* PAP-19 is named as a hard dependency above but stays a soft dependency (no `blocks` relation): milestone inversion 2026-09-24 > 2026-09-23. Start when it is In Review or work against its contract and leave a TODO naming it.

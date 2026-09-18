@@ -11,14 +11,17 @@ milestone: "Sub-agents, skills and evals live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-104", "PAP-128", "PAP-287", "PAP-299"]
+blockedBy: ["PAP-104", "PAP-128", "PAP-287", "PAP-299", "PAP-713", "PAP-714", "PAP-716", "PAP-717"]
 blocks: []
 key: "agents/memory"
 url: "https://linear.app/paperos/issue/PAP-109/give-characters-persistent-memory-project-notes-decisions-gotchas"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:24.486Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:29.613Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-109: Give characters persistent memory (project notes, decisions, gotchas) stored in the docs system and loaded at session start

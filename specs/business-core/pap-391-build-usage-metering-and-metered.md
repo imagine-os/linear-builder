@@ -6,19 +6,22 @@ projectName: "Business Core: Payments, Finance & Payroll"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Developer"]
+surfaces: ["Developer"]
 milestone: "Stripe billing live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-43", "PAP-177", "PAP-178", "PAP-484"]
-blocks: []
+blockedBy: ["PAP-43", "PAP-177", "PAP-178", "PAP-484", "PAP-565"]
+blocks: ["PAP-844", "PAP-901", "PAP-910"]
 key: "gap/business-core/usage-metering"
 url: "https://linear.app/paperos/issue/PAP-391/build-usage-metering-and-metered-billing-usage-events-agent-sessions"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:38.913Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:55:53.064Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-391: Build usage metering and metered billing: usage events (agent sessions, storage, seats, API calls) aggregated per tenant, Stripe usage records, limit warnings
@@ -41,6 +44,9 @@ In: tables `usage_event` (partitioned monthly) and `usage_daily`; `recordUsage`,
 * PAP-178 `assertWithinLimit` uses `usageFor` for `agentSessionsPerDay` and `storageGb`; PAP-99 reads the same value before spawning sessions.
 * Stripe: for plans with `metered: true` prices, a nightly job posts `subscriptionItems.createUsageRecord` with `action: 'set'` per kind and stores `stripe_usage_record_id`; failures alert.
 * Warnings emitted once per threshold crossing per billing period via `usage.threshold { kind, pct }` and PAP-136 core.
+
+*Round 4 amendment (2026-09-18):*
+Round 4: Stripe deprecated `subscriptionItems.createUsageRecord` in favour of Billing Meters. For the pinned `apiVersion`, use `billing.meterEvents.create({ event_name, payload: { stripe_customer_id, value } })` with `meterId` declared per metered price in `plans.ts`, keep the usage-record path only behind a `legacyUsageRecords` flag for older API versions, and store `stripe_meter_event_id` instead of `stripe_usage_record_id`.
 
 **Interface contract**
 

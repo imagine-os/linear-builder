@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-94", "PAP-104", "PAP-105", "PAP-287"]
-blocks: []
+blocks: ["PAP-679"]
 key: "agents/handoffs"
 url: "https://linear.app/paperos/issue/PAP-108/design-the-handoff-protocol-between-characters-artifact-contract"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:24.251Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:40.303Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-108: Design the handoff protocol between characters: artifact contract, Linear comment format, escalation to Needs Justin
@@ -41,6 +44,10 @@ Specify how work passes cleanly between characters and sessions: what a finishin
 * `HANDOFF.md` sections: Status, What changed, Decisions made, Verified, Not done, Next steps, Open questions (each with a default), Context files.
 * `pnpm handoff lint` fails on missing sections, unpushed branch, open question without default, artifact referencing CI-only storage.
 * Orchestrator: on a valid handoff comment, set assignee to `to`'s bot user, state per kind (`In Review` for build-to-review, `In Progress` for review-to-build), and queue the receiver.
+
+*Round 4 amendment (2026-09-18):*
+
+* Assignee switching (round 4): `to` resolves through `botUser(character)` from the character identity decision (PAP-722); when no per-character Linear user exists (path B) the orchestrator switches the `Character/<Name>` label instead of the assignee and the handoff comment is authored as the receiving character via `createAsUser`. Both paths are covered by the four-comment dry run.
 
 **Interface contract**
 
@@ -86,3 +93,5 @@ Built by Atlas (lead) with Quill writing the document; reviewed by Sentinel.
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/agents/character-linear-identity-and-attribution` = PAP-722.

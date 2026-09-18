@@ -6,19 +6,22 @@ projectName: "Design System"
 phase: "P2"
 type: "Build"
 priority: 4
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Themable per tenant with docs"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-75", "PAP-459"]
-blocks: []
+blockedBy: ["PAP-75", "PAP-459", "PAP-657", "PAP-658"]
+blocks: ["PAP-856", "PAP-857", "PAP-881", "PAP-911"]
 key: "design-system/email-pdf-theme"
 url: "https://linear.app/paperos/issue/PAP-235/build-the-email-and-pdf-rendering-theme-brandingtoinlinecss-print"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:11.367Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:31.038Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-235: Build the email and PDF rendering theme: `brandingToInlineCss`, print stylesheet and a template kit shared by invoices, receipts, digests and the ACR export

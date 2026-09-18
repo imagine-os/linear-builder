@@ -6,19 +6,22 @@ projectName: "Multi-Input Control & Accessibility"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Touch, pen, gamepad"
 state: "Backlog"
 parent: "PAP-155"
 children: []
-blockedBy: ["PAP-150"]
+blockedBy: ["PAP-150", "PAP-651"]
 blocks: ["PAP-330", "PAP-482"]
 key: "input/dnd/sensors-sortable-list"
 url: "https://linear.app/paperos/issue/PAP-329/dnd-kit-sensors-on-the-input-abstraction-and-sortablelist"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:29.062Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:06.188Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-329: dnd-kit sensors on the input abstraction and SortableList

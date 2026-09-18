@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-103"]
-blocks: ["PAP-108", "PAP-110", "PAP-118", "PAP-134", "PAP-306", "PAP-308"]
+blocks: ["PAP-108", "PAP-110", "PAP-118", "PAP-134", "PAP-306", "PAP-308", "PAP-504", "PAP-715", "PAP-718"]
 key: "agents/skills-library"
 url: "https://linear.app/paperos/issue/PAP-105/build-the-shared-skills-library-page-from-spec-review-pr-screenshot"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:23.614Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:30.655Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-105: Build the shared skills library (page-from-spec, review-pr, screenshot-audit, write-adr, linear-update) as .claude/skills
@@ -80,6 +83,10 @@ In a toy worktree run `pnpm skill linear-update comment --status progress --body
 **Dependencies**
 
 Blocked by PAP-103. Blocks PAP-110, PAP-118, PAP-134, PAP-306. Soft: PAP-79, PAP-82, PAP-239, PAP-120.
+
+*Round 4 amendment (2026-09-18):*
+
+* Soft dependency (round 4): PAP-683 (recorded-http-fixtures-kit) would block this issue but sits in a later milestone (2026-09-25 > 2026-09-24); no `blocks` relation was created. Build against its interface and reconcile when it lands.
 
 **Agent**
 

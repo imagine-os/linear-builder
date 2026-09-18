@@ -6,19 +6,22 @@ projectName: "Module System & Swap Tooling"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Contracts and conformance wired"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-366", "PAP-434"]
-blocks: ["PAP-442", "PAP-453", "PAP-454", "PAP-455", "PAP-458", "PAP-461", "PAP-464", "PAP-471", "PAP-472", "PAP-473", "PAP-480", "PAP-481", "PAP-482", "PAP-489", "PAP-490", "PAP-491", "PAP-496", "PAP-497"]
+blockedBy: ["PAP-434", "PAP-537", "PAP-541"]
+blocks: ["PAP-442", "PAP-453", "PAP-454", "PAP-455", "PAP-458", "PAP-461", "PAP-464", "PAP-471", "PAP-472", "PAP-473", "PAP-480", "PAP-481", "PAP-482", "PAP-489", "PAP-490", "PAP-491", "PAP-496", "PAP-497", "PAP-538", "PAP-539", "PAP-549", "PAP-846", "PAP-861", "PAP-876", "PAP-892", "PAP-899", "PAP-907"]
 key: "module-system/flag-swap"
 url: "https://linear.app/paperos/issue/PAP-435/build-the-feature-flag-swap-mechanism-moduleidimpl-variant-flags-per"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:30.303Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:39.586Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-435: Build the feature-flag swap mechanism: `module.<id>.impl` variant flags, per-tenant selection, shadow-run diffs and kill-switch rollback
@@ -77,6 +80,8 @@ Provides: `kernel.select`, `shadow` binding option, `swap_shadow_diff` table and
 
 Blocked by module-system/registry-di, PAP-366.
 
+*Round 4 (2026-09-18): PAP-366 soft: runtime feature flags (09-29) land after the contracts milestone (09-27); until it lands, PAP-435 selects* `module.<id>.impl` *variants through the config port (PAP-444) and env; move selection onto PAP-366 flags with per-tenant targeting when they land. The* `blocks` *relation PAP-366 -> PAP-435 was removed.*
+
 **Agent**
 
 Built by Forge. Reviewed by Sentinel.
@@ -88,3 +93,7 @@ M
 **Demo**
 
 Reviewer opens `/settings/modules`, sets `tables` to `compiler-v2` for the Acme tenant with shadow on, loads a CRM view as Acme and sees `X-PaperOS-Impl: compiler-v2` and zero diffs; hits Kill and the header returns to `default` within five seconds. Ninety seconds.
+
+*Round 4 critique fix (2026-09-18):* PAP-366 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it.
+
+*Round 4 critique fix (2026-09-18):* PAP-538 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-538.

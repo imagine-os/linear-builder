@@ -6,19 +6,22 @@ projectName: "Library Discovery & Integration"
 phase: "P1"
 type: "Research"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Core adoptions decided"
 state: "Backlog"
 parent: "PAP-215"
 children: []
 blockedBy: ["PAP-351"]
-blocks: []
+blocks: ["PAP-798", "PAP-804", "PAP-858", "PAP-863", "PAP-869"]
 key: "child/PAP-215/2"
 url: "https://linear.app/paperos/issue/PAP-352/spike-calcom-and-formbricks-then-write-the-oss-products-mode-adr"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:34.842Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:20.349Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-352: Spike Cal.com and Formbricks, then write the OSS products mode ADR, borrow reference docs and embed integration contracts
@@ -34,6 +37,9 @@ Finish the product evaluation and make it actionable: spike the two remaining pr
 In: `spikes/oss-products/{calcom,formbricks}/` as in the siblings; ADR `docs/adr/NNNN-PAP-215-oss-products.md` with per-product sections and summary matrix; `docs/registry/reference/<id>.md` with Mermaid data model per borrow; embed contracts per embed; registry entries `adopted` (embed), `reference` (borrow), `rejected`; comments on PAP-188, PAP-162, PAP-197, PAP-100.
 
 Out: integrating anything.
+
+*Round 4 amendment (2026-09-18):*
+Time-box guard: if the two spikes consume the 4 hours, write the ADR with provisional modes for [Cal.com](<http://Cal.com>) and Formbricks and mark the borrow reference docs and embed contracts for those two as follow-up comments on PAP-188 and PAP-100 rather than exceeding the box; the nine-row matrix must still be complete.
 
 **Spec**
 

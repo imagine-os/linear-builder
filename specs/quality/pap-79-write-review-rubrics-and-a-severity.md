@@ -12,13 +12,16 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-81", "PAP-239", "PAP-243", "PAP-462"]
+blocks: ["PAP-81", "PAP-239", "PAP-243", "PAP-462", "PAP-677", "PAP-718"]
 key: "quality/review-rubrics"
 url: "https://linear.app/paperos/issue/PAP-79/write-review-rubrics-and-a-severity-taxonomy-shared-by-all-reviewer"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:12.298Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:56:54.611Z"
 model: "claude-fable-5-1"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-79: Write review rubrics and a severity taxonomy shared by all reviewer agents and humans

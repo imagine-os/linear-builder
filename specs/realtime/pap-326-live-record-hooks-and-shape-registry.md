@@ -11,14 +11,17 @@ milestone: "Record sync and conflict UX"
 state: "Backlog"
 parent: "PAP-143"
 children: []
-blockedBy: ["PAP-36"]
-blocks: ["PAP-327", "PAP-481"]
+blockedBy: ["PAP-36", "PAP-270", "PAP-271"]
+blocks: ["PAP-327", "PAP-481", "PAP-599", "PAP-601", "PAP-612"]
 key: "realtime/record-sync/live-hooks-registry"
 url: "https://linear.app/paperos/issue/PAP-326/live-record-hooks-and-shape-registry-additions"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:27.943Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:30:59.972Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-326: Live record hooks and shape registry additions

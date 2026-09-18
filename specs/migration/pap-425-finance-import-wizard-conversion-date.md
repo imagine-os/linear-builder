@@ -15,10 +15,13 @@ blockedBy: ["PAP-424"]
 blocks: []
 key: "child/PAP-206/2"
 url: "https://linear.app/paperos/issue/PAP-425/finance-import-wizard-conversion-date-account-mapping-review-duplicate"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:57.303Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:10.330Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-425: Finance import wizard: conversion date, account mapping review, duplicate customer resolution, trial balance gate and reversing rollback

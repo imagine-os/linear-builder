@@ -6,19 +6,22 @@ projectName: "Business Core: Payments, Finance & Payroll"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Ledger and reports"
 state: "Backlog"
 parent: "PAP-180"
 children: []
 blockedBy: ["PAP-175"]
-blocks: ["PAP-396"]
+blocks: ["PAP-396", "PAP-765", "PAP-767", "PAP-772", "PAP-774", "PAP-777", "PAP-778", "PAP-810", "PAP-856", "PAP-878", "PAP-880", "PAP-882", "PAP-883", "PAP-885"]
 key: "business-core/invoicing/model-statemachine"
 url: "https://linear.app/paperos/issue/PAP-395/document-model-lines-sequences-server-side-totals-state-machine-quote"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:49.175Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:54.286Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-395: Document model, lines, sequences, server-side totals, state machine, quote conversion, void and credit notes
@@ -38,6 +41,9 @@ In: `fin_document`, `fin_document_line`, `fin_tax_rate`, sequences; `documents.c
 * Schema per the parent; per-kind sequences formatted from `fin_settings.invoice_number_format`, allocated inside `issue` under a tenant lock.
 * `computeTotals(lines, currency)` with `Money`: per-line rounding then sum, discounts, multi-rate tax (manual rates or PAP-182 evidence), quantity precision 4.
 * Transitions are the only writes to `status`; `issue` freezes lines and number; `accept` from a quote stores signature name and time and creates an invoice draft; `void` only without payments; credit notes apply to paid balances; expiry job for quotes.
+
+*Round 4 amendment (2026-09-18):*
+Round 4: line editors accept an optional `item_id` from PAP-774 that pre-fills description, unit price, revenue account and tax code; the line snapshots those values at issue, so catalogue edits never rewrite issued documents. `computeTotals` exposes a `discounts` hook consumed by PAP-778.
 
 **Interface contract**
 
@@ -71,3 +77,5 @@ Builder: Ledger (Payments Integrator). Reviewer: Sentinel (Code Reviewer).
 **Size**
 
 M: one session.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/business-core/discounts-and-promo-codes` = PAP-778, `r4/business-core/item-catalogue` = PAP-774.

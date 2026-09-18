@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-129"]
-blocks: []
+blocks: ["PAP-723"]
 key: "agents/prompt-logging-hook"
 url: "https://linear.app/paperos/issue/PAP-107/hook-every-sessions-prompts-responses-and-tool-calls-into-the-prompt"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:24.052Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:30.439Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-107: Hook every session's prompts, responses and tool calls into the prompt-log store

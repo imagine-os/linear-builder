@@ -10,15 +10,18 @@ surfaces: ["Developer"]
 milestone: "Postgres + Drizzle baseline"
 state: "Backlog"
 parent: null
-children: ["PAP-267", "PAP-268", "PAP-269"]
+children: ["PAP-268", "PAP-267", "PAP-269"]
 blockedBy: ["PAP-33"]
-blocks: ["PAP-36", "PAP-39", "PAP-40", "PAP-119", "PAP-129", "PAP-163", "PAP-193", "PAP-222", "PAP-242", "PAP-312", "PAP-335"]
+blocks: ["PAP-36", "PAP-39", "PAP-40", "PAP-119", "PAP-129", "PAP-163", "PAP-193", "PAP-222", "PAP-242", "PAP-276", "PAP-312", "PAP-335", "PAP-366", "PAP-431", "PAP-501", "PAP-566", "PAP-793"]
 key: "data-layer/api-layer"
 url: "https://linear.app/paperos/issue/PAP-35/expose-a-typed-api-via-orpc-with-zod-schemas-generated-from-drizzle"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:11.648Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:50:47.635Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-35: Expose a typed API via oRPC with Zod schemas generated from Drizzle
@@ -61,6 +64,9 @@ Provides:
 Consumes: `Principal` (PAP-55), session verification (PAP-57; dev-token stub until then), `createDb`/`withTenant` (PAP-32), RLS context (PAP-34), `FilterTree` (filter grammar issue), audit vars (PAP-38), spans (PAP-40).
 
 * Contract source: [Interface & Data Contracts](<https://linear.app/paperos/document/paperos-interface-and-data-contracts-d40e6a4d227c>) §1 (`Principal` is imported from `@paperos/core/audience` for `Context.actor`, never redefined here); §4 Internal API conventions (transport `/api/v1/rpc/<router>.<procedure>` plus OpenAPI 3.1 REST, auth and tenant headers, procedure shape with `filter?: FilterTree` and signed keyset cursors, `ORPCError` codes, `/api/v1` versioning; the in-memory rate limit here is the interim until pending contracts issue C); §6 rows "API middleware, error codes, headers" and "Routers, client, pagination".
+
+*Round 4 amendment (2026-09-18):*
+Correction: the context type imports `Principal` from `@paperos/core/audience` (PAP-55), not `@paperos/core/principal`; the Contracts document §1 and PAP-267 already use the audience path. Umbrella text updated so children do not diverge.
 
 **Definition of done**
 

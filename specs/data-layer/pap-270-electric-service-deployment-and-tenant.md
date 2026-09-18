@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-36"
 children: []
 blockedBy: ["PAP-30", "PAP-34", "PAP-267"]
-blocks: ["PAP-271"]
+blocks: ["PAP-271", "PAP-326", "PAP-599", "PAP-905"]
 key: "child/PAP-36/15"
 url: "https://linear.app/paperos/issue/PAP-270/electric-service-deployment-and-tenant-scoped-shape-proxy-apisyncshape"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:12.556Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:27.812Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-270: Electric service deployment and tenant-scoped shape proxy (/api/sync/shape)

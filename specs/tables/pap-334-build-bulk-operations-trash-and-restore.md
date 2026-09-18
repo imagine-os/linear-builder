@@ -6,19 +6,22 @@ projectName: "Table & Views Engine"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Staff", "Customer"]
+surfaces: ["Staff"]
 milestone: "All view types"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-32", "PAP-165"]
-blocks: ["PAP-199", "PAP-208"]
+blockedBy: ["PAP-32", "PAP-165", "PAP-613", "PAP-630", "PAP-641"]
+blocks: ["PAP-208", "PAP-632", "PAP-838"]
 key: "gap/tables/bulk-trash"
 url: "https://linear.app/paperos/issue/PAP-334/build-bulk-operations-trash-and-restore-multi-row-edit-and-delete-with"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:30.997Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:22.363Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-334: Build bulk operations, trash and restore: multi-row edit and delete with server batching, soft-delete trash with 30-day restore, undo toast
@@ -74,6 +77,8 @@ Reviewer selects all matching rows in a filtered grid, bulk-sets Status, clicks 
 **Dependencies**
 
 PAP-165 (hard, editing child), PAP-32 (hard), PAP-38, PAP-43, PAP-279, PAP-228. Blocks PAP-199 rollback reuse, PAP-208.
+
+*Round 4 (2026-09-18): PAP-199 soft: this issue no longer blocks PAP-199 because bulk operations, trash and restore (09-29) land after the import framework milestone (09-28); PAP-199 proceeds (rollback uses the import run's own undo log; switch to soft-delete trash when PAP-334 lands) and reconciles when this issue lands.*
 
 **Agent**
 

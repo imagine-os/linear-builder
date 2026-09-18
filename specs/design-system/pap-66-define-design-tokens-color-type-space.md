@@ -12,13 +12,16 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-27", "PAP-67", "PAP-68", "PAP-72", "PAP-75", "PAP-77", "PAP-236", "PAP-459"]
+blocks: ["PAP-27", "PAP-67", "PAP-68", "PAP-72", "PAP-75", "PAP-77", "PAP-236", "PAP-459", "PAP-504", "PAP-657", "PAP-665", "PAP-666", "PAP-668", "PAP-669"]
 key: "design-system/tokens"
 url: "https://linear.app/paperos/issue/PAP-66/define-design-tokens-color-type-space-radius-motion-elevation-in-dtcg"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:09.109Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:38.213Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-66: Define design tokens (color, type, space, radius, motion, elevation) in DTCG JSON compiled to CSS variables
@@ -42,6 +45,10 @@ Create the single source of truth for every visual decision: colour, typography,
 * Build `pnpm --filter ui tokens:build`: config `style-dictionary.config.ts` with transforms `color/oklch-css`, `size/px-to-rem`, format `css/tailwind-theme`; CSS variables prefixed `--pos-` (`--pos-color-bg-surface`); `:root` and `[data-theme=...]` blocks; sRGB fallbacks under `@supports not (color: oklch(0% 0 0))`; Tailwind default palette disabled with `--color-*: initial`.
 * `tokens.ts` exports `tokens.color.bg.surface` as `var(--pos-color-bg-surface)` and `rawTokens` with resolved values per theme; `TokenPath` union.
 * `tokens:check` asserts `fg.default` on every `bg.*` at 4.5:1 and `fg.muted` at 3:1 in all three themes; `tokens:lint` enforces kebab names, resolvable aliases, no unused aliases, no cycles.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: add `zIndex.{base 0, raised 10, sticky 100, dropdown 1000, overlay 1100, modal 1200, popover 1300, toast 1400, tooltip 1500}` tokens (`--pos-z-*`) so overlays never hard-code stacking; reserve the `color.dataviz.*` namespace (owned by PAP-665) and the `density.*` namespace (owned by PAP-669) in the build config so their files compile through the same pipeline; `--pos-font-scale` (default 1) multiplies the type scale for PAP-647.
 
 **Interface contract**
 
@@ -86,3 +93,5 @@ Iris (Token Keeper). Reviewed by Sentinel (Code Reviewer) and Forge (Tailwind an
 **Size**
 
 M: small code, permanent naming.
+
+*Round 4 critique fix (2026-09-18):* resolved 3 round-4 file keys in this description to Linear identifiers: `r4/design-system/dataviz-tokens-and-microcharts` = PAP-665, `r4/design-system/density-modes` = PAP-669, `r4/input/accessibility-input-preferences` = PAP-647.

@@ -10,15 +10,18 @@ surfaces: ["Developer"]
 milestone: "Desktop and mobile shells build"
 state: "Backlog"
 parent: null
-children: ["PAP-255", "PAP-256", "PAP-257"]
+children: ["PAP-255", "PAP-257", "PAP-256"]
 blockedBy: ["PAP-13"]
-blocks: ["PAP-20", "PAP-21", "PAP-24", "PAP-262"]
+blocks: ["PAP-20", "PAP-21", "PAP-24", "PAP-262", "PAP-369"]
 key: "app-shell/tauri-desktop"
 url: "https://linear.app/paperos/issue/PAP-19/add-tauri-2-desktop-target-for-linux-macos-and-windows-sharing-the-web"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:52.647Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:56:44.069Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-19: Add Tauri 2 desktop target for Linux, macOS and Windows sharing the web bundle

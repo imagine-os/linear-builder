@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-13"]
-blocks: ["PAP-80", "PAP-81", "PAP-82", "PAP-87", "PAP-122", "PAP-217", "PAP-243", "PAP-246", "PAP-439"]
+blocks: ["PAP-80", "PAP-81", "PAP-82", "PAP-87", "PAP-122", "PAP-217", "PAP-243", "PAP-246", "PAP-439", "PAP-523", "PAP-550", "PAP-668", "PAP-677", "PAP-681", "PAP-682", "PAP-685", "PAP-686", "PAP-756"]
 key: "quality/ci-gate1"
 url: "https://linear.app/paperos/issue/PAP-78/set-up-ci-gate-1-typecheck-biome-lint-vitest-unit-tests-and-web-build"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:12.141Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:33.516Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-78: Set up CI gate 1: typecheck, Biome lint, Vitest unit tests and web build on every PR
@@ -43,6 +46,10 @@ Make Gate 1 the fast, deterministic check every PR in every imagine-os repo pass
 * `generated-drift`: `tokens:build`, `registry:build`, `gen:breakpoints`, `contracts:build`, `versions.json` check, then `git diff --exit-code`.
 * `gate-1` runs `if: always()`, writes `reports/gate1.json` as `GateReport<'gate1'>` from `packages/contracts` (PAP-239) with `data: { jobs: [{ name, status, durationMs }], failures: [{ job, file, line, message }] }`, sets status `gate/1-static`, fails if any required job failed.
 * Path filters: docs-only changes skip `build` and `test`. Env `TZ=UTC`, `LANG=en_US.UTF-8`. `timeout-minutes: 10` per job; soft alarm comment above 3 minutes total.
+
+*Round 4 amendment (2026-09-18):*
+
+* Required-checks matrix (round 4): one aggregate status `gates/required` computed by the `gate-1` job from the PR class: `docs-only` (paths `docs/**`, `specs/**`, `*.md`) requires `gate/1-static` and `gate/2-docs` only; `infra` (`ops/**`, `.github/**`) requires Gate 1, `gate/1-security` and `gate/2-security`; `code` requires every registered status in `GATE_STATUSES` that applies to the touched packages. The class is posted in the sticky comment header, and PAP-46 marks `gates/required` as the single required check so path-filtered gates never leave a PR waiting on a status that will not run.
 
 **Interface contract**
 

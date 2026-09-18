@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "Auth works across web and desktop"
 state: "Backlog"
 parent: null
-children: []
+children: ["PAP-579", "PAP-578"]
 blockedBy: ["PAP-57", "PAP-224"]
-blocks: ["PAP-62", "PAP-63", "PAP-65", "PAP-86", "PAP-177", "PAP-221", "PAP-230", "PAP-231", "PAP-458"]
+blocks: ["PAP-62", "PAP-63", "PAP-65", "PAP-86", "PAP-177", "PAP-221", "PAP-230", "PAP-231", "PAP-367", "PAP-458", "PAP-506", "PAP-582", "PAP-584", "PAP-831"]
 key: "identity/org-tenancy"
 url: "https://linear.app/paperos/issue/PAP-58/implement-organizations-workspaces-invitations-and-tenant-switching"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:06.742Z"
-model: "claude-opus-5"
-effort: "medium"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:37.625Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-58: Implement organizations, workspaces, invitations and tenant switching
@@ -43,6 +46,9 @@ Make tenancy real for users: organizations are tenants, workspaces are teams ins
 * Pages and specs `specs/pages/org/*.spec.yaml`: `/org/new`, `/org/settings/general`, `/org/settings/members` (grid view if PAP-165 exists, else PAP-71 table), `/org/settings/workspaces`, `/invite/$token`, `/org/switch`.
 * Components: `TenantSwitcher` (Popover with search, recent, create), `RoleBadge`, `InviteMemberDialog`; `useTenant()` returns `{ tenant, workspace, role, switchTenant, switchWorkspace }` and remounts the Electric sync provider on change (PAP-36).
 * Lifecycle: owner transfers to an admin; last owner cannot leave; deletion sets `deletedAt`, hides the tenant, hard-deletes after 30 days by a PAP-43 job, audited.
+
+*Round 4 amendment (2026-09-18):*
+Corrections from the Contracts document §1 and §4: (1) a tenant-scoped procedure without an active tenant returns `400 VALIDATION` with `details[0].issue = 'tenant-required'`; `412 TENANT_REQUIRED` is retired. (2) `withTenant` sets `app.actor_id` to the same value as `app.principal_id` and also sets `app.actor_kind` and `app.request_id`, so PAP-34 policies and PAP-38 triggers read one contract. Work is split into PAP-578 (middleware, plugin mapping, procedures) and PAP-579 (invitations, switcher, pages).
 
 **Interface contract**
 
@@ -87,3 +93,5 @@ Forge (Schema Wright) for schema and middleware; Iris (Component Crafter) for sw
 **Size**
 
 M.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/identity/tenancy-core` = PAP-578, `r4/identity/tenancy-ui` = PAP-579.

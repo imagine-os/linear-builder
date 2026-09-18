@@ -11,14 +11,17 @@ milestone: "Campaigns and social"
 state: "Backlog"
 parent: "PAP-190"
 children: []
-blockedBy: ["PAP-43", "PAP-401"]
-blocks: ["PAP-403", "PAP-491"]
+blockedBy: ["PAP-43", "PAP-401", "PAP-565"]
+blocks: ["PAP-403", "PAP-812"]
 key: "growth/social/adapter-mock-x"
 url: "https://linear.app/paperos/issue/PAP-402/adapter-interface-mock-adapter-x-api-v2-adapter-and-the-pg-boss"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:49.848Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:54.658Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-402: Adapter interface, mock adapter, X API v2 adapter and the pg-boss publishing worker
@@ -47,6 +50,9 @@ Provides: `SocialAdapter`, `adapters.mock`, `adapters.x`, `validatePost`, worker
 
 * Worker tests with the mock; one real X publish in `dryRun: false` recorded; metrics fetched.
 
+*Round 4 amendment (2026-09-18):*
+Round 4: the merge gate is the mock-adapter worker run plus X `validate` unit tests and a recorded (`nock`) publish fixture; the single real X publish is optional evidence, requires the NJ item for the X developer account and the tenant's live flag, and is reported as `skipped: no-credentials` otherwise (Security Model section 4 forbids live publishing outside an approved queue item). Record the attempt in PAP-792.
+
 **Test plan**
 
 * Unit: retry, duplicate protection, 429 handling, X `validate`.
@@ -64,6 +70,8 @@ Approve a post scheduled one minute ahead and watch the worker publish it via th
 
 Model child (hard), PAP-43, PAP-17, X developer account (Needs Justin).
 
+*Round 4 (2026-09-18): PAP-491 soft: this issue no longer blocks PAP-491 because PAP-402 is deferred to v0.2 and must not block scheduled work; PAP-491 proceeds (wire growth with the CRM core (PAP-189) and the contract stubs for social; the X adapter and publishing worker join when PAP-402 is reinstated) and reconciles when this issue lands.*
+
 **Agent**
 
 Builder: Beacon (Outreach Sequencer). Reviewer: Sentinel (Security Auditor).
@@ -71,3 +79,5 @@ Builder: Beacon (Outreach Sequencer). Reviewer: Sentinel (Security Auditor).
 **Size**
 
 M: one session.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/growth/outbound-sandbox-ledger` = PAP-792.

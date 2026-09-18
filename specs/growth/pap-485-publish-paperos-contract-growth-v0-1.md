@@ -11,14 +11,17 @@ milestone: "CRM core"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-187", "PAP-188", "PAP-433"]
-blocks: ["PAP-192", "PAP-193", "PAP-194", "PAP-195", "PAP-488", "PAP-491"]
+blockedBy: ["PAP-187", "PAP-188", "PAP-433", "PAP-790", "PAP-791"]
+blocks: ["PAP-192", "PAP-193", "PAP-194", "PAP-195", "PAP-488", "PAP-491", "PAP-793"]
 key: "module/growth/contract"
 url: "https://linear.app/paperos/issue/PAP-485/publish-paperoscontract-growth-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:38.913Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:01.908Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-485: Publish @paperos/contract-growth v0.1 with manifest

@@ -11,14 +11,17 @@ milestone: "Scale and offline tested"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-141", "PAP-475"]
+blockedBy: ["PAP-141", "PAP-475", "PAP-605", "PAP-606"]
 blocks: []
 key: "realtime/followmode"
 url: "https://linear.app/paperos/issue/PAP-149/add-follow-mode-and-shared-cursor-sessions-for-support-and-pair-review"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:05.711Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:38.824Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-149: Add follow mode and shared cursor sessions for support and pair review

@@ -11,14 +11,17 @@ milestone: "Touch, pen, gamepad"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-441", "PAP-476"]
+blockedBy: ["PAP-441", "PAP-476", "PAP-541"]
 blocks: ["PAP-482"]
 key: "module/input/conformance"
 url: "https://linear.app/paperos/issue/PAP-479/conformance-test-suite-for-input-contract"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:07.429Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:03.362Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-479: Conformance test suite for input contract

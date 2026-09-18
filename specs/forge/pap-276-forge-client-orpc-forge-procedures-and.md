@@ -6,19 +6,22 @@ projectName: "Version Control & Forge Independence"
 phase: "P2"
 type: "Build"
 priority: 4
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Disaster recovery proven"
 state: "Backlog"
 parent: "PAP-54"
 children: []
-blockedBy: ["PAP-45", "PAP-51", "PAP-268", "PAP-449"]
-blocks: ["PAP-277", "PAP-455"]
+blockedBy: ["PAP-35", "PAP-45", "PAP-51", "PAP-268", "PAP-275", "PAP-449", "PAP-526"]
+blocks: ["PAP-277"]
 key: "child/PAP-54/21"
 url: "https://linear.app/paperos/issue/PAP-276/forge-client-orpc-forge-procedures-and-forgeread-permission-checks"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:04.437Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:46.522Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-276: Forge client, oRPC forge.* procedures and forge.read permission checks
@@ -70,6 +73,8 @@ Reviewer calls `forge.repos.commits` from the Scalar console as a developer and 
 **Dependencies**
 
 PAP-45, PAP-35, PAP-51 (hard). Soft: PAP-48, PAP-59. Blocks children 2 and 3.
+
+*Round 4 (2026-09-18): PAP-455 soft: this issue no longer blocks PAP-455 because PAP-276 is deferred to v0.2 and must not block scheduled work; PAP-455 proceeds (wire the forge module with the adapters that exist (PAP-47, PAP-449, PAP-452); the forge client procedures join the adapter when PAP-276 is reinstated) and reconciles when this issue lands.*
 
 **Agent**
 

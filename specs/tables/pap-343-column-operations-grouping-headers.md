@@ -6,19 +6,22 @@ projectName: "Table & Views Engine"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Grid with sort, filter, group"
 state: "Backlog"
 parent: "PAP-165"
 children: []
-blockedBy: ["PAP-342"]
-blocks: ["PAP-135", "PAP-166", "PAP-172", "PAP-173", "PAP-183", "PAP-189", "PAP-489"]
+blockedBy: ["PAP-342", "PAP-642"]
+blocks: ["PAP-135", "PAP-166", "PAP-172", "PAP-173", "PAP-183", "PAP-189", "PAP-489", "PAP-617", "PAP-618", "PAP-623", "PAP-625", "PAP-626", "PAP-633"]
 key: "tables/grid/columns-groups-panel"
 url: "https://linear.app/paperos/issue/PAP-343/column-operations-grouping-headers-aggregate-footer-and-recordpanel"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:33.305Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:20.748Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-343: Column operations, grouping headers, aggregate footer and RecordPanel

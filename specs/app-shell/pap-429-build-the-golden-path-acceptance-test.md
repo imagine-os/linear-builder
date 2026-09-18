@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P2"
 type: "Review"
 priority: 2
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-239", "PAP-364", "PAP-365"]
-blocks: ["PAP-29"]
+blockedBy: ["PAP-239", "PAP-364", "PAP-365", "PAP-500", "PAP-531"]
+blocks: ["PAP-29", "PAP-890"]
 key: "gp/app-shell/acceptance"
 url: "https://linear.app/paperos/issue/PAP-429/build-the-golden-path-acceptance-test-nightly-ci-runs-three-canned"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:57.699Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:12.580Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-429: Build the golden path acceptance test: nightly CI runs three canned ideas from paragraph to preview URL, asserts gates 1 to 4 and under ten minutes, publishes `golden-path.json`, badge and friction issues

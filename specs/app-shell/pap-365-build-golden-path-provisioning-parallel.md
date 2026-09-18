@@ -11,14 +11,17 @@ milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-15", "PAP-22", "PAP-26"]
-blocks: ["PAP-429"]
+blockedBy: ["PAP-15", "PAP-22", "PAP-26", "PAP-503", "PAP-505"]
+blocks: ["PAP-429", "PAP-500"]
 key: "gp/app-shell/provisioning"
 url: "https://linear.app/paperos/issue/PAP-365/build-golden-path-provisioning-parallel-idempotent-steps-warm-pools"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:39.963Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:47.643Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-365: Build golden path provisioning: parallel idempotent steps, warm pools for preview slots, databases and mirror repos, `--resume` and per-step time budgets in `paperos create`
@@ -94,3 +97,5 @@ M: a DAG runner, three slot kinds, one nightly job and a runbook.
 **Demo**
 
 `paperos create --dry-run` DAG table, then a real run's C2 to C4 timing table under 60 s and `pool.json` before and after the claim.
+
+*Round 4 critique fix (2026-09-18):* PAP-500 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-500.

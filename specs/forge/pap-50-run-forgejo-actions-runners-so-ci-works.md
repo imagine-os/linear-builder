@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-45", "PAP-273"]
-blocks: ["PAP-53"]
+blocks: ["PAP-53", "PAP-371", "PAP-519", "PAP-522", "PAP-524", "PAP-525", "PAP-532", "PAP-536"]
 key: "forge/actions-runner"
 url: "https://linear.app/paperos/issue/PAP-50/run-forgejo-actions-runners-so-ci-works-even-when-github-is"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:02.526Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:49.267Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-50: Run Forgejo Actions runners so CI works even when GitHub is unavailable
@@ -44,6 +47,10 @@ Out: writing the gate workflows (PAP-78 onward), Playwright browser images (adde
 * Workflows live only in `.github/workflows/`; Forgejo reads that directory natively.
 * `check-workflow-portability.ts` flags GitHub-only actions not mirrored on `code.forgejo.org`, `github.*` context use without fallbacks, and secrets missing from `ops/forge/secrets-manifest.yml`.
 * Nightly `docker system prune -af --filter until=72h`.
+
+*Round 4 amendment (2026-09-18):*
+
+* Vendored inventory for DR: every third-party action and base image the workflows need is listed in `ops/forge/vendored-actions.yml` (PAP-519) with a mirror on `code.forgejo.org` or a copy under `.github/actions/`, and every runner and job image is mirrored into the Forgejo registry nightly by `ops/forge/mirror-images.yml`; PAP-53 asserts the list is complete by running with `ghcr.io` and `github.com` blackholed.
 
 **Interface contract**
 
@@ -95,3 +102,7 @@ Built by Forge (Ops Runner). Reviewed by Sentinel (Code Reviewer).
 **Size**
 
 M: compose, config, one checker script and proofs.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/forge/portability-checker` = PAP-519.
+
+*Round 4 critique fix (2026-09-18):* PAP-519 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-519.

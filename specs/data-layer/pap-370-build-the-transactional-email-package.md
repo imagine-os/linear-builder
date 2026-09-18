@@ -6,19 +6,22 @@ projectName: "Data Layer & Database"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff", "Developer"]
+surfaces: ["Developer"]
 milestone: "Local-first sync working"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: []
-blocks: []
+blockedBy: ["PAP-25", "PAP-43", "PAP-564"]
+blocks: ["PAP-736", "PAP-791", "PAP-792", "PAP-804", "PAP-840", "PAP-858", "PAP-895"]
 key: "gap/data-layer/email-package"
 url: "https://linear.app/paperos/issue/PAP-370/build-the-transactional-email-package-packagesemail-react-email"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:40.476Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:30:55.136Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-370: Build the transactional email package (`packages/email`): React Email templates, provider adapter, sandbox allowlist mode, suppression list, DKIM/SPF/DMARC check, Mailpit in dev

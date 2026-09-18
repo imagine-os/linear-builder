@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Desktop and mobile shells build"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-16", "PAP-47", "PAP-91"]
-blocks: ["PAP-28", "PAP-29", "PAP-266", "PAP-364", "PAP-365", "PAP-430"]
+blockedBy: ["PAP-16", "PAP-47", "PAP-91", "PAP-520"]
+blocks: ["PAP-28", "PAP-29", "PAP-266", "PAP-364", "PAP-365", "PAP-430", "PAP-498", "PAP-499", "PAP-500", "PAP-503", "PAP-512"]
 key: "app-shell/create-cli"
 url: "https://linear.app/paperos/issue/PAP-22/write-paperos-create-app-cli-that-clones-the-template-into-an-imagine"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:52.895Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:43.366Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-22: Write `paperos create <app>` CLI that clones the template into an imagine-os repo and wires Forgejo mirror, CI, Pages and a Linear project
@@ -59,6 +62,10 @@ Provides:
 
 Consumes: `forge bootstrap` CLI contract (PAP-51: exit codes, `[ok]/[changed]/[skip]` lines), Linear label and state ids (PAP-91), Pages settings (PAP-15), `deploy.yml` template (PAP-26), `SecretStore` (PAP-17).
 
+*Round 4 amendment (2026-09-18):*
+
+* Writes `.paperos/template.json` `{ ref, tag, appliedAt, ownership: "templates/ownership.yaml" }` at creation (PAP-430 reads it and lists it as written here); the schema is co-owned with PAP-430. Step 9 (Linear project and starter issues) is delivered by PAP-503; the `--json` summary includes its `linearProject` block.
+
 **Definition of done**
 
 * Against a throwaway repo: green CI, live Pages URL, staging URL and Linear project within 10 minutes (recording).
@@ -91,6 +98,10 @@ Reviewer runs `paperos doctor`, then `paperos create demo-clinic --repo imagine-
 
 PAP-16 (real template), PAP-47 and PAP-51 (mirror and bootstrap), PAP-91 (labels and states), PAP-15, PAP-26. Feeds PAP-28, PAP-29, PAP-108.
 
+*Round 4 amendment (2026-09-18):*
+
+* Soft dependency (round 4): PAP-715 (claude-code-plugin-packaging) would block this issue but sits in a later milestone (2026-09-25 > 2026-09-24); no `blocks` relation was created. Build against its interface and reconcile when it lands.
+
 **Agent**
 
 Built by Forge; Atlas (Dispatcher) reviews the Linear seeding. Reviewed by Sentinel.
@@ -98,3 +109,7 @@ Built by Forge; Atlas (Dispatcher) reviews the Linear seeding. Reviewed by Senti
 **Size**
 
 M: orchestration of existing pieces with strong tests.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/app-shell/cli-linear-seeding` = PAP-503.
+
+*Round 4 critique fix (2026-09-18):* PAP-503 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-503.

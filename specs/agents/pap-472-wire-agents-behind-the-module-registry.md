@@ -11,14 +11,17 @@ milestone: "Agent org visible in app"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-280", "PAP-287", "PAP-434", "PAP-435", "PAP-466", "PAP-469"]
+blockedBy: ["PAP-280", "PAP-287", "PAP-434", "PAP-435", "PAP-466", "PAP-469", "PAP-537", "PAP-538"]
 blocks: []
 key: "module/agents/wire"
 url: "https://linear.app/paperos/issue/PAP-472/wire-agents-behind-the-module-registry-with-an-adapter-and-feature"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:18.110Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:04.531Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-472: Wire agents behind the module registry with an adapter and feature flag

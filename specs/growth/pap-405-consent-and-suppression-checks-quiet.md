@@ -11,14 +11,17 @@ milestone: "Campaigns and social"
 state: "Backlog"
 parent: "PAP-191"
 children: []
-blockedBy: ["PAP-404"]
-blocks: ["PAP-406"]
+blockedBy: ["PAP-404", "PAP-791"]
+blocks: ["PAP-406", "PAP-799", "PAP-867", "PAP-900", "PAP-910"]
 key: "growth/outreach/compliance-warmup-replies"
 url: "https://linear.app/paperos/issue/PAP-405/consent-and-suppression-checks-quiet-hours-unsubscribe-and-stop"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:51.641Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:15.310Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-405: Consent and suppression checks, quiet hours, unsubscribe and STOP handling, warmup stages, bounce handling and reply detection

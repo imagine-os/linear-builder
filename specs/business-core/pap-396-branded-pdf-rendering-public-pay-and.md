@@ -6,19 +6,22 @@ projectName: "Business Core: Payments, Finance & Payroll"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Ledger and reports"
 state: "Backlog"
 parent: "PAP-180"
 children: []
 blockedBy: ["PAP-37", "PAP-177", "PAP-395"]
-blocks: ["PAP-397"]
+blocks: ["PAP-397", "PAP-765", "PAP-777", "PAP-786", "PAP-855", "PAP-865", "PAP-872", "PAP-880"]
 key: "business-core/invoicing/pdf-paypage"
 url: "https://linear.app/paperos/issue/PAP-396/branded-pdf-rendering-public-pay-and-doc-pages-stripe-checkout-on"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:49.291Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:54.466Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-396: Branded PDF rendering, public /pay and /doc pages, Stripe Checkout on platform or connected account, receipts
@@ -72,3 +75,5 @@ Builder: Ledger (Payments Integrator). Reviewer: Sentinel (Security Auditor, Vis
 **Size**
 
 M: one session.
+
+*Round 4 critique fix (2026-09-18):* PAP-235 is named as a hard dependency above but stays a soft dependency (no `blocks` relation): deferred blocker -> scheduled. Start when it is In Review or work against its contract and leave a TODO naming it.

@@ -6,19 +6,22 @@ projectName: "Multiplayer & Realtime"
 phase: "P2"
 type: "Build"
 priority: 3
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Scale and offline tested"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-143"]
-blocks: []
+children: ["PAP-600", "PAP-599"]
+blockedBy: ["PAP-143", "PAP-328"]
+blocks: ["PAP-836", "PAP-850"]
 key: "realtime/push-transport"
 url: "https://linear.app/paperos/issue/PAP-381/build-the-push-transport-server-to-client-notification-and-job"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:43.772Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:34.463Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-381: Build the push transport: server-to-client notification and job-progress channel (Electric shape or SSE) plus Web Push and Tauri mobile push (APNs/FCM)
@@ -46,6 +49,9 @@ Out: in-app UI (PAP-136), marketing push, SMS.
 * Delivery to open clients within 2 s; push within 30 s.
 * Payloads under 4 KB; push bodies contain only title, body and deep link, never PII beyond the title.
 * Dead endpoint (410) pruned after one failure; FCM invalid token pruned on `UNREGISTERED`.
+
+*Round 4 amendment (2026-09-18):*
+Per-user shapes need proxy support: PAP-270 appends only `tenant_id`; the registry entry for `live_events` declares `perUser: true` and the proxy then also appends `user_id = <principal>`; tenant-wide events are a separate audience-filtered shape. SSE fallback uses `Last-Event-ID` with the uuidv7 ordering. Work is split into PAP-599 and PAP-600; the Tauri mobile bullet (APNs, FCM, `push_device`) moves to PAP-516 (deferred), which implements the `PushProvider` interface from PAP-600.
 
 **Interface contract**
 
@@ -85,3 +91,5 @@ Built by Nova (CRDT Engineer) with Forge (Ops Runner) for providers and keys. Re
 **Size**
 
 M: one table and hook family plus three provider adapters behind an interface.
+
+*Round 4 critique fix (2026-09-18):* resolved 3 round-4 file keys in this description to Linear identifiers: `r4/app-shell/native-push-registration` = PAP-516, `r4/realtime/live-events-channel` = PAP-599, `r4/realtime/web-push` = PAP-600.

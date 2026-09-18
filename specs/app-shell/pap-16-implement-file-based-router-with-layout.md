@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-13"]
-blocks: ["PAP-21", "PAP-22", "PAP-24", "PAP-54", "PAP-62", "PAP-63", "PAP-70", "PAP-128", "PAP-261", "PAP-262", "PAP-277", "PAP-438", "PAP-447", "PAP-453"]
+blocks: ["PAP-21", "PAP-22", "PAP-24", "PAP-54", "PAP-62", "PAP-63", "PAP-70", "PAP-128", "PAP-261", "PAP-262", "PAP-277", "PAP-367", "PAP-368", "PAP-438", "PAP-447", "PAP-453", "PAP-502", "PAP-503", "PAP-506", "PAP-510", "PAP-511", "PAP-582", "PAP-584"]
 key: "app-shell/router-layouts"
 url: "https://linear.app/paperos/issue/PAP-16/implement-file-based-router-with-layout-slots-nav-sidebar-inspector"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:11.299Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:41.519Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-20"
+cycle: null
 ---
 
 # PAP-16: Implement file-based router with layout slots (nav, sidebar, inspector, command bar) driven by page specs
@@ -50,6 +53,10 @@ Out: navigation content, auth guards, window detach (PAP-21), route codegen (PAP
 * Route export: `createFileRoute('/_app/dashboard')({ component, loader, validateSearch, staticData: { spec: 'dashboard' } })`.
 * `useSpec(routeId)` loads the parsed spec; `vite-plugin-paperos-specs` imports `specs/**/*.yaml` as JSON.
 * `<Slot name="commandbar"/>` reserved for PAP-151.
+
+*Round 4 amendment (2026-09-18):*
+
+* Route contributions are lazy: each `RouteContribution` from a module manifest (PAP-264) is loaded with `React.lazy` so a module's code is absent from the initial chunk; `Link` prefetches on hover and focus; a `size-limit` entry for `apps/web` initial JS (under 180 KB gzipped) fails Gate 1 when a module leaks into it.
 
 **Interface contract**
 

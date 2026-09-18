@@ -6,19 +6,22 @@ projectName: "Table & Views Engine"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Staff", "Customer"]
+surfaces: ["Staff"]
 milestone: "View sharing, formulas, dashboards"
 state: "Backlog"
 parent: null
-children: ["PAP-388", "PAP-389", "PAP-390"]
-blockedBy: ["PAP-38", "PAP-43", "PAP-121", "PAP-166", "PAP-279", "PAP-303", "PAP-436"]
+children: ["PAP-390", "PAP-388", "PAP-389"]
+blockedBy: ["PAP-38", "PAP-43", "PAP-121", "PAP-166", "PAP-279", "PAP-303", "PAP-436", "PAP-555", "PAP-556", "PAP-564", "PAP-565", "PAP-617", "PAP-618"]
 blocks: []
 key: "tables/automations"
 url: "https://linear.app/paperos/issue/PAP-174/build-table-automations-triggers-record-change-schedule-form-inbound"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:50:07.195Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:49:28.635Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-174: Build table automations: triggers (record change, schedule, form, inbound webhook), filter-tree conditions and actions (update record, notify, outbound webhook, connector call, create Linear issue) with a run log

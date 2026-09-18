@@ -11,14 +11,17 @@ milestone: "Acquisition analytics"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-163", "PAP-166", "PAP-187", "PAP-279", "PAP-303", "PAP-337", "PAP-485"]
-blocks: []
+blockedBy: ["PAP-163", "PAP-166", "PAP-187", "PAP-279", "PAP-303", "PAP-337", "PAP-485", "PAP-555", "PAP-556", "PAP-617", "PAP-618", "PAP-790", "PAP-791"]
+blocks: ["PAP-801", "PAP-808", "PAP-869", "PAP-873", "PAP-901"]
 key: "growth/segments"
 url: "https://linear.app/paperos/issue/PAP-195/build-audience-segments-from-crm-and-product-usage-that-feed-campaigns"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:38.913Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:45.259Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-195: Build audience segments from CRM and product usage that feed campaigns and in-app targeting
@@ -45,6 +48,9 @@ Out: lookalike audiences, ad-audience sync, per-user flags outside segments.
 * Membership changes emit `segment.entered|exited { segmentId, contactId }`.
 * `segments.contains(contactId, segmentIds[])` indexed for in-app use under 20 ms; `useInSegment` resolves the current user's contact by email link and caches per session.
 * Permissions `segment.read|write|use`; `use` allows selecting without seeing the definition.
+
+*Round 4 amendment (2026-09-18):*
+Round 4: `useInSegment` resolves the current portal user's contact through `crm_contact.user_id` (added by PAP-790), falling back to `fin_party.user_id` and then email match; the resolution is cached per session and invalidated on `crm.contact.updated`. In-app targeting UI for marketers lives in PAP-808; this issue ships only the hook and the demo banner.
 
 **Interface contract**
 
@@ -86,3 +92,5 @@ Builder: Beacon (CRM Builder) with Nova on compiler extensions. Reviewer: Sentin
 **Size**
 
 M: grammar extension, evaluator and one builder page.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/growth/crm-schema-routers-page-specs` = PAP-790, `r4/growth/in-app-messages-and-announcements` = PAP-808.

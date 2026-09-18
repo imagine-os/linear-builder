@@ -15,10 +15,13 @@ blockedBy: ["PAP-104", "PAP-216", "PAP-287", "PAP-493"]
 blocks: []
 key: "libraries/scout-agent"
 url: "https://linear.app/paperos/issue/PAP-218/create-the-scout-character-routine-weekly-scan-for-new-libraries"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:44.914Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:34.449Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-218: Create the Scout character routine: weekly scan for new libraries relevant to open issues
@@ -53,6 +56,9 @@ Out: adoption decisions (research issues and ADRs), upgrades (PAP-217), the regi
 * Actions: `candidate` writes a registry entry via `pnpm lib add --status candidate`; `research` also creates a Backlog Research issue per PAP-93 with a scorecard stub; at most three per run; one comment per issue per run, none within 30 days of a prior mention; format from PAP-108.
 * Budget: PAP-111 cap of $15 and 60 turns; on cap the report gets `partial: true` and leftovers become `deferred` in `seen.json`.
 * Kill switch: `docs/registry/scout.paused` or the character budget switch.
+
+*Round 4 amendment (2026-09-18):*
+Scan sources include MCP servers (npm keyword `mcp`, the official registry when public) and Claude Code skills or plugins relevant to open issues; candidates of those kinds are routed to PAP-210 (catalog entry) and PAP-105 (skills) instead of the library registry, with the same one-comment-per-issue rule.
 
 **Interface contract**
 

@@ -6,19 +6,22 @@ projectName: "Migration & Import Tools"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Staff", "Developer"]
+surfaces: ["Developer"]
 milestone: "Import framework and CSV"
 state: "Backlog"
 parent: null
 children: ["PAP-347", "PAP-348", "PAP-349"]
-blockedBy: ["PAP-37", "PAP-43", "PAP-164", "PAP-198", "PAP-332", "PAP-334", "PAP-340"]
-blocks: ["PAP-200", "PAP-201", "PAP-202", "PAP-203", "PAP-204", "PAP-205", "PAP-206", "PAP-207", "PAP-208", "PAP-414", "PAP-417", "PAP-420", "PAP-423", "PAP-426"]
+blockedBy: ["PAP-37", "PAP-43", "PAP-164", "PAP-198", "PAP-340", "PAP-564", "PAP-565", "PAP-616"]
+blocks: ["PAP-200", "PAP-201", "PAP-202", "PAP-203", "PAP-204", "PAP-205", "PAP-206", "PAP-207", "PAP-208", "PAP-414", "PAP-417", "PAP-420", "PAP-423", "PAP-426", "PAP-816", "PAP-818"]
 key: "migration/import-framework"
 url: "https://linear.app/paperos/issue/PAP-199/build-the-import-framework-source-connector-schema-mapping-ui-dry-run"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:30.303Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:07:26.635Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-199: Build the import framework: source connector, schema-mapping UI, dry run, validation, rollback
@@ -80,6 +83,10 @@ Reviewer opens Settings > Import, picks the fixture connector, accepts inferred 
 **Dependencies**
 
 PAP-164 and PAP-43 (hard), PAP-198 (interface inputs), PAP-37, PAP-38, PAP-143 and PAP-165 (soft). Blocks PAP-200 to PAP-208 and the pending gap issues.
+
+*Round 4 (2026-09-18): PAP-332 soft: the in-app schema editor (09-29) lands after the import framework milestone (09-28); until it lands, the import framework creates tables and fields through the PAP-164 field-type API directly; adopt the schema editor's conversion helpers when PAP-332 lands. The* `blocks` *relation PAP-332 -> PAP-199 was removed.*
+
+*Round 4 (2026-09-18): PAP-334 soft: bulk operations, trash and restore (09-29) land after the import framework milestone (09-28); until it lands, rollback uses the import run's own undo log; switch to soft-delete trash when PAP-334 lands. The* `blocks` *relation PAP-334 -> PAP-199 was removed.*
 
 **Agent**
 

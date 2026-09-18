@@ -6,19 +6,22 @@ projectName: "Migration & Import Tools"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Staff", "Developer"]
+surfaces: ["Developer"]
 milestone: "Import framework and CSV"
 state: "Backlog"
 parent: "PAP-199"
 children: []
 blockedBy: ["PAP-348"]
-blocks: ["PAP-200", "PAP-201", "PAP-202", "PAP-203", "PAP-204", "PAP-205", "PAP-206", "PAP-207", "PAP-208", "PAP-496"]
+blocks: ["PAP-200", "PAP-201", "PAP-202", "PAP-203", "PAP-204", "PAP-205", "PAP-206", "PAP-207", "PAP-208", "PAP-414", "PAP-417", "PAP-420", "PAP-423", "PAP-426", "PAP-496", "PAP-816", "PAP-818", "PAP-820", "PAP-821", "PAP-822", "PAP-830"]
 key: "child/PAP-199/2"
 url: "https://linear.app/paperos/issue/PAP-349/type-inference-mapping-wizard-ui-and-run-history-with-per-item-drill"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:34.185Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:21.186Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-349: Type inference, mapping wizard UI and run history with per-item drill-down and rollback button
@@ -40,6 +43,9 @@ Out: connector-specific steps (each importer adds a step component via `register
 * Mapping table is a real `role=grid` with roving focus; inferred type shown as a select with confidence badge; sample values column truncates at 40 characters.
 * Progress uses PAP-143 shapes on `import_run.stats`, polling every 2 s as fallback.
 * Rollback button disabled while a run is active or when the actor lacks `import.rollback`.
+
+*Round 4 amendment (2026-09-18):*
+Round 4: register the permission set `import.read|run|rollback|approve|manage` with PAP-59 in this child (`import.rollback` is referenced but never defined); `run` defaults to admin and owner, `approve` to owner (consumed by PAP-208 token minting), and every wizard route declares its permission in its page spec so PAP-64 generates the matrix. Every import write carries `X-PaperOS-Reason: import:<run_id>`.
 
 **Interface contract**
 

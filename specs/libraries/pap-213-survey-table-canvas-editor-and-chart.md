@@ -10,15 +10,18 @@ surfaces: ["Developer"]
 milestone: "Core adoptions decided"
 state: "Backlog"
 parent: null
-children: ["PAP-292", "PAP-293", "PAP-294"]
+children: ["PAP-293", "PAP-294", "PAP-292"]
 blockedBy: ["PAP-209"]
-blocks: ["PAP-170"]
+blocks: ["PAP-170", "PAP-621"]
 key: "libraries/data-landscape"
 url: "https://linear.app/paperos/issue/PAP-213/survey-table-canvas-editor-and-chart-libraries-tanstack-ag-grid-tldraw"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:58.771Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:57:19.148Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-213: Survey table, canvas, editor and chart libraries (TanStack, AG Grid, tldraw, Tiptap, ECharts, visx) and recommend

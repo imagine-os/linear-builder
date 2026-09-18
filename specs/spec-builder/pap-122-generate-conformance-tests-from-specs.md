@@ -15,10 +15,13 @@ blockedBy: ["PAP-78", "PAP-115", "PAP-240"]
 blocks: ["PAP-64", "PAP-362"]
 key: "spec-builder/conformance-tests"
 url: "https://linear.app/paperos/issue/PAP-122/generate-conformance-tests-from-specs-access-matrix-required"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:28.011Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:28.064Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-122: Generate conformance tests from specs (access matrix, required components, states) into CI gate 1

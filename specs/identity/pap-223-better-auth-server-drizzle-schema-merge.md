@@ -6,19 +6,22 @@ projectName: "Identity, Roles & Audiences"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Auth works across web and desktop"
 state: "Backlog"
 parent: "PAP-57"
 children: []
 blockedBy: ["PAP-33", "PAP-56"]
-blocks: ["PAP-224", "PAP-225", "PAP-226", "PAP-458"]
+blocks: ["PAP-224", "PAP-225", "PAP-226", "PAP-458", "PAP-578", "PAP-580", "PAP-581", "PAP-586", "PAP-592", "PAP-593", "PAP-597"]
 key: "identity/better-auth/server-schema-session"
 url: "https://linear.app/paperos/issue/PAP-223/better-auth-server-drizzle-schema-merge-and-session-helpers"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:01.604Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:21.387Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-223: Better Auth server, Drizzle schema merge and session helpers
@@ -47,6 +50,9 @@ Stand up the Better Auth server in `packages/auth` on the Drizzle schema, merged
 * Provides: `auth` instance, `getSession(request)`, `requireSession(ctx)`, `Principal` (from `packages/core/src/audience`, PAP-55), `AuditSink` interface, `AuthConfig` injection points (`sendMagicLink`, `secretStore`).
 * Requires: PAP-33 `users` table, PAP-32 migrations, `RESEND_API_KEY` and OAuth secrets via PAP-17 env schema.
 * Tables: `user` (merged), `session`, `account`, `verification`, `passkey`.
+
+*Round 4 amendment (2026-09-18):*
+Add exports for non-HTTP consumers: `verifySessionToken(token) -> Principal | null` and `verifyApiKey(key) -> Principal | null` (the latter delegating to the PAP-60 plugin once it lands), used by the Hocuspocus `onAuthenticate` hook (PAP-140) and the Electric shape proxy (PAP-270). Configure `account: { accountLinking: { enabled: true, trustedProviders: ['google', 'github'] } }` so a verified-email OAuth sign-in links to the existing user rather than creating a duplicate; test both.
 
 **Definition of done**
 

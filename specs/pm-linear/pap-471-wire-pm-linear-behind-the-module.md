@@ -11,14 +11,17 @@ milestone: "PM module syncs both ways"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-281", "PAP-372", "PAP-434", "PAP-435", "PAP-465", "PAP-468"]
-blocks: ["PAP-266"]
+blockedBy: ["PAP-281", "PAP-372", "PAP-434", "PAP-435", "PAP-465", "PAP-468", "PAP-537", "PAP-538", "PAP-691"]
+blocks: []
 key: "module/pm-linear/wire"
 url: "https://linear.app/paperos/issue/PAP-471/wire-pm-linear-behind-the-module-registry-with-an-adapter-and-feature"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:16.571Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:04.460Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-471: Wire pm-linear behind the module registry with an adapter and feature flag
@@ -75,6 +78,8 @@ Provides: `pm-linear` bound in the kernel as `@paperos/contract-pm-linear` provi
 **Dependencies**
 
 Blocked by `module/pm-linear/contract`, `module/pm-linear/conformance`, `module-system/registry-di`, `module-system/flag-swap` and PAP-281, PAP-372. Blocks PAP-266.
+
+*Round 4 (2026-09-18): PAP-266 soft: this issue no longer blocks PAP-266 because the pm-linear wire issue lands (09-30/10-01) after the* `--without` *milestone (09-29); PAP-266 proceeds (PAP-266's removal matrix covers modules whose wire issue has merged; PAP-471 adds its module to the matrix and to* `paperos create --without` *when it lands) and reconciles when this issue lands.*
 
 **Agent**
 

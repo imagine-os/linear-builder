@@ -6,19 +6,22 @@ projectName: "Multi-Input Control & Accessibility"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Touch, pen, gamepad"
 state: "Backlog"
 parent: null
-children: ["PAP-329", "PAP-330", "PAP-331"]
-blockedBy: ["PAP-150", "PAP-152"]
-blocks: ["PAP-167", "PAP-173", "PAP-385"]
+children: ["PAP-330", "PAP-331", "PAP-329"]
+blockedBy: ["PAP-150", "PAP-152", "PAP-644"]
+blocks: ["PAP-167", "PAP-173", "PAP-344", "PAP-385"]
 key: "input/drag-drop"
 url: "https://linear.app/paperos/issue/PAP-155/build-accessible-drag-and-drop-dnd-kit-for-tables-kanban-and-canvas"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:40.319Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:48:17.924Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-155: Build accessible drag-and-drop (dnd-kit) for tables, kanban and canvas with a keyboard alternative

@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-21", "PAP-140", "PAP-263"]
-blocks: ["PAP-23"]
+blocks: ["PAP-23", "PAP-646"]
 key: "realtime/multi-window-sync"
 url: "https://linear.app/paperos/issue/PAP-145/sync-state-across-multiple-os-windows-and-tabs-of-the-same-user-via"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:37.103Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:38.994Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-145: Sync state across multiple OS windows and tabs of the same user via BroadcastChannel and Yjs

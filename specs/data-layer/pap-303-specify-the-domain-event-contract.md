@@ -6,19 +6,22 @@ projectName: "Data Layer & Database"
 phase: "P0"
 type: "Spec"
 priority: 1
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Postgres + Drizzle baseline"
-state: "Ready for Claude"
+state: "Backlog"
 parent: null
-children: []
+children: ["PAP-555", "PAP-556"]
 blockedBy: []
-blocks: ["PAP-28", "PAP-97", "PAP-136", "PAP-174", "PAP-177", "PAP-179", "PAP-195", "PAP-222", "PAP-436", "PAP-448"]
+blocks: ["PAP-28", "PAP-97", "PAP-136", "PAP-174", "PAP-177", "PAP-179", "PAP-195", "PAP-222", "PAP-436", "PAP-448", "PAP-725", "PAP-833", "PAP-834", "PAP-847", "PAP-848", "PAP-851", "PAP-862", "PAP-864", "PAP-877", "PAP-893", "PAP-897"]
 key: "contracts/domain-events"
 url: "https://linear.app/paperos/issue/PAP-303/specify-the-domain-event-contract-envelope-topic-catalogue-definetopic"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:22.448Z"
-model: "claude-opus-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:24.304Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-303: Specify the domain event contract: envelope, topic catalogue, `defineTopic` registry, transactional outbox and subscriber delivery (`packages/core/events`)

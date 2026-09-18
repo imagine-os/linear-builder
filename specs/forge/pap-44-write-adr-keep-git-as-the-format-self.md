@@ -15,10 +15,13 @@ blockedBy: []
 blocks: ["PAP-449"]
 key: "forge/vcs-decision-adr"
 url: "https://linear.app/paperos/issue/PAP-44/write-adr-keep-git-as-the-format-self-host-forgejo-mirror-github-defer"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:01.955Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:44.095Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-20"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-44: Write ADR: keep Git as the format, self-host Forgejo, mirror GitHub, defer any custom VCS

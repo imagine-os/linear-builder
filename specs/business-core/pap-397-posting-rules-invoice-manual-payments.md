@@ -6,19 +6,22 @@ projectName: "Business Core: Payments, Finance & Payroll"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Ledger and reports"
 state: "Backlog"
 parent: "PAP-180"
 children: []
-blockedBy: ["PAP-179", "PAP-396"]
-blocks: ["PAP-182", "PAP-183"]
+blockedBy: ["PAP-179", "PAP-394", "PAP-396"]
+blocks: ["PAP-182", "PAP-183", "PAP-765", "PAP-771", "PAP-772", "PAP-776", "PAP-777", "PAP-779", "PAP-783", "PAP-785", "PAP-786", "PAP-886"]
 key: "business-core/invoicing/postings-portal-emails"
 url: "https://linear.app/paperos/issue/PAP-397/posting-rules-invoice-manual-payments-reminders-job-customer-portal"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:49.387Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:24.416Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-397: Posting rules invoice.*, manual payments, reminders job, customer portal invoice list and email templates

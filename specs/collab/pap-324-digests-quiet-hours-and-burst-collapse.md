@@ -6,19 +6,22 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Comments and canvas"
 state: "Backlog"
 parent: "PAP-136"
 children: []
-blockedBy: ["PAP-43", "PAP-323"]
-blocks: ["PAP-325"]
+blockedBy: ["PAP-43", "PAP-323", "PAP-565", "PAP-725"]
+blocks: ["PAP-325", "PAP-910"]
 key: "collab/notifications/digests-quiet-hours"
 url: "https://linear.app/paperos/issue/PAP-324/digests-quiet-hours-and-burst-collapse"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:27.745Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:22.695Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-324: Digests, quiet hours and burst collapse

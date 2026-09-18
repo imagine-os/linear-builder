@@ -6,19 +6,22 @@ projectName: "Spec Builder"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Spec editor UI"
 state: "Backlog"
 parent: null
-children: ["PAP-376", "PAP-377", "PAP-378"]
-blockedBy: ["PAP-70", "PAP-114"]
+children: ["PAP-377", "PAP-376", "PAP-378"]
+blockedBy: ["PAP-70", "PAP-114", "PAP-667"]
 blocks: []
 key: "spec-builder/spec-editor-ui"
 url: "https://linear.app/paperos/issue/PAP-124/build-the-spec-editor-ui-with-form-and-yaml-views-and-live-preview"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:29.567Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:48:01.772Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-124: Build the spec editor UI with form and YAML views and live preview

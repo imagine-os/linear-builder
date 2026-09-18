@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-67"
 children: []
 blockedBy: ["PAP-236", "PAP-237"]
-blocks: ["PAP-69", "PAP-70", "PAP-71", "PAP-73", "PAP-74", "PAP-151", "PAP-164", "PAP-233", "PAP-290", "PAP-339", "PAP-461"]
+blocks: ["PAP-69", "PAP-70", "PAP-71", "PAP-73", "PAP-74", "PAP-151", "PAP-164", "PAP-233", "PAP-289", "PAP-290", "PAP-338", "PAP-339", "PAP-461", "PAP-616", "PAP-655", "PAP-659", "PAP-661", "PAP-662", "PAP-663", "PAP-664", "PAP-669"]
 key: "design-system/primitives/selection-navigation"
 url: "https://linear.app/paperos/issue/PAP-238/selection-and-navigation-components-select-combobox-tabs-avatar"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:04.732Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:19.558Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-238: Selection and navigation components: Select, Combobox, Tabs, Avatar, Separator

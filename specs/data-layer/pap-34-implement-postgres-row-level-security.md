@@ -6,19 +6,22 @@ projectName: "Data Layer & Database"
 phase: "P0"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Postgres + Drizzle baseline"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-33"]
-blocks: ["PAP-36", "PAP-39", "PAP-59", "PAP-228", "PAP-270"]
+blocks: ["PAP-36", "PAP-39", "PAP-59", "PAP-175", "PAP-228", "PAP-270", "PAP-566", "PAP-578", "PAP-790"]
 key: "data-layer/rls-tenancy"
 url: "https://linear.app/paperos/issue/PAP-34/implement-postgres-row-level-security-policies-for-multi-tenant"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:59.138Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:38.533Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-34: Implement Postgres row-level security policies for multi-tenant isolation with a cross-tenant test harness

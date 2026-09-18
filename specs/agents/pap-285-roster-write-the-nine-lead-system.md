@@ -15,10 +15,13 @@ blockedBy: ["PAP-284"]
 blocks: ["PAP-287"]
 key: "agents/roster-v1/lead-prompts"
 url: "https://linear.app/paperos/issue/PAP-285/roster-write-the-nine-lead-system-prompts-with-shared-fragments"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:17.414Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:10.644Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-285: Roster: write the nine lead system prompts with shared fragments

@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-66"]
-blocks: []
+blocks: ["PAP-647", "PAP-662", "PAP-669"]
 key: "design-system/motion"
 url: "https://linear.app/paperos/issue/PAP-72/define-the-motion-system-durations-easings-reduced-motion-and-shared"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:09.718Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:42.389Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-72: Define the motion system (durations, easings, reduced-motion) and shared transition components

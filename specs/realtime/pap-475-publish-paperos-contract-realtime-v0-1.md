@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-139", "PAP-140", "PAP-433"]
-blocks: ["PAP-146", "PAP-149", "PAP-321", "PAP-411", "PAP-478", "PAP-481"]
+blocks: ["PAP-146", "PAP-149", "PAP-321", "PAP-411", "PAP-478", "PAP-481", "PAP-540"]
 key: "module/realtime/contract"
 url: "https://linear.app/paperos/issue/PAP-475/publish-paperoscontract-realtime-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:04.356Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:03.577Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-475: Publish @paperos/contract-realtime v0.1 with manifest

@@ -6,19 +6,22 @@ projectName: "Multiplayer & Realtime"
 phase: "P1"
 type: "Spec"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Record sync and conflict UX"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-143", "PAP-328"]
-blocks: ["PAP-148"]
+blockedBy: ["PAP-143", "PAP-328", "PAP-641"]
+blocks: ["PAP-148", "PAP-608"]
 key: "realtime/conflict-ux"
 url: "https://linear.app/paperos/issue/PAP-144/design-conflict-and-stale-data-ux-merge-banners-last-writer-indicators"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:36.935Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:42.095Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-144: Design conflict and stale-data UX: merge banners, last-writer indicators, undo
@@ -82,6 +85,9 @@ Open Storybook “Conflicts”, step through the five states, open the RTL and d
 
 PAP-143 (hard, encoded). Soft: PAP-164, PAP-74, PAP-71, PAP-130. Blocks PAP-148; consumed by PAP-165, PAP-120.
 
+*Round 4 amendment (2026-09-18):*
+The implementation follow-up in realtime is PAP-608 (five components, `useConflicts()`, `ConflictBoundary`, `edit.undoRemote`); tables (PAP-342, PAP-333) and spec-builder (PAP-120) consume that issue rather than reimplementing the mocks. The approved Gate 3 references from this issue are the visual contract it must match.
+
 **Agent**
 
 Builder: Quill (Page Spec Writer) with Iris (Component Crafter) for mock stories. Reviewer: Nova and Sentinel (Edge Case Hunter).
@@ -89,3 +95,5 @@ Builder: Quill (Page Spec Writer) with Iris (Component Crafter) for mock stories
 **Size**
 
 S: a spec and mock stories, no production code.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/realtime/conflict-ux-impl` = PAP-608.

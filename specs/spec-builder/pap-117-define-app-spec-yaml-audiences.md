@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-114"]
-blocks: ["PAP-28", "PAP-123", "PAP-126", "PAP-160", "PAP-264", "PAP-360", "PAP-361", "PAP-363", "PAP-467"]
+blocks: ["PAP-28", "PAP-123", "PAP-126", "PAP-160", "PAP-264", "PAP-360", "PAP-361", "PAP-363", "PAP-467", "PAP-507", "PAP-739"]
 key: "spec-builder/app-level-spec"
 url: "https://linear.app/paperos/issue/PAP-117/define-appspecyaml-audiences-navigation-entities-integrations-that"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:27.436Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:41.152Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-117: Define app.spec.yaml (audiences, navigation, entities, integrations) that page specs inherit from
@@ -41,6 +44,9 @@ Define `specs/app.spec.yaml`, the single app-wide file holding audiences, naviga
 * `gen:app` writes `apps/web/src/generated/app/{navigation,audiences,entities}.ts`; navigation items render through `useCan('page.view')` at runtime, never trusting the static list.
 * Rules: `APP_SINGLE_FILE`, `APP_NAV_PARAM_ROUTE`, `APP_ENTITY_TABLE_MISSING` (against Drizzle schema when available), `APP_NAV_ORPHAN_PAGES` (warn), `APP_AUDIENCE_CYCLE`, `APP_DUP_AUDIENCE_LABEL` (warn), `APP_TENANT_ROWS_REDUNDANT` (warn).
 * Merge for 500 entities under 100 ms, memoised by file hash.
+
+*Round 4 amendment (2026-09-18):*
+`entities[].fields` is typed by PAP-739 (`FieldSchema`); until it merges, `fields` parses as `z.array(z.unknown())` with warning `APP_FIELDS_UNTYPED`. The implicit columns (`id`, `tenant_id`, `created_at`, `updated_at`, `deleted_at`, `created_by`) are never declared.
 
 **Interface contract**
 
@@ -85,3 +91,5 @@ Built by Quill (Page Spec Writer); reviewed by Atlas and Forge (Schema Wright).
 **Size**
 
 S
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/spec-builder/entity-field-grammar` = PAP-739.

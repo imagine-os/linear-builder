@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-67", "PAP-69", "PAP-238"]
-blocks: ["PAP-156"]
+blocks: ["PAP-156", "PAP-670"]
 key: "design-system/a11y-audit"
 url: "https://linear.app/paperos/issue/PAP-73/run-axe-and-manual-screen-reader-audit-on-every-component-and-fix-to"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:11.168Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:39.187Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-73: Run axe and manual screen-reader audit on every component and fix to WCAG 2.2 AA
@@ -42,6 +45,10 @@ Audit every component in `packages/ui` against WCAG 2.2 AA with automated axe sc
 * Checklist `docs/design/a11y-checklist.md` per component: name, role, value, keyboard operability, focus visible, announcements, target size (2.5.8), dragging alternatives (2.5.7), focus not obscured (2.4.11), consistent help (3.2.6), redundant entry (3.3.7), accessible authentication (3.3.8); the keyboard and focus rows are verified by `play` tests, the AT rows are marked "see PAP-156".
 * `meta.a11y = { auditedAt, wcag: 'AA', notes, atVerified?: ['nvda' | 'voiceover' | 'talkback'] }`; `atVerified` filled by PAP-156.
 * CI job `a11y` in Gate 1 on `packages/ui` changes, cached by story hash, under 4 minutes.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: the scan matrix adds `forced-colors: active` emulation (Windows High Contrast; asserts focus rings, borders and icons remain visible via `CanvasText`), a `dir="rtl"` pass for every story and a 200 percent root font-size pass; reflow, zoom and text-spacing detection lives in PAP-670, which shares this harness and report format.
 
 **Interface contract**
 
@@ -87,3 +94,5 @@ Sentinel (Visual Inspector and Edge Case Hunter) audits; Iris (Component Crafter
 **Size**
 
 M.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/design-system/reflow-zoom-text-spacing-audit` = PAP-670.

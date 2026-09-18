@@ -15,10 +15,13 @@ blockedBy: ["PAP-103", "PAP-433"]
 blocks: ["PAP-111", "PAP-113", "PAP-288", "PAP-469", "PAP-472"]
 key: "module/agents/contract"
 url: "https://linear.app/paperos/issue/PAP-466/publish-paperoscontract-agents-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:13.042Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:04.187Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-466: Publish @paperos/contract-agents v0.1 with manifest

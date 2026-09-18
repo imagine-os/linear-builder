@@ -6,19 +6,22 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Comments and canvas"
 state: "Backlog"
 parent: "PAP-131"
 children: []
 blockedBy: ["PAP-318"]
-blocks: ["PAP-136", "PAP-137", "PAP-197"]
+blocks: ["PAP-136", "PAP-137", "PAP-197", "PAP-323", "PAP-411", "PAP-725", "PAP-736", "PAP-840", "PAP-874"]
 key: "collab/comments/live-deeplinks-linear"
 url: "https://linear.app/paperos/issue/PAP-319/live-updates-deep-links-and-linear-escalation"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:25.778Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:24.025Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-319: Live updates, deep links and Linear escalation

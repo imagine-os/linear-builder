@@ -11,14 +11,17 @@ milestone: "Campaigns and social"
 state: "Backlog"
 parent: "PAP-190"
 children: []
-blockedBy: ["PAP-37", "PAP-187", "PAP-188"]
-blocks: ["PAP-402"]
+blockedBy: ["PAP-37", "PAP-187", "PAP-188", "PAP-790", "PAP-791"]
+blocks: ["PAP-402", "PAP-808"]
 key: "growth/social/model-queue-calendar"
 url: "https://linear.app/paperos/issue/PAP-401/social-schema-approval-state-machine-composer-with-per-platform"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:49.756Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:14.314Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-401: Social schema, approval state machine, composer with per-platform variants, approval queue and calendar

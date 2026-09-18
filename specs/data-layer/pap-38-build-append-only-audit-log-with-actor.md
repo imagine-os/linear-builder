@@ -6,19 +6,22 @@ projectName: "Data Layer & Database"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Staff", "Agent"]
+surfaces: ["Agent"]
 milestone: "Local-first sync working"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-33"]
-blocks: ["PAP-61", "PAP-174", "PAP-333", "PAP-355", "PAP-356", "PAP-388"]
+blocks: ["PAP-61", "PAP-174", "PAP-333", "PAP-355", "PAP-356", "PAP-388", "PAP-506", "PAP-559", "PAP-560", "PAP-561", "PAP-594", "PAP-673", "PAP-838", "PAP-849", "PAP-894", "PAP-896", "PAP-902", "PAP-912", "PAP-913"]
 key: "data-layer/audit-log"
 url: "https://linear.app/paperos/issue/PAP-38/build-append-only-audit-log-with-actor-human-or-agent-diff-and-reason"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:59.532Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:38.346Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-38: Build append-only audit log with actor (human or agent), diff and reason fields

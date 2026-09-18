@@ -6,7 +6,7 @@ projectName: "Migration & Import Tools"
 phase: "P2"
 type: "Build"
 priority: 4
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Business migrations"
 state: "Backlog"
 parent: "PAP-207"
@@ -15,10 +15,13 @@ blockedBy: ["PAP-427"]
 blocks: []
 key: "child/PAP-207/2"
 url: "https://linear.app/paperos/issue/PAP-428/template-gallery-in-onboarding-and-settings-cards-with-previews-dry"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:57.567Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:12.368Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 2
+dueDate: null
+cycle: null
 ---
 
 # PAP-428: Template gallery in onboarding and settings: cards with previews, dry-run diff, apply with or without sample data, remove sample data

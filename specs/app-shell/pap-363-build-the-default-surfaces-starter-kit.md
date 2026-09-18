@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff", "Developer"]
+surfaces: ["Developer"]
 milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-55", "PAP-117", "PAP-240", "PAP-361"]
-blocks: ["PAP-364"]
+blocks: ["PAP-364", "PAP-507", "PAP-517"]
 key: "gp/app-shell/starter-surfaces"
 url: "https://linear.app/paperos/issue/PAP-363/build-the-default-surfaces-starter-kit-customer-portal-and-staff"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:39.724Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:46.445Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-363: Build the default surfaces starter kit: customer portal and staff console page specs, a seeded demo tenant per audience and a first-run checklist for every generated app
@@ -77,6 +80,10 @@ Provides: starter spec templates, `seedDemoTenant(db, app: AppSpec, opts): Promi
 * Idea sentence longer than 160 characters: truncated at a sentence boundary for the landing hero, full text in README.
 * Preview database claimed from the warm pool already has a demo tenant: `--reset` runs automatically at C6.
 
+*Round 4 amendment (2026-09-18):*
+
+* Idea paragraph yields zero entities (pure service business): the interview (PAP-360) proposes a `request` entity and the starter kit still generates the dashboard with a `ui.emptyState` block instead of failing codegen. \* Starter pages pass the PAP-73 axe audit in Storybook before Gate 3 baselines are taken.
+
 **Dependencies**
 
 Hard: PAP-117, PAP-240, PAP-55, entity-derived page specs. Soft: PAP-57, PAP-172, PAP-38, PAP-128, PAP-24. Blocks the golden path driver.
@@ -92,3 +99,5 @@ M: six specs, one seed module, one renderer, stories.
 **Demo**
 
 Preview URL of the clinic app signed in as `customer@demo` and as `staff@demo`, side by side at 1280, plus the rendered first-run README.
+
+*Round 4 critique fix (2026-09-18):* PAP-507 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-507.

@@ -12,13 +12,16 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-211", "PAP-212", "PAP-213", "PAP-214", "PAP-215", "PAP-216", "PAP-292", "PAP-295", "PAP-350", "PAP-493"]
+blocks: ["PAP-211", "PAP-212", "PAP-213", "PAP-214", "PAP-215", "PAP-216", "PAP-292", "PAP-293", "PAP-294", "PAP-295", "PAP-296", "PAP-350", "PAP-493", "PAP-755", "PAP-763"]
 key: "libraries/eval-rubric"
 url: "https://linear.app/paperos/issue/PAP-209/define-the-library-evaluation-rubric-license-maintenance-bundle-size"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:56.716Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:45.890Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-20"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-209: Define the library evaluation rubric (license, maintenance, bundle size, a11y, TS quality, agent-friendliness) and ADR template
@@ -49,6 +52,9 @@ Out: the surveys (PAP-212, PAP-213, PAP-214), license mechanics (PAP-211), regis
 * Hard gates (any fail = `reject`): license outside PAP-211 allow tier without waiver; no types; UI library failing in Tauri WebViews; vendor cloud with no self-host path.
 * Scorecard `{ candidate, version, evaluatedBy, date, issue, facts, scores: { <id>: { score, evidence } }, extras[], gates, migrationCostHours, verdict: adopt|trial|reject }`; scores of 3 or 4 need a URL or repo path in `evidence` or the CLI fails.
 * Ties within 5 points decided by `migrationCostHours` and the owning character's written judgement, never re-scoring.
+
+*Round 4 amendment (2026-09-18):*
+Optional extras `security` (OpenSSF Scorecard, advisories) and `packaging` (`publint`, `attw`) from PAP-755; hard gate `openAdvisory: critical`. `pnpm lib score --facts-from <dir>` reads spike-kit `results/summary.json` so measured FPS and bundle numbers populate `facts` without retyping.
 
 **Interface contract**
 
@@ -91,3 +97,5 @@ Written by Scout (Library Evaluator). Reviewed by Atlas (weights, gates) and Sen
 **Size**
 
 S: one document, one small schema and CLI, one fixture; the value is sharp anchors.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/libraries/facts-security-quality` = PAP-755.

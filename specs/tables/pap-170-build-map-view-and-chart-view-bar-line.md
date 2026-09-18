@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "All view types"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-163", "PAP-213", "PAP-294", "PAP-337"]
-blocks: ["PAP-173", "PAP-386"]
+children: ["PAP-636", "PAP-621", "PAP-622"]
+blockedBy: ["PAP-163", "PAP-213", "PAP-294", "PAP-337", "PAP-614", "PAP-615"]
+blocks: ["PAP-173", "PAP-386", "PAP-885"]
 key: "tables/map-chart-views"
 url: "https://linear.app/paperos/issue/PAP-170/build-map-view-and-chart-view-bar-line-pie-number-bound-to-view"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:43.973Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:37.077Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-170: Build map view and chart view (bar, line, pie, number) bound to view aggregations

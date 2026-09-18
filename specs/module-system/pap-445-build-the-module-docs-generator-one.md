@@ -15,10 +15,13 @@ blockedBy: ["PAP-128", "PAP-433", "PAP-439"]
 blocks: []
 key: "module-system/module-docs-generator"
 url: "https://linear.app/paperos/issue/PAP-445/build-the-module-docs-generator-one-page-per-module-from-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:50:10.913Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:56.403Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-445: Build the module docs generator: one page per module from manifest, contract exports, conformance case ids, bindings, slots, events and dependency edges into the docs engine
@@ -46,6 +49,10 @@ Out: prose (Goal and rationale stay in the hand-written `docs/module-system.md` 
 * TypeScript signatures come from the contract package's `.d.ts` via `ts-morph`; JSON Schema rendering uses one shared component.
 * Missing inputs (no conformance yet, no bindings) render as `pending` sections, never as errors, so pages exist from the first contract issue onward.
 * Runtime under 30 s for eighteen modules.
+
+*Round 4 amendment (2026-09-18):*
+
+* Generated pages include a "Health and swaps" section reading `/healthz.modules` (PAP-546), the bound implementations and last shadow diff count (PAP-435) and the last `contract-diff` verdict (PAP-544), so the module page is the one place a session checks before touching a module.
 
 **Interface contract**
 
@@ -83,3 +90,5 @@ S
 **Demo**
 
 Reviewer opens `/docs/platform/modules/tables` in the app and sees ports, slots, topics, routes, conformance cases and the four consumers; edits the page by hand and Gate 1 fails with `module-docs` drift. Under a minute.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/module-system/contract-diff` = PAP-544, `r4/module-system/lifecycle-and-health` = PAP-546.

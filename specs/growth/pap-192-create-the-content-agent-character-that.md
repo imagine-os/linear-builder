@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-104", "PAP-287", "PAP-485"]
-blocks: []
+blocks: ["PAP-840"]
 key: "growth/content-agent"
 url: "https://linear.app/paperos/issue/PAP-192/create-the-content-agent-character-that-drafts-posts-and-emails-from"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:38.913Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:23.020Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-192: Create the content agent character that drafts posts and emails from changelogs and specs for human approval
@@ -75,6 +78,9 @@ Reviewer triggers the Routine manually with a recent changelog range, waits for 
 * Spec marked `draft: true` excluded unless named.
 * Re-run on the same release updates existing drafts.
 * Model refusal or partial output: comment posted, nothing filed.
+
+*Round 4 amendment (2026-09-18):*
+Round 4: changelog entries, spec files and docs the agent reads are T2 or T3 content under the Security Model prompt-injection tiers; wrap them with `<untrusted source= tier=>` and run the scanner before drafting. A draft that quotes an instruction-shaped line from a source is dropped and the source line is reported in the session comment.
 
 **Dependencies**
 

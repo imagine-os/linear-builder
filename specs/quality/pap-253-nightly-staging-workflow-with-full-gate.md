@@ -6,19 +6,22 @@ projectName: "Quality Pipeline"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Edge-case hunting and release trains"
 state: "Backlog"
 parent: "PAP-88"
 children: []
-blockedBy: ["PAP-26", "PAP-81", "PAP-82", "PAP-242", "PAP-252"]
+blockedBy: ["PAP-26", "PAP-81", "PAP-82", "PAP-242", "PAP-248", "PAP-252", "PAP-505", "PAP-677"]
 blocks: ["PAP-254"]
 key: "quality/release-train/nightly-staging"
 url: "https://linear.app/paperos/issue/PAP-253/nightly-staging-workflow-with-full-gate-run"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:09.464Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:39.238Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-253: Nightly staging workflow with full gate run
@@ -41,6 +44,10 @@ Deploy `main` to staging every night through Coolify, run the full suites (e2e `
 * Suites: PAP-86 `@full` including 375 run, PAP-82 full 21 combinations, PAP-85 nightly library, PAP-87 informational Pages run, API perf smoke when available.
 * Aggregate: `{ date, sha, deploy: { status, durationMs }, suites: [{ name, status, reportUrl }], trends }`; three consecutive nights of reports are the DoD evidence.
 * Notification: comment on the pinned Linear issue via PAP-97 with a one-line status and links; red nights also open a task for Atlas.
+
+*Round 4 amendment (2026-09-18):*
+
+* Nightly schedule table (round 4): the self-hosted runner pool is shared, so nightly jobs are staggered and documented in `ops/ci/nightly-schedule.yaml`: 02:00 UTC staging deploy and `@full` e2e (this issue), 02:40 visual 21-combination run, 03:00 PAP-80 full-history scans and PAP-110 evals (capped at 4 runners), 03:30 DAST baseline, 04:00 edge-case library (PAP-251), 04:30 API fuzzing, 05:00 PAP-306 plan audit on Mondays, 05:30 perf smoke. A job that starts while a heavier one is running waits on a concurrency group `nightly-heavy` rather than contending; the aggregate report records queue time per suite.
 
 **Interface contract**
 

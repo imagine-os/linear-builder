@@ -11,14 +11,17 @@ milestone: "View sharing, formulas, dashboards"
 state: "Backlog"
 parent: "PAP-173"
 children: []
-blockedBy: ["PAP-165", "PAP-170", "PAP-385"]
-blocks: ["PAP-387"]
+blockedBy: ["PAP-165", "PAP-170", "PAP-385", "PAP-614", "PAP-621", "PAP-622", "PAP-630", "PAP-656", "PAP-662", "PAP-665"]
+blocks: ["PAP-387", "PAP-850"]
 key: "tables/dashboard/blocks-crossfilter"
 url: "https://linear.app/paperos/issue/PAP-386/block-kinds-cross-filter-bus-filter-bar-params-and-deep-links"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:46.004Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:17.614Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-386: Block kinds, cross-filter bus, filter bar, params and deep links
@@ -39,6 +42,10 @@ In: `dashboard/{Block,NumberBlock,TextBlock,FilterBarBlock,filters,params}.tsx`,
 * `DashboardFilterContext` per the parent; `config.fieldMap` and `ignoreCrossFilter`; chips in the header bar.
 * `FilterBarBlock` controls (select chips, date range, user picker, search) write to `global`; `NumberBlock` with delta, sparkline and goal colour; `TextBlock` Markdown with `{{param.name}}`.
 * Params in `?p.<name>=` for deep links.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: two more block kinds. `embed` renders an iframe from a URL restricted to the tenant's `allowedEmbedOrigins` allowlist (settings, default empty) with `sandbox="allow-scripts allow-same-origin"`, no cross-filter participation and a static placeholder in print; `image` renders a PAP-37 file with `fit` and optional caption. Both are listed in the block picker under Content.
 
 **Interface contract**
 

@@ -10,15 +10,18 @@ surfaces: ["Developer"]
 milestone: "Core adoptions decided"
 state: "Backlog"
 parent: null
-children: ["PAP-295", "PAP-296", "PAP-297"]
+children: ["PAP-296", "PAP-295", "PAP-297"]
 blockedBy: ["PAP-209"]
-blocks: ["PAP-43"]
+blocks: ["PAP-43", "PAP-564"]
 key: "libraries/backend-landscape"
 url: "https://linear.app/paperos/issue/PAP-214/survey-backend-building-blocks-better-auth-drizzle-electric-hocuspocus"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:58.853Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:46.455Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-214: Survey backend building blocks (Better Auth, Drizzle, Electric, Hocuspocus, Inngest, Resend) and recommend
@@ -46,6 +49,9 @@ Out: implementing anything (PAP-43, PAP-37, PAP-39, PAP-40, PAP-136, PAP-180), p
 * Constraints: added RAM under 6 GB total; Redis only if two or more chosen services need it; Kubernetes-only rejected; Bun incompatibility with any chosen library defaults runtime to Node 22.
 * Each ADR names the consuming issue, exact package or image tag, env vars for PAP-17, fallback and migration hours.
 * Order WP1 -> WP2 -> WP3 on `PAP-214/wp<n>-<slug>`; total time-box 1.5 agent-days.
+
+*Round 4 amendment (2026-09-18):*
+`compose-smoke` is the reusable workflow from PAP-754; children declare `x-paperos.healthcheck` and `x-paperos.warmupSeconds` in their compose files so the budget table is generated from artefacts. If the workflow is unmerged when a child starts, run the same commands by hand and record numbers in `results/backend-*.json` in the workflow's result schema.
 
 **Interface contract**
 
@@ -88,3 +94,5 @@ Researched by Scout (Library Evaluator) with Forge (Ops Runner) running measurem
 **Size**
 
 L umbrella; two M and one S work package. Pending sub-issue specs: [Round 2 pending issues: libraries (9)](https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d)
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/libraries/compose-smoke-workflow` = PAP-754.

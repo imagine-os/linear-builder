@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-25"]
-blocks: ["PAP-26", "PAP-36", "PAP-40", "PAP-270", "PAP-354"]
+blocks: ["PAP-26", "PAP-36", "PAP-40", "PAP-270", "PAP-354", "PAP-500", "PAP-505", "PAP-562", "PAP-563", "PAP-570", "PAP-573", "PAP-576"]
 key: "data-layer/postgres-provision"
 url: "https://linear.app/paperos/issue/PAP-30/provision-postgres-17-on-the-self-hosted-vps-with-automated-backups"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:56.716Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:35.453Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-30: Provision Postgres 17 on the self-hosted VPS with automated backups and point-in-time recovery
@@ -49,6 +52,9 @@ Out: schema (PAP-32), the local compose stack (PAP-42), MinIO (PAP-37).
 * `ops/db/README.md`: connection strings per role, psql access over the tailnet, PITR procedure with exact commands, RPO 1 h, RTO 30 min.
 * Weekly drill result posted to Linear via PAP-97 when available, else logged.
 * Password rotation runbook updating Coolify env and reloading PgBouncer without downtime.
+
+*Round 4 amendment (2026-09-18):*
+Add: (1) `pgaudit` to the pre-installed extensions with `pgaudit.log = 'ddl, role'` (consumed by PAP-573); (2) the data volume for `pg-prod` and `pg-staging` lives on an encrypted Hetzner volume (LUKS via cloud-init) so data at rest is covered independently of PAP-353; document the unlock procedure in `ops/db/README.md`; (3) template databases `tpl_minimal` and `tpl_demo` reserved names for PAP-570.
 
 **Interface contract**
 
@@ -101,3 +107,5 @@ Built by Forge (Ops Runner). Reviewed by Sentinel (Security Auditor).
 **Size**
 
 M: compose, init scripts, backup sidecar and one drill.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/data-layer/pgaudit-db-health` = PAP-573, `r4/data-layer/preview-databases` = PAP-570.

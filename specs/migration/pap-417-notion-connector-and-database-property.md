@@ -11,14 +11,17 @@ milestone: "Airtable, Notion, ClickUp importers"
 state: "Backlog"
 parent: "PAP-203"
 children: []
-blockedBy: ["PAP-199", "PAP-201", "PAP-492"]
+blockedBy: ["PAP-199", "PAP-201", "PAP-349", "PAP-492"]
 blocks: ["PAP-418"]
 key: "child/PAP-203/0"
 url: "https://linear.app/paperos/issue/PAP-417/notion-connector-and-database-property-mapping-to-tables-oauth-search"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:42.001Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:22.347Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-417: Notion connector and database property mapping to tables (OAuth, search discovery, databases.query streaming at 3 rps, relations and rollups)

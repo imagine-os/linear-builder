@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-179"
 children: []
 blockedBy: ["PAP-392"]
-blocks: ["PAP-394"]
+blocks: ["PAP-394", "PAP-784", "PAP-785", "PAP-859"]
 key: "business-core/ledger/hashchain-reversal-close"
 url: "https://linear.app/paperos/issue/PAP-393/hash-chain-with-nightly-verification-ledgerreverse-and-the-period"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:48.946Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:55:53.213Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-393: Hash chain with nightly verification, ledger.reverse and the period close and lock workflow

@@ -11,14 +11,17 @@ milestone: "Contracts and conformance wired"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-17", "PAP-434"]
-blocks: []
+blockedBy: ["PAP-17", "PAP-434", "PAP-537"]
+blocks: ["PAP-553"]
 key: "module-system/config-secrets-port"
 url: "https://linear.app/paperos/issue/PAP-444/build-the-config-and-secrets-port-manifests-declare-settings-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:50:09.594Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:08.221Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-444: Build the config and secrets port: manifests declare settings and secret names, the kernel validates at boot and hands out secrets through one adapter (env or credential broker)

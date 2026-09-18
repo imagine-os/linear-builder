@@ -6,7 +6,7 @@ projectName: "Multi-Input Control & Accessibility"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Touch, pen, gamepad"
 state: "Backlog"
 parent: "PAP-155"
@@ -15,10 +15,13 @@ blockedBy: ["PAP-152", "PAP-329"]
 blocks: ["PAP-331"]
 key: "input/dnd/keyboard-announcements"
 url: "https://linear.app/paperos/issue/PAP-330/keyboard-alternative-announcements-and-focus-restore"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:29.147Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:03.248Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-330: Keyboard alternative, announcements and focus restore

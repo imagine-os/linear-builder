@@ -6,7 +6,7 @@ projectName: "Spec Builder"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Spec editor UI"
 state: "Backlog"
 parent: "PAP-124"
@@ -15,10 +15,13 @@ blockedBy: ["PAP-376"]
 blocks: []
 key: "spec-builder/spec-editor-ui/preview"
 url: "https://linear.app/paperos/issue/PAP-378/spec-editor-live-preview-at-selectable-widths-flow-graph-tab-keyboard"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:43.282Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:53.654Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-378: Spec editor: live preview at selectable widths, flow-graph tab, keyboard shortcuts and accessibility polish
@@ -74,6 +77,9 @@ Open the Preview tab, switch to 320 px and dark, select the `empty` state and se
 * Shortcut conflicts with browser: registry warns; alternative shown in the tooltip.
 * Reduced motion: preview transitions disabled (PAP-72).
 
+*Round 4 amendment (2026-09-18):*
+Preview of a page with `sync: live` queries must not open Electric shapes inside the iframe: it uses the generated MSW handlers and shape snapshot from PAP-747; until that lands, `live` hooks are stubbed with an empty snapshot and a banner in the preview.
+
 **Dependencies**
 
 Blocked by PAP-376. Soft: PAP-120, PAP-123, PAP-151, PAP-152, PAP-83.
@@ -85,3 +91,5 @@ Built by Nova (Canvas Cartographer) with Iris on accessibility; reviewed by Sent
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/spec-builder/msw-fixtures-from-data` = PAP-747.

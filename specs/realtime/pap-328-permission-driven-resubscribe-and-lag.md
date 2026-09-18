@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-143"
 children: []
 blockedBy: ["PAP-327"]
-blocks: ["PAP-144", "PAP-147", "PAP-148"]
+blocks: ["PAP-144", "PAP-147", "PAP-148", "PAP-381", "PAP-599", "PAP-601", "PAP-901"]
 key: "realtime/record-sync/resubscribe-lag"
 url: "https://linear.app/paperos/issue/PAP-328/permission-driven-resubscribe-and-lag-measurement"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:28.953Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:23.194Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-328: Permission-driven resubscribe and lag measurement

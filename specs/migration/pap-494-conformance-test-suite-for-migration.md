@@ -11,14 +11,17 @@ milestone: "Airtable, Notion, ClickUp importers"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-441", "PAP-492"]
+blockedBy: ["PAP-441", "PAP-492", "PAP-541"]
 blocks: ["PAP-496"]
 key: "module/migration/conformance"
 url: "https://linear.app/paperos/issue/PAP-494/conformance-test-suite-for-migration-contract"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:44.914Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:00.022Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-494: Conformance test suite for migration contract

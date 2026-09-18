@@ -11,14 +11,17 @@ milestone: "Airtable, Notion, ClickUp importers"
 state: "Backlog"
 parent: "PAP-203"
 children: []
-blockedBy: ["PAP-418"]
+blockedBy: ["PAP-128", "PAP-418"]
 blocks: []
 key: "child/PAP-203/2"
 url: "https://linear.app/paperos/issue/PAP-419/notion-hierarchy-page-tree-picker-docs-placement-and-conversion-report"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:54.714Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:30:55.136Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 2
+dueDate: null
+cycle: null
 ---
 
 # PAP-419: Notion hierarchy, page tree picker, docs placement and conversion report

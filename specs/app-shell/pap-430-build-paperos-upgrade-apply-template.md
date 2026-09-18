@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-22", "PAP-362", "PAP-442"]
+children: ["PAP-498", "PAP-499"]
+blockedBy: ["PAP-22", "PAP-362", "PAP-503"]
 blocks: []
 key: "gp/app-shell/upgrade"
 url: "https://linear.app/paperos/issue/PAP-430/build-paperos-upgrade-apply-template-updates-to-generated-apps-with"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:30.303Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:09.848Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-430: Build `paperos upgrade`: apply template updates to generated apps with three-way merge, codemods, regeneration and an upgrade pull request
@@ -87,6 +90,8 @@ Provides: `upgradeApp(opts): UpgradeReport`, the `ownership.yaml` schema, the co
 **Dependencies**
 
 Hard: PAP-22, `paperos gen` pipeline. Soft: PAP-264, PAP-266, PAP-53, PAP-49, PAP-133, PAP-276, PAP-24, PAP-45 (Forgejo packages), PAP-48 (bot token), PAP-52 (release feed); PAP-29's drill upgrades a drill app with this command. Blocks nothing in this round; every generated app depends on it operationally.
+
+*Round 4 (2026-09-18): PAP-442 soft: the swap playbook automation (10-01) lands after* `paperos upgrade` *(09-29); until it lands,* `paperos upgrade` *ships without module-swap awareness; PAP-442 adds the* `module swap` *hook into the upgrade flow when it lands. The* `blocks` *relation PAP-442 -> PAP-430 was removed.*
 
 **Agent**
 

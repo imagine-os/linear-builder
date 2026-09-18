@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "Payroll adapter and cash dashboard"
 state: "Backlog"
 parent: null
-children: ["PAP-398", "PAP-399", "PAP-400"]
+children: ["PAP-400", "PAP-399", "PAP-398"]
 blockedBy: ["PAP-175", "PAP-176", "PAP-179", "PAP-359", "PAP-394"]
 blocks: []
 key: "business-core/payroll-adapter"
 url: "https://linear.app/paperos/issue/PAP-184/define-the-payroll-provider-interface-and-implement-the-first-adapter"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:49.306Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:57:14.171Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-10-01"
+cycle: null
 ---
 
 # PAP-184: Define the payroll provider interface and implement the first adapter (Check or Gusto Embedded)

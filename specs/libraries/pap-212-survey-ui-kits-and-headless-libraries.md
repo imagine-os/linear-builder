@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-209"]
-blocks: ["PAP-67", "PAP-236"]
+blocks: ["PAP-67", "PAP-236", "PAP-659"]
 key: "libraries/ui-landscape"
 url: "https://linear.app/paperos/issue/PAP-212/survey-ui-kits-and-headless-libraries-base-ui-radix-react-aria-shadcn"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:57.033Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:46.288Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-20"
+cycle: null
 ---
 
 # PAP-212: Survey UI kits and headless libraries (Base UI, Radix, React Aria, shadcn, Ark) and recommend
@@ -48,6 +51,9 @@ Out: the 20 production components (PAP-67), icons (PAP-68), form library (follow
 * Harness: Vite app with a route per candidate and component; Playwright screenshots at 375, 768, 1280 in light and dark; `@axe-core/playwright`; `vite build --mode analyze` with visualizer JSON per route.
 * Tauri check inside PAP-19's shell if merged, else a minimal Tauri 2 scaffold: open Dialog and Menu from a secondary window and confirm portals attach to the right document.
 * The recommendation states which primitives the winner lacks (date picker) and their source (React Aria date components as fallback), plus migration hours to the runner-up.
+
+*Round 4 amendment (2026-09-18):*
+Build the five candidates on the shared harness (PAP-753) when merged: `spikes/ui-kits/candidates/<lib>/`, `pnpm spike ui-kits --bench --shots`; results in `results/summary.json` feed `pnpm lib score --facts-from`. If the kit is unmerged on 09-17, build inline and move the routes into the kit shape before closing.
 
 **Interface contract**
 
@@ -90,3 +96,5 @@ Researched by Scout (Library Evaluator) paired with Iris (Component Crafter). Re
 **Size**
 
 M: five spikes with measurements, tightly time-boxed to one day.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/libraries/spike-harness-kit` = PAP-753.

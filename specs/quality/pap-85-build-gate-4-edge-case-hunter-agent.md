@@ -10,15 +10,18 @@ surfaces: ["Agent"]
 milestone: "Visual and video gates"
 state: "Backlog"
 parent: null
-children: ["PAP-249", "PAP-250", "PAP-251"]
-blockedBy: ["PAP-81", "PAP-114", "PAP-239", "PAP-240", "PAP-244", "PAP-245"]
-blocks: []
+children: ["PAP-251", "PAP-249", "PAP-250"]
+blockedBy: ["PAP-81", "PAP-114", "PAP-239", "PAP-240", "PAP-243", "PAP-244", "PAP-245", "PAP-677"]
+blocks: ["PAP-843"]
 key: "quality/edge-case-hunter"
 url: "https://linear.app/paperos/issue/PAP-85/build-gate-4-edge-case-hunter-agent-generating-adversarial-inputs"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:14.481Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:31:01.574Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-85: Build gate 4: edge-case hunter agent generating adversarial inputs, empty/huge/unicode states, network failure and slow-device scenarios from page specs

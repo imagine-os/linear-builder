@@ -6,19 +6,22 @@ projectName: "Identity, Roles & Audiences"
 phase: "P0"
 type: "Infra"
 priority: 1
-surfaces: ["Staff", "Developer"]
+surfaces: ["Developer"]
 milestone: "Auth works across web and desktop"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-25"]
-blocks: ["PAP-48"]
+blocks: []
 key: "security/founder-break-glass"
 url: "https://linear.app/paperos/issue/PAP-301/harden-the-founder-root-of-trust-hardware-key-mfa-on-every-external"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:20.714Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:24.366Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-301: Harden the founder root of trust: hardware-key MFA on every external account, an offline recovery age key with escrow, a one-command revoke-all, and the break-glass runbook filed as a single Needs Justin checklist
@@ -78,6 +81,8 @@ Run `pnpm security:accounts-check` and read the table; then `ops/security/revoke
 **Dependencies**
 
 Blocked by PAP-25. Blocks PAP-48. Soft: PAP-111, PAP-60, PAP-219, PAP-300, PAP-354.
+
+*Round 4 (2026-09-18): PAP-48 soft: this issue no longer blocks PAP-48 because the founder root-of-trust hardening (09-23) lands after the forge milestone (09-20); PAP-48 proceeds (create the bot accounts and deploy keys with the current admin credentials; PAP-301 rotates and re-parents them when it lands) and reconciles when this issue lands.*
 
 **Agent**
 

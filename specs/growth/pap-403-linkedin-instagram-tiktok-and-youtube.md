@@ -15,10 +15,13 @@ blockedBy: ["PAP-402"]
 blocks: []
 key: "growth/social/adapters-review-gated"
 url: "https://linear.app/paperos/issue/PAP-403/linkedin-instagram-tiktok-and-youtube-adapters-in-dryrun-with-payload"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:51.364Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:15.571Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-403: LinkedIn, Instagram, TikTok and YouTube adapters in dryRun with payload snapshots, OAuth connect flows and re-auth banners

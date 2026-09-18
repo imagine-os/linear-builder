@@ -6,7 +6,7 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Docs"
 priority: 2
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: null
@@ -15,10 +15,13 @@ blockedBy: ["PAP-16", "PAP-19", "PAP-257", "PAP-305"]
 blocks: []
 key: "app-shell/template-docs"
 url: "https://linear.app/paperos/issue/PAP-24/write-the-repo-template-guide-folder-conventions-how-an-agent-adds-a"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:55.547Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:45.293Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-24: Write the repo template guide: folder conventions, how an agent adds a page, how to ship each target

@@ -10,15 +10,18 @@ surfaces: ["Agent"]
 milestone: "Roster defined and installed"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-48", "PAP-104", "PAP-287"]
-blocks: ["PAP-298"]
+children: ["PAP-710", "PAP-709"]
+blockedBy: ["PAP-48", "PAP-104", "PAP-287", "PAP-521"]
+blocks: ["PAP-298", "PAP-712"]
 key: "agents/tool-scopes"
 url: "https://linear.app/paperos/issue/PAP-106/implement-per-character-mcp-allowlists-and-permission-modes-and-verify"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:23.827Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:40.217Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-106: Implement per-character MCP allowlists and permission modes and verify least privilege with an automated test
@@ -33,6 +36,10 @@ Make the schema's `tools`, `mcpServers`, `permissionMode` and `access` real: eve
 
 * In: per-character runtime bundles from `pnpm agents build`, the `PreToolUse` enforcement hook, per-character secret injection from a sops map, the least-privilege probe suite, the privilege matrix document.
 * Out: container isolation and egress control (PAP-280), forge bot account creation (PAP-48), budget limits (PAP-111).
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: this issue is split into two children, `Least privilege: per-character runtime bundles and the enforce-scope hook` (PAP-709, M) and `Least privilege: nightly probe suite and the generated privilege matrix` (PAP-710, S); this issue becomes their umbrella and keeps the integration test (37-row table). `secretsFor()` is retired in favour of PAP-300 broker placeholders; the bundle's `envNames` list names placeholders only.
 
 **Spec**
 
@@ -87,3 +94,5 @@ Built by Forge (Ops Runner) for secrets and bundles, Atlas (Dispatcher) for laun
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/agents/character-bundles-and-enforce-scope-hook` = PAP-709, `r4/agents/least-privilege-probe-suite-and-matrix` = PAP-710.

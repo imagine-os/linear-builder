@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: []
-blocks: []
+blockedBy: ["PAP-16", "PAP-33", "PAP-58", "PAP-579"]
+blocks: ["PAP-506"]
 key: "gap/app-shell/onboarding-wizard"
 url: "https://linear.app/paperos/issue/PAP-367/build-the-first-run-tenant-onboarding-wizard-create-organisation"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:40.142Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:43.804Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-367: Build the first-run tenant onboarding wizard: create organisation, choose business template, invite team, connect billing, land on a seeded dashboard
@@ -89,3 +92,5 @@ Built by Forge with Iris (Component Crafter) and Quill on copy. Reviewed by Sent
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* PAP-506 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-506.

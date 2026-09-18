@@ -11,14 +11,17 @@ milestone: "All view types"
 state: "Backlog"
 parent: "PAP-168"
 children: []
-blockedBy: ["PAP-344"]
-blocks: ["PAP-346"]
+blockedBy: ["PAP-344", "PAP-651"]
+blocks: ["PAP-346", "PAP-634"]
 key: "tables/time/timeline"
 url: "https://linear.app/paperos/issue/PAP-345/timeline-view-two-axis-virtualised-canvas-lanes-zoom-levels-and-bar"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:33.576Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:03.017Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-345: Timeline view: two-axis virtualised canvas, lanes, zoom levels and bar editing

@@ -12,13 +12,16 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-96", "PAP-281", "PAP-299"]
+blocks: ["PAP-96", "PAP-281", "PAP-299", "PAP-691", "PAP-713", "PAP-716", "PAP-717"]
 key: "pm-linear/session-playbook"
 url: "https://linear.app/paperos/issue/PAP-92/write-the-session-playbook-how-a-claude-session-picks-up-an-issue-what"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:15.421Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:52:36.409Z"
 model: "claude-fable-5-1"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-20"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-92: Write the session playbook: how a Claude session picks up an issue, what it must read, how it reports and ends
@@ -85,6 +88,8 @@ Open the playbook, run `pnpm playbook:dryrun`, watch three comments appear on th
 **Dependencies**
 
 None (`readyNow`). Blocks PAP-96. Consumed by PAP-104, PAP-105, PAP-108.
+
+*Round 4 critique fix (2026-09-18):* An umbrella's dependents are also blocked by its last child in build order: for every `P blocks D` the last child carries `Clast blocks D` (skipped only where it would create a cycle, a milestone inversion or a deferred -> scheduled edge), so the promotion pass gates D on the real work; the umbrella itself reaches In Review when that last child does.
 
 **Agent**
 

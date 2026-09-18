@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: ["PAP-227", "PAP-228", "PAP-229"]
 blockedBy: ["PAP-34", "PAP-55", "PAP-279"]
-blocks: ["PAP-39", "PAP-60", "PAP-61", "PAP-64", "PAP-116", "PAP-131", "PAP-140", "PAP-163", "PAP-172", "PAP-178", "PAP-222", "PAP-317", "PAP-335"]
+blocks: ["PAP-39", "PAP-60", "PAP-61", "PAP-64", "PAP-116", "PAP-131", "PAP-140", "PAP-163", "PAP-172", "PAP-178", "PAP-222", "PAP-317", "PAP-335", "PAP-501", "PAP-538", "PAP-566", "PAP-586", "PAP-623", "PAP-768", "PAP-835", "PAP-849", "PAP-884", "PAP-902", "PAP-912"]
 key: "identity/rbac-abac"
 url: "https://linear.app/paperos/issue/PAP-59/build-permission-engine-combining-role-based-grants-with-attribute"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:17.048Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:56:50.654Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-59: Build permission engine combining role-based grants with attribute policies declared in page specs

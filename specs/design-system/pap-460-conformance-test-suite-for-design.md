@@ -11,14 +11,17 @@ milestone: "Component library covers app shell needs"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-441", "PAP-459"]
+blockedBy: ["PAP-441", "PAP-459", "PAP-541"]
 blocks: ["PAP-461"]
 key: "module/design-system/conformance"
 url: "https://linear.app/paperos/issue/PAP-460/conformance-test-suite-for-design-system-contract"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:11.367Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:05.360Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-460: Conformance test suite for design-system contract

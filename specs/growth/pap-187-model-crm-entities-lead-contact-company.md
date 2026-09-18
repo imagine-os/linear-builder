@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "CRM core"
 state: "Backlog"
 parent: null
-children: []
+children: ["PAP-790", "PAP-791"]
 blockedBy: ["PAP-33", "PAP-448"]
-blocks: ["PAP-189", "PAP-190", "PAP-191", "PAP-193", "PAP-194", "PAP-195", "PAP-197", "PAP-401", "PAP-404", "PAP-410", "PAP-485"]
+blocks: ["PAP-189", "PAP-190", "PAP-191", "PAP-193", "PAP-194", "PAP-195", "PAP-197", "PAP-401", "PAP-404", "PAP-410", "PAP-485", "PAP-793", "PAP-863", "PAP-867", "PAP-897"]
 key: "growth/crm-model"
 url: "https://linear.app/paperos/issue/PAP-187/model-crm-entities-lead-contact-company-deal-pipeline-stage-activity"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:04.437Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:35.924Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-187: Model CRM entities: lead, contact, company, deal, pipeline stage, activity, segment

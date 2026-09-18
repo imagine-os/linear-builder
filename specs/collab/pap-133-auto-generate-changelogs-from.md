@@ -6,19 +6,22 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Docs and prompt log stores"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-46"]
-blocks: ["PAP-52"]
+blocks: ["PAP-52", "PAP-522", "PAP-873", "PAP-874"]
 key: "collab/changelog"
 url: "https://linear.app/paperos/issue/PAP-133/auto-generate-changelogs-from-conventional-commits-and-pr-summaries"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:32.108Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:39.873Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-133: Auto-generate changelogs from conventional commits and PR summaries, rendered per app and per tenant
@@ -49,6 +52,9 @@ Out: marketing posts (PAP-192), email announcements (notifications), feature fla
 * RLS `tenant_id is null or tenant_id = current`.
 * Rewritten copy: headline under 90 characters, body under 60 words, no character names, present tense.
 * Version from the tag; preview uses `next`.
+
+*Round 4 amendment (2026-09-18):*
+Per-tenant "What's new" filters entries by the tenant's enabled modules (PAP-266 `tenant_module`): an entry whose PR touched only `packages/<module>` files of a disabled module is hidden for that tenant. The Claude rewrite is capped at 40 entries per build and $2 per version; beyond the cap, remaining entries stay `needs_review` with the original text.
 
 **Interface contract**
 

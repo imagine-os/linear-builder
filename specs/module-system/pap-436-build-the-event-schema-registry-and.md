@@ -11,14 +11,17 @@ milestone: "Kernel and lint live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-303", "PAP-433"]
-blocks: ["PAP-136", "PAP-174", "PAP-443"]
+blockedBy: ["PAP-303", "PAP-433", "PAP-555", "PAP-556"]
+blocks: ["PAP-136", "PAP-174", "PAP-443", "PAP-540", "PAP-725"]
 key: "module-system/event-schema-registry"
 url: "https://linear.app/paperos/issue/PAP-436/build-the-event-schema-registry-and-versioned-envelopes-aggregated"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:50:05.968Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:09.473Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-436: Build the event schema registry and versioned envelopes: aggregated `topics.json`, upcasters, dual-publish and subscriber compatibility checks
@@ -59,6 +62,10 @@ Provides: `topics.json`, `collectTopics`, `defineUpcaster`, `dualPublish`, `/api
 * Integration (compose): publish v1 while a v2 subscriber is registered with an upcaster; the subscriber receives v2 shape; ordering per subject holds under 1,000 events.
 * Static: `topics.json` drift check; every topic in every manifest exists in a contract.
 * Fixtures: each topic's golden payloads validate; upcasters map old fixtures onto new schemas.
+
+*Round 4 amendment (2026-09-18):*
+
+* Conformance case shared with every subscriber contract: a duplicate delivery of the same `event.id` (as happens under `dualPublish`) must be a no-op, asserted by the runner for each subscriber double; `dualPublish` and PAP-304 idempotency keys are cross-referenced in `docs/platform/events.md`.
 
 **Definition of done**
 

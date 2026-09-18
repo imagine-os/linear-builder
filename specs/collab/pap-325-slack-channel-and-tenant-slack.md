@@ -6,19 +6,22 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Comments and canvas"
 state: "Backlog"
 parent: "PAP-136"
 children: []
-blockedBy: ["PAP-324"]
-blocks: []
+blockedBy: ["PAP-324", "PAP-725"]
+blocks: ["PAP-697"]
 key: "collab/notifications/slack-channel"
 url: "https://linear.app/paperos/issue/PAP-325/slack-channel-and-tenant-slack-configuration"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:27.847Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:22.784Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-325: Slack channel and tenant Slack configuration

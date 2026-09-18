@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-433", "PAP-439"]
-blocks: ["PAP-442"]
+blocks: ["PAP-442", "PAP-539", "PAP-544"]
 key: "module-system/compat-matrix"
 url: "https://linear.app/paperos/issue/PAP-440/add-the-contract-compatibility-matrix-ci-job-resolve-every-requires"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:50:08.325Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:09.417Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-440: Add the contract compatibility matrix CI job: resolve every `requires` against provided versions, publish `compat-matrix.md` and fail on incompatible bumps

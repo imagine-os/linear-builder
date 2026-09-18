@@ -6,19 +6,22 @@ projectName: "Data Layer & Database"
 phase: "P0"
 type: "Spec"
 priority: 1
-surfaces: ["Developer", "Customer"]
+surfaces: ["Developer"]
 milestone: "Postgres + Drizzle baseline"
 state: "Backlog"
 parent: null
-children: []
+children: ["PAP-558", "PAP-557"]
 blockedBy: ["PAP-267"]
-blocks: ["PAP-148", "PAP-172", "PAP-193", "PAP-194", "PAP-222"]
+blocks: ["PAP-148", "PAP-172", "PAP-193", "PAP-194", "PAP-222", "PAP-613", "PAP-624", "PAP-793", "PAP-836", "PAP-841", "PAP-851", "PAP-855", "PAP-864", "PAP-900"]
 key: "contracts/idempotency-rate-limits"
 url: "https://linear.app/paperos/issue/PAP-304/specify-and-build-request-idempotency-and-rate-limiting-idempotency"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:22.572Z"
-model: "claude-opus-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:51.049Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-304: Specify and build request idempotency and rate limiting: `Idempotency-Key` header, `idempotency_keys` table with replay semantics, `POST /api/v1/rpc/batch`, Postgres-backed token buckets per actor, API key and IP
@@ -50,6 +53,9 @@ Out: WAF or edge limits (Caddy), per-tenant billing of usage (business-core usag
 * Rate-limit window is 60 s fixed-window plus previous-window weighting (sliding approximation); limits evaluated before auth for `ip`, after auth for `actor`/`apiKey`; one round trip per request via a single SQL function `paperos.rate_limit_hit(scope, key, limit)`.
 * Failure mode: if the limits table is unavailable the middleware fails open for authenticated actors and closed for `ip`, logs `rate_limit_degraded` (PAP-40).
 * Batch: total body 1 MB (PAP-267 limit); mutations for the same `entity` run in order, distinct entities may run concurrently up to 4; every item is idempotent by its own key; the batch itself carries an `Idempotency-Key` to replay the whole result.
+
+*Round 4 amendment (2026-09-18):*
+Tighten the failure mode: fail-open for authenticated actors lasts at most 60 s per incident, then the limiter fails closed for everyone; every degraded minute emits a security event (PAP-356) in addition to the log line. Chain order is owned jointly by the two children PAP-558 and PAP-557; whichever merges second updates the PAP-267 order test.
 
 **Interface contract**
 
@@ -93,3 +99,5 @@ M
 **Demo**
 
 Reviewer runs the API locally, sends the same `curl -H 'Idempotency-Key: demo-1'` invoice create twice and sees one row plus `Idempotent-Replayed: true`, changes the body and gets 422, then runs `pnpm tsx examples/hammer.ts` which fires 700 requests and prints the first 429 with its `Retry-After`. Under two minutes.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/data-layer/idempotency-batch` = PAP-557, `r4/data-layer/rate-limits` = PAP-558.

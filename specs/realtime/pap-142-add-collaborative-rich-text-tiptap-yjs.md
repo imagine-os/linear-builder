@@ -6,19 +6,22 @@ projectName: "Multiplayer & Realtime"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Yjs server and presence"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-127", "PAP-140"]
-blocks: ["PAP-131", "PAP-317", "PAP-379"]
+children: ["PAP-604", "PAP-603"]
+blockedBy: ["PAP-127", "PAP-140", "PAP-666"]
+blocks: ["PAP-131", "PAP-317", "PAP-379", "PAP-627", "PAP-654", "PAP-737", "PAP-837", "PAP-856"]
 key: "realtime/collab-text"
 url: "https://linear.app/paperos/issue/PAP-142/add-collaborative-rich-text-tiptap-yjs-as-the-shared-editor-for-docs"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:33.480Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:41.887Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-142: Add collaborative rich text (Tiptap + Yjs) as the shared editor for docs and comments
@@ -83,6 +86,9 @@ Open a doc in two browsers, type in both and watch carets; press `mod+k`, run �
 
 PAP-127, PAP-140 (hard, encoded). Soft: PAP-141, PAP-67, PAP-151, PAP-152, PAP-37, PAP-60. Blocks PAP-131 and the planned runtime docs store; consumed by PAP-164, PAP-100, PAP-159.
 
+*Round 4 amendment (2026-09-18):*
+Work is split into PAP-603 (binding, schema, renderer, plain text, undo, read-only; blocks PAP-131) and PAP-604 (toolbar, commands, mentions, markdown, images). PAP-131 and PAP-317 depend on the core only, which shortens the zero-slack chain 140 → 142 → 131 by roughly one session.
+
 **Agent**
 
 Builder: Nova (CRDT Engineer). Reviewer: Sentinel (Code Reviewer, Security Auditor for the renderer); Iris reviews toolbar styling.
@@ -90,3 +96,5 @@ Builder: Nova (CRDT Engineer). Reviewer: Sentinel (Code Reviewer, Security Audit
 **Size**
 
 M: Tiptap does the heavy lifting; integration, accessibility and two modes remain.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/realtime/editor-core` = PAP-603, `r4/realtime/editor-features` = PAP-604.

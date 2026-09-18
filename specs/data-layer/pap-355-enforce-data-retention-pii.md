@@ -6,19 +6,22 @@ projectName: "Data Layer & Database"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Tenant-safe and observable"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-33", "PAP-38", "PAP-43"]
-blocks: ["PAP-221"]
+children: ["PAP-560", "PAP-561", "PAP-559"]
+blockedBy: ["PAP-33", "PAP-38", "PAP-43", "PAP-564", "PAP-565"]
+blocks: ["PAP-221", "PAP-859", "PAP-896", "PAP-897", "PAP-898", "PAP-902"]
 key: "security/retention-pii"
 url: "https://linear.app/paperos/issue/PAP-355/enforce-data-retention-pii-classification-and-tenant-hard-purge-pii"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:36.963Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:20.165Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-355: Enforce data retention, PII classification and tenant hard-purge: `pii` column annotations driving redaction and OTel filters, per-table retention jobs, and the export-first purge after the grace period

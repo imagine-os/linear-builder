@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-28"
 children: []
 blockedBy: ["PAP-117", "PAP-305", "PAP-433"]
-blocks: ["PAP-265", "PAP-453"]
+blocks: ["PAP-265", "PAP-453", "PAP-833", "PAP-847", "PAP-862", "PAP-877", "PAP-893", "PAP-912"]
 key: "child/PAP-28/9"
 url: "https://linear.app/paperos/issue/PAP-264/module-manifest-contract-and-registry-packagescoremodules"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:50:05.968Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:28.138Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-264: Module manifest contract and registry (packages/core/modules)

@@ -6,19 +6,22 @@ projectName: "Version Control & Forge Independence"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "CI runs on both forges"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-47", "PAP-48", "PAP-449"]
-blocks: ["PAP-276"]
+blockedBy: ["PAP-47", "PAP-48", "PAP-449", "PAP-519", "PAP-520", "PAP-521"]
+blocks: ["PAP-276", "PAP-526", "PAP-531", "PAP-678"]
 key: "forge/repo-bootstrap"
 url: "https://linear.app/paperos/issue/PAP-51/script-forge-bootstrap-repo-to-configure-imagine-os-repos-with-mirrors"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:05.578Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:49:49.789Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-51: Script `forge bootstrap <repo>` to configure imagine-os repos with mirrors, secrets, labels and webhooks
@@ -51,6 +54,10 @@ Out: cloning template code (PAP-22 does that after bootstrap), creating Linear p
    9. Pages enabled on the `gh-pages` branch (PAP-15);
   10. `.paperos/repo.json` written with Linear project id, Forgejo id and bootstrap version.
 * Exit codes 0, 3 missing repo, 4 rate limited after 5 retries with jitter.
+
+*Round 4 amendment (2026-09-18):*
+
+* Step 8 also commits the community health files when absent: `SECURITY.md` (disclosure address and the PAP-219 policy link), `CODE_OF_CONDUCT.md`, `.github/ISSUE_TEMPLATE/config.yml` with `blank_issues_enabled: false` and a single contact link to the Linear intake (PAP-307), and `.github/dependabot.yml` disabled in favour of Renovate (PAP-217). \* `--ttl <duration>` writes the `paperos-ttl` marker consumed by PAP-531.
 
 **Interface contract**
 
@@ -100,3 +107,7 @@ Built by Forge (lead) with Ops Runner for live verification. Reviewed by Sentine
 **Size**
 
 M: ten idempotent steps with recorded-response tests.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/forge/repo-cleanup` = PAP-531.
+
+*Round 4 critique fix (2026-09-18):* PAP-526 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-526.

@@ -11,14 +11,17 @@ milestone: "Airtable, Notion, ClickUp importers"
 state: "Backlog"
 parent: "PAP-202"
 children: []
-blockedBy: ["PAP-199", "PAP-492"]
+blockedBy: ["PAP-199", "PAP-349", "PAP-492"]
 blocks: ["PAP-415"]
 key: "child/PAP-202/0"
 url: "https://linear.app/paperos/issue/PAP-414/airtable-connector-oauth-and-pat-auth-metadata-discovery-record"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:42.001Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:22.347Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-414: Airtable connector: OAuth and PAT auth, metadata discovery, record streaming with 5 rps token bucket and expiring-attachment fetch

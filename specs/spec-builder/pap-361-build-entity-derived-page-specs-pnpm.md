@@ -6,19 +6,22 @@ projectName: "Spec Builder"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Customer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Codegen and conformance tests"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-116", "PAP-117", "PAP-161", "PAP-467"]
-blocks: ["PAP-363"]
+blockedBy: ["PAP-116", "PAP-117", "PAP-467", "PAP-739", "PAP-740"]
+blocks: ["PAP-363", "PAP-507"]
 key: "gp/spec-builder/entity-pages"
 url: "https://linear.app/paperos/issue/PAP-361/build-entity-derived-page-specs-pnpm-spec-genentity-pages-derives-list"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:30.303Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:52.401Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-361: Build entity-derived page specs: `pnpm spec gen:entity-pages` derives list, detail, form and settings pages per entity and audience with view specs, comment anchors and access rules
@@ -82,6 +85,11 @@ Provides: `generateEntityPages(app: AppSpec, opts): { written: string[], views: 
 
 Hard: PAP-117, PAP-116, PAP-161. Soft: PAP-131 anchor grammar, PAP-74 component registry, PAP-164 field types, PAP-16 routes. Blocks the default surfaces starter kit and the `paperos gen` pipeline.
 
+*Round 4 amendment (2026-09-18):*
+Hard on PAP-739 for column, option and `owner` derivation. The `comments: { anchor }` key requires PAP-740; until it lands emit `x-comments` and let the codemod promote it.
+
+*Round 4 (2026-09-18): PAP-161 soft: the view-model spec (PAP-161, Ready, spec-complete) lands 09-28 after the 09-26 codegen milestone; until it lands, derive list/detail/form specs from the entity section and the view-model draft in PAP-161's Spec text; regenerate against the final view model when PAP-161 merges. The* `blocks` *relation PAP-161 -> PAP-361 was removed.*
+
 **Agent**
 
 Built by Forge (Spec Tooling sub-agent); reviewed by Sentinel (spec-conformance) and Iris for the default component choices.
@@ -93,3 +101,6 @@ M: one generator with rule tables, settings templates, fixtures.
 **Demo**
 
 Screenshot of the generated `specs/pages` tree for the clinic app and one generated list spec side by side with its `app.spec.yaml` entity; Storybook link once PAP-120 lands.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/spec-builder/entity-field-grammar` = PAP-739, `r4/spec-builder/schema-v1-1-extensions` = PAP-740.
+*Round 4 critique fix (2026-09-18):* PAP-161 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it.

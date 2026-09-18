@@ -15,10 +15,13 @@ blockedBy: ["PAP-105", "PAP-115"]
 blocks: ["PAP-307", "PAP-360"]
 key: "spec-builder/spec-authoring-skill"
 url: "https://linear.app/paperos/issue/PAP-118/write-the-agent-skill-interview-draft-page-spec-validate-open-linear"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:27.552Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:40.407Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-118: Write the agent skill: interview -> draft page spec -> validate -> open Linear issue

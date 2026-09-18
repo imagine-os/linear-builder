@@ -11,14 +11,17 @@ milestone: "Themable per tenant with docs"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-69", "PAP-128"]
+blockedBy: ["PAP-69", "PAP-128", "PAP-666", "PAP-668", "PAP-669"]
 blocks: []
 key: "design-system/guidelines-docs"
 url: "https://linear.app/paperos/issue/PAP-76/write-design-system-guidelines-voice-density-spacing-when-to-use-what"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:11.819Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:39.415Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-76: Write design system guidelines (voice, density, spacing, when to use what) into the docs system
@@ -40,6 +43,10 @@ Write the design-system guidelines agents consult when a spec leaves room for ju
 * Frontmatter `title, summary, owner: Iris, lastReviewed, appliesTo: [web, desktop, mobile]`; rule IDs `DS-<AREA>-<nn>` cited by every Do/Don't; each page under 1 200 words with a summary box; "Related components" and "Related specs" resolved from `registry.json`.
 * `rules.json` schema `{ id, area, rule, rationale, severity: 'blocker' | 'major' | 'minor', checkable: 'lint' | 'vision' | 'agent' | 'manual', appliesTo?, when?, locale?, examples: { do, dont } }`; severities follow PAP-79.
 * Rendering: PAP-128 docs engine at `/docs/design/...`; Storybook MDX under `Guidelines/` until it merges; embeds via `@storybook/blocks`.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: a thirteenth page `navigation-patterns` (sidebar vs tabs vs breadcrumb, pagination vs infinite scroll, when a Stepper) referencing PAP-661, and a `data-tables` page (DataTable vs GridView decision, from PAP-664); rule namespaces `DS-NAV-*`, `DS-DENS-*` (density) and `DS-RESP-*` (reflow findings from PAP-670); `checkable: 'lint'` rules must name a `DS-LINT-*` rule id from PAP-668.
 
 **Interface contract**
 
@@ -84,3 +91,5 @@ Iris writes; Quill (Changelog Scribe and Page Spec Writer) edits. Reviewed by Se
 **Size**
 
 M.
+
+*Round 4 critique fix (2026-09-18):* resolved 4 round-4 file keys in this description to Linear identifiers: `r4/design-system/design-lint-rules` = PAP-668, `r4/design-system/navigation-components` = PAP-661, `r4/design-system/reflow-zoom-text-spacing-audit` = PAP-670, `r4/design-system/static-data-table` = PAP-664.

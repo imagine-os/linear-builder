@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-32", "PAP-33", "PAP-35", "PAP-269"]
-blocks: ["PAP-107", "PAP-135", "PAP-480"]
+blocks: ["PAP-107", "PAP-135", "PAP-480", "PAP-728", "PAP-729", "PAP-834", "PAP-836"]
 key: "collab/prompt-log-store"
 url: "https://linear.app/paperos/issue/PAP-129/create-the-promptresponse-log-store-session-character-issue-tokens"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:30.049Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:41.321Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-129: Create the prompt/response log store (session, character, issue, tokens, cost, tool calls) with redaction
@@ -48,6 +51,9 @@ Out: hooks (PAP-107), browser UI (PAP-135), metering reports (PAP-98).
 * Ingest p95 under 150 ms for a 1 MB batch via multi-row insert `ON CONFLICT DO NOTHING`.
 * Indexes `(issue_key, started_at desc)`, `(character, started_at desc)`, `(session_id, seq)`, GIN on `tool_input`.
 * Sessions registered as search entity `prompt_session` (PAP-39) for PAP-138.
+
+*Round 4 amendment (2026-09-18):*
+`prompt_session` gains `journal_path text` (written by PAP-728) and `summary_source: search|journal|manual`. Blob contents uploaded through `content_file_id` pass the second-pass redactor before upload, never after. `promptLog.sessions.list` accepts `filter: FilterTree` (PAP-279) so PAP-135's saved views compile server-side.
 
 **Interface contract**
 
@@ -89,3 +95,5 @@ Built by Forge (Schema Wright) with Quill (Prompt Logger) defining fields. Revie
 **Size**
 
 M: contained schema and ingest; performance, dedupe and redaction must be proven.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/collab/build-journals` = PAP-728.

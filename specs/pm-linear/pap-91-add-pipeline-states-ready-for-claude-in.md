@@ -12,13 +12,16 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-22", "PAP-93", "PAP-94", "PAP-95", "PAP-96", "PAP-281"]
+blocks: ["PAP-22", "PAP-93", "PAP-94", "PAP-95", "PAP-96", "PAP-281", "PAP-503", "PAP-691", "PAP-692", "PAP-693", "PAP-694", "PAP-695", "PAP-696", "PAP-700", "PAP-701", "PAP-702", "PAP-722"]
 key: "pm-linear/configure-workspace"
 url: "https://linear.app/paperos/issue/PAP-91/add-pipeline-states-ready-for-claude-in-review-needs-justin-label"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:15.258Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:51:01.448Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-20"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-91: Add pipeline states (Ready for Claude, In Review, Needs Justin), label groups and project templates to Linear team PAP
@@ -55,6 +58,10 @@ Turn the Linear configuration of team PAP into code: one idempotent script that 
 * Desired additions: `Character` group via `issueLabelCreate` with `parentId`; template body from `docs/pm/issue-contract.md`; `workflowStateUpdate` only for description and color, never name or type.
 * `--check` exits 1 with a table `(kind, name, field, live, wanted)`; `--apply` creates or updates, then re-runs `--check` and must print no drift. Refuses to run unless `team.key === "PAP"` or `--team` is explicit.
 * Writes `linear-workspace.json` with ids of every state, label, template and project; later scripts import ids from it.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4 additions managed by the same `--check|--apply` script and recorded in `linear-workspace.json`: team settings `issueEstimationType: fibonacci`, `cyclesEnabled: true` (one-week cycles), `triageEnabled: true` with a `Triage` state; initiative ids, template ids per Type, `Pipeline:` view ids and the labels `gates-pending`, `stuck`, `slack-risk`, `critical-path`, `sla:*`, `source:slack`, `triaged`. Team-setting drift is reported as `manual` and only changed with `--apply`. `--check` runs nightly in the orchestrator and posts drift to the Plan audit issue.
 
 **Interface contract**
 

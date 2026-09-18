@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-44", "PAP-46", "PAP-433"]
-blocks: ["PAP-51", "PAP-276", "PAP-452", "PAP-455"]
+blocks: ["PAP-51", "PAP-276", "PAP-452", "PAP-455", "PAP-526", "PAP-535"]
 key: "module/forge/contract"
 url: "https://linear.app/paperos/issue/PAP-449/publish-paperoscontract-forge-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:29.433Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:56.600Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-449: Publish @paperos/contract-forge v0.1 with manifest
@@ -57,6 +60,10 @@ Requires (manifest `requires[]`): \* `@paperos/contract-identity` ^0.1 (OIDC pri
 
 Rules: Zod 4 only, JSON Schema generated; no `z.bigint()` on wire schemas (PAP-302 codec); one sentence and one fixture per port method; `size-limit` under 50 KB minified; lint R9 passes; manifest `dependsOn` is derived from `requires`.
 
+*Round 4 amendment (2026-09-18):*
+
+* `ForgePort` also exports `pulls.review(pr, { verdict, findings })` and `checks.set(sha, { name, status, summaryUrl })` so Gate 2 (PAP-81, PAP-243) and the merge automation (PAP-527) post verdicts and required checks through the contract on both forges instead of calling the GitHub and Forgejo APIs directly; the Forgejo adapter maps `checks.set` to commit statuses. `mirrorStatus` reads `mirror-status.json` from PAP-520.
+
 **Interface contract**
 
 Provides: `@paperos/contract-forge@0.1.0` with the exports above; `module.manifest.json` valid against `manifest.schema.json`; `ownership.json` `contracts.forge`. Consumes: the manifest schema and validator (`module-system/manifest-schema`), contract-zero (`@paperos/core/types|filter|events`), the decisions in PAP-44 (Write ADR: keep Git as the format, self-host Forgejo, mirror), PAP-46 (Define branch protection, conventional commits and worktree-). Consumed by: PAP-276 (forge client and oRPC procedures), PAP-51 (bootstrap), PAP-52 (release tags), PAP-97 (PR status back to Linear), PAP-278 (PR pages), and the module's conformance and wire issues.
@@ -94,3 +101,5 @@ S
 **Demo**
 
 Reviewer runs `pnpm contract:show forge` and sees `ForgePort`; runs the fixture normaliser on a GitHub and a Forgejo push payload and gets byte-identical envelopes. Under a minute.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/forge/merge-automation` = PAP-527, `r4/forge/mirror-drift-monitor` = PAP-520.

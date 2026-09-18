@@ -11,14 +11,17 @@ milestone: "Acquisition analytics"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-189", "PAP-402", "PAP-404", "PAP-434", "PAP-435", "PAP-485", "PAP-488"]
-blocks: ["PAP-266"]
+blockedBy: ["PAP-189", "PAP-434", "PAP-435", "PAP-485", "PAP-488", "PAP-537", "PAP-538"]
+blocks: []
 key: "module/growth/wire"
 url: "https://linear.app/paperos/issue/PAP-491/wire-growth-behind-the-module-registry-with-an-adapter-and-feature"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:47.509Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:56.989Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-10-01"
+cycle: null
 ---
 
 # PAP-491: Wire growth behind the module registry with an adapter and feature flag
@@ -76,6 +79,12 @@ Provides: `growth` bound in the kernel as `@paperos/contract-growth` provider `d
 
 Blocked by `module/growth/contract`, `module/growth/conformance`, `module-system/registry-di`, `module-system/flag-swap` and PAP-189, PAP-402, PAP-404. Blocks PAP-266.
 
+*Round 4 (2026-09-18): PAP-266 soft: this issue no longer blocks PAP-266 because the growth wire issue lands (09-30/10-01) after the* `--without` *milestone (09-29); PAP-266 proceeds (PAP-266's removal matrix covers modules whose wire issue has merged; PAP-491 adds its module to the matrix and to* `paperos create --without` *when it lands) and reconciles when this issue lands.*
+
+*Round 4 (2026-09-18): PAP-402 soft: PAP-402 is deferred to v0.2 and must not block scheduled work; until it lands, wire growth with the CRM core (PAP-189) and the contract stubs for social; the X adapter and publishing worker join when PAP-402 is reinstated. The* `blocks` *relation PAP-402 -> PAP-491 was removed.*
+
+*Round 4 (2026-09-18): PAP-404 soft: PAP-404 is deferred to v0.2 and must not block scheduled work; until it lands, wire growth with the CRM core (PAP-189) and the contract stubs for outreach; the provider adapters and scheduler join when PAP-404 is reinstated. The* `blocks` *relation PAP-404 -> PAP-491 was removed.*
+
 **Agent**
 
 Built by Beacon (Growth: Marketing, Outreach & CRM owner). Reviewed by Nova and Forge (kernel).
@@ -87,3 +96,6 @@ M
 **Demo**
 
 Reviewer flips `module.growth.impl` for `SocialAdapterPort` from `x` to `mock` for the demo tenant, schedules a post and sees the mock payload in the run log; flips back. Ninety seconds.
+
+*Round 4 critique fix (2026-09-18):* PAP-402 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it.
+*Round 4 critique fix (2026-09-18):* PAP-404 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it.

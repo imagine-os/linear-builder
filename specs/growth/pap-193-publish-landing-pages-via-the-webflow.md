@@ -10,15 +10,18 @@ surfaces: ["Customer"]
 milestone: "Campaigns and social"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-35", "PAP-187", "PAP-269", "PAP-304", "PAP-353", "PAP-485"]
-blocks: []
+children: ["PAP-793", "PAP-794"]
+blockedBy: ["PAP-35", "PAP-187", "PAP-269", "PAP-304", "PAP-353", "PAP-485", "PAP-558", "PAP-620", "PAP-658", "PAP-790", "PAP-791"]
+blocks: ["PAP-855", "PAP-870"]
 key: "growth/landing-forms"
 url: "https://linear.app/paperos/issue/PAP-193/publish-landing-pages-via-the-webflow-api-and-capture-forms-into-the"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:38.913Z"
-model: "claude-sonnet-5"
-effort: "low"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:51:38.257Z"
+model: null
+effort: null
+estimate: null
+dueDate: null
+cycle: null
 ---
 
 # PAP-193: Publish landing pages via the Webflow API and capture forms into the CRM

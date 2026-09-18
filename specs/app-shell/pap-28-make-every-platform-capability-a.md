@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Developer", "Staff"]
+surfaces: ["Developer"]
 milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: null
-children: ["PAP-264", "PAP-265", "PAP-266"]
-blockedBy: ["PAP-22", "PAP-117", "PAP-303", "PAP-305"]
+children: ["PAP-265", "PAP-266", "PAP-264"]
+blockedBy: ["PAP-22", "PAP-117", "PAP-303", "PAP-305", "PAP-503", "PAP-555", "PAP-556"]
 blocks: ["PAP-29", "PAP-126"]
 key: "app-shell/feature-modules"
 url: "https://linear.app/paperos/issue/PAP-28/make-every-platform-capability-a-removable-module-module-manifests"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:11.492Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:49:11.156Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-28: Make every platform capability a removable module: module manifests, `modules:` in app.spec.yaml, `paperos create --without`, per-tenant module toggles and dead-code checks

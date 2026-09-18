@@ -6,19 +6,22 @@ projectName: "Business Core: Payments, Finance & Payroll"
 phase: "P2"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Developer"]
+surfaces: ["Developer"]
 milestone: "Stripe billing live"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-59", "PAP-177", "PAP-229", "PAP-484"]
-blocks: ["PAP-391"]
+blocks: ["PAP-391", "PAP-431", "PAP-624", "PAP-844", "PAP-894"]
 key: "business-core/entitlements"
 url: "https://linear.app/paperos/issue/PAP-178/map-plans-to-feature-entitlements-enforced-by-the-permission-engine"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:32.576Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:36.879Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-178: Map plans to feature entitlements enforced by the permission engine

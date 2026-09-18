@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-45"
 children: []
 blockedBy: ["PAP-25"]
-blocks: ["PAP-47", "PAP-48", "PAP-50", "PAP-274"]
+blocks: ["PAP-47", "PAP-48", "PAP-50", "PAP-274", "PAP-498", "PAP-519", "PAP-520", "PAP-521", "PAP-522", "PAP-529", "PAP-530", "PAP-534", "PAP-535"]
 key: "child/PAP-45/18"
 url: "https://linear.app/paperos/issue/PAP-273/forgejo-compose-stack-behind-caddy-with-hardened-appini-accounts-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:14.390Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:48.946Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-20"
+cycle: null
 ---
 
 # PAP-273: Forgejo compose stack behind Caddy with hardened app.ini, accounts and org
@@ -40,6 +43,10 @@ Out: backups (child 2), OIDC (child 3).
 * Image pinned by digest; `postgres:17-alpine` for Forgejo's database; named volumes.
 * `app.ini` keys per parent, including `DEFAULT_ACTIONS_URL` and `[packages] ENABLED=true`.
 * `paperos-admin` API token stored in `ops/secrets/forge.enc.yaml`.
+
+*Round 4 amendment (2026-09-18):*
+
+* `[repository] DEFAULT_REPO_UNITS = repo.code,repo.releases,repo.actions,repo.packages` (issues, wiki, projects and pull-request discussions beyond review are disabled: Linear is the system of record). \* `[packages]` retention: `LIMIT_TOTAL_OWNER_SIZE = 20 GiB`, a weekly `forgejo admin packages cleanup` cron keeping the last 20 versions per package (shared with PAP-498) and container images referenced by no Coolify resource for 30 days.
 
 **Interface contract**
 
@@ -78,3 +85,5 @@ Built by Forge (Ops Runner). Reviewed by Sentinel (Security Auditor).
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/app-shell/upgrade-package-registry` = PAP-498.

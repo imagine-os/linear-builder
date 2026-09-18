@@ -15,10 +15,13 @@ blockedBy: ["PAP-91"]
 blocks: []
 key: "pm-linear/pap5-decompose"
 url: "https://linear.app/paperos/issue/PAP-95/decompose-pap-5-startup-procedure-inefficiency-into-this-master-plans"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:17.269Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:31.389Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 2
+dueDate: "2026-09-20"
+cycle: null
 ---
 
 # PAP-95: Decompose PAP-5 (startup procedure inefficiency) into this master plan's projects and close it with a summary comment

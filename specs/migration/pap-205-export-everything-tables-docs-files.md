@@ -10,15 +10,18 @@ surfaces: ["Customer"]
 milestone: "Airtable, Notion, ClickUp importers"
 state: "Backlog"
 parent: null
-children: ["PAP-420", "PAP-421", "PAP-422"]
-blockedBy: ["PAP-33", "PAP-43", "PAP-128", "PAP-199", "PAP-201", "PAP-349"]
-blocks: []
+children: ["PAP-422", "PAP-421", "PAP-420"]
+blockedBy: ["PAP-33", "PAP-43", "PAP-128", "PAP-199", "PAP-201", "PAP-349", "PAP-564", "PAP-565", "PAP-625"]
+blocks: ["PAP-432"]
 key: "migration/export"
 url: "https://linear.app/paperos/issue/PAP-205/export-everything-tables-docs-files-ledger-to-open-formats"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:56.400Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:49:14.441Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-205: Export everything (tables, docs, files, ledger) to open formats

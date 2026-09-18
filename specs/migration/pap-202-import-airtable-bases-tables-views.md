@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "Airtable, Notion, ClickUp importers"
 state: "Backlog"
 parent: null
-children: ["PAP-414", "PAP-415", "PAP-416"]
+children: ["PAP-414", "PAP-416", "PAP-415"]
 blockedBy: ["PAP-199", "PAP-201", "PAP-349"]
 blocks: []
 key: "migration/airtable"
 url: "https://linear.app/paperos/issue/PAP-202/import-airtable-bases-tables-views-relations-attachments"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:54.840Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:57:16.008Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-202: Import Airtable bases (tables, views, relations, attachments)

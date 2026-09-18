@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-114", "PAP-210"]
-blocks: ["PAP-174", "PAP-389"]
+blocks: ["PAP-174", "PAP-389", "PAP-640", "PAP-866"]
 key: "spec-builder/integrations-section"
 url: "https://linear.app/paperos/issue/PAP-121/specify-the-integrations-section-stripe-linear-notion-drive-webflow"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:27.911Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:28.720Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-121: Specify the integrations section (Stripe, Linear, Notion, Drive, Webflow, Miro, Gamma) backed by a connector registry

@@ -11,14 +11,17 @@ milestone: "Local-first sync working"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-441", "PAP-448"]
+blockedBy: ["PAP-441", "PAP-448", "PAP-541"]
 blocks: ["PAP-454"]
 key: "module/data-layer/conformance"
 url: "https://linear.app/paperos/issue/PAP-451/conformance-test-suite-for-data-layer-contract"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:05.578Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:07.303Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-451: Conformance test suite for data-layer contract

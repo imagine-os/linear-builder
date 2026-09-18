@@ -11,14 +11,17 @@ milestone: "Codegen and conformance tests"
 state: "Backlog"
 parent: "PAP-119"
 children: []
-blockedBy: ["PAP-35", "PAP-311"]
-blocks: ["PAP-313", "PAP-473"]
+blockedBy: ["PAP-35", "PAP-269", "PAP-311"]
+blocks: ["PAP-313", "PAP-473", "PAP-747"]
 key: "spec-builder/data-section/generator"
 url: "https://linear.app/paperos/issue/PAP-312/data-section-typed-hook-generator-for-server-live-and-local-sync-modes"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:23.486Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:48.843Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-312: Data section: typed hook generator for server, live and local sync modes

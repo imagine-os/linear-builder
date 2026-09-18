@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Staff", "Developer"]
+surfaces: ["Developer"]
 milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: []
-blocks: ["PAP-435", "PAP-453"]
+blockedBy: ["PAP-17", "PAP-33", "PAP-35", "PAP-269"]
+blocks: ["PAP-453", "PAP-501", "PAP-846", "PAP-861", "PAP-873", "PAP-876", "PAP-892", "PAP-893", "PAP-894", "PAP-899", "PAP-907"]
 key: "gap/app-shell/runtime-flags"
 url: "https://linear.app/paperos/issue/PAP-366/build-runtime-feature-flags-per-tenant-and-per-audience-flags-with"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:40.064Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:48.843Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-366: Build runtime feature flags: per-tenant and per-audience flags with kill switches, segment targeting and page-spec `flags:` guards
@@ -83,6 +86,8 @@ Reviewer opens `/settings/flags`, turns on `dashboard.newChart` for the Acme ten
 
 PAP-17, PAP-33, PAP-35 (hard). Soft: PAP-36, PAP-59, PAP-118, PAP-120, PAP-195, `contracts/domain-events`. Consumed by PAP-88, PAP-195, PAP-178.
 
+*Round 4 (2026-09-18): PAP-435 soft: this issue no longer blocks PAP-435 because runtime feature flags (09-29) land after the contracts milestone (09-27); PAP-435 proceeds (PAP-435 selects* `module.<id>.impl` *variants through the config port (PAP-444) and env; move selection onto PAP-366 flags with per-tenant targeting when they land) and reconciles when this issue lands.*
+
 **Agent**
 
 Built by Forge (Platform Engineer) with Iris on the settings page. Reviewed by Sentinel.
@@ -90,3 +95,5 @@ Built by Forge (Platform Engineer) with Iris on the settings page. Reviewed by S
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* PAP-501 was split out as a follow-on issue (FIX-R4-1); this issue is a leaf again with its Model / Effort labels and estimate restored, and it blocks PAP-501.

@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-120"
 children: []
 blockedBy: ["PAP-234", "PAP-314"]
-blocks: ["PAP-316"]
+blocks: ["PAP-316", "PAP-744"]
 key: "spec-builder/layout-codegen/wiring"
 url: "https://linear.app/paperos/issue/PAP-315/layout-codegen-state-switch-layout-slot-mapping-action-binding-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:25.369Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:07.503Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-315: Layout codegen: state switch, layout slot mapping, action binding and search-param schema

@@ -15,10 +15,13 @@ blockedBy: ["PAP-198", "PAP-433"]
 blocks: ["PAP-414", "PAP-417", "PAP-420", "PAP-426", "PAP-494", "PAP-496"]
 key: "module/migration/contract"
 url: "https://linear.app/paperos/issue/PAP-492/publish-paperoscontract-migration-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:42.001Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:00.110Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-492: Publish @paperos/contract-migration v0.1 with manifest

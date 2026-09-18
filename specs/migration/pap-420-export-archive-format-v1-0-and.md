@@ -11,14 +11,17 @@ milestone: "Airtable, Notion, ClickUp importers"
 state: "Backlog"
 parent: "PAP-205"
 children: []
-blockedBy: ["PAP-33", "PAP-43", "PAP-128", "PAP-199", "PAP-492"]
-blocks: ["PAP-421"]
+blockedBy: ["PAP-33", "PAP-43", "PAP-128", "PAP-199", "PAP-349", "PAP-492", "PAP-564", "PAP-565"]
+blocks: ["PAP-421", "PAP-829"]
 key: "child/PAP-205/0"
 url: "https://linear.app/paperos/issue/PAP-420/export-archive-format-v10-and-streaming-export-job-manifest-json"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:42.001Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:22.347Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-420: Export archive format v1.0 and streaming export job: manifest, JSON Schemas, table, docs, files, comments, PM, CRM, ledger and audit writers
@@ -40,6 +43,9 @@ Out: UI and scheduling (child 2), round-trip import (child 3).
 * `docs/migration/export-format.md` documents v1.0; JSON Schemas for `manifest.json` and `tables.json` committed; changes require an ADR.
 * Formula and rollup fields exported as definition plus last value.
 * Missing files listed in `files/missing.json`; export still succeeds with a warning.
+
+*Round 4 amendment (2026-09-18):*
+Round 4: `identity/users.jsonl` and every CRM and support file must honour PAP-355 `pii()` classification: exports are complete for the tenant's own data (GDPR portability) but the writer records which columns are PII in `manifest.json` so PAP-421's encryption prompt is mandatory when any are present, and `scope.redactPii: true` produces a pseudonymised archive for vendors and demos.
 
 **Interface contract**
 

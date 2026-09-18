@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-78", "PAP-240"]
-blocks: ["PAP-242"]
+blocks: ["PAP-242", "PAP-746", "PAP-909"]
 key: "quality/perf-budgets"
 url: "https://linear.app/paperos/issue/PAP-87/enforce-performance-budgets-lcp-inp-bundle-size-with-lighthouse-ci"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:14.845Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:32.895Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-87: Enforce performance budgets (LCP, INP, bundle size) with Lighthouse CI

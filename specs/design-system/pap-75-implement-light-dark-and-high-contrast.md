@@ -6,19 +6,22 @@ projectName: "Design System"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Themable per tenant with docs"
 state: "Backlog"
 parent: null
-children: []
+children: ["PAP-658", "PAP-657"]
 blockedBy: ["PAP-66"]
 blocks: ["PAP-235", "PAP-461"]
 key: "design-system/theming"
 url: "https://linear.app/paperos/issue/PAP-75/implement-light-dark-and-high-contrast-themes-plus-per-tenant-brand"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:11.567Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:41.705Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-75: Implement light, dark and high-contrast themes plus per-tenant brand theming with runtime token override

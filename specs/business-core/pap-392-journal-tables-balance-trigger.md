@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-179"
 children: []
 blockedBy: ["PAP-175"]
-blocks: ["PAP-393"]
+blocks: ["PAP-393", "PAP-767", "PAP-769", "PAP-770"]
 key: "business-core/ledger/journal-constraints"
 url: "https://linear.app/paperos/issue/PAP-392/journal-tables-balance-trigger-immutability-trigger-gapless-numbering"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:47.276Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:16.110Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-392: Journal tables, balance trigger, immutability trigger, gapless numbering and account balances

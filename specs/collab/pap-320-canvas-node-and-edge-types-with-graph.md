@@ -6,19 +6,22 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Staff", "Developer"]
+surfaces: ["Developer"]
 milestone: "Comments and canvas"
 state: "Backlog"
 parent: "PAP-132"
 children: []
-blockedBy: ["PAP-114", "PAP-127", "PAP-467"]
-blocks: ["PAP-321"]
+blockedBy: ["PAP-114", "PAP-123", "PAP-127", "PAP-467"]
+blocks: ["PAP-321", "PAP-853"]
 key: "collab/canvas/nodes-edges-loader"
 url: "https://linear.app/paperos/issue/PAP-320/canvas-node-and-edge-types-with-graph-loader"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:15.156Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:30:59.972Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-320: Canvas node and edge types with graph loader

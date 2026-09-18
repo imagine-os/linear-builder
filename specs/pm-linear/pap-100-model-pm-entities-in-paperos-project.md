@@ -6,19 +6,22 @@ projectName: "Project Management & Claude Pipeline"
 phase: "P1"
 type: "Spec"
 priority: 2
-surfaces: ["Staff", "Developer"]
+surfaces: ["Developer"]
 milestone: "PM module syncs both ways"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-33", "PAP-305", "PAP-448", "PAP-465"]
-blocks: ["PAP-101", "PAP-102", "PAP-204", "PAP-372"]
+blocks: ["PAP-101", "PAP-102", "PAP-204", "PAP-372", "PAP-707", "PAP-708", "PAP-816", "PAP-825", "PAP-874", "PAP-883"]
 key: "pm-linear/pm-data-model"
 url: "https://linear.app/paperos/issue/PAP-100/model-pm-entities-in-paperos-project-issue-cycle-milestone-comment"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:13.042Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:40.006Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-100: Model PM entities in PaperOS (project, issue, cycle, milestone, comment, label) mirroring Linear's schema
@@ -76,6 +79,10 @@ Run `pnpm db:migrate && pnpm db:seed pm`, then `pnpm api call pm.issues.list --a
 * Description over 200 KB: API rejects with a clear error.
 * Cycles disabled: `cycle_id` nullable, procedures return empty.
 
+*Round 4 amendment (2026-09-18):*
+
+* Round 4 (Linear features enabled): `estimate`, `due_date` and `cycle_id` are now populated on the Linear side for every issue, so the mapping document marks them `synced` rather than `stored, not surfaced`; initiatives, project updates, health, triage state, SLA breaches and attachment kinds are v0.2 extensions (PAP-707) and are listed in the mapping doc as `not mirrored before cutover`.
+
 **Dependencies**
 
 Blocked by PAP-33. Soft: PAP-34, PAP-35, PAP-114. Blocks PAP-101, PAP-102, PAP-204.
@@ -87,3 +94,5 @@ Built by Forge (Schema Wright sub-agent); reviewed by Sentinel and Quill (docs).
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/pm-linear/pm-model-initiatives-updates-cycles-rollups` = PAP-707.

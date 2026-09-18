@@ -10,15 +10,18 @@ surfaces: ["Developer"]
 milestone: "Codegen and conformance tests"
 state: "Backlog"
 parent: null
-children: ["PAP-311", "PAP-312", "PAP-313"]
+children: ["PAP-313", "PAP-311", "PAP-312"]
 blockedBy: ["PAP-35", "PAP-114", "PAP-269", "PAP-279"]
 blocks: ["PAP-362"]
 key: "spec-builder/data-section"
 url: "https://linear.app/paperos/issue/PAP-119/specify-the-data-section-entities-queries-mutations-sync-mode-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:27.686Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:57:03.341Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-119: Specify the data section (entities, queries, mutations, sync mode) and generate typed hooks from it

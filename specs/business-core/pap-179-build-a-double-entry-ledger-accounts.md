@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "Ledger and reports"
 state: "Backlog"
 parent: null
-children: ["PAP-392", "PAP-393", "PAP-394"]
-blockedBy: ["PAP-175", "PAP-303"]
-blocks: ["PAP-180", "PAP-181", "PAP-183", "PAP-184", "PAP-185", "PAP-196", "PAP-206", "PAP-397", "PAP-400", "PAP-408", "PAP-423"]
+children: ["PAP-393", "PAP-394", "PAP-392"]
+blockedBy: ["PAP-175", "PAP-303", "PAP-556"]
+blocks: ["PAP-180", "PAP-181", "PAP-183", "PAP-184", "PAP-185", "PAP-196", "PAP-206", "PAP-397", "PAP-400", "PAP-408", "PAP-423", "PAP-424", "PAP-765", "PAP-872"]
 key: "business-core/ledger"
 url: "https://linear.app/paperos/issue/PAP-179/build-a-double-entry-ledger-accounts-journal-entries-periods-in"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:49.729Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:47:53.649Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-179: Build a double-entry ledger (accounts, journal entries, periods) in Postgres with immutability guarantees

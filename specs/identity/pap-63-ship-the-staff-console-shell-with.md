@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "Agent principals and enterprise"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-16", "PAP-58", "PAP-438", "PAP-447"]
-blocks: []
+children: ["PAP-583", "PAP-582"]
+blockedBy: ["PAP-16", "PAP-58", "PAP-438", "PAP-447", "PAP-578", "PAP-579", "PAP-661"]
+blocks: ["PAP-658", "PAP-894"]
 key: "identity/staff-console-shell"
 url: "https://linear.app/paperos/issue/PAP-63/ship-the-staff-console-shell-with-tenant-switcher-audience-filters-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:29.700Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:38.098Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-63: Ship the staff console shell with tenant switcher, audience filters and admin navigation
@@ -49,6 +52,9 @@ Ship the reference staff surface every app inherits: a console at `/console` wit
 * Provides: `console.layout.tsx` slot names; `fromAppSpec()` and the `navigation.console` app-spec shape; `AudienceFilter` (`value: Segment`, `onChange`); `registerConsoleSection(section, items)` for modules; settings page conventions (`SettingRow`); `data-testid` prefixes `console.*`.
 * Requires: PAP-58 switchers, PAP-16 layouts, PAP-70 `AppFrame` (soft: plain divs until merged), PAP-55, PAP-59 explain, PAP-38 audit list, PAP-60 agent list, PAP-67, PAP-71, PAP-234, PAP-151 (soft), PAP-21 (soft), PAP-165 (soft).
 * Consumers: PAP-61, PAP-75 branding route, PAP-113, PAP-189, PAP-183, PAP-222, PAP-232, PAP-221.
+
+*Round 4 amendment (2026-09-18):*
+`registerConsoleSection(section, items)` is the extension point for round-4 pages: PAP-588 (roles edit mode), PAP-596, PAP-595 and PAP-565; items carry `audiences` and an optional `can` guard and render nothing when denied. Work is split into PAP-582 and PAP-583.
 
 **Definition of done**
 
@@ -87,3 +93,5 @@ Iris (Component Crafter) for layout and components; Quill (Page Spec Writer) for
 **Size**
 
 M.
+
+*Round 4 critique fix (2026-09-18):* resolved 6 round-4 file keys in this description to Linear identifiers: `r4/data-layer/jobs-admin` = PAP-565, `r4/identity/access-checker` = PAP-596, `r4/identity/console-admin-pages` = PAP-583, `r4/identity/console-frame` = PAP-582, `r4/identity/custom-roles` = PAP-588, `r4/identity/session-policy` = PAP-595.

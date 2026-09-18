@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-184"
 children: []
 blockedBy: ["PAP-175", "PAP-398"]
-blocks: ["PAP-400"]
+blocks: ["PAP-400", "PAP-781", "PAP-884"]
 key: "business-core/payroll/onboarding-sync"
 url: "https://linear.app/paperos/issue/PAP-399/payroll-tables-company-and-employee-onboarding-via-provider-links"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:49.584Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:55:54.768Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-10-01"
+cycle: null
 ---
 
 # PAP-399: Payroll tables, company and employee onboarding via provider links, employee sync from fin_employee and status polling
@@ -45,6 +48,9 @@ Provides: the two tables, procedures above, employees page, event `payroll.emplo
 **Definition of done**
 
 * Sync conflict tests; Playwright onboarding status page; screenshots at 375, 1024, 1920; audit rows for every sync.
+
+*Round 4 amendment (2026-09-18):*
+Round 4: the CI gate is the mock adapter path (onboarding, sync, conflict review) with recorded fixtures; the sandbox recording is attached when `PAYROLL_SANDBOX_KEY` exists and otherwise the test reports `skipped: no-credentials`, so this child is mergeable before NJ-12 resolves.
 
 **Test plan**
 

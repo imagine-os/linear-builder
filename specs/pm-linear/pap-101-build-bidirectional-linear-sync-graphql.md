@@ -10,15 +10,18 @@ surfaces: ["Staff"]
 milestone: "PM module syncs both ways"
 state: "Backlog"
 parent: null
-children: ["PAP-372", "PAP-373", "PAP-374"]
+children: ["PAP-708", "PAP-372", "PAP-373", "PAP-374"]
 blockedBy: ["PAP-97", "PAP-100"]
 blocks: []
 key: "pm-linear/linear-sync"
 url: "https://linear.app/paperos/issue/PAP-101/build-bidirectional-linear-sync-graphql-webhooks-with-conflict-rule"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:21.681Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:51:46.586Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-101: Build bidirectional Linear sync (GraphQL + webhooks) with conflict rule: Linear wins until cutover

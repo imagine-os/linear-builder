@@ -6,19 +6,22 @@ projectName: "Agent Characters & Orgs"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Agent", "Staff"]
+surfaces: ["Agent"]
 milestone: "Sub-agents, skills and evals live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-96", "PAP-466"]
-blocks: ["PAP-102", "PAP-113"]
+blockedBy: ["PAP-96", "PAP-466", "PAP-691"]
+blocks: ["PAP-102", "PAP-113", "PAP-703"]
 key: "agents/session-observability"
 url: "https://linear.app/paperos/issue/PAP-288/add-agent-session-observability-heartbeats-stuck-session-detection-per"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:57:15.156Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:49.407Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-288: Add agent session observability: heartbeats, stuck-session detection, per-session OTel spans and a `/status` contract shared by the org chart, board cards and cost controls
@@ -85,3 +88,5 @@ Built by Forge (Ops Runner) with Atlas (Dispatcher) on the state machine; review
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* PAP-40 is named as a hard dependency above but stays a soft dependency (no `blocks` relation): milestone inversion 2026-09-30 > 2026-09-25. Start when it is In Review or work against its contract and leave a TODO naming it.

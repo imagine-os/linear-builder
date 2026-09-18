@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-128", "PAP-209", "PAP-211", "PAP-493"]
-blocks: ["PAP-218", "PAP-497"]
+blocks: ["PAP-218", "PAP-497", "PAP-757", "PAP-758", "PAP-759", "PAP-760", "PAP-761", "PAP-763", "PAP-764"]
 key: "libraries/registry"
 url: "https://linear.app/paperos/issue/PAP-216/build-the-library-registry-in-the-docs-system-adopted-trialing"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:50.943Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:46.761Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-216: Build the library registry in the docs system: adopted, trialing, rejected with reasons and owners
@@ -48,6 +51,9 @@ Out: the ADR system (PAP-130), upgrades (PAP-217), scanning (PAP-218), rendering
 * Check rules: production dependency without `adopted` or `trialing` entry (error); `rejected|replaced|deprecated` present in a lockfile (error); `adopted` with no `usedBy` (warning); `reviewAt` past (warning); trivial helpers allowlisted in `docs/registry/trivial.yaml`.
 * Transitions enforced by the CLI: `candidate` -> `trialing` -> `adopted` (needs accepted ADR) or `rejected`; `adopted` -> `deprecated` -> `replaced` with `replacedBy`.
 * `reviewAt` defaults to `addedAt` plus 180 days; README documents statuses and cadence.
+
+*Round 4 amendment (2026-09-18):*
+Entry gains optional `patches[]` (PAP-759), `census` and `swapImpact` (PAP-761) and `cost` (PAP-764, deferred); `version` is read from the pnpm `catalog:` when PAP-756 lands. Check rule: `adopted` without `docs/libraries/notes/<id>.md` warns for 7 days after adoption, then errors.
 
 **Interface contract**
 
@@ -94,3 +100,5 @@ M: small schema and page; lockfile parsing, check rules and seeding touch every 
 **Module boundary**
 
 This issue is the Library Discovery & Integration half of the PaperOS Module System (`docs/module-system.md`). The `libraries` module implements `@paperos/contract-libraries` (library record, rubric scores, ADR frontmatter, license policy, MCP connector record, Renovate groups, Scout report). The license gate, Renovate and the Scout routine read the policy and registry only through these schemas; the module may import `@paperos/core`, `contract-collab`, `contract-quality` and its own tooling. Its manifest declares `provides: [{ contract: '@paperos/contract-libraries', version: '0.1.0' }]`, `owner: { agent: 'Scout', project: 'libraries' }` and `swapRisk: 'low'`. The contract package is published by PAP-493 (`module/libraries/contract`), proven by PAP-495 (`module/libraries/conformance`) and bound into `@paperos/kernel` by PAP-497 (`module/libraries/wire`); children of this issue inherit this boundary and may not add a dependency the manifest does not declare (lint rules R7 to R11).
+
+*Round 4 critique fix (2026-09-18):* resolved 4 round-4 file keys in this description to Linear identifiers: `r4/libraries/dependency-hygiene` = PAP-756, `r4/libraries/import-census` = PAP-761, `r4/libraries/library-cost-model` = PAP-764, `r4/libraries/patch-fork-policy` = PAP-759.

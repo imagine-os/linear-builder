@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-119"
 children: []
 blockedBy: ["PAP-311", "PAP-312"]
-blocks: []
+blocks: ["PAP-362"]
 key: "spec-builder/data-section/example"
 url: "https://linear.app/paperos/issue/PAP-313/data-section-customer-invoices-end-to-end-with-live-sync-second"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:25.165Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:06.464Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-313: Data section: `customer-invoices` end to end with live sync, second-context and offline tests

@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-150", "PAP-433"]
-blocks: ["PAP-153", "PAP-154", "PAP-158", "PAP-159", "PAP-479", "PAP-482"]
+blocks: ["PAP-153", "PAP-154", "PAP-158", "PAP-159", "PAP-479", "PAP-482", "PAP-651", "PAP-653"]
 key: "module/input/contract"
 url: "https://linear.app/paperos/issue/PAP-476/publish-paperoscontract-input-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:05.711Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:03.039Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-23"
+cycle: null
 ---
 
 # PAP-476: Publish @paperos/contract-input v0.1 with manifest

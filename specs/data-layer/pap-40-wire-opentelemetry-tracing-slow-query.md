@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-30", "PAP-35", "PAP-269"]
-blocks: []
+blocks: ["PAP-356", "PAP-534", "PAP-547", "PAP-573", "PAP-602", "PAP-673", "PAP-680", "PAP-895"]
 key: "data-layer/observability"
 url: "https://linear.app/paperos/issue/PAP-40/wire-opentelemetry-tracing-slow-query-logging-and-grafana-dashboards"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:59.797Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:44.262Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-40: Wire OpenTelemetry tracing, slow-query logging and Grafana dashboards for API and sync

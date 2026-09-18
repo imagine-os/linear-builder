@@ -6,19 +6,22 @@ projectName: "Migration & Import Tools"
 phase: "P2"
 type: "Build"
 priority: 4
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Business migrations"
 state: "Backlog"
 parent: "PAP-207"
 children: []
-blockedBy: ["PAP-114", "PAP-161", "PAP-199", "PAP-492"]
-blocks: ["PAP-427"]
+blockedBy: ["PAP-114", "PAP-161", "PAP-199", "PAP-349", "PAP-492"]
+blocks: ["PAP-427", "PAP-818", "PAP-819", "PAP-829", "PAP-888", "PAP-889"]
 key: "child/PAP-207/0"
 url: "https://linear.app/paperos/issue/PAP-426/template-pack-format-zod-schema-lint-and-the-template-applier"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:42.001Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:22.347Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-426: Template pack format, Zod schema, lint, and the `template` applier connector with conflict strategies, composition and upgrade

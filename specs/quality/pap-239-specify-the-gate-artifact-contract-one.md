@@ -6,19 +6,22 @@ projectName: "Quality Pipeline"
 phase: "P0"
 type: "Spec"
 priority: 1
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Gates 1 and 2 on every PR"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-79"]
-blocks: ["PAP-80", "PAP-81", "PAP-82", "PAP-83", "PAP-84", "PAP-85", "PAP-89", "PAP-243", "PAP-248", "PAP-249", "PAP-429", "PAP-441", "PAP-462"]
+blocks: ["PAP-80", "PAP-81", "PAP-82", "PAP-83", "PAP-84", "PAP-85", "PAP-89", "PAP-243", "PAP-248", "PAP-249", "PAP-429", "PAP-462", "PAP-677", "PAP-680", "PAP-689", "PAP-845", "PAP-860", "PAP-875", "PAP-890", "PAP-891", "PAP-903", "PAP-906"]
 key: "quality/gate-artifact-contract"
 url: "https://linear.app/paperos/issue/PAP-239/specify-the-gate-artifact-contract-one-schema-package-for-gate1json"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:04.936Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:07:26.782Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-239: Specify the gate artifact contract: one schema package for gate1.json, security.json, visual.json, videos.json, vision.json, edgecases.json, finding IDs and artifact paths
@@ -77,6 +80,8 @@ Run `pnpm contracts:validate fixtures/visual.pass.json` (exit 0) then `fixtures/
 **Dependencies**
 
 PAP-79 (hard). Consumers listed above, except PAP-97, which is soft: PAP-97 ships its own `orchestrator-event.json` schema and adopts `packages/contracts` when it lands. The `blocks` relation to PAP-97 was removed on 2026-09-17 (round-2 FIX-1) because this milestone (09-25) is later than PAP-97's (09-22).
+
+*Round 4 (2026-09-18): PAP-441 soft: this issue no longer blocks PAP-441 because the gate artifact contract (09-25) lands after the kernel milestone (09-22), same pattern as the PAP-239 -> PAP-97 softening on 2026-09-17; PAP-441 proceeds (PAP-441 ships its own* `conformance.json` *schema in the package and adopts* `packages/contracts` *gate schemas when PAP-239 lands) and reconciles when this issue lands.*
 
 **Agent**
 

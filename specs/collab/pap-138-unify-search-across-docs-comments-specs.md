@@ -11,14 +11,17 @@ milestone: "Knowledge surfaced everywhere"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-39", "PAP-128", "PAP-474"]
-blocks: []
+blockedBy: ["PAP-39", "PAP-128", "PAP-474", "PAP-566", "PAP-567", "PAP-729"]
+blocks: ["PAP-735"]
 key: "collab/knowledge-search"
 url: "https://linear.app/paperos/issue/PAP-138/unify-search-across-docs-comments-specs-prompt-logs-and-issues"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:04.356Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:26.847Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-138: Unify search across docs, comments, specs, prompt logs and issues

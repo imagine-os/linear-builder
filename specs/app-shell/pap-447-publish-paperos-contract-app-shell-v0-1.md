@@ -11,14 +11,17 @@ milestone: "Template scaffolds and runs on web"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-16", "PAP-17", "PAP-433"]
-blocks: ["PAP-62", "PAP-63", "PAP-70", "PAP-265", "PAP-450", "PAP-453"]
+blockedBy: ["PAP-16", "PAP-17"]
+blocks: ["PAP-62", "PAP-63", "PAP-70", "PAP-265", "PAP-450", "PAP-453", "PAP-582", "PAP-584", "PAP-912"]
 key: "module/app-shell/contract"
 url: "https://linear.app/paperos/issue/PAP-447/publish-paperoscontract-app-shell-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:30.303Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:07.938Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-20"
+cycle: null
 ---
 
 # PAP-447: Publish @paperos/contract-app-shell v0.1 with manifest
@@ -84,6 +87,8 @@ Provides: `@paperos/contract-app-shell@0.1.0` with the exports above; `module.ma
 **Dependencies**
 
 Blocked by `module-system/manifest-schema` and PAP-16, PAP-17. Blocks PAP-62, PAP-63, PAP-70, PAP-265, `module/app-shell/conformance` and `module/app-shell/wire`. Soft: docs generator, compatibility matrix job.
+
+*Round 4 (2026-09-18): PAP-433 soft: the manifest schema and validator (09-22, Ready, spec-complete) land after the app-shell scaffold milestone (09-20); until it lands, hand-write the app-shell manifest against the schema draft in PAP-433's Spec text; run the validator when PAP-433 merges. The* `blocks` *relation PAP-433 -> PAP-447 was removed.*
 
 **Agent**
 

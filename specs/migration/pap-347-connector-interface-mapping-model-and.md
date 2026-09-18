@@ -6,19 +6,22 @@ projectName: "Migration & Import Tools"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Staff", "Developer"]
+surfaces: ["Developer"]
 milestone: "Import framework and CSV"
 state: "Backlog"
 parent: "PAP-199"
 children: []
-blockedBy: ["PAP-37", "PAP-43", "PAP-164", "PAP-198", "PAP-448"]
-blocks: ["PAP-348", "PAP-496"]
+blockedBy: ["PAP-37", "PAP-43", "PAP-164", "PAP-198", "PAP-448", "PAP-565", "PAP-627"]
+blocks: ["PAP-348", "PAP-496", "PAP-576", "PAP-770", "PAP-814", "PAP-815", "PAP-816", "PAP-823", "PAP-824", "PAP-827"]
 key: "child/PAP-199/0"
 url: "https://linear.app/paperos/issue/PAP-347/connector-interface-mapping-model-and-import-engine-sourceconnector"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:04.437Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:29.647Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-347: Connector interface, mapping model and import engine (`SourceConnector`, `import_mapping`, batching, resumability, fixture connector)
@@ -42,6 +45,9 @@ Out: dry-run transaction and rollback (child 2), inference and wizard (child 3),
 * Relation pass runs after all collections, resolving ids via the PAP-201 helper (stubbed until it merges).
 * Progress row written every batch; `import.run.progress` event published for PAP-143 (polling fallback).
 * Limits enforced before start: 5M rows, 10 GB attachments, 2 concurrent runs per tenant.
+
+*Round 4 amendment (2026-09-18):*
+Round 4: the `parseCurrency` transform must output `Money` (`{ amountMinor: string, currency }` on the wire, bigint at runtime) using the PAP-175 ISO exponent table; it never emits floats, and locale detection (`1.234,56` versus `1,234.56`) is an explicit transform argument with a dry-run warning when ambiguous.
 
 **Interface contract**
 

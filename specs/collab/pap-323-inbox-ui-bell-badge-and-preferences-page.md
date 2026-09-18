@@ -6,19 +6,22 @@ projectName: "In-App Collaboration & Knowledge"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Comments and canvas"
 state: "Backlog"
 parent: "PAP-136"
 children: []
-blockedBy: ["PAP-131"]
+blockedBy: ["PAP-131", "PAP-319", "PAP-725"]
 blocks: ["PAP-324"]
 key: "collab/notifications/inbox-preferences"
 url: "https://linear.app/paperos/issue/PAP-323/inbox-ui-bell-badge-and-preferences-page"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:27.658Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:37.704Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-323: Inbox UI, bell badge and preferences page
@@ -46,6 +49,9 @@ Out: digests and quiet hours (sibling 2), Slack (sibling 3), delivery (core).
 * Rows use the core's `Notification` type; no second schema.
 * Popover `role="dialog"`; badge `aria-live="polite"` announcing counts at most once per 30 s.
 * Under `md` the inbox is a full-screen list.
+
+*Round 4 amendment (2026-09-18):*
+Rows support snooze (`snoozed_until`, presets 1 h, tomorrow 09:00, next Monday) and "mark all read" for the current filter; a snoozed row returns to unread at the time and is exempt from PAP-324 quiet hours. Add an "unfollow source" action once PAP-726 lands.
 
 **Interface contract**
 
@@ -83,3 +89,5 @@ Built by Nova with Iris on components. Reviewed by Sentinel (Visual Inspector).
 **Size**
 
 M: three screens over an existing API.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/collab/watchers-subscriptions` = PAP-726.

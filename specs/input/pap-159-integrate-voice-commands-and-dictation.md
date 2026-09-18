@@ -6,19 +6,22 @@ projectName: "Multi-Input Control & Accessibility"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Voice and accessibility certification"
 state: "Backlog"
 parent: null
-children: []
+children: ["PAP-653", "PAP-654"]
 blockedBy: ["PAP-151", "PAP-291", "PAP-476"]
 blocks: []
 key: "input/voice"
 url: "https://linear.app/paperos/issue/PAP-159/integrate-voice-commands-and-dictation-web-speech-with-whisper"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:58:05.711Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:43.455Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-159: Integrate voice commands and dictation (Web Speech with Whisper fallback) routed through the command registry
@@ -78,6 +81,10 @@ In Chrome, hold `mod+shift+v`, say “open inbox”, release, watch it navigate 
 * Chrome stops after \~60 s silence: auto-restart while held.
 * Tenant disables voice: button hidden, command unregistered.
 
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: WebKitGTK (Tauri Linux desktop) and Firefox expose no `SpeechRecognition`; `capabilities.supported` is false, the button renders the unsupported state and the Playwright WebKit project asserts it. The children PAP-653 and PAP-654 split this issue; the umbrella keeps the Chrome and Android real-microphone recording as its integration evidence.
+
 **Dependencies**
 
 PAP-151 (hard, encoded). Soft: PAP-153, PAP-142, PAP-33, PAP-260, PAP-158.
@@ -89,3 +96,5 @@ Builder: Nova. Reviewer: Sentinel (Security Auditor for privacy gating, Edge Cas
 **Size**
 
 M: one backend plus matching and dictation; the matching logic is testable offline.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/input/dictation-targets-and-voice-ui` = PAP-654, `r4/input/voice-backend-and-intent-matching` = PAP-653.

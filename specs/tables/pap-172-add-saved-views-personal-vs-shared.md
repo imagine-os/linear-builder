@@ -6,19 +6,22 @@ projectName: "Table & Views Engine"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "View sharing, formulas, dashboards"
 state: "Backlog"
 parent: null
-children: []
-blockedBy: ["PAP-59", "PAP-165", "PAP-229", "PAP-304", "PAP-343"]
-blocks: ["PAP-173", "PAP-385"]
+children: ["PAP-623", "PAP-624"]
+blockedBy: ["PAP-59", "PAP-165", "PAP-229", "PAP-304", "PAP-343", "PAP-558", "PAP-614", "PAP-618", "PAP-630"]
+blocks: ["PAP-173", "PAP-385", "PAP-839", "PAP-850", "PAP-855", "PAP-857", "PAP-909"]
 key: "tables/view-sharing"
 url: "https://linear.app/paperos/issue/PAP-172/add-saved-views-personal-vs-shared-views-public-embeds-and-per"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:44.218Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:37.011Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-172: Add saved views, personal vs shared views, public embeds and per-audience defaults

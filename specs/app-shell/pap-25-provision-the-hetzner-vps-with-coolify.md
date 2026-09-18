@@ -12,13 +12,16 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-26", "PAP-30", "PAP-45", "PAP-96", "PAP-140", "PAP-273", "PAP-274", "PAP-280", "PAP-283", "PAP-300", "PAP-301"]
+blocks: ["PAP-26", "PAP-30", "PAP-45", "PAP-96", "PAP-140", "PAP-273", "PAP-274", "PAP-280", "PAP-283", "PAP-300", "PAP-301", "PAP-369", "PAP-370", "PAP-371", "PAP-431", "PAP-505", "PAP-518", "PAP-536", "PAP-691", "PAP-905"]
 key: "app-shell/vps-coolify-bootstrap"
 url: "https://linear.app/paperos/issue/PAP-25/provision-the-hetzner-vps-with-coolify-caddy-dns-for-the-paperos"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:55.760Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:56:45.365Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-20"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-25: Provision the Hetzner VPS with Coolify, Caddy, DNS for the PaperOS domain, object storage, sops keys and the paperos-infra repo

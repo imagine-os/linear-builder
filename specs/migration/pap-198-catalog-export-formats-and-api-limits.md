@@ -12,13 +12,16 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-199", "PAP-347", "PAP-413", "PAP-492"]
+blocks: ["PAP-199", "PAP-347", "PAP-413", "PAP-492", "PAP-813"]
 key: "migration/format-research"
 url: "https://linear.app/paperos/issue/PAP-198/catalog-export-formats-and-api-limits-of-airtable-notion-clickup"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:54.358Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:45.597Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-198: Catalog export formats and API limits of Airtable, Notion, ClickUp, Monday, HubSpot and QuickBooks
@@ -40,6 +43,9 @@ In:
 * Work package 2 (below): the test accounts and fixture workspaces those sheets and fixtures seed, formerly the pending issue `migration/test-accounts`.
 
 Out: connectors, mapping UI, sources beyond the list, production customer accounts, live-mode keys.
+
+*Round 4 amendment (2026-09-18):*
+Round 4: work package 2 (test accounts and fixture workspaces) is superseded by PAP-813 once created; this issue then closes when work package 1 (nine sheets, matrix, fixtures, `index.json`) is In Review, and the NJ-13 comment is posted by whichever claimer starts first. Until the new issue exists the inline text stands.
 
 **Spec**
 
@@ -115,3 +121,5 @@ Researched by Scout (Import Mapper); work package 2 built by Scout with Forge (O
 **Size**
 
 M: nine sources at 45 minutes plus fixtures and the matrix (work package 1); work package 2 is S of scripting, the waiting on sign-ups is the long part.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/migration/importer-test-accounts-and-fixture-workspaces` = PAP-813.

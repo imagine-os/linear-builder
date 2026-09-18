@@ -6,19 +6,22 @@ projectName: "Spec Builder"
 phase: "P0"
 type: "Spec"
 priority: 1
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Spec schema and validator"
 state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-74", "PAP-85", "PAP-115", "PAP-116", "PAP-117", "PAP-119", "PAP-120", "PAP-121", "PAP-123", "PAP-124", "PAP-132", "PAP-207", "PAP-249", "PAP-311", "PAP-314", "PAP-320", "PAP-376", "PAP-426", "PAP-467"]
+blocks: ["PAP-74", "PAP-85", "PAP-115", "PAP-116", "PAP-117", "PAP-119", "PAP-120", "PAP-121", "PAP-123", "PAP-124", "PAP-132", "PAP-207", "PAP-249", "PAP-311", "PAP-314", "PAP-320", "PAP-376", "PAP-426", "PAP-467", "PAP-740", "PAP-743", "PAP-748", "PAP-750", "PAP-751", "PAP-818"]
 key: "spec-builder/schema"
 url: "https://linear.app/paperos/issue/PAP-114/define-the-pagespecyaml-schema-purpose-logic-access-data-integrations"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:27.070Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:40.414Z"
 model: "claude-fable-5-1"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-114: Define the page.spec.yaml schema: purpose, logic, access, data, integrations, layout, components, states, events, edge cases
@@ -44,6 +47,9 @@ Define the canonical `page.spec.yaml` format every PaperOS page must have: a Zod
 * `RouteRef` accepts TanStack `$param` syntax; `ComponentRef` regex agreed with PAP-74; `states.copy` strings are plain until PAP-375 adds message ids (`x-i18n` reserved).
 * YAML anchors and merge keys resolved before validation; errors carry `line` and `col` of the merged document.
 * `packages/spec/src/migrate/` skeleton (the whole versioning deliverable of this issue): `versions.ts` exporting `CURRENT_SPEC_VERSION = 1` and `SPEC_VERSIONS = [{ version: 1, schema: PageSpecSchema, codemodsFrom: {} }]`; an exported `Codemod` interface type (`{ id, description, apply(doc: YAML.Document): Change[] }`) with no implementations; `migrateSpec(doc, to = CURRENT_SPEC_VERSION)` that returns the document unchanged for `specVersion: 1` (missing treated as 1 with the warning above) and throws a `SpecIssue` with code `SPEC_UNSUPPORTED_VERSION` for any other version; `docs/spec/versioning.md` stub naming the follow-up scope (version registry, codemod helpers `renameKey|moveKey|mapEnum|wrapValue`, `paperos-spec migrate --dry-run`, `x-deprecated` and `SPEC_DEPRECATED`, weekly 300-fixture rehearsal). Unit tests: identity for v1, error for v2, `x-*` keys untouched.
+
+*Round 4 amendment (2026-09-18):*
+Reserved for v1.1 (additive, PAP-740): top-level keys `flags`, `modules`, `comments`, `help`, `seo`, `budgets`. In v1 they parse as `z.unknown().optional()` with warning `SPEC_RESERVED_KEY` so consumers that already write them (PAP-380, PAP-361, PAP-366) are not rejected by the unknown-key rule.
 
 **Interface contract**
 
@@ -89,3 +95,5 @@ Built by Quill (Page Spec Writer); reviewed by Atlas for architecture and Nova f
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/spec-builder/schema-v1-1-extensions` = PAP-740.

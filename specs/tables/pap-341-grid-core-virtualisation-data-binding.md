@@ -6,19 +6,22 @@ projectName: "Table & Views Engine"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Grid with sort, filter, group"
 state: "Backlog"
 parent: "PAP-165"
 children: []
-blockedBy: ["PAP-71", "PAP-151", "PAP-163", "PAP-164"]
-blocks: ["PAP-342"]
+blockedBy: ["PAP-71", "PAP-151", "PAP-163", "PAP-164", "PAP-291", "PAP-337", "PAP-627", "PAP-644", "PAP-655", "PAP-656"]
+blocks: ["PAP-342", "PAP-614"]
 key: "tables/grid/core"
 url: "https://linear.app/paperos/issue/PAP-341/grid-core-virtualisation-data-binding-selection-model-and-keyboard"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:31.726Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:34.463Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-341: Grid core: virtualisation, data binding, selection model and keyboard navigation
@@ -61,6 +64,10 @@ Open `/demo/grid`, scroll fast, select a range with Shift+arrows, freeze a colum
 **Edge cases**
 
 * 375 px first column frozen; denied `update` shows a read-only cursor.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: RTL locales flip frozen columns to the end edge, `Home`/`End` and arrow semantics follow reading direction, and the scroll shadow mirrors (Playwright `ar-EG` run). Touch range selection: a long-press on a cell starts a selection with draggable corner handles (PAP-154 recognisers) and a floating bulk bar; a two-finger drag still scrolls. Chord matching ignores `keydown` while `event.isComposing` so IME users are not interrupted.
 
 **Dependencies**
 

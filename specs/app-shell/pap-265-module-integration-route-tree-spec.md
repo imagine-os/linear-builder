@@ -11,14 +11,17 @@ milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: "PAP-28"
 children: []
-blockedBy: ["PAP-264", "PAP-433", "PAP-434", "PAP-438", "PAP-447"]
+blockedBy: ["PAP-264", "PAP-433", "PAP-434", "PAP-438", "PAP-447", "PAP-537"]
 blocks: ["PAP-266"]
 key: "child/PAP-28/10"
 url: "https://linear.app/paperos/issue/PAP-265/module-integration-route-tree-spec-validator-permissions-jobs-and-per"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:02.243Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:13.002Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-265: Module integration: route tree, spec validator, permissions, jobs and per-module migrations

@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-114", "PAP-117"]
-blocks: ["PAP-362"]
+blocks: ["PAP-132", "PAP-320", "PAP-362", "PAP-731"]
 key: "spec-builder/spec-to-canvas"
 url: "https://linear.app/paperos/issue/PAP-123/emit-the-ux-flow-graph-pages-transitions-roles-from-specs-for-the"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:29.496Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:41.216Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-123: Emit the UX-flow graph (pages, transitions, roles) from specs for the canvas view
@@ -41,6 +44,9 @@ Compile every page spec plus `app.spec.yaml` into one UX-flow graph (pages, tran
 * Stable ids `page:<id>`, `entity:<id>`, `ext:<connector>`, `start:<audience>`; positions keyed by id so manual overrides survive.
 * Layout with `elkjs` 0.9 layered, direction right, groups as compound nodes, fixed options and sorted node order for determinism; 300 pages under 5 s.
 * Flags: `unreachable`, `deadEnd`, `orphan` (entity with no page), listed in the PR comment; audiences precomputed from `access.view` and guards.
+
+*Round 4 amendment (2026-09-18):*
+Derive `relation` edges between `entity` nodes from `entities[].fields[].relation` (field grammar) labelled with the field id and `one|many`; self-relations render as loops; entity nodes with zero pages and zero relations are the `orphan` flag. Nodes carry `flags[]` from the page `flags` section when present.
 
 **Interface contract**
 
@@ -85,3 +91,5 @@ Built by Nova (Canvas Cartographer); reviewed by Quill for spec fidelity.
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* PAP-132 is named as a hard dependency above but stays a soft dependency (no `blocks` relation): milestone inversion 2026-09-29 > 2026-09-26. Start when it is In Review or work against its contract and leave a TODO naming it.

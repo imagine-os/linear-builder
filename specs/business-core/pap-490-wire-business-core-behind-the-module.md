@@ -11,14 +11,17 @@ milestone: "Payroll adapter and cash dashboard"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-177", "PAP-394", "PAP-398", "PAP-434", "PAP-435", "PAP-484", "PAP-487"]
-blocks: ["PAP-266"]
+blockedBy: ["PAP-177", "PAP-394", "PAP-398", "PAP-434", "PAP-435", "PAP-484", "PAP-487", "PAP-537", "PAP-538"]
+blocks: []
 key: "module/business-core/wire"
 url: "https://linear.app/paperos/issue/PAP-490/wire-business-core-behind-the-module-registry-with-an-adapter-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:47.509Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:02.607Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-10-01"
+cycle: null
 ---
 
 # PAP-490: Wire business-core behind the module registry with an adapter and feature flag
@@ -75,6 +78,8 @@ Provides: `business-core` bound in the kernel as `@paperos/contract-business-cor
 **Dependencies**
 
 Blocked by `module/business-core/contract`, `module/business-core/conformance`, `module-system/registry-di`, `module-system/flag-swap` and PAP-177, PAP-394, PAP-398. Blocks PAP-266.
+
+*Round 4 (2026-09-18): PAP-266 soft: this issue no longer blocks PAP-266 because the business-core wire issue lands (09-30/10-01) after the* `--without` *milestone (09-29); PAP-266 proceeds (PAP-266's removal matrix covers modules whose wire issue has merged; PAP-490 adds its module to the matrix and to* `paperos create --without` *when it lands) and reconciles when this issue lands.*
 
 **Agent**
 

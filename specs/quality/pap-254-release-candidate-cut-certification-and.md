@@ -6,19 +6,22 @@ projectName: "Quality Pipeline"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Edge-case hunting and release trains"
 state: "Backlog"
 parent: "PAP-88"
 children: []
-blockedBy: ["PAP-94", "PAP-252", "PAP-253", "PAP-357", "PAP-358"]
+blockedBy: ["PAP-94", "PAP-252", "PAP-253", "PAP-357", "PAP-358", "PAP-524", "PAP-675", "PAP-676", "PAP-678", "PAP-682", "PAP-699", "PAP-702"]
 blocks: ["PAP-89"]
 key: "quality/release-train/rc-certify-approve"
 url: "https://linear.app/paperos/issue/PAP-254/release-candidate-cut-certification-and-justin-approval-flow"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:09.569Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:29.763Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-254: Release candidate cut, certification and Justin approval flow

@@ -11,14 +11,17 @@ milestone: "Visual and video gates"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-81", "PAP-244", "PAP-245"]
+blockedBy: ["PAP-81", "PAP-244", "PAP-245", "PAP-677"]
 blocks: []
 key: "quality/gate2-calibration"
 url: "https://linear.app/paperos/issue/PAP-241/run-gate-2-calibration-and-false-negative-tracking-weekly-manual-spot"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:05.266Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:19.666Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 2
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-241: Run Gate 2 calibration and false-negative tracking: weekly manual spot check of five verdicts, precision and recall trend, reviewer prompt tuning loop
@@ -54,6 +57,10 @@ Measure the thing that replaced human code review: each week, sample five Gate 2
 * Blind re-review disputes at least one seeded false positive in the calibration set.
 * Justin reads one weekly report and confirms the format in a comment.
 * `docs/quality/calibration.md`; changelog under "Quality".
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4 clarification of the cadence: the calendar has room for two real weekly cycles before 2026-10-01 (weeks 39 and 40); the third cycle in the first bullet is the compressed rehearsal over the sandbox repo's seeded PRs (`imagine-os/paperos-qa-sandbox`, round-4 issue) run on the first day, so `calibration.json` exists before the first real sample. The Calibration Auditor is a separate session with a separate bundle (PAP-106) from the reviewers it audits; the blind runner refuses to start when `PAPEROS_SESSION` matches a reviewer session id.
 
 **Test plan**
 

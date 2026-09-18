@@ -6,19 +6,22 @@ projectName: "Data Layer & Database"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Developer", "Customer"]
+surfaces: ["Developer"]
 milestone: "Local-first sync working"
 state: "Backlog"
 parent: "PAP-36"
 children: []
 blockedBy: ["PAP-31", "PAP-270"]
-blocks: ["PAP-272"]
+blocks: ["PAP-272", "PAP-326", "PAP-572"]
 key: "child/PAP-36/16"
 url: "https://linear.app/paperos/issue/PAP-271/pglite-client-schema-generation-and-read-hooks-useshape-uselivequery"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:12.635Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:48.777Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-271: PGlite client, schema generation and read hooks (useShape, useLiveQuery)
@@ -66,6 +69,9 @@ Reviewer opens `/_app/sync-demo`, sees workspaces load instantly on second visit
 * Safari private mode: in-memory PGlite with banner.
 * Storage above 200 MB: warning and `columns` trimming advice.
 
+*Round 4 amendment (2026-09-18):*
+Add: sign-out, session revocation and tenant switch wipe the local PGlite database and `y-indexeddb` stores unless the outbox holds unsent writes and the user keeps them (PAP-572 owns `wipe()`); shapes may declare `cacheable: false` and are then held in memory only; the registry lint refuses `encrypted()` columns in persisted shapes.
+
 **Dependencies**
 
 Child 1 (hard), PAP-31. Blocks child 3.
@@ -77,3 +83,5 @@ Built by Forge with Nova. Reviewed by Sentinel.
 **Size**
 
 M
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/data-layer/local-data-protection` = PAP-572.

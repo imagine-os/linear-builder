@@ -12,13 +12,16 @@ state: "Ready for Claude"
 parent: null
 children: []
 blockedBy: []
-blocks: ["PAP-132", "PAP-142", "PAP-320", "PAP-474"]
+blocks: ["PAP-132", "PAP-142", "PAP-320", "PAP-474", "PAP-603"]
 key: "collab/collab-research"
 url: "https://linear.app/paperos/issue/PAP-127/evaluate-tldraw-vs-react-flow-for-the-canvas-and-tiptap-vs-blocknote"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:29.865Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T12:57:05.076Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-23"
+cycle: {"number": 1, "name": "C1 Foundation & core systems", "startsAt": "2026-09-18", "endsAt": "2026-09-25"}
 ---
 
 # PAP-127: Evaluate tldraw vs React Flow for the canvas and Tiptap vs BlockNote for docs; write ADR

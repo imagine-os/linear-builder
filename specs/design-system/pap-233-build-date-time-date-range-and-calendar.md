@@ -10,15 +10,18 @@ surfaces: ["Developer"]
 milestone: "Component library covers app shell needs"
 state: "Backlog"
 parent: null
-children: []
+children: ["PAP-659", "PAP-660"]
 blockedBy: ["PAP-67", "PAP-238"]
-blocks: ["PAP-164", "PAP-166", "PAP-338"]
+blocks: ["PAP-164", "PAP-166", "PAP-338", "PAP-617", "PAP-627", "PAP-854"]
 key: "design-system/date-pickers-forms"
 url: "https://linear.app/paperos/issue/PAP-233/build-date-time-date-range-and-calendar-pickers-plus-form-state"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:04.034Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:32.608Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-233: Build date, time, date-range and calendar pickers plus form-state adapters (react-hook-form Field, arrays, async validation)

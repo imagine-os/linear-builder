@@ -6,19 +6,22 @@ projectName: "Migration & Import Tools"
 phase: "P2"
 type: "Build"
 priority: 4
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Business migrations"
 state: "Backlog"
 parent: null
-children: ["PAP-426", "PAP-427", "PAP-428"]
+children: ["PAP-819", "PAP-818", "PAP-427", "PAP-428", "PAP-426"]
 blockedBy: ["PAP-114", "PAP-161", "PAP-199", "PAP-349"]
 blocks: []
 key: "migration/business-templates"
 url: "https://linear.app/paperos/issue/PAP-207/ship-business-type-templates-agency-retail-saas-clinic-restaurant-as"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:56.546Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:51:47.556Z"
 model: null
 effort: null
+estimate: null
+dueDate: null
+cycle: null
 ---
 
 # PAP-207: Ship business-type templates (agency, retail, SaaS, clinic, restaurant) as importable seed packs

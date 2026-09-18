@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Desktop and mobile shells build"
 state: "Backlog"
 parent: null
-children: ["PAP-261", "PAP-262", "PAP-263"]
+children: ["PAP-263", "PAP-261", "PAP-262"]
 blockedBy: ["PAP-14", "PAP-16", "PAP-19", "PAP-257"]
 blocks: ["PAP-23", "PAP-145"]
 key: "app-shell/breakpoints-windows"
 url: "https://linear.app/paperos/issue/PAP-21/build-responsive-breakpoint-matrix-and-multi-monitor-window-manager"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:52.790Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:34.834Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-21: Build responsive breakpoint matrix and multi-monitor window manager that detaches panels into OS windows
@@ -67,6 +70,10 @@ Consumes: `BREAKPOINTS` (PAP-14), Tauri crate and `list_displays` stub (PAP-19),
 * Web: pop-out popup mirrors state via BroadcastChannel (Playwright multi-page).
 * Screenshots at all seven widths plus a two-display composite; `docs/shell/windows.md`; CHANGELOG; Linear comment.
 
+*Round 4 amendment (2026-09-18):*
+
+* Evidence rule for a Linux-only session: the Linux recording and the PAP-508 detach and dock test are mandatory; the macOS recording is produced by the PAP-371 hosted macOS job (`workflow_dispatch` with the recording script) or, if that runner is not yet available, recorded as a `pending-runner` finding on this issue with the exact command to run, never as a silent omission.
+
 **Test plan**
 
 * Unit: topology hash, store migrations v1 to v2, dock and detach reducer, breakpoint mapping from container width.
@@ -98,3 +105,5 @@ Built by Forge (Tauri Smith) with Nova consulting on the sync boundary. Reviewed
 **Size**
 
 L as an umbrella; children are S, M, M.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/app-shell/tauri-e2e-harness` = PAP-508.

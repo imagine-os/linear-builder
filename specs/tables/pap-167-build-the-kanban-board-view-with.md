@@ -11,14 +11,17 @@ milestone: "All view types"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-155", "PAP-163", "PAP-331", "PAP-337"]
+blockedBy: ["PAP-155", "PAP-163", "PAP-331", "PAP-337", "PAP-614", "PAP-615", "PAP-642", "PAP-644", "PAP-652"]
 blocks: ["PAP-102", "PAP-189"]
 key: "tables/kanban-view"
 url: "https://linear.app/paperos/issue/PAP-167/build-the-kanban-board-view-with-swimlanes-wip-limits-and-drag-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:43.649Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:24.583Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-167: Build the kanban board view with swimlanes, WIP limits and drag-and-drop

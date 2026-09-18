@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-13"]
-blocks: ["PAP-32"]
+blocks: ["PAP-32", "PAP-509", "PAP-845", "PAP-860", "PAP-875", "PAP-891", "PAP-906"]
 key: "data-layer/local-dev-stack"
 url: "https://linear.app/paperos/issue/PAP-42/ship-the-local-dev-stack-docker-compose-with-postgres-17-minio-mailpit"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:00.109Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:37.985Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-42: Ship the local dev stack: docker compose with Postgres 17, MinIO, Mailpit and Hocuspocus, per-worktree databases and a SessionStart hook so parallel Claude sessions never share state

@@ -11,14 +11,17 @@ milestone: "Business migrations"
 state: "Backlog"
 parent: "PAP-206"
 children: []
-blockedBy: ["PAP-423"]
-blocks: ["PAP-425"]
+blockedBy: ["PAP-179", "PAP-394", "PAP-423", "PAP-769"]
+blocks: ["PAP-425", "PAP-828"]
 key: "child/PAP-206/1"
 url: "https://linear.app/paperos/issue/PAP-424/quickbooks-online-and-xero-connectors-chart-of-accounts-opening"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:57.187Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:51:24.416Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-424: QuickBooks Online and Xero connectors: chart of accounts, opening balances on a conversion date, optional journal and invoice history

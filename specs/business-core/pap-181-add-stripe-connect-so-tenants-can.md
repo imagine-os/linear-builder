@@ -6,19 +6,22 @@ projectName: "Business Core: Payments, Finance & Payroll"
 phase: "P2"
 type: "Build"
 priority: 2
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Ledger and reports"
 state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-175", "PAP-177", "PAP-179", "PAP-359", "PAP-394"]
-blocks: ["PAP-196", "PAP-408"]
+blocks: ["PAP-196", "PAP-408", "PAP-772", "PAP-779", "PAP-781", "PAP-783", "PAP-786", "PAP-788", "PAP-871", "PAP-881", "PAP-886", "PAP-887"]
 key: "business-core/stripe-connect"
 url: "https://linear.app/paperos/issue/PAP-181/add-stripe-connect-so-tenants-can-accept-payments-and-receive-payouts"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:47.255Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:44.060Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-181: Add Stripe Connect so tenants can accept payments and receive payouts
@@ -74,6 +77,9 @@ Reviewer clicks "Accept payments" on the demo tenant, completes Stripe's test on
 * Express to Standard switch: new account, old one kept for history.
 * Connected currency differs from functional: FX captured at payout.
 
+*Round 4 amendment (2026-09-18):*
+Round 4: dispute evidence deadlines, the evidence pack and the `won|lost` outcome postings move to PAP-779; this issue only posts the reserve movement on `charge.dispute.created` and emits `connect.dispute.opened` with `evidence_due_by`.
+
 **Dependencies**
 
 PAP-177 (hard), PAP-179 (hard), PAP-175 (hard), PAP-136 core (soft). Blocks PAP-196; optional for PAP-180, PAP-182, PAP-186.
@@ -85,3 +91,5 @@ Builder: Ledger (Payments Integrator). Reviewer: Sentinel (Security Auditor, Cod
 **Size**
 
 M: Stripe hosts onboarding; webhook and reconciliation correctness is the substance.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/business-core/disputes-radar-evidence` = PAP-779.

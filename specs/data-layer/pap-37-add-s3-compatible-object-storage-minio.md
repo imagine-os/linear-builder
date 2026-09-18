@@ -11,14 +11,17 @@ milestone: "Local-first sync working"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-33", "PAP-43"]
-blocks: ["PAP-180", "PAP-185", "PAP-190", "PAP-197", "PAP-199", "PAP-347", "PAP-354", "PAP-396", "PAP-401", "PAP-410"]
+blockedBy: ["PAP-33", "PAP-43", "PAP-564", "PAP-565"]
+blocks: ["PAP-180", "PAP-185", "PAP-190", "PAP-197", "PAP-199", "PAP-339", "PAP-347", "PAP-354", "PAP-396", "PAP-401", "PAP-410", "PAP-562", "PAP-574", "PAP-577", "PAP-658", "PAP-663", "PAP-671", "PAP-765", "PAP-770", "PAP-823", "PAP-854", "PAP-857", "PAP-898", "PAP-909"]
 key: "data-layer/file-storage"
 url: "https://linear.app/paperos/issue/PAP-37/add-s3-compatible-object-storage-minio-with-signed-uploads-and-image"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:40:59.442Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:35.573Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-37: Add S3-compatible object storage (MinIO) with signed uploads and image variants
@@ -49,6 +52,9 @@ Out: document previews, virus scanning (Trivy covers images only; ClamAV is a fo
 * Variants only for `image/*` up to 50 MP; EXIF stripped; SVG served with `Content-Security-Policy: sandbox`; HEIC converted.
 * Download URLs valid 15 minutes, generated after an RLS-scoped row fetch.
 * Every create, complete and delete emits an `audit_event` (PAP-38).
+
+*Round 4 amendment (2026-09-18):*
+Add the scanning hook: `files.complete` sets `status = 'scanning'` when the scanner is configured (PAP-574) and `ready` otherwise; `files.getUrl` refuses non-`ready` files with `FILE_NOT_READY`; the `file` status enum gains `scanning | quarantined` now so the later child needs no migration.
 
 **Interface contract**
 
@@ -101,3 +107,5 @@ Built by Forge (Ops Runner for MinIO, Platform Engineer for the service). Review
 **Size**
 
 M: one service, one job, one component.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/data-layer/upload-scanning` = PAP-574.

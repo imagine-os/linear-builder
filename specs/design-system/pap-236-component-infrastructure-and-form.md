@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-67"
 children: []
 blockedBy: ["PAP-66", "PAP-212"]
-blocks: ["PAP-237", "PAP-238"]
+blocks: ["PAP-69", "PAP-237", "PAP-238", "PAP-501", "PAP-538", "PAP-553", "PAP-659", "PAP-660", "PAP-666"]
 key: "design-system/primitives/infra-form-controls"
 url: "https://linear.app/paperos/issue/PAP-236/component-infrastructure-and-form-controls"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:04.435Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:18.517Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-236: Component infrastructure and form controls
@@ -40,6 +43,10 @@ Lay down the conventions every component follows and ship the form controls: `cn
 * Sizes `sm|md|lg` = 32/40/48 px; `@media (pointer: coarse)` enforces 44 px minimum hit area; focus ring `outline: 2px solid var(--pos-color-focus)` offset 2 px on `:focus-visible` only.
 * `Field` wraps label, description, error with `aria-describedby` wiring; `Input` supports `startAdornment`, `endAdornment`, `loading` (Button only); `Slider` supports range and keyboard steps.
 * Base UI `@base-ui-components/react` 1.x by default; if PAP-212 recommends Radix by 2026-09-19 switch imports (the API surface here is ours, not the library's).
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: a component token layer `--pos-<component>-<prop>` (for example `--pos-button-radius`, `--pos-control-height-md`) defined in `packages/ui/tokens/components.tokens.json` with values aliased to core tokens, so tenants (PAP-75) and density modes can retune components without touching classes; components reference these instead of literal sizes. All user-visible strings inside components (Close, Clear, Loading, Show password) come from `useUiStrings()` with an `en` default so PAP-27 catalogs can override them. Inputs set `autocomplete`, `inputmode` and `enterkeyhint` from a `purpose` prop (`email`, `tel`, `otp`, `search`, `decimal`).
 
 **Interface contract**
 

@@ -11,14 +11,17 @@ milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-16", "PAP-264", "PAP-366", "PAP-434", "PAP-435", "PAP-447", "PAP-450"]
+blockedBy: ["PAP-16", "PAP-264", "PAP-366", "PAP-434", "PAP-435", "PAP-447", "PAP-450", "PAP-501", "PAP-537", "PAP-538"]
 blocks: ["PAP-446"]
 key: "module/app-shell/wire"
 url: "https://linear.app/paperos/issue/PAP-453/wire-app-shell-behind-the-module-registry-with-an-adapter-and-feature"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:06.894Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:07.748Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-453: Wire app-shell behind the module registry with an adapter and feature flag
@@ -48,6 +51,10 @@ Out: a real second implementation (the shell swap drill covers the shell; others
 * Consumers hold no reference across requests to a resolved request-scoped port.
 * Shadow mode runs the secondary after the primary, never blocks the response, records `{ caseId, requestId, diff }` with a 1 percent sample by default.
 * Disabling the module (PAP-266 `tenant_module`) unbinds its providers for that tenant; consumers with `requires[].optional=false` fail closed with `MODULE_DISABLED` (409).
+
+*Round 4 amendment (2026-09-18):*
+
+* Flag variants: `module.app-shell.impl` declares `default`, `next` (the re-exporting stub built here) and `minimal` (the drill shell from PAP-446, bound only when `apps/web-minimal` exists); the Demo section's `minimal` flip therefore runs after PAP-446 binds it, and the merge-time demo uses `next`.
 
 **Interface contract**
 

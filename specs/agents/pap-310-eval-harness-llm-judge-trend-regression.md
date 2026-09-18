@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-110"
 children: []
 blockedBy: ["PAP-308", "PAP-309"]
-blocks: []
+blocks: ["PAP-719", "PAP-822", "PAP-843"]
 key: "agents/eval-harness/judge"
 url: "https://linear.app/paperos/issue/PAP-310/eval-harness-llm-judge-trend-regression-issues-nightly-schedule-and"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:23.176Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:07.417Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-310: Eval harness: LLM judge, trend, regression issues, nightly schedule and report page

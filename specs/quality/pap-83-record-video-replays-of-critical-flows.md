@@ -11,14 +11,17 @@ milestone: "Visual and video gates"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-82", "PAP-239", "PAP-248", "PAP-462"]
-blocks: ["PAP-137"]
+blockedBy: ["PAP-82", "PAP-239", "PAP-240", "PAP-246", "PAP-248", "PAP-462", "PAP-505", "PAP-644"]
+blocks: ["PAP-137", "PAP-689"]
 key: "quality/video-replays"
 url: "https://linear.app/paperos/issue/PAP-83/record-video-replays-of-critical-flows-per-pr-at-each-responsive-size"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:13.216Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:31:04.483Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-26"
+cycle: null
 ---
 
 # PAP-83: Record video replays of critical flows per PR at each responsive size and attach them to the PR

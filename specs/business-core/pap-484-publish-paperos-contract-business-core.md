@@ -15,10 +15,13 @@ blockedBy: ["PAP-175", "PAP-433"]
 blocks: ["PAP-178", "PAP-391", "PAP-407", "PAP-423", "PAP-487", "PAP-490"]
 key: "module/business-core/contract"
 url: "https://linear.app/paperos/issue/PAP-484/publish-paperoscontract-business-core-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:00:32.576Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:01.068Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-484: Publish @paperos/contract-business-core v0.1 with manifest

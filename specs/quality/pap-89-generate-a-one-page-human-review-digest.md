@@ -6,19 +6,22 @@ projectName: "Quality Pipeline"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Staff", "Agent"]
+surfaces: ["Agent"]
 milestone: "Edge-case hunting and release trains"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-88", "PAP-239", "PAP-254", "PAP-356", "PAP-462"]
+blockedBy: ["PAP-88", "PAP-239", "PAP-254", "PAP-356", "PAP-462", "PAP-674", "PAP-680", "PAP-699"]
 blocks: []
 key: "quality/review-report"
 url: "https://linear.app/paperos/issue/PAP-89/generate-a-one-page-human-review-digest-per-release-candidate-what"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T14:54:13.216Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:32.790Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-89: Generate a one-page human review digest per release candidate: what changed, risks, screenshots, open questions
@@ -74,6 +77,12 @@ Run `pnpm digest --from v0.1.0 --to release/2026-39 --out tmp/` and open the HTM
 * Zero user-facing changes: section 2 says so and leads with infrastructure.
 * Missing artifact: `unknown`, never omitted.
 * Cost unavailable: `n/a` with reason, never invented.
+
+*Round 4 amendment (2026-09-18):*
+
+* Range with more than 40 PRs (a full week at 16 builders): section 2 groups by project and lists the ten most user-facing PRs in full, the rest as one line each; the Linear body variant keeps only section 1, the gate table and links.
+* Summarisation model unavailable: the renderer emits the template with schema-shaped data and no prose, marks the digest `prose: missing`, and PAP-254 still opens the Needs Justin issue rather than waiting.
+* Screenshot selection when no page has a visual diff: pick the two most-changed routes by PR count so Justin still sees the product.
 
 **Dependencies**
 

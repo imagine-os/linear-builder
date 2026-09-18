@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-93", "PAP-433"]
-blocks: ["PAP-100", "PAP-102", "PAP-307", "PAP-372", "PAP-468", "PAP-471"]
+blocks: ["PAP-100", "PAP-102", "PAP-307", "PAP-372", "PAP-468", "PAP-471", "PAP-539"]
 key: "module/pm-linear/contract"
 url: "https://linear.app/paperos/issue/PAP-465/publish-paperoscontract-pm-linear-v01-with-manifest"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:29.499Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:04.362Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-22"
+cycle: null
 ---
 
 # PAP-465: Publish @paperos/contract-pm-linear v0.1 with manifest

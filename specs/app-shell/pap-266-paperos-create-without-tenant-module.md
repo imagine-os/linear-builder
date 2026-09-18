@@ -6,19 +6,22 @@ projectName: "Universal App Shell & Repo Template"
 phase: "P1"
 type: "Build"
 priority: 2
-surfaces: ["Staff", "Developer"]
+surfaces: ["Developer"]
 milestone: "Multi-monitor and PWA polish"
 state: "Backlog"
 parent: "PAP-28"
 children: []
-blockedBy: ["PAP-22", "PAP-265", "PAP-471", "PAP-480", "PAP-481", "PAP-482", "PAP-489", "PAP-490", "PAP-491", "PAP-496"]
-blocks: ["PAP-29", "PAP-126"]
+blockedBy: ["PAP-22", "PAP-265", "PAP-503", "PAP-912"]
+blocks: ["PAP-29", "PAP-126", "PAP-894"]
 key: "child/PAP-28/11"
 url: "https://linear.app/paperos/issue/PAP-266/paperos-create-without-tenant-module-toggles-and-the-ci-removal-matrix"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:30.303Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:28.009Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-29"
+cycle: null
 ---
 
 # PAP-266: `paperos create --without`, tenant module toggles and the CI removal matrix
@@ -70,6 +73,42 @@ Reviewer opens Settings, Modules, switches Canvas off, sees the nav item vanish 
 **Dependencies**
 
 Children 1 and 2 (hard), PAP-22. Feeds PAP-29, PAP-207.
+
+*Round 4 amendment (2026-09-18):*
+
+* Soft dependency (round 4): PAP-846 (wire) (new, phase 2) would block this issue but sits in a later milestone (2026-10-16 > 2026-09-29); no `blocks` relation was created. Build against its interface and reconcile when it lands.
+
+*Round 4 amendment (2026-09-18):*
+
+* Soft dependency (round 4): PAP-861 (wire) (new, phase 2) would block this issue but sits in a later milestone (2026-10-16 > 2026-09-29); no `blocks` relation was created. Build against its interface and reconcile when it lands.
+
+*Round 4 amendment (2026-09-18):*
+
+* Soft dependency (round 4): PAP-876 (wire) (new, phase 2) would block this issue but sits in a later milestone (2026-10-16 > 2026-09-29); no `blocks` relation was created. Build against its interface and reconcile when it lands.
+
+*Round 4 amendment (2026-09-18):*
+
+* Soft dependency (round 4): PAP-892 (wire) (new, phase 2) would block this issue but sits in a later milestone (2026-10-16 > 2026-09-29); no `blocks` relation was created. Build against its interface and reconcile when it lands.
+
+*Round 4 amendment (2026-09-18):*
+
+* Soft dependency (round 4): PAP-907 (wire) (new, phase 2) would block this issue but sits in a later milestone (2026-10-16 > 2026-09-29); no `blocks` relation was created. Build against its interface and reconcile when it lands.
+
+*Round 4 (2026-09-18): PAP-471 soft: the pm-linear wire issue lands (09-30/10-01) after the* `--without` *milestone (09-29); until it lands, PAP-266's removal matrix covers modules whose wire issue has merged; PAP-471 adds its module to the matrix and to* `paperos create --without` *when it lands. The* `blocks` *relation PAP-471 -> PAP-266 was removed.*
+
+*Round 4 (2026-09-18): PAP-480 soft: the collab wire issue lands (09-30/10-01) after the* `--without` *milestone (09-29); until it lands, PAP-266's removal matrix covers modules whose wire issue has merged; PAP-480 adds its module to the matrix and to* `paperos create --without` *when it lands. The* `blocks` *relation PAP-480 -> PAP-266 was removed.*
+
+*Round 4 (2026-09-18): PAP-481 soft: the realtime wire issue lands (09-30/10-01) after the* `--without` *milestone (09-29); until it lands, PAP-266's removal matrix covers modules whose wire issue has merged; PAP-481 adds its module to the matrix and to* `paperos create --without` *when it lands. The* `blocks` *relation PAP-481 -> PAP-266 was removed.*
+
+*Round 4 (2026-09-18): PAP-482 soft: the input wire issue lands (09-30/10-01) after the* `--without` *milestone (09-29); until it lands, PAP-266's removal matrix covers modules whose wire issue has merged; PAP-482 adds its module to the matrix and to* `paperos create --without` *when it lands. The* `blocks` *relation PAP-482 -> PAP-266 was removed.*
+
+*Round 4 (2026-09-18): PAP-489 soft: the tables wire issue lands (09-30/10-01) after the* `--without` *milestone (09-29); until it lands, PAP-266's removal matrix covers modules whose wire issue has merged; PAP-489 adds its module to the matrix and to* `paperos create --without` *when it lands. The* `blocks` *relation PAP-489 -> PAP-266 was removed.*
+
+*Round 4 (2026-09-18): PAP-490 soft: the business-core wire issue lands (09-30/10-01) after the* `--without` *milestone (09-29); until it lands, PAP-266's removal matrix covers modules whose wire issue has merged; PAP-490 adds its module to the matrix and to* `paperos create --without` *when it lands. The* `blocks` *relation PAP-490 -> PAP-266 was removed.*
+
+*Round 4 (2026-09-18): PAP-491 soft: the growth wire issue lands (09-30/10-01) after the* `--without` *milestone (09-29); until it lands, PAP-266's removal matrix covers modules whose wire issue has merged; PAP-491 adds its module to the matrix and to* `paperos create --without` *when it lands. The* `blocks` *relation PAP-491 -> PAP-266 was removed.*
+
+*Round 4 (2026-09-18): PAP-496 soft: the migration wire issue lands (09-30/10-01) after the* `--without` *milestone (09-29); until it lands, PAP-266's removal matrix covers modules whose wire issue has merged; PAP-496 adds its module to the matrix and to* `paperos create --without` *when it lands. The* `blocks` *relation PAP-496 -> PAP-266 was removed.*
 
 **Agent**
 

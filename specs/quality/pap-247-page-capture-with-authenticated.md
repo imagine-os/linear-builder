@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-82"
 children: []
 blockedBy: ["PAP-240", "PAP-246"]
-blocks: ["PAP-248"]
+blocks: ["PAP-248", "PAP-688"]
 key: "quality/playwright-matrix/pages-auth-baselines"
 url: "https://linear.app/paperos/issue/PAP-247/page-capture-with-authenticated-audiences-and-baseline-update-workflow"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:07.468Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:17.997Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-247: Page capture with authenticated audiences and baseline update workflow

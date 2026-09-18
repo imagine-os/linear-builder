@@ -6,19 +6,22 @@ projectName: "Project Management & Claude Pipeline"
 phase: "P1"
 type: "Review"
 priority: 2
-surfaces: ["Agent", "Staff"]
+surfaces: ["Agent"]
 milestone: "PM module syncs both ways"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-93", "PAP-99", "PAP-105", "PAP-439"]
-blocks: []
+blockedBy: ["PAP-93", "PAP-99", "PAP-105", "PAP-439", "PAP-693", "PAP-694", "PAP-703", "PAP-718"]
+blocks: ["PAP-698"]
 key: "pm-linear/weekly-reaudit"
 url: "https://linear.app/paperos/issue/PAP-306/run-a-weekly-plan-re-audit-snapshot-linear-detect-dependency-drift"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T15:11:28.611Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:24.630Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-306: Run a weekly plan re-audit: snapshot Linear, detect dependency drift, cycles, stale In Progress sessions, issues without specs; post the report to Linear

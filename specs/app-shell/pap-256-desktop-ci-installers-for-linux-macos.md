@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-19"
 children: []
 blockedBy: ["PAP-255"]
-blocks: ["PAP-257"]
+blocks: ["PAP-257", "PAP-518", "PAP-524", "PAP-690"]
 key: "child/PAP-19/1"
 url: "https://linear.app/paperos/issue/PAP-256/desktop-ci-installers-for-linux-macos-and-windows-via-tauri-action"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:09.768Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:14.579Z"
 model: "claude-opus-5"
 effort: "medium"
+estimate: 3
+dueDate: "2026-09-24"
+cycle: null
 ---
 
 # PAP-256: Desktop CI installers for Linux, macOS and Windows via tauri-action with draft release

@@ -11,14 +11,17 @@ milestone: "Grid with sort, filter, group"
 state: "Backlog"
 parent: "PAP-164"
 children: []
-blockedBy: ["PAP-238", "PAP-338"]
-blocks: ["PAP-340"]
+blockedBy: ["PAP-37", "PAP-238", "PAP-338", "PAP-663"]
+blocks: ["PAP-340", "PAP-619", "PAP-854"]
 key: "tables/fields/choice-people-attachment"
 url: "https://linear.app/paperos/issue/PAP-339/choice-people-and-attachment-types-select-multiselect-user-attachment"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:31.560Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:30:57.105Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-339: Choice, people and attachment types (select, multiSelect, user, attachment) with FieldSettingsPanel
@@ -40,6 +43,10 @@ In: `fields/{select,multiSelect,user,attachment}.ts`, `FieldSettingsPanel`, opti
 * `user` as `user.id[]` with a searchable Combobox (PAP-238) over tenant members; avatar chips.
 * `attachment` as `file.id[]` from PAP-37 with thumbnail cells, upload editor and broken-file retry.
 * `FieldSettingsPanel` renders each type's `OptionsEditor` with validation.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: `select` options may carry `group?: 'todo' | 'inProgress' | 'done'` and the field option `kind: 'status'` (Notion status semantics). Kanban reads `done` for completion styling, WIP limits skip `done` columns, the Gantt `progressField` may derive from it, and importers map ClickUp and Linear statuses onto the groups. Grouping by a status field orders groups todo, inProgress, done.
 
 **Interface contract**
 

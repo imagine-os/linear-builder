@@ -6,19 +6,22 @@ projectName: "Multiplayer & Realtime"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Yjs server and presence"
 state: "Backlog"
 parent: null
-children: []
+children: ["PAP-605", "PAP-606"]
 blockedBy: ["PAP-140"]
 blocks: ["PAP-146", "PAP-149", "PAP-481"]
 key: "realtime/presence"
 url: "https://linear.app/paperos/issue/PAP-141/build-the-presence-layer-cursors-avatars-selections-and-who-is-viewing"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:33.322Z"
-model: "claude-sonnet-5"
-effort: "high"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:41.683Z"
+model: null
+effort: null
+estimate: null
+dueDate: "2026-09-25"
+cycle: null
 ---
 
 # PAP-141: Build the presence layer: cursors, avatars, selections and 'who is viewing' across pages
@@ -47,6 +50,9 @@ Out: agent visuals (PAP-146), follow mode, chat, history.
 * Page spec flag `realtime.presence: true|false` (PAP-114), default true for staff surfaces, false for customer surfaces.
 * Same principal in several windows appears once with an `x2` badge (PAP-145 aggregates).
 * Accessibility: stack `aria-label`, cursors `aria-hidden`, live region announces joins at most once per 10 s.
+
+*Round 4 amendment (2026-09-18):*
+Awareness privacy needs a mechanism, not only a policy: Hocuspocus broadcasts awareness to every connection in a room, so "server filters awareness by policy" requires either an `onAwarenessUpdate` extension that rewrites the update per recipient using `context.principal`, or audience-partitioned ephemeral rooms `page:<tenant>:<route>:<audienceClass>`. PAP-605 benchmarks both at 200 connections and records the choice; until then customer surfaces default to `realtime.presence: false`. Work is split into PAP-605 and PAP-606.
 
 **Interface contract**
 
@@ -87,3 +93,5 @@ Builder: Nova (CRDT Engineer). Reviewer: Iris (Component Crafter) for components
 **Size**
 
 M: several components plus permission-aware presence semantics.
+
+*Round 4 critique fix (2026-09-18):* resolved 2 round-4 file keys in this description to Linear identifiers: `r4/realtime/presence-components` = PAP-606, `r4/realtime/presence-core` = PAP-605.

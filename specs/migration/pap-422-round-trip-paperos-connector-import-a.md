@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-205"
 children: []
 blockedBy: ["PAP-201", "PAP-421"]
-blocks: []
+blocks: ["PAP-432"]
 key: "child/PAP-205/2"
 url: "https://linear.app/paperos/issue/PAP-422/round-trip-paperos-connector-import-a-paperos-archive-into-an-empty"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:55.191Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:11.490Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-422: Round-trip `paperos` connector: import a PaperOS archive into an empty tenant and verify counts and hashes table by table
@@ -40,6 +43,9 @@ Out: UI (child 2), format (child 1).
 * Identities: `external_id = original record id`, so a restore into the same tenant updates rather than duplicates.
 * Files verified by sha256 before linking; mismatch listed.
 * Verification compares row counts, per-table content hashes (sorted canonical JSON) and file hashes.
+
+*Round 4 amendment (2026-09-18):*
+Round 4: `ledger.importJournal` does not exist in PAP-179 or its children. Restore ledger history through `ledger.postEvent` with `source_type: 'import'`, `source_id: '<run_id>:<entry_number>'` (idempotent per the contracts document) and a `JournalDraft` per archived entry; reversal on rollback uses `ledger.reverseRun` from PAP-425. A batch `importJournal(entries[])` convenience is requested from business-core as a Spec issue (see cross-project suggestions) and adopted when it lands.
 
 **Interface contract**
 

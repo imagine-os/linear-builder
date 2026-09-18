@@ -15,10 +15,13 @@ blockedBy: ["PAP-372", "PAP-373"]
 blocks: []
 key: "pm-linear/linear-sync/conflicts"
 url: "https://linear.app/paperos/issue/PAP-374/linear-sync-conflict-rule-linear-wins-sync-status-page-and-runbook"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:42.475Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:55:57.696Z"
 model: "claude-sonnet-5"
 effort: "medium"
+estimate: 2
+dueDate: "2026-09-30"
+cycle: null
 ---
 
 # PAP-374: Linear sync: conflict rule (Linear wins), sync status page and runbook

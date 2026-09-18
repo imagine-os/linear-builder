@@ -6,7 +6,7 @@ projectName: "Version Control & Forge Independence"
 phase: "P2"
 type: "Build"
 priority: 4
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Disaster recovery proven"
 state: "Backlog"
 parent: "PAP-54"
@@ -15,10 +15,13 @@ blockedBy: ["PAP-16", "PAP-276"]
 blocks: ["PAP-278"]
 key: "child/PAP-54/22"
 url: "https://linear.app/paperos/issue/PAP-277/repo-list-file-tree-file-view-and-commit-list-pages-with-specs"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:14.726Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:27.705Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-277: Repo list, file tree, file view and commit-list pages with specs

@@ -6,19 +6,22 @@ projectName: "Table & Views Engine"
 phase: "P1"
 type: "Build"
 priority: 1
-surfaces: ["Customer", "Staff"]
+surfaces: ["Staff"]
 milestone: "Grid with sort, filter, group"
 state: "Backlog"
 parent: null
-children: ["PAP-341", "PAP-342", "PAP-343"]
-blockedBy: ["PAP-71", "PAP-151", "PAP-163", "PAP-164", "PAP-291", "PAP-337", "PAP-340"]
-blocks: ["PAP-135", "PAP-166", "PAP-172", "PAP-173", "PAP-183", "PAP-189", "PAP-332", "PAP-333", "PAP-334", "PAP-386"]
+children: ["PAP-630", "PAP-629", "PAP-342", "PAP-343", "PAP-341"]
+blockedBy: ["PAP-71", "PAP-151", "PAP-163", "PAP-164", "PAP-291", "PAP-337", "PAP-340", "PAP-656"]
+blocks: ["PAP-135", "PAP-166", "PAP-172", "PAP-173", "PAP-183", "PAP-189", "PAP-332", "PAP-333", "PAP-334", "PAP-386", "PAP-617", "PAP-623", "PAP-689"]
 key: "tables/grid-view"
 url: "https://linear.app/paperos/issue/PAP-165/build-the-virtualized-grid-view-tanstack-table-with-inline-edit-column"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:43.344Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:51:45.177Z"
 model: null
 effort: null
+estimate: null
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-165: Build the virtualized grid view (TanStack Table) with inline edit, column resize/reorder, freeze and cell types

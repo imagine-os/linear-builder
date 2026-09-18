@@ -11,14 +11,17 @@ milestone: "Stripe billing live"
 state: "Backlog"
 parent: null
 children: []
-blockedBy: ["PAP-58", "PAP-175", "PAP-303"]
-blocks: ["PAP-178", "PAP-180", "PAP-181", "PAP-182", "PAP-196", "PAP-359", "PAP-391", "PAP-396", "PAP-407", "PAP-490"]
+blockedBy: ["PAP-58", "PAP-175", "PAP-303", "PAP-556", "PAP-578", "PAP-579"]
+blocks: ["PAP-178", "PAP-180", "PAP-181", "PAP-182", "PAP-196", "PAP-359", "PAP-391", "PAP-396", "PAP-407", "PAP-490", "PAP-765", "PAP-778", "PAP-871", "PAP-878", "PAP-879", "PAP-886"]
 key: "business-core/stripe-billing"
 url: "https://linear.app/paperos/issue/PAP-177/integrate-stripe-billing-products-prices-subscriptions-customer-portal"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:46.475Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:23.551Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-27"
+cycle: null
 ---
 
 # PAP-177: Integrate Stripe Billing: products, prices, subscriptions, customer portal and webhooks
@@ -76,6 +79,9 @@ Reviewer runs `stripe listen` and `pnpm dev`, upgrades the demo tenant with card
 * Renewal decline: `past_due` banner; entitlements downgrade only at `unpaid` or `canceled`.
 * Plan removed from `plans.ts`: price archived, subscribers keep working.
 * Two admins upgrade concurrently: second completion detected and refunded with a notice.
+
+*Round 4 amendment (2026-09-18):*
+Round 4: the concurrent-upgrade refund is executed by the webhook worker with the restricted key that has refund scope, never by an agent session (deny list, PAP-298) and never in live mode without the PAP-359 custody card; the integration test uses a Stripe test clock and `stripe trigger` only.
 
 **Dependencies**
 

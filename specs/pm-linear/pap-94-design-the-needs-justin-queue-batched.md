@@ -12,13 +12,16 @@ state: "Backlog"
 parent: null
 children: []
 blockedBy: ["PAP-91"]
-blocks: ["PAP-88", "PAP-108", "PAP-252", "PAP-254"]
+blocks: ["PAP-88", "PAP-108", "PAP-252", "PAP-254", "PAP-539", "PAP-703", "PAP-712", "PAP-721"]
 key: "pm-linear/justin-queue"
 url: "https://linear.app/paperos/issue/PAP-94/design-the-needs-justin-queue-batched-decisions-one-click"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:41:17.097Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T13:56:31.508Z"
 model: "claude-opus-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-20"
+cycle: null
 ---
 
 # PAP-94: Design the Needs Justin queue: batched decisions, one-click approve/reject comments, max five open items rule
@@ -79,6 +82,10 @@ Keep the only human reviewer's queue small and fast: `Needs Justin` holds at mos
 **Dependencies**
 
 Blocked by PAP-91. Soft: PAP-97. Blocks PAP-88 (grammar).
+
+*Round 4 amendment (2026-09-18):*
+
+* Soft dependency (round 4): PAP-683 (recorded-http-fixtures-kit) would block this issue but sits in a later milestone (2026-09-25 > 2026-09-20); no `blocks` relation was created. Build against its interface and reconcile when it lands.
 
 **Agent**
 

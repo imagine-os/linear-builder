@@ -12,13 +12,16 @@ state: "Backlog"
 parent: "PAP-164"
 children: []
 blockedBy: ["PAP-339"]
-blocks: ["PAP-165", "PAP-171", "PAP-199", "PAP-489"]
+blocks: ["PAP-165", "PAP-171", "PAP-199", "PAP-489", "PAP-627", "PAP-629", "PAP-633", "PAP-637"]
 key: "tables/fields/relational-computed"
 url: "https://linear.app/paperos/issue/PAP-340/relational-and-computed-types-relation-lookup-rollup-formula-storage"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:31.654Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:28:51.460Z"
 model: "claude-sonnet-5"
 effort: "high"
+estimate: 3
+dueDate: "2026-09-28"
+cycle: null
 ---
 
 # PAP-340: Relational and computed types (relation, lookup, rollup, formula storage) and convertFieldType with lossiness report
@@ -39,6 +42,10 @@ In: `fields/{relation,lookup,rollup,formula}.ts`, `convertFieldType`, `docs/view
 * `lookup { relationFieldId, targetFieldId }` and `rollup { relationFieldId, targetFieldId, fn }` are `computed: true`, compile via lateral joins in PAP-163.
 * `formula` stores AST and result type only; renders `#PENDING` until PAP-171.
 * `convertFieldType(field, newType) => { lossy, sampleLosses[] }` for every pair in the matrix; conversions run in a PAP-43 job in batches of 1,000 with progress.
+
+*Round 4 amendment (2026-09-18):*
+
+* Round 4: `lookup` and `rollup` options gain `filter?: FilterTree` evaluated over the linked records before projection or aggregation (Airtable's conditional rollups, Notion's filtered rollups); compiles into the lateral join's `WHERE`. The relation editor gains `allowCreate: boolean` so a user can type a new title and create the target record inline through `records.create` (PAP-613) with the target dataset's defaults applied.
 
 **Interface contract**
 
@@ -72,3 +79,5 @@ Builder: Nova. Reviewer: Sentinel (Code Reviewer), Forge on joins.
 **Size**
 
 M: conversion matrix is the bulk.
+
+*Round 4 critique fix (2026-09-18):* resolved 1 round-4 file key in this description to Linear identifiers: `r4/tables/records-crud-procedures` = PAP-613.

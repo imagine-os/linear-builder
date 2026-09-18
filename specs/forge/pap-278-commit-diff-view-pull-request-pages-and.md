@@ -6,7 +6,7 @@ projectName: "Version Control & Forge Independence"
 phase: "P2"
 type: "Build"
 priority: 4
-surfaces: ["Developer", "Agent"]
+surfaces: ["Agent"]
 milestone: "Disaster recovery proven"
 state: "Backlog"
 parent: "PAP-54"
@@ -15,10 +15,13 @@ blockedBy: ["PAP-277"]
 blocks: []
 key: "child/PAP-54/23"
 url: "https://linear.app/paperos/issue/PAP-278/commit-diff-view-pull-request-pages-and-linear-trailer-links"
-source: "Linear snapshot 2026-09-17T15:11Z (plan/linear-snapshot-live.json)"
-updatedAt: "2026-09-17T13:42:14.826Z"
+source: "Linear snapshot 2026-09-18T14:58Z (plan/linear-snapshot-live.json)"
+updatedAt: "2026-09-18T14:21:27.640Z"
 model: "claude-sonnet-5"
 effort: "low"
+estimate: 3
+dueDate: null
+cycle: null
 ---
 
 # PAP-278: Commit diff view, pull request pages and Linear trailer links
