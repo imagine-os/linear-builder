@@ -101,6 +101,8 @@ def main():
     for ident, i in prev_issues.items():
         if i.get("key"):
             key_by_ident.setdefault(ident, i["key"])
+    # round 3 module-system issues: plan/module-issues.json records key and title, not the identifier (matched by title below)
+    module_key_by_title = {x["title"]: x["key"] for x in (load_json("plan/module-issues.json", {}) or {}).get("issues", []) if x.get("title") and x.get("key")}
 
     # ---- project keys: linear-ids projects (round 1), module-system, new round-4 projects ----
     proj_key_by_name = {v["name"]: k for k, v in (ids.get("projects") or {}).items() if isinstance(v, dict) and v.get("name")}
@@ -210,7 +212,7 @@ def main():
             "relations": rel, "inverseRelations": inv,
             "attachments": [{"id": a["id"], "title": a["title"], "subtitle": a["subtitle"], "url": a["url"], "sourceType": a["sourceType"], "createdAt": a["createdAt"]} for a in n["attachments"]["nodes"]],
             "commentCount": 0, "assignee": n["assignee"]["name"] if n["assignee"] else None,
-            "key": key_by_ident.get(n["identifier"]), "url": n["url"],
+            "key": key_by_ident.get(n["identifier"]) or module_key_by_title.get(n["title"]), "url": n["url"],
             "createdAt": n["createdAt"], "updatedAt": n["updatedAt"], "startedAt": n["startedAt"], "completedAt": n["completedAt"], "canceledAt": n["canceledAt"],
         })
         if len(issues) % 100 == 0:

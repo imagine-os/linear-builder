@@ -1,10 +1,10 @@
-# Linear snapshot summary (2026-09-18T14:09:37Z)
+# Linear snapshot summary (2026-09-18T14:11:42Z)
 
 Written by `tools/linear/round4/snapshot4.py` to `plan/linear-snapshot-live.json`. Team **PAP** (PaperOS), plan `basic_monthly_12`, team `issueCount` 991.
 
 ## Counts
 
-* Issues (non-archived): **991** (previous snapshot 2026-09-17T15:11:44Z: 493; 498 new identifiers, PAP-498..PAP-995)
+* Issues (non-archived): **991** (previous snapshot 2026-09-18T14:09:37Z: 991; 0 new identifiers)
 * Canonical (PAP-13 upward, not Duplicate): **983**; leaves 878; umbrellas 105; Deferred 204
 * By state: Backlog 873, Triage 82, Ready for Claude 29, Duplicate 7
 * Relations: `blocks` 3041, `duplicate` 7; issues with a parent 258
