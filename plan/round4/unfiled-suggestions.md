@@ -102,3 +102,101 @@
 |---|---|---|---|---|
 | growth | Deal products and quote-from-deal use the finance item catalogue | business-core.json | r4/growth/deal-products-and-quotes: Deal products and quote from deal: line items on deals from the finance item catalogue, am | 0.53 |
 | growth | Expose PAP-410 inbound email parsing (quote stripping, HTML sanitising) as a shared helper in `packages/email` | collab.json | PAP-410: Support schema, inbound email parsing, threading heuristics, HTML sanitising, contact matc | 0.53 |
+
+## Round 4 phase 2: triage filing (2026-09-18)
+
+91 unfiled suggestions: 6 already covered by an issue created today, 3 merged into a near-duplicate suggestion, 82 filed as Triage issues (priority 3, Type and Surface labels, no estimate, due date or cycle).
+
+| # | target | title | outcome |
+|---|---|---|---|
+| 0 | agents | MCP tool server exposing `views.query`, `records.*` and `views.export` to agent sessions through the contract ports with `can()` and audit reasons | filed as PAP-914 |
+| 1 | agents | Orchestrator (PAP-96) mints `actingFor` keys only against a live delegation (`r4/identity/delegated-authority`) and services use `mintServiceToken` | filed as PAP-915 |
+| 2 | agents | PAP-105 `page-from-spec` skill lists the usage notes for the libraries a spec's components depend on | filed as PAP-916 |
+| 3 | agents | PAP-107 hooks use `openRoomHeadless` for agent edits and PAP-146 presence together | filed as PAP-917 |
+| 4 | agents | PAP-109 memory loader reads build journals and docs via the docs MCP tool | filed as PAP-918 |
+| 5 | agents | Session sandbox image installs `paperos-git-credential` and the pinned `known_hosts` by default, and runs `git` only through the helper (PAP-280) | filed as PAP-919 |
+| 6 | app-shell | Embedded OSS product kit: SSO from Better Auth to an embedded service, iframe or API embed slot, theming hand-off and tenant mapping | filed as PAP-920 |
+| 7 | app-shell | Onboarding wizard step 'Bring your data' linking the migration agent and template gallery | filed as PAP-921 |
+| 8 | app-shell | PAP-27 i18n provides the catalog hook behind `useUiStrings()` and pseudo-locale testing of component copy | filed as PAP-922 |
+| 9 | app-shell | PAP-366 exposes `useFlags(ids)` and a server-side evaluator the generated route guard can call; reserve `page.*` flag family | filed as PAP-923 |
+| 10 | app-shell | Preview deploys (PAP-26) and warm pools (PAP-365) consume `r4/data-layer/preview-databases` | filed as PAP-924 |
+| 11 | app-shell | Tauri capabilities for `menu`, `tray` and `clipboard-manager` plugin calls in PAP-255 and PAP-260 with per-platform notes | filed as PAP-925 |
+| 12 | app-shell | `OfflineBanner` (PAP-234) and the shells (PAP-62, PAP-63) render `ConnectionIndicator` from `r4/realtime/connection-status` | filed as PAP-926 |
+| 13 | app-shell | `paperos create` and `paperos upgrade` (PAP-22, PAP-430) authenticate through `r4/identity/device-flow-login` | filed as PAP-927 |
+| 14 | app-shell | `paperos create` wires the new Linear project with estimates, one-week cycles, triage, templates and the `Pipeline:` views from `linear-workspace.json` | covered by PAP-503 |
+| 15 | app-shell | `r4/app-shell/native-push-registration` implements `PushProvider` from `r4/realtime/web-push` and reuses the `push.deliver` job | filed as PAP-928 |
+| 16 | business-core | Expose `documents.create/accept` and `ItemPicker` through `@paperos/contract-business-core` for deal quotes | filed as PAP-929 |
+| 17 | business-core | Invoice, quote and receipt numbering (PAP-180) should consume `r4/data-layer/tenant-sequences` | filed as PAP-930 |
+| 18 | business-core | `ledger.importJournal(entries[], { runId })` batch posting and `ledger.reverseRun(runId)` in `@paperos/contract-business-core` | filed as PAP-931 |
+| 19 | collab | Cell-level comment anchors: extend the anchor grammar with `cell:<datasetRef>:<recordId>:<fieldId>` and a grid cell comment indicator | filed as PAP-932 |
+| 20 | collab | Docs History pane (PAP-128) and tenant docs `docs.versions.*` (PAP-379) consume `r4/realtime/doc-history` | filed as PAP-933 |
+| 21 | collab | Linear status comment and digest link into the QA evidence browser | filed as PAP-934 |
+| 22 | collab | PAP-380 keyboard hint overlay reads `commands.manifest.json` and effective chords from the PAP-153 resolver instead of a static list | filed as PAP-935 |
+| 23 | collab | PAP-380 product tour uses design-system `ui.coachmark` and `ui.spotlight` components rather than its own overlay | filed as PAP-936 |
+| 24 | collab | Prompt log browser filter by `promptVersion` and `modelServed` with a per-version cost and score column | filed as PAP-937 |
+| 25 | collab | Public or unauthenticated docs import path guard for imported Notion and Drive docs | filed as PAP-938 |
+| 26 | collab | Public rendering mode for the docs engine (unauthenticated, tenant-branded, `noindex` per page) | filed as PAP-939 |
+| 27 | collab | Slack decision cards with approve, reject and option buttons for Needs Justin, posting replies back as T1 Linear comments through the orchestrator | filed as PAP-940 |
+| 28 | collab | Tenant docs (PAP-379) and canvas overlays (PAP-321) use `ShareDialog` and `hasRelation` from `r4/identity/resource-grants` | filed as PAP-941 |
+| 29 | data-layer | Cross-module unit of work: `UnitOfWorkPort` in `contract-data-layer` that lets a request span repositories from two modules in one transaction with the outbox | filed as PAP-942 |
+| 30 | data-layer | Monthly partition helper for finance event tables | filed as PAP-943 |
+| 31 | data-layer | PGlite persisted to disk on Tauri targets (file-backed instead of IndexedDB) with encryption at rest via the keychain key | filed as PAP-944 |
+| 32 | data-layer | Per-module Postgres schema namespaces (`CREATE SCHEMA <module>`) with RLS defaults, so a module's tables are physically grouped and a swap can expand-contract inside one schema | filed as PAP-945 |
+| 33 | data-layer | Review generated Drizzle tables, RLS policies and routers from `r4/spec-builder/entity-backend-codegen` against PAP-32, PAP-34 and PAP-268 conventions | filed as PAP-946 |
+| 34 | design-system | Mark text-bearing props `i18n: true` and expose `ui.featureUnavailable` and `ui.form` field-list props in the PAP-74 registry | filed as PAP-947 |
+| 35 | design-system | Ship a plain-HTML email base template before PAP-235 | filed as PAP-948 |
+| 36 | design-system | Storybook interaction tests as a Gate 1 job with the a11y addon failing on violations | filed as PAP-949 |
+| 37 | design-system | Tabbed and split main area components (`Tabs` workspace, `SplitPane` with persisted ratios) for multi-record work | filed as PAP-950 |
+| 38 | forge | Branch-name format setting shared by Linear's GitHub integration, PAP-46 policy and the orchestrator's `ensureWorktree` | covered by PAP-702 |
+| 39 | forge | Forge bot display names and avatars matching the Linear character identity decision | filed as PAP-951 |
+| 40 | forge | Merge queue with speculative-merge Gate 1 run and auto-rebase for the Merger | filed as PAP-952 |
+| 41 | forge | Size and budget the self-hosted runner pool for 4 visual shards, 2 edge shards, reviewers and nightly heavy jobs with queue-time alerts | filed as PAP-953 |
+| 42 | growth | Customer requests intake: link support-inbox conversations (PAP-412) to PM issues as request counts and notify requesters on Done | filed as PAP-954 |
+| 43 | identity | Agent principal per sub-character (`pos_agent_` keys carry `character/sub`) so audit rows attribute to the sub that acted | filed as PAP-955 |
+| 44 | identity | Generic OAuth provider registration API for non-login connections | filed as PAP-956 |
+| 45 | identity | Hocuspocus and the shape proxy subscribe to `permission.changed` | filed as PAP-957 |
+| 46 | identity | Idle lock and shared-device mode: re-authenticate after inactivity, lock screen with passkey, per-tenant timeout, kiosk exemption | filed as PAP-958 |
+| 47 | identity | PAP-224 auth pages consume `ui.otpInput`, `ui.passwordInput` and `ui.stepper` from `r4/design-system/specialised-inputs` and navigation components | filed as PAP-959 |
+| 48 | identity | PAP-64 records flag-gated actions as `conditional` in the permission matrix | filed as PAP-960 |
+| 49 | identity | Portal customer to finance party link (`fin_party.user_id`) surfaced in the portal shell | filed as PAP-961 |
+| 50 | identity | Portal registration writes a `crm.contact.created`-compatible event with `user_id` | filed as PAP-962 |
+| 51 | input | Recents and favourites: last opened records and pages per user, pinned favourites in the nav slot, surfaced in the command palette | filed as PAP-963 |
+| 52 | libraries | Decide the enrichment and email-verification vendor set (Clearbit, Apollo, Hunter, OSS MX) in the registry | filed as PAP-964 |
+| 53 | libraries | MCP catalog: `scope` classes (`readOnly`, `write`, `destructive`), `lastVerified` and a Claude Code plugin manifest per connector | filed as PAP-965 |
+| 54 | libraries | Mark every MCP catalog tool with a `scope` class (`readOnly`, `write`, `destructive`) and a `lastVerified` date | merged into #53 (PAP-965) |
+| 55 | migration | Notion (PAP-419) and template (PAP-426) importers write documents through `r4/realtime/headless-client` `doc.edit` jobs | filed as PAP-966 |
+| 56 | migration | Scheduled re-sync of external sources into datasets (Airtable sync tables equivalent) on the PAP-199 connectors with change detection and conflict policy | filed as PAP-967 |
+| 57 | module-system | Migration adapter kit (PAP-443) should reuse `pnpm db:lint` and `defineBackfill` from `r4/data-layer/migration-safety` | filed as PAP-968 |
+| 58 | module-system | PAP-442 swap playbook consumes `swapImpact` and named-import counts from the library census for library-level swaps | filed as PAP-969 |
+| 59 | pm-linear | Accept `placeholder` principals in `pm_issue.assignee` and `pm_comment.author` | filed as PAP-970 |
+| 60 | pm-linear | Engineering metrics from forge webhooks: PR cycle time, review latency, CI duration and merge-queue wait per character and project, rendered as a dashboard block | filed as PAP-971 |
+| 61 | pm-linear | PAP-306 weekly re-audit reads `pnpm lib health --json`, guardrail waiver counts and expiring patches | filed as PAP-972 |
+| 62 | pm-linear | Weekly re-audit (PAP-306) runs `pnpm tenant:purge --dry-run` and `pii:build --check` as drift checks | merged into #61 (PAP-972) |
+| 63 | pm-linear | `loop.registerPass()` plug-in point in PAP-281 for the promotion pass, SLA evaluator and rate-limit governor | filed as PAP-973 |
+| 64 | quality | Add `views.query`, `views.groups` and `records.update` p95 to the PAP-242 performance budgets with the 100k-row seed from `r4/tables/demo-pages-and-seed-data` | filed as PAP-974 |
+| 65 | quality | Gate 3 captures desktop window screenshots (960x600, 1280x800, 1920x1080) through the Tauri E2E harness beside the seven browser widths | filed as PAP-975 |
+| 66 | quality | Gate 3 records a keyboard-only replay of each critical flow using `@paperos/input/testing` | filed as PAP-976 |
+| 67 | quality | PAP-244 spec-conformance reviewer consumes `spec-diff.json` and blocks on `breaking: true` without a Breaking section | filed as PAP-977 |
+| 68 | quality | PAP-246 story baselines add `forced-colors`, RTL and `density: compact` projects for the component gallery | filed as PAP-978 |
+| 69 | quality | PAP-80 emits `security.json` advisories per direct dependency and a CycloneDX SBOM path the registry health page can read | filed as PAP-979 |
+| 70 | quality | PAP-86 realtime presence flows and PAP-246 projects adopt `@paperos/contract-realtime/testing` fixtures | filed as PAP-980 |
+| 71 | quality | Release-candidate certification (PAP-254) requires `conformance.json` green for every registered suite and a clean `contract-diff` report, and the digest (PAP-89) lists modules whose shadow diff count is non-zero | filed as PAP-981 |
+| 72 | quality | Required-check name contract: one file `ops/ci/required-checks.json` listing the check names each gate posts, consumed by PAP-46 rulesets and r4/forge/merge-automation | filed as PAP-982 |
+| 73 | quality | Security telemetry (PAP-356) ingests `auth.lockout`, `auth.captcha_failed`, `service.denied` and `auth.device.approved` | covered by PAP-673 |
+| 74 | quality | Security telemetry (PAP-356) should ingest pgAudit lines and `rate_limit_degraded` events | covered by PAP-673 |
+| 75 | realtime | Cell-level presence in grids and boards: who is viewing or editing which record and field, from the PAP-141 awareness layer | filed as PAP-983 |
+| 76 | realtime | Hocuspocus (PAP-140) subscribes to `permission.changed` and awareness filtering uses `verifySessionToken` | merged into #45 (PAP-957) |
+| 77 | realtime | PAP-142 editor: block ids on every node for `tdoc:` comment anchors and suggestion marks | filed as PAP-984 |
+| 78 | realtime | Push transport as the carrier for marketing web push | filed as PAP-985 |
+| 79 | realtime | Window bus contract (`contract-realtime` `WindowBusPort`) as the only cross-window channel the kernel permits, with a conformance fixture for two windows | filed as PAP-986 |
+| 80 | realtime | WindowBus message catalogue entries for `command.forward/result`, `focus.request`, `clipboard.sync` and `a11y.prefs.changed` in PAP-145 | filed as PAP-987 |
+| 81 | spec-builder | Access section (PAP-116) gains `fields[].access` and custom-role audience references | filed as PAP-988 |
+| 82 | spec-builder | Page spec `views:` section renders through `ViewHost` and accepts any registered kind; codegen emits `ui.dataTable` for arrays under 500 rows and a view for datasets | filed as PAP-989 |
+| 83 | spec-builder | Reserve `help`, `comments`, `flags`, `modules`, `seo`, `budgets` keys in page.spec.yaml v1.1 | covered by PAP-740 |
+| 84 | spec-builder | Spec quality reviewer before build: run the docs-and-spec reviewer on `specs/**` PRs and block Ready for Claude on failing specs | filed as PAP-990 |
+| 85 | tables | Custom datasets (PAP-161, PAP-332) should register through `defineEntity()` where the schema is code | filed as PAP-991 |
+| 86 | tables | Grid editing (PAP-342) and record page (PAP-333) mount `ConflictBoundary` from `r4/realtime/conflict-ux-impl` | filed as PAP-992 |
+| 87 | tables | Persist `unsupported` view kinds and formula snapshots with an upgrade hook | filed as PAP-993 |
+| 88 | tables | View sharing (PAP-172) and record pages (PAP-333) consume `r4/identity/resource-grants` and `r4/identity/field-permissions` | filed as PAP-994 |
+| 89 | tables | `Money` field editor with currency picker and per-currency exponent | filed as PAP-995 |
+| 90 | tables | `r4/tables/field-level-permissions` should compile `FieldDef.permissions` into `Policy.fields` and call `maskFields` from `r4/identity/field-permissions` | covered by PAP-638 |

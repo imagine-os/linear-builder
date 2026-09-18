@@ -139,6 +139,11 @@
   "identifier": "PAP-517",
   "url": "https://linear.app/paperos/issue/PAP-517/public-route-prerendering-build-time-static-html-for-public-routes"
  },
+ "r4/app-shell/settings-registry": {
+  "id": "4ff74f26-a507-49de-9b3a-8402b1750295",
+  "identifier": "PAP-912",
+  "url": "https://linear.app/paperos/issue/PAP-912/build-the-settings-registry-modules-declare-settings-sections-and"
+ },
  "r4/app-shell/shell-layout-presets": {
   "id": "425928de-8714-4ff9-adc9-5069fe34a089",
   "identifier": "PAP-511",
@@ -183,6 +188,76 @@
   "id": "423c230a-1701-4905-9397-28a9f22e96e2",
   "identifier": "PAP-500",
   "url": "https://linear.app/paperos/issue/PAP-500/warm-pool-job-nightly-warm-poolyml-and-paperos-pool-filldrainreconcile"
+ },
+ "r4/assistant/action-catalogue": {
+  "id": "798e929b-6bf8-4d7e-9c8c-2058a76da821",
+  "identifier": "PAP-838",
+  "url": "https://linear.app/paperos/issue/PAP-838/build-the-action-catalogue-agentcallable-commands-and-orpc-procedures"
+ },
+ "r4/assistant/business-characters": {
+  "id": "709c74dc-2a0a-473d-9554-0f7783bd746b",
+  "identifier": "PAP-842",
+  "url": "https://linear.app/paperos/issue/PAP-842/build-tenant-configurable-business-characters-persona-knowledge"
+ },
+ "r4/assistant/conformance": {
+  "id": "c1ef6ae5-0d38-4934-9be8-e1541455b62c",
+  "identifier": "PAP-845",
+  "url": "https://linear.app/paperos/issue/PAP-845/conformance-test-suite-for-assistant-contract"
+ },
+ "r4/assistant/contract-publish": {
+  "id": "a6684f18-a26f-4291-bc97-aebac990bb1a",
+  "identifier": "PAP-833",
+  "url": "https://linear.app/paperos/issue/PAP-833/publish-paperoscontract-assistant-v01-with-manifest"
+ },
+ "r4/assistant/conversation-runtime": {
+  "id": "2f408f5d-ef17-4568-b1e3-37bbf8c27c05",
+  "identifier": "PAP-836",
+  "url": "https://linear.app/paperos/issue/PAP-836/build-the-conversation-runtime-streaming-turns-over-the-push-transport"
+ },
+ "r4/assistant/metering-limits": {
+  "id": "140e550a-b7ed-4f72-b66e-1a0b172228d5",
+  "identifier": "PAP-844",
+  "url": "https://linear.app/paperos/issue/PAP-844/add-assistant-metering-and-limits-usage-kinds-per-tenant-daily-limits"
+ },
+ "r4/assistant/model-and-provider-port": {
+  "id": "e6291485-8ad9-4458-9e70-c855e79c56bb",
+  "identifier": "PAP-834",
+  "url": "https://linear.app/paperos/issue/PAP-834/specify-the-assistant-model-conversations-messages-grounding-citations"
+ },
+ "r4/assistant/nl-to-views": {
+  "id": "f264ddad-65b8-4257-9d82-35a5688d0459",
+  "identifier": "PAP-839",
+  "url": "https://linear.app/paperos/issue/PAP-839/build-the-tables-copilot-natural-language-to-filtertree-formula-and"
+ },
+ "r4/assistant/portal-assistant": {
+  "id": "f247b8d0-f2fa-4f93-8416-fcdb21f601d8",
+  "identifier": "PAP-841",
+  "url": "https://linear.app/paperos/issue/PAP-841/build-the-customer-facing-portal-assistant-help-center-grounding"
+ },
+ "r4/assistant/retrieval-grounding": {
+  "id": "1ffc6944-903b-4c5d-8800-109365cf5456",
+  "identifier": "PAP-835",
+  "url": "https://linear.app/paperos/issue/PAP-835/build-permission-filtered-retrieval-over-the-search-registry-chunking"
+ },
+ "r4/assistant/safety-evals-redteam": {
+  "id": "1e9c4cb6-1793-4560-9d73-da22eef7232a",
+  "identifier": "PAP-843",
+  "url": "https://linear.app/paperos/issue/PAP-843/build-the-assistant-eval-and-red-team-suite-injection-via-records-and"
+ },
+ "r4/assistant/staff-chat-panel": {
+  "id": "ffc0f873-5c8d-4b0e-9096-92516eea5412",
+  "identifier": "PAP-837",
+  "url": "https://linear.app/paperos/issue/PAP-837/build-the-staff-assistant-panel-inspector-slot-command-palette-ask"
+ },
+ "r4/assistant/summaries-and-drafting": {
+  "id": "2c276e56-8d5c-417a-a5b0-cba99944a019",
+  "identifier": "PAP-840",
+  "url": "https://linear.app/paperos/issue/PAP-840/build-summaries-and-drafting-copilots-record-and-thread-summaries"
+ },
+ "r4/assistant/wire": {
+  "id": "b0c35387-7b9b-4293-a227-1fa907f1959c",
+  "identifier": "PAP-846",
+  "url": "https://linear.app/paperos/issue/PAP-846/wire-assistant-behind-the-module-registry-with-an-adapter-and-feature"
  },
  "r4/business-core/bank-feed-port-and-statement-import": {
   "id": "eb1ea329-b23f-471a-8bc4-f9d2655f3ec5",
@@ -374,10 +449,100 @@
   "identifier": "PAP-725",
   "url": "https://linear.app/paperos/issue/PAP-725/notification-core-kinds-registry-event-bus-subscriber-worker"
  },
+ "r4/collab/sms-notification-channel": {
+  "id": "fac82fc5-87af-49fb-abb6-f872c4848e17",
+  "identifier": "PAP-910",
+  "url": "https://linear.app/paperos/issue/PAP-910/add-sms-and-whatsapp-as-notification-channels-on-the-notification-core"
+ },
  "r4/collab/watchers-subscriptions": {
   "id": "6333dcad-c822-432d-9e56-4be26a9d3162",
   "identifier": "PAP-726",
   "url": "https://linear.app/paperos/issue/PAP-726/follow-model-watch-records-threads-and-docs-with-auto-follow-rules-and"
+ },
+ "r4/commerce/assets-work-orders": {
+  "id": "7080a261-bc21-4b4e-945d-be882cd53780",
+  "identifier": "PAP-885",
+  "url": "https://linear.app/paperos/issue/PAP-885/build-assets-and-work-orders-asset-registry-with-locations-and"
+ },
+ "r4/commerce/catalog-inventory": {
+  "id": "bf724005-7d9a-4cb6-9dc3-efbbd970b92b",
+  "identifier": "PAP-879",
+  "url": "https://linear.app/paperos/issue/PAP-879/build-catalog-and-inventory-products-variants-price-lists-stock-per"
+ },
+ "r4/commerce/conformance": {
+  "id": "8073c747-fabd-4935-973f-c2a3fd05bb33",
+  "identifier": "PAP-891",
+  "url": "https://linear.app/paperos/issue/PAP-891/conformance-test-suite-for-commerce-contract"
+ },
+ "r4/commerce/contract-publish": {
+  "id": "4aabbd39-90ef-4d6a-abf5-5fb0faab355b",
+  "identifier": "PAP-877",
+  "url": "https://linear.app/paperos/issue/PAP-877/publish-paperoscontract-commerce-v01-with-manifest"
+ },
+ "r4/commerce/customer-subscriptions": {
+  "id": "fdeb1aea-ebc1-4be7-8a33-e446d6fd8f13",
+  "identifier": "PAP-886",
+  "url": "https://linear.app/paperos/issue/PAP-886/build-tenant-to-customer-subscriptions-plans-and-recurring-billing-on"
+ },
+ "r4/commerce/domain-model": {
+  "id": "7451bae4-c8ca-45ac-9edd-760acbd41b49",
+  "identifier": "PAP-878",
+  "url": "https://linear.app/paperos/issue/PAP-878/specify-the-commerce-and-operations-domain-model-product-variant-price"
+ },
+ "r4/commerce/hr-core": {
+  "id": "cccd02a1-0eb1-4377-9293-167a704cd9dd",
+  "identifier": "PAP-884",
+  "url": "https://linear.app/paperos/issue/PAP-884/build-hr-core-employee-directory-and-profiles-on-fin-employee-time-off"
+ },
+ "r4/commerce/marketplace-model": {
+  "id": "2f28f291-83de-41b6-9272-86365bca5fc5",
+  "identifier": "PAP-887",
+  "url": "https://linear.app/paperos/issue/PAP-887/build-the-two-sided-marketplace-model-vendor-accounts-on-connect"
+ },
+ "r4/commerce/orders-fulfilment": {
+  "id": "aa2539f2-814b-4942-9dd9-0846a48026dc",
+  "identifier": "PAP-880",
+  "url": "https://linear.app/paperos/issue/PAP-880/build-orders-and-fulfilment-cart-to-order-state-machine-payment-via"
+ },
+ "r4/commerce/pack-conformance-tests": {
+  "id": "f3717441-fa38-42d2-ae48-d40507842dbc",
+  "identifier": "PAP-890",
+  "url": "https://linear.app/paperos/issue/PAP-890/build-pack-conformance-in-ci-every-pack-applies-to-a-blank-tenant-home"
+ },
+ "r4/commerce/pos-mode": {
+  "id": "b01a40ea-daf4-4e1f-8fd5-0a8e92377851",
+  "identifier": "PAP-881",
+  "url": "https://linear.app/paperos/issue/PAP-881/build-pos-mode-kiosk-and-tablet-layout-cart-and-tenders-terminal-cash"
+ },
+ "r4/commerce/projects-time-billing": {
+  "id": "e6bd3423-cbfa-4c02-a2b5-9bca435a336b",
+  "identifier": "PAP-883",
+  "url": "https://linear.app/paperos/issue/PAP-883/build-projects-time-tracking-and-time-and-materials-billing-projects"
+ },
+ "r4/commerce/purchasing-ap": {
+  "id": "a0c4cf0b-88e2-4e2a-8fb7-5e8ea1606279",
+  "identifier": "PAP-882",
+  "url": "https://linear.app/paperos/issue/PAP-882/build-purchasing-and-accounts-payable-purchase-orders-receiving-into"
+ },
+ "r4/commerce/vertical-packs-wave2": {
+  "id": "5c0ae02b-6de5-4f3f-9b0b-b35ddba2b7b0",
+  "identifier": "PAP-888",
+  "url": "https://linear.app/paperos/issue/PAP-888/author-vertical-packs-wave-2-on-the-pack-format-salon-and-spa-gym-and"
+ },
+ "r4/commerce/vertical-packs-wave3": {
+  "id": "261c565f-d7aa-4b2e-ac71-5b6e7fd54383",
+  "identifier": "PAP-889",
+  "url": "https://linear.app/paperos/issue/PAP-889/author-vertical-packs-wave-3-ecommerce-nonprofit-school-church"
+ },
+ "r4/commerce/wire": {
+  "id": "73efd510-e7cf-4cb4-9ed6-bb606ae8e1b9",
+  "identifier": "PAP-892",
+  "url": "https://linear.app/paperos/issue/PAP-892/wire-commerce-behind-the-module-registry-with-an-adapter-and-feature"
+ },
+ "r4/data-layer/cdn-edge-cache": {
+  "id": "753d1949-5754-478f-bee5-d93d7f96d752",
+  "identifier": "PAP-909",
+  "url": "https://linear.app/paperos/issue/PAP-909/add-cdn-and-edge-caching-for-public-assets-public-views-and-embeds-and"
  },
  "r4/data-layer/document-previews": {
   "id": "9a131fab-dfb7-4d52-a620-561b2a0e0001",
@@ -459,6 +624,11 @@
   "identifier": "PAP-558",
   "url": "https://linear.app/paperos/issue/PAP-558/postgres-backed-rate-limiting-rate-limit-bucket-paperosrate-limit-hit"
  },
+ "r4/data-layer/recurrence-engine": {
+  "id": "b0077569-1fd6-4ad6-bba6-9d99bc9ae92c",
+  "identifier": "PAP-908",
+  "url": "https://linear.app/paperos/issue/PAP-908/build-the-shared-recurrence-engine-rrule-rfc-5545-parsing-and"
+ },
  "r4/data-layer/retention-jobs": {
   "id": "bea59628-410a-468b-88fa-1ee4f074257e",
   "identifier": "PAP-560",
@@ -534,6 +704,11 @@
   "identifier": "PAP-660",
   "url": "https://linear.app/paperos/issue/PAP-660/form-state-adapters-useappform-over-react-hook-form-with-zod-form-and"
  },
+ "r4/design-system/labels-barcodes-qr": {
+  "id": "1d91bb1c-b74e-44de-b736-7f06f2eaf153",
+  "identifier": "PAP-911",
+  "url": "https://linear.app/paperos/issue/PAP-911/add-labels-barcodes-and-qr-codes-to-the-print-kit-barcode-and-qrcode"
+ },
  "r4/design-system/media-preview-and-lightbox": {
   "id": "58db1dd7-44c8-4bc1-8647-978cee5d3316",
   "identifier": "PAP-671",
@@ -583,6 +758,81 @@
   "id": "e7bd4851-2e78-44a2-9588-c4cf3e0e72e0",
   "identifier": "PAP-672",
   "url": "https://linear.app/paperos/issue/PAP-672/paperosui-versioning-and-deprecation-policy-changesets-since-and"
+ },
+ "r4/engagement/announcements": {
+  "id": "95cce12b-7093-4b75-a722-3e86cddc00fb",
+  "identifier": "PAP-873",
+  "url": "https://linear.app/paperos/issue/PAP-873/build-in-app-announcements-and-product-messaging-banners-modals-and-a"
+ },
+ "r4/engagement/booking-engine": {
+  "id": "7f7627eb-a1b2-415a-9afe-3e2998f25d2e",
+  "identifier": "PAP-864",
+  "url": "https://linear.app/paperos/issue/PAP-864/build-the-booking-engine-availability-computation-slot-search-holds"
+ },
+ "r4/engagement/booking-pages": {
+  "id": "c595cc2b-c26b-4db3-9097-460fd2c0f28b",
+  "identifier": "PAP-865",
+  "url": "https://linear.app/paperos/issue/PAP-865/build-booking-pages-and-reminders-public-bookslug-flow-portal-bookings"
+ },
+ "r4/engagement/calendar-sync": {
+  "id": "7aca93b6-5fec-4210-a8a0-e26154af3930",
+  "identifier": "PAP-866",
+  "url": "https://linear.app/paperos/issue/PAP-866/build-calendar-sync-ics-feeds-google-calendar-and-microsoft-365-two"
+ },
+ "r4/engagement/conformance": {
+  "id": "161001b3-b60f-4fdc-bea7-23b1ad64857b",
+  "identifier": "PAP-875",
+  "url": "https://linear.app/paperos/issue/PAP-875/conformance-test-suite-for-engagement-contract"
+ },
+ "r4/engagement/contract-publish": {
+  "id": "a7115493-de08-41f5-a492-c03bd64b9d4a",
+  "identifier": "PAP-862",
+  "url": "https://linear.app/paperos/issue/PAP-862/publish-paperoscontract-engagement-v01-with-manifest"
+ },
+ "r4/engagement/feedback-board": {
+  "id": "d87bfd8a-3c1a-478a-8bd7-c79e5cdb2502",
+  "identifier": "PAP-874",
+  "url": "https://linear.app/paperos/issue/PAP-874/build-the-feedback-and-feature-request-board-public-and-portal-board"
+ },
+ "r4/engagement/help-center": {
+  "id": "d00b85c7-8b37-4639-aa4f-aec5250c4e77",
+  "identifier": "PAP-868",
+  "url": "https://linear.app/paperos/issue/PAP-868/build-the-public-help-center-articles-from-tenant-docs-categories"
+ },
+ "r4/engagement/loyalty-gift-cards": {
+  "id": "496fe531-d7bf-4d90-99af-2f98c9027f28",
+  "identifier": "PAP-872",
+  "url": "https://linear.app/paperos/issue/PAP-872/build-loyalty-and-gift-cards-points-sub-ledger-with-earn-and-redeem"
+ },
+ "r4/engagement/memberships-checkin": {
+  "id": "f28f8ece-991b-4210-b005-6db8948a4fbf",
+  "identifier": "PAP-871",
+  "url": "https://linear.app/paperos/issue/PAP-871/build-memberships-and-check-in-membership-plans-on-stripe-connect"
+ },
+ "r4/engagement/messaging-channels": {
+  "id": "6afa2001-2f4d-4c8f-8318-675acd484f53",
+  "identifier": "PAP-867",
+  "url": "https://linear.app/paperos/issue/PAP-867/build-two-way-conversational-messaging-messagingchannelport-with-sms"
+ },
+ "r4/engagement/reviews-requests": {
+  "id": "57a01d0a-ad7b-473e-bad2-1d11708b1bb0",
+  "identifier": "PAP-870",
+  "url": "https://linear.app/paperos/issue/PAP-870/build-review-requests-and-reputation-google-facebook-and-yelp-review"
+ },
+ "r4/engagement/scheduling-model": {
+  "id": "88116825-e17b-41f4-b893-9d7fc3dd4235",
+  "identifier": "PAP-863",
+  "url": "https://linear.app/paperos/issue/PAP-863/specify-the-scheduling-model-resources-services-availability-rules-on"
+ },
+ "r4/engagement/surveys-nps": {
+  "id": "c900d489-ba9f-47c9-ab3b-9a64e1e01b9b",
+  "identifier": "PAP-869",
+  "url": "https://linear.app/paperos/issue/PAP-869/build-surveys-nps-and-csat-templates-on-the-forms-runtime-triggers"
+ },
+ "r4/engagement/wire": {
+  "id": "a5f3136c-983c-438c-8477-1099fe8ab14e",
+  "identifier": "PAP-876",
+  "url": "https://linear.app/paperos/issue/PAP-876/wire-engagement-behind-the-module-registry-with-an-adapter-and-feature"
  },
  "r4/forge/bootstrap-check-mode": {
   "id": "44e3f9e1-c551-41bd-9130-b69e815bd9f8",
@@ -843,6 +1093,11 @@
   "id": "a97ac714-a013-4613-8e3f-3ea43fc3ef28",
   "identifier": "PAP-580",
   "url": "https://linear.app/paperos/issue/PAP-580/totp-second-factor-with-backup-codes-the-authrecover-flow-that"
+ },
+ "r4/identity/oauth-provider-apps": {
+  "id": "12cb73a4-e746-4989-bd2a-9bdefd73cac6",
+  "identifier": "PAP-913",
+  "url": "https://linear.app/paperos/issue/PAP-913/add-tenant-installable-oauth-apps-oidc-provider-for-third-party-apps"
  },
  "r4/identity/partner-managed-tenants": {
   "id": "7897afff-916c-4a44-9bd5-4c12806c50cc",
@@ -1213,6 +1468,81 @@
   "id": "fca47ec3-761d-47d4-a653-b48f577fbf10",
   "identifier": "PAP-540",
   "url": "https://linear.app/paperos/issue/PAP-540/yjs-document-schema-versioning-ydocversion-in-the-document-meta"
+ },
+ "r4/platform-ops/abuse-controls": {
+  "id": "07c98f66-6469-4f97-8db2-e5314caa0106",
+  "identifier": "PAP-900",
+  "url": "https://linear.app/paperos/issue/PAP-900/build-abuse-and-signup-fraud-controls-captchaport-disposable-email-and"
+ },
+ "r4/platform-ops/compliance-controls": {
+  "id": "6fb9eeed-c495-4ac0-916c-fed64a416fc9",
+  "identifier": "PAP-896",
+  "url": "https://linear.app/paperos/issue/PAP-896/specify-the-control-framework-controlsyaml-mapping-soc-2-trust"
+ },
+ "r4/platform-ops/compliance-profiles": {
+  "id": "6a774e5e-c15b-473f-ad0f-aeaf898dd80d",
+  "identifier": "PAP-902",
+  "url": "https://linear.app/paperos/issue/PAP-902/build-compliance-profiles-per-tenant-standard-gdpr-hipaa-and-student"
+ },
+ "r4/platform-ops/conformance": {
+  "id": "c47460d3-1d50-4adb-943d-d908fe10b8dc",
+  "identifier": "PAP-906",
+  "url": "https://linear.app/paperos/issue/PAP-906/conformance-test-suite-for-platform-ops-contract"
+ },
+ "r4/platform-ops/contract-publish": {
+  "id": "1b5999a4-03c3-4ea5-be49-d188250246fe",
+  "identifier": "PAP-893",
+  "url": "https://linear.app/paperos/issue/PAP-893/publish-paperoscontract-platform-ops-v01-with-manifest"
+ },
+ "r4/platform-ops/data-residency": {
+  "id": "905e6abb-3f39-495c-a460-ef24f17100c7",
+  "identifier": "PAP-905",
+  "url": "https://linear.app/paperos/issue/PAP-905/design-multi-region-and-data-residency-region-per-tenant-eu-region"
+ },
+ "r4/platform-ops/evidence-automation": {
+  "id": "ffa47937-b15b-4e75-8b2f-ccf2455f1bf4",
+  "identifier": "PAP-903",
+  "url": "https://linear.app/paperos/issue/PAP-903/build-automated-compliance-evidence-collection-nightly-snapshots-of"
+ },
+ "r4/platform-ops/experiments": {
+  "id": "19dacf68-1af9-497d-a2a4-6488cc177db3",
+  "identifier": "PAP-899",
+  "url": "https://linear.app/paperos/issue/PAP-899/build-experiments-on-feature-flags-experiment-definitions-over-pap-366"
+ },
+ "r4/platform-ops/product-analytics": {
+  "id": "bb6d4a88-d73b-498d-a8da-92d058ba2f12",
+  "identifier": "PAP-897",
+  "url": "https://linear.app/paperos/issue/PAP-897/build-product-analytics-track-sdk-with-an-event-schema-registry"
+ },
+ "r4/platform-ops/session-replay": {
+  "id": "c2f180f5-a392-4822-896a-70842fec8173",
+  "identifier": "PAP-898",
+  "url": "https://linear.app/paperos/issue/PAP-898/build-session-replay-rrweb-capture-with-pii-masking-driven-by-schema"
+ },
+ "r4/platform-ops/status-page": {
+  "id": "4f9653c8-d24c-4648-b76d-e3a956c304bb",
+  "identifier": "PAP-895",
+  "url": "https://linear.app/paperos/issue/PAP-895/build-the-public-status-page-and-incident-comms-components-incidents"
+ },
+ "r4/platform-ops/superadmin-console": {
+  "id": "680f831c-f714-4187-9227-049cef061668",
+  "identifier": "PAP-894",
+  "url": "https://linear.app/paperos/issue/PAP-894/build-the-platform-super-admin-console-at-admin-tenant-list-and-detail"
+ },
+ "r4/platform-ops/tenant-health-scores": {
+  "id": "a6e17d96-101f-4815-82a3-f80d7d33ea44",
+  "identifier": "PAP-901",
+  "url": "https://linear.app/paperos/issue/PAP-901/build-tenant-health-scores-and-ops-dashboards-activation-usage-errors"
+ },
+ "r4/platform-ops/trust-center": {
+  "id": "913aa309-de77-4118-83d1-c914a7b01dda",
+  "identifier": "PAP-904",
+  "url": "https://linear.app/paperos/issue/PAP-904/build-the-trust-center-security-overview-live-control-status"
+ },
+ "r4/platform-ops/wire": {
+  "id": "b867bb6e-e6e7-440b-9487-e6663f117bcc",
+  "identifier": "PAP-907",
+  "url": "https://linear.app/paperos/issue/PAP-907/wire-platform-ops-behind-the-module-registry-with-an-adapter-and"
  },
  "r4/pm-linear/always-on-operations-and-morning-report": {
   "id": "868f8236-478b-4317-99d3-e8ba48ba05fc",
@@ -1673,5 +2003,572 @@
   "id": "8fc40f72-031e-4183-bcf5-8b4469e289bf",
   "identifier": "PAP-634",
   "url": "https://linear.app/paperos/issue/PAP-634/workload-view-capacity-per-person-per-period-from-an-assignee-field"
+ },
+ "r4/triage/0": {
+  "id": "65eb2447-4739-429a-968a-711d25325d55",
+  "identifier": "PAP-914",
+  "title": "MCP tool server exposing `views.query`, `records.*` and `views.export` to agent sessions through the contract ports with `can()` and audit reasons",
+  "url": "https://linear.app/paperos/issue/PAP-914/mcp-tool-server-exposing-viewsquery-records-and-viewsexport-to-agent"
+ },
+ "r4/triage/1": {
+  "id": "682e3cf9-940b-4d42-ab46-199dd4d45140",
+  "identifier": "PAP-915",
+  "title": "Orchestrator (PAP-96) mints `actingFor` keys only against a live delegation (`r4/identity/delegated-authority`) and services use `mintServiceToken`",
+  "url": "https://linear.app/paperos/issue/PAP-915/orchestrator-pap-96-mints-actingfor-keys-only-against-a-live"
+ },
+ "r4/triage/10": {
+  "id": "3a5d6d82-14fe-4783-806c-b6990d6ebf72",
+  "identifier": "PAP-924",
+  "title": "Preview deploys (PAP-26) and warm pools (PAP-365) consume `r4/data-layer/preview-databases`",
+  "url": "https://linear.app/paperos/issue/PAP-924/preview-deploys-pap-26-and-warm-pools-pap-365-consume-r4data"
+ },
+ "r4/triage/11": {
+  "id": "93340776-b9e8-4755-bff9-bb2e259ed7cc",
+  "identifier": "PAP-925",
+  "title": "Tauri capabilities for `menu`, `tray` and `clipboard-manager` plugin calls in PAP-255 and PAP-260 with per-platform notes",
+  "url": "https://linear.app/paperos/issue/PAP-925/tauri-capabilities-for-menu-tray-and-clipboard-manager-plugin-calls-in"
+ },
+ "r4/triage/12": {
+  "id": "fceab425-58f5-45d5-9d7a-5b2ed7270981",
+  "identifier": "PAP-926",
+  "title": "`OfflineBanner` (PAP-234) and the shells (PAP-62, PAP-63) render `ConnectionIndicator` from `r4/realtime/connection-status`",
+  "url": "https://linear.app/paperos/issue/PAP-926/offlinebanner-pap-234-and-the-shells-pap-62-pap-63-render"
+ },
+ "r4/triage/13": {
+  "id": "81d12f8e-1f6a-4c60-bafd-a16d5e352647",
+  "identifier": "PAP-927",
+  "title": "`paperos create` and `paperos upgrade` (PAP-22, PAP-430) authenticate through `r4/identity/device-flow-login`",
+  "url": "https://linear.app/paperos/issue/PAP-927/paperos-create-and-paperos-upgrade-pap-22-pap-430-authenticate-through"
+ },
+ "r4/triage/15": {
+  "id": "eee1585b-935a-48cd-b4cb-de3b87baa8a5",
+  "identifier": "PAP-928",
+  "title": "`r4/app-shell/native-push-registration` implements `PushProvider` from `r4/realtime/web-push` and reuses the `push.deliver` job",
+  "url": "https://linear.app/paperos/issue/PAP-928/r4app-shellnative-push-registration-implements-pushprovider-from"
+ },
+ "r4/triage/16": {
+  "id": "ff8ba440-2637-4a7e-9dbf-cac057460f03",
+  "identifier": "PAP-929",
+  "title": "Expose `documents.create|accept` and `ItemPicker` through `@paperos/contract-business-core` for deal quotes",
+  "url": "https://linear.app/paperos/issue/PAP-929/expose-documentscreateaccept-and-itempicker-through-paperoscontract"
+ },
+ "r4/triage/17": {
+  "id": "eac1be8f-12ef-45ac-b811-bdd2c0fd78dc",
+  "identifier": "PAP-930",
+  "title": "Invoice, quote and receipt numbering (PAP-180) should consume `r4/data-layer/tenant-sequences`",
+  "url": "https://linear.app/paperos/issue/PAP-930/invoice-quote-and-receipt-numbering-pap-180-should-consume-r4data"
+ },
+ "r4/triage/18": {
+  "id": "f0f9cfb3-9919-417c-99cf-1b77e6ed9e36",
+  "identifier": "PAP-931",
+  "title": "`ledger.importJournal(entries[], { runId })` batch posting and `ledger.reverseRun(runId)` in `@paperos/contract-business-core`",
+  "url": "https://linear.app/paperos/issue/PAP-931/ledgerimportjournalentries-runid-batch-posting-and"
+ },
+ "r4/triage/19": {
+  "id": "e751d456-c9cb-4b1f-907e-fb45acad3bc8",
+  "identifier": "PAP-932",
+  "title": "Cell-level comment anchors: extend the anchor grammar with `cell:<datasetRef>:<recordId>:<fieldId>` and a grid cell comment indicator",
+  "url": "https://linear.app/paperos/issue/PAP-932/cell-level-comment-anchors-extend-the-anchor-grammar-with"
+ },
+ "r4/triage/2": {
+  "id": "8160dbf4-0a32-42d7-a572-92d9fd9a6e23",
+  "identifier": "PAP-916",
+  "title": "PAP-105 `page-from-spec` skill lists the usage notes for the libraries a spec's components depend on",
+  "url": "https://linear.app/paperos/issue/PAP-916/pap-105-page-from-spec-skill-lists-the-usage-notes-for-the-libraries-a"
+ },
+ "r4/triage/20": {
+  "id": "9714dda7-ec1f-4751-a8a9-9f093bddee0b",
+  "identifier": "PAP-933",
+  "title": "Docs History pane (PAP-128) and tenant docs `docs.versions.*` (PAP-379) consume `r4/realtime/doc-history`",
+  "url": "https://linear.app/paperos/issue/PAP-933/docs-history-pane-pap-128-and-tenant-docs-docsversions-pap-379-consume"
+ },
+ "r4/triage/21": {
+  "id": "dad7a89f-0f62-440f-8c63-d9f9246d981a",
+  "identifier": "PAP-934",
+  "title": "Linear status comment and digest link into the QA evidence browser",
+  "url": "https://linear.app/paperos/issue/PAP-934/linear-status-comment-and-digest-link-into-the-qa-evidence-browser"
+ },
+ "r4/triage/22": {
+  "id": "eefe1b28-f945-41c6-a908-7f01234bf06b",
+  "identifier": "PAP-935",
+  "title": "PAP-380 keyboard hint overlay reads `commands.manifest.json` and effective chords from the PAP-153 resolver instead of a static list",
+  "url": "https://linear.app/paperos/issue/PAP-935/pap-380-keyboard-hint-overlay-reads-commandsmanifestjson-and-effective"
+ },
+ "r4/triage/23": {
+  "id": "ceec73ee-c978-4282-8c8b-47da08d5f66c",
+  "identifier": "PAP-936",
+  "title": "PAP-380 product tour uses design-system `ui.coachmark` and `ui.spotlight` components rather than its own overlay",
+  "url": "https://linear.app/paperos/issue/PAP-936/pap-380-product-tour-uses-design-system-uicoachmark-and-uispotlight"
+ },
+ "r4/triage/24": {
+  "id": "b27653ef-a9da-4854-9452-07327e83bddd",
+  "identifier": "PAP-937",
+  "title": "Prompt log browser filter by `promptVersion` and `modelServed` with a per-version cost and score column",
+  "url": "https://linear.app/paperos/issue/PAP-937/prompt-log-browser-filter-by-promptversion-and-modelserved-with-a-per"
+ },
+ "r4/triage/25": {
+  "id": "91070467-1e2a-490d-a3a6-120bf08bc02f",
+  "identifier": "PAP-938",
+  "title": "Public or unauthenticated docs import path guard for imported Notion and Drive docs",
+  "url": "https://linear.app/paperos/issue/PAP-938/public-or-unauthenticated-docs-import-path-guard-for-imported-notion"
+ },
+ "r4/triage/26": {
+  "id": "86bbe5e8-7308-404b-b1b3-154167dfb3d9",
+  "identifier": "PAP-939",
+  "title": "Public rendering mode for the docs engine (unauthenticated, tenant-branded, `noindex` per page)",
+  "url": "https://linear.app/paperos/issue/PAP-939/public-rendering-mode-for-the-docs-engine-unauthenticated-tenant"
+ },
+ "r4/triage/27": {
+  "id": "550a874f-9363-403b-baac-3806fa155324",
+  "identifier": "PAP-940",
+  "title": "Slack decision cards with approve, reject and option buttons for Needs Justin, posting replies back as T1 Linear comments through the orchestrator",
+  "url": "https://linear.app/paperos/issue/PAP-940/slack-decision-cards-with-approve-reject-and-option-buttons-for-needs"
+ },
+ "r4/triage/28": {
+  "id": "b088246a-542d-4410-8e2d-d91b06489d2c",
+  "identifier": "PAP-941",
+  "title": "Tenant docs (PAP-379) and canvas overlays (PAP-321) use `ShareDialog` and `hasRelation` from `r4/identity/resource-grants`",
+  "url": "https://linear.app/paperos/issue/PAP-941/tenant-docs-pap-379-and-canvas-overlays-pap-321-use-sharedialog-and"
+ },
+ "r4/triage/29": {
+  "id": "85becc5e-13b2-400a-8abd-43e401a59db8",
+  "identifier": "PAP-942",
+  "title": "Cross-module unit of work: `UnitOfWorkPort` in `contract-data-layer` that lets a request span repositories from two modules in one transaction with the outbox",
+  "url": "https://linear.app/paperos/issue/PAP-942/cross-module-unit-of-work-unitofworkport-in-contract-data-layer-that"
+ },
+ "r4/triage/3": {
+  "id": "cff3db88-e365-469a-9fe1-0e04a29da0b2",
+  "identifier": "PAP-917",
+  "title": "PAP-107 hooks use `openRoomHeadless` for agent edits and PAP-146 presence together",
+  "url": "https://linear.app/paperos/issue/PAP-917/pap-107-hooks-use-openroomheadless-for-agent-edits-and-pap-146"
+ },
+ "r4/triage/30": {
+  "id": "d6187b46-ebb3-42b0-a9fd-f3205240289a",
+  "identifier": "PAP-943",
+  "title": "Monthly partition helper for finance event tables",
+  "url": "https://linear.app/paperos/issue/PAP-943/monthly-partition-helper-for-finance-event-tables"
+ },
+ "r4/triage/31": {
+  "id": "4fb27b96-621a-4c18-8800-7124c747256e",
+  "identifier": "PAP-944",
+  "title": "PGlite persisted to disk on Tauri targets (file-backed instead of IndexedDB) with encryption at rest via the keychain key",
+  "url": "https://linear.app/paperos/issue/PAP-944/pglite-persisted-to-disk-on-tauri-targets-file-backed-instead-of"
+ },
+ "r4/triage/32": {
+  "id": "16b3c1d9-3800-4189-b3ff-6caabae8c2df",
+  "identifier": "PAP-945",
+  "title": "Per-module Postgres schema namespaces (`CREATE SCHEMA <module>`) with RLS defaults, so a module's tables are physically grouped and a swap can expand-contract inside one schema",
+  "url": "https://linear.app/paperos/issue/PAP-945/per-module-postgres-schema-namespaces-create-schema-module-with-rls"
+ },
+ "r4/triage/33": {
+  "id": "3e6656e4-3f1f-4d56-898c-dd7b41b30ae2",
+  "identifier": "PAP-946",
+  "title": "Review generated Drizzle tables, RLS policies and routers from `r4/spec-builder/entity-backend-codegen` against PAP-32, PAP-34 and PAP-268 conventions",
+  "url": "https://linear.app/paperos/issue/PAP-946/review-generated-drizzle-tables-rls-policies-and-routers-from-r4spec"
+ },
+ "r4/triage/34": {
+  "id": "40123b9a-7c6f-4061-8bf5-27a5eb6e3f22",
+  "identifier": "PAP-947",
+  "title": "Mark text-bearing props `i18n: true` and expose `ui.featureUnavailable` and `ui.form` field-list props in the PAP-74 registry",
+  "url": "https://linear.app/paperos/issue/PAP-947/mark-text-bearing-props-i18n-true-and-expose-uifeatureunavailable-and"
+ },
+ "r4/triage/35": {
+  "id": "2daa3dee-1fd7-4c65-bf60-2f73eb13d7d8",
+  "identifier": "PAP-948",
+  "title": "Ship a plain-HTML email base template before PAP-235",
+  "url": "https://linear.app/paperos/issue/PAP-948/ship-a-plain-html-email-base-template-before-pap-235"
+ },
+ "r4/triage/36": {
+  "id": "ddc0ca53-3c96-4e30-a25c-64d2cc65277f",
+  "identifier": "PAP-949",
+  "title": "Storybook interaction tests as a Gate 1 job with the a11y addon failing on violations",
+  "url": "https://linear.app/paperos/issue/PAP-949/storybook-interaction-tests-as-a-gate-1-job-with-the-a11y-addon"
+ },
+ "r4/triage/37": {
+  "id": "823c6681-1cd8-4682-a819-3ad6e8c38718",
+  "identifier": "PAP-950",
+  "title": "Tabbed and split main area components (`Tabs` workspace, `SplitPane` with persisted ratios) for multi-record work",
+  "url": "https://linear.app/paperos/issue/PAP-950/tabbed-and-split-main-area-components-tabs-workspace-splitpane-with"
+ },
+ "r4/triage/39": {
+  "id": "230afdf0-c633-4425-93a5-934e868ef7e7",
+  "identifier": "PAP-951",
+  "title": "Forge bot display names and avatars matching the Linear character identity decision",
+  "url": "https://linear.app/paperos/issue/PAP-951/forge-bot-display-names-and-avatars-matching-the-linear-character"
+ },
+ "r4/triage/4": {
+  "id": "58ae1f15-ceba-4819-90ae-f52dedd3ef9b",
+  "identifier": "PAP-918",
+  "title": "PAP-109 memory loader reads build journals and docs via the docs MCP tool",
+  "url": "https://linear.app/paperos/issue/PAP-918/pap-109-memory-loader-reads-build-journals-and-docs-via-the-docs-mcp"
+ },
+ "r4/triage/40": {
+  "id": "9dd1bd43-882b-4722-a567-7fdcf7f3fb60",
+  "identifier": "PAP-952",
+  "title": "Merge queue with speculative-merge Gate 1 run and auto-rebase for the Merger",
+  "url": "https://linear.app/paperos/issue/PAP-952/merge-queue-with-speculative-merge-gate-1-run-and-auto-rebase-for-the"
+ },
+ "r4/triage/41": {
+  "id": "7eefa320-40c8-4159-a817-d6388b2894c3",
+  "identifier": "PAP-953",
+  "title": "Size and budget the self-hosted runner pool for 4 visual shards, 2 edge shards, reviewers and nightly heavy jobs with queue-time alerts",
+  "url": "https://linear.app/paperos/issue/PAP-953/size-and-budget-the-self-hosted-runner-pool-for-4-visual-shards-2-edge"
+ },
+ "r4/triage/42": {
+  "id": "d6fa75d8-f06a-49d1-929f-c276dde33a57",
+  "identifier": "PAP-954",
+  "title": "Customer requests intake: link support-inbox conversations (PAP-412) to PM issues as request counts and notify requesters on Done",
+  "url": "https://linear.app/paperos/issue/PAP-954/customer-requests-intake-link-support-inbox-conversations-pap-412-to"
+ },
+ "r4/triage/43": {
+  "id": "4c47fd4a-bb58-4a7f-8eb8-4dc04804e486",
+  "identifier": "PAP-955",
+  "title": "Agent principal per sub-character (`pos_agent_` keys carry `character/sub`) so audit rows attribute to the sub that acted",
+  "url": "https://linear.app/paperos/issue/PAP-955/agent-principal-per-sub-character-pos-agent-keys-carry-charactersub-so"
+ },
+ "r4/triage/44": {
+  "id": "824377f5-3059-4a2f-8697-fb8339a07a17",
+  "identifier": "PAP-956",
+  "title": "Generic OAuth provider registration API for non-login connections",
+  "url": "https://linear.app/paperos/issue/PAP-956/generic-oauth-provider-registration-api-for-non-login-connections"
+ },
+ "r4/triage/45": {
+  "id": "6e98172b-fc26-491d-9cc9-e4a50675b279",
+  "identifier": "PAP-957",
+  "title": "Hocuspocus and the shape proxy subscribe to `permission.changed`",
+  "url": "https://linear.app/paperos/issue/PAP-957/hocuspocus-and-the-shape-proxy-subscribe-to-permissionchanged"
+ },
+ "r4/triage/46": {
+  "id": "12119f0e-4cfb-4800-93cd-bf9e5addf91b",
+  "identifier": "PAP-958",
+  "title": "Idle lock and shared-device mode: re-authenticate after inactivity, lock screen with passkey, per-tenant timeout, kiosk exemption",
+  "url": "https://linear.app/paperos/issue/PAP-958/idle-lock-and-shared-device-mode-re-authenticate-after-inactivity-lock"
+ },
+ "r4/triage/47": {
+  "id": "0bbb1c53-151f-4b8c-a48c-57406e3535bb",
+  "identifier": "PAP-959",
+  "title": "PAP-224 auth pages consume `ui.otpInput`, `ui.passwordInput` and `ui.stepper` from `r4/design-system/specialised-inputs` and navigation components",
+  "url": "https://linear.app/paperos/issue/PAP-959/pap-224-auth-pages-consume-uiotpinput-uipasswordinput-and-uistepper"
+ },
+ "r4/triage/48": {
+  "id": "9f296cb1-7e83-4fa9-b2f9-57d6591def0e",
+  "identifier": "PAP-960",
+  "title": "PAP-64 records flag-gated actions as `conditional` in the permission matrix",
+  "url": "https://linear.app/paperos/issue/PAP-960/pap-64-records-flag-gated-actions-as-conditional-in-the-permission"
+ },
+ "r4/triage/49": {
+  "id": "4868e2e5-4a51-4654-ba3d-fdc8ff780de9",
+  "identifier": "PAP-961",
+  "title": "Portal customer to finance party link (`fin_party.user_id`) surfaced in the portal shell",
+  "url": "https://linear.app/paperos/issue/PAP-961/portal-customer-to-finance-party-link-fin-partyuser-id-surfaced-in-the"
+ },
+ "r4/triage/5": {
+  "id": "a937bc7f-42dd-4553-b5f2-5001244ef732",
+  "identifier": "PAP-919",
+  "title": "Session sandbox image installs `paperos-git-credential` and the pinned `known_hosts` by default, and runs `git` only through the helper (PAP-280)",
+  "url": "https://linear.app/paperos/issue/PAP-919/session-sandbox-image-installs-paperos-git-credential-and-the-pinned"
+ },
+ "r4/triage/50": {
+  "id": "60d8c5a5-c856-4eaa-a33f-7c9b44e7f83b",
+  "identifier": "PAP-962",
+  "title": "Portal registration writes a `crm.contact.created`-compatible event with `user_id`",
+  "url": "https://linear.app/paperos/issue/PAP-962/portal-registration-writes-a-crmcontactcreated-compatible-event-with"
+ },
+ "r4/triage/51": {
+  "id": "a622f370-0f4c-4762-9edd-9ca53cae7582",
+  "identifier": "PAP-963",
+  "title": "Recents and favourites: last opened records and pages per user, pinned favourites in the nav slot, surfaced in the command palette",
+  "url": "https://linear.app/paperos/issue/PAP-963/recents-and-favourites-last-opened-records-and-pages-per-user-pinned"
+ },
+ "r4/triage/52": {
+  "id": "6ad82b53-df9e-442e-b180-fb6c7fd9c727",
+  "identifier": "PAP-964",
+  "title": "Decide the enrichment and email-verification vendor set (Clearbit, Apollo, Hunter, OSS MX) in the registry",
+  "url": "https://linear.app/paperos/issue/PAP-964/decide-the-enrichment-and-email-verification-vendor-set-clearbit"
+ },
+ "r4/triage/53": {
+  "id": "c88edb75-380e-4124-8ce7-b4c5ca2b2eb8",
+  "identifier": "PAP-965",
+  "title": "MCP catalog: `scope` classes (`readOnly`, `write`, `destructive`), `lastVerified` and a Claude Code plugin manifest per connector",
+  "url": "https://linear.app/paperos/issue/PAP-965/mcp-catalog-scope-classes-readonly-write-destructive-lastverified-and"
+ },
+ "r4/triage/55": {
+  "id": "5ae80e6b-3dc7-4b5e-95e9-5d6961abaaeb",
+  "identifier": "PAP-966",
+  "title": "Notion (PAP-419) and template (PAP-426) importers write documents through `r4/realtime/headless-client` `doc.edit` jobs",
+  "url": "https://linear.app/paperos/issue/PAP-966/notion-pap-419-and-template-pap-426-importers-write-documents-through"
+ },
+ "r4/triage/56": {
+  "id": "95ab3a6f-8df3-49dd-8aa3-8b4eb3ba623f",
+  "identifier": "PAP-967",
+  "title": "Scheduled re-sync of external sources into datasets (Airtable sync tables equivalent) on the PAP-199 connectors with change detection and conflict policy",
+  "url": "https://linear.app/paperos/issue/PAP-967/scheduled-re-sync-of-external-sources-into-datasets-airtable-sync"
+ },
+ "r4/triage/57": {
+  "id": "c4c96f6c-35e0-4696-9156-799fa9852e18",
+  "identifier": "PAP-968",
+  "title": "Migration adapter kit (PAP-443) should reuse `pnpm db:lint` and `defineBackfill` from `r4/data-layer/migration-safety`",
+  "url": "https://linear.app/paperos/issue/PAP-968/migration-adapter-kit-pap-443-should-reuse-pnpm-dblint-and"
+ },
+ "r4/triage/58": {
+  "id": "0180235c-47f4-4bd3-8592-473f6bababaa",
+  "identifier": "PAP-969",
+  "title": "PAP-442 swap playbook consumes `swapImpact` and named-import counts from the library census for library-level swaps",
+  "url": "https://linear.app/paperos/issue/PAP-969/pap-442-swap-playbook-consumes-swapimpact-and-named-import-counts-from"
+ },
+ "r4/triage/59": {
+  "id": "d9a0c6f7-bc09-42c6-9e1d-c2d02af41bd7",
+  "identifier": "PAP-970",
+  "title": "Accept `placeholder` principals in `pm_issue.assignee` and `pm_comment.author`",
+  "url": "https://linear.app/paperos/issue/PAP-970/accept-placeholder-principals-in-pm-issueassignee-and-pm-commentauthor"
+ },
+ "r4/triage/6": {
+  "id": "7508e061-8063-4cd9-ac27-acfff9d6e479",
+  "identifier": "PAP-920",
+  "title": "Embedded OSS product kit: SSO from Better Auth to an embedded service, iframe or API embed slot, theming hand-off and tenant mapping",
+  "url": "https://linear.app/paperos/issue/PAP-920/embedded-oss-product-kit-sso-from-better-auth-to-an-embedded-service"
+ },
+ "r4/triage/60": {
+  "id": "c4736bc9-d89a-4bed-8946-c9d157387d38",
+  "identifier": "PAP-971",
+  "title": "Engineering metrics from forge webhooks: PR cycle time, review latency, CI duration and merge-queue wait per character and project, rendered as a dashboard block",
+  "url": "https://linear.app/paperos/issue/PAP-971/engineering-metrics-from-forge-webhooks-pr-cycle-time-review-latency"
+ },
+ "r4/triage/61": {
+  "id": "4468c8c3-3128-4293-93b9-5ada2cdbd970",
+  "identifier": "PAP-972",
+  "title": "PAP-306 weekly re-audit reads `pnpm lib health --json`, guardrail waiver counts and expiring patches",
+  "url": "https://linear.app/paperos/issue/PAP-972/pap-306-weekly-re-audit-reads-pnpm-lib-health-json-guardrail-waiver"
+ },
+ "r4/triage/63": {
+  "id": "6ae1386d-76cf-4799-b05b-e1bdc857e98b",
+  "identifier": "PAP-973",
+  "title": "`loop.registerPass()` plug-in point in PAP-281 for the promotion pass, SLA evaluator and rate-limit governor",
+  "url": "https://linear.app/paperos/issue/PAP-973/loopregisterpass-plug-in-point-in-pap-281-for-the-promotion-pass-sla"
+ },
+ "r4/triage/64": {
+  "id": "f7ebaec7-5828-461b-b2cf-8a95194779e2",
+  "identifier": "PAP-974",
+  "title": "Add `views.query`, `views.groups` and `records.update` p95 to the PAP-242 performance budgets with the 100k-row seed from `r4/tables/demo-pages-and-seed-data`",
+  "url": "https://linear.app/paperos/issue/PAP-974/add-viewsquery-viewsgroups-and-recordsupdate-p95-to-the-pap-242"
+ },
+ "r4/triage/65": {
+  "id": "0eda9b74-124d-4a2b-93c3-8ab76b834981",
+  "identifier": "PAP-975",
+  "title": "Gate 3 captures desktop window screenshots (960x600, 1280x800, 1920x1080) through the Tauri E2E harness beside the seven browser widths",
+  "url": "https://linear.app/paperos/issue/PAP-975/gate-3-captures-desktop-window-screenshots-960x600-1280x800-1920x1080"
+ },
+ "r4/triage/66": {
+  "id": "1eff1420-ba22-46ae-af21-45c64c14940b",
+  "identifier": "PAP-976",
+  "title": "Gate 3 records a keyboard-only replay of each critical flow using `@paperos/input/testing`",
+  "url": "https://linear.app/paperos/issue/PAP-976/gate-3-records-a-keyboard-only-replay-of-each-critical-flow-using"
+ },
+ "r4/triage/67": {
+  "id": "dd68a62d-0666-4c57-8098-472f1a1878f1",
+  "identifier": "PAP-977",
+  "title": "PAP-244 spec-conformance reviewer consumes `spec-diff.json` and blocks on `breaking: true` without a Breaking section",
+  "url": "https://linear.app/paperos/issue/PAP-977/pap-244-spec-conformance-reviewer-consumes-spec-diffjson-and-blocks-on"
+ },
+ "r4/triage/68": {
+  "id": "5bf5e75b-b624-4a1c-964f-f4d00bdbda15",
+  "identifier": "PAP-978",
+  "title": "PAP-246 story baselines add `forced-colors`, RTL and `density: compact` projects for the component gallery",
+  "url": "https://linear.app/paperos/issue/PAP-978/pap-246-story-baselines-add-forced-colors-rtl-and-density-compact"
+ },
+ "r4/triage/69": {
+  "id": "5c629dcc-7873-48ac-ba3a-036154232640",
+  "identifier": "PAP-979",
+  "title": "PAP-80 emits `security.json` advisories per direct dependency and a CycloneDX SBOM path the registry health page can read",
+  "url": "https://linear.app/paperos/issue/PAP-979/pap-80-emits-securityjson-advisories-per-direct-dependency-and-a"
+ },
+ "r4/triage/7": {
+  "id": "7dd8bf51-431a-45ed-82a9-8954b9a71f4e",
+  "identifier": "PAP-921",
+  "title": "Onboarding wizard step 'Bring your data' linking the migration agent and template gallery",
+  "url": "https://linear.app/paperos/issue/PAP-921/onboarding-wizard-step-bring-your-data-linking-the-migration-agent-and"
+ },
+ "r4/triage/70": {
+  "id": "70b31d12-93ae-4b2a-b084-2c61c863003f",
+  "identifier": "PAP-980",
+  "title": "PAP-86 realtime presence flows and PAP-246 projects adopt `@paperos/contract-realtime/testing` fixtures",
+  "url": "https://linear.app/paperos/issue/PAP-980/pap-86-realtime-presence-flows-and-pap-246-projects-adopt"
+ },
+ "r4/triage/71": {
+  "id": "6a7c54ea-449e-4f31-8a9f-b4d276155564",
+  "identifier": "PAP-981",
+  "title": "Release-candidate certification (PAP-254) requires `conformance.json` green for every registered suite and a clean `contract-diff` report, and the digest (PAP-89) lists modules whose shadow diff count is non-zero",
+  "url": "https://linear.app/paperos/issue/PAP-981/release-candidate-certification-pap-254-requires-conformancejson-green"
+ },
+ "r4/triage/72": {
+  "id": "63aea54b-642d-4ae6-b11f-65e035f8f2ff",
+  "identifier": "PAP-982",
+  "title": "Required-check name contract: one file `ops/ci/required-checks.json` listing the check names each gate posts, consumed by PAP-46 rulesets and r4/forge/merge-automation",
+  "url": "https://linear.app/paperos/issue/PAP-982/required-check-name-contract-one-file-opscirequired-checksjson-listing"
+ },
+ "r4/triage/75": {
+  "id": "7b88d78e-8004-4d6e-9d23-ac0ad1eca9f3",
+  "identifier": "PAP-983",
+  "title": "Cell-level presence in grids and boards: who is viewing or editing which record and field, from the PAP-141 awareness layer",
+  "url": "https://linear.app/paperos/issue/PAP-983/cell-level-presence-in-grids-and-boards-who-is-viewing-or-editing"
+ },
+ "r4/triage/77": {
+  "id": "efdc9716-6dd9-4917-8c3d-d38f58198332",
+  "identifier": "PAP-984",
+  "title": "PAP-142 editor: block ids on every node for `tdoc:` comment anchors and suggestion marks",
+  "url": "https://linear.app/paperos/issue/PAP-984/pap-142-editor-block-ids-on-every-node-for-tdoc-comment-anchors-and"
+ },
+ "r4/triage/78": {
+  "id": "557d2e24-a1fd-4cc5-94a2-a5fd4667fb10",
+  "identifier": "PAP-985",
+  "title": "Push transport as the carrier for marketing web push",
+  "url": "https://linear.app/paperos/issue/PAP-985/push-transport-as-the-carrier-for-marketing-web-push"
+ },
+ "r4/triage/79": {
+  "id": "9a4f51a6-2d6d-4576-b92d-7d7f929f279a",
+  "identifier": "PAP-986",
+  "title": "Window bus contract (`contract-realtime` `WindowBusPort`) as the only cross-window channel the kernel permits, with a conformance fixture for two windows",
+  "url": "https://linear.app/paperos/issue/PAP-986/window-bus-contract-contract-realtime-windowbusport-as-the-only-cross"
+ },
+ "r4/triage/8": {
+  "id": "78a8352a-daca-4e40-8af7-34420e7bf3a6",
+  "identifier": "PAP-922",
+  "title": "PAP-27 i18n provides the catalog hook behind `useUiStrings()` and pseudo-locale testing of component copy",
+  "url": "https://linear.app/paperos/issue/PAP-922/pap-27-i18n-provides-the-catalog-hook-behind-useuistrings-and-pseudo"
+ },
+ "r4/triage/80": {
+  "id": "c66732e6-ef3f-4464-908c-6e28b8e2b2a0",
+  "identifier": "PAP-987",
+  "title": "WindowBus message catalogue entries for `command.forward|result`, `focus.request`, `clipboard.sync` and `a11y.prefs.changed` in PAP-145",
+  "url": "https://linear.app/paperos/issue/PAP-987/windowbus-message-catalogue-entries-for-commandforwardresult"
+ },
+ "r4/triage/81": {
+  "id": "cb305d03-47a0-43e5-a8b3-e28522c6279a",
+  "identifier": "PAP-988",
+  "title": "Access section (PAP-116) gains `fields[].access` and custom-role audience references",
+  "url": "https://linear.app/paperos/issue/PAP-988/access-section-pap-116-gains-fieldsaccess-and-custom-role-audience"
+ },
+ "r4/triage/82": {
+  "id": "05a21356-c0a3-4575-a70c-8125829b3ab1",
+  "identifier": "PAP-989",
+  "title": "Page spec `views:` section renders through `ViewHost` and accepts any registered kind; codegen emits `ui.dataTable` for arrays under 500 rows and a view for datasets",
+  "url": "https://linear.app/paperos/issue/PAP-989/page-spec-views-section-renders-through-viewhost-and-accepts-any"
+ },
+ "r4/triage/84": {
+  "id": "fce20961-5b84-4bb6-9933-2ad9d4480e46",
+  "identifier": "PAP-990",
+  "title": "Spec quality reviewer before build: run the docs-and-spec reviewer on `specs/**` PRs and block Ready for Claude on failing specs",
+  "url": "https://linear.app/paperos/issue/PAP-990/spec-quality-reviewer-before-build-run-the-docs-and-spec-reviewer-on"
+ },
+ "r4/triage/85": {
+  "id": "016950e1-6740-4d10-bfdd-6c283c694475",
+  "identifier": "PAP-991",
+  "title": "Custom datasets (PAP-161, PAP-332) should register through `defineEntity()` where the schema is code",
+  "url": "https://linear.app/paperos/issue/PAP-991/custom-datasets-pap-161-pap-332-should-register-through-defineentity"
+ },
+ "r4/triage/86": {
+  "id": "66fc4fab-0e58-4b7f-82cc-6bee90367160",
+  "identifier": "PAP-992",
+  "title": "Grid editing (PAP-342) and record page (PAP-333) mount `ConflictBoundary` from `r4/realtime/conflict-ux-impl`",
+  "url": "https://linear.app/paperos/issue/PAP-992/grid-editing-pap-342-and-record-page-pap-333-mount-conflictboundary"
+ },
+ "r4/triage/87": {
+  "id": "39baeef5-8dc6-4558-a421-6f0893237e35",
+  "identifier": "PAP-993",
+  "title": "Persist `unsupported` view kinds and formula snapshots with an upgrade hook",
+  "url": "https://linear.app/paperos/issue/PAP-993/persist-unsupported-view-kinds-and-formula-snapshots-with-an-upgrade"
+ },
+ "r4/triage/88": {
+  "id": "51fc70e6-6f9a-4ed4-970b-c60077d3a2fa",
+  "identifier": "PAP-994",
+  "title": "View sharing (PAP-172) and record pages (PAP-333) consume `r4/identity/resource-grants` and `r4/identity/field-permissions`",
+  "url": "https://linear.app/paperos/issue/PAP-994/view-sharing-pap-172-and-record-pages-pap-333-consume"
+ },
+ "r4/triage/89": {
+  "id": "3150a5da-1d4b-460d-8874-e5e588966b3a",
+  "identifier": "PAP-995",
+  "title": "`Money` field editor with currency picker and per-currency exponent",
+  "url": "https://linear.app/paperos/issue/PAP-995/money-field-editor-with-currency-picker-and-per-currency-exponent"
+ },
+ "r4/triage/9": {
+  "id": "1bc981ea-cf5c-478c-8897-bdcd6cd634ae",
+  "identifier": "PAP-923",
+  "title": "PAP-366 exposes `useFlags(ids)` and a server-side evaluator the generated route guard can call; reserve `page.*` flag family",
+  "url": "https://linear.app/paperos/issue/PAP-923/pap-366-exposes-useflagsids-and-a-server-side-evaluator-the-generated"
+ },
+ "r4/workflows/approvals-framework": {
+  "id": "b37c77ed-b0f3-44f0-a7aa-9d83c576b82b",
+  "identifier": "PAP-849",
+  "url": "https://linear.app/paperos/issue/PAP-849/build-the-approvals-framework-approval-requests-policies-thresholds"
+ },
+ "r4/workflows/canvas-editor": {
+  "id": "504c09b9-8961-49dd-b3e6-076451065d9c",
+  "identifier": "PAP-853",
+  "url": "https://linear.app/paperos/issue/PAP-853/build-the-workflow-canvas-editor-on-react-flow-node-palette-from-the"
+ },
+ "r4/workflows/conformance": {
+  "id": "1384813a-4217-482e-9d50-9041483ecc29",
+  "identifier": "PAP-860",
+  "url": "https://linear.app/paperos/issue/PAP-860/conformance-test-suite-for-workflows-contract"
+ },
+ "r4/workflows/contract-publish": {
+  "id": "ed07d6ac-1705-467f-9365-5c15a964558c",
+  "identifier": "PAP-847",
+  "url": "https://linear.app/paperos/issue/PAP-847/publish-paperoscontract-workflows-v01-with-manifest"
+ },
+ "r4/workflows/document-generation": {
+  "id": "fb7fdfbb-ffd0-475a-a86b-0fb6ae25cf6f",
+  "identifier": "PAP-857",
+  "url": "https://linear.app/paperos/issue/PAP-857/build-document-generation-render-templates-to-pdf-and-docx-a-generated"
+ },
+ "r4/workflows/document-templates": {
+  "id": "7325e9d2-516b-470f-b366-14b26cc7338f",
+  "identifier": "PAP-856",
+  "url": "https://linear.app/paperos/issue/PAP-856/build-document-templates-template-model-with-merge-fields-conditional"
+ },
+ "r4/workflows/esign-audit-compliance": {
+  "id": "fd7276fe-9c21-42df-9a8e-11b4d2b933e7",
+  "identifier": "PAP-859",
+  "url": "https://linear.app/paperos/issue/PAP-859/add-the-e-signature-audit-certificate-tamper-evident-hash-chain-public"
+ },
+ "r4/workflows/esign-core": {
+  "id": "c3f9dda6-1cf3-4406-b5a1-865590524ae4",
+  "identifier": "PAP-858",
+  "url": "https://linear.app/paperos/issue/PAP-858/build-e-signature-core-signature-requests-signer-identity-email-otp"
+ },
+ "r4/workflows/forms-publishing": {
+  "id": "cdb3b567-14ec-435a-adb7-9db65e1a4a57",
+  "identifier": "PAP-855",
+  "url": "https://linear.app/paperos/issue/PAP-855/build-form-publishing-public-routes-embeds-anti-spam-rate-limits"
+ },
+ "r4/workflows/forms-schema-runtime": {
+  "id": "d93a6ed9-2720-4fd1-af94-c74155303dfa",
+  "identifier": "PAP-854",
+  "url": "https://linear.app/paperos/issue/PAP-854/build-the-forms-builder-schema-and-runtime-multi-page-forms"
+ },
+ "r4/workflows/run-engine": {
+  "id": "bbbc16aa-58a1-4a9a-9e03-ad9ef0a9f55d",
+  "identifier": "PAP-851",
+  "url": "https://linear.app/paperos/issue/PAP-851/build-the-durable-workflow-run-engine-on-pg-boss-step-executor-suspend"
+ },
+ "r4/workflows/step-catalogue": {
+  "id": "31f53e07-4f59-498a-8d20-adb847929fc7",
+  "identifier": "PAP-852",
+  "url": "https://linear.app/paperos/issue/PAP-852/build-the-step-catalogue-human-task-approval-wait-branch-for-each-sub"
+ },
+ "r4/workflows/task-inbox": {
+  "id": "1a1a2f33-ea33-45a2-b8d7-8c41e2843e79",
+  "identifier": "PAP-850",
+  "url": "https://linear.app/paperos/issue/PAP-850/build-the-my-tasks-inbox-human-tasks-and-approvals-across-workflows-as"
+ },
+ "r4/workflows/wire": {
+  "id": "7d6e589d-dc1e-4c37-996a-f32aaf749d01",
+  "identifier": "PAP-861",
+  "url": "https://linear.app/paperos/issue/PAP-861/wire-workflows-behind-the-module-registry-with-an-adapter-and-feature"
+ },
+ "r4/workflows/workflow-model": {
+  "id": "95ed871b-08e4-4d50-b869-057e3b15dcf3",
+  "identifier": "PAP-848",
+  "url": "https://linear.app/paperos/issue/PAP-848/specify-the-workflow-model-definitions-versions-steps-runs-tasks-and"
  }
 }
