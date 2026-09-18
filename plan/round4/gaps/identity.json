@@ -1,0 +1,1110 @@
+{
+ "project": "identity",
+ "projectName": "Identity, Roles & Audiences",
+ "benchmarks": [
+  "Auth0 / Okta (tenant policies, MFA, device flow)",
+  "Clerk (organizations, custom roles, sessions UI)",
+  "Better Auth plugins (passkey, organization, twoFactor, apiKey, captcha, deviceAuthorization, sso, scim)",
+  "Keycloak (roles, service accounts)",
+  "WorkOS (SSO, SCIM, org-to-org)",
+  "Ory Kratos/Keto",
+  "Cerbos and Oso (policy explain, playground)",
+  "OpenFGA / Zanzibar (relations and sharing)",
+  "Supabase Auth (RLS integration)",
+  "GitHub sharing model (per-resource roles, link visibility)"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "Auth library ADR (Better Auth vs Lucia vs Clerk vs Auth.js)",
+   "coveredBy": [
+    "PAP-56"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Passkeys, magic link, Google and GitHub OAuth",
+   "coveredBy": [
+    "PAP-57",
+    "PAP-223",
+    "PAP-224"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Password authentication",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "intentionally not offered (blueprint non-goal); documented in the sign-in copy"
+  },
+  {
+   "feature": "Phone or SMS OTP factor",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "not planned for v0.1; Twilio adapter exists in growth (PAP-404) if needed"
+  },
+  {
+   "feature": "Tauri deep-link bearer sessions and keychain storage",
+   "coveredBy": [
+    "PAP-225"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "OIDC provider for Forgejo and embedded tools",
+   "coveredBy": [
+    "PAP-226"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "CLI and headless login (device flow)",
+   "coveredBy": [
+    "r4/identity/device-flow-login"
+   ],
+   "status": "gap",
+   "note": "gh/flyctl parity; `paperos create` needs it"
+  },
+  {
+   "feature": "Sign-in abuse controls: CAPTCHA, lockout, disposable domains",
+   "coveredBy": [
+    "r4/identity/auth-abuse-controls"
+   ],
+   "status": "gap",
+   "note": "PAP-223 only rate-limits sign-in"
+  },
+  {
+   "feature": "Session listing, device labels and revoke",
+   "coveredBy": [
+    "PAP-220",
+    "r4/identity/sessions-stepup"
+   ],
+   "status": "partial",
+   "note": "split child"
+  },
+  {
+   "feature": "TOTP, backup codes and account recovery",
+   "coveredBy": [
+    "PAP-220",
+    "r4/identity/mfa-recovery"
+   ],
+   "status": "partial",
+   "note": "split child"
+  },
+  {
+   "feature": "Step-up authentication for sensitive actions",
+   "coveredBy": [
+    "r4/identity/sessions-stepup"
+   ],
+   "status": "partial",
+   "note": "child of PAP-220"
+  },
+  {
+   "feature": "Tenant session and MFA policy (idle, absolute, require MFA, IP allowlist)",
+   "coveredBy": [
+    "r4/identity/session-policy"
+   ],
+   "status": "gap",
+   "note": "Auth0/WorkOS parity"
+  },
+  {
+   "feature": "Email verification and email change",
+   "coveredBy": [
+    "PAP-224",
+    "PAP-62"
+   ],
+   "status": "covered",
+   "note": "profile page owns change"
+  },
+  {
+   "feature": "Account linking across providers",
+   "coveredBy": [
+    "PAP-223"
+   ],
+   "status": "partial",
+   "note": "link by verified email; amendment adds `accountLinking` config"
+  },
+  {
+   "feature": "Audience model and segments",
+   "coveredBy": [
+    "PAP-55"
+   ],
+   "status": "covered",
+   "note": "keystone spec"
+  },
+  {
+   "feature": "Organizations, workspaces, `withTenant`, session variables",
+   "coveredBy": [
+    "PAP-58",
+    "r4/identity/tenancy-core"
+   ],
+   "status": "partial",
+   "note": "split child; 412 corrected to 400"
+  },
+  {
+   "feature": "Invitations, tenant switcher, org pages",
+   "coveredBy": [
+    "PAP-58",
+    "r4/identity/tenancy-ui"
+   ],
+   "status": "partial",
+   "note": "split child"
+  },
+  {
+   "feature": "First-run onboarding wizard",
+   "coveredBy": [
+    "PAP-367"
+   ],
+   "status": "covered",
+   "note": "app-shell"
+  },
+  {
+   "feature": "Tenant lifecycle and deletion grace",
+   "coveredBy": [
+    "PAP-432"
+   ],
+   "status": "covered",
+   "note": "data-layer"
+  },
+  {
+   "feature": "Policy model, evaluator, explain",
+   "coveredBy": [
+    "PAP-227"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "SQL predicate compiler and RLS helpers",
+   "coveredBy": [
+    "PAP-228"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Spec adapter, `authorize()` middleware, `useCan`",
+   "coveredBy": [
+    "PAP-229"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Permission matrix tests at policy, HTTP and UI level",
+   "coveredBy": [
+    "PAP-64"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Custom roles and permission sets",
+   "coveredBy": [
+    "r4/identity/custom-roles"
+   ],
+   "status": "gap",
+   "note": "brief: different customer and staff types as configuration"
+  },
+  {
+   "feature": "Per-resource grants and sharing (ReBAC-lite)",
+   "coveredBy": [
+    "r4/identity/resource-grants"
+   ],
+   "status": "gap",
+   "note": "views, docs, canvases each needed it"
+  },
+  {
+   "feature": "Public or guest links with expiry and passcode",
+   "coveredBy": [
+    "r4/identity/resource-grants"
+   ],
+   "status": "gap",
+   "note": "folded into grants; PAP-396 keeps pay tokens"
+  },
+  {
+   "feature": "Field-level permissions and response masking",
+   "coveredBy": [
+    "r4/identity/field-permissions"
+   ],
+   "status": "gap",
+   "note": "Hasura column privileges parity"
+  },
+  {
+   "feature": "Permission change propagation to sessions, rooms and shapes",
+   "coveredBy": [
+    "r4/identity/permission-propagation"
+   ],
+   "status": "gap",
+   "note": "three consumers assumed the topic"
+  },
+  {
+   "feature": "Access checker / policy playground UI",
+   "coveredBy": [
+    "r4/identity/access-checker"
+   ],
+   "status": "gap",
+   "note": "Cerbos playground parity; CLI explain exists"
+  },
+  {
+   "feature": "Entitlements from plans",
+   "coveredBy": [
+    "PAP-178"
+   ],
+   "status": "covered",
+   "note": "business-core"
+  },
+  {
+   "feature": "Agents as principals with scoped keys",
+   "coveredBy": [
+    "PAP-60",
+    "r4/identity/agent-keys"
+   ],
+   "status": "partial",
+   "note": "split child"
+  },
+  {
+   "feature": "Agent attribution, badge and quotas",
+   "coveredBy": [
+    "PAP-60",
+    "r4/identity/agent-attribution-quotas"
+   ],
+   "status": "partial",
+   "note": "split child"
+  },
+  {
+   "feature": "Delegated authority (agent acting for a person)",
+   "coveredBy": [
+    "r4/identity/delegated-authority"
+   ],
+   "status": "gap",
+   "note": "PAP-61 leaves semantics to nobody"
+  },
+  {
+   "feature": "Internal service principals and service-to-service auth",
+   "coveredBy": [
+    "r4/identity/service-principals"
+   ],
+   "status": "gap",
+   "note": "collab server, worker, orchestrator have no principal"
+  },
+  {
+   "feature": "Staff impersonation with audit and customer visibility",
+   "coveredBy": [
+    "PAP-61"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Customer portal frame and login",
+   "coveredBy": [
+    "PAP-62",
+    "r4/identity/portal-frame"
+   ],
+   "status": "partial",
+   "note": "split child"
+  },
+  {
+   "feature": "Portal profile, security, billing stub, preferences",
+   "coveredBy": [
+    "PAP-62",
+    "r4/identity/portal-account-pages"
+   ],
+   "status": "partial",
+   "note": "split child"
+  },
+  {
+   "feature": "Staff console frame, navigation, audience filter",
+   "coveredBy": [
+    "PAP-63",
+    "r4/identity/console-frame"
+   ],
+   "status": "partial",
+   "note": "split child"
+  },
+  {
+   "feature": "Console admin pages",
+   "coveredBy": [
+    "PAP-63",
+    "r4/identity/console-admin-pages"
+   ],
+   "status": "partial",
+   "note": "split child"
+  },
+  {
+   "feature": "Enterprise SSO (OIDC, SAML) with domain verification",
+   "coveredBy": [
+    "PAP-65",
+    "PAP-230"
+   ],
+   "status": "covered",
+   "note": "deferred"
+  },
+  {
+   "feature": "SCIM provisioning",
+   "coveredBy": [
+    "PAP-231"
+   ],
+   "status": "covered",
+   "note": "deferred"
+  },
+  {
+   "feature": "SSO enforcement and break-glass",
+   "coveredBy": [
+    "PAP-232"
+   ],
+   "status": "covered",
+   "note": "deferred"
+  },
+  {
+   "feature": "Auto-join organisation by verified email domain (without SSO)",
+   "coveredBy": [
+    "PAP-230"
+   ],
+   "status": "partial",
+   "note": "only inside the deferred SSO child; acceptable for v0.1"
+  },
+  {
+   "feature": "Tenant API keys, webhooks and SDK for developers",
+   "coveredBy": [
+    "PAP-222"
+   ],
+   "status": "covered",
+   "note": "deferred"
+  },
+  {
+   "feature": "Privacy tooling: DSAR export and erasure, consent, legal pages",
+   "coveredBy": [
+    "PAP-221"
+   ],
+   "status": "covered",
+   "note": "deferred"
+  },
+  {
+   "feature": "Security threat model and hardening baseline",
+   "coveredBy": [
+    "PAP-219"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Founder root of trust and revoke-all",
+   "coveredBy": [
+    "PAP-301"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Security telemetry for auth anomalies",
+   "coveredBy": [
+    "PAP-356"
+   ],
+   "status": "covered",
+   "note": "quality"
+  },
+  {
+   "feature": "Test-mode `login-as` and audience fixtures",
+   "coveredBy": [
+    "PAP-240"
+   ],
+   "status": "covered",
+   "note": "quality"
+  },
+  {
+   "feature": "Partner or reseller managed tenants",
+   "coveredBy": [
+    "r4/identity/partner-managed-tenants"
+   ],
+   "status": "gap",
+   "note": "deferred to v0.2; agency pack needs it"
+  },
+  {
+   "feature": "User profile and preferences model",
+   "coveredBy": [
+    "PAP-33",
+    "PAP-62"
+   ],
+   "status": "covered",
+   "note": "`user.attributes`"
+  },
+  {
+   "feature": "Login history visible to the user",
+   "coveredBy": [
+    "PAP-61",
+    "PAP-220"
+   ],
+   "status": "covered",
+   "note": "access history embed"
+  },
+  {
+   "feature": "Identity contract, conformance and kernel wiring",
+   "coveredBy": [
+    "PAP-456",
+    "PAP-457",
+    "PAP-458"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Presence privacy per audience",
+   "coveredBy": [
+    "PAP-141"
+   ],
+   "status": "covered",
+   "note": "realtime; amendment on awareness filtering"
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/identity/tenancy-core",
+   "title": "Organization plugin mapped onto `tenants` and `workspaces`, `withTenant` middleware setting the RLS session variables, `org.*` procedures and tenancy events",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Auth works across web and desktop",
+   "parent": "PAP-58",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-23",
+   "blockedBy": [
+    "PAP-223",
+    "PAP-33",
+    "PAP-34"
+   ],
+   "blocks": [
+    "PAP-63",
+    "PAP-62",
+    "PAP-86",
+    "PAP-177",
+    "PAP-458"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build M\n\n**Goal**\n\nFirst half of PAP-58, on the two-half-day-slack auth chain (33 → 223 → 224 → 58): make the active tenant follow every request so the PAP-34 RLS boundary applies to humans. The organization plugin maps onto the existing `tenants` and `workspaces` tables, `withTenant` sets the session variables inside the request transaction, and the `org.*` procedures and events exist for the UI half.\n\n**Scope**\n\nIn: `packages/auth/src/organization.ts` (plugin config with the `schema` mapping `organization -> tenants`, `team -> workspaces`, roles via `createAccessControl`), migration adding `membership.role`, `membership.attributes jsonb`, `tenants.slug`, `tenants.logoFileId`, `tenants.deletedAt`, `withTenant` middleware in `apps/api`, procedures `org.create|switch|transferOwnership|delete|leave`, `org.members.list|updateRole|remove`, events `tenant.created|deleted`, `membership.changed`, `docs/platform/tenancy.md` with the context propagation diagram.\n\nOut: Invitations, pages, `TenantSwitcher`, `useTenant()` (sibling `r4/identity/tenancy-ui`); policies (PAP-59); SSO and SCIM (PAP-65); billing (PAP-177); onboarding (PAP-367).\n\n**Spec**\n\n* Plugin: `organization({ teams: { enabled: true, maximumTeams: 50 }, organizationLimit: 10, creatorRole: 'owner', roles: owner|admin|staff|member|viewer })`; versions from PAP-56.\n* `withTenant` verifies membership of the principal in the tenant from `session.activeOrganizationId` (or `x-tenant` header / subdomain per Contracts §4) and runs `SET LOCAL app.tenant_id, app.principal_id, app.actor_id, app.role, app.attrs, app.actor_kind, app.request_id` inside the request transaction; `app.actor_id` equals `app.principal_id` (Contracts §1).\n* Missing or mismatched tenant on a tenant-scoped procedure is `400 VALIDATION` (Contracts §4 retires `412 TENANT_REQUIRED`); header and subdomain disagreeing is also 400.\n* Lifecycle: owner may transfer to an admin; the last owner cannot leave; `org.delete` sets `deletedAt` and hands the grace period to PAP-432 (`requestDeletion`), never hard-deletes here.\n* Events published with `publish(tx, ...)` from `r4/data-layer/events-core` (soft: in-process emitter with the same signature until it lands); `membership.changed` also triggers `permission.changed` (`r4/identity/permission-propagation`).\n* `org.members.updateRole` refuses raising a role above the caller's own; system roles immutable (PAP-33 invariant).\n\n**Interface contract**\n\nProvides: `withTenant` middleware and the session-variable contract, procedures `org.*` and `org.members.*`, events above, `TenantContext` builder, `requireTenantRole(role)` helper.\n\nConsumes: Better Auth server (PAP-223), core tables (PAP-33), RLS harness (PAP-34), oRPC chain (PAP-267), event bus (`r4/data-layer/events-core`, soft), lifecycle (PAP-432, soft). Consumed by the sibling, PAP-62, PAP-63, PAP-86, PAP-177, PAP-228, PAP-458, PAP-140.\n\n**Definition of done**\n\n* Integration: `withTenant` sets all seven variables inside the transaction (asserted through `current_setting` in a test procedure); the PAP-34 harness passes with variables set by the middleware.\n* Member of A calling a scoped procedure with B's tenant gets 400 or 403 per the matrix; `updateRole` above own role refused; last owner cannot leave (Vitest through `callAs`).\n* Migration applies on an empty database and on the PAP-33 seed with no duplicate columns; `tenant.created` event observed with `expectEvent`.\n* `docs/platform/tenancy.md` sequence diagram; changelog under Identity; Sentinel Security Auditor signs off on the middleware.\n\n**Test plan**\n\n* Unit: role enum mapping, slug reserved words, tenant resolution matrix (session, header, subdomain, mismatch), ownership transfer rules.\n* E2E: API-level Playwright: create tenant, add a second seeded member, switch, call a scoped procedure with the wrong tenant id and read the 400; runs on the ephemeral stack.\n\n**Demo**\n\nReviewer runs `pnpm tsx examples/tenancy.ts` which creates Acme, switches the session to it, calls a scoped procedure and prints the `current_setting` values, then repeats with the wrong tenant to show the 400. Under a minute.\n\n**Edge cases**\n\n* Principal in several tenants with no active one: 400 with `details[0].issue = 'tenant-required'` and the list of tenant slugs so the client can show the picker.\n* Active tenant deleted mid-session: 400 with `tenant-gone`; the sibling redirects to `/org/switch`.\n* Agent key scoped to a tenant (PAP-60): tenant taken from key metadata; a differing header is refused.\n\n**Dependencies**\n\nBlocked by PAP-223, PAP-33, PAP-34 (hard). Soft: PAP-267, PAP-432, `r4/data-layer/events-core`, `r4/identity/permission-propagation`. Blocks PAP-62, PAP-63, PAP-86, PAP-177, PAP-458 and the sibling `r4/identity/tenancy-ui`.\n\n**Agent**\n\nBuilder: Forge (Schema Wright). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/identity/tenancy-ui",
+   "title": "Invitations with email and `/invite/$token`, `TenantSwitcher`, `useTenant()` with sync remount, org settings pages with specs and the `tenantChanged` broadcast",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Auth works across web and desktop",
+   "parent": "PAP-58",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-23",
+   "blockedBy": [
+    "r4/identity/tenancy-core",
+    "PAP-224"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nSecond half of PAP-58: what humans touch. Invite by email with a landing page that signs in or signs up and accepts, switch tenants and workspaces from a searchable switcher, and let every consumer read `useTenant()`; the org settings pages ship with specs so PAP-63 can mount them.\n\n**Scope**\n\nIn: Procedures `org.invite|resendInvite|revokeInvite|acceptInvite`, table `invitation` (plugin) with 7-day expiry and `beforeInvite` hook point (PAP-178 limits), React Email `invitation.tsx` through `sendEmail` (PAP-370, soft: Resend directly until it lands), pages and specs `specs/pages/org/{new,settings-general,settings-members,settings-workspaces,invite,switch}.spec.yaml`, components `TenantSwitcher`, `WorkspaceSwitcher`, `RoleBadge`, `InviteMemberDialog`, hook `useTenant()` returning `{ tenant, workspace, role, switchTenant, switchWorkspace }` that remounts the Electric sync provider (PAP-271) on change, BroadcastChannel message `tenantChanged`.\n\nOut: Middleware and procedures for the tenant itself (sibling), console shell (PAP-63), onboarding wizard (PAP-367), SSO domain lookup (PAP-230).\n\n**Spec**\n\n* Invitation: `org.invite({ email, role, workspaceId? })` refuses roles above the caller's; existing member gets a role update only when the inviter may raise roles; case-insensitive email match; `/invite/$token` signs in (magic link if new) and accepts, then lands on `/org/switch`.\n* Switcher: Popover with search, recent tenants, create action; keyboard operable; customer-friendly variant for PAP-62; hidden when the user has one tenant.\n* `useTenant()` reads the session's active tenant; `switchTenant` calls `org.switch`, publishes `tenantChanged` on `paperos:<userId>` so other tabs reload, wipes or remounts local sync per `r4/data-layer/local-data-protection` (soft) and PAP-271.\n* Pages use PAP-67 primitives and the PAP-71 table (grid from PAP-165 when present) for members; every page declares states and `access` audiences; copy in `packages/auth/src/copy.ts`.\n* Zero tenants after leaving: `/org/new` lists pending invitations; the onboarding wizard (PAP-367) later replaces `/org/new` as the entry point.\n\n**Interface contract**\n\nProvides: `useTenant()`, `TenantSwitcher`, `WorkspaceSwitcher`, `RoleBadge`, `InviteMemberDialog`, procedures `org.invite*|acceptInvite`, route `/invite/$token`, specs above, message `tenantChanged`.\n\nConsumes: Sibling procedures and middleware, sign-in form and pages (PAP-224), email package (PAP-370, soft), primitives (PAP-67, soft), table (PAP-71) or grid (PAP-165, soft), sync client (PAP-271, soft), routes and layouts (PAP-16). Consumed by PAP-62, PAP-63, PAP-86, PAP-367, `r4/identity/console-frame`, `r4/identity/portal-frame`.\n\n**Definition of done**\n\n* Create tenant, create workspace, invite, accept as second user in another context, switch, leave: Playwright e2e (feeds PAP-86) green at 1280 and 375.\n* Invitation email renders (React Email preview screenshot); expired token shows a clear message; resend and revoke tested.\n* Screenshots of `/org/settings/members` and the open `TenantSwitcher` at seven widths, light and dark; axe clean; keyboard-only switcher verified.\n* Six specs validate; changelog under Identity.\n\n**Test plan**\n\n* Unit: invitation expiry and case-insensitive match, role-raise refusal, switcher filtering and recent ordering, `tenantChanged` handling.\n* E2E: the flow above plus: second tab receives `tenantChanged` and reloads to the new tenant within 500 ms; invite to an existing member updates the role only.\n\n**Demo**\n\nSign in, create Acme, invite a seeded user, accept in a second browser context, switch tenants from the switcher and watch the members list change. Under two minutes.\n\n**Edge cases**\n\n* Invite link opened while signed in as a different account: page names the account and offers to switch.\n* Invitation to a domain with SSO enforcement (PAP-230, deferred): accepted normally until enforcement exists; noted.\n* Tenant logo missing: initials avatar.\n* 1,000 members: table paginates through `org.members.list` cursors.\n\n**Dependencies**\n\nBlocked by `r4/identity/tenancy-core` (hard) and PAP-224 (hard, sign-in on the invite landing). Soft: PAP-370, PAP-67, PAP-71, PAP-165, PAP-271, PAP-16, PAP-178. Consumed by PAP-62, PAP-63, PAP-86.\n\n**Agent**\n\nBuilder: Iris (Component Crafter) with Forge on procedures. Reviewer: Sentinel (Visual Inspector; Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/identity/mfa-recovery",
+   "title": "TOTP second factor with backup codes, the `/auth/recover` flow that requires TOTP or a code before a new passkey, and the new-device, two-factor-enabled and recovery-used emails",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Roles and audiences enforced end to end",
+   "parent": "PAP-220",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-223",
+    "PAP-224"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-220: the way back in. Passkey-first sign-in (PAP-57) is only safe to rely on when a lost device does not lock a person out for good. This child adds TOTP and single-use recovery codes through Better Auth's `twoFactor()` plugin, a recovery flow that proves possession of a second factor before a new passkey may be registered, and the three security emails.\n\n**Scope**\n\nIn: `twoFactor({ issuer: appName, otpOptions: { period: 30, digits: 6 }, backupCodes: { amount: 10, length: 10 } })` in `packages/auth/src/server.ts`, tables `twoFactor` and `backupCode` (hashed), pages `/auth/two-factor/setup`, `/auth/two-factor/verify`, `/auth/recover` with specs, `TwoFactorSetup` (QR via `qrcode`, confirm code, codes shown once, regenerate), React Email `new-device.tsx`, `two-factor-enabled.tsx`, `recovery-used.tsx` through `sendEmail` (PAP-370, soft), audit events `auth.2fa.enabled|disabled`, `auth.recovery.used`, rate limits on `/auth/recover`.\n\nOut: Session and device listing, step-up and the `SecurityPage` (sibling `r4/identity/sessions-stepup`), SMS factors, hardware-key attestation policies, enterprise MFA enforcement (`r4/identity/session-policy`).\n\n**Spec**\n\n* TOTP verification accepts one step either side (±30 s), never more; a used step cannot be replayed within its window; backup codes hashed with argon2id and single use; regeneration invalidates all previous codes.\n* Recovery: email magic link first, then TOTP or a backup code, then passkey registration; every step audited with `request_id`; the flow cannot be started for an account without a second factor (it explains the support path).\n* Rate limits: 5 verification attempts per 15 minutes per account and per IP (`rateLimit` from `r4/data-layer/rate-limits`, soft: plugin limiter until then); lockout emits `auth.lockout` (`r4/identity/auth-abuse-controls`).\n* Emails carry device label, approximate location (country from IP only), time and a 'this was not me' link that opens the sessions page of the sibling.\n* Enabling two-factor requires a recent authentication (`requireRecentAuth`, sibling; soft: re-prompt passkey inline until it lands).\n\n**Interface contract**\n\nProvides: Plugin config, tables above, pages and specs, `TwoFactorSetup`, `useTwoFactor()`, audit event kinds, email templates, `verifyTotp()` and `consumeBackupCode()` for the sibling's `ReauthDialog`.\n\nConsumes: Better Auth server (PAP-223), auth pages and `authClient` (PAP-224), email (PAP-370, soft), rate limits (`r4/data-layer/rate-limits`, soft), audit (PAP-38, soft), primitives (PAP-67). Consumed by the sibling, PAP-62, PAP-63, `r4/identity/session-policy`.\n\n**Definition of done**\n\n* Enable TOTP, sign out, sign in with magic link plus TOTP (Playwright with `oathtool`-style generator); a reused code is refused.\n* Recovery: delete the only passkey in a test, recover with a backup code, register a new passkey; used codes cannot be reused; 6th attempt in 15 minutes is refused.\n* Emails render in preview and arrive in Mailpit with the correct device label; audit events present.\n* Screenshots of setup and recover pages at 375, 768, 1280 light and dark; axe clean; Sentinel Security Auditor signs off on hashing and limits; docs `docs/platform/account-security.md` sections 'Two-factor' and 'Recovery'.\n\n**Test plan**\n\n* Unit: TOTP window arithmetic with a fake clock, replay refusal, backup code hashing and single use, rate-limit counters, email props mapping.\n* E2E: the enable, sign-in and recovery flows at 375 and 1280 on the ephemeral stack with Mailpit.\n\n**Demo**\n\nSign in, enable two-factor with the QR, sign out and back in with a code, then run the recovery flow after deleting the passkey in a test account. Under two minutes.\n\n**Edge cases**\n\n* Authenticator time drift beyond one step: refused with a hint to check device time.\n* User loses passkey and all codes: no self-service path; support impersonation cannot bypass; documented Needs Justin manual path.\n* Tauri WebKitGTK without WebAuthn (PAP-225): TOTP becomes the primary second factor; setup page detects it.\n* Email provider down: enabling two-factor still succeeds; the notice is queued (PAP-370 job).\n\n**Dependencies**\n\nBlocked by PAP-223 and PAP-224 (hard). Soft: PAP-370, PAP-38, PAP-67, `r4/data-layer/rate-limits`, `r4/identity/auth-abuse-controls`. Consumed by the sibling `r4/identity/sessions-stepup`.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer) with Iris on pages. Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/identity/sessions-stepup",
+   "title": "Session and device listing with revoke, `requireRecentAuth()` step-up with `ReauthDialog`, sign-in alerts and the `SecurityPage` mounted in portal and console",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Roles and audiences enforced end to end",
+   "parent": "PAP-220",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "r4/identity/mfa-recovery",
+    "PAP-223"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nSecond half of PAP-220: control. Every user sees the devices signed in as them, can end any of them, and sensitive actions demand a fresh proof of identity. The `SecurityPage` composes passkeys (PAP-224), two-factor (sibling), sessions and the access history embed from PAP-61 into one page both shells mount.\n\n**Scope**\n\nIn: Migration adding `session.deviceLabel` and `session.lastSeenAt`, device label parser from user agent, `authClient.listSessions|revokeSession|revokeOtherSessions` wiring, `requireRecentAuth(maxAgeSeconds = 300)` helper for procedures tagged `sensitive`, error `REAUTH_REQUIRED` (401), `ReauthDialog` accepting passkey or TOTP, `SecurityPage` in `packages/auth/src/ui/` with sections Passkeys, Two-factor, Sessions, Access history (PAP-61 embed), Sign-in alerts toggle; mounts at `/portal/security` (PAP-62) and `/console/settings/security` (PAP-63); audit `auth.session.revoked`; spec `specs/pages/account/security.spec.yaml`.\n\nOut: TOTP, codes, recovery and emails (sibling), tenant-wide session policy (`r4/identity/session-policy`), impersonation history content (PAP-61).\n\n**Spec**\n\n* Sessions table shows device label, OS, browser, country from IP only, last seen, `current` badge, Revoke and Revoke all others; agents' sessions (PAP-60 keys) in a separate tab, paginated.\n* Revocation invalidates the cookie cache within `cookieCache.maxAge` (5 min worst case, PAP-223) and immediately for bearer sessions; `session.revoked` event published (`r4/data-layer/events-core`, soft) so `r4/data-layer/local-data-protection` can wipe and PAP-140 can close rooms.\n* `requireRecentAuth` compares `session.lastAuthenticatedAt` (set by sign-in, passkey and TOTP verification) with the limit; procedures tagged `sensitive`: passkey delete, email change, code regeneration, tenant deletion, API key creation.\n* `ReauthDialog` opens on `REAUTH_REQUIRED`, offers passkey (conditional UI) then TOTP (`verifyTotp` from the sibling), retries the original call on success.\n* Sign-in alerts toggle stored in `user.attributes.signInAlerts` (default on); the sibling's `new-device.tsx` honours it.\n* Tauri bearer sessions appear as devices with the OS name; revocation clears Stronghold on next launch (PAP-225).\n\n**Interface contract**\n\nProvides: `requireRecentAuth()`, error `REAUTH_REQUIRED`, `ReauthDialog`, `SecurityPage`, `useSessions()`, device label parser, event `session.revoked`, spec above.\n\nConsumes: Better Auth server and client (PAP-223, PAP-224), TOTP verification (sibling), access history embed (PAP-61, soft), shells (PAP-62, PAP-63, soft mount points), events (`r4/data-layer/events-core`, soft), audit (PAP-38, soft), primitives (PAP-67). Consumed by PAP-62, PAP-63, PAP-222 (key creation is `sensitive`), `r4/identity/session-policy`.\n\n**Definition of done**\n\n* Open a second browser, revoke it from the first, watch it bounce to sign-in within one request; revoke-all-others keeps the current session (Playwright).\n* Sensitive procedure with a 10-minute-old session returns 401 `REAUTH_REQUIRED`; after `ReauthDialog` it succeeds (fake clock test at exactly 300 s).\n* Screenshots of the page at 320, 375, 768, 1024, 1280, 1536, 1920 light and dark in both shells; axe clean; RTL story.\n* Docs sections 'Sessions' and 'Step-up'; changelog under Identity.\n\n**Test plan**\n\n* Unit: device label parser for ten user agents, `requireRecentAuth` boundary, revoke-current confirmation logic, alerts toggle default.\n* E2E: revoke flows at 375 and 1280; step-up on passkey delete; agent sessions tab with 200 seeded keys paginates.\n\n**Demo**\n\nOpen `/portal/security`, see two devices, revoke the other, then try to delete a passkey and complete the re-auth dialog with a passkey. Under two minutes.\n\n**Edge cases**\n\n* Revoking the current session: confirm dialog, then redirect to sign-in.\n* Session list of 200 entries (agents): paginated; agent tab only for staff.\n* Clock skew between API instances: `lastAuthenticatedAt` is a database timestamp.\n* Passkey unavailable in the dialog (Linux Tauri): TOTP only; if no TOTP, the dialog explains and links to setup.\n\n**Dependencies**\n\nBlocked by `r4/identity/mfa-recovery` and PAP-223 (hard). Soft: PAP-224, PAP-61, PAP-62, PAP-63, PAP-38, PAP-67, `r4/data-layer/events-core`.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer) with Iris (Component Crafter) on the page. Reviewer: Sentinel (Security Auditor; Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/identity/console-frame",
+   "title": "Console layout and slots, `fromAppSpec` navigation, tenant and workspace switchers in the sidebar, `AudienceFilter` and `registerConsoleSection` for modules",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Agent principals and enterprise",
+   "parent": "PAP-63",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-16",
+    "r4/identity/tenancy-ui"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-63: the frame every admin module mounts into. `console.layout.tsx` on the shell slots, navigation generated from `app.spec.yaml` and filtered by audience, the switchers from PAP-58 in the sidebar header, the reusable `AudienceFilter` and the registration API modules use to add sections, without any of the seven pages yet.\n\n**Scope**\n\nIn: `apps/web/src/console/console.layout.tsx` with slots `nav` (sidebar 240 px, icon rail 768 to 1023 px, drawer under 768 px), `commandBar`, `main`, `inspector` (360 px at 1280 px and above, sheet below), `banner`; `packages/core/src/nav/fromAppSpec.ts` reading `navigation.console`; `registerConsoleSection(section, items)`; `AudienceFilter` in `packages/ui` emitting a PAP-55 `Segment` and persisting per user per page; access `audiences: [staff, admin, owner, agent]` with `DeniedState` for customers; per-slot error boundaries and skeletons; `PopOutButton` hooks (PAP-21, hidden outside Tauri); `data-testid` prefixes `console.*`; spec `specs/pages/console/layout.spec.yaml`.\n\nOut: The seven admin pages (sibling `r4/identity/console-admin-pages`), module content, notifications bell (PAP-136), command palette (PAP-151 fills the slot).\n\n**Spec**\n\n* `navigation.console: [{ id, label, icon, route, audiences, badgeSource? }]` in `app.spec.yaml`; items the actor's audiences do not match are hidden; sections Overview, Data, People, Agents, Settings; modules append through `registerConsoleSection` and their manifest `slots.fills` (`shell.nav`, PAP-433).\n* Switchers from `r4/identity/tenancy-ui` in the sidebar header, searchable and keyboard operable; workspace switcher hidden when the tenant has one workspace.\n* `AudienceFilter` chips compose `staffRole`, `tier`, `principalType` and declared audiences into a `Segment`; impossible segments (staff AND anonymous) detected with `matches` on fixtures and shown as 'no one matches' without a server call; value stored in `user.attributes.filters[pageId]`.\n* Error boundary per slot renders `ErrorState` (PAP-234) with the request id; skeleton per slot for loading.\n* Layout renders on PAP-70 `AppFrame` when present, plain regions otherwise; theming from PAP-75 when present.\n\n**Interface contract**\n\nProvides: `console.layout.tsx` slot names, `fromAppSpec()` and the `navigation.console` shape, `registerConsoleSection`, `AudienceFilter` (`value: Segment`, `onChange`), `SettingRow` convention, test-id prefixes.\n\nConsumes: Routes and layouts (PAP-16), switchers and `useTenant` (`r4/identity/tenancy-ui`), audiences (PAP-55), `AppFrame` (PAP-70, soft), states (PAP-234), primitives (PAP-67), window manager (PAP-21, soft), palette (PAP-151, soft). Consumed by the sibling pages, PAP-61, PAP-75, PAP-113, PAP-189, PAP-183, PAP-222, PAP-232, PAP-221, `r4/identity/custom-roles`, `r4/identity/access-checker`.\n\n**Definition of done**\n\n* Navigation hides entries per audience (Vitest with support, admin and agent fixture principals); customer principal gets the denied state; agent sees Overview and Agents only.\n* Screenshots of the empty frame with switchers and filter at seven widths in light, dark and high contrast; drawer at 375; keyboard order verified; axe zero serious.\n* Spec validates; `registerConsoleSection` used by one fixture module; docs `docs/product/staff-console.md` section 'Frame'; changelog under Staff.\n\n**Test plan**\n\n* Unit: `fromAppSpec` filtering and ordering, `AudienceFilter` segment output and impossible-segment detection, section registration ordering.\n* E2E: Playwright at 1280 and 375: open console as admin, switch tenant, open the drawer, filter chips persist across reload.\n\n**Demo**\n\nAs seeded admin open `/console`, switch to the second tenant, add a 'support staff' chip and reload to see it persist; resize to 375 for the drawer. Under two minutes.\n\n**Edge cases**\n\n* Nav entry to an unshipped route: hidden, dev warning, conformance flag.\n* Only one tenant and one workspace: switchers collapse to labels.\n* Pop-out then main window closes: pop-out closes, placement remembered (PAP-262).\n\n**Dependencies**\n\nBlocked by PAP-16 and `r4/identity/tenancy-ui` (hard). Soft: PAP-70, PAP-55, PAP-234, PAP-67, PAP-21, PAP-151, PAP-75. Blocks the sibling `r4/identity/console-admin-pages`.\n\n**Agent**\n\nBuilder: Iris (Component Crafter). Reviewer: Sentinel (Visual Inspector; Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/identity/console-admin-pages",
+   "title": "Seven console admin pages with specs: overview, members, roles, audit, impersonations entry, agents, general and branding settings",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Agent principals and enterprise",
+   "parent": "PAP-63",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "r4/identity/console-frame"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nSecond half of PAP-63: the admin pages identity already needs, each with a spec, mounted in the frame. They prove the customer/staff split with PAP-62 and give later modules the pattern for their own console pages.\n\n**Scope**\n\nIn: Specs `specs/pages/console/{overview,members,roles,audit,impersonations,agents,settings-general,settings-branding}.spec.yaml` and routes: `/console` overview (members count, active agents from PAP-60, open Linear items via PAP-101 when available else stub, recent audit); `/console/people/members` (PAP-165 grid if present, else PAP-71 table; role edit, invite dialog, audience filter); `/console/people/roles` (five roles plus custom, policies rendered from PAP-227 `explain`, read-only here; editing is `r4/identity/custom-roles`); `/console/security/audit` (PAP-38 list with actor badges and impersonation markers, cursor paginated); `/console/security/impersonations` (nav entry; PAP-61 fills); `/console/agents` (agent principals, key counts, last activity); `/console/settings/general` and `/console/settings/branding` (PAP-75 when present, else stub with `data-stub`).\n\nOut: Frame, navigation and filter (sibling), role editing (`r4/identity/custom-roles`), impersonation content (PAP-61), SSO/SCIM pages (PAP-232), developer page (PAP-222), org chart (PAP-113).\n\n**Spec**\n\n* Every spec declares purpose, access audiences, data (procedures and shapes), states (loading, empty, error, denied) and edge cases; codegen (PAP-120) scaffolds, pages fill in.\n* Members: `org.members.list` with cursor and `AudienceFilter` segment as a `FilterTree`; role edit through `org.members.updateRole`; invite through `InviteMemberDialog`; 1,000 fixture members render with Lighthouse performance above 85 at 1280.\n* Audit: `audit.list` cursor pagination against 1 million seeded rows (PGlite subset in CI, full nightly); impersonated rows carry the marker from PAP-61 audit fields.\n* Agents: rows from `users where kind = 'agent'` with key counts (PAP-60) and last activity (PAP-288 `/status`, soft); links to the prompt log (PAP-135, soft).\n* Settings: `SettingRow` and `DangerZone` shared with PAP-62; general holds name, slug, locale, timezone, delete organisation (PAP-432 request flow).\n\n**Interface contract**\n\nProvides: Seven routes and specs, `MembersTable`, `RolesList`, `AuditList`, `AgentsList` components reusable by other surfaces, stub convention `data-stub`.\n\nConsumes: Frame and registration (sibling), tenancy procedures and dialogs (`r4/identity/tenancy-core`, `r4/identity/tenancy-ui`), `explain` (PAP-227), audit list (PAP-38, soft), agent principals (PAP-60, soft), grid (PAP-165, soft) or table (PAP-71), branding (PAP-75, soft), Linear items (PAP-101, soft), status (PAP-288, soft), spec schema and codegen (PAP-114, PAP-120).\n\n**Definition of done**\n\n* Seven specs validate and conformance tests pass; screenshots of overview, members and audit at seven widths in three themes; video of tenant switch, filter members, open a member in the inspector, pop out on desktop.\n* Audit pagination test at one million rows nightly; members Lighthouse above 85; axe zero serious.\n* Docs `docs/product/staff-console.md` page catalogue; changelog under Staff.\n\n**Test plan**\n\n* Unit: members filter to `FilterTree`, role edit permission gating, agents row mapping, stub detection.\n* E2E: the recorded flow at 1280; drawer navigation at 375; customer denied on every route.\n\n**Demo**\n\nOpen `/console`, filter Members to support staff, open one member in the inspector, pop it out on desktop, then expand a policy explain on the roles page. Under two minutes.\n\n**Edge cases**\n\n* Only the owner exists: Members shows an invite call to action.\n* Roles page with 50 custom roles: grouped by base role, searchable.\n* Audit row for a purged tenant: actor shown as `Erased`; link disabled.\n\n**Dependencies**\n\nBlocked by `r4/identity/console-frame` (hard). Soft: PAP-227, PAP-38, PAP-60, PAP-165, PAP-71, PAP-75, PAP-101, PAP-288, PAP-120, PAP-432.\n\n**Agent**\n\nBuilder: Quill (Page Spec Writer) writes specs; Iris (Component Crafter) builds. Reviewer: Sentinel (Visual Inspector; Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/identity/portal-frame",
+   "title": "Portal layout with top bar, bottom tab bar and left rail, `PortalNav` from `app.spec.yaml`, login and home pages with specs, states and the PWA install placement",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer"
+   ],
+   "milestone": "Agent principals and enterprise",
+   "parent": "PAP-62",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-16",
+    "r4/identity/tenancy-ui",
+    "PAP-224"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-62: the customer surface frame. A route group `/portal` on the shell layouts with its own navigation, a login page carrying tenant branding, a home page with quick links, the banner slot PAP-61 mounts into, and the states every page inherits, so the account pages (sibling) and later modules (billing, invoices, legal) drop in.\n\n**Scope**\n\nIn: `apps/web/src/portal/portal.layout.tsx` (top bar with tenant logo, title, `ActorBadge` avatar menu; bottom tab bar under 768 px; left rail at 768 px and above; no inspector; `banner` slot), `PortalNav` reading `navigation.portal`, `portal.quickLinks` app-spec key, pages and specs `specs/pages/portal/{login,home}.spec.yaml`, `AccountStatusCard`, tenant picker card for multi-tenant customers, access `audiences: [customer]` with `anonymous` for login and a 'You are staff, open console' link, states via PAP-234, PWA install banner after the second visit (PAP-18), copy in `apps/web/src/portal/copy.ts`.\n\nOut: Profile, security, billing stub and notification pages (sibling `r4/identity/portal-account-pages`), real billing (PAP-177), legal pages (PAP-221), marketing sign-up (PAP-193).\n\n**Spec**\n\n* Login: `SignInForm` (PAP-224) with tenant branding; guest option only when the app spec enables anonymous access; return URL preserved through sign-in.\n* Home: greeting, `AccountStatusCard`, quick links from `portal.quickLinks` (defaults: profile, security, billing when configured), multi-tenant picker using the customer variant of `TenantSwitcher`.\n* Anonymous principal on any other portal route redirects to login with the return URL; staff sees the console link; agents are denied.\n* Theming from PAP-75 when present, default tokens otherwise; logo falls back to the app name; offline read works with the sync indicator (PAP-272).\n* Lighthouse performance and accessibility above 90 at 375 and 1280 on home.\n\n**Interface contract**\n\nProvides: `portal.layout.tsx` slot names `topbar`, `nav`, `main`, `banner`; `PortalNav`; `portal.quickLinks` key; `AccountStatusCard`; copy file; specs above.\n\nConsumes: Routes and layouts (PAP-16), sign-in form (PAP-224), tenancy hook and switcher (`r4/identity/tenancy-ui`), states (PAP-234), primitives (PAP-67), theming (PAP-75, soft), PWA install hook (PAP-18, soft), sync indicator (PAP-272, soft), `ActorBadge` (PAP-60, soft). Consumed by the sibling, PAP-61 banner, PAP-177, PAP-136, PAP-180, PAP-221, PAP-193.\n\n**Definition of done**\n\n* Two specs validate; anonymous redirect and staff link tested; screenshots of login and home at 320, 375, 768, 1024, 1280, 1536, 1920 in light, dark and high contrast; axe zero serious or critical.\n* PAP-84 vision inspection reports no overflow; Lighthouse numbers in the PR; docs `docs/product/customer-portal.md` section 'Frame'; changelog under Customer.\n\n**Test plan**\n\n* Unit: nav generation from app spec, quick-link defaults, redirect logic per audience, install banner visit counter.\n* E2E: Playwright: anonymous to `/portal/profile` redirects and returns after sign-in; staff sees the console link; multi-tenant customer sees the picker; 375 and 1280.\n\n**Demo**\n\nOpen the Pages preview as the seeded customer: land on home, open the avatar menu, resize to 375 for the tab bar, sign out and see the branded login. Under two minutes.\n\n**Edge cases**\n\n* No tenant logo or palette: default theme, no broken image.\n* Customer in several tenants: picker card on home.\n* Session revoked elsewhere: next request 401, redirect preserving the path.\n\n**Dependencies**\n\nBlocked by PAP-16, `r4/identity/tenancy-ui` and PAP-224 (hard). Soft: PAP-234, PAP-67, PAP-75, PAP-18, PAP-272, PAP-60. Blocks the sibling `r4/identity/portal-account-pages`.\n\n**Agent**\n\nBuilder: Quill (Page Spec Writer) writes specs; Iris (Component Crafter) builds. Reviewer: Sentinel (Visual Inspector; Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/identity/portal-account-pages",
+   "title": "Portal profile, security, billing stub and notification preference pages with specs, optimistic save through the write queue and the unsaved-changes prompt",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer"
+   ],
+   "milestone": "Agent principals and enterprise",
+   "parent": "PAP-62",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "r4/identity/portal-frame"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nSecond half of PAP-62: the pages a customer actually uses. Profile with avatar and verified email change, security embedding the `SecurityPage` and access history, an honest billing stub until PAP-177 fills it, and notification preferences stored on the user until PAP-136 owns them.\n\n**Scope**\n\nIn: Pages and specs `specs/pages/portal/{profile,security,billing,notifications}.spec.yaml`: profile (name, avatar via PAP-37, email change with verification, locale and timezone, contact method; optimistic save via `mutate` with a saved indicator); security (embeds `SecurityPage` from `r4/identity/sessions-stepup` and `AccessHistoryList` from PAP-61, delete account with 30-day grace); billing (plan, payment method, invoices when PAP-177 exists, else `EmptyState` 'Billing is not configured' with `data-stub`); notifications (channel toggles in `user.attributes.notificationPrefs` until PAP-136); shared `SettingRow` and `DangerZone`; Zod validation shared with the API; unsaved-changes prompt.\n\nOut: Frame and login (sibling), session and 2FA logic (PAP-220 children provide the components), billing logic (PAP-177), notification delivery (PAP-136), legal pages (PAP-221).\n\n**Spec**\n\n* Profile save goes through `mutate(orpc.users.updateMe, { optimistic })` (PAP-272) with a saved indicator and revert on rejection; email change sends a verification link and only then swaps the address; 'cannot use this email' is the only message for a taken address.\n* Security page composes the two embeds and adds `DangerZone` with delete account, which calls the PAP-221 request when present, else `users.requestDeletion` with the 30-day grace explained; deletion with an active subscription is blocked with guidance (hook for PAP-177).\n* Billing stub renders `EmptyState` with `data-stub` and no dead buttons; PAP-177 replaces the page body through `registerPortalSection('billing')`.\n* Notification preferences: kinds list from PAP-136 when present, else the three defaults (mentions, digests, product news); persisted with optimistic save.\n* Every page declares states; forms validate with the shared Zod schemas; unsaved-changes prompt on navigation.\n\n**Interface contract**\n\nProvides: Four routes and specs, `registerPortalSection(id, component)`, `ProfileForm`, `NotificationPrefs` component, `data-stub` convention shared with the console.\n\nConsumes: Frame (sibling), `SecurityPage` (`r4/identity/sessions-stepup`, soft: placeholder if late), `AccessHistoryList` (PAP-61, soft), files (PAP-37, soft), write queue (PAP-272), states (PAP-234), primitives (PAP-67, PAP-71), deletion flow (PAP-221 or PAP-432, soft), billing (PAP-177, soft), notifications (PAP-136, soft).\n\n**Definition of done**\n\n* Four specs validate; profile save round-trips through the write queue including offline then reconnect; email-change verification path tested.\n* Screenshots of every page at seven widths in three themes; RTL and 80-character-name stories; axe zero serious or critical.\n* Deletion blocked with an active subscription fixture; docs page catalogue; changelog under Customer.\n\n**Test plan**\n\n* Unit: form schemas, stub detection, preference defaults, unsaved-changes guard.\n* E2E: edit display name offline, reload, reconnect, saved indicator clears; change email and verify via Mailpit; open security and see passkeys and access history.\n\n**Demo**\n\nAs the seeded customer edit the display name and watch the saved indicator, open Security and see passkeys and access history, open Billing and see the honest stub. Under two minutes.\n\n**Edge cases**\n\n* Avatar upload fails: previous avatar kept, toast with retry.\n* Locale change: UI re-renders in the new locale without reload (PAP-27).\n* Deletion requested then cancelled within grace: `cancelDeletion` restores (PAP-432).\n\n**Dependencies**\n\nBlocked by `r4/identity/portal-frame` (hard). Soft: `r4/identity/sessions-stepup`, PAP-61, PAP-37, PAP-272, PAP-234, PAP-67, PAP-71, PAP-221, PAP-432, PAP-177, PAP-136, PAP-27.\n\n**Agent**\n\nBuilder: Iris (Component Crafter) with Quill on specs. Reviewer: Sentinel (Visual Inspector; Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/identity/agent-keys",
+   "title": "Agent users synced from the roster, Better Auth `apiKey()` with the `pos_agent_` prefix and metadata, `withScopes()` intersection with the scope map and the `pnpm agents:key` CLI for the orchestrator",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Agent",
+    "Developer"
+   ],
+   "milestone": "Agent principals and enterprise",
+   "parent": "PAP-60",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-229",
+    "PAP-223"
+   ],
+   "blocks": [
+    "PAP-146"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-60 and the part the orchestrator (PAP-96) blocks on: agents exist as principals and hold keys that can do only what their character and issue allow. One agent user per lead character, session keys minted per issue with an expiry, and a scope intersection that denies an action even when the role would allow it.\n\n**Scope**\n\nIn: `pnpm agents:sync` reading `.claude/agents/*.md` frontmatter (PAP-104; fixture roster until it lands) and upserting `users` rows with `principalType = 'agent'`, `attributes: { character, subAgent?, lead }`, membership `staff` with `agent: true` in every tenant; `apiKey({ defaultPrefix: 'pos_agent_' })` plugin config with metadata `{ character, issue?, session?, scopes }`, expiry 7 days for session keys and 90 for character keys, hashed at rest; `withScopes(actor, scopes)` in `packages/permissions` and `packages/agents/src/scope-map.ts` mapping plan access lists (`repo:write`, `linear:comment`, `specs:write`, `prod:read-only`) to policy patterns; CLI `pnpm agents:key create|list|revoke|rotate` with JSON output; docs `docs/platform/agent-principals.md` scope table and minting sequence diagram.\n\nOut: Attribution header, audit fields, `ActorBadge` and quotas (sibling `r4/identity/agent-attribution-quotas`), character definitions (PAP-103, PAP-104), MCP allowlists (PAP-106), customer API keys (PAP-222), delegation semantics (`r4/identity/delegated-authority`).\n\n**Spec**\n\n* Only a character key holding `agent.key.create` may mint session keys; session keys inherit at most the character's scopes; `rotate --character` overlaps old and new for ten minutes (PAP-48 pattern).\n* `withScopes` intersects the policy set from `can()` with the scope patterns: a key lacking `specs:write` is denied `page_spec.update` even for a `staff` member; denial explains with the missing scope.\n* Rate limiting per key uses `rateLimit('apiKey')` from `r4/data-layer/rate-limits` (soft: plugin limiter until it lands); the per-key default is 600/min from key metadata.\n* `withTenant` (`r4/identity/tenancy-core`) resolves the tenant from key metadata for tenant-scoped keys and refuses a differing header.\n* Keys never appear in logs (grep test during creation); revocation on issue `Done` is called by the orchestrator webhook handler (PAP-97) through `agents:key revoke --issue`.\n* `agents:sync --prune` deactivates and revokes characters removed from the roster; history stays.\n\n**Interface contract**\n\nProvides: `withScopes()`, `ScopePattern`, `scope-map.ts`, `AgentPrincipalAttributes`, CLI JSON shapes, events `agent.key.created|revoked`, `verifyApiKey(key)` for non-HTTP consumers (PAP-140, PAP-270).\n\nConsumes: `can()` and adapter (PAP-227, PAP-229), Better Auth server (PAP-223), roster frontmatter (PAP-104, soft), tenancy middleware (`r4/identity/tenancy-core`), rate limits (`r4/data-layer/rate-limits`, soft), key-handling controls (PAP-219). Consumed by PAP-96 (mints), PAP-111, PAP-146, PAP-107, PAP-140, PAP-222 (reuses `withScopes`), the sibling.\n\n**Definition of done**\n\n* `pnpm agents:sync` creates nine agent users idempotently; second run makes no changes (test).\n* Session key with `linear:comment` only: 403 with the missing scope on `invoice.update`, 200 on allowed calls (Vitest integration through `callAs` and a real key).\n* Mint via character key, use, expire with a faked clock, revoke on issue Done (webhook stub); Security Auditor confirms hashing and expiry; docs; changelog under Identity.\n\n**Test plan**\n\n* Unit: scope-map coverage for all nine characters, intersection cases including wildcard scopes, expiry arithmetic, CLI argument parsing.\n* E2E: orchestrator dry run (PAP-96 stub) mints a key for `PAP-123`, an agent call carries it and lands in `audit_event` with the character (sibling asserts fields).\n\n**Demo**\n\nRun `pnpm agents:key create --character forge --issue PAP-123 --ttl 1h --scopes linear:comment`, call a read procedure with it (200), then `invoice.update` (403 with explain), then `agents:key list`. Under two minutes.\n\n**Edge cases**\n\n* Parallel sessions for one character: distinct session keys; audit distinguishes by `sessionId`.\n* Key used after its issue is Done but before revocation lands: server soft-checks the Linear cache and logs a warning.\n* Roster frontmatter invalid: sync refuses with the file and line; existing users untouched.\n* Character renamed: new user; old one pruned with history kept.\n\n**Dependencies**\n\nBlocked by PAP-229 and PAP-223 (hard). Soft: PAP-104, PAP-219, `r4/identity/tenancy-core`, `r4/data-layer/rate-limits`, PAP-97. Blocks PAP-146 and the sibling.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer); Atlas's Dispatcher validates minting. Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/identity/agent-attribution-quotas",
+   "title": "Agent attribution and quotas: `X-PaperOS-Actor` header, audit fields for character, session and issue, the `ActorBadge` component and per-character daily quotas emitting `agent.quota.exceeded`",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Agent",
+    "Staff"
+   ],
+   "milestone": "Agent principals and enterprise",
+   "parent": "PAP-60",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "r4/identity/agent-keys"
+   ],
+   "blocks": [
+    "PAP-146"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nSecond half of PAP-60: make machine work visible and bounded. Every mutation by an agent records who, for which issue and session; every response says which actor served it; the badge renders the character everywhere an avatar would; and a per-character daily quota turns runaway spend into a 429 and an event PAP-111 consumes.\n\n**Scope**\n\nIn: oRPC middleware writing `actorId`, `actorType`, `character`, `onBehalfOf?`, `sessionId`, `issueKey` into the audit context (PAP-38) and `X-PaperOS-Actor: agent:forge` on responses; `ActorBadge` in `packages/ui` (agent glyph and character colour from PAP-103, tooltip 'Forge (agent) on PAP-123', variants human, agent, agent on behalf of); table `agent_quota_usage (character, day, requests, cost_units)`, `ops/agents/quotas.yml`, event `agent.quota.exceeded`; docs section.\n\nOut: Keys, scopes and CLI (sibling), presence visuals (PAP-146), cost controls and kill switch (PAP-111), delegation rules (`r4/identity/delegated-authority`).\n\n**Spec**\n\n* Attribution middleware runs after auth; agent principals must send `X-PaperOS-Reason` (PAP-38) or receive `VALIDATION`; humans may omit it.\n* Quota counted per character per UTC day from the middleware; exceeding returns 429 with `Retry-After` until midnight UTC and publishes `agent.quota.exceeded` once per day per character; overrides per issue via key metadata `quotaOverride` set by the orchestrator.\n* `ActorBadge` sizes `sm|md`, colour tokens from PAP-66, `aria-label` 'Forge (agent)', reduced motion; stories for the three variants at 375 and 1280.\n* Responses to humans acting via impersonation (PAP-61) show `X-PaperOS-Actor: human:<id> via staff:<id>`; agent on behalf of a human (`r4/identity/delegated-authority`) shows `agent:forge for human:<id>`.\n\n**Interface contract**\n\nProvides: Attribution middleware, header `X-PaperOS-Actor`, `ActorBadge`, table `agent_quota_usage`, config `quotas.yml`, event `agent.quota.exceeded`.\n\nConsumes: Keys and principals (sibling), audit sink (PAP-38, soft: mock), character glyphs and colours (PAP-103, soft), tokens (PAP-66), event bus (`r4/data-layer/events-core`, soft). Consumed by PAP-111, PAP-146, PAP-144 conflict banners, PAP-142 mentions, PAP-107 prompt log.\n\n**Definition of done**\n\n* Audit rows for agent mutations carry character, session and issue (test against PAP-38 or its mock); header present on every response.\n* Daily quota exceeded emits the event and returns 429; midnight UTC rollover tested with a fake clock.\n* `ActorBadge` stories at 375 and 1280 light and dark; axe clean; an agent comment in the example app shows the badge and tooltip (Playwright); changelog under Identity.\n\n**Test plan**\n\n* Unit: header rendering for the four actor shapes, quota arithmetic across midnight, reason requirement matrix.\n* E2E: agent key from the sibling performs 3 mutations; audit rows and headers asserted; quota set to 2 in a test tenant produces a 429 on the third.\n\n**Demo**\n\nPost a comment with an agent key in the example app, hover the badge, then set `quotas.yml` to 2 for `forge` and watch the third call return 429 with the event in the log. Under 90 seconds.\n\n**Edge cases**\n\n* Quota config missing a character: default from `quotas.yml` `default` entry.\n* Clock skew across API replicas: day boundary uses database `now()`.\n* Badge for a renamed or unknown character: neutral glyph and the raw name.\n\n**Dependencies**\n\nBlocked by `r4/identity/agent-keys` (hard). Soft: PAP-38, PAP-103, PAP-66, PAP-61, `r4/data-layer/events-core`. Blocks PAP-146.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer); Iris reviews the badge. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/identity/custom-roles",
+   "title": "Custom roles and permission sets: tenant-defined roles extending a base role, a permission picker with `explain`, assignment rules, immutability of system roles and audited changes",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Roles and audiences enforced end to end",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-227",
+    "r4/identity/tenancy-core"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nThe brief asks for different types of customers and staff as configuration, not a rewrite. PAP-55 allows custom roles that extend one of the five base roles and PAP-33 stores `role.permissions`, but no issue lets a tenant owner create 'Finance viewer' or 'Support lead', pick what it may do, and assign it. Clerk, Auth0 and Keycloak all ship this; without it every app hardcodes roles.\n\n**Scope**\n\nIn: Procedures `roles.list|create|update|archive|assign`, `role.base_role` and `role.policies jsonb` (an array of PAP-227 `Policy` fragments, allow-only), permission picker UI grouping actions by entity from the procedure registry (`procedureScopes()`, PAP-268) and page spec actions (PAP-116), `explain` preview of the effective permissions for a fixture principal, console page `/console/people/roles` edit mode (extends `r4/identity/console-admin-pages`), audit of every change, `docs/platform/roles.md`.\n\nOut: Base roles and the policy language (PAP-55, PAP-227), per-resource grants (`r4/identity/resource-grants`), entitlement gating (PAP-178), SCIM group mapping (PAP-231).\n\n**Spec**\n\n* A custom role is `{ key, name, baseRole: TenantRole, policies: Policy[] }`; its effective permission set is base role policies plus its own allows; a custom role can never grant more than `admin` and never `*.manage`; deny policies stay platform-owned.\n* Picker shows every `<entity>.<verb>` known to the registry with the current base decision; toggling adds an allow policy with `source: { specPath: 'tenant-role:<key>' }` so `explain` and PAP-64 matrices can cite it.\n* Assignment through `org.members.updateRole` accepts custom role keys; a member's `Principal.attributes.role` carries the custom key and `baseRole` for `matches()` (PAP-55) so audiences keep working.\n* System roles immutable (PAP-33 invariant); archiving a role in use requires choosing a replacement; changes publish `permission.changed` (`r4/identity/permission-propagation`).\n* Policies from custom roles compile to SQL like any other (PAP-228) because they use the same `Policy` shape; the property test covers a fixture custom role.\n\n**Interface contract**\n\nProvides: Procedures `roles.*`, columns `role.base_role`, `role.policies`, `RolePicker` component, `effectivePermissions(roleKey)`, docs.\n\nConsumes: Policy model and `explain` (PAP-227), SQL compiler (PAP-228), tenancy and membership procedures (`r4/identity/tenancy-core`), procedure registry (PAP-268), spec actions (PAP-116, soft), console pages (`r4/identity/console-admin-pages`, soft), audit (PAP-38), propagation (`r4/identity/permission-propagation`, soft). Consumed by PAP-231 group mapping, PAP-64 matrices, PAP-63 roles page.\n\n**Definition of done**\n\n* Owner creates 'Finance viewer' extending `viewer` with `invoice.read|list`, assigns it, and the member sees invoices but cannot edit (Playwright plus `callAs`); `explain` names the tenant role as the source.\n* Attempt to grant `*.manage` or exceed admin refused; system role edit refused; archive-in-use requires a replacement (tests).\n* Property test agreement between `can()` and `toPredicate()` includes a custom role fixture; screenshots of the editor at 768 and 1280; docs; changelog under Identity.\n\n**Test plan**\n\n* Unit: effective permission composition, ceiling checks, picker grouping from the registry, archive replacement rule.\n* E2E: create, assign, verify access in the portal as the member, archive with replacement; matrix report (PAP-64) shows the new column.\n\n**Demo**\n\nCreate 'Support lead' from `staff`, tick `user.impersonate`, assign it to a seeded staff member, then run the explain CLI for that member. Under two minutes.\n\n**Edge cases**\n\n* Fifty custom roles: picker and lists searchable; roles page grouped by base role.\n* Role referenced by a page spec `access` audience: audiences match on `baseRole` unless the spec names the custom key explicitly.\n* Two tenants define the same key: keys are per tenant; system keys reserved.\n\n**Dependencies**\n\nBlocked by PAP-227 and `r4/identity/tenancy-core` (hard). Soft: PAP-228, PAP-268, PAP-116, PAP-38, `r4/identity/console-admin-pages`, `r4/identity/permission-propagation`.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer) with Iris on the picker. Reviewer: Sentinel (Security Auditor; Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/identity/resource-grants",
+   "title": "Per-resource grants and share links: `resource_grant` table, `hasRelation` policy operator compiled to SQL, `ShareDialog` primitive and signed guest links for anonymous access with expiry and passcode",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Roles and audiences enforced end to end",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-227",
+    "PAP-228",
+    "r4/identity/tenancy-core"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nRoles and attributes say who may act on a kind of thing; sharing says who may act on this thing. Views (PAP-172), tenant docs (PAP-379), canvases and records all need 'share with Ada as editor' and 'anyone with the link can view', and each would invent its own table. This is Zanzibar-lite: one grants table, one policy operator, one dialog, and one signed guest token that gives the `anonymous` principal a narrow relation.\n\n**Scope**\n\nIn: Table `resource_grant (tenant_id, entity_type, entity_id, subject_kind: principal|audience|link, subject_id, relation: viewer|commenter|editor|owner, granted_by, expires_at, created_at)` with RLS; policy condition op `hasRelation` (`{ path: 'resource', op: 'hasRelation', value: ['editor','owner'] }`) evaluated in memory and compiled to an `EXISTS` subquery by PAP-228; procedures `grants.list|add|remove|createLink|revokeLink`; `ShareDialog` component (people picker, role per person, link toggle with expiry and passcode, copy); guest tokens `gl_<id>.<sig>` resolved by middleware into an `anonymous` principal carrying `attributes.grantId`; route `/s/<token>`; audit of grants; docs `docs/platform/sharing.md`.\n\nOut: View-specific share UI copy (PAP-172 consumes), public pay pages (PAP-396 keeps its own tokens), enterprise link policies, SCIM.\n\n**Spec**\n\n* Relations are ordered `viewer < commenter < editor < owner`; `hasRelation(['editor'])` matches editor or owner; a grant on a parent (`workspace`) may be inherited when the entity registers `parentOf` in the dataset registry (PAP-161), one level only.\n* Built-in policies gain `share` verbs: `<entity>.share` allowed for owners of the entity and admins; granting a relation higher than one's own is refused.\n* Guest links: HMAC over `{ grantId, entity, relation, exp }` with `CURSOR_SECRET`-style key rotation (PAP-302 pattern); optional passcode hashed; rate-limited per IP (`r4/data-layer/rate-limits`); the `anonymous` principal from a link matches only `hasRelation` policies, never role policies; presence shows 'Guest' (PAP-141).\n* `permission.changed` published on every grant change (`r4/identity/permission-propagation`) so shapes and rooms refresh; grants expire by `expires_at` (retention job removes them).\n* Entitlement hook: `sharing.publicLinks` may be gated by plan (PAP-178, soft).\n\n**Interface contract**\n\nProvides: Table `resource_grant`, op `hasRelation`, procedures `grants.*`, `ShareDialog`, `useGrants(entity)`, guest link middleware and route, event `grant.changed`, docs.\n\nConsumes: Policy model (PAP-227), SQL compiler (PAP-228), tenancy (`r4/identity/tenancy-core`), dataset registry for `parentOf` (PAP-161, soft), rate limits (`r4/data-layer/rate-limits`, soft), propagation (`r4/identity/permission-propagation`, soft), presence (PAP-141, soft), entitlements (PAP-178, soft), primitives (PAP-67, PAP-238). Consumed by PAP-172, PAP-379, PAP-321, PAP-333, PAP-131.\n\n**Definition of done**\n\n* Share a record with a seeded member as editor: they can edit, a non-shared member cannot see it (list returns empty through RLS) (compose test through `callAs`).\n* Guest link with passcode and 1-hour expiry opens the entity read-only in a private window; expired or wrong passcode refused; link revocation immediate.\n* Property test agreement between `can()` and `toPredicate()` extended with `hasRelation` cases; `ShareDialog` at 375 and 1280 light and dark; axe clean; docs; changelog under Identity.\n\n**Test plan**\n\n* Unit: relation ordering, inheritance one level, token signing and rotation, passcode check, refusal to over-grant.\n* E2E: Playwright: share, open as the other member, open the guest link in a private context, revoke and reload.\n\n**Demo**\n\nOpen a record, click Share, add Ada as editor and create a link with a passcode, open the link in a private window, enter the passcode, then revoke it. Under two minutes.\n\n**Edge cases**\n\n* Entity deleted: grants cascade with it; guest link resolves to `NOT_FOUND`.\n* Grant to an audience (`staff-support`): evaluated with `matches()`; audience renamed in the app spec breaks nothing because the id is stored.\n* Ten thousand grants on one entity (public template): list paginates; `hasRelation` uses the `(entity_type, entity_id, subject_id)` index.\n\n**Dependencies**\n\nBlocked by PAP-227, PAP-228 and `r4/identity/tenancy-core` (hard). Soft: PAP-161, PAP-178, PAP-141, PAP-67, PAP-238, `r4/data-layer/rate-limits`, `r4/identity/permission-propagation`. Consumed by PAP-172, PAP-379, PAP-321, PAP-333.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer) with Iris on the dialog. Reviewer: Sentinel (Security Auditor; Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/identity/field-permissions",
+   "title": "Field-level permissions: policy `fields:` allow and deny lists, response masking in the repository and oRPC output, write rejection per field, `useCan` for fields and spec `data.fields[].access`",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Roles and audiences enforced end to end",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-227",
+    "PAP-229",
+    "PAP-268"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nRLS decides which rows; nothing decides which columns. A customer must not see `internal_notes` or `cost_price`, support must not edit `credit_limit`, and an agent should read but never write `email`. Hasura and Supabase expose column privileges; PAP-228 already has a `permissionColumns` map for SQL. This adds field rules to the same policies and enforces them in one place on the way out and on the way in.\n\n**Scope**\n\nIn: `Policy.fields?: { allow?: string[], deny?: string[] }` in `packages/permissions` model with validation against `permissionColumns`; `maskFields(actor, action, resourceType, rows)` applied by the repository (`r4/data-layer/entity-factory`, soft) and by an oRPC output middleware for hand-written routers; write path: `update`/`create` inputs containing a denied field return `FORBIDDEN` with `details[].path`; `useCan(action, resource, { field })` and a `canField()` helper for forms; spec `data.fields[].access` (PAP-116, PAP-119) compiling to field policies; list shape columns (PAP-270) intersected with allowed fields per principal at subscribe time; docs section 'Field permissions'.\n\nOut: Encryption (PAP-353), PII classification (`r4/data-layer/pii-registry`), search snippets (PAP-39 respects masked bodies by re-checking), export redaction (PAP-420 reuses `maskFields`).\n\n**Spec**\n\n* Resolution: field visibility for `read` is the union of allowed fields across matching allow policies minus any deny; deny wins; unspecified means all fields (backward compatible); masked fields are omitted from the object, never set to null, and the DTO type is a `Partial` marked with `__masked: string[]` in dev.\n* Write: `update` with a denied field fails atomically; `create` with a denied field fails unless the field has a server default and the client omitted it.\n* Shapes: the proxy (PAP-270) intersects requested `columns` with the principal's allowed columns for the table and rejects a request naming a denied column with `SHAPE_FORBIDDEN`; PGlite therefore never stores masked data.\n* `explain()` reports field decisions with sources; PAP-64's matrix gains a fields dimension when a spec declares `data.fields[].access`.\n* Performance: mask computation memoised per request per resource type; under 50 µs per row at 50 fields (bench).\n\n**Interface contract**\n\nProvides: `Policy.fields`, `maskFields`, `canField`, `useCan` field option, output middleware `maskOutput()`, shape column intersection hook, spec key `data.fields[].access`, docs. `r4/tables/field-level-permissions` (custom datasets, deferred) compiles `FieldDef.permissions` into `Policy.fields` and calls `maskFields`, so entity and custom datasets share one enforcement path.\n\nConsumes: Policy model and explain (PAP-227), adapter and `useCan` (PAP-229), routers (PAP-268), `permissionColumns` (PAP-228), shape proxy (PAP-270, soft), entity factory (`r4/data-layer/entity-factory`, soft), spec data section (PAP-116, PAP-119, soft). Consumed by PAP-164 editors, PAP-165 grid (hide masked columns), PAP-333 record page, PAP-420 export, PAP-64.\n\n**Definition of done**\n\n* Customer reading an invoice gets no `internal_notes`; support updating `credit_limit` gets `FORBIDDEN` with the path; agent read includes `email`, agent write of `email` refused (compose tests through `callAs`).\n* Shape request naming a denied column returns `SHAPE_FORBIDDEN`; allowed subscribe streams only permitted columns (integration with Electric).\n* `useCan(..., { field })` story: form field hidden for customer, read-only for support; bench committed; docs; changelog under Identity.\n\n**Test plan**\n\n* Unit: resolution of allow, deny and unspecified across policies, masking of nested and array fields, write rejection paths, memoisation.\n* E2E: grid demo as three audiences shows different column sets; explain CLI prints the field decision with the spec line.\n\n**Demo**\n\nRun `pnpm permissions explain --actor fixtures/customer.json --action invoice.read --resource invoice:123 --fields` and read which fields are hidden and why, then open the invoice as the customer and as support. Under two minutes.\n\n**Edge cases**\n\n* Field used in a filter or sort the principal may not read: list refuses with `VALIDATION` naming the field (no side-channel).\n* Computed or formula fields (PAP-168): masked when any input field is denied.\n* Field renamed in the schema: `permissionColumns` typecheck fails, never a silent leak.\n\n**Dependencies**\n\nBlocked by PAP-227, PAP-229, PAP-268 (hard). Soft: PAP-228, PAP-270, PAP-116, PAP-119, `r4/data-layer/entity-factory`. Consumed by PAP-164, PAP-165, PAP-333, PAP-420, PAP-64.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Security Auditor; Edge Case Hunter for side channels).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/identity/permission-propagation",
+   "title": "Permission change propagation: `permission.changed` topic, versioned server-side policy cache, client refetch of `permissions.mine`, Hocuspocus room re-check and Electric shape invalidation",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Roles and audiences enforced end to end",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-229",
+    "r4/identity/tenancy-core",
+    "r4/data-layer/events-core"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build S\n\n**Goal**\n\nThree consumers assume a signal nobody emits: PAP-140 re-checks room permissions 'on `permission.changed`', PAP-229 refetches policies 'on `session.updated` and tenant switch', and PAP-328 relies on the shape proxy returning 409 when access changes. Role edits, grant changes, membership removal and custom role updates all need to reach open sessions within seconds, or a removed staff member keeps a live shape and a room open.\n\n**Scope**\n\nIn: Topic `permission.changed { tenantId, principalIds?: Uuid[], scope: 'tenant'|'principal'|'entity', entity?: EntityRef, policyVersion }` declared in `contract-identity` and published by membership, role, grant and impersonation changes; `policy_version` per tenant and per principal in a small `permission_version` table; server-side policy cache keyed by `(tenantId, principalId, version)` in `packages/permissions`; client: `PermissionProvider` subscribes through the push transport (`r4/realtime/live-events-channel`, soft) or polls `permissions.version` every 30 s and refetches `permissions.mine`; Hocuspocus subscription that re-runs `onAuthenticate` for affected connections and closes with `4403` when denied; shape proxy compares `policyVersion` in the shape handle and returns `409 shape-invalid`; docs section.\n\nOut: The policy engine (PAP-227), the push transport itself, presence privacy (PAP-141).\n\n**Spec**\n\n* Publishers: `org.members.updateRole|remove`, `roles.update|archive` (`r4/identity/custom-roles`), `grants.*` (`r4/identity/resource-grants`), `impersonation.start|stop` (PAP-61), SCIM deactivation (PAP-231, deferred); each bumps the relevant version inside the same transaction and publishes through `publish(tx, ...)`.\n* Server cache: `can()` callers pass the request's principal; the cache entry is invalidated by version mismatch, never by TTL alone; a 60 s TTL is the safety net.\n* Client: on `permission.changed` matching the principal or tenant, refetch `permissions.mine`, re-render `useCan` consumers, remount shapes whose handle carries an older version (PAP-326 registry does it), and show 'Your access changed' once per 10 s.\n* Hocuspocus (PAP-140): the collab server subscribes to the topic through the dispatcher's `inproc` sink in its own process (it shares `packages/core/events`); affected connections are re-authenticated within 2 s; `connection.readOnly` toggles without disconnect when only write access changed.\n* Shape proxy (PAP-270): handles embed `pv=<policyVersion>`; a stale handle yields 409 and the client resubscribes (PAP-328).\n\n**Interface contract**\n\nProvides: Topic `permission.changed`, table `permission_version`, `bumpPermissionVersion(tx, scope)`, policy cache API, `permissions.version` procedure, collab-server subscription helper, shape handle version rule, docs.\n\nConsumes: `can()` and `PermissionProvider` (PAP-227, PAP-229), tenancy procedures (`r4/identity/tenancy-core`), event bus (`r4/data-layer/events-core`), push transport (`r4/realtime/live-events-channel`, soft), collab server hooks (PAP-140), shape proxy (PAP-270) and registry (PAP-326). Consumed by PAP-140, PAP-328, PAP-229, PAP-61, `r4/identity/custom-roles`, `r4/identity/resource-grants`.\n\n**Definition of done**\n\n* Revoke a member's role in one context: their open grid loses rows within one resubscribe (under 2 s), their open doc room closes with `4403`, and `useCan` hides the Delete button (Playwright with two contexts and the compose stack with Electric and Hocuspocus).\n* Server cache hit ratio above 95 percent on the PAP-242 smoke with zero stale decisions (assert with a version bump mid-run).\n* Docs; changelog under Identity; comments on PAP-140, PAP-229, PAP-328 pointing at the topic.\n\n**Test plan**\n\n* Unit: version bump inside the transaction (rolls back with it), cache keying and invalidation, client matching of scope to principal, handle version parsing.\n* E2E: the two-context scenario above; impersonation start triggers the customer's presence to hide the staff cursor within 2 s.\n\n**Demo**\n\nOpen the grid demo as a member in one window and the console as admin in another; remove the member's role and watch rows disappear, the doc room close and the button hide. Under two minutes.\n\n**Edge cases**\n\n* Burst of 1,000 grant changes (bulk share): one event per transaction with `principalIds` batched; clients coalesce refetches per 2 s.\n* Push transport absent: 30 s poll is the ceiling; documented.\n* Collab server restarted: it re-checks every connection on reconnect anyway (PAP-140).\n\n**Dependencies**\n\nBlocked by PAP-229, `r4/identity/tenancy-core`, `r4/data-layer/events-core` (hard). Soft: PAP-140, PAP-270, PAP-326, PAP-61, `r4/realtime/live-events-channel`, `r4/identity/custom-roles`, `r4/identity/resource-grants`.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer) with Nova (CRDT Engineer) on the collab hook. Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/identity/auth-abuse-controls",
+   "title": "Sign-in and sign-up abuse controls: Turnstile challenge on public auth and forms, disposable-domain list, progressive lockout per email and IP, and `auth.lockout` security events",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Developer"
+   ],
+   "milestone": "Roles and audiences enforced end to end",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-223",
+    "PAP-224"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build S\n\n**Goal**\n\nPAP-223 limits sign-in to ten attempts a minute and PAP-304 bounds requests, but magic-link floods, sign-up spam from disposable domains and slow credential stuffing across IPs are how public auth actually gets abused, and every public form (`/pay`, support chat, referral) inherits the problem. Add the standard controls once, behind the Better Auth `captcha` plugin and one lockout table.\n\n**Scope**\n\nIn: `captcha({ provider: 'cloudflare-turnstile' })` in `packages/auth` for magic-link request, sign-up and passkey registration start, `<Challenge/>` component rendering Turnstile only when the server asks (risk-based: after 3 attempts per IP or when the IP is on a denylist), site and secret keys via PAP-17; `email_domain_policy` list (disposable domains from a maintained list refreshed weekly by a job, plus tenant allow and deny lists), lockout table `auth_lockout (subject_kind: email|ip, subject, until, attempts)` with progressive delays 1, 5, 15, 60 minutes, decoy-safe responses (same message for unknown and locked accounts), security events `auth.lockout`, `auth.captcha_failed`, `auth.disposable_blocked` (PAP-356), docs section.\n\nOut: Rate limiting itself (`r4/data-layer/rate-limits`), device fingerprinting, bot management at the edge, marketing form spam (PAP-193 reuses `<Challenge/>`).\n\n**Spec**\n\n* Challenge decisions come from the server: `auth.challengeRequired({ action, ip, email })`; the client shows Turnstile only then; tokens verified server-side with a 5-minute validity and single use.\n* Lockout counts failed magic-link verifications, TOTP and backup-code attempts (`r4/identity/mfa-recovery`) and passkey ceremony failures; success resets the counter; locked subjects receive the same neutral message and a `Retry-After`.\n* Disposable-domain block applies to sign-up and invitations by default; tenant owners may disable it or add domains; the list source and refresh job are documented.\n* Every control has a `SEC-AUTH-*` id in PAP-219 `controls.yaml`; events route to PAP-356 with the pinned-issue escalation for bursts.\n* Test mode (PAP-240) bypasses Turnstile with a documented header so e2e suites run unattended.\n\n**Interface contract**\n\nProvides: Plugin config, `<Challenge/>`, `challengeRequired()`, table `auth_lockout`, table `email_domain_policy` and job `auth.refreshDisposableList`, security events above, env `TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`.\n\nConsumes: Better Auth server and pages (PAP-223, PAP-224), env schema (PAP-17), rate limits (`r4/data-layer/rate-limits`, soft), jobs (PAP-43, soft), security telemetry (PAP-356, soft), controls (PAP-219), test mode (PAP-240). Consumed by `r4/identity/mfa-recovery`, PAP-193 forms, PAP-396 public pay pages, PAP-411 chat capture.\n\n**Definition of done**\n\n* Fourth failed attempt from one IP triggers the challenge; a Turnstile failure is refused; test-mode bypass works (Playwright with the Turnstile test keys).\n* Sign-up with a disposable domain refused; tenant allowlist overrides (tests); lockout escalates 1, 5, 15, 60 minutes and resets on success (fake clock).\n* Events visible in the security dashboard; controls listed; docs; changelog under Security; Security Auditor signs off on the neutral-message behaviour.\n\n**Test plan**\n\n* Unit: challenge decision table, lockout schedule and reset, domain list matching including subdomains, token single-use.\n* E2E: magic-link flood from one IP hits the challenge; sign-up with `mailinator.com` refused; locked account shows the neutral message.\n\n**Demo**\n\nRequest five magic links for a fake address from the sign-in page, watch the challenge appear on the fourth, fail it and read the neutral message; then try a disposable domain on sign-up. Under two minutes.\n\n**Edge cases**\n\n* Shared NAT (school, office): lockout per email escalates faster than per IP; challenge rather than block for IP-only signals.\n* Turnstile unreachable: fail open with an event and stricter lockout for the incident window; never a dead sign-in page.\n* Tauri WebView: Turnstile renders in the system browser flow (PAP-225) not in-app.\n\n**Dependencies**\n\nBlocked by PAP-223 and PAP-224 (hard). Soft: PAP-17, PAP-43, PAP-219, PAP-240, PAP-356, `r4/data-layer/rate-limits`. Consumed by `r4/identity/mfa-recovery`, PAP-193, PAP-396, PAP-411.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/identity/service-principals",
+   "title": "Internal service principals: `service` users for the worker, collab server, Electric proxy and orchestrator, short-lived signed service tokens through `SecretsPort`, `requireService()` middleware and the service call matrix",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Agent principals and enterprise",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-223",
+    "PAP-267"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\n`PrincipalType` has `service` and the audit log has `actor_kind = 'system'`, but nothing says how the collab server calls the API to check a room, how the orchestrator posts status, or how the worker acts without a human. Today each would share the database role or a long-lived key. Give internal services their own principals, short-lived signed tokens minted from a secret the kernel hands out, and a matrix of who may call what.\n\n**Scope**\n\nIn: `users` rows with `kind = 'service'` seeded for `worker`, `collab-server`, `electric-proxy`, `orchestrator`, `dr-drill`; `packages/auth/src/service.ts` with `mintServiceToken(service, { ttl: '5m', audience })` (HS256 over a `SERVICE_TOKEN_SECRET` obtained through `SecretsPort`, PAP-444, soft: env) and `verifyServiceToken()`; oRPC `requireService(names)` middleware and `serviceProcedure`; matrix `ops/security/service-matrix.yaml` (`{ service, mayCall: [procedure globs], mayActAs: tenant-scoped boolean }`) validated in Gate 1 and enforced by the middleware; audit rows with `actor_kind = 'service'` and `service` name; rotation with a 10-minute overlap; docs `docs/platform/service-principals.md`.\n\nOut: Agent keys (PAP-60 children), tenant API keys (PAP-222), mutual TLS between containers, orchestrator credential broker (PAP-300).\n\n**Spec**\n\n* Tokens: `{ iss: 'paperos', sub: 'service:collab-server', aud: 'api', exp, jti }`; `jti` cached for replay refusal within the TTL; clock skew tolerance 30 s; secret from `SecretsPort` with `SERVICE_TOKEN_SECRET_PREVIOUS` honoured during rotation.\n* `requireService(['collab-server'])` resolves a `Principal { type: 'service', id, attributes: { service } }`; tenant-scoped calls require an explicit `tenantId` argument and `mayActAs: true` in the matrix; `withTenant` then sets the RLS variables with `app.actor_kind = 'service'`.\n* Matrix examples: `collab-server` may call `permissions.check`, `presence.filter`; `worker` may call nothing over HTTP (it uses the database with `withTenant`) except `files.getUrl`; `orchestrator` may call `agents.status.*`, `agents.key.*`; `dr-drill` may call `health` and `smoke.*`.\n* Denied calls emit a security event (`service.denied`, PAP-356) and never fall back to a human session.\n* Tokens never appear in logs; a Semgrep rule (PAP-80) flags `SERVICE_TOKEN_SECRET` reads outside `packages/auth`.\n\n**Interface contract**\n\nProvides: `mintServiceToken`, `verifyServiceToken`, `requireService`, `serviceProcedure`, matrix schema and `pnpm security:service-matrix --check`, seeded service users, security event `service.denied`.\n\nConsumes: Better Auth server (PAP-223), middleware chain (PAP-267), `SecretsPort` (PAP-444, soft), tenancy middleware (`r4/identity/tenancy-core`), audit (PAP-38), security telemetry (PAP-356, soft), Semgrep rules (PAP-80, soft). Consumed by PAP-140, PAP-270, PAP-96, PAP-43 workers, `r4/data-layer/platform-dr-drill`, PAP-288 status.\n\n**Definition of done**\n\n* Collab server calls `permissions.check` with a minted token (200); calling `invoice.update` is 403 with `service.denied` emitted; expired and replayed tokens refused (compose tests).\n* Rotation: new secret set, old honoured for 10 minutes, then refused; matrix check fails a PR that adds a procedure without a matrix entry.\n* Audit rows show `actor_kind = 'service'` with the service name; docs with the matrix; changelog under Security.\n\n**Test plan**\n\n* Unit: token claims and expiry, `jti` replay cache, matrix glob matching, `mayActAs` enforcement, rotation window.\n* E2E: the collab server container authenticates a room through the API using a service token on the compose stack; the orchestrator stub posts status.\n\n**Demo**\n\nRun `pnpm tsx examples/service-token.ts collab-server` to mint a token, call `permissions.check` with it (200) and `invoice.update` (403), then rotate the secret and repeat. Under two minutes.\n\n**Edge cases**\n\n* Service needs a new procedure: PR adds the matrix entry; reviewer (Sentinel) owns the file via CODEOWNERS.\n* Secret missing at boot: services refuse to start (fail closed).\n* Service acting for a tenant that was purged: `withTenant` fails with `tenant-gone`.\n\n**Dependencies**\n\nBlocked by PAP-223 and PAP-267 (hard). Soft: PAP-444, PAP-38, PAP-356, PAP-80, `r4/identity/tenancy-core`. Consumed by PAP-140, PAP-270, PAP-96, PAP-43, PAP-288.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/identity/delegated-authority",
+   "title": "Delegated authority for agents: `actingFor` evaluation as the intersection of delegator permissions and agent scopes, delegation grants with expiry and consent, dual-actor audit and the \"Forge for Justin\" badge",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Agent",
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Agent principals and enterprise",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-227",
+    "r4/identity/agent-keys",
+    "PAP-38"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nPAP-55 defines `actingFor`, PAP-60 stores `onBehalfOf` and PAP-61 leaves 'agent onBehalfOf semantics beyond the marker' to nobody, yet the brief's agents act for people (migration, content, support). Without rules, an agent acting for an admin is an admin. This defines the rule: an agent may do what both the delegator and its own scopes allow, only under an explicit, expiring delegation, with both identities on every row.\n\n**Scope**\n\nIn: Table `delegation (tenant_id, delegator_id, agent_user_id, scopes text[], reason, consented_at, expires_at, revoked_at, issue_key?)`; procedures `delegations.create|revoke|list|mine`; `can()` extension: when `actor.attributes.actingFor` is set, the decision is `can(delegator) AND can(agent) AND scopeAllows(delegation.scopes)`, deny from either side wins; `withScopes` reads the delegation; audit rows carry `actorId = agent`, `onBehalfOf = delegator`, `delegationId`; `ActorBadge` variant 'Forge for Justin' (from `r4/identity/agent-attribution-quotas`); consent UI: a PAP-94 decision card or an in-app prompt for the delegator; orchestrator hook so a session started by Justin's approval mints a key with `actingFor` (PAP-96, soft); docs `docs/platform/delegation.md`.\n\nOut: Agent keys and scopes (PAP-60 children), human impersonation (PAP-61), MCP allowlists (PAP-106), customer OAuth apps (PAP-222).\n\n**Spec**\n\n* A delegation is required for `actingFor`; a key carrying `actingFor` without a live delegation is refused with `DELEGATION_REQUIRED`; delegations expire (default 24 h, max 30 days) and are revocable by the delegator, tenant admins or `revoke-all` (PAP-301).\n* Intersection semantics are proven by a property test: for random policy sets, `can(agent acting for D)` never exceeds `can(D)` nor `can(agent)`; `explain()` shows both branches.\n* Delegator consent: staff and admins consent in-app (`requireRecentAuth`, `r4/identity/sessions-stepup`); customers consent through the portal prompt; Justin consents through a decision card; consent text names scopes and expiry.\n* SQL: `toPredicate` for an acting principal compiles the delegator's predicate AND the agent's; RLS session variables carry `app.acting_for` so PAP-34 policies can reference it.\n* Presence and comments show the dual identity (PAP-146, PAP-131 through `ActorRef.onBehalfOf`); `permission.changed` published on revoke.\n\n**Interface contract**\n\nProvides: Table `delegation`, procedures `delegations.*`, `can()` acting-for semantics, session variable `app.acting_for`, error `DELEGATION_REQUIRED`, consent components, docs.\n\nConsumes: Policy engine and explain (PAP-227), SQL compiler (PAP-228), agent keys and `withScopes` (`r4/identity/agent-keys`), attribution and badge (`r4/identity/agent-attribution-quotas`), audit (PAP-38), step-up (`r4/identity/sessions-stepup`, soft), decision cards (PAP-94, soft), orchestrator (PAP-96, soft), propagation (`r4/identity/permission-propagation`, soft). Consumed by PAP-208 migration agent, PAP-192 content agent, PAP-118 spec agent, PAP-146, PAP-131.\n\n**Definition of done**\n\n* Agent with `specs:write` acting for a `viewer` cannot update a spec; acting for an admin with a delegation limited to `specs:write` cannot delete a user; both audited with both ids (compose tests through `callAs` and real keys).\n* Property test of the intersection invariant; expired and revoked delegations refused; `revoke-all` clears them (PAP-301 dry run extended).\n* Consent prompt at 375 and 1280; badge variant story; docs; changelog under Identity; Security Auditor signs off.\n\n**Test plan**\n\n* Unit: intersection logic including deny precedence, expiry and revocation, consent state machine, SQL predicate composition.\n* E2E: Justin's decision card approves a migration agent for one tenant for 2 hours; the agent imports rows that carry both identities; revoking mid-run stops the next write.\n\n**Demo**\n\nCreate a delegation from the seeded admin to `scout` limited to `import:write` for one hour, run the import example with the agent key, open the audit trail showing 'Scout for Ada', then revoke and rerun to see `DELEGATION_REQUIRED`. Under two minutes.\n\n**Edge cases**\n\n* Delegator loses the role mid-delegation: intersection shrinks immediately (server evaluates live).\n* Agent acting for an agent: refused; delegations are human to agent only.\n* Delegation across tenants: refused; one delegation per tenant.\n\n**Dependencies**\n\nBlocked by PAP-227, `r4/identity/agent-keys`, PAP-38 (hard). Soft: PAP-228, PAP-94, PAP-96, PAP-301, `r4/identity/agent-attribution-quotas`, `r4/identity/sessions-stepup`, `r4/identity/permission-propagation`. Consumed by PAP-208, PAP-192, PAP-118, PAP-146, PAP-131.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer); Atlas reviews the orchestrator hook. Reviewer: Sentinel (Security Auditor; Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/identity/session-policy",
+   "title": "Tenant session and MFA policy: per-audience idle and absolute timeouts, MFA required for staff and admins, trusted devices, sign-up domain allowlist and IP allowlist for staff, enforced by `requireSession`",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Agent principals and enterprise",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "r4/identity/sessions-stepup",
+    "r4/identity/mfa-recovery",
+    "r4/identity/tenancy-core"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build S\n\n**Goal**\n\nBetter Auth gives one global session length (30 days, PAP-223). A clinic wants staff sessions to expire after 15 idle minutes and admins to have MFA; a retail portal wants customers to stay signed in for a month. Auth0 and WorkOS expose these as tenant policies; without them every app patches `requireSession`.\n\n**Scope**\n\nIn: `tenant.settings.sessionPolicy` Zod schema `{ byAudience: { [audienceId]: { idleMinutes, absoluteHours, requireMfa, trustedDeviceDays } }, signUpDomains?: { allow?: string[], deny?: string[] }, staffIpAllowlist?: CIDR[] }`, enforcement in `requireSession` and `withTenant` (`SESSION_EXPIRED_IDLE`, `MFA_REQUIRED`, `IP_NOT_ALLOWED` errors), `session.lastActivityAt` updates throttled to once a minute, trusted-device cookie signed per device after MFA, console settings section 'Security policy' (registered in `r4/identity/console-frame`), docs section.\n\nOut: TOTP itself (`r4/identity/mfa-recovery`), enterprise SSO enforcement (PAP-232), device attestation.\n\n**Spec**\n\n* Resolution: the strictest matching audience rule wins for a principal in several audiences; platform floors (customers at least 5 idle minutes, staff at most 30 days absolute) documented and enforced.\n* `requireMfa: true` returns `MFA_REQUIRED` until the session has a second factor; the client routes to two-factor setup; agents are exempt (keys) but audited.\n* Trusted devices: after MFA the client receives a signed device cookie valid `trustedDeviceDays`; revocation from the sessions page clears it.\n* IP allowlist applies to staff and admin audiences only; evaluated from Caddy's forwarded address; owners are warned when enabling a list that would lock them out (current IP not included).\n* Policy changes publish `permission.changed` so open sessions re-evaluate on the next request; changes are audited with reason.\n\n**Interface contract**\n\nProvides: Schema `SessionPolicy`, errors above, `resolveSessionPolicy(principal)`, trusted-device cookie helper, settings section, docs.\n\nConsumes: Sessions and step-up (`r4/identity/sessions-stepup`), MFA (`r4/identity/mfa-recovery`), tenancy settings (`r4/identity/tenancy-core`), audiences (PAP-55), console frame (`r4/identity/console-frame`, soft), propagation (`r4/identity/permission-propagation`, soft), audit (PAP-38). Consumed by PAP-62, PAP-63, PAP-232 enforcement later.\n\n**Definition of done**\n\n* Staff session idle past 15 minutes returns `SESSION_EXPIRED_IDLE` and the client redirects; customer session unaffected (fake clock, two audiences).\n* `requireMfa` for admins blocks until setup; trusted device skips the prompt for the configured days; IP allowlist lockout warning shown (tests).\n* Settings section at 768 and 1280; docs; changelog under Security.\n\n**Test plan**\n\n* Unit: strictest-rule resolution, floors, idle and absolute arithmetic, CIDR matching for IPv4 and IPv6, lockout warning logic.\n* E2E: admin enables MFA requirement and a 15-minute idle timeout; a seeded staff member is prompted for setup and later expires; a customer stays signed in.\n\n**Demo**\n\nSet staff idle to 1 minute in the console, sign in as staff in another window, wait, click and land on sign-in; then require MFA for admins and see the setup prompt. Under two minutes.\n\n**Edge cases**\n\n* Policy tightened while a user is mid-flow: next request applies it; unsaved form data preserved by the shell's re-auth flow.\n* Owner enables an IP allowlist that excludes them: refused with the current IP shown.\n* Tauri bearer sessions: idle tracked the same way; absolute expiry clears Stronghold on next launch.\n\n**Dependencies**\n\nBlocked by `r4/identity/sessions-stepup`, `r4/identity/mfa-recovery`, `r4/identity/tenancy-core` (hard). Soft: PAP-55, PAP-38, `r4/identity/console-frame`, `r4/identity/permission-propagation`.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/identity/access-checker",
+   "title": "Console access checker: pick a principal, action and resource, see the decision with matched policies, spec lines, field rules and the SQL predicate, and save the case as a permission-matrix fixture",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Agent principals and enterprise",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-227",
+    "PAP-228",
+    "r4/identity/console-frame"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-227 ships `explain` as a CLI and PAP-63 renders policies read-only. Justin, staff admins and reviewers need to answer 'why can Ada not see this invoice?' without a terminal, and every answer worth keeping should become a test. Cerbos and Oso ship a playground; this is ours, on the console, wired to the real engine.\n\n**Scope**\n\nIn: Page `/console/security/access-checker` with spec, form (principal picker from members and agents or a pasted fixture JSON, action from the registry, resource by dataset and id or a synthetic resource form), result panel (decision, matched policies with `source.specPath:line`, denies that would flip the result, field decisions from `r4/identity/field-permissions`, `toPredicate` SQL rendered, delegation branch from `r4/identity/delegated-authority` when `actingFor` is set), 'Save as fixture' writing `specs/fixtures/permissions/<name>.json` through the forge API (PAP-276, soft: download), link from every dev-mode 403 toast (PAP-229 explain) to the checker with the case prefilled; docs section.\n\nOut: Editing policies (`r4/identity/custom-roles`), the engine itself, matrix generation (PAP-64 consumes the saved fixtures).\n\n**Spec**\n\n* Evaluation runs server-side through `permissions.explain({ principal, action, resource })` (staff only, audited) so results equal production decisions; a synthetic principal is allowed only in non-production.\n* Result shows the three layers PAP-59 promises: policy decision, SQL predicate, and (when a page spec declares the action) the UI affordance from `hiddenWhenDenied` or `disabledWhenDenied`.\n* Saved fixtures follow PAP-64's fixture schema; PAP-64's generator picks them up as extra cases; duplicates by hash are refused.\n* Deep link `?case=<base64>` so a 403 toast in dev opens the exact case.\n\n**Interface contract**\n\nProvides: Page and spec, procedure `permissions.explain` (staff), fixture writer, deep-link format, `ExplainPanel` component reused by the roles page.\n\nConsumes: `explain()` (PAP-227), `toPredicate` (PAP-228), console frame (`r4/identity/console-frame`), procedure registry (PAP-268), field rules (`r4/identity/field-permissions`, soft), delegation (`r4/identity/delegated-authority`, soft), forge API (PAP-276, soft), PAP-64 fixture schema.\n\n**Definition of done**\n\n* Checker reproduces the three worked examples from `docs/platform/permissions.md` with the spec lines shown; saved fixture appears in the PAP-64 run (test).\n* Screenshots at 768 and 1280 light and dark; axe clean; dev 403 toast deep link opens the case; docs; changelog under Identity.\n\n**Test plan**\n\n* Unit: case encoding and decoding, fixture schema mapping, duplicate hash refusal, synthetic principal guard.\n* E2E: staff opens the checker, evaluates `invoice.update` for a support fixture, reads the deny source, saves the fixture and sees it in the generated matrix.\n\n**Demo**\n\nOpen the checker, pick Ada, `invoice.update`, invoice 123, read the denying policy and its spec line, flip to a support agent and read the allow, then save it as a fixture. Under two minutes.\n\n**Edge cases**\n\n* Resource id not found: synthetic resource form with the entity's `permissionColumns`.\n* Thousands of policies matched (wildcards): panel groups by source file.\n* Agent principal with `actingFor`: both branches shown side by side.\n\n**Dependencies**\n\nBlocked by PAP-227, PAP-228, `r4/identity/console-frame` (hard). Soft: PAP-268, PAP-276, PAP-64, `r4/identity/field-permissions`, `r4/identity/delegated-authority`.\n\n**Agent**\n\nBuilder: Iris (Component Crafter) with Forge on the procedure. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/identity/device-flow-login",
+   "title": "CLI and headless login: OAuth device authorization flow for `paperos login`, keychain token storage, `paperos whoami`, `--as-agent` key exchange and the approval page",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Agent principals and enterprise",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-223",
+    "PAP-224"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\n`paperos create`, `paperos upgrade`, the golden-path driver and any script a Claude session runs need to call the PaperOS API as a person, and today there is no way to sign a CLI in except copying a browser cookie. The device authorization grant (RFC 8628) is the standard answer (gh, az, flyctl); Better Auth ships a `deviceAuthorization` plugin. Add it, store the token in the OS keychain and let agents exchange a session key the same way.\n\n**Scope**\n\nIn: `deviceAuthorization()` plugin in `packages/auth` with endpoints `/api/auth/device/code`, `/api/auth/device/token`, approval page `/auth/device` with spec (shows user code, client name, scopes, approve or deny; requires a recent authentication), CLI commands in `packages/cli` (PAP-22 host, soft: standalone bin until it lands) `paperos login [--tenant]`, `paperos logout`, `paperos whoami`, token storage through the OS keychain (`keytar`-compatible) with a file fallback under `0600`, `--as-agent <key>` mode that exchanges a `pos_agent_` key for a scoped session (`r4/identity/agent-keys`), docs `docs/platform/cli-auth.md`.\n\nOut: The CLI's other commands (PAP-22, PAP-364), customer OAuth apps (PAP-222), Tauri deep-link flow (PAP-225).\n\n**Spec**\n\n* Device code valid 10 minutes, polling interval 5 s with `slow_down`; user code 8 characters without ambiguous glyphs; approval bound to the signed-in user and audited `auth.device.approved|denied`.\n* Tokens are bearer sessions (PAP-223) labelled `cli:<hostname>` so they appear on the sessions page (`r4/identity/sessions-stepup`) and can be revoked there; default absolute lifetime 30 days, idle 7.\n* `paperos login --tenant acme` sets the active tenant; `whoami` prints principal, tenant, role and expiry as JSON with `--json`.\n* Headless environments (CI, agent sessions) use `--as-agent` or `PAPEROS_TOKEN`; the device flow refuses to print a token to stdout unless `--print-token` is passed explicitly.\n* Rate limits on `/device/code` per IP (`r4/data-layer/rate-limits`, soft) and the challenge from `r4/identity/auth-abuse-controls` when abused.\n\n**Interface contract**\n\nProvides: Plugin config and endpoints, approval page and spec, CLI commands, keychain adapter, `getCliSession()` for other CLI commands, audit events.\n\nConsumes: Better Auth server and pages (PAP-223, PAP-224), sessions listing (`r4/identity/sessions-stepup`, soft), agent keys (`r4/identity/agent-keys`, soft), CLI host (PAP-22, soft), rate limits and abuse controls (soft). Consumed by PAP-22, PAP-364, PAP-430, PAP-96 tooling, PAP-92 session playbook.\n\n**Definition of done**\n\n* `paperos login` prints a URL and code, approval in the browser signs the CLI in, `whoami` shows the principal; the session appears on the sessions page and revoking it makes the CLI fail with a clear message (Playwright plus a CLI harness).\n* Expired code, `slow_down`, denied approval and `--as-agent` paths tested; keychain and file fallback both proven on Linux and macOS.\n* Docs; changelog under Developer.\n\n**Test plan**\n\n* Unit: user code alphabet, polling backoff, token storage adapter selection, JSON output shape.\n* E2E: CLI harness on the ephemeral stack: login, whoami, logout; agent key exchange used by an example script.\n\n**Demo**\n\nRun `paperos login`, approve in the browser with a passkey, run `paperos whoami --json`, then revoke the CLI session from `/portal/security` and rerun to see the message. Under two minutes.\n\n**Edge cases**\n\n* Two CLIs on one machine: separate keychain entries per profile (`--profile`).\n* Approval page opened by a different user than intended: the code binds to whoever approves; the CLI prints who it is signed in as.\n* No keychain (container): file fallback with a warning; `PAPEROS_TOKEN` preferred in CI.\n\n**Dependencies**\n\nBlocked by PAP-223 and PAP-224 (hard). Soft: PAP-22, `r4/identity/sessions-stepup`, `r4/identity/agent-keys`, `r4/data-layer/rate-limits`, `r4/identity/auth-abuse-controls`. Consumed by PAP-22, PAP-364, PAP-430.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/identity/partner-managed-tenants",
+   "title": "Partner-managed tenants: partner organisation links, delegated administration across client tenants with scoped roles, a partner switcher and client-visible partner access history",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Agent principals and enterprise",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "low",
+   "deferred": true,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "r4/identity/tenancy-core",
+    "PAP-227"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Build M\n\n**Goal**\n\nDeferred to v0.2 (past 2026-10-01): the brief names partners and the audience model (PAP-55) has `partner` with `partnerId`, but nothing lets an agency, bookkeeper or reseller manage several client tenants from one account without being a full member of each. WorkOS, Auth0 and Stripe all model this as an organisation-to-organisation link with scoped delegated admin; PaperOS needs it for the agency and clinic business packs (PAP-427).\n\n**Scope**\n\nIn: Table `tenant_link (partner_tenant_id, client_tenant_id, scopes text[], granted_by, accepted_at, revoked_at)`; procedures `partners.invite|accept|revoke|list`; partner principals resolve into a client tenant through `withTenant` with `attributes.partnerId` and a synthetic membership limited by `scopes` (roles from `r4/identity/custom-roles`); partner switcher (client list) in the console frame; client-side 'Partner access' section on the org settings page with history from audit rows; `partner` audience wiring so page specs can target partners; docs `docs/platform/partners.md`.\n\nOut: Billing between partner and client (business-core), white-label domains (PAP-431), reseller pricing.\n\n**Spec**\n\n* A link is initiated by the client owner or accepted by them; scopes are a subset of the partner's requested roles; either side may revoke; revocation publishes `permission.changed`.\n* Partner users act in the client tenant as `Principal { tenantId: client, attributes: { partnerId, role: <scoped role> } }`; RLS sees the client tenant; audit rows carry `partnerId`; impersonation (PAP-61) is not implied.\n* Partner switcher lists client tenants with the granted role; switching remounts sync like a tenant switch (`r4/identity/tenancy-ui`).\n* Clients see every partner access on their settings page and can revoke; a link expires if not accepted within 14 days.\n\n**Interface contract**\n\nProvides: Table `tenant_link`, procedures `partners.*`, partner resolution in `withTenant`, switcher entries, settings section, docs.\n\nConsumes: Tenancy (`r4/identity/tenancy-core`, `r4/identity/tenancy-ui`), policy engine (PAP-227), custom roles (`r4/identity/custom-roles`, soft), console frame (`r4/identity/console-frame`, soft), audit (PAP-38), propagation (`r4/identity/permission-propagation`, soft), audiences (PAP-55).\n\n**Definition of done**\n\n* Partner accepted with a `bookkeeper` scoped role can read and post invoices in the client tenant but cannot invite members; revocation ends access on the next request (compose tests).\n* Switcher and settings section at 768 and 1280; audit history visible to the client; docs; changelog under Identity.\n\n**Test plan**\n\n* Unit: scope subset validation, expiry, principal resolution for partner users, revocation paths.\n* E2E: client owner invites the seeded partner tenant, partner accepts, switches, acts, client revokes.\n\n**Demo**\n\nAs the agency owner accept the client link, switch to the client, post an invoice, then as the client revoke and watch the partner lose the tenant from the switcher. Under two minutes.\n\n**Edge cases**\n\n* Partner is also a direct member of the client: direct membership wins; link redundant and shown as such.\n* Client deleted: links revoked by the lifecycle job (PAP-432).\n* Partner tenant suspended: all links suspended.\n\n**Dependencies**\n\nBlocked by `r4/identity/tenancy-core` and PAP-227 (hard). Soft: `r4/identity/tenancy-ui`, `r4/identity/custom-roles`, `r4/identity/console-frame`, `r4/identity/permission-propagation`, PAP-38, PAP-55, PAP-432. Deferred to v0.2; not claimable before 10-01.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer) with Iris on the switcher. Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-58",
+   "section": "Spec",
+   "append": "Corrections from the Contracts document §1 and §4: (1) a tenant-scoped procedure without an active tenant returns `400 VALIDATION` with `details[0].issue = 'tenant-required'`; `412 TENANT_REQUIRED` is retired. (2) `withTenant` sets `app.actor_id` to the same value as `app.principal_id` and also sets `app.actor_kind` and `app.request_id`, so PAP-34 policies and PAP-38 triggers read one contract. Work is split into `r4/identity/tenancy-core` (middleware, plugin mapping, procedures) and `r4/identity/tenancy-ui` (invitations, switcher, pages)."
+  },
+  {
+   "identifier": "PAP-223",
+   "section": "Interface contract",
+   "append": "Add exports for non-HTTP consumers: `verifySessionToken(token) -> Principal | null` and `verifyApiKey(key) -> Principal | null` (the latter delegating to the PAP-60 plugin once it lands), used by the Hocuspocus `onAuthenticate` hook (PAP-140) and the Electric shape proxy (PAP-270). Configure `account: { accountLinking: { enabled: true, trustedProviders: ['google', 'github'] } }` so a verified-email OAuth sign-in links to the existing user rather than creating a duplicate; test both."
+  },
+  {
+   "identifier": "PAP-229",
+   "section": "Spec",
+   "append": "`PermissionProvider` also refetches on the `permission.changed` topic (`r4/identity/permission-propagation`) delivered through the push transport or a 30 s version poll of `permissions.version`; `useCan` gains an optional `{ field }` argument once `r4/identity/field-permissions` lands and returns `'loading'` for unknown fields until then."
+  },
+  {
+   "identifier": "PAP-60",
+   "section": "Spec",
+   "append": "Rate limiting: replace the plugin's in-memory `rateLimit` with `rateLimit('apiKey')` from `r4/data-layer/rate-limits` so limits survive restarts and are shared by both API replicas; the \"state lost on restart\" edge case is then void. Work is split into `r4/identity/agent-keys` and `r4/identity/agent-attribution-quotas`."
+  },
+  {
+   "identifier": "PAP-61",
+   "section": "Spec",
+   "append": "Realtime boundary: an impersonation session in `read` mode connects to Hocuspocus rooms with `connection.readOnly = true` and never publishes awareness under the customer's identity (the collab server reads `session.impersonation` through `verifySessionToken`); `write` mode publishes awareness as \"Support (viewing as Ada)\". `impersonation.start|stop` publish `permission.changed` so open rooms and shapes re-evaluate (`r4/identity/permission-propagation`)."
+  },
+  {
+   "identifier": "PAP-220",
+   "section": "Definition of done",
+   "append": "Make the security sign-off concrete: `/auth/recover` and TOTP verification allow 5 attempts per 15 minutes per account and per IP, then lock with a neutral message (`r4/identity/auth-abuse-controls` owns the lockout table); backup codes hashed with argon2id (memory 64 MB, iterations 3); a used TOTP step cannot be replayed within its window; tests for each. Work is split into `r4/identity/mfa-recovery` and `r4/identity/sessions-stepup`."
+  },
+  {
+   "identifier": "PAP-63",
+   "section": "Interface contract",
+   "append": "`registerConsoleSection(section, items)` is the extension point for round-4 pages: `r4/identity/custom-roles` (roles edit mode), `r4/identity/access-checker`, `r4/identity/session-policy` and `r4/data-layer/jobs-admin`; items carry `audiences` and an optional `can` guard and render nothing when denied. Work is split into `r4/identity/console-frame` and `r4/identity/console-admin-pages`."
+  },
+  {
+   "identifier": "PAP-62",
+   "section": "Spec",
+   "append": "Work is split into `r4/identity/portal-frame` and `r4/identity/portal-account-pages`; `registerPortalSection(id, component)` lets PAP-177 (billing), PAP-136 (preferences) and PAP-221 (legal) replace stubbed sections without editing the portal package. Delete account routes to PAP-221 when present, else `users.requestDeletion` with the PAP-432 grace explanation."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "realtime",
+   "title": "Hocuspocus (PAP-140) subscribes to `permission.changed` and awareness filtering uses `verifySessionToken`",
+   "why": "PAP-140 re-checks permissions every 5 minutes; the topic from `r4/identity/permission-propagation` makes it seconds and closes rooms on revocation."
+  },
+  {
+   "targetProject": "tables",
+   "title": "View sharing (PAP-172) and record pages (PAP-333) consume `r4/identity/resource-grants` and `r4/identity/field-permissions`",
+   "why": "Avoids a second grants table for views and gives the grid a rule for hiding masked columns."
+  },
+  {
+   "targetProject": "collab",
+   "title": "Tenant docs (PAP-379) and canvas overlays (PAP-321) use `ShareDialog` and `hasRelation` from `r4/identity/resource-grants`",
+   "why": "Both need per-document sharing and guest links; one dialog and one policy operator."
+  },
+  {
+   "targetProject": "agents",
+   "title": "Orchestrator (PAP-96) mints `actingFor` keys only against a live delegation (`r4/identity/delegated-authority`) and services use `mintServiceToken`",
+   "why": "Closes the \"agent acting for an admin is an admin\" hole and gives the orchestrator a principal of its own."
+  },
+  {
+   "targetProject": "app-shell",
+   "title": "`paperos create` and `paperos upgrade` (PAP-22, PAP-430) authenticate through `r4/identity/device-flow-login`",
+   "why": "The golden path currently has no way to call the PaperOS API as the person running it."
+  },
+  {
+   "targetProject": "quality",
+   "title": "Security telemetry (PAP-356) ingests `auth.lockout`, `auth.captcha_failed`, `service.denied` and `auth.device.approved`",
+   "why": "New detection sources from the abuse controls, service principals and device flow."
+  },
+  {
+   "targetProject": "spec-builder",
+   "title": "Access section (PAP-116) gains `fields[].access` and custom-role audience references",
+   "why": "Field permissions and tenant roles must be declarable in page specs to be tested by PAP-64."
+  },
+  {
+   "targetProject": "tables",
+   "title": "`r4/tables/field-level-permissions` should compile `FieldDef.permissions` into `Policy.fields` and call `maskFields` from `r4/identity/field-permissions`",
+   "why": "Round-4 dedup: one masking function and one explain path for entity and custom datasets instead of `fieldMask` and `maskFields` side by side."
+  }
+ ]
+}

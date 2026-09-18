@@ -1,0 +1,840 @@
+{
+ "project": "realtime",
+ "projectName": "Multiplayer & Realtime",
+ "benchmarks": [
+  "Liveblocks (presence, comments, history, notifications)",
+  "Yjs / Hocuspocus (rooms, awareness, persistence)",
+  "PartyKit (rooms, broadcast, hibernation)",
+  "Figma multiplayer (cursors, cursor chat, reactions, version history)",
+  "Google Docs (presence, version history, offline)",
+  "Notion (page history, mentions, offline)",
+  "Linear sync engine (single connection state, optimistic writes)",
+  "ElectricSQL / Zero / Replicache (record sync)",
+  "Supabase Realtime / Ably (channels, push)",
+  "tldraw sync (snapshots, headless clients)"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "CRDT choice with benchmark and ADR",
+   "coveredBy": [
+    "PAP-139"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Hocuspocus server with auth hook, persistence, room grammar",
+   "coveredBy": [
+    "PAP-140"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Yjs offline persistence (`y-indexeddb`)",
+   "coveredBy": [
+    "PAP-140",
+    "PAP-145"
+   ],
+   "status": "covered",
+   "note": "provider wraps it"
+  },
+  {
+   "feature": "Document version history, snapshots, restore, diff",
+   "coveredBy": [
+    "r4/realtime/doc-history"
+   ],
+   "status": "gap",
+   "note": "Google Docs/Notion/Liveblocks parity; PAP-379 assumes it"
+  },
+  {
+   "feature": "Presence data path and privacy filtering",
+   "coveredBy": [
+    "PAP-141",
+    "r4/realtime/presence-core"
+   ],
+   "status": "partial",
+   "note": "split child; awareness filtering decision added"
+  },
+  {
+   "feature": "Presence components (avatars, cursors, selection, viewers)",
+   "coveredBy": [
+    "PAP-141",
+    "r4/realtime/presence-components"
+   ],
+   "status": "partial",
+   "note": "split child"
+  },
+  {
+   "feature": "Typing indicators, cursor chat, reactions",
+   "coveredBy": [
+    "r4/realtime/ephemeral-signals"
+   ],
+   "status": "gap",
+   "note": "Figma/Slack parity; chat and comments need typing"
+  },
+  {
+   "feature": "Agents as live participants",
+   "coveredBy": [
+    "PAP-146"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Follow mode and shared cursor sessions",
+   "coveredBy": [
+    "PAP-149"
+   ],
+   "status": "covered",
+   "note": "deferred"
+  },
+  {
+   "feature": "Collaborative rich text core (Tiptap + Yjs)",
+   "coveredBy": [
+    "PAP-142",
+    "r4/realtime/editor-core"
+   ],
+   "status": "partial",
+   "note": "split child on the zero-slack chain"
+  },
+  {
+   "feature": "Editor toolbar, commands, mentions, markdown, images",
+   "coveredBy": [
+    "PAP-142",
+    "r4/realtime/editor-features"
+   ],
+   "status": "partial",
+   "note": "split child"
+  },
+  {
+   "feature": "Headless Yjs client for agents and jobs",
+   "coveredBy": [
+    "r4/realtime/headless-client"
+   ],
+   "status": "gap",
+   "note": "importers and agents need to write docs, not only appear"
+  },
+  {
+   "feature": "Live record hooks and shape registry",
+   "coveredBy": [
+    "PAP-326"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Reconciler for optimistic writes and conflict events",
+   "coveredBy": [
+    "PAP-327"
+   ],
+   "status": "covered",
+   "note": "amendment: `syncMeta()` column helper"
+  },
+  {
+   "feature": "Permission-driven resubscribe and lag measurement",
+   "coveredBy": [
+    "PAP-328"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Permission change propagation to rooms and shapes",
+   "coveredBy": [
+    "r4/identity/permission-propagation"
+   ],
+   "status": "gap",
+   "note": "owned by identity in round 4"
+  },
+  {
+   "feature": "Conflict UX specification",
+   "coveredBy": [
+    "PAP-144"
+   ],
+   "status": "covered",
+   "note": "spec and mocks only"
+  },
+  {
+   "feature": "Conflict UX implementation wired to reconciler events",
+   "coveredBy": [
+    "r4/realtime/conflict-ux-impl"
+   ],
+   "status": "gap",
+   "note": "PAP-144 names follow-ups that did not exist"
+  },
+  {
+   "feature": "Offline write queue with retry, ordering, status",
+   "coveredBy": [
+    "PAP-148",
+    "PAP-272"
+   ],
+   "status": "covered",
+   "note": "amendment: adopt PAP-304 batch shape"
+  },
+  {
+   "feature": "Unified connection status and reconnect policy",
+   "coveredBy": [
+    "r4/realtime/connection-status"
+   ],
+   "status": "gap",
+   "note": "four transports, three indicators today"
+  },
+  {
+   "feature": "Multi-window and tab sync via BroadcastChannel and Yjs relay",
+   "coveredBy": [
+    "PAP-145"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Push transport: live events channel (shape + SSE)",
+   "coveredBy": [
+    "PAP-381",
+    "r4/realtime/live-events-channel"
+   ],
+   "status": "partial",
+   "note": "split child"
+  },
+  {
+   "feature": "Web Push and desktop OS notifications",
+   "coveredBy": [
+    "PAP-381",
+    "r4/realtime/web-push"
+   ],
+   "status": "partial",
+   "note": "split child"
+  },
+  {
+   "feature": "Mobile push (APNs, FCM)",
+   "coveredBy": [
+    "PAP-381",
+    "r4/app-shell/native-push-registration"
+   ],
+   "status": "partial",
+   "note": "owned by app-shell in round 4 (deferred); plugs into `PushProvider` from `r4/realtime/web-push`"
+  },
+  {
+   "feature": "Load harness and CI smoke",
+   "coveredBy": [
+    "PAP-147",
+    "r4/realtime/load-harness"
+   ],
+   "status": "partial",
+   "note": "split child"
+  },
+  {
+   "feature": "Staging load runs, tuning, baseline, nightly regression",
+   "coveredBy": [
+    "PAP-147",
+    "r4/realtime/load-runs-tuning"
+   ],
+   "status": "partial",
+   "note": "split child; second host is soft"
+  },
+  {
+   "feature": "Horizontal scaling of the collab server (Redis fan-out, replicas)",
+   "coveredBy": [
+    "PAP-140",
+    "PAP-147"
+   ],
+   "status": "partial",
+   "note": "behind a flag; break-even documented by the load child"
+  },
+  {
+   "feature": "WebSocket message and document size limits, throttling",
+   "coveredBy": [
+    "PAP-140"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Room-level authorization and read-only connections",
+   "coveredBy": [
+    "PAP-140"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Impersonation and guest identities in rooms",
+   "coveredBy": [
+    "PAP-61",
+    "r4/identity/resource-grants"
+   ],
+   "status": "partial",
+   "note": "amendment on PAP-61; guest presence rule in presence-core"
+  },
+  {
+   "feature": "Realtime test kit (memory provider, chaos, fixtures)",
+   "coveredBy": [
+    "r4/realtime/test-kit"
+   ],
+   "status": "gap",
+   "note": "every consumer project rebuilds scaffolding"
+  },
+  {
+   "feature": "Conformance suite and golden fixtures",
+   "coveredBy": [
+    "PAP-478"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Realtime contract and kernel wiring",
+   "coveredBy": [
+    "PAP-475",
+    "PAP-481"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Sync inspector and dev tooling",
+   "coveredBy": [
+    "PAP-328"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Realtime metrics and dashboards",
+   "coveredBy": [
+    "PAP-140",
+    "PAP-40"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Canvas collaboration overlay",
+   "coveredBy": [
+    "PAP-321"
+   ],
+   "status": "covered",
+   "note": "collab consumes rooms"
+  },
+  {
+   "feature": "Comments live updates",
+   "coveredBy": [
+    "PAP-319"
+   ],
+   "status": "covered",
+   "note": "collab"
+  },
+  {
+   "feature": "Support chat with live sync",
+   "coveredBy": [
+    "PAP-411"
+   ],
+   "status": "covered",
+   "note": "growth"
+  },
+  {
+   "feature": "Cross-device draft autosave for non-shared fields",
+   "coveredBy": [
+    "PAP-142"
+   ],
+   "status": "partial",
+   "note": "local mode only; a `draft:` room convention could add it in v0.2"
+  },
+  {
+   "feature": "Peer-to-peer or WebRTC transport",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "non-goal per project description"
+  },
+  {
+   "feature": "Voice, video or screen share",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "non-goal; follow mode replaces screen share for support"
+  },
+  {
+   "feature": "Sleep, wake and token refresh handling in transports",
+   "coveredBy": [
+    "r4/realtime/connection-status",
+    "PAP-140"
+   ],
+   "status": "partial",
+   "note": "amendment on PAP-140 plus the new hook"
+  },
+  {
+   "feature": "Local data wipe on sign-out and revocation for Yjs stores",
+   "coveredBy": [
+    "r4/data-layer/local-data-protection"
+   ],
+   "status": "covered",
+   "note": "data-layer owns; wipes `y-indexeddb`"
+  },
+  {
+   "feature": "Per-user shapes in the proxy",
+   "coveredBy": [
+    "PAP-270",
+    "r4/realtime/live-events-channel"
+   ],
+   "status": "partial",
+   "note": "amendment on PAP-381 and proxy support"
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/realtime/live-events-channel",
+   "title": "`live_event` table, `publishLiveEvent()`, per-user Electric shape with SSE fallback, `useLiveEvents()` and `useJobProgress()` hooks, TTL job and the `LiveEventKind` registry",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Scale and offline tested",
+   "parent": "PAP-381",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-326",
+    "PAP-270",
+    "PAP-267"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nFirst child of PAP-381 and the part four consumers poll for today: one server-to-client channel for notifications, job and import progress and agent status. Producers write a row, the row streams to the right user through an Electric shape, and when shapes are unavailable an SSE endpoint delivers the same rows, so `useLiveEvents()` has one output regardless of transport. Web Push is the sibling; mobile push lives in app-shell.\n\n**Scope**\n\nIn: Table `live_event (id uuidv7, tenant_id, user_id?, kind, payload jsonb, created_at, expires_at)` with RLS and an index on `(user_id, created_at)`, `publishLiveEvent({ kind, tenantId, userId?, payload })` in `packages/sync/live/`, `LiveEventKind` registry (`notification.created`, `job.progress`, `job.finished`, `agent.status`, `import.progress`), per-user shape `live_events` registered through PAP-326 with `where user_id = <principal>` (proxy support added in PAP-270), `GET /api/live` SSE fallback with `Last-Event-ID`, hooks `useLiveEvents(kinds?)` and `useJobProgress(jobId)`, TTL job `live.prune` (24 h, PAP-43), sink adapter for the outbox dispatcher (`r4/data-layer/events-outbox-dispatcher`), `docs/platform/realtime/push.md` decision matrix (shape, SSE, push).\n\nOut: Web Push, desktop OS notifications and mobile push (siblings), in-app inbox UI (PAP-136), marketing push.\n\n**Spec**\n\n* Delivery to open clients within 2 s through the shape; SSE fallback chosen automatically when the shape subscription fails twice (Firefox private mode, corporate proxies) and produces identical hook output; the transport in use is exposed to `useConnectionStatus()` (`r4/realtime/connection-status`).\n* Payloads under 4 KB and free of PII beyond a title (PII refinement from `r4/data-layer/pii-registry`, soft); larger content is referenced by `EntityRef`.\n* Per-user shapes: the proxy appends `user_id = <principal>` for shapes marked `perUser: true` in the registry, in addition to `tenant_id`; tenant-wide events (`userId` null) are a second shape filtered by audience (`agent.status` for staff only).\n* Bursts: 10,000 events in a second are coalesced per kind per second for `job.progress` and `import.progress` (last value wins); other kinds are never dropped.\n* `useJobProgress(jobId)` returns `{ percent, message, state }` from the latest `job.progress` and `job.finished` events for that job; PAP-43 emits them from `JobContext.progress()`.\n* Prune job deletes expired rows hourly; Electric handles deletes as tombstones so clients drop them.\n\n**Interface contract**\n\nProvides: `publishLiveEvent()`, `useLiveEvents()`, `useJobProgress()`, `LiveEventKind` registry and `defineLiveEventKind()`, route `GET /api/live`, table `live_event`, job `live.prune`, dispatcher sink `live`.\n\nConsumes: Shape registry and hooks (PAP-326), shape proxy with per-user predicate (PAP-270), API and SSE route (PAP-267), jobs and `JobContext.progress()` (PAP-43, soft), outbox dispatcher sink (`r4/data-layer/events-outbox-dispatcher`, soft), notification rows (PAP-136, soft). Consumed by the siblings, PAP-136, PAP-199, PAP-113, PAP-96, PAP-288, `r4/identity/permission-propagation`, `r4/data-layer/local-data-protection`.\n\n**Definition of done**\n\n* `publishLiveEvent` reaches a subscribed client within 2 s via shape and via forced SSE fallback (compose stack with Electric); TTL job deletes expired rows.\n* Import progress bar in PAP-199's UI updates from 0 to 100 without polling (Playwright asserts no repeated `GET` calls); a tenant-wide `agent.status` event is not visible to a customer context.\n* Docs decision matrix; changelog; Linear comment with the recording.\n\n**Test plan**\n\n* Unit: kind registry and payload size guard, coalescing per kind per second, SSE reconnect with `Last-Event-ID`, per-user predicate rendering, transport selection state machine.\n* E2E: two contexts: staff sees `agent.status`, customer does not; progress bar test; SSE forced by blocking the shape route and asserting identical DOM updates.\n\n**Demo**\n\nStart a CSV import and watch the progress bar move without refresh; block `/api/sync/shape` in DevTools, reload and watch the same bar move over SSE. Under two minutes.\n\n**Edge cases**\n\n* User signed in on two devices: both shapes receive the row; the notification inbox (PAP-136) deduplicates by id.\n* Electric restarts mid-stream: handle 409 and resubscribe (PAP-328); SSE reconnects with the last id.\n* Event for a user who lost tenant access: RLS hides it; `permission.changed` triggers resubscribe.\n\n**Dependencies**\n\nBlocked by PAP-326, PAP-270, PAP-267 (hard). Soft: PAP-43, PAP-136, `r4/data-layer/events-outbox-dispatcher`, `r4/data-layer/pii-registry`, `r4/realtime/connection-status`. Blocks the sibling `r4/realtime/web-push`.\n\n**Agent**\n\nBuilder: Nova (CRDT Engineer). Reviewer: Sentinel (Code Reviewer; Security Auditor for the per-user predicate).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/realtime/web-push",
+   "title": "Web Push and desktop notifications: VAPID keys, `push_subscription`, service-worker handler, permission prompt after an explicit action, sender job with 410 pruning and Tauri desktop OS notifications",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Scale and offline tested",
+   "parent": "PAP-381",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "r4/realtime/live-events-channel",
+    "PAP-18"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nSecond child of PAP-381: reach people when the app is closed. Notifications marked for the push channel are sent to browser subscriptions through Web Push and to Tauri desktop through OS notifications, with the permission prompt shown only after the user asks for it and dead subscriptions pruned on the first 410.\n\n**Scope**\n\nIn: Table `push_subscription (user_id, endpoint, keys jsonb, ua, created_at, revoked_at)`, VAPID key pair through PAP-17 env (`VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`), oRPC `push.subscribe|unsubscribe|test`, service-worker `push` and `notificationclick` handlers in PAP-18's worker (deep link to the notification target), `EnableNotificationsButton` and preference wiring in PAP-136's preferences page (soft: portal notifications page from `r4/identity/portal-account-pages`), sender job `push.deliver` (PAP-43) consuming `notification.created` events with `channels.push`, `PushProvider` interface with `WebPushProvider` (`web-push` library), Tauri desktop path through `tauri-plugin-notification` (PAP-255) when the app is running, docs section.\n\nOut: APNs and FCM device registration and adapters (`r4/app-shell/native-push-registration`, deferred, which implements this issue's `PushProvider`), notification content and kinds (PAP-136), marketing push.\n\n**Spec**\n\n* Prompt only after clicking Enable notifications; the button explains what will be sent; denied permission is remembered and the button shows how to re-enable in browser settings.\n* Push bodies contain title, body and a deep link only, never PII beyond the title (same rule as the live channel); payload under 4 KB; `urgency` from the notification kind.\n* Delivery: within 30 s of the notification row; retry 3 times with backoff on 5xx; 404 or 410 marks the subscription revoked immediately; `PushProvider.send(device, message)` is the seam `r4/app-shell/native-push-registration` plugs `ApnsProvider` and `FcmProvider` into.\n* Tauri desktop: when the desktop app is running it receives the event over the live channel and shows an OS notification through the plugin; no push service involved; clicking focuses the window and navigates.\n* Test send `push.test` delivers a sample to the caller's own subscriptions for the preferences page.\n* Subscriptions are per user per browser; sign-out unsubscribes the current browser; `session.revoked` (`r4/identity/sessions-stepup`) revokes the matching subscription by user agent.\n\n**Interface contract**\n\nProvides: Table `push_subscription`, procedures `push.*`, `PushProvider` interface and `WebPushProvider`, job `push.deliver`, service-worker handlers, `EnableNotificationsButton`, env names above.\n\nConsumes: Live channel and kind registry (sibling), service worker (PAP-18), env schema (PAP-17), jobs (PAP-43), notification rows and preferences (PAP-136, soft), desktop plugin (PAP-255, soft), portal preferences page (`r4/identity/portal-account-pages`, soft), sessions (`r4/identity/sessions-stepup`, soft). Consumed by PAP-136, PAP-94 decision cards, PAP-88 digests.\n\n**Definition of done**\n\n* A notification created while the tab is closed arrives as a Web Push on Chrome desktop and Android Chrome; clicking it lands on the thread (recording).\n* 410 from the mock push service prunes the subscription after one failure; permission prompt appears only after clicking Enable (Playwright).\n* Tauri desktop shows an OS notification while running; docs; changelog; Linear comment with the video.\n\n**Test plan**\n\n* Unit: payload size guard and PII rule, retry classification (404, 410, 5xx), subscription dedupe by endpoint, urgency mapping.\n* E2E: Playwright with a `web-push` test server: subscribe, trigger a mention from another account, assert delivery and click navigation; 410 path.\n\n**Demo**\n\nEnable notifications on the portal, close the tab, trigger a mention from another account, click the desktop notification and land on the thread. Under two minutes.\n\n**Edge cases**\n\n* Browser revokes permission later: next send returns 410; subscription revoked and the button reappears.\n* Private window: subscription not persisted; button explains.\n* Ten subscriptions for one user: each gets the push; the inbox marks read across devices via the live channel.\n\n**Dependencies**\n\nBlocked by `r4/realtime/live-events-channel` and PAP-18 (hard). Soft: PAP-17, PAP-43, PAP-136, PAP-255, `r4/identity/portal-account-pages`, `r4/identity/sessions-stepup`. Consumed by `r4/app-shell/native-push-registration` (mobile adapters, deferred).\n\n**Agent**\n\nBuilder: Nova (CRDT Engineer) with Forge (Ops Runner) for keys. Reviewer: Sentinel (Security Auditor for VAPID handling).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/realtime/load-harness",
+   "title": "Collab load harness: k6 `xk6-websockets` connection load, Node pool of Yjs-aware clients, five scenario definitions, token-set correctness checker and the 30-second CI smoke",
+   "type": "Review",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Scale and offline tested",
+   "parent": "PAP-147",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-140",
+    "PAP-326"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Review M\n\n**Goal**\n\nFirst half of PAP-147: the instrument. A reproducible harness that can open thousands of authenticated WebSocket and Electric connections, type real Yjs edits, and prove afterwards that no update was lost, packaged so it runs scaled down on every PR and scaled up on staging in the sibling.\n\n**Scope**\n\nIn: `apps/collab-server/load/` with k6 plus `xk6-websockets` for connection and awareness load, a Node 22 worker pool of `@hocuspocus/provider` clients over `ws` for Yjs edits, scenario files (a) one room 500 clients typing, (b) 10,000 rooms x 2 clients, (c) reconnect storm of 2,000 clients, (d) 1,000 awareness-only clients at 20 Hz, (e) Electric 1,000 clients on a 100k-row `records` shape at 50 writes/s; correctness checker asserting every `${clientId}:${seq}` token appears exactly once after quiescence; `pnpm load:collab --scenario --target --duration --clients --out`; JSON summary and HTML report; CI smoke job running (a) at 20 clients for 30 s on the compose stack; generator CPU guard refusing above 70 percent; `loadtest` tenant seeding and truncation.\n\nOut: Staging runs, tuning, baseline, dashboard and nightly job (sibling `r4/realtime/load-runs-tuning`), client performance (PAP-87), API budgets (PAP-242).\n\n**Spec**\n\n* Clients authenticate with a `loadtest`-scoped agent key (`r4/identity/agent-keys`, soft: dev token until it lands) in tenant `loadtest`; the harness refuses to start when the tenant has rows from a previous run.\n* Metrics collected per scenario: propagation p50/p95/max (server-echoed timestamps, no client clocks), connection success rate, dropped updates, RSS and CPU from `/metrics` (PAP-140) and `pg_stat_statements`, generator CPU.\n* Scenario (e) uses PAP-326's shape registry against the `records` table with a bounding predicate; writes go through the API with `Idempotency-Key`.\n* Report schema `{ scenario, metric, p50, p95, max, unit, runs }[]` compatible with PAP-31's `summary.json` so sync and collab numbers sit in one table.\n* Smoke job in Gate 1 for changes under `apps/collab-server` and `packages/sync`: proves auth, edits, correctness and cleanup in under 2 minutes.\n\n**Interface contract**\n\nProvides: Harness CLI, scenario files, correctness checker, report schema, CI smoke workflow step, `loadtest` tenant seed.\n\nConsumes: Collab server metrics and admin route (PAP-140), live record shapes (PAP-326), Electric proxy (PAP-270), agent keys (`r4/identity/agent-keys`, soft), compose stack (PAP-42), test-mode seed (PAP-240, soft). Consumed by the sibling, PAP-253 nightly staging, `r4/realtime/test-kit` (shares client pool).\n\n**Definition of done**\n\n* All five scenarios run end to end against the compose stack at reduced scale with the correctness checker green; CI smoke green on a PR touching the collab server.\n* Generator guard proven by an artificial CPU load; dirty `loadtest` tenant refused; report JSON validates against the schema.\n* `load/README.md`; changelog; Linear comment with a sample report.\n\n**Test plan**\n\n* Unit: token-set checker (missing, duplicated, all present), report aggregation and percentile math, guard thresholds, scenario config validation.\n* E2E: the CI smoke itself; a 2-minute local run of (b) at 200 rooms producing the HTML report.\n\n**Demo**\n\nRun `pnpm load:collab --scenario a --duration 1m --clients 50` against the compose stack, open the HTML report and read propagation p95 and the correctness line. Under two minutes.\n\n**Edge cases**\n\n* Client clock drift: server-echoed timestamps only.\n* WebSocket limit on the generator host: `ulimit` check and a clear error before starting.\n* Electric shape refuses without a bounding predicate: scenario (e) seeds a bounded dataset.\n\n**Dependencies**\n\nBlocked by PAP-140 and PAP-326 (hard). Soft: PAP-270, PAP-42, PAP-240, `r4/identity/agent-keys`. Blocks the sibling `r4/realtime/load-runs-tuning`.\n\n**Agent**\n\nBuilder: Sentinel (Edge Case Hunter) writes the harness with Nova on client semantics. Reviewer: Sentinel (Code Reviewer; Nova signs off scenario realism).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/realtime/load-runs-tuning",
+   "title": "Staging load runs against the five scenarios, tuning knobs with before and after numbers, `load/baseline.json`, the Grafana collab-load dashboard and the nightly regression job",
+   "type": "Review",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Scale and offline tested",
+   "parent": "PAP-147",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "r4/realtime/load-harness",
+    "PAP-40"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Review M\n\n**Goal**\n\nSecond half of PAP-147: the numbers. Run the harness against staging with the generator on a second host, tune Hocuspocus persistence, compaction and Caddy until the targets pass or an ADR records the accepted limit, commit the baseline, and run nightly so a regression over 20 percent fails before a tenant notices.\n\n**Scope**\n\nIn: Runs of scenarios (a) to (e) against `wss://collab-staging.<domain>` with the generator on the PAP-50 second runner host (fallback: 50 percent scale from the VPS with results marked partial), tuning log per commit (`debounce`, `maxDebounce`, compaction threshold, `extension-throttle`, Caddy idle timeout, Postgres `work_mem` for `yjs_updates`, `extension-redis` break-even), `load/baseline.json`, `load/REPORT.md` with the scaling formula (rooms per GB, connections per vCPU), Grafana dashboard `ops/grafana/collab-load.json`, nightly workflow `.forgejo/workflows/collab-load.yml` posting `Load <date>: <pass|fail> <link>` through PAP-97, ADR for any accepted limit (PAP-130), `docs/platform/realtime/capacity.md`.\n\nOut: The harness (sibling), multi-region, CDN, Electric service scaling beyond one instance (documented as the next step).\n\n**Spec**\n\n* Targets: p95 propagation under 250 ms (a) and 500 ms (b); RSS under 4 GB during (b); zero dropped updates; storm (c) recovered under 60 s; (d) awareness CPU under 50 percent; (e) shape lag p95 under 500 ms.\n* Each tuning change is one commit with the before and after table; the final configuration lands in `ops/compose/collab-server.yml` and PAP-140's runbook.\n* Regression rule: any metric over 20 percent worse than baseline fails the nightly job and opens a Linear comment on this issue; baseline updates require a PR.\n* Ops checks during (b): Caddy idle timeout survives 10 minutes of quiet; `yjs_updates` stays under 1M rows; vacuum observed; replication slot lag flat.\n* Redis fan-out evaluated single-instance: documented break-even connection count for enabling `extension-redis` and a second replica.\n\n**Interface contract**\n\nProvides: `load/baseline.json`, `load/REPORT.md`, dashboard JSON, nightly workflow and comment format, capacity doc, tuned server config, ADR if needed.\n\nConsumes: Harness (sibling), Grafana and Prometheus (PAP-40), second generator host (PAP-50, soft), Linear comment helper (PAP-97, soft), ADR log (PAP-130, soft), staging deploy of the collab server (PAP-140, PAP-26). Consumed by PAP-88 release digest, PAP-242, PAP-253.\n\n**Definition of done**\n\n* Five scenarios run against staging with results committed under `load/results/<date>/`; targets met or an ADR records the accepted limit with a follow-up issue.\n* Nightly job green three consecutive nights with the summary comment; dashboard screenshot at 1280 and 1920 on the PR; baseline committed.\n* Capacity doc with the scaling formula; changelog; Linear comment with the report link.\n\n**Test plan**\n\n* Unit: baseline comparison flags a 25 percent regression and passes 15 percent; report renderer; scaling formula on fixture numbers.\n* E2E: the staging runs themselves; the nightly workflow executed once by hand with a forced regression to prove the failure path.\n\n**Demo**\n\nOpen the latest `load/results/<date>/report.html` and the Grafana collab-load dashboard for that window, then read the capacity doc's formula and plug in 200 tenants. Under two minutes.\n\n**Edge cases**\n\n* Generator saturates first: split across two hosts, report generator p95 alongside server p95.\n* Second host unavailable before 10-01: (a) and (c) run at 50 percent and are marked partial in the baseline; the full run is a follow-up.\n* Staging shared with other tests at night: the workflow takes a lock (PAP-253) and refuses to overlap.\n\n**Dependencies**\n\nBlocked by `r4/realtime/load-harness` and PAP-40 (hard). Soft: PAP-50, PAP-97, PAP-130, PAP-26, PAP-253. Consumed by PAP-88, PAP-242.\n\n**Agent**\n\nBuilder: Forge (Ops Runner) applies tuning; Sentinel (Edge Case Hunter) runs scenarios. Reviewer: Sentinel (Edge Case Hunter; Nova signs off on limits and the ADR).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/realtime/editor-core",
+   "title": "`RichTextEditor` core: Tiptap 3 with Yjs collaboration and carets, room and local modes, `richTextSchema`, `renderRichText`, `richTextToPlain`, undo manager and read-only binding",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Yjs server and presence",
+   "parent": "PAP-142",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-127",
+    "PAP-140"
+   ],
+   "blocks": [
+    "PAP-131",
+    "PAP-317",
+    "PAP-379"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-142 and the link on the zero-slack chain 140 → 142 → 131: the editor that comments, docs, issue descriptions and notes fields bind to. Tiptap on a Yjs fragment when a room is given, a controlled JSON value otherwise, one Zod schema for the stored JSON, a sanitised server renderer and a plain-text projection for indexing. Toolbar, mentions, markdown and uploads are the sibling, so comments can start against this core as soon as it merges.\n\n**Scope**\n\nIn: `packages/collab/src/editor/{RichTextEditor,schema,render,plain,undo}.ts(x)` on `@tiptap/react` 3.x with starter kit, `@tiptap/extension-collaboration` and `-collaboration-caret`, placeholder, link, task list, table and `lowlight` code block extensions (no toolbar yet); props `room? value? onChange? readOnly placeholder variant: 'full'|'comment'|'inline'`; `richTextSchema` (Zod) in `packages/core` for `jsonb` columns; `renderRichText(json) -> string` with `sanitize-html`; `richTextToPlain(json)`; `y-undo-manager` scoped to `trackedOrigins` bound to `edit.undo|redo`; `readOnly` following `connection.readOnly` with a 'View only' badge; lazy-loaded collaborative chunk; Storybook local, collaborative (mock provider) and read-only stories.\n\nOut: Toolbar, bubble menu, `editor.*` commands, mentions, markdown paste and export, image upload, Storybook for the comment variant (sibling `r4/realtime/editor-features`); anchoring and threads (PAP-131); version history (`r4/realtime/doc-history`).\n\n**Spec**\n\n* `Y.XmlFragment` named `default`; other fragments may share the room; provider from `createDocProvider` (PAP-140); room switch while mounted recreates the provider without a stale flash.\n* Caret colours and names from PAP-141's `presenceColor` and awareness (soft: hash fallback); dashed caret for `principalType === 'agent'`.\n* `richTextSchema` accepts every node and mark the extensions emit and rejects unknown nodes; `renderRichText` strips `<script>`, event handlers and `javascript:` links and rewrites internal entity links through `formatEntityKey` (PAP-302).\n* `richTextToPlain` produces the text PAP-131 stores in `body_text` and PAP-138 indexes; table cells joined by tabs, list items by newlines.\n* Accessibility: `role=\"textbox\"`, `aria-multiline`, label from props; collaborative chunk under 250 KB gzipped; a 100k-character document types at 60 fps (keydown to paint under 16 ms p95 via CDP).\n\n**Interface contract**\n\nProvides: `RichTextEditor` (core props), `richTextSchema`, `RichTextJson`, `renderRichText`, `richTextToPlain`, `useEditorUndo()`, command ids `edit.undo|redo`, mock provider for stories.\n\nConsumes: Library decision (PAP-127), provider and room grammar (PAP-140), presence colours (PAP-141, soft), `formatEntityKey` (PAP-302), `connection.readOnly` semantics (PAP-140), `defineCommand` for undo (PAP-151, soft). Consumed by PAP-131, PAP-317, PAP-379, PAP-164 rich text field, PAP-100, PAP-159, the sibling.\n\n**Definition of done**\n\n* Two browsers converge with visible carets within 1 s; offline edits merge on reconnect (Playwright, two contexts).\n* `richTextSchema` accepts every story and rejects unknown nodes; `renderRichText` strips script and `javascript:` fixtures; `richTextToPlain` snapshot.\n* Performance: 100k-character fixture under 16 ms p95 keydown to paint; stories at 320, 768, 1280 with axe passing; `docs/platform/realtime/editor.md` core section; changelog; Linear comment with a 20-second two-cursor video.\n\n**Test plan**\n\n* Unit: schema accept and reject fixtures, renderer sanitisation, plain projection, undo scoping to own origin, mode switching between room and local.\n* E2E: two contexts type concurrently and converge; context A offline then reconnect merges; IME composition via `keyboard.insertText` keeps text intact; read-only user sees the badge and cannot type.\n\n**Demo**\n\nOpen a doc in two browsers, type in both and watch carets; toggle one user to view-only and see the badge; press undo and only your own edits revert. Under two minutes.\n\n**Edge cases**\n\n* Read-only user types: no-op, one toast per session.\n* Room switch while mounted: provider recreated, no stale flash.\n* Paste of a 5 MB HTML fixture: truncated with a toast (sibling refines the markdown path).\n* Provider not yet connected: local edits buffered by Yjs and merged on connect.\n\n**Dependencies**\n\nBlocked by PAP-127 and PAP-140 (hard). Soft: PAP-141, PAP-302, PAP-151. Blocks PAP-131, PAP-317, PAP-379 and the sibling `r4/realtime/editor-features`.\n\n**Agent**\n\nBuilder: Nova (CRDT Engineer). Reviewer: Sentinel (Code Reviewer; Security Auditor for the renderer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/realtime/editor-features",
+   "title": "Editor features: toolbar and bubble menu on design-system primitives, `editor.*` commands with shortcuts, mentions of users, agents and entities through `MentionSource`, markdown round-trip, image upload and the comment-variant stories",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Yjs server and presence",
+   "parent": "PAP-142",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "r4/realtime/editor-core"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nSecond half of PAP-142: what makes the editor pleasant. A toolbar and bubble menu built from the design system, every action registered as a command with a shortcut, `@` and `#` mentions of people, agents and entities, markdown in and out, and images uploading through the file service, with the `comment` and `inline` variants ready for PAP-131.\n\n**Scope**\n\nIn: `packages/collab/src/editor/{Toolbar,BubbleMenu,mentions,markdown,images}.tsx`, commands `editor.bold|italic|link|heading|list|task|table|code|image|mention` registered with PAP-151 (soft: local registry until it lands), roving tabindex on the toolbar (PAP-152), `MentionSource { search(q, kinds) -> Mention[] }` with `Mention { kind: user|agent|entity, id, label, avatarUrl? }` rendering `ActorBadge` for agents (PAP-60, soft), `markdownToRichText()` and `richTextToMarkdown()` via `prosemirror-markdown`, image node uploading through `uploadFile` (PAP-37) with a placeholder and retry, Storybook `comment` and `inline` variants plus dense and RTL, docs section.\n\nOut: Core binding and schema (sibling), anchoring and threads (PAP-131), AI assistance, version history.\n\n**Spec**\n\n* Toolbar uses PAP-236 to PAP-238 primitives (`Button`, `Menu`, `Tooltip`, `Dialog`); hidden in `inline` variant; bubble menu on selection in all variants; every action appears in the command palette with its shortcut.\n* Mentions: `@` opens the people and agents list, `#` the entity list from the dataset registry (PAP-161, soft: users only); a mentioned user who loses access renders as plain text with a tooltip; mentions serialise as `{ type: 'mention', attrs: { kind, id, label } }` and `richTextToPlain` renders `@label`.\n* Markdown: paste detection converts lists, headings, code and links; export round-trips the fixtures in the unit suite; unsupported nodes degrade to text.\n* Images: paste or drop uploads through PAP-37 with progress, a placeholder node with retry on failure, and alt text prompt for accessibility; SVG refused (PAP-37 sandbox rule).\n* Comment variant: single toolbar row, submit on `mod+enter`, 10,000 character cap with a counter; inline variant: no chrome, bubble menu only.\n\n**Interface contract**\n\nProvides: `Toolbar`, `BubbleMenu`, command ids `editor.*`, `MentionSource` interface and `Mention` type, `markdownToRichText`, `richTextToMarkdown`, image node, variant stories.\n\nConsumes: Editor core (sibling), primitives (PAP-236 to PAP-238), command registry (PAP-151, soft), roving tabindex (PAP-152, soft), file uploads (PAP-37), `ActorBadge` (PAP-60, soft), dataset registry for entity mentions (PAP-161, soft). Consumed by PAP-131, PAP-318, PAP-379, PAP-411.\n\n**Definition of done**\n\n* Toolbar actions appear in the palette with shortcuts; mention of a user and an agent inserts and serialises; markdown paste converts a list (Playwright).\n* Image upload with a forced failure shows the placeholder and retries successfully; markdown round-trip fixtures pass.\n* Stories for four variants at 320, 768, 1280 with axe passing; docs; changelog; Linear comment with the Storybook link.\n\n**Test plan**\n\n* Unit: markdown round-trip fixtures, mention insertion and serialisation, command registration table, image placeholder state machine, character cap.\n* E2E: Playwright: run Bold from the palette, insert a mention, paste markdown, drop an image; RTL story capture.\n\n**Demo**\n\nPress `mod+k`, run Bold, type `@` and pick Forge (agent badge), paste a markdown list and see it convert, drop an image and watch it upload. Under two minutes.\n\n**Edge cases**\n\n* Mention source slow: list shows a skeleton and cancels stale queries.\n* Very long link pasted: rendered as a link, not converted to an embed.\n* Toolbar in a 320 px comment box: overflow menu.\n\n**Dependencies**\n\nBlocked by `r4/realtime/editor-core` (hard). Soft: PAP-236 to PAP-238, PAP-151, PAP-152, PAP-37, PAP-60, PAP-161. Consumed by PAP-131, PAP-318, PAP-379, PAP-411.\n\n**Agent**\n\nBuilder: Nova (CRDT Engineer); Iris reviews toolbar styling. Reviewer: Sentinel (Visual Inspector; Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/realtime/presence-core",
+   "title": "`PresenceProvider` on ephemeral page rooms, the awareness payload schema, `usePresence`, `useMyPresence` and `useViewers`, `presence.view` policy filtering on the server and the page-spec flag",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Yjs server and presence",
+   "parent": "PAP-141",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-140"
+   ],
+   "blocks": [
+    "PAP-146",
+    "PAP-149",
+    "PAP-481"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build M\n\n**Goal**\n\nFirst half of PAP-141: the presence data path with its privacy rule. Every page joins an ephemeral room, publishes a validated awareness payload, and reads who else is here, while the collab server ensures a customer never receives another customer's state. Components are the sibling; agents (PAP-146) and follow mode (PAP-149) extend this payload.\n\n**Scope**\n\nIn: `packages/collab/src/presence/{provider,schema,hooks}.ts(x)`: `PresenceProvider` joining `page:<tenantId>:<routeId>` (`ephemeral: true`, PAP-140) and optional entity rooms; Zod `PresenceState` `{ principalId, principalType: 'human'|'agent', name, avatarUrl?, color, cursor?: { x, y, surfaceId }, selection?: { entityId, fieldId? } | { from, to }, viewport?, focusedRoute, lastActive, idle }`; hooks `usePresence()`, `useMyPresence()`, `useViewers(entityId)`; throttle 50 ms for cursors, immediate for selection and route; idle after 60 s or hidden tab; dedupe of one principal across windows (`x2` count, PAP-145 aggregates); server-side awareness filtering by `presence.view` policy (PAP-227) implemented as a Hocuspocus extension that rewrites awareness updates per recipient, or audience-partitioned rooms `page:<tenant>:<route>:<audienceClass>` when per-recipient filtering proves too costly (decision recorded in the doc); page-spec flag `realtime.presence: true|false` (PAP-114) default true for staff surfaces, false for customer surfaces; DOM attribute `data-presence-surface`.\n\nOut: Avatars, cursors, highlights and badges (sibling `r4/realtime/presence-components`), agent visuals (PAP-146), follow mode (PAP-149), typing indicators (`r4/realtime/ephemeral-signals`).\n\n**Spec**\n\n* Privacy matrix: customers see staff, assigned agents and members of their own organisation; staff see the tenant; anonymous guests (`r4/identity/resource-grants`) see nobody and appear as 'Guest' to staff; enforced on the server, never only in the client.\n* Hocuspocus awareness broadcasts to every connection in a room, so filtering needs either the extension (`onAwarenessUpdate` hook rewriting the update per connection using `context.principal`) or partitioned rooms; this issue benchmarks both on 200 connections and picks one; the choice is an ADR note.\n* Coordinates are relative to the nearest `[data-presence-surface]`; payload validated on send and on receive (invalid remote state ignored and counted).\n* Same principal in several windows: PAP-145's window bus elects one publisher; the provider exposes `windowCount` for the `x2` badge.\n* Disconnect: peer dims after 5 s and is removed after 30 s (awareness timeout); reconnect restores state without a flash.\n* Presence never carries emails, only display names from PAP-55.\n\n**Interface contract**\n\nProvides: `PresenceProvider`, `PresenceState` schema (extended by PAP-146 with `agent?` and PAP-149 with `FollowState`), hooks above, `presenceColor(principalId)`, attribute `data-presence-surface`, server filtering extension or room partition rule, spec flag.\n\nConsumes: Ephemeral rooms and awareness (PAP-140), `can('presence.view')` (PAP-227, soft: allow-all in dev), display names (PAP-55), page flag (PAP-114), window bus (PAP-145, soft), tokens for colours (PAP-66). Consumed by the sibling, PAP-146, PAP-149, PAP-165, PAP-132, PAP-142, PAP-411, PAP-481.\n\n**Definition of done**\n\n* Two browsers on one page see each other's state within 1 s and cursor movement under 100 ms on localhost (Playwright).\n* Privacy: customer context never receives another customer's state; staff sees both; guest sees nobody (integration through `callAs` contexts against the compose collab server).\n* Benchmark of filtering versus partitioning at 200 connections committed with the decision; `docs/platform/realtime/presence.md` with the payload schema and flag; changelog; Linear comment.\n\n**Test plan**\n\n* Unit: payload validation, colour hashing stability across 1,000 ids, idle transitions with fake timers, dedupe across windows, privacy matrix decision table.\n* E2E: two contexts at 375, 1024 and 1920: join, move, idle, disconnect; customer versus staff visibility.\n\n**Demo**\n\nOpen the records page in two browsers with different users and watch the raw presence list update in the dev overlay; sign the second in as a customer and see the staff entry but not another customer. Under two minutes.\n\n**Edge cases**\n\n* 50 viewers: hooks return all; the sibling truncates the display.\n* Reduced motion: no effect on the data path.\n* Route with `realtime.presence: false`: provider mounts nothing; hooks return empty arrays.\n\n**Dependencies**\n\nBlocked by PAP-140 (hard). Soft: PAP-227, PAP-55, PAP-114, PAP-145, PAP-66. Blocks PAP-146, PAP-149, PAP-481 and the sibling `r4/realtime/presence-components`.\n\n**Agent**\n\nBuilder: Nova (CRDT Engineer). Reviewer: Sentinel (Security Auditor for the privacy path; Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/realtime/presence-components",
+   "title": "`PresenceAvatars`, `LiveCursor`, `SelectionHighlight` and `ViewersBadge` on `AvatarStack` with colour tokens, idle and reduced-motion rules, accessibility labels and stories in three themes",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Yjs server and presence",
+   "parent": "PAP-141",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "r4/realtime/presence-core"
+   ],
+   "blocks": [
+    "PAP-146"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nSecond half of PAP-141: what people see. Four components in `packages/ui` render the presence data from the sibling on any page, with the overflow, truncation, idle and motion rules PAP-141 specifies, so grids, docs, canvases and the support chat all show presence the same way.\n\n**Scope**\n\nIn: `packages/ui/src/presence/{PresenceAvatars,LiveCursor,SelectionHighlight,ViewersBadge}.tsx` on PAP-71 `AvatarStack` and `Badge`; 12 accessible colour tokens from PAP-66 chosen by `presenceColor`; `PresenceAvatars` shows 5 plus overflow with a tooltip listing 20; `LiveCursor` fades after 4 s, hidden on touch, label truncated at 24 characters; `SelectionHighlight` outlines rows or ranges in the peer's colour; `ViewersBadge` for entity rooms; idle peers dimmed; reduced motion removes animation and pulse; live region announcing joins at most once per 10 s; Storybook stories in light, dark and high contrast; docs section.\n\nOut: Data path and privacy (sibling), agent avatar and activity chip (PAP-146), follow bar (PAP-149).\n\n**Spec**\n\n* `PresenceAvatars peers max=5` with `aria-label` 'Ada, Ben and 3 others are here'; overflow tooltip lists up to 20 names; `x2` badge for a peer with several windows.\n* `LiveCursor` positions relative to the surface via `data-presence-surface`; hidden when the peer's `cursor` is null or the device is touch; 50 ms transition, none under reduced motion.\n* `SelectionHighlight` accepts `{ entityId, fieldId? }` or `{ from, to }` and renders an outline with the peer's colour token and a name tag on hover; multiple peers on one cell stack tags.\n* Colour tokens meet 3:1 against both themes; the token set is documented for PAP-146's agent palette.\n\n**Interface contract**\n\nProvides: Four components with props documented, `presenceTokens` list, stories.\n\nConsumes: Presence hooks and `presenceColor` (sibling), `AvatarStack` and `Badge` (PAP-71), tokens (PAP-66), reduced-motion hook (PAP-72, soft). Consumed by PAP-146, PAP-165, PAP-132, PAP-142, PAP-411.\n\n**Definition of done**\n\n* Stories for the four components in three themes; axe clean; reduced-motion story has no animation; screenshots at 375, 1024 and 1920.\n* 50-viewer fixture shows 5 plus `+45` and the tooltip lists 20; long names truncate; docs; changelog; Linear comment with the Storybook link.\n\n**Test plan**\n\n* Unit: overflow text, truncation, colour token selection, touch detection, announcement throttling.\n* E2E: Playwright two contexts on the records page: avatars, cursor and selection outline render; disconnect dims then removes.\n\n**Demo**\n\nMove the mouse in one browser and watch the labelled cursor in the other; select a row and see the outline; hover the avatar stack to read the names. Under two minutes.\n\n**Edge cases**\n\n* Scrolled container: surface-relative coordinates keep cursors aligned.\n* Peer without avatar: initials in the peer colour.\n* High-contrast theme: outlines use the theme's focus colour with the peer colour as a dot.\n\n**Dependencies**\n\nBlocked by `r4/realtime/presence-core` (hard). Soft: PAP-71, PAP-66, PAP-72. Blocks PAP-146.\n\n**Agent**\n\nBuilder: Nova (CRDT Engineer); Iris (Component Crafter) pairs on components. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/realtime/doc-history",
+   "title": "Yjs document history: periodic and named snapshots, a version list with authors derived from the updates log, restore as a new update, rich-text diff rendering and retention",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Record sync and conflict UX",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-28",
+   "blockedBy": [
+    "PAP-140"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Build M\n\n**Goal**\n\nEvery collaborative product ships version history (Google Docs, Notion, Figma, Liveblocks) and nothing here owns it: PAP-140 keeps an append-only `yjs_updates` log and compacts it, PAP-379 promises `docs.versions.list|restore` for tenant docs, PAP-321 and PAP-132 want 'reset to generated layout'. This gives the realtime module one history primitive that every Yjs consumer reuses instead of reading raw updates.\n\n**Scope**\n\nIn: Table `yjs_snapshot (room, id uuidv7, kind: auto|named, name?, created_by, created_at, snapshot bytea, state_vector bytea, size_bytes)`; server: auto snapshot every 500 updates or 30 minutes of edits by a new author set (piggybacks on PAP-140 compaction), `POST /rooms/:room/snapshots` for named versions; `docs/versions` procedures `history.list(room)`, `history.get(id)`, `history.restore(id)` (applies the diff as a new update by the restoring principal, never rewrites history), `history.diff(a, b)` for text fragments; authors per version from `yjs_updates.principal_id` between snapshots (column added to the updates log); client `useDocHistory(room)` and `<VersionList/>`, rich-text diff renderer (`renderRichTextDiff`) built on the editor core; retention: auto snapshots 30 days, named forever, documents in purged tenants deleted with them; `docs/platform/realtime/history.md`.\n\nOut: Docs shell UI placement (PAP-128 History pane, PAP-379 consumes), canvas visual diff (PAP-321 uses the API only), record field history (PAP-333, audit based).\n\n**Spec**\n\n* Snapshots use `Y.snapshot` with `gc: false` on documents that enable history (room option `history: true`, default for `doc:` and `canvas:` rooms, off for `page:` ephemeral rooms); size cap shares PAP-140's 20 MB rule.\n* `restore` computes the target state, applies `Y.encodeStateAsUpdate` from the snapshot onto the live doc as a normal transaction with origin `{ restoreOf: id, principalId }`, so undo, presence and audit all see a regular edit; an audit event `doc.restored` is written (PAP-38).\n* Authors: `yjs_updates` gains `principal_id` and `origin jsonb`; the version list groups consecutive updates by author set and time gap (10 minutes); agents appear with `ActorBadge` (PAP-60).\n* Diff: text-level diff of `richTextToPlain` blocks with inline word diff, rendered read-only in the editor core with insert and delete marks; canvas and other fragments return a structural summary (`nodesAdded|Removed|Changed`).\n* Permissions: `history.list|get` require `document.read`, `restore` requires `document.write`; guests never restore; `permission.changed` re-evaluates (`r4/identity/permission-propagation`, soft).\n\n**Interface contract**\n\nProvides: Table `yjs_snapshot`, procedures `history.*`, room option `history`, `useDocHistory`, `<VersionList/>`, `renderRichTextDiff`, event `doc.restored`, `principal_id` on `yjs_updates`.\n\nConsumes: Server persistence, compaction and admin routes (PAP-140), editor core for diff rendering (`r4/realtime/editor-core`, soft), `can()` (PAP-227), audit (PAP-38), `ActorBadge` (PAP-60, soft), retention (`r4/data-layer/retention-jobs`, soft), tenant purge (`r4/data-layer/tenant-purge`, soft). Consumed by PAP-379, PAP-128, PAP-321, PAP-132, PAP-134, PAP-142.\n\n**Definition of done**\n\n* Edit a doc in two browsers, create a named version, keep editing, restore the version: both browsers show the restored text, undo reverts the restore, the version list shows both authors and the restore entry (Playwright).\n* Auto snapshot after 500 updates proven in the integration suite; diff between two versions renders inserts and deletes; restore refused for `document.read` only.\n* Retention job removes auto snapshots older than 30 days; docs; changelog; Linear comment with the video.\n\n**Test plan**\n\n* Unit: author grouping algorithm, snapshot cadence triggers, diff renderer on fixtures, permission matrix for the three procedures.\n* E2E: the restore scenario above; a 19 MB document snapshot within the cap; purge deletes snapshots with the tenant.\n\n**Demo**\n\nOpen a doc, type, save 'Draft 1', type more, open History, compare Draft 1 with now, restore it and press undo. Under two minutes.\n\n**Edge cases**\n\n* Document created before `history: true` was enabled: history starts at the first snapshot; the list says so.\n* Restore while another user is typing: their edits merge on top; the banner (`r4/realtime/conflict-ux-impl`) attributes the change.\n* Snapshot storage growth: size metric per room exported for PAP-40; alert above 200 MB per tenant.\n\n**Dependencies**\n\nBlocked by PAP-140 (hard). Soft: `r4/realtime/editor-core`, PAP-227, PAP-38, PAP-60, `r4/data-layer/retention-jobs`, `r4/data-layer/tenant-purge`, `r4/identity/permission-propagation`. Consumed by PAP-379, PAP-128, PAP-321, PAP-132, PAP-134.\n\n**Agent**\n\nBuilder: Nova (CRDT Engineer). Reviewer: Sentinel (Code Reviewer; Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/realtime/conflict-ux-impl",
+   "title": "Implement the conflict UX: `useConflicts()` on reconciler events, `ConflictBanner`, `StaleFieldIndicator`, `RemoteChangeFlash`, `PendingWriteBadge` and `FailedWriteDialog` with keep-mine, use-theirs, compare and `edit.undoRemote`",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Record sync and conflict UX",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-28",
+   "blockedBy": [
+    "PAP-144",
+    "PAP-327"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nPAP-144 is a spec with static mocks and says 'follow-up issues filed in tables, realtime and spec-builder'; none exists. PAP-148 consumes `PendingWriteBadge` and `FailedWriteDialog` definitions, PAP-165 and PAP-342 expect a banner when a cell changes under an edit, PAP-333 needs field attribution. This builds the five components against the real `sync.conflict` and `sync.remoteChange` events from PAP-327 and wires the three resolutions.\n\n**Scope**\n\nIn: `packages/collab/src/conflicts/{useConflicts,ConflictBanner,StaleFieldIndicator,RemoteChangeFlash,PendingWriteBadge,FailedWriteDialog}.tsx` implementing the PAP-144 interfaces and spec IDs (`ui.conflictBanner` and friends registered in PAP-74); `useConflicts(recordId?)` subscribing to the reconciler event target (PAP-327) and the outbox status (PAP-148, soft); resolutions: keep mine (rewrite my value as a new write with `expect` cleared), use theirs (discard local, apply remote), compare (side-by-side dialog with field-level pick); command `edit.undoRemote` (PAP-151) writing the previous value as a new write; `resolutionPolicy(fieldType)` consumed for auto-merge versus banner; copy from `packages/collab/src/copy/conflicts.ts`; integration into the grid editing child (PAP-342) and the record page (PAP-333) through a `ConflictBoundary` wrapper; docs section.\n\nOut: Rules and copy (PAP-144), reconciler semantics (PAP-327), queue UI (PAP-148 owns `SyncQueueSheet`), Yjs merges.\n\n**Spec**\n\n* Untouched field with a remote change: applied silently with `RemoteChangeFlash` for 5 s and a tooltip 'Changed by Ada 3 s ago' (actor from `useRecordChanges`, PAP-326); dirty field: `ConflictBanner` inline, `role=\"alert\"` once per record per 10 s, never blocks typing.\n* Keep mine posts the local value through `mutate(..., { expect: undefined })` so the server accepts it and emits an audit row with reason `conflict.keep_mine`; agent actors get a comment mention when overwritten (PAP-144 rule; soft: PAP-131).\n* Compare dialog lists every conflicting field with mine, theirs and a per-field choice; invalid combinations (status transitions) validate before submit and show a validation error, not a conflict.\n* `PendingWriteBadge` states `queued|sending|failed` from the outbox; `FailedWriteDialog` offers retry and discard and links to the queue sheet when PAP-148 is present.\n* Manual-resolution field types from `resolutionPolicy` (currency over threshold, status) always open the banner even when the field is not dirty.\n* `ConflictBoundary` provides record context so any form or grid row inside gets the behaviour without per-field wiring.\n\n**Interface contract**\n\nProvides: Five components implementing PAP-144's props, `useConflicts()`, `ConflictBoundary`, command `edit.undoRemote`, stories with live event fixtures.\n\nConsumes: Interfaces, spec IDs and copy (PAP-144), reconciler events and `mutate` extension (PAP-327), change window (PAP-326), outbox status (PAP-148, soft), `resolutionPolicy` and field types (PAP-164, soft), `ActorBadge` (PAP-60, soft), command registry (PAP-151, soft), primitives (PAP-236 to PAP-238). Consumed by PAP-342, PAP-333, PAP-148, PAP-165, PAP-120 scaffolds.\n\n**Definition of done**\n\n* Forced conflict through `__paperosSync.forceConflict()` shows the banner on the dirty cell; keep mine, use theirs and compare each produce the expected server state and audit rows (Playwright on the grid demo).\n* Remote change on an untouched field flashes and attributes; `edit.undoRemote` restores; agent overwrite posts the mention when comments exist.\n* Stories match PAP-144's approved Gate 3 references at 375 and 1280 in both themes; axe clean; docs; changelog; Linear comment with the video.\n\n**Test plan**\n\n* Unit: event to state mapping, once-per-10-s alert throttle, resolution payload builders, policy lookup per field type, boundary context propagation.\n* E2E: two contexts editing the same cell; offline edit then reconnect producing a conflict; compare dialog with three fields.\n\n**Demo**\n\nEdit a cell in one browser while another user changes it; read the banner, click Compare, pick per field, submit; then trigger a remote change on an untouched field and watch the flash. Under two minutes.\n\n**Edge cases**\n\n* Three edits within a second: banner shows the latest actor 'and 1 other'.\n* Conflict on a hidden column: row-level indicator with a link to reveal.\n* Open dropdown on the conflicting field: apply deferred until it closes.\n* Row deleted remotely mid-edit: 'deleted by X' banner; restore via PAP-334.\n\n**Dependencies**\n\nBlocked by PAP-144 and PAP-327 (hard). Soft: PAP-326, PAP-148, PAP-164, PAP-60, PAP-151, PAP-131, PAP-236 to PAP-238, PAP-334. Consumed by PAP-342, PAP-333, PAP-148, PAP-165, PAP-120.\n\n**Agent**\n\nBuilder: Nova (Views Engineer) with Iris on components. Reviewer: Sentinel (Edge Case Hunter; Visual Inspector against the PAP-144 references).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/realtime/connection-status",
+   "title": "Unified connection status: `useConnectionStatus()` composing Hocuspocus, Electric, SSE and outbox states, one `ConnectionIndicator`, jittered reconnect policy, token refresh on `4401` and sleep or wake handling",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Record sync and conflict UX",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-28",
+   "blockedBy": [
+    "PAP-140",
+    "PAP-272"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nFour transports each report their own health: PAP-272 `SyncIndicator`, PAP-148 `SyncStatusIndicator`, PAP-140's provider `status$`, and the live channel's SSE fallback. A user on a train would see three pills disagreeing. Linear and Figma show one state; this composes the four into one hook and one indicator, and fixes the reconnect behaviours (backoff jitter, token refresh, laptop wake) in one place instead of four.\n\n**Scope**\n\nIn: `packages/sync/src/connection/{status,policy,indicator}.ts(x)`: `useConnectionStatus() -> { state: 'online'|'degraded'|'offline'|'maintenance'|'reconnecting', transports: { collab, shapes, live, outbox }, pending, lastSyncedAt, until? }`; `ConnectionIndicator` replacing the two existing indicators (PAP-272 and PAP-148 keep their queue sheet and details); shared `reconnectPolicy` (exponential 1 s to 60 s with full jitter, reset after 30 s healthy) adopted by the Hocuspocus provider wrapper (PAP-140), the shape client (PAP-271) and SSE; `4401` handling: call `getToken()` (PAP-223 refresh or PAP-225 bearer) once and reconnect without losing edits; sleep and wake: `visibilitychange`, `online`, Tauri `resume` events (PAP-259) trigger an immediate health probe (`HEAD /api/health`) and reconnect; captive-portal detection shared with PAP-148; maintenance state from `r4/data-layer/maintenance-mode` (soft); docs section with the state diagram.\n\nOut: Outbox semantics and the queue sheet (PAP-148), leader election (PAP-272, PAP-145), server-side health (PAP-269).\n\n**Spec**\n\n* State derivation: `offline` when the browser is offline or the health probe fails; `maintenance` when the API says so; `reconnecting` when any transport is retrying; `degraded` when a transport fell back (SSE instead of shape) or the outbox has failures; `online` otherwise.\n* Indicator: `role=\"status\"`, icon plus text, announces at most once per 30 s, click opens a popover with per-transport detail and the queue sheet link; hidden when `online` and nothing pending unless the page spec asks for it.\n* Reconnect storms: policy jitter plus a per-tab random start delay after wake so 20 open tabs do not hammer the server at once (PAP-147 scenario (c) measures it).\n* Token refresh: on `4401` from Hocuspocus or 401 from the shape proxy, refresh once; if refresh fails, state becomes `offline` with reason `signed-out` and `r4/data-layer/local-data-protection` decides about the cache.\n* Dev overlay: `?debug=sync` (PAP-328) shows the composed state and each transport's last error.\n\n**Interface contract**\n\nProvides: `useConnectionStatus()`, `ConnectionIndicator`, `reconnectPolicy`, `probeHealth()`, `ConnectionState` type in the realtime contract, wake and online event wiring.\n\nConsumes: Provider status (PAP-140), shape client (PAP-271), outbox status (PAP-272, PAP-148 soft), SSE and live channel (`r4/realtime/live-events-channel`, soft), token refresh (PAP-223, PAP-225), Tauri events (PAP-259, soft), maintenance flag (`r4/data-layer/maintenance-mode`, soft), inspector (PAP-328). Consumed by PAP-148, PAP-62, PAP-63 shells, PAP-145 window chip, PAP-234 `OfflineBanner`.\n\n**Definition of done**\n\n* Kill the collab container: indicator goes `reconnecting` then `online` within the policy window; block the shape route: `degraded` with SSE named; go offline: `offline` with pending count (Playwright).\n* Expired token: one refresh and reconnect with no lost edit (fake clock); wake event triggers a probe within 1 s (unit with fake events).\n* One indicator across the sync demo, grid demo and a doc page; screenshots at 375, 768, 1280 in both themes; docs with the state diagram; changelog.\n\n**Test plan**\n\n* Unit: state derivation table, jitter bounds, refresh-once logic, wake handling, announcement throttle.\n* E2E: the three failure injections above on the compose stack; 20 tabs reconnect after a container restart without a thundering herd (connection timestamps spread).\n\n**Demo**\n\nOpen the grid demo, stop the collab container and watch the single pill change and recover, then toggle DevTools offline and open the popover to see per-transport detail. Under 90 seconds.\n\n**Edge cases**\n\n* Private tab without `locks` or `BroadcastChannel`: standalone connections; indicator shows the same states.\n* Health probe blocked by a captive portal returning 200 HTML: treated as offline (shared detector).\n* Tauri sleep for hours: `resume` triggers probe and token refresh before any transport retries.\n\n**Dependencies**\n\nBlocked by PAP-140 and PAP-272 (hard). Soft: PAP-271, PAP-148, PAP-223, PAP-225, PAP-259, PAP-328, `r4/realtime/live-events-channel`, `r4/data-layer/maintenance-mode`, `r4/data-layer/local-data-protection`. Consumed by PAP-148, PAP-62, PAP-63, PAP-145, PAP-234.\n\n**Agent**\n\nBuilder: Nova (CRDT Engineer). Reviewer: Sentinel (Edge Case Hunter for network scenarios).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/realtime/headless-client",
+   "title": "Headless Yjs client for agents and jobs: `openRoomHeadless(room, credential)` in Node with transaction-origin attribution, batch edit helpers, a `doc.edit` job wrapper and the import writer used by Notion and template imports",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Agent",
+    "Developer"
+   ],
+   "milestone": "Scale and offline tested",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-140",
+    "r4/identity/agent-keys"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nAgents and jobs need to write documents, not only be seen near them: the Notion importer (PAP-419) writes pages into the runtime docs store, the spec agent (PAP-118) and content agent (PAP-192) draft text, the canvas reset (PAP-321) rewrites layout, and PAP-146 gives agents presence but no pen. Each would open `@hocuspocus/provider` from Node with its own auth and origin handling; this makes it one helper with attribution built in.\n\n**Scope**\n\nIn: `packages/collab/src/headless/{client,batch,job}.ts`: `openRoomHeadless({ room, credential: { agentKey } | { serviceToken }, tenantId }) -> { doc, awareness?, transact(fn, origin), close }` over `@hocuspocus/provider` with `ws`, auth through `verifyApiKey` or service tokens (`r4/identity/service-principals`, soft) on the server side (PAP-140 hook), origin `{ principalId, character?, issueKey?, sessionId?, reason }` attached to every transaction and persisted to `yjs_updates.origin` (`r4/realtime/doc-history`); batch helpers `replaceFragment(doc, 'default', richTextJson)` and `applyMarkdown(doc, md)` built on the editor's converters (`r4/realtime/editor-features`, soft); job `doc.edit({ room, op, payload, reason })` on PAP-43 with idempotency by `(room, op hash)`; optional presence join through PAP-146's client; rate limit per agent key on writes (PAP-140 throttle); `docs/platform/realtime/headless.md`.\n\nOut: Agent presence visuals (PAP-146), the importers' mapping logic (migration), doc store routes (PAP-379), permission rules (PAP-227, consumed).\n\n**Spec**\n\n* Every write requires `document.write` for the principal behind the credential; `connection.readOnly` connections throw on `transact` instead of silently dropping; agent writes require a `reason` (PAP-38 rule) stored in the origin.\n* `transact` batches into one Yjs transaction so peers see one change and undo managers treat it as one step; large imports chunk at 1 MB per transaction with a short sleep to respect the server throttle.\n* Connection lifecycle: connect, wait for `synced`, apply, wait for the server `stored` acknowledgement (PAP-140 `onStoreDocument` hook echo), then close; timeouts fail the job with a retryable error.\n* Awareness optional: when `presence: true` the client joins with PAP-146's `agent` payload and activity `editing`; off by default for bulk imports to avoid presence noise.\n* Test double: the same API against an in-memory provider from `r4/realtime/test-kit` for unit tests without a server.\n\n**Interface contract**\n\nProvides: `openRoomHeadless`, `replaceFragment`, `applyMarkdown`, job `doc.edit`, origin schema `HeadlessOrigin`, test double binding.\n\nConsumes: Collab server auth hook, throttle and store acknowledgement (PAP-140), agent keys (`r4/identity/agent-keys`), service tokens (`r4/identity/service-principals`, soft), converters (`r4/realtime/editor-features`, soft), history origin column (`r4/realtime/doc-history`, soft), jobs (PAP-43, soft), presence client (PAP-146, soft), test kit (`r4/realtime/test-kit`, soft). Consumed by PAP-419, PAP-379, PAP-118, PAP-192, PAP-321, PAP-208, PAP-426.\n\n**Definition of done**\n\n* A job replaces a doc's content from markdown while a browser has it open: the browser sees one transaction, the caret survives, history shows the agent as author with the reason (Playwright plus job run on the compose stack).\n* Read-only credential throws; missing reason refused; 5 MB import chunks without tripping the throttle; idempotent rerun makes no second change.\n* Docs; changelog; Linear comment with the recording.\n\n**Test plan**\n\n* Unit: origin schema, chunking, lifecycle state machine with timeouts, idempotency key derivation, read-only refusal.\n* E2E: Notion-style import of 50 pages through `doc.edit` jobs into the docs store with a browser watching one page; presence join optional path with PAP-146's mock.\n\n**Demo**\n\nRun `pnpm tsx examples/headless-edit.ts doc:acme:page:welcome --markdown hello.md --reason 'demo'` while the page is open in a browser and watch the content replace in one step with the agent badge in history. Under a minute.\n\n**Edge cases**\n\n* Server restarts mid-import: provider reconnects and the pending transaction reapplies; the `stored` acknowledgement guards completion.\n* Room over the 20 MB cap after the write: server returns `4413`; job fails with the size and no partial state (transaction rejected).\n* Agent key revoked mid-job: `4401`, job fails retryable; a new key is minted by the orchestrator on retry.\n\n**Dependencies**\n\nBlocked by PAP-140 and `r4/identity/agent-keys` (hard). Soft: PAP-43, PAP-146, `r4/identity/service-principals`, `r4/realtime/editor-features`, `r4/realtime/doc-history`, `r4/realtime/test-kit`. Consumed by PAP-419, PAP-379, PAP-118, PAP-192, PAP-321.\n\n**Agent**\n\nBuilder: Nova (CRDT Engineer). Reviewer: Sentinel (Code Reviewer; Security Auditor for credential handling).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/realtime/ephemeral-signals",
+   "title": "Ephemeral signals over awareness: typing indicators for comments and chat, cursor chat bubbles and emoji reaction bursts with throttling, privacy rules and reduced-motion behaviour",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Scale and offline tested",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "low",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "r4/realtime/presence-core"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Build S\n\n**Goal**\n\nThe small signals that make multiplayer feel alive and that Figma, Slack and Google Docs all ship: 'Ada is typing' under a comment box, a short message attached to a cursor, and a burst of emoji over a canvas or record. They ride on the presence payload, cost nothing on the server, and are needed by the support chat (PAP-411) and comments (PAP-318) before they invent their own.\n\n**Scope**\n\nIn: `PresenceState.signals?: { typing?: { anchorKey, until }, cursorChat?: { text, until }, reactions?: [{ emoji, x, y, surfaceId, at }] }` extension in `packages/collab/src/presence/signals.ts`; hooks `useTyping(anchorKey)`, `useCursorChat()`, `useReactions(surfaceId)`; components `TypingIndicator`, `CursorChatBubble` (attached to `LiveCursor`), `ReactionBurst`; command `presence.react` and the `/` shortcut for cursor chat (PAP-151, soft); throttles: typing at most one update per 2 s with a 5 s expiry, cursor chat 300 ms, reactions 5 per 10 s per principal; privacy inherits the presence matrix (`r4/realtime/presence-core`); reduced motion replaces bursts with a static badge; docs section.\n\nOut: Persistent reactions on comments (PAP-131 `comments.react`), chat messages (PAP-411), notification of typing.\n\n**Spec**\n\n* Typing is keyed by `anchorKey` (PAP-131 grammar) so the indicator appears under the right thread or chat; expires client-side even if the peer disconnects.\n* Cursor chat text is capped at 80 characters, sanitised as plain text, shown for 5 s after the last keystroke; never stored.\n* Reactions render at surface-relative coordinates with a 1.2 s animation; bursts from many peers stack with a count; screen readers get one polite announcement per burst.\n* Customers see staff typing but not other customers' signals, per the presence matrix; agents (PAP-146) may set `typing` from the presence client.\n\n**Interface contract**\n\nProvides: Signals schema extension, hooks and components above, command `presence.react`.\n\nConsumes: Presence data path and privacy (`r4/realtime/presence-core`), `LiveCursor` (`r4/realtime/presence-components`), anchor grammar (PAP-131, soft), command registry (PAP-151, soft), reduced motion (PAP-72, soft). Consumed by PAP-318, PAP-411, PAP-146, PAP-321.\n\n**Definition of done**\n\n* Typing under a comment box appears in the other browser within 1 s and expires after 5 s of silence; cursor chat shows on the peer's cursor; reactions burst on a canvas surface (Playwright, two contexts).\n* Throttles proven with fake timers; customer never sees another customer's signals; reduced-motion story static; docs; changelog.\n\n**Test plan**\n\n* Unit: throttle and expiry timers, text cap and sanitisation, reaction rate limit, announcement throttling.\n* E2E: two contexts on a comment thread and a canvas; privacy check with a customer context.\n\n**Demo**\n\nType in a comment box and watch 'Ada is typing' in the other window, press `/` and type a cursor message, then press the reaction shortcut over a record. Under a minute.\n\n**Edge cases**\n\n* Peer crashes mid-typing: indicator expires by timer.\n* Fifty peers reacting at once: bursts coalesce into counts.\n* Touch devices: cursor chat unavailable; reactions via a long-press menu (PAP-154, soft).\n\n**Dependencies**\n\nBlocked by `r4/realtime/presence-core` (hard). Soft: `r4/realtime/presence-components`, PAP-131, PAP-151, PAP-72, PAP-154. Consumed by PAP-318, PAP-411, PAP-146.\n\n**Agent**\n\nBuilder: Nova (CRDT Engineer). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/realtime/test-kit",
+   "title": "Realtime test kit: in-memory Yjs provider, awareness simulator, fake shape stream, network chaos helpers and two-context Playwright fixtures published from the realtime contract",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Record sync and conflict UX",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-28",
+   "blockedBy": [
+    "PAP-140",
+    "PAP-326"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nEvery project that touches multiplayer writes the same test scaffolding: a fake provider for editor stories, two browser contexts for presence, a way to make the shape stream lag or the socket drop. PAP-478's memory doubles serve conformance, not feature tests; PAP-313, PAP-319, PAP-411 and PAP-342 all need this kit, and a cold builder session should import it instead of inventing one.\n\n**Scope**\n\nIn: `packages/contracts/realtime/testing/` exported as `@paperos/contract-realtime/testing`: `createMemoryProvider(room)` implementing `CollabDocPort` with synchronous peer fan-out and optional latency, `AwarenessSimulator` (`join(peer)`, `move`, `select`, `idle`, `leave`, scripted traces from PAP-478 fixtures), `FakeShapeStream(table)` emitting rows, tombstones, 409 handle invalidation and lag, `NetworkChaos` (`offline()`, `dropSocket()`, `slow(ms)`, `flap(n)`) wired into the provider, shape client and outbox; Playwright fixtures `twoContexts`, `asAudience` (on PAP-240 `loginAs`), `collabRoom`, `measurePropagation()`; Storybook decorators `withMockProvider`, `withPeers(n)`; docs `docs/platform/realtime/testing.md`.\n\nOut: Conformance suite and golden fixtures (PAP-478), load generation (`r4/realtime/load-harness`, which reuses the client pool), test-mode seed endpoints (PAP-240).\n\n**Spec**\n\n* Memory provider passes the `CollabDocPort` conformance cases from PAP-478 except capacity ones (`unsupported`), so features tested against it behave like production for merge semantics.\n* `FakeShapeStream` speaks the same handle and offset protocol as PAP-271's client so `useShape`, `useRecord` and the reconciler run unmodified; chaos hooks inject at the transport layer, never by mocking hooks.\n* `measurePropagation()` stamps edits with `performance.now()` in context A and reads the DOM in context B, reporting p50 and p95, the same method PAP-328 and PAP-141 use so budgets are comparable.\n* Fixtures are deterministic: seeded RNG for peer colours and ids; traces replayable; no real timers unless `realTime: true`.\n\n**Interface contract**\n\nProvides: `createMemoryProvider`, `AwarenessSimulator`, `FakeShapeStream`, `NetworkChaos`, Playwright fixtures, Storybook decorators, docs.\n\nConsumes: Provider interface (PAP-140), shape client and registry (PAP-271, PAP-326), outbox (PAP-272), reconciler events (PAP-327), conformance fixtures (PAP-478, soft), `loginAs` (PAP-240, soft), Playwright projects (PAP-246, soft). Consumed by PAP-313, PAP-319, PAP-342, PAP-411, `r4/realtime/editor-core` stories, `r4/realtime/conflict-ux-impl`, `r4/realtime/headless-client`.\n\n**Definition of done**\n\n* Editor core stories and the conflict components run on the memory provider and fake stream with no server; a chaos test drops the socket mid-edit and asserts merge on reconnect (Vitest).\n* `twoContexts` and `measurePropagation` used by at least one presence test; docs with three recipes (editor story, offline test, conflict test); changelog; Linear comment.\n\n**Test plan**\n\n* Unit: memory provider fan-out and latency, awareness trace replay determinism, fake stream protocol including 409, chaos state transitions.\n* E2E: a Playwright spec using the fixtures against the compose stack passes both with the fake stream and the real Electric container.\n\n**Demo**\n\nRun `pnpm test --filter collab -t chaos` and read the drop-and-merge assertion; open Storybook 'Editor / with peers' showing three simulated carets with no server. Under a minute.\n\n**Edge cases**\n\n* Test forgets to close the provider: fixture teardown closes and warns.\n* Fake stream and real Electric disagree: the conformance run against both surfaces it (PAP-478 real-adapter job).\n* Storybook in CI without workers: simulator runs on the main thread.\n\n**Dependencies**\n\nBlocked by PAP-140 and PAP-326 (hard). Soft: PAP-271, PAP-272, PAP-327, PAP-478, PAP-240, PAP-246. Consumed by PAP-313, PAP-319, PAP-342, PAP-411 and the round-4 realtime issues.\n\n**Agent**\n\nBuilder: Nova (CRDT Engineer) with Sentinel (Edge Case Hunter) on chaos helpers. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-148",
+   "section": "Interface contract",
+   "append": "Align with PAP-304 (now `r4/data-layer/idempotency-batch`): the batch endpoint is `POST /api/v1/rpc/batch { mutations: [{ id, procedure, input, idempotencyKey }] } -> { results: [{ id, ok, data | error }] }` (not `{ calls: [...] }`), the batch itself carries an `Idempotency-Key`, and 409 bodies are `{ code: 'CONFLICT', server: row }` per Contracts §4. Server-side the `idempotency_keys` table is owned there; this issue only sends the header and persists keys in `_outbox`."
+  },
+  {
+   "identifier": "PAP-141",
+   "section": "Spec",
+   "append": "Awareness privacy needs a mechanism, not only a policy: Hocuspocus broadcasts awareness to every connection in a room, so \"server filters awareness by policy\" requires either an `onAwarenessUpdate` extension that rewrites the update per recipient using `context.principal`, or audience-partitioned ephemeral rooms `page:<tenant>:<route>:<audienceClass>`. `r4/realtime/presence-core` benchmarks both at 200 connections and records the choice; until then customer surfaces default to `realtime.presence: false`. Work is split into `r4/realtime/presence-core` and `r4/realtime/presence-components`."
+  },
+  {
+   "identifier": "PAP-140",
+   "section": "Spec",
+   "append": "Add: (1) `createDocProvider` takes `getToken()` and on `4401` refreshes once and reconnects without losing buffered edits; (2) the provider listens to `visibilitychange`, `online` and Tauri `resume` and probes before retrying, using the shared `reconnectPolicy` from `r4/realtime/connection-status`; (3) permission re-check subscribes to the `permission.changed` topic (`r4/identity/permission-propagation`) in addition to the 5-minute timer; (4) `verifySessionToken()` and `verifyApiKey()` come from PAP-223 and `r4/identity/agent-keys` (amendment on PAP-223); (5) `yjs_updates` gains `principal_id` and `origin jsonb` so `r4/realtime/doc-history` can attribute versions."
+  },
+  {
+   "identifier": "PAP-327",
+   "section": "Spec",
+   "append": "Column ownership: `packages/db` ships a `syncMeta()` column helper (from PAP-32 conventions) that adds `mutation_id uuid` and `updated_by uuid` to a table; the shape registry lint (PAP-326) refuses to register a table without it. The stamping middleware sets both from the request context; PAP-43 jobs stamp `updated_by = actorId ?? service id` so worker writes reconcile too."
+  },
+  {
+   "identifier": "PAP-381",
+   "section": "Spec",
+   "append": "Per-user shapes need proxy support: PAP-270 appends only `tenant_id`; the registry entry for `live_events` declares `perUser: true` and the proxy then also appends `user_id = <principal>`; tenant-wide events are a separate audience-filtered shape. SSE fallback uses `Last-Event-ID` with the uuidv7 ordering. Work is split into `r4/realtime/live-events-channel` and `r4/realtime/web-push`; the Tauri mobile bullet (APNs, FCM, `push_device`) moves to `r4/app-shell/native-push-registration` (deferred), which implements the `PushProvider` interface from `r4/realtime/web-push`."
+  },
+  {
+   "identifier": "PAP-147",
+   "section": "Definition of done",
+   "append": "Make the second-host dependency explicit: if the PAP-50 second runner host is not available before 2026-09-30, scenarios (a) and (c) run at 50 percent scale from the VPS, are marked `partial` in `load/baseline.json`, and a follow-up issue schedules the full run; the nightly job still runs (b), (d) and (e) at full scale. Work is split into `r4/realtime/load-harness` and `r4/realtime/load-runs-tuning`."
+  },
+  {
+   "identifier": "PAP-144",
+   "section": "Dependencies",
+   "append": "The implementation follow-up in realtime is `r4/realtime/conflict-ux-impl` (five components, `useConflicts()`, `ConflictBoundary`, `edit.undoRemote`); tables (PAP-342, PAP-333) and spec-builder (PAP-120) consume that issue rather than reimplementing the mocks. The approved Gate 3 references from this issue are the visual contract it must match."
+  },
+  {
+   "identifier": "PAP-142",
+   "section": "Dependencies",
+   "append": "Work is split into `r4/realtime/editor-core` (binding, schema, renderer, plain text, undo, read-only; blocks PAP-131) and `r4/realtime/editor-features` (toolbar, commands, mentions, markdown, images). PAP-131 and PAP-317 depend on the core only, which shortens the zero-slack chain 140 → 142 → 131 by roughly one session."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "collab",
+   "title": "Docs History pane (PAP-128) and tenant docs `docs.versions.*` (PAP-379) consume `r4/realtime/doc-history`",
+   "why": "Both promise version lists and restore; the primitive now lives in realtime with authors and diff."
+  },
+  {
+   "targetProject": "tables",
+   "title": "Grid editing (PAP-342) and record page (PAP-333) mount `ConflictBoundary` from `r4/realtime/conflict-ux-impl`",
+   "why": "Removes per-cell conflict wiring from the grid and gives the record page field attribution for free."
+  },
+  {
+   "targetProject": "identity",
+   "title": "Hocuspocus and the shape proxy subscribe to `permission.changed`",
+   "why": "Already filed as `r4/identity/permission-propagation`; realtime consumes it in PAP-140 and PAP-328."
+  },
+  {
+   "targetProject": "migration",
+   "title": "Notion (PAP-419) and template (PAP-426) importers write documents through `r4/realtime/headless-client` `doc.edit` jobs",
+   "why": "Gives imports attribution, idempotency and the server store acknowledgement instead of raw provider code."
+  },
+  {
+   "targetProject": "agents",
+   "title": "PAP-107 hooks use `openRoomHeadless` for agent edits and PAP-146 presence together",
+   "why": "Agents currently appear in rooms but cannot write into them from Node."
+  },
+  {
+   "targetProject": "app-shell",
+   "title": "`OfflineBanner` (PAP-234) and the shells (PAP-62, PAP-63) render `ConnectionIndicator` from `r4/realtime/connection-status`",
+   "why": "One connection state across the app instead of three indicators."
+  },
+  {
+   "targetProject": "app-shell",
+   "title": "`r4/app-shell/native-push-registration` implements `PushProvider` from `r4/realtime/web-push` and reuses the `push.deliver` job",
+   "why": "Round-4 dedup: realtime dropped its own mobile-push child so APNs, FCM and `push_device` have one owner; the sender job and payload rules stay in realtime."
+  },
+  {
+   "targetProject": "quality",
+   "title": "PAP-86 realtime presence flows and PAP-246 projects adopt `@paperos/contract-realtime/testing` fixtures",
+   "why": "`twoContexts` and `measurePropagation` make the presence and lag budgets comparable across suites."
+  }
+ ]
+}

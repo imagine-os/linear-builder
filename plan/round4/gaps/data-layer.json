@@ -1,0 +1,1258 @@
+{
+ "project": "data-layer",
+ "projectName": "Data Layer & Database",
+ "benchmarks": [
+  "Supabase (auto REST, RLS, storage, realtime)",
+  "Hasura (auto CRUD, column permissions)",
+  "Prisma / Drizzle (schema as code)",
+  "ElectricSQL / PGlite",
+  "PowerSync",
+  "Zero / Replicache",
+  "Convex (transactional functions, scheduler)",
+  "Neon / PlanetScale (database branching)",
+  "pgAudit and pg_stat_statements",
+  "squawk (migration lint)",
+  "pg-boss / Inngest / Trigger.dev",
+  "Sentry and OpenTelemetry"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "Postgres 17 provisioning, roles, extensions, PgBouncer",
+   "coveredBy": [
+    "PAP-30"
+   ],
+   "status": "covered",
+   "note": "Hetzner/Coolify, pgvector image, four roles"
+  },
+  {
+   "feature": "Continuous WAL archiving and PITR with weekly restore drill",
+   "coveredBy": [
+    "PAP-30"
+   ],
+   "status": "covered",
+   "note": "pgBackRest, RPO 1 h, RTO 30 min"
+  },
+  {
+   "feature": "Object storage, Yjs, orchestrator and key backups",
+   "coveredBy": [
+    "PAP-354",
+    "r4/data-layer/platform-backups"
+   ],
+   "status": "partial",
+   "note": "restic jobs and escrow split into a child"
+  },
+  {
+   "feature": "Whole-platform DR drill with measured RPO/RTO",
+   "coveredBy": [
+    "PAP-354",
+    "r4/data-layer/platform-dr-drill"
+   ],
+   "status": "partial",
+   "note": "drill split into a child; first run before RC"
+  },
+  {
+   "feature": "Tenant-scoped point-in-time restore",
+   "coveredBy": [
+    "r4/data-layer/tenant-pitr-restore"
+   ],
+   "status": "gap",
+   "note": "Neon-style branch restore; deferred to v0.2"
+  },
+  {
+   "feature": "Local dev stack with per-worktree databases",
+   "coveredBy": [
+    "PAP-42"
+   ],
+   "status": "covered",
+   "note": "docker compose, session-start hook"
+  },
+  {
+   "feature": "Ephemeral per-PR / preview databases (branching)",
+   "coveredBy": [
+    "r4/data-layer/preview-databases"
+   ],
+   "status": "gap",
+   "note": "PlanetScale/Neon parity; PAP-26 and PAP-365 need it"
+  },
+  {
+   "feature": "Schema as code, migrations, seeds",
+   "coveredBy": [
+    "PAP-32"
+   ],
+   "status": "covered",
+   "note": "Drizzle, destructive guard, seed profiles"
+  },
+  {
+   "feature": "Migration safety lint, dry run, rollback, backfills",
+   "coveredBy": [
+    "r4/data-layer/migration-safety"
+   ],
+   "status": "gap",
+   "note": "squawk-style checks; nothing rehearses migrations"
+  },
+  {
+   "feature": "Per-module migration folders and removal",
+   "coveredBy": [
+    "PAP-32",
+    "PAP-265"
+   ],
+   "status": "covered",
+   "note": "app-shell owns module integration"
+  },
+  {
+   "feature": "Core entity model with Zod types and ER docs",
+   "coveredBy": [
+    "PAP-33"
+   ],
+   "status": "covered",
+   "note": "seven shared tables"
+  },
+  {
+   "feature": "Row-level security with generated policies and harness",
+   "coveredBy": [
+    "PAP-34"
+   ],
+   "status": "covered",
+   "note": "FORCE RLS, fail closed, `expectTenantIsolation`"
+  },
+  {
+   "feature": "Permission predicates compiled into RLS",
+   "coveredBy": [
+    "PAP-228"
+   ],
+   "status": "covered",
+   "note": "identity owns; data-layer consumes"
+  },
+  {
+   "feature": "Field-level masking of responses",
+   "coveredBy": [
+    "r4/identity/field-permissions"
+   ],
+   "status": "gap",
+   "note": "owned by identity in round 4; repository applies it"
+  },
+  {
+   "feature": "Typed API server, middleware chain, error mapping",
+   "coveredBy": [
+    "PAP-267"
+   ],
+   "status": "covered",
+   "note": "Hono 4 + oRPC"
+  },
+  {
+   "feature": "Routers, typed client, `callAs`",
+   "coveredBy": [
+    "PAP-268"
+   ],
+   "status": "covered",
+   "note": "core routers hand-written"
+  },
+  {
+   "feature": "Generic entity factory: repository + CRUD router + events + shapes",
+   "coveredBy": [
+    "r4/data-layer/entity-factory"
+   ],
+   "status": "gap",
+   "note": "Supabase/Hasura auto-CRUD parity; biggest productivity gap"
+  },
+  {
+   "feature": "OpenAPI, Scalar docs, health, staging deploy",
+   "coveredBy": [
+    "PAP-269"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Generated TypeScript SDK for external developers",
+   "coveredBy": [
+    "PAP-222"
+   ],
+   "status": "covered",
+   "note": "identity, deferred"
+  },
+  {
+   "feature": "Shared value types (Money, ActorRef, EntityRef, cursors, errors)",
+   "coveredBy": [
+    "PAP-302"
+   ],
+   "status": "covered",
+   "note": "contract-zero"
+  },
+  {
+   "feature": "Shared filter grammar with SQL and memory evaluators",
+   "coveredBy": [
+    "PAP-279"
+   ],
+   "status": "covered",
+   "note": "keystone spec"
+  },
+  {
+   "feature": "Domain event envelope and topic registry",
+   "coveredBy": [
+    "PAP-303",
+    "r4/data-layer/events-core"
+   ],
+   "status": "partial",
+   "note": "package half split out so consumers start day one"
+  },
+  {
+   "feature": "Transactional outbox dispatcher, fan-out, dead-letter, replay",
+   "coveredBy": [
+    "PAP-303",
+    "r4/data-layer/events-outbox-dispatcher"
+   ],
+   "status": "partial",
+   "note": "worker half split out"
+  },
+  {
+   "feature": "Event schema registry, upcasters, dual publish",
+   "coveredBy": [
+    "PAP-436"
+   ],
+   "status": "covered",
+   "note": "module-system"
+  },
+  {
+   "feature": "Idempotency keys and batch endpoint",
+   "coveredBy": [
+    "PAP-304",
+    "r4/data-layer/idempotency-batch"
+   ],
+   "status": "partial",
+   "note": "split from rate limiting"
+  },
+  {
+   "feature": "Postgres-backed rate limiting per actor, key, IP, tenant",
+   "coveredBy": [
+    "PAP-304",
+    "r4/data-layer/rate-limits"
+   ],
+   "status": "partial",
+   "note": "split; replaces four hand-rolled limiters"
+  },
+  {
+   "feature": "Local-first sync: Electric service and tenant-scoped shape proxy",
+   "coveredBy": [
+    "PAP-270"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "PGlite client, schema generation, read hooks",
+   "coveredBy": [
+    "PAP-271"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Offline write outbox with leader election",
+   "coveredBy": [
+    "PAP-272",
+    "PAP-148"
+   ],
+   "status": "covered",
+   "note": "realtime hardens it"
+  },
+  {
+   "feature": "Sync engine ADR (Electric vs Zero vs PowerSync vs Replicache)",
+   "coveredBy": [
+    "PAP-31"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Local data protection: wipe on sign-out/revocation, non-cacheable shapes",
+   "coveredBy": [
+    "r4/data-layer/local-data-protection"
+   ],
+   "status": "gap",
+   "note": "lost-device story missing"
+  },
+  {
+   "feature": "Object storage with presigned uploads and image variants",
+   "coveredBy": [
+    "PAP-37"
+   ],
+   "status": "covered",
+   "note": "MinIO, sharp"
+  },
+  {
+   "feature": "Malware scanning of uploads",
+   "coveredBy": [
+    "r4/data-layer/upload-scanning"
+   ],
+   "status": "gap",
+   "note": "PAP-37 names ClamAV as follow-up"
+  },
+  {
+   "feature": "Document previews (PDF/office thumbnails)",
+   "coveredBy": [
+    "r4/data-layer/document-previews"
+   ],
+   "status": "gap",
+   "note": "deferred to v0.2"
+  },
+  {
+   "feature": "Append-only audit log with actor, diff, reason, hash chain",
+   "coveredBy": [
+    "PAP-38"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Database-level audit (pgAudit) and DB health checks",
+   "coveredBy": [
+    "r4/data-layer/pgaudit-db-health"
+   ],
+   "status": "gap",
+   "note": "B4 boundary detection"
+  },
+  {
+   "feature": "Keyword search with registry, tsvector, trigram, facets",
+   "coveredBy": [
+    "PAP-39",
+    "r4/data-layer/search-keyword"
+   ],
+   "status": "partial",
+   "note": "split from embeddings"
+  },
+  {
+   "feature": "Semantic and hybrid search with embeddings",
+   "coveredBy": [
+    "PAP-39",
+    "r4/data-layer/search-semantic"
+   ],
+   "status": "partial",
+   "note": "split; provider behind an interface"
+  },
+  {
+   "feature": "OpenTelemetry tracing, slow queries, dashboards",
+   "coveredBy": [
+    "PAP-40"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Living data dictionary",
+   "coveredBy": [
+    "PAP-41"
+   ],
+   "status": "covered",
+   "note": "reads the PII registry after round 4"
+  },
+  {
+   "feature": "Background jobs runtime (pg-boss)",
+   "coveredBy": [
+    "PAP-43",
+    "r4/data-layer/jobs-core"
+   ],
+   "status": "partial",
+   "note": "core split from admin page"
+  },
+  {
+   "feature": "Jobs admin page, metrics, dead-letter requeue",
+   "coveredBy": [
+    "PAP-43",
+    "r4/data-layer/jobs-admin"
+   ],
+   "status": "partial",
+   "note": "split"
+  },
+  {
+   "feature": "Durable multi-step workflows and approvals",
+   "coveredBy": [
+    "PAP-174",
+    "PAP-388"
+   ],
+   "status": "covered",
+   "note": "tables automations own it"
+  },
+  {
+   "feature": "Transactional email package with sandbox and suppression",
+   "coveredBy": [
+    "PAP-370"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Server-side field encryption with rotation and leak scanner",
+   "coveredBy": [
+    "PAP-353"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Config and secrets port for modules",
+   "coveredBy": [
+    "PAP-444",
+    "PAP-17"
+   ],
+   "status": "covered",
+   "note": "module-system and app-shell"
+  },
+  {
+   "feature": "PII classification registry",
+   "coveredBy": [
+    "PAP-355",
+    "r4/data-layer/pii-registry"
+   ],
+   "status": "partial",
+   "note": "split; single owner of `pii.json`"
+  },
+  {
+   "feature": "Retention jobs, anonymisation, legal hold",
+   "coveredBy": [
+    "PAP-355",
+    "r4/data-layer/retention-jobs"
+   ],
+   "status": "partial",
+   "note": "split"
+  },
+  {
+   "feature": "Tenant hard purge (export first, tombstone)",
+   "coveredBy": [
+    "PAP-355",
+    "r4/data-layer/tenant-purge"
+   ],
+   "status": "partial",
+   "note": "split; destructive path reviewed as security"
+  },
+  {
+   "feature": "Tenant lifecycle: states, deletion request, quotas",
+   "coveredBy": [
+    "PAP-432"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Per-tenant sequences and human-readable keys",
+   "coveredBy": [
+    "r4/data-layer/tenant-sequences"
+   ],
+   "status": "gap",
+   "note": "invoices, tickets, employees all need it"
+  },
+  {
+   "feature": "Soft delete, trash and restore",
+   "coveredBy": [
+    "PAP-32",
+    "PAP-334"
+   ],
+   "status": "covered",
+   "note": "tables owns the UI"
+  },
+  {
+   "feature": "Record field history and undo",
+   "coveredBy": [
+    "PAP-333",
+    "PAP-38"
+   ],
+   "status": "covered",
+   "note": "tables"
+  },
+  {
+   "feature": "Bulk operations with server batching",
+   "coveredBy": [
+    "PAP-334",
+    "PAP-304"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Tenant export in open formats",
+   "coveredBy": [
+    "PAP-205",
+    "PAP-420"
+   ],
+   "status": "covered",
+   "note": "migration"
+  },
+  {
+   "feature": "Usage metering and quotas",
+   "coveredBy": [
+    "PAP-391",
+    "PAP-432"
+   ],
+   "status": "covered",
+   "note": "business-core meters; lifecycle counts"
+  },
+  {
+   "feature": "Maintenance / read-only mode",
+   "coveredBy": [
+    "r4/data-layer/maintenance-mode"
+   ],
+   "status": "gap",
+   "note": "needed by DR, migrations, key rotation"
+  },
+  {
+   "feature": "Feature flags",
+   "coveredBy": [
+    "PAP-366"
+   ],
+   "status": "covered",
+   "note": "app-shell"
+  },
+  {
+   "feature": "Custom domains and host-based tenant resolution",
+   "coveredBy": [
+    "PAP-431"
+   ],
+   "status": "covered",
+   "note": "app-shell"
+  },
+  {
+   "feature": "Read replicas / analytics database",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "non-goal for v0.1; PAP-183 reports run on primary; ADR later"
+  },
+  {
+   "feature": "Multi-region or data residency",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "non-goal; documented in threat model gap register"
+  },
+  {
+   "feature": "HTTP caching and ETags on read procedures",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "low value with local-first reads; revisit v0.2"
+  },
+  {
+   "feature": "Module contract, conformance and kernel wiring",
+   "coveredBy": [
+    "PAP-448",
+    "PAP-451",
+    "PAP-454"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Cold-builder cookbook: add an entity in ten minutes",
+   "coveredBy": [
+    "r4/data-layer/entity-factory",
+    "PAP-24"
+   ],
+   "status": "partial",
+   "note": "cookbook ships with the factory"
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/data-layer/events-core",
+   "title": "Domain event envelope, `defineTopic` registry, in-transaction `publish()`, testing helpers and the generated catalogue doc",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Postgres + Drizzle baseline",
+   "parent": "PAP-303",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-22",
+   "blockedBy": [],
+   "blocks": [
+    "PAP-448",
+    "PAP-436",
+    "PAP-28",
+    "PAP-136",
+    "PAP-174",
+    "PAP-195",
+    "PAP-97"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-303: the pure package every producer and subscriber imports: the Zod `DomainEvent` envelope, `defineTopic()` registry, `publish(tx, event)` writing to the outbox inside the caller's transaction, `on()` subscriptions, the initial catalogue and the `pnpm events:catalogue` generator. Dispatch, fan-out and replay are the sibling `r4/data-layer/events-outbox-dispatcher`, so the twenty consumers of the envelope start on day one.\n\n**Scope**\n\nIn: `packages/core/src/events/{envelope,registry,publish,subscribe,testing}.ts`, `packages/core/src/events/catalogue/*.ts` (initial topics with placeholder producers), `packages/db/src/schema/events.ts` (`outbox_event`, `event_subscription` tables and the monthly partition helper), `scripts/events-catalogue.ts` writing `docs/platform/events.md`, ADR `docs/adr/00xx-domain-events.md`.\n\nOut: Dispatcher, fan-out, dead-letter and replay (sibling); upcasters and `topics.json` (PAP-436); webhook and orchestrator receivers (PAP-222, PAP-97).\n\n**Spec**\n\n* Envelope exactly as Contracts §3 (`id`, `topic`, `version`, `occurredAt`, `tenantId | null`, `actor: ActorRef`, `subject: EntityRef`, `requestId?`, `causationId?`, `correlationId?`, `idempotencyKey?`, `payload`); `ActorRef` and `EntityRef` from PAP-302 (type-equal local copy until it merges).\n* `defineTopic(name, payloadSchema, { version, description, producer })`: names `<entity>.<past-tense-verb>[.<qualifier>]`, lower-case, max 48 chars; duplicates and bad names throw at import; `topics()` lists the registry; `TopicPayload<T>` infers payload types for `on()`.\n* `publish(tx, event)` requires a Drizzle transaction handle and inserts into `outbox_event` with `occurred_at = now()` from the database; a Biome rule in `@paperos/config-biome/events` flags `publish(db, ...)` outside `withTenant`.\n* PII refinement: `payloadSchema` rejects keys in `pii.json` (static denylist until `r4/data-layer/pii-registry` lands) and payloads over 64 KB.\n* `on(topic, handler, { name, idempotent: true })` registers an in-process subscriber (`event_subscription.kind = 'inproc'`) at boot; `drainInProcess(tx)` delivers after commit for dev and tests until the sibling dispatcher lands.\n* Initial catalogue: every topic in PAP-303 plus `flags.changed` and `permission.changed` (`r4/identity/permission-propagation`).\n* Testing helpers `collectEvents(fn)` and `expectEvent(topic, matcher)` for Vitest; `pnpm events:catalogue --check` fails Gate 1 on drift.\n\n**Interface contract**\n\nProvides: `DomainEvent`, `domainEventSchema`, `defineTopic`, `TopicPayload<T>`, `publish`, `on`, `topics`, `drainInProcess`, `collectEvents`, `expectEvent`; tables `outbox_event`, `event_subscription`; `docs/platform/events.md`; ADR.\n\nConsumes: `ActorRef`/`EntityRef` (PAP-302, soft), `createDb`/`withTenant` (PAP-32), `pii.json` (soft). Consumed by PAP-448, PAP-436, PAP-28, PAP-97, PAP-136, PAP-174, PAP-179, PAP-195, PAP-222, PAP-60, PAP-148 and the sibling dispatcher.\n\n**Definition of done**\n\n* Package and schema merged; catalogue doc generated and drift check green in Gate 1.\n* Integration test: a row insert plus `publish()` in one transaction commits both or neither (forced failure after publish).\n* Type test: `on('invoice.paid', h)` infers the payload (`expectTypeOf`); lint rule fixture fails on `publish(db, ...)`.\n* ADR recording the Postgres-outbox decision; comments on PAP-28, PAP-136, PAP-174, PAP-195, PAP-222 naming their topics; Linear comment with the docs link.\n\n**Test plan**\n\n* Unit: envelope fixtures (valid, bad topic name, PII key, oversize payload, missing subject); registry duplicate and pattern rejection; `drainInProcess` delivers once per handler; partition helper name arithmetic.\n* E2E: on the PAP-42 stack, `pnpm tsx examples/events.ts` creates a demo row and publishes in one transaction, then `SELECT` shows one `outbox_event` row with `published_at IS NULL` and the in-process handler log line.\n\n**Demo**\n\nReviewer runs `pnpm events:catalogue` and reads the topic table, then runs the example script and watches the transaction test roll back both the row and the event when the failure flag is set. Under two minutes.\n\n**Edge cases**\n\n* Same `idempotencyKey` published twice in one tenant: unique partial index makes the second insert a no-op and `publish` returns the existing id.\n* Clock skew between API instances: `occurredAt` comes from `now()` in the insert, never the process clock.\n* Payload schema changed without a version bump: `events:catalogue --check` diffs the JSON Schema hash and fails.\n\n**Dependencies**\n\nNone hard (pure package, ready now like the parent). Soft: PAP-302, PAP-32, `r4/data-layer/pii-registry`. Blocks PAP-448, PAP-436, PAP-28, PAP-136, PAP-174, PAP-195, PAP-97 and the sibling dispatcher.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Security Auditor for the PII refinement; Atlas checks catalogue completeness).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/data-layer/events-outbox-dispatcher",
+   "title": "Outbox dispatcher job `events.dispatch`: per-subject ordering, fan-out to in-process, job, live-event, webhook and orchestrator sinks, dead-letter and `events:replay`",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Postgres + Drizzle baseline",
+   "parent": "PAP-303",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-22",
+   "blockedBy": [
+    "r4/data-layer/events-core"
+   ],
+   "blocks": [
+    "PAP-177",
+    "PAP-179",
+    "PAP-222"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nSecond half of PAP-303: turn outbox rows into deliveries. A pg-boss job polls undelivered `outbox_event` rows with `FOR UPDATE SKIP LOCKED`, groups by subject so per-entity ordering holds, fans out to every active subscription kind, retries with backoff, dead-letters poison events and can replay a topic window. Until PAP-43 merges the same loop runs in-process behind `EVENTS_DISPATCH=inline`.\n\n**Scope**\n\nIn: `packages/core/src/events/dispatch/{poll,fanout,sinks,replay}.ts`, job definition `events.dispatch` (`defineJob` from PAP-43 when present, else `setInterval` runner), sinks `inproc`, `job` (`enqueue`), `live` (`publishLiveEvent` from `r4/realtime/live-events-channel`, no-op until it exists), `webhook` (`emitWebhook`, PAP-222, no-op stub), `orchestrator` (HTTP POST with HMAC to PAP-97), CLI `pnpm events:replay --topic --since --subscription`, metrics `paperos_events_*`.\n\nOut: Envelope, registry and `publish()` (sibling); upcasters and dual publish (PAP-436); the sinks' own consumers.\n\n**Spec**\n\n* Batch of 100 rows per poll, concurrency 4 across subjects, strictly sequential per `subject_id`; a subject with a failing event blocks only that subject.\n* Delivery at-least-once: each `(event, subscription)` pair has a row in `event_delivery (event_id, subscription, attempts, last_error, delivered_at)`; `published_at` is set when every active subscription delivered or dead-lettered.\n* Retry backoff 1 s to 10 min, 10 attempts, then `jobs.dead_letter` (PAP-43) with the subscription name; other subscriptions still receive the event.\n* `replayed: true` in the envelope for `events:replay`; idempotent handlers may opt out; replay is limited to 90 days (partition retention).\n* Subscriptions of a module disabled for the tenant (PAP-266 `tenant_module`) are skipped with `skipped_reason = 'module_disabled'`; a deleted tenant yields `tenant_gone` and marks published.\n* Outbox partitions: monthly, kept 90 days, archived to MinIO as Parquet by the same archive job PAP-38 uses; `event_delivery` pruned with its event.\n* Metrics: lag (`now - occurred_at` of the oldest undelivered row), throughput, dead-letter count; alert when lag exceeds 60 s (PAP-40).\n\n**Interface contract**\n\nProvides: Job `events.dispatch`, table `event_delivery`, sink interface `EventSink { name, deliver(event, subscription) }` and `registerSink()`, CLI `events:replay`, metrics above.\n\nConsumes: `publish`/registry/tables from the sibling, `defineJob` and `jobs.dead_letter` (PAP-43, soft with the inline runner), `publishLiveEvent` (`r4/realtime/live-events-channel`, soft), `emitWebhook` (PAP-222, soft), orchestrator receiver (PAP-97, soft), audit for `actor_kind='system'` (PAP-38). Consumed by PAP-177, PAP-179, PAP-222, PAP-136, PAP-174, PAP-195, PAP-113, PAP-148.\n\n**Definition of done**\n\n* Dispatcher delivers to an in-process handler exactly once for 1,000 events with a crash injected at event 500 and no duplicates after restart (idempotent handler asserts).\n* Per-subject ordering preserved under concurrency 4 (property test with 200 subjects); bench: 10,000 events drained in under 60 s on the dev stack, numbers committed.\n* Poison event dead-lettered after 10 attempts while its sibling subscriptions still deliver; `events:replay` re-delivers with `replayed: true`.\n* `docs/platform/events.md` gains the delivery and replay sections; CHANGELOG; Linear comment with the bench.\n\n**Test plan**\n\n* Unit: poll query with `SKIP LOCKED` semantics against PGlite; subject grouping; backoff schedule; sink registry duplicate rejection; `tenant_gone` and `module_disabled` paths.\n* E2E: compose stack with two worker replicas: 1,000 publishes across 50 subjects, assert one delivery per pair, ordering per subject, and the Grafana lag panel returns to zero.\n\n**Demo**\n\nReviewer publishes `invoice.paid` from the example script, watches the worker log show the in-process handler, a queued job and (if present) a `live_event` row; then kills the handler with a thrown error and sees the dead-letter row appear in `/admin/jobs`. Under two minutes.\n\n**Edge cases**\n\n* Two dispatcher replicas: `SKIP LOCKED` prevents double pickup; a crashed replica's locked rows return after `statement_timeout`.\n* Subscriber added after events were published: no automatic replay; `events:replay` is explicit and time-bounded.\n* Sink unavailable (orchestrator down): that subscription's deliveries retry; others unaffected; lag alert fires after 60 s.\n* Subject deleted before delivery: delivered anyway; handlers tolerate `NOT_FOUND`.\n\n**Dependencies**\n\nBlocked by `r4/data-layer/events-core` (hard). Soft: PAP-43 (inline runner until pg-boss merges; converts to `defineJob` then), `r4/realtime/live-events-channel`, PAP-222, PAP-97, PAP-40. Blocks PAP-177, PAP-179, PAP-222.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer; Edge Case Hunter for ordering and crash injection).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/data-layer/idempotency-batch",
+   "title": "Idempotency middleware: `Idempotency-Key` contract, `idempotency_keys` table with replay semantics, `withIdempotencyKey()` client helper and `POST /api/v1/rpc/batch`",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Customer"
+   ],
+   "milestone": "Postgres + Drizzle baseline",
+   "parent": "PAP-304",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-22",
+   "blockedBy": [
+    "PAP-267"
+   ],
+   "blocks": [
+    "PAP-148",
+    "PAP-222"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-304, what the offline outbox (PAP-148) and every financial procedure need: safe retries. One `idempotent()` middleware stores and replays responses for 24 hours keyed on tenant, actor and key, a client helper re-sends keys, and the batch endpoint executes up to 25 mutations with per-item keys and partial results.\n\n**Scope**\n\nIn: `packages/api-contract/src/middleware/idempotency.ts`, `packages/db/src/schema/idempotency.ts` (`idempotency_keys` with RLS and TTL job), `apps/api/src/routes/batch.ts`, `packages/api-client/src/idempotency.ts` (`withIdempotencyKey()`), procedure marker `nonIdempotent`, docs section `docs/data/api.md#idempotency`.\n\nOut: Rate limiting and `limits.yml` (sibling `r4/data-layer/rate-limits`); outbox persistence of keys (PAP-148).\n\n**Spec**\n\n* Header `Idempotency-Key` (UUID or up to 128 chars) required on every `create`, `archive`, `restore` and `update` flagged `nonIdempotent`; missing header is `VALIDATION` in production, a warning in dev; agents (PAP-60) must always send it.\n* Row `(tenant_id, actor_id, key, request_hash, procedure, status in_flight|done, response jsonb, http_status, created_at, expires_at)`; `request_hash = sha256(procedure + canonical JSON body)` with sorted keys and normalised whitespace.\n* Same key and hash while `in_flight`: 409 `CONFLICT` with `retryAfter: 1`; same key, different hash: 422 `VALIDATION` with `details[0].issue = 'idempotency-key-reused'`; `done`: replay with header `Idempotent-Replayed: true`; expired: treated as new.\n* Stored response capped at 256 KB; larger responses store `{ ref: EntityRef }` and replay a 303 to the `get` procedure.\n* Batch `POST /api/v1/rpc/batch { mutations: [{ id, procedure, input, idempotencyKey }] }`, up to 25 items, 1 MB body; items for the same `entity` run in order, distinct entities up to 4 concurrently, each in its own transaction; response `{ results: [{ id, ok, data | error }] }`; the batch carries its own `Idempotency-Key` to replay the whole result.\n* Stored responses are redacted with `pii.json` (`r4/data-layer/pii-registry`, soft) before insert; RLS keeps tenant A from replaying tenant B.\n* TTL job (PAP-43, soft) deletes expired keys hourly in batches of 10,000.\n\n**Interface contract**\n\nProvides: `idempotent()` middleware on the `os` builder, `.nonIdempotent()` marker, `POST /api/v1/rpc/batch`, headers `Idempotency-Key` and `Idempotent-Replayed`, table `idempotency_keys`, client `withIdempotencyKey()` generating UUIDv7 keys and re-sending them on retry.\n\nConsumes: Middleware chain (PAP-267), `ApiErrorBody`/`EntityRef` (PAP-302), client link (PAP-268), jobs TTL (PAP-43, soft). Consumed by PAP-148, PAP-222, PAP-60, PAP-177, PAP-179, PAP-180 and every business router.\n\n**Definition of done**\n\n* Mounted in the PAP-267 chain after auth with the order test updated; 50 concurrent identical `create` calls produce one row and 49 replays or 409s (compose stack).\n* Different body, same key is 422; batch of 25 with one failing item returns partial results; replaying the batch key returns the stored result without re-executing (assert row counts).\n* `packages/api-client` retries reuse the key (test); middleware overhead under 3 ms p95 at 200 rps (autocannon, bench committed).\n* `docs/data/api.md` Idempotency section with curl examples; PAP-148 owner acknowledges the batch and 409 contract in a comment; CHANGELOG under API.\n\n**Test plan**\n\n* Unit: hash canonicalisation (key order, whitespace, unicode), state machine in_flight/done/expired with a fake clock, 256 KB cap path, batch grouping by entity.\n* E2E: Playwright against the dev stack: the sync demo replays a queued write twice after a simulated network drop and the server shows one row plus `Idempotent-Replayed: true` in the network panel.\n\n**Demo**\n\nReviewer sends the same `curl -H 'Idempotency-Key: demo-1'` create twice and sees one row plus the replay header, changes the body and reads the 422, then posts a 3-item batch with one bad item and reads the partial result. Under two minutes.\n\n**Edge cases**\n\n* Client crashes after send and retries with a new key: duplicate row, documented as client responsibility; `withIdempotencyKey()` persists keys in the PAP-148 outbox to prevent it.\n* Key reused after 24 h with the same body: executed again; longer windows use natural keys (PAP-177 `stripe_event.id`).\n* Batch item depends on an earlier item's generated id: `tmp_` id remapping is PAP-148's job; the batch executes in the given order so it works when the client rewrites inputs.\n\n**Dependencies**\n\nBlocked by PAP-267 (hard: middleware chain and error mapping). Soft: PAP-268, PAP-302, PAP-43, `r4/data-layer/pii-registry`. Blocks PAP-148, PAP-222; sibling `r4/data-layer/rate-limits` shares the chain order test.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Security Auditor; Edge Case Hunter for concurrency).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/data-layer/rate-limits",
+   "title": "Postgres-backed rate limiting: `rate_limit_bucket`, `paperos.rate_limit_hit()`, actor, API-key, IP and tenant scopes, public-route registry and hot-reloaded `ops/api/limits.yml`",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Customer"
+   ],
+   "milestone": "Postgres + Drizzle baseline",
+   "parent": "PAP-304",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-22",
+   "blockedBy": [
+    "PAP-267"
+   ],
+   "blocks": [
+    "PAP-172",
+    "PAP-193",
+    "PAP-194"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nSecond half of PAP-304: bound abuse with one implementation so PAP-35's in-memory bucket, PAP-60's plugin limiter and the hand-rolled limits in PAP-172, PAP-193 and PAP-194 collapse into `rateLimit(scope)`. Sliding-window counters live in Postgres so two API replicas agree, limits are configuration, and `429` carries `Retry-After` and the `RateLimit-*` headers.\n\n**Scope**\n\nIn: `packages/api-contract/src/middleware/rate-limit.ts`, SQL function `paperos.rate_limit_hit(scope, key, limit, window)` in `drizzle/custom/`, table `rate_limit_bucket (scope, key, window_start, count)`, `.public()` marker on `publicProcedure` and the public-route registry, `ops/api/limits.yml` with Zod schema and SIGHUP reload, docs section `docs/data/api.md#rate-limits`.\n\nOut: Idempotency and batch (sibling); WAF or edge limits in Caddy; per-tenant usage billing (PAP-391); CAPTCHA (`r4/identity/auth-abuse-controls`).\n\n**Spec**\n\n* Scopes and defaults: `actor` 600/min after auth, `apiKey` per-key value from key metadata (PAP-60, PAP-222), `ip` 60/min before auth on public routes (`/pay`, `/doc`, `/r/<code>`, embeds, `/webhooks/*`, `/api/auth/*` sign-in), `tenant` optional plan cap from PAP-178 (soft).\n* Sliding approximation: fixed 60 s windows weighted with the previous window; one round trip per request through `paperos.rate_limit_hit` using `INSERT ... ON CONFLICT DO UPDATE ... RETURNING`.\n* Chain order: `rateLimit('ip')`, auth, `rateLimit('actor'|'apiKey')`, `idempotent()`; the PAP-267 order test is updated by whichever sibling merges second.\n* Denied calls (403 from scopes or `can()`) are evaluated before the counter increments so they do not consume quota; `ip` scope keys on `ip + path`; authenticated users bypass the `ip` scope.\n* 429 body `{ code: 'RATE_LIMITED', retryAfter }` plus headers `RateLimit-Limit`, `RateLimit-Remaining`, `RateLimit-Reset`, `Retry-After`.\n* Failure mode: table unavailable fails open for authenticated actors for at most 60 s (then closed) and closed for `ip`; every degraded minute logs `rate_limit_degraded` and emits a security event (PAP-356).\n* `limits.yml` entries `{ scope, match: procedure glob | route, limit, window }`; hot-reload on SIGHUP; `pnpm limits:check` validates in Gate 1; rows older than two windows pruned by the shared TTL job.\n\n**Interface contract**\n\nProvides: `rateLimit(scope)` middleware, `.public()` marker and `publicRoutes()` registry, SQL function and table above, config schema `LimitsConfig`, headers above, error `RATE_LIMITED`.\n\nConsumes: Middleware chain (PAP-267), key metadata (PAP-60, PAP-222), entitlements (PAP-178, soft), security events (PAP-356, soft), TTL job (PAP-43, soft). Consumed by PAP-172, PAP-193, PAP-194, PAP-60 (replaces the plugin limiter), PAP-222, `r4/identity/auth-abuse-controls`.\n\n**Definition of done**\n\n* 601st call in a minute is 429 with correct `Retry-After` and headers; `ip` scope applies to `/pay` without a session; authenticated user is not limited by `ip` (compose stack).\n* Two API replicas share one budget (test with two processes against one database); denied 403 calls do not consume quota.\n* Degraded mode test: table locked, authenticated calls pass for 60 s then fail closed; `rate_limit_degraded` logged and security event emitted.\n* Docs section with curl examples; `limits.yml` documented; PAP-60 and PAP-172 owners comment that they drop their own limiters; CHANGELOG under API.\n\n**Test plan**\n\n* Unit: window math at minute boundaries and across a backwards clock jump (one extra window accepted), config schema rejection cases, header rendering, scope key derivation for IPv6 and `X-Forwarded-For` behind Caddy.\n* E2E: `pnpm tsx examples/hammer.ts` fires 700 requests against the dev API and prints the first 429 with its `Retry-After`; Playwright asserts the sign-in page shows the rate-limited message after the 11th attempt.\n\n**Demo**\n\nReviewer runs the hammer script, reads the 429, then edits `limits.yml` to 20/min, sends SIGHUP and reruns to watch the limit change without a restart. Under two minutes.\n\n**Edge cases**\n\n* Shared office NAT on `/pay`: per `ip + path` limit and the authenticated bypass keep customers working; document the number.\n* Webhook bursts from Stripe: `/webhooks/*` has its own higher limit and signature failures count double (PAP-356 alert on abuse).\n* PgBouncer transaction mode: the function is a single statement, so no session state is needed.\n* Key metadata changed mid-window: new limit applies to the next window.\n\n**Dependencies**\n\nBlocked by PAP-267 (hard). Soft: PAP-60, PAP-222, PAP-178, PAP-356, PAP-43. Blocks PAP-172, PAP-193, PAP-194; sibling `r4/data-layer/idempotency-batch` shares the chain order test.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/data-layer/pii-registry",
+   "title": "`pii()` Drizzle column annotation and registry: generated `pii.json`, the unannotated-column lint, and wiring into audit redaction, OTel filtering, the data dictionary and exports",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Staff"
+   ],
+   "milestone": "Tenant-safe and observable",
+   "parent": "PAP-355",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-33",
+    "PAP-38"
+   ],
+   "blocks": [
+    "PAP-221",
+    "PAP-41"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nFirst child of PAP-355 and the single source of PII truth: one annotation on the schema that audit redaction (PAP-38), the OTel span processor (PAP-40), the prompt-log redaction map (PAP-107), the DSAR registry (PAP-221), the data dictionary (PAP-41) and exports (PAP-205) all read. PAP-41 currently also claims to generate `pii.json`; after this issue PAP-41 reads the registry and renders it.\n\n**Scope**\n\nIn: `packages/db/src/pii/{annotation,registry,build}.ts`, `pii()` column wrapper, `pnpm pii:build` writing `packages/db/generated/pii.json`, Biome rule `@paperos/config-biome/db/pii-required`, consumer wiring: `paperos.audit_redactions` seed (PAP-38), span processor denylist loader (PAP-40), `docs/data/pii.md`.\n\nOut: Retention jobs and legal hold (`r4/data-layer/retention-jobs`), tenant purge (`r4/data-layer/tenant-purge`), per-user erasure (PAP-221), field encryption (PAP-353).\n\n**Spec**\n\n* `pii(column, { kind: 'identifier'|'contact'|'content'|'financial'|'credential'|'location', subject: 'user'|'contact'|'employee', retention?: Duration })` wraps any Drizzle column and records metadata in a module-level registry keyed by `table.column`.\n* `pii.json` shape `{ generatedAt, schemaHash, columns: [{ table, column, kind, subject, encrypted: boolean, retention? }] }` plus the legacy `{ [table]: string[] }` view PAP-38 and PAP-40 already read; deterministic ordering.\n* Lint: a column named `email|phone|name|address|ssn|tax_id|iban|dob|ip|first_name|last_name` without `pii()` fails Gate 1 with the nearest annotation suggestion; allowlist with expiry in `packages/db/src/pii/allowlist.yaml`.\n* Encrypted columns (PAP-353 `encrypted()`) are auto-registered as `kind: 'credential'`, `encrypted: true`.\n* Consumers: `audit_redactions` seeded for `credential` and `financial`; PAP-40 processor denies span attribute keys matching any annotated column name; PAP-41 renders the kind badge; PAP-205 export manifest marks PII files; `r4/data-layer/events-core` payload refinement rejects annotated keys.\n* `pnpm pii:build --check` fails when the committed file is stale; `pnpm pii:report` prints coverage per table and subject.\n\n**Interface contract**\n\nProvides: `pii()` annotation, `piiRegistry()`, `pii.json` (both shapes), lint rule, scripts `pii:build|report`, type `PiiEntry`.\n\nConsumes: Schema and column helpers (PAP-32, PAP-33), `audit_redactions` table (PAP-38), span processor hook (PAP-40, soft), `encrypted()` (PAP-353, soft). Consumed by PAP-41, PAP-107, PAP-205, PAP-221, PAP-40, PAP-38, `r4/data-layer/retention-jobs`, `r4/data-layer/events-core`.\n\n**Definition of done**\n\n* Every core table column holding personal data annotated; lint catches a seeded unannotated `phone` column (shown in PR).\n* `pii.json` committed and consumed by the PAP-40 filter test and PAP-38 redaction seed; an annotated attribute never reaches the OTel exporter (test).\n* PAP-41 description updated by comment: it reads the registry instead of generating `pii.json`.\n* `docs/data/pii.md` with the kind and subject tables; CHANGELOG under Security; Linear comment.\n\n**Test plan**\n\n* Unit: annotation parser and registry determinism, lint fixtures (annotated, unannotated, allowlisted with expired date), legacy shape generation, `--check` staleness.\n* E2E: CI compose: build `pii.json` against the migrated database, run the PAP-40 collector test and the PAP-38 redaction test with the generated file.\n\n**Demo**\n\nReviewer adds a `phone text()` column to a scratch table, runs `pnpm lint` and reads the failure, wraps it in `pii()`, runs `pnpm pii:build` and opens the diff of `pii.json`. Under a minute.\n\n**Edge cases**\n\n* Column renamed: registry key changes; `--check` reports the stale entry and the redaction seed migration is regenerated.\n* jsonb column with mixed content (`attributes`): annotate at the column level with `kind: 'content'`; per-key classification is out of scope and documented.\n* External tables (Better Auth, pg-boss): registered by a sidecar list in `pii/external.ts`, not by annotation.\n* Allowlist entry past its expiry: lint fails until renewed.\n\n**Dependencies**\n\nBlocked by PAP-33 (schema) and PAP-38 (`audit_redactions`). Soft: PAP-40, PAP-353, PAP-32. Blocks PAP-221 (registry) and PAP-41 (rendering); siblings `r4/data-layer/retention-jobs` and `r4/data-layer/tenant-purge` consume it softly.\n\n**Agent**\n\nBuilder: Forge (Schema Wright). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/data-layer/retention-jobs",
+   "title": "Retention policy `ops/data/retention.yaml`, the nightly `retention.run` job with delete, anonymise and partition-drop strategies, legal hold flags and the audit summary per table",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Staff"
+   ],
+   "milestone": "Tenant-safe and observable",
+   "parent": "PAP-355",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-43",
+    "PAP-38"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nSecond child of PAP-355: enforce storage limitation. A declarative retention file names how long each table keeps rows and what happens after (delete, anonymise column by column, or drop whole partitions), a nightly job executes it in time-boxed batches, legal hold suspends it per tenant or user, and every run leaves an audit summary so the release digest (PAP-88) can report rows removed.\n\n**Scope**\n\nIn: `ops/data/retention.yaml` with Zod schema, `packages/db/src/retention/{schema,plan,run,strategies}.ts`, job `retention.run` (PAP-43), `tenant.legal_hold` and `user.legal_hold` columns with reason, oRPC `retention.preview` (staff), `docs/data/retention.md`.\n\nOut: PII annotations (`r4/data-layer/pii-registry`), tenant purge (`r4/data-layer/tenant-purge`), backups expiry (PAP-30, PAP-354), marketing consent (PAP-405).\n\n**Spec**\n\n* Entry shape `{ table, column: created_at|updated_at|ended_at, keep: Duration, action: delete|anonymise|drop_partition, anonymise?: { [column]: 'null'|'hash'|'truncate_ip'|'pseudonym' }, tenantOverride?: { min, max } }`; defaults from PAP-355: `audit_event` 24 months (archive then drop), `prompt_event` 180 days, `session` 90 days after expiry, `impersonation` 24 months, `webhook_delivery` 30 days, `import_run_item` 90 days, analytics events 13 months anonymised after 90 days.\n* Tenant overrides within `[min, max]` stored in `tenant.settings.retention`; defaults per PAP-126 compliance profile (7-year finance retention); tables tagged `immutable` (PAP-179, PAP-180 documents) are refused at schema validation.\n* Job runs nightly at 02:00 UTC, batches of 5,000 with `SELECT ... FOR UPDATE SKIP LOCKED`, per-run time box 30 minutes, resumes next night; partitioned tables drop whole partitions when every row is past retention.\n* Legal hold: `legal_hold = true` on a tenant or user skips every row in that scope and lists it in the run report; setting or clearing a hold requires a reason and is audited.\n* One `audit_event` per table per run with `{ deleted, anonymised, skippedHeld, durationMs }` and `actor_kind = 'system'`; `retention.completed` event for PAP-88.\n* `retention.preview` returns counts per table that the next run would touch, for the staff usage page (PAP-432).\n\n**Interface contract**\n\nProvides: `retention.yaml` schema, job `retention.run`, event `retention.completed`, `legal_hold` flags and oRPC `retention.preview`, `legalHold.set` with reason.\n\nConsumes: Jobs (PAP-43), audit summary rows (PAP-38), partitions (PAP-38 helper), `pii.json` for anonymisation defaults (`r4/data-layer/pii-registry`, soft), compliance profile (PAP-126, soft). Consumed by PAP-88 digest, PAP-432 usage page, PAP-221 (erasure strategies reuse `strategies.ts`).\n\n**Definition of done**\n\n* Retention run on a seeded database deletes and anonymises exactly the expected rows (fixture with rows straddling each boundary); audit summary rows present.\n* Legal hold on one tenant leaves its rows untouched and the report names it; immutable-table entry rejected at validation.\n* Partition-drop path proven on `audit_event` with a synthetic 25-month-old partition; time box observed with a 1-minute override.\n* `docs/data/retention.md`; CHANGELOG under Security; Linear comment with the run report.\n\n**Test plan**\n\n* Unit: schema validation (unknown table, immutable table, override outside bounds), boundary arithmetic with fake clock, each anonymisation strategy, batch planner and resume cursor.\n* E2E: CI compose: seed, run the job twice (second run is a no-op), assert counts and the `retention.completed` event payload.\n\n**Demo**\n\nReviewer opens `retention.preview` on the staff usage page, sets a legal hold on the demo tenant with a reason, runs `pnpm jobs:run retention.run --now` and reads the report showing held rows skipped. Under two minutes.\n\n**Edge cases**\n\n* Row referenced by an FK from a retained table: delete fails; the planner orders tables by FK depth and reports blockers instead of crashing.\n* Tenant override shorter than the legal minimum: rejected with the bound named.\n* Anonymised row later exported (PAP-205): export shows the pseudonym; documented.\n* Clock jump or DST: schedule in UTC; boundary uses `now()` from the database.\n\n**Dependencies**\n\nBlocked by PAP-43 (jobs) and PAP-38 (audit, partitions). Soft: `r4/data-layer/pii-registry`, PAP-126, PAP-432. Consumed by PAP-88, PAP-221.\n\n**Agent**\n\nBuilder: Forge (Schema Wright). Reviewer: Sentinel (Security Auditor; Ledger reviews finance table entries).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/data-layer/tenant-purge",
+   "title": "Export-first tenant hard-purge job `tenant.purge`: FK-order deletion generator, sessions, keys, Yjs and MinIO cleanup, `tenant_tombstone` and `pnpm tenant:verify-purged`",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Staff"
+   ],
+   "milestone": "Tenant-safe and observable",
+   "parent": "PAP-355",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-43",
+    "PAP-33"
+   ],
+   "blocks": [
+    "PAP-221"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nThird child of PAP-355 and the destructive one: after PAP-432's grace period, remove every trace of a tenant (rows, files, documents, keys, sessions) in a resumable, audited job that refuses to run without a completed export and leaves only a tombstone. This is the backstop GDPR relies on, so it is generated from the schema, verified by a script, and reviewed as security-sensitive.\n\n**Scope**\n\nIn: Job `tenant.purge` and `tenant.export_before_purge`, `packages/db/src/purge/{order,run,verify}.ts` (FK-order generator from `information_schema`), `tenant_tombstone (tenant_id, purged_at, export_sha256, row_counts jsonb)`, `pnpm tenant:verify-purged <id>`, `pnpm tenant:purge --dry-run`, Needs Justin gate for tenants with paid history in the last 90 days, `docs/data/tenant-purge.md`.\n\nOut: Grace period, states and cancel flow (PAP-432), export format (PAP-205, PAP-420), per-user erasure (PAP-221), backup expiry (documented, PAP-30 and PAP-354).\n\n**Spec**\n\n* Preconditions: tenant state `deleted` with `deleted_at + grace <= now()`, `legal_hold = false`, a completed export whose `sha256` is recorded, and either no paid history in 90 days or an approved PAP-94 decision card; otherwise the job exits `refused` with the reason.\n* Sequence: revoke sessions and keys (PAP-223, PAP-60), delete Yjs rooms for the tenant (PAP-140 admin route), delete the MinIO prefix (PAP-37), delete rows table by table in FK order using `paperos_owner` inside an audited `app.bypass` transaction per table (PAP-34, PAP-38 `bypass_read`), retire data keys (PAP-353), write the tombstone last.\n* FK-order generator walks `information_schema.referential_constraints` at run time and fails the dry run when a tenant-scoped table lacks a `tenant_id` mapping (PAP-432 usage page shows it as unknown).\n* Resumable: checkpoint per table in `tenant_purge_run`; a crash resumes at the next table; the tenant is already inaccessible so partial state is invisible.\n* `tenant:verify-purged` counts rows in every tenant table, objects under the prefix, Yjs rooms and data keys; prints zeros or names the leftovers; exit code non-zero on leftovers.\n* Events `tenant.purged` (consumed by PAP-432 for the state transition) and one `audit_event` per table with counts; PAP-88 digest line.\n\n**Interface contract**\n\nProvides: Jobs `tenant.purge`, `tenant.export_before_purge`, table `tenant_tombstone`, table `tenant_purge_run`, scripts `tenant:verify-purged`, `tenant:purge --dry-run`, event `tenant.purged`, FK-order generator `purgeOrder()` (reused by PAP-221 and PAP-422).\n\nConsumes: Jobs (PAP-43), core entities (PAP-33), export job (PAP-205 or PAP-420, soft: refuses without one), files (PAP-37), Yjs admin route (PAP-140), keys (PAP-353), sessions and agent keys (PAP-223, PAP-60), RLS bypass and audit (PAP-34, PAP-38), decision cards (PAP-94). Consumed by PAP-432, PAP-221, PAP-422.\n\n**Definition of done**\n\n* Purge of a seeded tenant with tables, files, docs and encrypted secrets leaves zero rows, zero objects and a tombstone whose `export_sha256` matches the day-0 export (compressed schedule in tests); `tenant:verify-purged` prints zeros.\n* Crash injected after table 3: rerun resumes and completes; exactly-once counts in the tombstone.\n* Refusal paths tested: legal hold, missing export, paid history without approval, table without tenant mapping (dry run).\n* `docs/data/tenant-purge.md` including the backup caveat; CHANGELOG under Security; Linear comment with the verification output.\n\n**Test plan**\n\n* Unit: FK-order generator on a fixture schema with cycles (deferrable constraints) and partitions, precondition matrix, checkpoint resume, verify script parsing.\n* E2E: staging tenant deleted with a 1-minute grace override: export link works, purge completes, verify prints zeros, tombstone row present, Grafana shows the `bypass_read` audit events.\n\n**Demo**\n\nReviewer runs `pnpm tenant:purge --dry-run <id>` and reads the ordered table list, then lets the job run on the seeded tenant and finishes with `pnpm tenant:verify-purged <id>`. Two minutes.\n\n**Edge cases**\n\n* Shared global rows (`user` in two tenants): memberships deleted, user retained; PAP-221 handles the person.\n* Backups still contain the data: documented; restores of a purged tenant re-run the tombstone check and purge again (PAP-354 drill step).\n* Ledger periods locked (PAP-179): the tenant's ledger is deleted with the tenant; per-user erasure keeps pseudonyms.\n* Table added later without the mapping: dry run fails weekly in the PAP-306 re-audit until fixed.\n\n**Dependencies**\n\nBlocked by PAP-43 and PAP-33 (hard). Soft: PAP-205/PAP-420 (refuses without an export), PAP-37, PAP-140, PAP-353, PAP-34, PAP-38, PAP-94, PAP-432 (schedules it). Blocks PAP-221.\n\n**Agent**\n\nBuilder: Forge (Schema Wright). Reviewer: Sentinel (Security Auditor; Ledger for finance tables).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/data-layer/platform-backups",
+   "title": "Platform backup jobs: restic for MinIO buckets, hourly orchestrator schema dumps, daily Coolify and Caddy exports, the off-site key escrow bundle and `backup_age_seconds` alerts",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Tenant-safe and observable",
+   "parent": "PAP-354",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-30",
+    "PAP-37",
+    "PAP-96"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M\n\n**Goal**\n\nFirst half of PAP-354: make every stateful thing outside Postgres recoverable. PAP-30 covers WAL and base backups; this child adds restic backups for tenant files, the orchestrator schema, Coolify resource definitions and Caddy config, replicates the repo to a second provider, escrows the keys that unlock it all, and exports the backup-age metrics the monthly drill and PAP-356 alert on.\n\n**Scope**\n\nIn: `ops/backup/{restic.env,minio-sync.sh,orchestrator-dump.sh,coolify-export.ts,caddy-export.sh}`, systemd or Coolify cron definitions, restic repo `paperos-platform-backups` in Hetzner Object Storage with weekly `rclone sync` to Backblaze B2 or Cloudflare R2, escrow bundle builder `ops/backup/escrow.sh` (age-encrypted to Justin's offline key, PAP-301), `backup_age_seconds{job}` and `backup_last_success{job}` exporter, `docs/runbooks/backups.md`.\n\nOut: The drill script, report and monthly run (sibling `r4/data-layer/platform-dr-drill`); Postgres PITR (PAP-30); forge backups (PAP-274).\n\n**Spec**\n\n* Hourly: `mc mirror` MinIO buckets into the restic source dir then `restic backup --tag minio`; `pg_dump --schema=orchestrator` piped to `restic backup --stdin --tag orchestrator`.\n* Daily: Coolify resources exported via API to `ops/coolify/*.json` and committed to `paperos-infra`; Caddyfile snapshot; both also in restic.\n* Retention 24 hourly, 14 daily, 8 weekly; `restic forget --prune` weekly; `restic check --read-data-subset=5%` weekly with failure alert.\n* Separate object-storage credential and bucket from `pg-backups`; credentials in sops, injected by Coolify (PAP-25); no credential on the app containers.\n* Escrow bundle: sops age private keys, restic passwords, object-storage credentials, age-encrypted to Justin's offline key, uploaded to the second provider and hash-recorded in `docs/security/root-of-trust.md` (PAP-301 owns the human procedure).\n* Metrics scraped by PAP-40; alerts at 2 h for hourly jobs, 26 h for daily, immediate on `restic check` failure; alert routes through PAP-356 when present, else email.\n\n**Interface contract**\n\nProvides: restic repo layout and tags, scripts above, escrow bundle format and hash, metrics `backup_age_seconds{job}`, `backup_last_success{job}`, runbook.\n\nConsumes: Buckets and sops (PAP-25), MinIO (PAP-37), orchestrator schema (PAP-96), Postgres exporter pattern (PAP-30), Grafana and alerting (PAP-40), root-of-trust procedure (PAP-301). Consumed by the sibling drill, PAP-356, PAP-219 incident playbook.\n\n**Definition of done**\n\n* All four job classes running on staging for 48 hours with green `restic check`; `restic snapshots` shows tags and the retention policy applied.\n* Induced failure (pause the hourly job) fires the 2 h alert; evidence attached.\n* Escrow bundle uploaded to the second provider; decrypt tested once with Justin's offline key (recorded by PAP-301) and the hash committed.\n* Runbook with restore commands per component; CHANGELOG; Linear comment with the snapshot listing.\n\n**Test plan**\n\n* Unit: cron expression and retention arithmetic, exporter output format, escrow bundle manifest validation, Coolify export diff stability (sorted keys).\n* E2E: CI on a self-hosted runner (PAP-50): back up a scratch MinIO bucket and orchestrator schema into a scratch restic repo, restore both into fresh containers and diff checksums.\n\n**Demo**\n\nReviewer runs `restic snapshots --tag minio` over the tailnet, opens the backup-age panel in Grafana, then restores yesterday's orchestrator dump into a scratch database with the runbook command. Under two minutes.\n\n**Edge cases**\n\n* Object-storage region outage: weekly replica in the second provider; runbook says which repo to restore from.\n* MinIO bucket growing past the hourly window: `mc mirror` is incremental; alert when a job exceeds 45 minutes.\n* Coolify API version drift: export pinned to the Coolify version; drift fails the daily job loudly.\n* Escrow key rotation (PAP-25 `secrets:rekey`): bundle rebuilt and re-hashed the same day; old bundle deleted after the next drill.\n\n**Dependencies**\n\nBlocked by PAP-30, PAP-37, PAP-96 (hard). Soft: PAP-25, PAP-40, PAP-301, PAP-356, PAP-50. Blocks the sibling `r4/data-layer/platform-dr-drill`.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/data-layer/platform-dr-drill",
+   "title": "Monthly platform disaster-recovery drill `ops/dr/platform-drill.sh`: fresh Hetzner host, escrow decrypt, restore Postgres, MinIO, Yjs and orchestrator state, smoke suite, RPO and RTO report",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Tenant-safe and observable",
+   "parent": "PAP-354",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "r4/data-layer/platform-backups",
+    "PAP-140"
+   ],
+   "blocks": [
+    "PAP-88"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M\n\n**Goal**\n\nSecond half of PAP-354: prove the objectives instead of asserting them. One script rebuilds the whole platform on a throwaway host from backups and escrow only, runs a smoke suite that opens a Yjs document and downloads a file, computes RPO and RTO from what was actually restored, writes the report the release policy requires, and destroys the host. First run before the 2026-09-30 release candidate; then monthly.\n\n**Scope**\n\nIn: `ops/dr/platform-drill.sh` with phases 1-10 from PAP-354, `ops/dr/smoke.ts` (reuses PAP-86 flows), report template `docs/runbooks/dr-reports/platform-<date>.md`, RPO/RTO calculators, Forgejo Actions cron `.forgejo/workflows/platform-drill.yml` (first Sunday monthly), Linear report comment through PAP-97, `docs/runbooks/platform-dr.md` RPO/RTO table.\n\nOut: Backup jobs and escrow (sibling), forge DR (PAP-53), Postgres PITR mechanics (PAP-30).\n\n**Spec**\n\n* Phases: create cpx31 from cloud-init; `ops/bootstrap.sh` (PAP-25) at `dr.<domain>`; decrypt escrow (Justin's step the first time, then a drill-only age key held by the orchestrator); restore Postgres to the newest point (PAP-30) and the orchestrator schema; restore MinIO buckets; deploy `apps/api`, `apps/web`, Hocuspocus and Electric from Coolify exports with pinned image digests (PAP-26); smoke; measure; report; destroy unless `--keep`; abort after 6 h.\n* Smoke suite: sign in as a seeded user, open a table, open a Yjs doc and see the last edit, download a file, orchestrator `/status`; each step timed.\n* RPO = `now - max(latest restored row timestamps)` across `audit_event`, `yjs_updates`, MinIO object mtimes and orchestrator events; RTO = wall clock from phase 1 to smoke green; targets RPO 1 h, RTO 4 h (Postgres alone 30 min).\n* Restore uses only images from our own registry (PAP-50) with GitHub blocked, as in PAP-53; field decryption proven with keys restored from escrow (PAP-353).\n* Report lists phase timings, targets met or missed, and opens a Linear issue per gap; `dr.drill.completed` event for PAP-88 (a release candidate requires a green drill within 30 days).\n* Cost guard: one cpx31 for at most 6 h monthly; the script refuses to create a second host while one is tagged `dr`.\n\n**Interface contract**\n\nProvides: `ops/dr/platform-drill.sh`, `ops/dr/smoke.ts`, report template and directory, event `dr.drill.completed`, runbook RPO/RTO table.\n\nConsumes: Backups and escrow (sibling), bootstrap (PAP-25), PITR (PAP-30), Coolify exports and image digests (PAP-26), Yjs tables (PAP-140), orchestrator schema (PAP-96), smoke flows (PAP-86, soft), Linear comment helper (PAP-97, soft), runner (PAP-50, soft). Consumed by PAP-88/PAP-252 release policy, PAP-219 incident playbook.\n\n**Definition of done**\n\n* One full drill completed with RPO under 1 h and RTO under 4 h; report committed with phase table and screenshots of the restored app at 1280 and the Yjs doc with its last edit.\n* Escrow decrypt performed once by Justin (recorded) and once by the drill key; both documented.\n* Cron registered; second run scheduled; `dr.drill.completed` consumed by the PAP-88 certification input.\n* Runbook; CHANGELOG; Linear comment with the report link.\n\n**Test plan**\n\n* Unit: RPO/RTO calculators on fixture timestamps, report renderer snapshot, phase state machine with `--resume <phase>`.\n* E2E: the drill itself against staging backups on a scratch host; a reduced `--phases 4-7` run in CI on a self-hosted runner restoring into containers.\n\n**Demo**\n\nReviewer opens the latest `platform-<date>.md`, reads RPO and RTO, then runs `ops/dr/platform-drill.sh --phases 7 --target dr.<domain>` to re-run the smoke suite against the kept host. One minute.\n\n**Edge cases**\n\n* Yjs documents with uncompacted updates: restore includes `yjs_updates`; compaction runs on first load and the smoke step waits for it.\n* Orchestrator claims in flight at backup time: PAP-96 re-queues `interrupted` sessions; the drill asserts no duplicate PRs were opened.\n* Hetzner API quota or region unavailable: fall back to a second location listed in the script; report notes it.\n* Drill exceeds 6 h: aborted, host destroyed, report marks RTO missed with the phase reached.\n\n**Dependencies**\n\nBlocked by `r4/data-layer/platform-backups` and PAP-140 (hard). Soft: PAP-25, PAP-26, PAP-30, PAP-50, PAP-53, PAP-86, PAP-97, PAP-301. Blocks PAP-88.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Security Auditor; Justin performs the escrow decrypt once).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/data-layer/jobs-core",
+   "title": "`@paperos/jobs` core on pg-boss: `defineJob`, `enqueue`, `schedule`, `withIdempotency`, tenant and actor context, retries, dead-letter and the `apps/worker` entry with Dockerfile",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Local-first sync working",
+   "parent": "PAP-43",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-32",
+    "PAP-214"
+   ],
+   "blocks": [
+    "PAP-37",
+    "PAP-39",
+    "PAP-136",
+    "PAP-174",
+    "PAP-199",
+    "PAP-205",
+    "PAP-355",
+    "PAP-370",
+    "PAP-420",
+    "PAP-443",
+    "PAP-454"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nFirst child of PAP-43 and the runtime twenty issues name: the job registry and worker, without the admin page. Everything that runs later than the request (variants, embeddings, emails, exports, retention, event dispatch) goes through this package, so it lands first and stays small: pg-boss 10.x, Zod payloads on both sides, tenant and actor context for RLS and audit, ordered retries, cron and a dead-letter table.\n\n**Scope**\n\nIn: `packages/jobs/src/{define,enqueue,schedule,idempotency,context,worker}.ts`, pg-boss schema `jobs` plus `jobs.idempotency (key, completed_at, result)` and `jobs.dead_letter`, `apps/worker` entry loading every registered job with its Dockerfile (PAP-26 image `ghcr.io/imagine-os/<app>-worker`), inline worker for `pnpm dev`, `docs/platform/jobs.md`.\n\nOut: `/admin/jobs` page, `jobs.*` oRPC and metrics (sibling `r4/data-layer/jobs-admin`), durable multi-step workflows (PAP-174), event dispatcher (`r4/data-layer/events-outbox-dispatcher`).\n\n**Spec**\n\n* `defineJob({ name: 'domain.action', schema, handler, retry: { attempts: 5, backoff: '10s..10m' }, concurrency: { global?, perTenant? }, singletonKey?, timeout: '5m' })`; duplicate names rejected at boot; payload validated on enqueue and on dequeue (drift goes to dead-letter, never a crash).\n* `enqueue(job, input, { idempotencyKey, runAt, priority, tenantId, actorId, requestId })` maps `idempotencyKey` to pg-boss `singletonKey`; `schedule(job, cron, input)` in UTC; `withIdempotency(key, fn)` backed by `jobs.idempotency`.\n* `JobContext = { tenantId?, actorId?, actorKind: 'system', requestId, attempt, log, db }` where `db` is `withTenant` when `tenantId` is set so RLS applies and PAP-38 records `actor_kind='system'` with `reason = job name`.\n* Inputs over 64 KB rejected; store blobs in PAP-37 and pass a `file_id`.\n* SIGTERM drains 30 s then returns unfinished jobs to the queue; archive after 7 days, delete after 30; dead-letter kept 90 days with requeue support.\n* Per-tenant concurrency via `singletonKey = tenantId` groups; thundering herd after downtime collapsed by `singletonKey` per schedule.\n* Library pinned by PAP-214's decision; if PAP-214 overrides pg-boss, the `JobsPort` surface stays identical and only `worker.ts` changes.\n\n**Interface contract**\n\nProvides: `defineJob`, `enqueue`, `schedule`, `withIdempotency`, `JobContext`, `JobDefinition<TInput>`, tables `jobs.*`, `jobs.idempotency`, `jobs.dead_letter`, worker image, env `JOBS_INLINE=1`.\n\nConsumes: Schema and migrations (PAP-32), library decision (PAP-214), audit vars (PAP-38, soft), deploy pipeline for the image (PAP-26, soft). Consumed by name: `files.variants` (PAP-37), `search.upsert|embed` (PAP-39), `audit.partitions|archive` (PAP-38), `notify.deliver` (PAP-136), `email.send` (PAP-370), `import.chunk` (PAP-199), `export.run` (PAP-420), `events.dispatch`, `retention.run`, `tenant.purge`, and the sibling admin page.\n\n**Definition of done**\n\n* 1,000 jobs processed by two replicas with zero duplicate effects (one row per key); worker killed mid-job reruns on the other replica and the idempotency guard prevents a double effect (log attached).\n* Cron `*/1 * * * *` fires within a 3-minute window; SIGTERM drain test green; schema drift lands in dead-letter with a clear error.\n* PAP-37 `files.variants` converted as the reference consumer; `docs/platform/jobs.md`; ADR note; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: registry duplicate rejection, schema validation on both sides, backoff schedule, `withIdempotency` under concurrent callers, context propagation into `withTenant`.\n* E2E: CI compose: two worker processes, 1,000 enqueues with 500 distinct keys, assert 500 effects; SIGKILL one worker mid-handler; per-tenant concurrency limit observed with timestamps.\n\n**Demo**\n\nReviewer runs `pnpm dev` and enqueues the demo job that fails twice then succeeds from `pnpm tsx examples/jobs.ts`, watches the inline worker log the retry schedule, then inspects `jobs.dead_letter` after forcing a schema mismatch. Under 90 seconds.\n\n**Edge cases**\n\n* Postgres failover mid-poll: reconnect; expired `active` jobs retried.\n* Handler never resolves: per-job timeout, default 5 minutes, then retry.\n* Tenant deleted while queued: handler receives `tenant_gone` and completes as `skipped`.\n* Module disabled for the tenant (PAP-266): jobs of that module skipped with a reason.\n\n**Dependencies**\n\nBlocked by PAP-32 and PAP-214 (hard). Soft: PAP-26, PAP-38, PAP-40. Blocks PAP-37, PAP-39, PAP-136, PAP-174, PAP-199, PAP-205, PAP-355, PAP-370, PAP-420, PAP-443, PAP-454 and the sibling admin child.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/data-layer/jobs-admin",
+   "title": "`/admin/jobs` staff page and `jobs.list|get|requeue|cancel` procedures with dead-letter requeue, `paperos_jobs_*` metrics and the dev banner for pending jobs without a worker",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Local-first sync working",
+   "parent": "PAP-43",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "r4/data-layer/jobs-core",
+    "PAP-268"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nSecond child of PAP-43: make background work visible. Staff see queued, active, failed and dead-lettered jobs with attempts and errors, can requeue or cancel, and Grafana gets queue depth and latency; developers get a banner when jobs are pending but no worker runs.\n\n**Scope**\n\nIn: oRPC router `jobs` in `packages/api-contract` (staff only, `authorize('jobs.manage')`), page `/admin/jobs` with spec `specs/pages/admin/jobs.spec.yaml` using the PAP-165 grid when present else the PAP-71 table, metrics exporter `paperos_jobs_{queued,active,failed,dead_letter,duration_seconds}` by job name, dev banner component, `docs/platform/jobs.md` admin section.\n\nOut: Core runtime (sibling), workflow visualisation (PAP-174 automations), agent session status (PAP-288).\n\n**Spec**\n\n* `jobs.list({ state?, name?, tenantId?, cursor })` returns `{ id, name, state, attempts, createdAt, startedAt, finishedAt, lastError, tenantId }` with signed cursors; `jobs.get` adds the redacted payload (`pii.json`); `jobs.requeue(id)` and `jobs.cancel(id)` audited with reason.\n* Page columns and filters per state; row action Requeue on dead-letter rows; a Run demo button enqueues the demo job in non-production.\n* Metrics scraped from the worker `/metrics`; alert when `dead_letter` grows by more than 10 in an hour or `queued` age exceeds 10 minutes (PAP-40).\n* Dev banner: `pnpm dev` polls `jobs.queued` count; if greater than zero and no worker heartbeat in 60 s, the shell shows a banner with the command to start one.\n\n**Interface contract**\n\nProvides: oRPC `jobs.*`, page `/admin/jobs`, metrics above, `JobsDevBanner`.\n\nConsumes: Core package (sibling), routers and `callAs` (PAP-268), `can()` (PAP-229, soft), grid (PAP-165, soft) or table (PAP-71), spec schema (PAP-114), Grafana (PAP-40, soft).\n\n**Definition of done**\n\n* Customer principal gets `FORBIDDEN` on `jobs.list`; staff sees the run; dead-letter requeue works and is audited.\n* Page screenshots at 768, 1280, 1920 with a dead-letter row, light and dark; axe clean; spec validates.\n* Metrics visible in Grafana with the two alerts configured; docs; CHANGELOG; Linear comment with the screenshot.\n\n**Test plan**\n\n* Unit: list filter to SQL, payload redaction, cursor round trip, banner condition logic with fake timers.\n* E2E: Playwright: staff opens the page, runs the demo job, watches attempts update, requeues a dead-letter row; `callAs(customer)` denied.\n\n**Demo**\n\nReviewer opens `/admin/jobs` as staff, clicks Run demo, watches the retry schedule, then requeues the seeded dead-letter row. Under 90 seconds.\n\n**Edge cases**\n\n* 10,000 dead-letter rows: paginated; bulk requeue by name capped at 500.\n* Payload contains a `file_id` only: page links to the file, never inlines blobs.\n* Worker heartbeat missing in production: alert, no banner.\n\n**Dependencies**\n\nBlocked by `r4/data-layer/jobs-core` and PAP-268 (hard). Soft: PAP-229, PAP-165, PAP-71, PAP-114, PAP-40.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer) with Iris on the page. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/data-layer/search-keyword",
+   "title": "Search registry and keyword search: `registerSearchable`, `search_document` with tsvector and trigram indexes, upsert triggers, deferred mode and `search.query` keyword mode with facets and `can()` post-filter",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Local-first sync working",
+   "parent": "PAP-39",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-33",
+    "PAP-268",
+    "PAP-229"
+   ],
+   "blocks": [
+    "PAP-138"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nFirst child of PAP-39: the part the command bar (PAP-151), knowledge search (PAP-138) and table filters (PAP-166) need before any embeddings exist. Packages register searchable entities once, triggers keep a `tsvector` and trigram title current, and `search.query` returns ranked, tenant-scoped, permission-filtered results with facet counts.\n\n**Scope**\n\nIn: `packages/search/src/{registry,query,sanitize}.ts`, table `search_document (tenant_id, entity_type, entity_id, title, body, tsv, facets jsonb, route, updated_at)` with GIN on `tsv`, `pg_trgm` GIN on `title`, RLS; SQL function `paperos.search_upsert(entity_type, id)` and generated triggers; session var `app.search_mode` for deferred bulk imports; `search.query` keyword mode; core registrations `workspace`, `user`, `file`; `docs/data/search.md`.\n\nOut: Embeddings, semantic and hybrid modes, `<SearchResults/>` (sibling `r4/data-layer/search-semantic`), cross-source UI (PAP-138), command palette (PAP-151).\n\n**Spec**\n\n* `registerSearchable({ entity, table, titleField, bodyFields, facets, weight, route })` validated at boot against Drizzle types and live columns; duplicate entity names error naming both packages.\n* Language `english` default, per-tenant `settings.search.language`, `simple` fallback; body capped at 100 KB with a `truncated` flag; soft-deleted rows drop their document.\n* `search.query({ q, entityTypes?, facets?, limit })` ranks with `ts_rank_cd` plus a trigram similarity boost on title; returns `{ items: [{ entityType, entityId, title, snippet, score, href, facets }], facetCounts }` with `ts_headline` snippets; empty query returns recent items.\n* `can()` post-filter (PAP-229) drops hits the actor may not read; over-fetch factor 3 with a second page when filtering removes too many.\n* Deferred mode: `SET LOCAL app.search_mode = 'deferred'` makes triggers enqueue ids into `search_pending`; `search.reindex(entity)` drains it (job in the sibling when PAP-43 is present, inline otherwise).\n* Latency at 100k documents: keyword p95 under 80 ms on the `load` seed; bench committed.\n\n**Interface contract**\n\nProvides: `registerSearchable`, `SearchableDef`, `search.query` (keyword mode), `search.reindex`, table and triggers, session var `app.search_mode`, `search_pending`.\n\nConsumes: Tables (PAP-33), RLS (PAP-34), routers (PAP-268), `can()` (PAP-229), `pg_trgm` (PAP-30, PAP-42). Consumed by PAP-138, PAP-151, PAP-166, PAP-189 and the sibling.\n\n**Definition of done**\n\n* \"acme\" on the demo seed returns the Acme workspace and members ranked sensibly; \"acmee\" still finds it (recording).\n* Insert, update, soft-delete a workspace and `search_document` follows; deferred mode batches and reindex drains (integration).\n* `callAs(tenantB)` never sees tenant A; a `can()` denial removes a hit; bench at 100k documents committed.\n* `docs/data/search.md`; CHANGELOG; Linear comment with the recording.\n\n**Test plan**\n\n* Unit: registry rejects unknown columns and duplicates, query sanitiser for stop-word-only and operator injection, facet containment builder, over-fetch loop termination.\n* E2E: CI compose: seed `demo`, query through `callAs` for two tenants, assert isolation and ranking of the fixture terms.\n\n**Demo**\n\nReviewer runs `pnpm tsx examples/search.ts acme` and `... acmee`, sees the same top hit, then registers a scratch entity and watches boot validation reject a misspelled column. Under a minute.\n\n**Edge cases**\n\n* Non-English content under `english`: documented; `simple` per tenant.\n* Very long titles: snippet truncated, full title returned separately.\n* Entity registered twice from two packages: boot error naming both.\n* Trigger storm on bulk import: deferred mode required by PAP-199; documented in the import engine.\n\n**Dependencies**\n\nBlocked by PAP-33, PAP-268, PAP-229 (hard). Soft: PAP-34, PAP-30, PAP-42, PAP-43. Blocks PAP-138; the sibling `r4/data-layer/search-semantic` builds on it.\n\n**Agent**\n\nBuilder: Forge (Schema Wright). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/data-layer/search-semantic",
+   "title": "Semantic and hybrid search: `EmbeddingProvider`, `search.embed` job, pgvector HNSW column, RRF fusion, reindex on model change and the `<SearchResults/>` component",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Local-first sync working",
+   "parent": "PAP-39",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "r4/data-layer/search-keyword",
+    "PAP-43"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nSecond child of PAP-39: add meaning. An `EmbeddingProvider` behind an OpenAI-compatible endpoint (self-hosted `text-embeddings-inference` on staging) fills a `vector(1024)` column through a job, `search.query` gains `semantic` and `hybrid` modes fused with reciprocal rank fusion, model changes trigger a reindex, and one `<SearchResults/>` component renders grouped results with empty and error states.\n\n**Scope**\n\nIn: `packages/search/src/{embed,provider,fusion}.ts`, column `embedding vector(1024)` with HNSW index and `embedding_model text`, job `search.embed` (PAP-43), `EmbeddingProvider` interface with `openai-compatible` and `fake` adapters, `ops/compose/embeddings.yml` (staging only), `search.query` modes, `<SearchResults/>` in `@paperos/ui`, docs section.\n\nOut: Keyword core (sibling), RAG or chat over results, per-tenant models.\n\n**Spec**\n\n* `EmbeddingProvider { model, dims, embed(texts: string[]): Promise<number[][]> }`; env `EMBEDDINGS_URL`, `EMBEDDINGS_MODEL`; batches of 64 texts; provider down leaves keyword results working.\n* `search.embed` enqueued by the upsert trigger path when `embed: true` in the registration; stores `embedding_model` per row; `pnpm search:reindex --model <new>` re-embeds rows whose model differs, in batches with a time box.\n* Changing dimensions is a migration (new column, backfill, swap) generated by `pnpm search:migrate-dims`; documented since `vector(1024)` is fixed per column.\n* `hybrid` = RRF over keyword and vector top-100 lists with `k = 60`; deterministic tie-break by `updated_at desc`; `semantic` alone requires the provider and returns `PROVIDER_UNAVAILABLE` otherwise.\n* Latency at 100k documents: hybrid p95 under 250 ms on staging with the embedding container; bench committed.\n* `<SearchResults items facetCounts mode onSelect />` groups by entity type, shows snippets and a mode toggle; states loading, empty, error, provider-unavailable; keyboard navigable.\n\n**Interface contract**\n\nProvides: `EmbeddingProvider`, job `search.embed`, `search.query` modes `semantic|hybrid`, scripts `search:reindex`, `search:migrate-dims`, component `SearchResults`.\n\nConsumes: Sibling registry and table, jobs (PAP-43), `vector` extension (PAP-30, PAP-42), UI primitives (PAP-71, PAP-236 to PAP-238), env schema (PAP-17). Consumed by PAP-138, PAP-151.\n\n**Definition of done**\n\n* Semantic mode answers \"billing team\" with the finance workspace on the demo seed against the staging container; hybrid bench at 100k documents committed.\n* Reindex on model change re-embeds only stale rows (test); provider outage leaves keyword results intact (test).\n* `<SearchResults/>` at 375, 768, 1280, 1920 including empty, error and provider-unavailable states; axe clean.\n* Docs section; CHANGELOG; Linear comment with the bench and Storybook link.\n\n**Test plan**\n\n* Unit: RRF determinism and tie-break, batch splitting, model-staleness query, provider error mapping, component state matrix.\n* E2E: CI compose with the `fake` provider: embed job fills vectors, hybrid query returns fused order; Playwright story capture at four widths.\n\n**Demo**\n\nReviewer types \"acme\" then switches the toggle to semantic and searches \"billing team\"; opens Storybook to see the provider-unavailable state. Under a minute.\n\n**Edge cases**\n\n* Body over the cap: only the first 100 KB embedded; flag shown in the dictionary.\n* Provider returns wrong dimensions: row skipped and job dead-lettered with the model name.\n* Tenant language `simple` with semantic mode: vectors are language-agnostic; documented.\n* HNSW build on 1M rows: `maintenance_work_mem` note in the runbook.\n\n**Dependencies**\n\nBlocked by `r4/data-layer/search-keyword` and PAP-43 (hard). Soft: PAP-30, PAP-42, PAP-71, PAP-17. Consumed by PAP-138, PAP-151.\n\n**Agent**\n\nBuilder: Forge (Schema Wright) with Nova on the component. Reviewer: Sentinel (Code Reviewer; Visual Inspector for the component states).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/data-layer/entity-factory",
+   "title": "Build the entity factory: `defineEntity()` yields the Drizzle repository, CRUD oRPC router, Zod DTOs, shape registration, audit reason handling and `record.*` events from one declaration",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Local-first sync working",
+   "parent": null,
+   "size": "L",
+   "estimate": 5,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-268",
+    "PAP-279",
+    "PAP-302",
+    "r4/data-layer/events-core"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build L\n\n**Goal**\n\nWhat a cold Claude session needs most and nothing owns: one call that turns a Drizzle table into a conformant module entity. PAP-268 hand-writes core routers, PAP-448 only declares `RepositoryPort<T>`, and every module (PM, CRM, finance, import) would re-implement CRUD with cursors, filters, audit and events. `defineEntity()` generates it once, the way Supabase and Hasura auto-CRUD do, and keeps twenty parallel sessions from drifting.\n\n**Scope**\n\nIn: `packages/db/src/entity/{define,repository}.ts` (Drizzle implementation of `RepositoryPort<T>` and `UnitOfWork`), `packages/api-contract/src/entity/router.ts` (router generator), `packages/sync` shape registration hook, `packages/db/src/entity/testing.ts` (contract test any entity passes), `docs/data/entities.md` cookbook 'Add an entity in ten minutes', conversion of `workspaces`, `memberships` and `files` routers to the factory.\n\nOut: Custom datasets (PAP-161, PAP-164), view compilation (PAP-163), record detail UI (PAP-333), policies (PAP-227).\n\n**Spec**\n\n* `defineEntity({ table, key: 'invoice', dto, filterFields: FieldSchema, sortable, shape?, audit: { reason: 'agents'|'always'|'never' }, events: true, hooks })` returns `{ repo, router, shape, schemas, key }`.\n* Repository `get`, `list({ cursor, limit<=100, filter?: FilterTree, sort? })`, `create`, `update`, `archive`, `restore`, `bulk({ ids, patch })` (cap 500) through `withTenant`; list uses `toSql` (PAP-279) and `signCursor` (PAP-302); errors map per Contracts §4.\n* Router `router.<key>.<verb>` via `defineRouter` (PAP-268) with `authorize('<key>.<verb>')` (PAP-229), `idempotent()` on create and archive, `X-PaperOS-Reason` mapped to `app.reason` (PAP-38).\n* Events: `record.created|updated|deleted` published in the same transaction with `subject = { type: key, id }` and changed field names only (`r4/data-layer/events-core`); hooks may publish domain topics.\n* `sync: true` registers a shape with tenant and PAP-228 permission predicates; encrypted columns (PAP-353) excluded automatically.\n* Optimistic concurrency: `update` accepts `ifUpdatedAt` and returns 409 with `{ server: row }` (the shape PAP-148 expects).\n* `entityConformance(definition)` runs the PAP-451 repository cases against any entity in CI.\n\n**Interface contract**\n\nProvides: `defineEntity`, `DrizzleRepository<T>` implementing `RepositoryPort<T>`, `UnitOfWork` via `withTenant`, generated `router.<key>.*`, `entityConformance`, cookbook doc.\n\nConsumes: Routers and `callAs` (PAP-268), `toSql` (PAP-279), cursors and error body (PAP-302), `publish` (`r4/data-layer/events-core`), audit vars (PAP-38), `authorize` (PAP-229, soft), idempotency (`r4/data-layer/idempotency-batch`, soft), shapes (PAP-270/271, soft), predicates (PAP-228, soft). Consumed by PAP-100, PAP-175, PAP-187, PAP-347, PAP-129, PAP-333, PAP-451 and every module entity.\n\n**Definition of done**\n\n* `workspaces`, `memberships` and `files` routers regenerated by the factory with PAP-268's tests passing unchanged; typecheck rejects a wrong input.\n* A scratch entity defined in under 30 lines passes `entityConformance`, appears in OpenAPI, emits `record.created` and streams through a shape (integration).\n* Cross-tenant list and get proven empty or `NOT_FOUND` through the PAP-34 harness; 409 precondition path tested.\n* Cookbook with the timed walkthrough; comments on PAP-100, PAP-175, PAP-187, PAP-347; CHANGELOG under Platform.\n\n**Test plan**\n\n* Unit: option validation, DTO derivation from `drizzle-zod`, list SQL snapshot with filter, sort and cursor, error mapping table, hook ordering, shape exclusion of encrypted columns.\n* E2E: CI compose: define a scratch entity, run the generated router through `callAs` for two tenants, assert isolation, events and idempotent replay; Playwright lists it through the typed client on a demo route.\n\n**Demo**\n\nReviewer follows the cookbook: adds a `note` table, calls `defineEntity`, runs `pnpm gen:api`, and lists notes from Scalar with a filter and cursor in under ten minutes on the clock. Two minutes to review the recording.\n\n**Edge cases**\n\n* Table without `tenant_id` (global entity): `tenantScoped: false` required explicitly; list applies the PAP-34 global read policy.\n* Composite natural keys or non-UUID ids: refused; entities use `id()` from PAP-32.\n* Hook throws after `publish`: transaction rolls back both; documented.\n* Very wide tables: shapes require an explicit column list above 40 columns.\n\n**Dependencies**\n\nBlocked by PAP-268, PAP-279, PAP-302 and `r4/data-layer/events-core` (hard). Soft: PAP-229, PAP-228, PAP-38, PAP-270, PAP-271, PAP-353, `r4/data-layer/idempotency-batch`. Consumed by PAP-100, PAP-175, PAP-187, PAP-347, PAP-333, PAP-451.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer; Security Auditor for the error mapping and RLS paths).\n\n**Size**\n\nL: two sessions (repository and router generator, then conversion, conformance and cookbook)."
+  },
+  {
+   "key": "r4/data-layer/migration-safety",
+   "title": "Migration safety: squawk-style lint for generated SQL, expand-contract checklist, `db:migrate --dry-run` against a staging snapshot, `db:rollback` to the previous release and long backfills as jobs",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Local-first sync working",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-32"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nPAP-32 guards `DROP` and sets lock timeouts, but nothing stops an agent from shipping `ALTER TABLE ... ADD COLUMN NOT NULL` without a default on a hot table, an index without `CONCURRENTLY`, or a type change that rewrites a million rows during a deploy. With twenty sessions generating migrations, safety has to be mechanical: lint the SQL, rehearse on a snapshot, keep a way back, and move slow data changes out of the deploy path.\n\n**Scope**\n\nIn: `packages/db/src/safety/{lint,rules,report}.ts` with `pnpm db:lint` in Gate 1, rule set adapted from squawk (unsafe NOT NULL, missing CONCURRENTLY, type rewrite, rename without view, FK without index, `VALIDATE CONSTRAINT` separation), `pnpm db:migrate --dry-run --snapshot` restoring the latest staging base backup into a scratch database (PAP-30) and timing each statement, `pnpm db:rollback --to <tag>` applying reverse migrations for the last release train, `defineBackfill()` producing a pg-boss job with batches and progress, `docs/data/migrations.md`.\n\nOut: Module-swap expand-contract adapters (PAP-443 uses this lint), Drizzle conventions (PAP-32), schema editor migrations for custom datasets (PAP-332).\n\n**Spec**\n\n* Lint runs on `drizzle/*.sql` and `drizzle/custom/*.sql` in the PR diff; each finding has an id `MIG-nn`, severity and a rewrite suggestion; `-- db-lint: allow MIG-04 reason=...` suppressions expire after 30 days.\n* Expand-contract checklist generated for renames and type changes: add, dual-write (trigger or app), backfill job, verify, contract in a later release; the checklist is a PR comment and a `docs/data/migrations/<id>.md` stub.\n* Dry run: restore snapshot (or `load` seed when no snapshot), run pending migrations under `statement_timeout 30s`, report per-statement duration, lock waits and table rewrites; fails on any rewrite of a table over 1M rows.\n* Rollback: every migration folder may include `down.sql`; `db:rollback --to v0.1.0-rc.1` applies downs in reverse for migrations after the tag, refuses when a down is missing (destructive step) and prints the manual path; PITR (PAP-30) remains the last resort.\n* `defineBackfill({ name, table, batch: 5000, select, update })` yields a resumable job with progress in `jobs.idempotency` and a `verify` query; the migration itself only adds the column.\n* Coolify pre-deploy hook (PAP-26) runs lint and, on release tags, the dry run against the latest snapshot before `db:migrate`.\n\n**Interface contract**\n\nProvides: `pnpm db:lint`, rule ids `MIG-*`, `db:migrate --dry-run --snapshot`, `db:rollback --to`, `defineBackfill`, checklist generator, docs.\n\nConsumes: Drizzle workflow and guard (PAP-32), base backups (PAP-30), jobs (PAP-43, soft: inline runner), deploy hook (PAP-26, soft), Gate 1 (PAP-78). Consumed by PAP-443, PAP-430 template upgrades, every schema PR.\n\n**Definition of done**\n\n* Lint catches the five seeded unsafe fixtures and passes the safe rewrites; suppression expiry enforced (test).\n* Dry run against a staging snapshot produces the timing report on a test PR (screenshot); a synthetic 1M-row rewrite fails it.\n* Rollback from head to the previous tag and forward again leaves `db:check` clean (CI upgrade-path job extended).\n* `defineBackfill` fixture processes 100k rows in batches with resume after a kill; docs; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: each rule on positive and negative SQL fixtures, suppression parser and expiry, checklist renderer, backfill batch cursor.\n* E2E: CI compose: snapshot restore into a scratch database, dry run of pending migrations, report JSON validated; rollback and re-migrate sequence.\n\n**Demo**\n\nReviewer adds `ALTER TABLE membership ADD COLUMN tier text NOT NULL;` to a scratch migration, runs `pnpm db:lint` and reads `MIG-01` with the suggested default, then runs the dry run and reads the timing table. Under two minutes.\n\n**Edge cases**\n\n* Migration touches a partitioned table: dry run reports per-partition timings; lint requires `CONCURRENTLY` per partition.\n* Down migration loses data by design: refused; the manual runbook path is printed.\n* No staging snapshot yet (before PAP-30 lands): dry run uses the `load` seed and says so.\n* Two branches generate the same migration number: PAP-32's CI check stays the owner.\n\n**Dependencies**\n\nBlocked by PAP-32 (hard). Soft: PAP-30, PAP-43, PAP-26, PAP-78. Consumed by PAP-443, PAP-430.\n\n**Agent**\n\nBuilder: Forge (Schema Wright). Reviewer: Sentinel (Code Reviewer; Edge Case Hunter for the lint fixtures).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/data-layer/preview-databases",
+   "title": "Ephemeral preview databases: template-cloned per-PR and per-preview-slot databases with a seed profile, migration smoke, TTL teardown, `pnpm db:branch` and the `DATABASE_URL` handoff to the deploy pipeline",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Local-first sync working",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-30",
+    "PAP-32"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra M\n\n**Goal**\n\nPer-PR previews (PAP-26) and the golden-path warm pools (PAP-365) need a database each, and nothing provides one: PAP-42 gives per-worktree databases on a laptop, PAP-30 gives prod and staging. Neon and PlanetScale call this branching; on our own Postgres it is `CREATE DATABASE ... TEMPLATE` from a seeded template, a migration smoke run, and a reaper. It also gives every Claude session a disposable database on staging when Docker is not available.\n\n**Scope**\n\nIn: `ops/db/branch/{create,drop,reap}.sh` and `pnpm db:branch create|drop|list|reap`, template databases `tpl_minimal` and `tpl_demo` refreshed nightly from migrations plus seeds, naming `pr_<number>` and `slot_<n>`, registry table `db_branch (name, kind, ref, created_at, expires_at, size_bytes)` in the ops schema, GitHub and Forgejo workflow steps that create on PR open and drop on close, TTL 7 days with a reaper cron, `docs/dev/preview-databases.md`.\n\nOut: The preview app deploy itself (PAP-26), warm-pool orchestration and provisioning steps (PAP-365), local per-worktree databases (PAP-42), data masking of production copies (never used as a template).\n\n**Spec**\n\n* `db:branch create --from tpl_demo --name pr_123` runs `CREATE DATABASE pr_123 TEMPLATE tpl_demo` (under 5 s for a 200 MB template), grants `paperos_app`, `paperos_readonly` and `electric`, creates the Electric publication, runs pending migrations and returns `DATABASE_URL*` values in the PAP-17 names for the preview environment.\n* Templates rebuilt nightly by `db:branch refresh-templates` from a clean migrate plus `db:seed --profile minimal|demo`; a template is never a copy of production or staging tenant data.\n* Quota: at most 30 branches, 2 GB each; `create` fails with the reaper hint when exceeded; `reap` drops expired branches and any `pr_*` whose PR is closed (checked through the forge API, PAP-276 soft).\n* Every branch gets its own PgBouncer pool entry generated from the registry; connections capped at 10 per branch.\n* Workflow: PR opened creates, PR synchronised re-runs migrations only, PR closed drops; the preview URL comment (PAP-26) includes the branch name.\n* Observability: branch count and total size exported for PAP-40; alert at 25 branches.\n\n**Interface contract**\n\nProvides: Scripts `pnpm db:branch *`, registry table `db_branch`, template databases, workflow steps `db-branch-create|drop`, env handoff contract, docs.\n\nConsumes: Postgres roles and PgBouncer (PAP-30), migrations and seeds (PAP-32), env names (PAP-17), deploy pipeline (PAP-26, soft), forge API for PR state (PAP-276, soft), Grafana (PAP-40, soft). Consumed by PAP-26, PAP-365, PAP-253 nightly staging, Claude sessions without Docker (PAP-42 `remote` mode).\n\n**Definition of done**\n\n* Branch created from `tpl_demo` in under 10 s including migrations; preview app boots against it and the RLS harness passes on the branch (CI transcript).\n* PR close drops the branch; reaper drops an expired branch and one with a closed PR; quota refusal tested.\n* Templates refreshed nightly for two nights; size and count metrics in Grafana.\n* Docs; CHANGELOG; Linear comment with the timing.\n\n**Test plan**\n\n* Unit: name validation and collision, TTL arithmetic, quota check, PgBouncer config rendering, env output shape.\n* E2E: workflow run on a test PR: create, deploy preview against it, run `pnpm test:e2e --grep smoke`, close PR, assert drop.\n\n**Demo**\n\nReviewer opens a draft PR, watches the workflow post the preview URL with `pr_<n>`, connects with `psql` to the branch, closes the PR and runs `pnpm db:branch list` to see it gone. Under two minutes.\n\n**Edge cases**\n\n* Template in use during refresh: build `tpl_demo_next` then rename inside a lock; creates retry for up to 30 s.\n* Branch with logical replication slot left by Electric: `drop` terminates connections and drops the slot first.\n* PR reopened: branch recreated from the template; data from the previous branch is gone, documented.\n* Disk pressure on the 8 GB host: quota plus the PAP-30 disk alert; templates kept small by the `minimal` default.\n\n**Dependencies**\n\nBlocked by PAP-30 and PAP-32 (hard). Soft: PAP-17, PAP-26, PAP-276, PAP-40. Consumed by PAP-26, PAP-365, PAP-253.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/data-layer/tenant-sequences",
+   "title": "Per-tenant sequences and human-readable keys: `defineSequence`, gapless and prefixed formats, `recordKey()` column helper, reservation API and yearly reset",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Local-first sync working",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-32",
+    "PAP-33"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nInvoices need `INV-2026-0042`, issues need `PAP-123`, tickets, quotes, purchase orders and employee numbers all need a per-tenant, human-readable, sometimes gapless counter, and finance law cares about gaps. Nothing owns it, so PAP-180, PAP-100 and PAP-197 would each invent one. This issue ships the primitive once, with the concurrency semantics spelled out.\n\n**Scope**\n\nIn: `packages/db/src/sequence/{define,next,format}.ts`, table `tenant_sequence (tenant_id, name, current bigint, prefix, pad, reset: never|yearly, year, gapless boolean)`, SQL function `paperos.next_key(tenant, name)` using `UPDATE ... RETURNING` under row lock, `recordKey('key', { sequence: 'invoice' })` column helper that assigns on insert via trigger, reservation API for gapless sequences, staff settings section for prefixes, `docs/data/sequences.md`.\n\nOut: Global ids (UUIDv7, PAP-302), Linear issue keys mirrored from Linear (PAP-100 uses the mirror value), formatting for display beyond the pattern.\n\n**Spec**\n\n* `defineSequence({ name: 'invoice', pattern: '{prefix}-{yyyy}-{n:4}', prefix: 'INV', reset: 'yearly', gapless: true })` registered at boot; per-tenant overrides of `prefix` and `pad` in settings, validated against the pattern.\n* `next_key` increments under the row lock in the caller's transaction; for `gapless: true` the increment happens in the committing transaction of the row insert (trigger), so a rollback leaves no gap; for `gapless: false` a reservation `reserve(name, count)` may hand out numbers ahead of time (bulk import).\n* Yearly reset compares `year` with `extract(year from now() at time zone tenant.timezone)` (PAP-33) and restarts at 1 inside the same lock.\n* Uniqueness: unique index on `(tenant_id, key)` for every table using `recordKey()`; concurrent inserts serialise per tenant per sequence only.\n* Backfill helper assigns keys to existing rows in `created_at` order (used by importers, PAP-347, and PAP-334 restore keeps the original key).\n* Audit: prefix or pad changes recorded with reason; changing a gapless sequence's prefix mid-year is refused with guidance.\n\n**Interface contract**\n\nProvides: `defineSequence`, `nextKey(tx, tenantId, name)`, `reserve`, `recordKey()` column helper, SQL function `paperos.next_key`, table `tenant_sequence`, settings section `sequences`.\n\nConsumes: Schema helpers and `withTenant` (PAP-32), tenant timezone (PAP-33), audit (PAP-38, soft), settings page slot (PAP-63, soft). Consumed by PAP-180 invoices and quotes, PAP-197 tickets, PAP-399 employees, PAP-347 imports, PAP-334 restore.\n\n**Definition of done**\n\n* 100 concurrent inserts on one tenant produce keys 1 to 100 with no gaps or duplicates (compose test); a rolled-back insert on a gapless sequence leaves no gap.\n* Yearly reset proven with a fake clock across the tenant's timezone boundary; prefix override round-trips through settings.\n* Backfill assigns keys to 10k seeded rows in `created_at` order; docs; CHANGELOG; Linear comment with the concurrency test output.\n\n**Test plan**\n\n* Unit: pattern parser and formatter (`{n:4}`, `{yyyy}`, `{yy}`), reset arithmetic, override validation, refusal cases.\n* E2E: CI compose: two API replicas insert invoices concurrently against the seeded tenant; assert contiguous keys; importer reservation path.\n\n**Demo**\n\nReviewer creates three demo invoices, reads `INV-2026-0001..0003`, rolls one back in a transaction script and creates a fourth to see `0004` with no gap, then changes the prefix in settings. Under a minute.\n\n**Edge cases**\n\n* Two tenants share a prefix: fine, keys are unique per tenant only; public URLs use the UUID.\n* Timezone change mid-year: reset uses the tenant timezone at the moment of increment; documented.\n* Sequence renamed in code: registry migration required; refuse silent drop.\n* Very high throughput (1,000 inserts per second on one tenant): row lock serialises; documented as the accepted limit, non-gapless sequences may use `reserve` batches.\n\n**Dependencies**\n\nBlocked by PAP-32 and PAP-33 (hard). Soft: PAP-38, PAP-63. Consumed by PAP-180, PAP-197, PAP-399, PAP-347, PAP-334.\n\n**Agent**\n\nBuilder: Forge (Schema Wright). Reviewer: Sentinel (Edge Case Hunter for concurrency; Ledger reviews gapless semantics).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/data-layer/local-data-protection",
+   "title": "Local data protection for PGlite and Tauri caches: sign-out and revocation wipe, `cacheable: false` shapes for sensitive tables, encrypted-column sync lint and the device data policy in page specs",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Local-first sync working",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-25",
+   "blockedBy": [
+    "PAP-271"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build S\n\n**Goal**\n\nLocal-first means tenant data sits in IndexedDB and in the Tauri app data directory on every laptop and phone. PAP-271 persists it, PAP-353 keeps secrets out of shapes, but nothing wipes it on sign-out or session revocation, nothing lets a spec say a dataset must never be cached, and nothing tells a lost-device story. This closes that hole before customers see the sync demo.\n\n**Scope**\n\nIn: `packages/sync/src/protection/{wipe,policy}.ts`, `SyncClient.wipe({ keepOutbox })`, sign-out and `session.revoked` handlers, shape option `cacheable: false` (query-through, no PGlite persistence), page-spec key `sync.localData: cached|session|never` (PAP-114), registry lint refusing `encrypted()` columns and `pii kind: credential|financial` columns in shapes unless `cacheable: false`, Tauri data directory permissions and optional OS-level encryption check, `docs/platform/local-data.md`.\n\nOut: Field encryption itself (PAP-353), OS full-disk encryption enforcement, remote device management, session revocation UI (PAP-220).\n\n**Spec**\n\n* Sign-out (PAP-223 client event) and `session.revoked` (PAP-220, via the push transport when present, else on the next 401) call `wipe()`: drop PGlite tables, clear `_sync_meta`, clear `y-indexeddb` databases for the tenant, keep `_outbox` only when the user confirms 'keep unsent changes' and the policy allows.\n* `cacheable: false` shapes are served through `useShape` from memory only; a reload refetches; the option is forced for tables flagged by the lint.\n* Page spec `sync.localData`: `cached` (default), `session` (wiped when the tab or app closes), `never` (no PGlite rows for the page's datasets); codegen (PAP-120) passes it to the data hooks.\n* Tauri: app data directory created with `0700`; on macOS and Windows the app checks FileVault or BitLocker status through a small plugin call and shows a one-time notice when off; Android uses app-private storage (PAP-260).\n* Tenant switch (PAP-58 `useTenant` remount) wipes the previous tenant's PGlite tables unless the user has the `multi-tenant cache` preference on.\n* Audit: wipe events logged locally and, when online, as `client.wiped` with reason for PAP-356.\n\n**Interface contract**\n\nProvides: `wipe()`, shape option `cacheable`, spec key `sync.localData`, registry lint rule, `LocalDataNotice` component, docs.\n\nConsumes: PGlite client and registry (PAP-271), sign-out event (PAP-223), revocation (PAP-220, soft), push transport (`r4/realtime/live-events-channel`, soft), `pii.json` (`r4/data-layer/pii-registry`, soft), encrypted columns (PAP-353, soft), spec schema (PAP-114), Tauri shims (PAP-259, PAP-260, soft). Consumed by PAP-148 (outbox keep decision), PAP-62 security page copy, PAP-219 controls `SEC-CLIENT-*`.\n\n**Definition of done**\n\n* Sign out wipes PGlite and `y-indexeddb`; revocation from another device wipes within one request cycle (Playwright with two contexts).\n* Registry lint fails for a shape including an `encrypted()` column and passes with `cacheable: false`; spec `never` leaves zero rows in PGlite (test).\n* Tauri Linux and macOS runs show the data directory permissions and the notice; docs; CHANGELOG under Security; Linear comment with the recording.\n\n**Test plan**\n\n* Unit: wipe ordering and `keepOutbox` logic, policy resolution from spec and shape options, lint fixtures, tenant-switch wipe decision.\n* E2E: two browser contexts: sign in, sync the demo shape, revoke the session from the second context, assert the first context clears its local database and redirects; `sync.localData: never` page leaves no rows.\n\n**Demo**\n\nReviewer loads the sync demo, inspects IndexedDB in DevTools, signs out and sees the databases disappear; then marks a shape `cacheable: false` and reloads to see it refetch. Under 90 seconds.\n\n**Edge cases**\n\n* Wipe while offline with unsent changes: prompt once; declining keeps `_outbox` encrypted with a session-derived key until the next sign-in of the same user.\n* Shared kiosk device (PAP-23): policy `session` forced by the kiosk flag.\n* Private browsing (in-memory PGlite): wipe is a no-op with a log line.\n* Very large local database: wipe is asynchronous with a blocking overlay under 5 s.\n\n**Dependencies**\n\nBlocked by PAP-271 (hard). Soft: PAP-223, PAP-220, PAP-353, PAP-114, PAP-259, PAP-260, `r4/data-layer/pii-registry`, `r4/realtime/live-events-channel`. Consumed by PAP-148, PAP-62, PAP-219.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer) with Nova (CRDT Engineer). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/data-layer/pgaudit-db-health",
+   "title": "Enable pgAudit for DDL, role and bypass sessions and add database health checks: bloat, vacuum, index usage, replication slot lag and connection saturation dashboards with alerts",
+   "type": "Infra",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Tenant-safe and observable",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-30",
+    "PAP-40"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nPAP-38 audits application rows and PAP-40 watches latency, but nobody records who ran `ALTER ROLE` or `DROP POLICY` on the cluster, and the failure modes that actually take Postgres down (bloat, a stuck replication slot from a dead Electric instance, connection exhaustion behind PgBouncer) have no dashboard. This adds the database's own audit and health checks so the threat model's B4 boundary has detection.\n\n**Scope**\n\nIn: `pgaudit` extension enabled in `ops/db/init` for the `paperos_owner` and `paperos_readonly` roles (`pgaudit.log = 'ddl, role'`) and for any session with `app.bypass = 'on'` (`pgaudit.log = 'all'` via `SET LOCAL`), log shipping to Loki with a parser, Grafana dashboard `postgres-health` (bloat estimate, dead tuples and last vacuum per table, unused indexes, slot lag and `max_slot_wal_keep_size` headroom, connection saturation per role, long transactions, lock waits), alert rules, weekly `db:health` report posted to Linear, `docs/ops/postgres-health.md`.\n\nOut: Application audit (PAP-38), security event routing (PAP-356 consumes the pgAudit stream), tuning changes (PAP-30 runbook).\n\n**Spec**\n\n* pgAudit configured in `postgresql.conf` via `ALTER SYSTEM`; DDL and role statements logged for every role; bypass sessions log all statements because `app.bypass` is the highest-risk path (PAP-34).\n* Loki pipeline labels `pgaudit` lines with `role`, `class`, `command`, `object`; PAP-356 rule `db.ddl_outside_migration` fires when DDL runs outside the migrator connection.\n* Dashboard panels from `pg_stat_user_tables`, `pg_stat_user_indexes`, `pg_replication_slots`, `pg_stat_activity`, `pg_locks` and a bloat estimate query; refresh 1 minute.\n* Alerts: slot lag over 30 s or retained WAL over 3 GB, connections over 80 percent of `max_connections` per role, a transaction older than 5 minutes, dead tuples over 20 percent on a table larger than 1 GB, an unused index larger than 100 MB (weekly, informational).\n* `pnpm db:health` prints the same numbers as a table and posts the weekly report through PAP-97 when available.\n\n**Interface contract**\n\nProvides: pgAudit configuration, Loki labels, dashboard `postgres-health`, alert rules, script `db:health`, docs.\n\nConsumes: Postgres init and exporter (PAP-30), Loki, Grafana and alerting (PAP-40), bypass semantics (PAP-34), security telemetry rules (PAP-356, soft), Linear comment helper (PAP-97, soft).\n\n**Definition of done**\n\n* `ALTER ROLE` as owner appears in Loki with labels; a bypass session's statements are logged; DDL outside the migrator fires the rule (evidence).\n* Dashboard provisioned from JSON with no manual clicks; screenshots at 1280 and 1920; each alert fired once by a synthetic condition (slot lag via a paused Electric container).\n* Weekly report posted once; docs; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: Loki parser fixtures for pgAudit lines, bloat query on a fixture, alert threshold rendering.\n* E2E: CI compose: enable pgAudit, run a DDL as owner, assert the log line; pause the Electric container and assert slot lag grows in the exporter.\n\n**Demo**\n\nReviewer runs `pnpm db:health` over the tailnet, opens the dashboard, then stops the Electric container for a minute and watches the slot lag panel and alert. Under two minutes.\n\n**Edge cases**\n\n* pgAudit log volume on bulk migrations: DDL only, so bounded; `all` only inside bypass sessions which are rare and audited anyway.\n* PgBouncer hides client addresses: `application_name` carries the service name (PAP-267 sets it).\n* Log line over Loki's limit: truncated with a marker; full statement hash kept.\n\n**Dependencies**\n\nBlocked by PAP-30 and PAP-40 (hard). Soft: PAP-34, PAP-356, PAP-97.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/data-layer/upload-scanning",
+   "title": "Malware scanning for uploads: ClamAV sidecar, `files.scan` job, `quarantined` status, download block and staff release flow",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Tenant-safe and observable",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-37",
+    "PAP-43"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-37 accepts files from customers, sniffs MIME and strips EXIF, and explicitly leaves virus scanning as a follow-up. A shared support inbox (PAP-197), imports (PAP-199) and attachments on comments (PAP-131) all let strangers upload; one infected PDF served to staff is the cheapest attack on the platform. Scan asynchronously, hold the file until it is clean, and give staff a release path.\n\n**Scope**\n\nIn: `ops/compose/clamav.yml` (clamd with daily signature refresh, 1 GB memory budget noted in PAP-214's table), `packages/files/src/scan.ts` with job `files.scan` using `clamdscan` over TCP (`INSTREAM`), file status `scanning` and `quarantined`, `files.getUrl` refusal for non-`ready` files with `FILE_NOT_READY`, `files.release(id, reason)` for staff, events `file.quarantined`, notification kind, quarantine prefix `quarantine/` in MinIO with a 30-day lifecycle, `docs/data/files.md#scanning`.\n\nOut: Content moderation, image safety classification, scanning of Yjs documents or database rows, ClamAV tuning beyond defaults.\n\n**Spec**\n\n* `files.complete` sets `status = 'scanning'` and enqueues `files.scan`; variants (PAP-37) run only after `ready`; the UI shows a 'checking file' state from PAP-234 components.\n* `files.scan` streams the object to clamd; clean sets `ready` and emits `file.ready`; infected moves the object to `quarantine/<tenant>/<file_id>`, sets `quarantined` with the signature name and emits `file.quarantined`; scanner unavailable retries with backoff and leaves `scanning`.\n* Files over 100 MB or of types clamd cannot inspect are marked `ready` with `scan: 'skipped'` and the reason; configurable per tenant plan.\n* `files.release` requires `files.manage`, a reason and re-scans first; release is audited; `files.delete` on quarantined files is allowed for the owner.\n* Staff console gets a 'Quarantine' filter on the files admin list (PAP-63 registered section); uploader receives a notification when quarantined.\n* Signature freshness exported as `clamav_signature_age_seconds`; alert at 48 h (PAP-40).\n\n**Interface contract**\n\nProvides: Job `files.scan`, statuses `scanning|quarantined`, error `FILE_NOT_READY`, procedure `files.release`, event `file.quarantined`, metric above, compose service.\n\nConsumes: File service and lifecycle rules (PAP-37), jobs (PAP-43), notifications (PAP-136, soft), console section (PAP-63, soft), audit (PAP-38), alerting (PAP-40, soft), resource budget (PAP-214).\n\n**Definition of done**\n\n* EICAR test file uploaded through `<FileDrop/>` ends `quarantined`, its URL is refused, the uploader is notified and staff can inspect the signature name (Playwright).\n* Clean upload reaches `ready` within 10 s and variants run after; scanner down leaves files `scanning` and recovers (integration).\n* Release flow audited; signature age metric visible; docs; CHANGELOG under Security; Linear comment with the recording.\n\n**Test plan**\n\n* Unit: status transitions, size and type skip rules, `INSTREAM` chunking, retry classification.\n* E2E: CI compose with clamd: EICAR and clean fixtures through the full path; `files.getUrl` refusal; `files.release` round trip.\n\n**Demo**\n\nReviewer drops the EICAR file onto the settings page, sees 'checking file' then the quarantined state, opens the console quarantine list and reads the signature. Under 90 seconds.\n\n**Edge cases**\n\n* Archive bombs: clamd limits (`MaxScanSize`, `MaxRecursion`) set; oversized archives skipped with the reason.\n* Signature update fails for days: alert; scanning continues with old signatures, documented.\n* File referenced by a sent email before scanning finished: links resolve to `FILE_NOT_READY` until clean; senders wait for `file.ready`.\n\n**Dependencies**\n\nBlocked by PAP-37 and PAP-43 (hard). Soft: PAP-136, PAP-63, PAP-38, PAP-40, PAP-214.\n\n**Agent**\n\nBuilder: Forge (Ops Runner for clamd, Platform Engineer for the job). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/data-layer/maintenance-mode",
+   "title": "Platform maintenance and read-only mode: `maintenance` flag, API 503 with `Retry-After` for writes, outbox-aware client banner and `pnpm ops:maintenance on|off|status`",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Tenant-safe and observable",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "low",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-267"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Build S\n\n**Goal**\n\nMigrations with table rewrites, the DR drill, a key rotation and a bad deploy all need a moment where the platform answers reads but refuses writes without breaking clients. Because clients already have an outbox, a maintenance window can be invisible: writes queue locally, the banner explains, and everything replays when the window closes.\n\n**Scope**\n\nIn: `packages/api-contract/src/middleware/maintenance.ts` (first in the PAP-267 chain after request id), flag `platform.maintenance` (PAP-366 when present, else `MAINTENANCE_MODE` env plus a `platform_state` row polled every 5 s), response `503 { code: 'MAINTENANCE', message, retryAfter, until? }`, `/api/health` field `maintenance: true`, client handling in `packages/sync` (treat 503 MAINTENANCE like offline for the outbox, no attempt counting) and `MaintenanceBanner` in the shell `banner` slot, CLI `pnpm ops:maintenance on --until <iso> --message`, `docs/ops/maintenance.md`.\n\nOut: Blue-green deploys (PAP-26), per-tenant suspension (PAP-432 states), scheduled announcements (PAP-136 kinds may consume the flag event).\n\n**Spec**\n\n* Read procedures, shapes, health and auth session refresh keep working; every mutation, `files.createUpload`, Hocuspocus writes (`connection.readOnly` set from the same flag through PAP-140's permission re-check) and jobs that write user data pause; `events.dispatch` keeps running.\n* Staff and agents may bypass with header `X-PaperOS-Maintenance-Bypass` when the flag rule allows (`bypass: ['staff']`); bypass requests are audited.\n* Client: `useConnectionStatus()` (`r4/realtime/connection-status`, soft) or `useSyncStatus()` reports `maintenance` with `until`; the outbox retries at `Retry-After` without counting attempts; the banner shows the message and the time.\n* Flag change publishes `flags.changed` so open clients switch within 5 s; CLI prints the current state and who set it.\n* Gate: the deploy pipeline (PAP-26) may wrap `db:migrate` in `on`/`off` when the migration is tagged `requires-maintenance` by `r4/data-layer/migration-safety`.\n\n**Interface contract**\n\nProvides: Middleware `maintenance()`, error code `MAINTENANCE`, flag `platform.maintenance`, `MaintenanceBanner`, CLI `ops:maintenance`, health field.\n\nConsumes: Middleware chain (PAP-267), flags (PAP-366, soft), outbox and sync status (PAP-272, PAP-148, soft), shell banner slot (PAP-16), Hocuspocus permission re-check (PAP-140, soft), audit (PAP-38), deploy hook (PAP-26, soft).\n\n**Definition of done**\n\n* With maintenance on, reads succeed, a create returns 503 with `Retry-After`, the sync demo queues the write and the banner shows; turning it off replays within 5 s (Playwright).\n* Staff bypass works and is audited; health reports the state; CLI round trip; docs; CHANGELOG; Linear comment with the recording.\n\n**Test plan**\n\n* Unit: middleware decision table (method, procedure kind, bypass header, role), `Retry-After` from `until`, client classification of 503 MAINTENANCE as non-counting.\n* E2E: Playwright on the dev stack: toggle through the CLI while editing in the sync demo; assert queue, banner and replay.\n\n**Demo**\n\nReviewer runs `pnpm ops:maintenance on --until +5m --message 'Migrating'`, edits a workspace name in the app, sees the banner and the pending indicator, runs `off` and watches the edit land. Under a minute.\n\n**Edge cases**\n\n* Flag service down: middleware falls back to the `platform_state` row, then to env; never fails open into writes when the row says on.\n* Long window past the outbox's 24 h idempotency expiry: clients regenerate keys on replay (PAP-148 documents), documented as accepted.\n* Webhooks from Stripe during maintenance: `/webhooks/*` are exempt and write to their inbox tables (PAP-177); noted in the exemption list.\n\n**Dependencies**\n\nBlocked by PAP-267 (hard). Soft: PAP-366, PAP-272, PAP-148, PAP-16, PAP-140, PAP-38, PAP-26, `r4/data-layer/migration-safety`, `r4/realtime/connection-status`.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/data-layer/tenant-pitr-restore",
+   "title": "Tenant-scoped point-in-time restore: PITR into a scratch database, tenant extract, diff preview and selective re-import through the import engine",
+   "type": "Infra",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Tenant-safe and observable",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "medium",
+   "deferred": true,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-30",
+    "PAP-347"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra M\n\n**Goal**\n\nDeferred to v0.2 (past 2026-10-01): PAP-334's 30-day trash covers most mistakes, but a bulk import gone wrong, an automation loop or an agent with a bad filter can damage one tenant's data in ways row-level trash cannot undo, and cluster-wide PITR (PAP-30) would roll back every other tenant. This restores one tenant to a moment in time: recover the cluster to a scratch database, extract the tenant, show the diff, and re-import selected tables or rows with the import engine's dry-run and rollback semantics.\n\n**Scope**\n\nIn: `ops/db/tenant-restore.sh` (pgBackRest restore to `scratch_<ts>` with `--target-time`), `packages/db/src/restore/{extract,diff}.ts` producing a PaperOS archive (PAP-420 format) from the scratch database for one tenant, diff preview per table (rows added, changed, removed since the target time), selective re-import through the `paperos` connector (PAP-422) with PAP-348 dry run and rollback, staff console page `/console/data/restore` behind `data.restore` permission and a Needs Justin card for tenants over 1 GB, `docs/runbooks/tenant-restore.md`.\n\nOut: Cluster PITR itself (PAP-30), file object versions (MinIO versioning is on; the extract references versions), Yjs document history (`r4/realtime/doc-history`), trash and undo (PAP-334).\n\n**Spec**\n\n* Flow: staff picks tenant and target time; the job restores the newest base backup plus WAL to the target into a scratch database on the same host (time-boxed, disk check first), extracts the tenant with `purgeOrder()` from `r4/data-layer/tenant-purge` reversed, writes the archive to MinIO, and drops the scratch database.\n* Diff: keyed by primary key per table; shows counts and a sample; changed rows compare `updated_at` and a row hash; the preview is stored as an `import_run` in `dry_run` state.\n* Apply: selected tables or rows go through the import engine with `mode: 'restore'` (upsert by id, no new ids), audited with reason and `impersonation`-style banner for the operator; rollback available for 24 h via PAP-348.\n* Guards: tenant must not be `purging`; concurrent restores per tenant refused; scratch database limited to one at a time; wall clock over 2 h aborts.\n* Everything runs under `paperos_owner` inside audited `app.bypass` transactions (PAP-34, PAP-38).\n\n**Interface contract**\n\nProvides: Script `tenant-restore.sh`, job `tenant.restore`, procedures `restore.preview|apply|list`, page `/console/data/restore`, runbook.\n\nConsumes: PITR and backups (PAP-30), import engine and rollback (PAP-347, PAP-348), archive format and round-trip connector (PAP-420, PAP-422), purge order (`r4/data-layer/tenant-purge`), audit and bypass (PAP-34, PAP-38), console (PAP-63), decision cards (PAP-94).\n\n**Definition of done**\n\n* Seeded tenant damaged by a scripted bulk update is restored to five minutes earlier through the console; diff preview matches the script's changes; other tenants untouched (checksums).\n* Guards tested: purging tenant, concurrent request, oversize tenant card; scratch database dropped after every run including failures.\n* Runbook; CHANGELOG; Linear comment with the recording.\n\n**Test plan**\n\n* Unit: target-time parsing, diff algorithm on fixture tables (added, changed, removed, unchanged), guard matrix, archive writer for one tenant.\n* E2E: CI on a self-hosted runner: restore a scratch stanza to a target time, extract, diff and apply one table; assert row-level equality.\n\n**Demo**\n\nReviewer runs the damage script on the demo tenant, opens Restore, picks 'ten minutes ago', reads the diff (200 rows changed in `records`), applies that table and reloads the grid. Two minutes.\n\n**Edge cases**\n\n* Schema migrated between target time and now: extract runs on the old schema; the import maps columns through the connector's mapping model and reports unmappable ones.\n* Rows created after the target time: kept by default; a 'remove rows created after' option exists with a second confirmation.\n* WAL gap in the backup: restore fails early with the nearest recoverable time.\n\n**Dependencies**\n\nBlocked by PAP-30 and PAP-347 (hard). Soft: PAP-348, PAP-420, PAP-422, PAP-63, PAP-94, `r4/data-layer/tenant-purge`. Deferred to v0.2; not claimable before 10-01.\n\n**Agent**\n\nBuilder: Forge (Ops Runner) with Scout (Import Mapper). Reviewer: Sentinel (Security Auditor; Edge Case Hunter for the diff).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/data-layer/document-previews",
+   "title": "Document previews: PDF and office thumbnails and page renders through a `files.preview` job, preview variants in `FileDto` and a viewer fallback",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Tenant-safe and observable",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "low",
+   "deferred": true,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-37",
+    "PAP-43"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Build S\n\n**Goal**\n\nDeferred to v0.2 (past 2026-10-01): PAP-37 renders image variants only, so invoices, contracts and imported Notion exports show a generic icon in attachments, the support inbox and record pages. Notion, Airtable and Drive all show a first-page thumbnail; this adds it with one more job behind the same `variants` shape.\n\n**Scope**\n\nIn: Job `files.preview` rendering page 1 (and up to 5 pages on demand) of PDFs with `pdfium` (via `@hyzyla/pdfium` or `pdf-to-img`) and office documents through a LibreOffice headless container (`ops/compose/office.yml`, staging only, 1 GB budget noted), `FileDto.variants.preview` (`thumb`, `page1`) in WebP, `<FilePreview/>` component with a PDF.js viewer fallback for the browser, docs section.\n\nOut: Editing documents, OCR and text extraction for search (a later `files.extract` job), video thumbnails.\n\n**Spec**\n\n* `files.preview` enqueued after `ready` (and after `r4/data-layer/upload-scanning` when present) for `application/pdf` and office MIME types under 50 MB; output keys under `<file>/preview/`; failures leave `variants.preview` empty and the icon fallback.\n* Office conversion: LibreOffice `--convert-to pdf` then the PDF path; container absent in dev leaves office files without previews and a log line.\n* Time box 60 s per file; concurrency 2; EXIF and metadata stripped from renders; previews served through the same 15-minute signed URLs.\n* `<FilePreview file />`: thumbnail, click opens the PDF.js viewer for PDFs or downloads otherwise; keyboard and screen-reader labels from PAP-71 conventions.\n\n**Interface contract**\n\nProvides: Job `files.preview`, `variants.preview` shape, component `FilePreview`, compose service `office`.\n\nConsumes: Files and variants (PAP-37), jobs (PAP-43), scanning status (`r4/data-layer/upload-scanning`, soft), UI primitives (PAP-71), resource budget (PAP-214). Consumed by PAP-131 attachments, PAP-333 attachments tab, PAP-412 inbox, PAP-180 documents.\n\n**Definition of done**\n\n* A 20-page PDF shows a first-page thumbnail within 10 s of upload; a `.docx` renders on staging through the office container; failures fall back to the icon (recording).\n* `<FilePreview/>` at 375, 768, 1280 in both themes; axe clean; docs; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: MIME eligibility, output key layout, time box handling, viewer fallback selection.\n* E2E: CI compose: PDF fixture through upload, complete, preview; assert variant keys and a signed URL that serves WebP.\n\n**Demo**\n\nReviewer uploads the sample invoice PDF, sees the thumbnail appear in the attachments list and opens the viewer. Under a minute.\n\n**Edge cases**\n\n* Encrypted PDF: no preview, icon with a lock badge.\n* Malformed office file crashes LibreOffice: container restarts; job fails once and stops (no retry loop).\n* Huge page sizes (A0 drawings): render capped at 2048 px on the long edge.\n\n**Dependencies**\n\nBlocked by PAP-37 and PAP-43 (hard). Soft: `r4/data-layer/upload-scanning`, PAP-71, PAP-214. Deferred to v0.2; not claimable before 10-01.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-41",
+   "section": "Spec",
+   "append": "Ownership change (round 4): `pii.json` is generated by the PII registry child `r4/data-layer/pii-registry` (`pnpm pii:build`), not by this generator. The dictionary reads `packages/db/generated/pii.json` and renders the `kind` and `subject` badges; `dictionary:check` fails when the file is stale. Remove the `pii: boolean` key from `dictionary.yaml` in favour of the schema annotation."
+  },
+  {
+   "identifier": "PAP-30",
+   "section": "Spec",
+   "append": "Add: (1) `pgaudit` to the pre-installed extensions with `pgaudit.log = 'ddl, role'` (consumed by `r4/data-layer/pgaudit-db-health`); (2) the data volume for `pg-prod` and `pg-staging` lives on an encrypted Hetzner volume (LUKS via cloud-init) so data at rest is covered independently of PAP-353; document the unlock procedure in `ops/db/README.md`; (3) template databases `tpl_minimal` and `tpl_demo` reserved names for `r4/data-layer/preview-databases`."
+  },
+  {
+   "identifier": "PAP-35",
+   "section": "Interface contract",
+   "append": "Correction: the context type imports `Principal` from `@paperos/core/audience` (PAP-55), not `@paperos/core/principal`; the Contracts document §1 and PAP-267 already use the audience path. Umbrella text updated so children do not diverge."
+  },
+  {
+   "identifier": "PAP-39",
+   "section": "Edge cases",
+   "append": "Add: `vector(1024)` fixes the dimension per column, so a model with different dimensions is a migration (new column, backfill, swap), not a reindex; `pnpm search:migrate-dims` in `r4/data-layer/search-semantic` owns it. Reindex on model change applies only to same-dimension models."
+  },
+  {
+   "identifier": "PAP-304",
+   "section": "Spec",
+   "append": "Tighten the failure mode: fail-open for authenticated actors lasts at most 60 s per incident, then the limiter fails closed for everyone; every degraded minute emits a security event (PAP-356) in addition to the log line. Chain order is owned jointly by the two children `r4/data-layer/rate-limits` and `r4/data-layer/idempotency-batch`; whichever merges second updates the PAP-267 order test."
+  },
+  {
+   "identifier": "PAP-271",
+   "section": "Edge cases",
+   "append": "Add: sign-out, session revocation and tenant switch wipe the local PGlite database and `y-indexeddb` stores unless the outbox holds unsent writes and the user keeps them (`r4/data-layer/local-data-protection` owns `wipe()`); shapes may declare `cacheable: false` and are then held in memory only; the registry lint refuses `encrypted()` columns in persisted shapes."
+  },
+  {
+   "identifier": "PAP-43",
+   "section": "Definition of done",
+   "append": "Add evidence items: (1) the worker exposes `/healthz` and `/metrics` and a missing heartbeat for 60 s in production fires an alert (PAP-40); (2) a job enqueued with `tenantId` runs its handler inside `withTenant` and the PAP-34 harness proves it cannot read another tenant (test); (3) enqueue from tenant A with `tenantId` of tenant B is refused with `FORBIDDEN`."
+  },
+  {
+   "identifier": "PAP-37",
+   "section": "Spec",
+   "append": "Add the scanning hook: `files.complete` sets `status = 'scanning'` when the scanner is configured (`r4/data-layer/upload-scanning`) and `ready` otherwise; `files.getUrl` refuses non-`ready` files with `FILE_NOT_READY`; the `file` status enum gains `scanning | quarantined` now so the later child needs no migration."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "app-shell",
+   "title": "Preview deploys (PAP-26) and warm pools (PAP-365) consume `r4/data-layer/preview-databases`",
+   "why": "PAP-26 posts a preview URL but names no database; the branch script returns the `DATABASE_URL*` set in PAP-17 names and drops on PR close."
+  },
+  {
+   "targetProject": "business-core",
+   "title": "Invoice, quote and receipt numbering (PAP-180) should consume `r4/data-layer/tenant-sequences`",
+   "why": "Gapless per-tenant numbering is a legal requirement in several jurisdictions and PAP-180 currently implies its own counter."
+  },
+  {
+   "targetProject": "tables",
+   "title": "Custom datasets (PAP-161, PAP-332) should register through `defineEntity()` where the schema is code",
+   "why": "Keeps code datasets and custom datasets on one repository and router shape so PAP-333 and PAP-334 have one path."
+  },
+  {
+   "targetProject": "quality",
+   "title": "Security telemetry (PAP-356) should ingest pgAudit lines and `rate_limit_degraded` events",
+   "why": "Both are new detection sources from `r4/data-layer/pgaudit-db-health` and `r4/data-layer/rate-limits`."
+  },
+  {
+   "targetProject": "module-system",
+   "title": "Migration adapter kit (PAP-443) should reuse `pnpm db:lint` and `defineBackfill` from `r4/data-layer/migration-safety`",
+   "why": "Avoids two batch runners and two sets of safety rules for expand-contract changes."
+  },
+  {
+   "targetProject": "pm-linear",
+   "title": "Weekly re-audit (PAP-306) runs `pnpm tenant:purge --dry-run` and `pii:build --check` as drift checks",
+   "why": "New tables without a tenant mapping or PII annotation should surface weekly, not at purge time."
+  }
+ ]
+}
