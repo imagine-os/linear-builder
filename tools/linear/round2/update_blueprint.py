@@ -14,7 +14,7 @@ doc = open(HTML, encoding="utf-8").read()
 orig_len = len(doc)
 esc = lambda s: html.escape(str(s), quote=True)
 
-ART = "https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU"
+ART = "https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h"
 TAKEN = snap["takenAt"]
 
 # ---------------------------------------------------------------- data

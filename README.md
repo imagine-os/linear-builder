@@ -3,7 +3,7 @@
 PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, business modules and a documented ten-minute path from a one-paragraph idea to a deployed app. It is built by parallel Claude Code sessions that pick issues from a Linear queue (team **PAP**) under nine agent characters, with Justin Massion (imagine-os) as the only human in the loop. This repository is the plan: every issue spec, the platform documents, the schedule, the pending backlog, the blueprint page and the scripts that put all of it into Linear.
 
 * Linear workspace: https://linear.app/paperos (team PAP)
-* Blueprint page (v5: initiatives, cycles, estimates and the Round 4 section on top of the v4 filterable graph views, module map and chunk plan): https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU (mirrored in `site/`, Pages copy with the WebGL views at https://imagine-os.github.io/linear-builder/)
+* Blueprint page (v5: initiatives, cycles, estimates and the Round 4 section on top of the v4 filterable graph views, module map and chunk plan): https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h (mirrored in `site/`, Pages copy with the WebGL views at https://imagine-os.github.io/linear-builder/)
 * Session brief for a Claude Code session picking up a PAP issue: [`CLAUDE.md`](CLAUDE.md)
 
 ## Read first

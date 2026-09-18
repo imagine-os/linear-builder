@@ -1,6 +1,6 @@
 # PaperOS Core Platform Blueprint
 
-Full blueprint (architecture diagram, org chart, timeline, budget chart, full index): [https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU](<https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU>)
+Full blueprint (architecture diagram, org chart, timeline, budget chart, full index): [https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h](<https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h>)
 
 ## Vision
 
@@ -58,7 +58,7 @@ Backlog → Ready for Claude → In Progress → In Review → Needs Justin → 
 
 ## Round 2 (2026-09-17, snapshot 2026-09-17T06:53Z)
 
-Round 2 read every spec against the brief, the relation graph and the live workspace, scored each project on coverage, precision, buildability and testability (1-5 each), sent seven agents to deepen the weakest parts, then fixed the eight regressions a second critique found. Full page with the interface map, day-by-day schedule and per-issue index: [https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU](https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU)
+Round 2 read every spec against the brief, the relation graph and the live workspace, scored each project on coverage, precision, buildability and testability (1-5 each), sent seven agents to deepen the weakest parts, then fixed the eight regressions a second critique found. Full page with the interface map, day-by-day schedule and per-issue index: [https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h](https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h)
 
 | Fact | 03:30Z | now |
 |---|---|---|
@@ -132,7 +132,7 @@ Precision is 5 everywhere; the remaining deficit is buildability, mostly caused 
 
 ## Round 4 (2026-09-18, snapshot 2026-09-18T14:58Z)
 
-Justin asked to "make the Linear plan better and better: fill in the plan further, use more features of Linear if possible, get more detailed on sub-features, identify any features you missed." Round 4 benchmarked every project against the brief and the best products in its category (18 per-project digests in `plan/round4/digest/`, one cross-cutting capability map of 167 capabilities), filed the gaps as issues and amendments, created five projects for what no module owned, turned on the Linear features the workspace had left off, re-ran the schedule and chunk model over the expanded graph, then critiqued the result and applied the mechanical fixes. Every Linear mutation is logged in `plan/round4/changes/` (seven files); the prompts and replies are in `docs/prompts/round-4-2026-09-18.md`. Page: [https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU](https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU) (v5), mirrored at https://imagine-os.github.io/linear-builder/.
+Justin asked to "make the Linear plan better and better: fill in the plan further, use more features of Linear if possible, get more detailed on sub-features, identify any features you missed." Round 4 benchmarked every project against the brief and the best products in its category (18 per-project digests in `plan/round4/digest/`, one cross-cutting capability map of 167 capabilities), filed the gaps as issues and amendments, created five projects for what no module owned, turned on the Linear features the workspace had left off, re-ran the schedule and chunk model over the expanded graph, then critiqued the result and applied the mechanical fixes. Every Linear mutation is logged in `plan/round4/changes/` (seven files); the prompts and replies are in `docs/prompts/round-4-2026-09-18.md`. Page: [https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h](https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h) (v5), mirrored at https://imagine-os.github.io/linear-builder/.
 
 | Fact | Round 3 end (09-18 morning) | After round 4 (14:58Z) |
 |---|---|---|
@@ -211,4 +211,4 @@ Updated 2026-09-17 (round 2). Every Claude Code session reads these in this orde
 * [Round 2 pending issues: migration (20)](https://linear.app/paperos/document/round-2-pending-issues-migration-20-6cb063cc1be6) (Migration & Import Tools): importer test accounts (folded into PAP-198), Monday and HubSpot CSV recipes, and 18 children of the import engine, Airtable, Notion, export, Stripe, QuickBooks/Xero and template packs.
 * [Round 2 pending issues: libraries (9)](https://linear.app/paperos/document/round-2-pending-issues-libraries-9-63c73eed632d) (Library Discovery & Integration): table, chart, map, canvas and editor spikes with ADRs; jobs, email, PDF, search, observability, flags and storage decisions; OSS product spikes (NocoDB, Baserow, Plane, Twenty, Chatwoot, Listmonk, Postiz, [Cal.com](<http://Cal.com>), Formbricks).
 
-Risks and the full per-issue index are on the blueprint page: [https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU](<https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU>)
+Risks and the full per-issue index are on the blueprint page: [https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h](<https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h>)
