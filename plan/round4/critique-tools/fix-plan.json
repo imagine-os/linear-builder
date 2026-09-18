@@ -1,0 +1,2294 @@
+{
+ "rels": [
+  [
+   "PAP-347",
+   "PAP-770",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-348",
+   "PAP-770",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-43",
+   "PAP-772",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-205",
+   "PAP-432",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-33",
+   "PAP-432",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-43",
+   "PAP-432",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-178",
+   "PAP-431",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-25",
+   "PAP-431",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-35",
+   "PAP-431",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-179",
+   "PAP-424",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-128",
+   "PAP-419",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-17",
+   "PAP-404",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-25",
+   "PAP-371",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-50",
+   "PAP-371",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-25",
+   "PAP-370",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-43",
+   "PAP-370",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-19",
+   "PAP-369",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-25",
+   "PAP-369",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-16",
+   "PAP-367",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-33",
+   "PAP-367",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-58",
+   "PAP-367",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-17",
+   "PAP-366",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-33",
+   "PAP-366",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-35",
+   "PAP-366",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-16",
+   "PAP-368",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-17",
+   "PAP-368",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-40",
+   "PAP-356",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-155",
+   "PAP-344",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-164",
+   "PAP-344",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-37",
+   "PAP-339",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-267",
+   "PAP-327",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-123",
+   "PAP-320",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-270",
+   "PAP-326",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-271",
+   "PAP-326",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-70",
+   "PAP-318",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-209",
+   "PAP-296",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-70",
+   "PAP-290",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-209",
+   "PAP-293",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-209",
+   "PAP-294",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-35",
+   "PAP-276",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-32",
+   "PAP-267",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-57",
+   "PAP-230",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-57",
+   "PAP-231",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-163",
+   "PAP-183",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-34",
+   "PAP-175",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-163",
+   "PAP-171",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-123",
+   "PAP-132",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-243",
+   "PAP-85",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-243",
+   "PAP-84",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-240",
+   "PAP-83",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-246",
+   "PAP-83",
+   "text-hard-dep"
+  ],
+  [
+   "PAP-236",
+   "PAP-69",
+   "text-hard-dep"
+  ]
+ ],
+ "skipped": [
+  {
+   "blocker": "PAP-235",
+   "blocked": "PAP-396",
+   "reason": "deferred blocker -> scheduled",
+   "fix": "text-hard-dep"
+  },
+  {
+   "blocker": "PAP-13",
+   "blocked": "PAP-302",
+   "reason": "would block a Ready issue",
+   "fix": "text-hard-dep"
+  },
+  {
+   "blocker": "PAP-40",
+   "blocked": "PAP-288",
+   "reason": "milestone inversion 2026-09-30 > 2026-09-25",
+   "fix": "text-hard-dep"
+  },
+  {
+   "blocker": "PAP-19",
+   "blocked": "PAP-225",
+   "reason": "milestone inversion 2026-09-24 > 2026-09-23",
+   "fix": "text-hard-dep"
+  },
+  {
+   "blocker": "PAP-132",
+   "blocked": "PAP-123",
+   "reason": "milestone inversion 2026-09-29 > 2026-09-26",
+   "fix": "text-hard-dep"
+  }
+ ],
+ "outbound_plan": [
+  {
+   "umbrella": "PAP-434",
+   "lastChild": "PAP-537",
+   "blocked": "PAP-846",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-434",
+   "lastChild": "PAP-537",
+   "blocked": "PAP-861",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-434",
+   "lastChild": "PAP-537",
+   "blocked": "PAP-876",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-434",
+   "lastChild": "PAP-537",
+   "blocked": "PAP-892",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-434",
+   "lastChild": "PAP-537",
+   "blocked": "PAP-907",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-441",
+   "lastChild": "PAP-541",
+   "blocked": "PAP-845",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-441",
+   "lastChild": "PAP-541",
+   "blocked": "PAP-860",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-441",
+   "lastChild": "PAP-541",
+   "blocked": "PAP-875",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-441",
+   "lastChild": "PAP-541",
+   "blocked": "PAP-891",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-441",
+   "lastChild": "PAP-541",
+   "blocked": "PAP-906",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-435",
+   "lastChild": "PAP-538",
+   "blocked": "PAP-846",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-435",
+   "lastChild": "PAP-538",
+   "blocked": "PAP-861",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-435",
+   "lastChild": "PAP-538",
+   "blocked": "PAP-876",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-435",
+   "lastChild": "PAP-538",
+   "blocked": "PAP-892",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-435",
+   "lastChild": "PAP-538",
+   "blocked": "PAP-899",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-435",
+   "lastChild": "PAP-538",
+   "blocked": "PAP-907",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-381",
+   "lastChild": "PAP-600",
+   "blocked": "PAP-836",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-381",
+   "lastChild": "PAP-600",
+   "blocked": "PAP-850",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-366",
+   "lastChild": "PAP-501",
+   "blocked": "PAP-846",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-366",
+   "lastChild": "PAP-501",
+   "blocked": "PAP-861",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-366",
+   "lastChild": "PAP-501",
+   "blocked": "PAP-873",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-366",
+   "lastChild": "PAP-501",
+   "blocked": "PAP-876",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-366",
+   "lastChild": "PAP-501",
+   "blocked": "PAP-892",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-366",
+   "lastChild": "PAP-501",
+   "blocked": "PAP-893",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-366",
+   "lastChild": "PAP-501",
+   "blocked": "PAP-894",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-366",
+   "lastChild": "PAP-501",
+   "blocked": "PAP-899",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-366",
+   "lastChild": "PAP-501",
+   "blocked": "PAP-907",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-368",
+   "lastChild": "PAP-502",
+   "blocked": "PAP-898",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-368",
+   "lastChild": "PAP-502",
+   "blocked": "PAP-901",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-356",
+   "lastChild": "PAP-674",
+   "blocked": "PAP-895",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-356",
+   "lastChild": "PAP-674",
+   "blocked": "PAP-896",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-356",
+   "lastChild": "PAP-674",
+   "blocked": "PAP-900",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-354",
+   "lastChild": "PAP-563",
+   "blocked": "PAP-896",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-354",
+   "lastChild": "PAP-563",
+   "blocked": "PAP-903",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-354",
+   "lastChild": "PAP-563",
+   "blocked": "PAP-905",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-357",
+   "lastChild": "PAP-676",
+   "blocked": "PAP-903",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-355",
+   "lastChild": "PAP-561",
+   "blocked": "PAP-859",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-355",
+   "lastChild": "PAP-561",
+   "blocked": "PAP-896",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-355",
+   "lastChild": "PAP-561",
+   "blocked": "PAP-897",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-355",
+   "lastChild": "PAP-561",
+   "blocked": "PAP-898",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-355",
+   "lastChild": "PAP-561",
+   "blocked": "PAP-902",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-303",
+   "lastChild": "PAP-556",
+   "blocked": "PAP-833",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-303",
+   "lastChild": "PAP-556",
+   "blocked": "PAP-834",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-303",
+   "lastChild": "PAP-556",
+   "blocked": "PAP-847",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-303",
+   "lastChild": "PAP-556",
+   "blocked": "PAP-848",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-303",
+   "lastChild": "PAP-556",
+   "blocked": "PAP-851",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-303",
+   "lastChild": "PAP-556",
+   "blocked": "PAP-862",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-303",
+   "lastChild": "PAP-556",
+   "blocked": "PAP-864",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-303",
+   "lastChild": "PAP-556",
+   "blocked": "PAP-877",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-303",
+   "lastChild": "PAP-556",
+   "blocked": "PAP-893",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-303",
+   "lastChild": "PAP-556",
+   "blocked": "PAP-897",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-304",
+   "lastChild": "PAP-558",
+   "blocked": "PAP-836",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-304",
+   "lastChild": "PAP-558",
+   "blocked": "PAP-841",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-304",
+   "lastChild": "PAP-558",
+   "blocked": "PAP-851",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-304",
+   "lastChild": "PAP-558",
+   "blocked": "PAP-855",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-304",
+   "lastChild": "PAP-558",
+   "blocked": "PAP-864",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-304",
+   "lastChild": "PAP-558",
+   "blocked": "PAP-900",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-298",
+   "lastChild": "PAP-712",
+   "blocked": "PAP-903",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-299",
+   "lastChild": "PAP-714",
+   "blocked": "PAP-834",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-299",
+   "lastChild": "PAP-714",
+   "blocked": "PAP-836",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-299",
+   "lastChild": "PAP-714",
+   "blocked": "PAP-843",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-233",
+   "lastChild": "PAP-660",
+   "blocked": "PAP-854",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-220",
+   "lastChild": "PAP-581",
+   "blocked": "PAP-858",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-220",
+   "lastChild": "PAP-581",
+   "blocked": "PAP-894",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-220",
+   "lastChild": "PAP-581",
+   "blocked": "PAP-902",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-220",
+   "lastChild": "PAP-581",
+   "blocked": "PAP-913",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-205",
+   "lastChild": "PAP-422",
+   "blocked": "PAP-432",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-199",
+   "lastChild": "PAP-349",
+   "blocked": "PAP-414",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-199",
+   "lastChild": "PAP-349",
+   "blocked": "PAP-417",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-199",
+   "lastChild": "PAP-349",
+   "blocked": "PAP-420",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-199",
+   "lastChild": "PAP-349",
+   "blocked": "PAP-423",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-199",
+   "lastChild": "PAP-349",
+   "blocked": "PAP-426",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-187",
+   "lastChild": "PAP-791",
+   "blocked": "PAP-863",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-187",
+   "lastChild": "PAP-791",
+   "blocked": "PAP-867",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-187",
+   "lastChild": "PAP-791",
+   "blocked": "PAP-897",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-179",
+   "lastChild": "PAP-394",
+   "blocked": "PAP-397",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-179",
+   "lastChild": "PAP-394",
+   "blocked": "PAP-400",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-179",
+   "lastChild": "PAP-394",
+   "blocked": "PAP-408",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-179",
+   "lastChild": "PAP-394",
+   "blocked": "PAP-423",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-179",
+   "lastChild": "PAP-394",
+   "blocked": "PAP-424",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-173",
+   "lastChild": "PAP-387",
+   "blocked": "PAP-811",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-173",
+   "lastChild": "PAP-387",
+   "blocked": "PAP-812",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-173",
+   "lastChild": "PAP-387",
+   "blocked": "PAP-830",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-173",
+   "lastChild": "PAP-387",
+   "blocked": "PAP-869",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-173",
+   "lastChild": "PAP-387",
+   "blocked": "PAP-897",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-173",
+   "lastChild": "PAP-387",
+   "blocked": "PAP-899",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-172",
+   "lastChild": "PAP-624",
+   "blocked": "PAP-839",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-172",
+   "lastChild": "PAP-624",
+   "blocked": "PAP-850",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-172",
+   "lastChild": "PAP-624",
+   "blocked": "PAP-855",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-172",
+   "lastChild": "PAP-624",
+   "blocked": "PAP-857",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-172",
+   "lastChild": "PAP-624",
+   "blocked": "PAP-909",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-170",
+   "lastChild": "PAP-622",
+   "blocked": "PAP-885",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-169",
+   "lastChild": "PAP-620",
+   "blocked": "PAP-850",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-169",
+   "lastChild": "PAP-620",
+   "blocked": "PAP-854",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-168",
+   "lastChild": "PAP-346",
+   "blocked": "PAP-798",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-166",
+   "lastChild": "PAP-618",
+   "blocked": "PAP-839",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-164",
+   "lastChild": "PAP-627",
+   "blocked": "PAP-341",
+   "safe": false,
+   "reason": "milestone inversion 2026-09-29 > 2026-09-28",
+   "new": false
+  },
+  {
+   "umbrella": "PAP-164",
+   "lastChild": "PAP-627",
+   "blocked": "PAP-344",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-164",
+   "lastChild": "PAP-627",
+   "blocked": "PAP-347",
+   "safe": false,
+   "reason": "milestone inversion 2026-09-29 > 2026-09-28",
+   "new": false
+  },
+  {
+   "umbrella": "PAP-163",
+   "lastChild": "PAP-337",
+   "blocked": "PAP-171",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-163",
+   "lastChild": "PAP-337",
+   "blocked": "PAP-183",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-163",
+   "lastChild": "PAP-337",
+   "blocked": "PAP-341",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-163",
+   "lastChild": "PAP-337",
+   "blocked": "PAP-344",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-155",
+   "lastChild": "PAP-331",
+   "blocked": "PAP-344",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-155",
+   "lastChild": "PAP-331",
+   "blocked": "PAP-385",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-151",
+   "lastChild": "PAP-291",
+   "blocked": "PAP-341",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-143",
+   "lastChild": "PAP-328",
+   "blocked": "PAP-381",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-142",
+   "lastChild": "PAP-604",
+   "blocked": "PAP-837",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-142",
+   "lastChild": "PAP-604",
+   "blocked": "PAP-856",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-136",
+   "lastChild": "PAP-725",
+   "blocked": "PAP-849",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-136",
+   "lastChild": "PAP-725",
+   "blocked": "PAP-852",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-136",
+   "lastChild": "PAP-725",
+   "blocked": "PAP-855",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-136",
+   "lastChild": "PAP-725",
+   "blocked": "PAP-859",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-136",
+   "lastChild": "PAP-725",
+   "blocked": "PAP-865",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-136",
+   "lastChild": "PAP-725",
+   "blocked": "PAP-869",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-136",
+   "lastChild": "PAP-725",
+   "blocked": "PAP-870",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-136",
+   "lastChild": "PAP-725",
+   "blocked": "PAP-873",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-136",
+   "lastChild": "PAP-725",
+   "blocked": "PAP-874",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-136",
+   "lastChild": "PAP-725",
+   "blocked": "PAP-879",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-136",
+   "lastChild": "PAP-725",
+   "blocked": "PAP-880",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-136",
+   "lastChild": "PAP-725",
+   "blocked": "PAP-895",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-131",
+   "lastChild": "PAP-319",
+   "blocked": "PAP-323",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-131",
+   "lastChild": "PAP-319",
+   "blocked": "PAP-411",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-131",
+   "lastChild": "PAP-319",
+   "blocked": "PAP-840",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-131",
+   "lastChild": "PAP-319",
+   "blocked": "PAP-874",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-120",
+   "lastChild": "PAP-316",
+   "blocked": "PAP-362",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-120",
+   "lastChild": "PAP-316",
+   "blocked": "PAP-375",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-119",
+   "lastChild": "PAP-313",
+   "blocked": "PAP-362",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-110",
+   "lastChild": "PAP-310",
+   "blocked": "PAP-822",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-106",
+   "lastChild": "PAP-710",
+   "blocked": "PAP-712",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-104",
+   "lastChild": "PAP-287",
+   "blocked": "PAP-308",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-104",
+   "lastChild": "PAP-287",
+   "blocked": "PAP-842",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-85",
+   "lastChild": "PAP-251",
+   "blocked": "PAP-843",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-82",
+   "lastChild": "PAP-248",
+   "blocked": "PAP-253",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-82",
+   "lastChild": "PAP-248",
+   "blocked": "PAP-446",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-82",
+   "lastChild": "PAP-248",
+   "blocked": "PAP-532",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-67",
+   "lastChild": "PAP-238",
+   "blocked": "PAP-289",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-67",
+   "lastChild": "PAP-238",
+   "blocked": "PAP-338",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-63",
+   "lastChild": "PAP-583",
+   "blocked": "PAP-894",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-62",
+   "lastChild": "PAP-585",
+   "blocked": "PAP-841",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-62",
+   "lastChild": "PAP-585",
+   "blocked": "PAP-865",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-62",
+   "lastChild": "PAP-585",
+   "blocked": "PAP-887",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-60",
+   "lastChild": "PAP-587",
+   "blocked": "PAP-834",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-60",
+   "lastChild": "PAP-587",
+   "blocked": "PAP-913",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-59",
+   "lastChild": "PAP-229",
+   "blocked": "PAP-501",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-59",
+   "lastChild": "PAP-229",
+   "blocked": "PAP-538",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-59",
+   "lastChild": "PAP-229",
+   "blocked": "PAP-849",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-59",
+   "lastChild": "PAP-229",
+   "blocked": "PAP-884",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-59",
+   "lastChild": "PAP-229",
+   "blocked": "PAP-902",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-59",
+   "lastChild": "PAP-229",
+   "blocked": "PAP-912",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-58",
+   "lastChild": "PAP-579",
+   "blocked": "PAP-367",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-57",
+   "lastChild": "PAP-226",
+   "blocked": "PAP-230",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-57",
+   "lastChild": "PAP-226",
+   "blocked": "PAP-231",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-57",
+   "lastChild": "PAP-226",
+   "blocked": "PAP-511",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-57",
+   "lastChild": "PAP-226",
+   "blocked": "PAP-797",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-57",
+   "lastChild": "PAP-226",
+   "blocked": "PAP-815",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-57",
+   "lastChild": "PAP-226",
+   "blocked": "PAP-866",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-57",
+   "lastChild": "PAP-226",
+   "blocked": "PAP-900",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-52",
+   "lastChild": "PAP-522",
+   "blocked": "PAP-524",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-50",
+   "lastChild": "PAP-519",
+   "blocked": "PAP-371",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-45",
+   "lastChild": "PAP-275",
+   "blocked": "PAP-276",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-43",
+   "lastChild": "PAP-565",
+   "blocked": "PAP-432",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-43",
+   "lastChild": "PAP-565",
+   "blocked": "PAP-772",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-43",
+   "lastChild": "PAP-565",
+   "blocked": "PAP-835",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-43",
+   "lastChild": "PAP-565",
+   "blocked": "PAP-849",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-43",
+   "lastChild": "PAP-565",
+   "blocked": "PAP-851",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-43",
+   "lastChild": "PAP-565",
+   "blocked": "PAP-857",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-43",
+   "lastChild": "PAP-565",
+   "blocked": "PAP-864",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-43",
+   "lastChild": "PAP-565",
+   "blocked": "PAP-866",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-43",
+   "lastChild": "PAP-565",
+   "blocked": "PAP-894",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-43",
+   "lastChild": "PAP-565",
+   "blocked": "PAP-903",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-43",
+   "lastChild": "PAP-565",
+   "blocked": "PAP-908",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-39",
+   "lastChild": "PAP-567",
+   "blocked": "PAP-835",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-39",
+   "lastChild": "PAP-567",
+   "blocked": "PAP-868",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-35",
+   "lastChild": "PAP-269",
+   "blocked": "PAP-312",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-35",
+   "lastChild": "PAP-269",
+   "blocked": "PAP-366",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-35",
+   "lastChild": "PAP-269",
+   "blocked": "PAP-431",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-27",
+   "lastChild": "PAP-504",
+   "blocked": "PAP-863",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-27",
+   "lastChild": "PAP-504",
+   "blocked": "PAP-908",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-26",
+   "lastChild": "PAP-505",
+   "blocked": "PAP-895",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-26",
+   "lastChild": "PAP-505",
+   "blocked": "PAP-905",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-26",
+   "lastChild": "PAP-505",
+   "blocked": "PAP-909",
+   "safe": true,
+   "reason": null,
+   "new": true
+  },
+  {
+   "umbrella": "PAP-20",
+   "lastChild": "PAP-260",
+   "blocked": "PAP-651",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-19",
+   "lastChild": "PAP-257",
+   "blocked": "PAP-262",
+   "safe": true,
+   "reason": null,
+   "new": false
+  },
+  {
+   "umbrella": "PAP-19",
+   "lastChild": "PAP-257",
+   "blocked": "PAP-369",
+   "safe": true,
+   "reason": null,
+   "new": false
+  }
+ ],
+ "desc_targets": [
+  "PAP-21",
+  "PAP-22",
+  "PAP-26",
+  "PAP-30",
+  "PAP-37",
+  "PAP-39",
+  "PAP-41",
+  "PAP-46",
+  "PAP-49",
+  "PAP-50",
+  "PAP-51",
+  "PAP-53",
+  "PAP-58",
+  "PAP-60",
+  "PAP-61",
+  "PAP-62",
+  "PAP-63",
+  "PAP-66",
+  "PAP-69",
+  "PAP-71",
+  "PAP-73",
+  "PAP-74",
+  "PAP-76",
+  "PAP-96",
+  "PAP-97",
+  "PAP-98",
+  "PAP-100",
+  "PAP-106",
+  "PAP-108",
+  "PAP-114",
+  "PAP-117",
+  "PAP-123",
+  "PAP-129",
+  "PAP-136",
+  "PAP-140",
+  "PAP-141",
+  "PAP-142",
+  "PAP-144",
+  "PAP-147",
+  "PAP-148",
+  "PAP-153",
+  "PAP-154",
+  "PAP-156",
+  "PAP-159",
+  "PAP-160",
+  "PAP-161",
+  "PAP-166",
+  "PAP-175",
+  "PAP-181",
+  "PAP-183",
+  "PAP-186",
+  "PAP-194",
+  "PAP-195",
+  "PAP-197",
+  "PAP-198",
+  "PAP-209",
+  "PAP-212",
+  "PAP-214",
+  "PAP-216",
+  "PAP-217",
+  "PAP-220",
+  "PAP-225",
+  "PAP-229",
+  "PAP-257",
+  "PAP-271",
+  "PAP-273",
+  "PAP-281",
+  "PAP-282",
+  "PAP-288",
+  "PAP-289",
+  "PAP-298",
+  "PAP-299",
+  "PAP-302",
+  "PAP-304",
+  "PAP-323",
+  "PAP-331",
+  "PAP-340",
+  "PAP-342",
+  "PAP-360",
+  "PAP-361",
+  "PAP-362",
+  "PAP-378",
+  "PAP-380",
+  "PAP-381",
+  "PAP-395",
+  "PAP-396",
+  "PAP-402",
+  "PAP-404",
+  "PAP-410",
+  "PAP-423",
+  "PAP-433",
+  "PAP-435",
+  "PAP-441",
+  "PAP-442",
+  "PAP-445",
+  "PAP-446",
+  "PAP-449",
+  "PAP-455",
+  "PAP-474",
+  "PAP-491",
+  "PAP-498",
+  "PAP-499",
+  "PAP-500",
+  "PAP-501",
+  "PAP-502",
+  "PAP-505",
+  "PAP-507",
+  "PAP-508",
+  "PAP-509",
+  "PAP-511",
+  "PAP-512",
+  "PAP-513",
+  "PAP-514",
+  "PAP-515",
+  "PAP-517",
+  "PAP-520",
+  "PAP-522",
+  "PAP-523",
+  "PAP-524",
+  "PAP-525",
+  "PAP-526",
+  "PAP-527",
+  "PAP-528",
+  "PAP-530",
+  "PAP-531",
+  "PAP-532",
+  "PAP-533",
+  "PAP-534",
+  "PAP-535",
+  "PAP-536",
+  "PAP-538",
+  "PAP-541",
+  "PAP-542",
+  "PAP-543",
+  "PAP-545",
+  "PAP-546",
+  "PAP-548",
+  "PAP-549",
+  "PAP-550",
+  "PAP-551",
+  "PAP-552",
+  "PAP-553",
+  "PAP-554",
+  "PAP-555",
+  "PAP-556",
+  "PAP-557",
+  "PAP-558",
+  "PAP-559",
+  "PAP-560",
+  "PAP-562",
+  "PAP-563",
+  "PAP-564",
+  "PAP-565",
+  "PAP-566",
+  "PAP-567",
+  "PAP-568",
+  "PAP-572",
+  "PAP-575",
+  "PAP-576",
+  "PAP-577",
+  "PAP-578",
+  "PAP-579",
+  "PAP-580",
+  "PAP-581",
+  "PAP-582",
+  "PAP-583",
+  "PAP-584",
+  "PAP-585",
+  "PAP-586",
+  "PAP-587",
+  "PAP-588",
+  "PAP-589",
+  "PAP-590",
+  "PAP-591",
+  "PAP-592",
+  "PAP-593",
+  "PAP-594",
+  "PAP-595",
+  "PAP-596",
+  "PAP-597",
+  "PAP-598",
+  "PAP-599",
+  "PAP-600",
+  "PAP-601",
+  "PAP-602",
+  "PAP-603",
+  "PAP-604",
+  "PAP-605",
+  "PAP-606",
+  "PAP-607",
+  "PAP-609",
+  "PAP-610",
+  "PAP-611",
+  "PAP-612",
+  "PAP-615",
+  "PAP-616",
+  "PAP-617",
+  "PAP-618",
+  "PAP-619",
+  "PAP-620",
+  "PAP-621",
+  "PAP-622",
+  "PAP-623",
+  "PAP-624",
+  "PAP-625",
+  "PAP-626",
+  "PAP-627",
+  "PAP-628",
+  "PAP-629",
+  "PAP-630",
+  "PAP-631",
+  "PAP-632",
+  "PAP-635",
+  "PAP-636",
+  "PAP-638",
+  "PAP-639",
+  "PAP-641",
+  "PAP-646",
+  "PAP-647",
+  "PAP-648",
+  "PAP-649",
+  "PAP-650",
+  "PAP-651",
+  "PAP-652",
+  "PAP-654",
+  "PAP-656",
+  "PAP-658",
+  "PAP-660",
+  "PAP-663",
+  "PAP-664",
+  "PAP-665",
+  "PAP-666",
+  "PAP-667",
+  "PAP-674",
+  "PAP-676",
+  "PAP-680",
+  "PAP-686",
+  "PAP-689",
+  "PAP-693",
+  "PAP-694",
+  "PAP-696",
+  "PAP-697",
+  "PAP-698",
+  "PAP-699",
+  "PAP-701",
+  "PAP-703",
+  "PAP-705",
+  "PAP-706",
+  "PAP-708",
+  "PAP-710",
+  "PAP-711",
+  "PAP-712",
+  "PAP-714",
+  "PAP-715",
+  "PAP-717",
+  "PAP-718",
+  "PAP-720",
+  "PAP-721",
+  "PAP-726",
+  "PAP-727",
+  "PAP-729",
+  "PAP-730",
+  "PAP-732",
+  "PAP-733",
+  "PAP-734",
+  "PAP-735",
+  "PAP-736",
+  "PAP-737",
+  "PAP-738",
+  "PAP-739",
+  "PAP-740",
+  "PAP-741",
+  "PAP-742",
+  "PAP-744",
+  "PAP-745",
+  "PAP-746",
+  "PAP-747",
+  "PAP-748",
+  "PAP-750",
+  "PAP-751",
+  "PAP-752",
+  "PAP-755",
+  "PAP-757",
+  "PAP-758",
+  "PAP-760",
+  "PAP-761",
+  "PAP-762",
+  "PAP-763",
+  "PAP-764",
+  "PAP-765",
+  "PAP-766",
+  "PAP-770",
+  "PAP-771",
+  "PAP-772",
+  "PAP-773",
+  "PAP-774",
+  "PAP-775",
+  "PAP-776",
+  "PAP-777",
+  "PAP-778",
+  "PAP-780",
+  "PAP-781",
+  "PAP-782",
+  "PAP-783",
+  "PAP-784",
+  "PAP-785",
+  "PAP-786",
+  "PAP-788",
+  "PAP-789",
+  "PAP-790",
+  "PAP-791",
+  "PAP-792",
+  "PAP-793",
+  "PAP-794",
+  "PAP-795",
+  "PAP-796",
+  "PAP-797",
+  "PAP-798",
+  "PAP-799",
+  "PAP-800",
+  "PAP-801",
+  "PAP-802",
+  "PAP-804",
+  "PAP-805",
+  "PAP-806",
+  "PAP-809",
+  "PAP-810",
+  "PAP-811",
+  "PAP-812",
+  "PAP-814",
+  "PAP-815",
+  "PAP-816",
+  "PAP-817",
+  "PAP-818",
+  "PAP-819",
+  "PAP-820",
+  "PAP-821",
+  "PAP-824",
+  "PAP-825",
+  "PAP-826",
+  "PAP-827",
+  "PAP-830",
+  "PAP-831",
+  "PAP-835",
+  "PAP-836",
+  "PAP-837",
+  "PAP-838",
+  "PAP-839",
+  "PAP-840",
+  "PAP-841",
+  "PAP-842",
+  "PAP-843",
+  "PAP-844",
+  "PAP-845",
+  "PAP-846",
+  "PAP-848",
+  "PAP-849",
+  "PAP-850",
+  "PAP-851",
+  "PAP-852",
+  "PAP-853",
+  "PAP-854",
+  "PAP-855",
+  "PAP-856",
+  "PAP-857",
+  "PAP-858",
+  "PAP-859",
+  "PAP-860",
+  "PAP-861",
+  "PAP-863",
+  "PAP-864",
+  "PAP-865",
+  "PAP-866",
+  "PAP-867",
+  "PAP-869",
+  "PAP-870",
+  "PAP-871",
+  "PAP-872",
+  "PAP-874",
+  "PAP-875",
+  "PAP-876",
+  "PAP-878",
+  "PAP-879",
+  "PAP-880",
+  "PAP-881",
+  "PAP-882",
+  "PAP-883",
+  "PAP-884",
+  "PAP-885",
+  "PAP-886",
+  "PAP-887",
+  "PAP-888",
+  "PAP-889",
+  "PAP-890",
+  "PAP-891",
+  "PAP-892",
+  "PAP-894",
+  "PAP-895",
+  "PAP-896",
+  "PAP-897",
+  "PAP-898",
+  "PAP-899",
+  "PAP-900",
+  "PAP-901",
+  "PAP-902",
+  "PAP-903",
+  "PAP-904",
+  "PAP-906",
+  "PAP-907",
+  "PAP-914",
+  "PAP-916",
+  "PAP-918",
+  "PAP-919",
+  "PAP-920",
+  "PAP-921",
+  "PAP-923",
+  "PAP-925",
+  "PAP-929",
+  "PAP-935",
+  "PAP-936",
+  "PAP-938",
+  "PAP-939",
+  "PAP-940",
+  "PAP-942",
+  "PAP-944",
+  "PAP-949",
+  "PAP-950",
+  "PAP-953",
+  "PAP-956",
+  "PAP-957",
+  "PAP-959",
+  "PAP-964",
+  "PAP-965",
+  "PAP-970",
+  "PAP-971",
+  "PAP-973",
+  "PAP-975",
+  "PAP-977",
+  "PAP-979",
+  "PAP-982",
+  "PAP-989",
+  "PAP-991",
+  "PAP-994"
+ ],
+ "notes": {
+  "PAP-799": [
+   "PAP-195 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it."
+  ],
+  "PAP-714": [
+   "PAP-308 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it."
+  ],
+  "PAP-717": [
+   "PAP-108 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it."
+  ],
+  "PAP-706": [
+   "PAP-288 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it."
+  ],
+  "PAP-699": [
+   "PAP-239 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it."
+  ],
+  "PAP-491": [
+   "PAP-402 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it.",
+   "PAP-404 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it."
+  ],
+  "PAP-455": [
+   "PAP-276 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it."
+  ],
+  "PAP-441": [
+   "PAP-239 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it."
+  ],
+  "PAP-435": [
+   "PAP-366 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it."
+  ],
+  "PAP-396": [
+   "PAP-235 is named as a hard dependency above but stays a soft dependency (no `blocks` relation): deferred blocker -> scheduled. Start when it is In Review or work against its contract and leave a TODO naming it."
+  ],
+  "PAP-361": [
+   "PAP-161 appears in the Hard list above and in a round-4 soft note; it is soft (no `blocks` relation). Read the Hard list without it."
+  ],
+  "PAP-302": [
+   "PAP-13 is named as a hard dependency above but stays a soft dependency (no `blocks` relation): would block a Ready issue. Start when it is In Review or work against its contract and leave a TODO naming it."
+  ],
+  "PAP-288": [
+   "PAP-40 is named as a hard dependency above but stays a soft dependency (no `blocks` relation): milestone inversion 2026-09-30 > 2026-09-25. Start when it is In Review or work against its contract and leave a TODO naming it."
+  ],
+  "PAP-225": [
+   "PAP-19 is named as a hard dependency above but stays a soft dependency (no `blocks` relation): milestone inversion 2026-09-24 > 2026-09-23. Start when it is In Review or work against its contract and leave a TODO naming it."
+  ],
+  "PAP-123": [
+   "PAP-132 is named as a hard dependency above but stays a soft dependency (no `blocks` relation): milestone inversion 2026-09-29 > 2026-09-26. Start when it is In Review or work against its contract and leave a TODO naming it."
+  ],
+  "PAP-950": [
+   "overlaps PAP-70 (which already ships `SplitPane` in the layout components). If promoted, scope this issue to the `Tabs` workspace (multi-document tabs) and persisted split ratios only, and depend on PAP-70."
+  ],
+  "PAP-627": [
+   "moved to the parent's milestone (Grid with sort, filter, group) and dueDate 2026-09-28 so the umbrella PAP-164 closes with its last child."
+  ]
+ },
+ "field_updates": [
+  [
+   "PAP-636",
+   {
+    "projectMilestoneId": "5a6ecd45-07b7-40e2-80d5-fbbba5c9c0f8"
+   },
+   "child milestone -> parent PAP-170 milestone 'All view types' (deferred child, no dueDate)"
+  ],
+  [
+   "PAP-627",
+   {
+    "projectMilestoneId": "06d9484b-ddc1-466a-bd89-a495a8fe2ba7",
+    "dueDate": "2026-09-28"
+   },
+   "child milestone -> parent PAP-164 milestone 'Grid with sort, filter, group'; dueDate 09-29 -> 09-28 (all 7 blockers due <= 09-28; dependents due 09-29+); also repairs umbrella PAP-164 due < last child due"
+  ]
+ ]
+}

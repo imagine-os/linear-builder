@@ -1,0 +1,7454 @@
+{
+ "startedAt": "2026-09-18T14:28:22Z",
+ "mutations": [
+  {
+   "kind": "description",
+   "identifier": "PAP-21",
+   "alias": "d0",
+   "keys": [
+    "r4/app-shell/tauri-e2e-harness"
+   ],
+   "notes": 0,
+   "oldLen": 4545,
+   "newLen": 4674,
+   "ok": true,
+   "at": "14:28:35Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-22",
+   "alias": "d1",
+   "keys": [
+    "r4/app-shell/cli-linear-seeding"
+   ],
+   "notes": 0,
+   "oldLen": 5241,
+   "newLen": 5370,
+   "ok": true,
+   "at": "14:28:35Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-26",
+   "alias": "d2",
+   "keys": [
+    "r4/app-shell/pr-preview-environments"
+   ],
+   "notes": 0,
+   "oldLen": 5261,
+   "newLen": 5390,
+   "ok": true,
+   "at": "14:28:35Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-30",
+   "alias": "d3",
+   "keys": [
+    "r4/data-layer/pgaudit-db-health",
+    "r4/data-layer/preview-databases"
+   ],
+   "notes": 0,
+   "oldLen": 5127,
+   "newLen": 5276,
+   "ok": true,
+   "at": "14:28:35Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-37",
+   "alias": "d4",
+   "keys": [
+    "r4/data-layer/upload-scanning"
+   ],
+   "notes": 0,
+   "oldLen": 4645,
+   "newLen": 4774,
+   "ok": true,
+   "at": "14:28:35Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-39",
+   "alias": "d5",
+   "keys": [
+    "r4/data-layer/search-semantic"
+   ],
+   "notes": 0,
+   "oldLen": 4446,
+   "newLen": 4575,
+   "ok": true,
+   "at": "14:28:35Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-41",
+   "alias": "d6",
+   "keys": [
+    "r4/data-layer/pii-registry"
+   ],
+   "notes": 0,
+   "oldLen": 4449,
+   "newLen": 4578,
+   "ok": true,
+   "at": "14:28:35Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-46",
+   "alias": "d7",
+   "keys": [
+    "r4/forge/dependent-branches",
+    "r4/forge/git-credential-helper"
+   ],
+   "notes": 0,
+   "oldLen": 4901,
+   "newLen": 5050,
+   "ok": true,
+   "at": "14:28:35Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-49",
+   "alias": "d8",
+   "keys": [
+    "r4/forge/dependent-branches"
+   ],
+   "notes": 0,
+   "oldLen": 4219,
+   "newLen": 4348,
+   "ok": true,
+   "at": "14:28:35Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-50",
+   "alias": "d9",
+   "keys": [
+    "r4/forge/portability-checker"
+   ],
+   "notes": 0,
+   "oldLen": 4708,
+   "newLen": 4837,
+   "ok": true,
+   "at": "14:28:35Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-51",
+   "alias": "d0",
+   "keys": [
+    "r4/forge/repo-cleanup"
+   ],
+   "notes": 0,
+   "oldLen": 5051,
+   "newLen": 5180,
+   "ok": true,
+   "at": "14:28:37Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-53",
+   "alias": "d1",
+   "keys": [
+    "r4/forge/bootstrap-check-mode",
+    "r4/forge/lfs-and-artifacts",
+    "r4/forge/playwright-runner-image",
+    "r4/forge/supply-chain-provenance"
+   ],
+   "notes": 0,
+   "oldLen": 4788,
+   "newLen": 4975,
+   "ok": true,
+   "at": "14:28:37Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-58",
+   "alias": "d2",
+   "keys": [
+    "r4/identity/tenancy-core",
+    "r4/identity/tenancy-ui"
+   ],
+   "notes": 0,
+   "oldLen": 5940,
+   "newLen": 6089,
+   "ok": true,
+   "at": "14:28:37Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-60",
+   "alias": "d3",
+   "keys": [
+    "r4/data-layer/rate-limits",
+    "r4/identity/agent-attribution-quotas",
+    "r4/identity/agent-keys"
+   ],
+   "notes": 0,
+   "oldLen": 5306,
+   "newLen": 5474,
+   "ok": true,
+   "at": "14:28:37Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-61",
+   "alias": "d4",
+   "keys": [
+    "r4/identity/permission-propagation"
+   ],
+   "notes": 0,
+   "oldLen": 5287,
+   "newLen": 5416,
+   "ok": true,
+   "at": "14:28:37Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-62",
+   "alias": "d5",
+   "keys": [
+    "r4/identity/portal-account-pages",
+    "r4/identity/portal-frame"
+   ],
+   "notes": 0,
+   "oldLen": 5474,
+   "newLen": 5623,
+   "ok": true,
+   "at": "14:28:37Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-63",
+   "alias": "d6",
+   "keys": [
+    "r4/data-layer/jobs-admin",
+    "r4/identity/access-checker",
+    "r4/identity/console-admin-pages",
+    "r4/identity/console-frame",
+    "r4/identity/custom-roles",
+    "r4/identity/session-policy"
+   ],
+   "notes": 0,
+   "oldLen": 5747,
+   "newLen": 5972,
+   "ok": true,
+   "at": "14:28:37Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-66",
+   "alias": "d7",
+   "keys": [
+    "r4/design-system/dataviz-tokens-and-microcharts",
+    "r4/design-system/density-modes",
+    "r4/input/accessibility-input-preferences"
+   ],
+   "notes": 0,
+   "oldLen": 5170,
+   "newLen": 5338,
+   "ok": true,
+   "at": "14:28:37Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-69",
+   "alias": "d8",
+   "keys": [
+    "r4/design-system/density-modes"
+   ],
+   "notes": 0,
+   "oldLen": 4507,
+   "newLen": 4636,
+   "ok": true,
+   "at": "14:28:37Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-71",
+   "alias": "d9",
+   "keys": [
+    "r4/design-system/cell-renderer-registry-and-cells",
+    "r4/design-system/data-display-components",
+    "r4/design-system/dataviz-tokens-and-microcharts"
+   ],
+   "notes": 0,
+   "oldLen": 5780,
+   "newLen": 5948,
+   "ok": true,
+   "at": "14:28:37Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-73",
+   "alias": "d0",
+   "keys": [
+    "r4/design-system/reflow-zoom-text-spacing-audit"
+   ],
+   "notes": 0,
+   "oldLen": 5193,
+   "newLen": 5322,
+   "ok": true,
+   "at": "14:28:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-74",
+   "alias": "d1",
+   "keys": [
+    "r4/design-system/ui-package-versioning-and-deprecation"
+   ],
+   "notes": 0,
+   "oldLen": 5371,
+   "newLen": 5500,
+   "ok": true,
+   "at": "14:28:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-76",
+   "alias": "d2",
+   "keys": [
+    "r4/design-system/design-lint-rules",
+    "r4/design-system/navigation-components",
+    "r4/design-system/reflow-zoom-text-spacing-audit",
+    "r4/design-system/static-data-table"
+   ],
+   "notes": 0,
+   "oldLen": 5031,
+   "newLen": 5218,
+   "ok": true,
+   "at": "14:28:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-96",
+   "alias": "d3",
+   "keys": [
+    "r4/pm-linear/orchestrator-promotion-pass",
+    "r4/pm-linear/session-model-and-effort-routing"
+   ],
+   "notes": 0,
+   "oldLen": 16280,
+   "newLen": 16429,
+   "ok": true,
+   "at": "14:28:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-97",
+   "alias": "d4",
+   "keys": [
+    "r4/pm-linear/issue-attachments-and-evidence-bundle"
+   ],
+   "notes": 0,
+   "oldLen": 5889,
+   "newLen": 6018,
+   "ok": true,
+   "at": "14:28:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-98",
+   "alias": "d5",
+   "keys": [
+    "r4/pm-linear/chunk-progress-report"
+   ],
+   "notes": 0,
+   "oldLen": 4232,
+   "newLen": 4361,
+   "ok": true,
+   "at": "14:28:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-100",
+   "alias": "d6",
+   "keys": [
+    "r4/pm-linear/pm-model-initiatives-updates-cycles-rollups"
+   ],
+   "notes": 0,
+   "oldLen": 4472,
+   "newLen": 4601,
+   "ok": true,
+   "at": "14:28:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-106",
+   "alias": "d7",
+   "keys": [
+    "r4/agents/character-bundles-and-enforce-scope-hook",
+    "r4/agents/least-privilege-probe-suite-and-matrix"
+   ],
+   "notes": 0,
+   "oldLen": 5973,
+   "newLen": 6122,
+   "ok": true,
+   "at": "14:28:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-108",
+   "alias": "d8",
+   "keys": [
+    "r4/agents/character-linear-identity-and-attribution"
+   ],
+   "notes": 0,
+   "oldLen": 4594,
+   "newLen": 4723,
+   "ok": true,
+   "at": "14:28:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-114",
+   "alias": "d9",
+   "keys": [
+    "r4/spec-builder/schema-v1-1-extensions"
+   ],
+   "notes": 0,
+   "oldLen": 7041,
+   "newLen": 7170,
+   "ok": true,
+   "at": "14:28:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-117",
+   "alias": "d0",
+   "keys": [
+    "r4/spec-builder/entity-field-grammar"
+   ],
+   "notes": 0,
+   "oldLen": 4160,
+   "newLen": 4289,
+   "ok": true,
+   "at": "14:28:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-123",
+   "alias": "d1",
+   "keys": [],
+   "notes": 1,
+   "oldLen": 4470,
+   "newLen": 4734,
+   "ok": true,
+   "at": "14:28:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-129",
+   "alias": "d2",
+   "keys": [
+    "r4/collab/build-journals"
+   ],
+   "notes": 0,
+   "oldLen": 5462,
+   "newLen": 5591,
+   "ok": true,
+   "at": "14:28:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-136",
+   "alias": "d3",
+   "keys": [
+    "r4/collab/notification-core"
+   ],
+   "notes": 0,
+   "oldLen": 6728,
+   "newLen": 6857,
+   "ok": true,
+   "at": "14:28:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-140",
+   "alias": "d4",
+   "keys": [
+    "r4/identity/agent-keys",
+    "r4/identity/permission-propagation",
+    "r4/realtime/connection-status",
+    "r4/realtime/doc-history"
+   ],
+   "notes": 0,
+   "oldLen": 5862,
+   "newLen": 6049,
+   "ok": true,
+   "at": "14:28:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-141",
+   "alias": "d5",
+   "keys": [
+    "r4/realtime/presence-components",
+    "r4/realtime/presence-core"
+   ],
+   "notes": 0,
+   "oldLen": 4864,
+   "newLen": 4993,
+   "ok": true,
+   "at": "14:28:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-142",
+   "alias": "d6",
+   "keys": [
+    "r4/realtime/editor-core",
+    "r4/realtime/editor-features"
+   ],
+   "notes": 0,
+   "oldLen": 4982,
+   "newLen": 5131,
+   "ok": true,
+   "at": "14:28:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-144",
+   "alias": "d7",
+   "keys": [
+    "r4/realtime/conflict-ux-impl"
+   ],
+   "notes": 0,
+   "oldLen": 4958,
+   "newLen": 5087,
+   "ok": true,
+   "at": "14:28:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-147",
+   "alias": "d8",
+   "keys": [
+    "r4/realtime/load-harness",
+    "r4/realtime/load-runs-tuning"
+   ],
+   "notes": 0,
+   "oldLen": 4684,
+   "newLen": 4833,
+   "ok": true,
+   "at": "14:28:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-148",
+   "alias": "d9",
+   "keys": [
+    "r4/data-layer/idempotency-batch"
+   ],
+   "notes": 0,
+   "oldLen": 5145,
+   "newLen": 5274,
+   "ok": true,
+   "at": "14:28:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-153",
+   "alias": "d0",
+   "keys": [
+    "r4/input/accessibility-input-preferences",
+    "r4/input/macros-and-command-chains"
+   ],
+   "notes": 0,
+   "oldLen": 4612,
+   "newLen": 4761,
+   "ok": true,
+   "at": "14:28:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-154",
+   "alias": "d1",
+   "keys": [
+    "r4/input/gesture-recognisers-and-arena",
+    "r4/input/mobile-gesture-components-and-haptics"
+   ],
+   "notes": 0,
+   "oldLen": 4886,
+   "newLen": 5035,
+   "ok": true,
+   "at": "14:28:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-156",
+   "alias": "d2",
+   "keys": [
+    "r4/input/accessibility-input-preferences",
+    "r4/input/playwright-input-fixtures"
+   ],
+   "notes": 0,
+   "oldLen": 5422,
+   "newLen": 5571,
+   "ok": true,
+   "at": "14:28:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-159",
+   "alias": "d3",
+   "keys": [
+    "r4/input/dictation-targets-and-voice-ui",
+    "r4/input/voice-backend-and-intent-matching"
+   ],
+   "notes": 0,
+   "oldLen": 5656,
+   "newLen": 5805,
+   "ok": true,
+   "at": "14:28:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-160",
+   "alias": "d4",
+   "keys": [
+    "r4/design-system/reflow-zoom-text-spacing-audit",
+    "r4/input/accessibility-input-preferences"
+   ],
+   "notes": 0,
+   "oldLen": 5371,
+   "newLen": 5520,
+   "ok": true,
+   "at": "14:28:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-161",
+   "alias": "d5",
+   "keys": [
+    "r4/design-system/form-layout-and-unsaved-changes",
+    "r4/tables/conditional-formatting",
+    "r4/tables/field-level-permissions",
+    "r4/tables/record-templates-and-field-defaults"
+   ],
+   "notes": 0,
+   "oldLen": 8008,
+   "newLen": 8195,
+   "ok": true,
+   "at": "14:28:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-166",
+   "alias": "d6",
+   "keys": [
+    "r4/tables/filter-builder-component",
+    "r4/tables/view-toolbar-sort-group-aggregates"
+   ],
+   "notes": 0,
+   "oldLen": 4851,
+   "newLen": 5000,
+   "ok": true,
+   "at": "14:28:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-175",
+   "alias": "d7",
+   "keys": [
+    "r4/business-core/fx-rates-and-conversion",
+    "r4/business-core/item-catalogue",
+    "r4/business-core/ledger-dimensions-registry"
+   ],
+   "notes": 0,
+   "oldLen": 6482,
+   "newLen": 6650,
+   "ok": true,
+   "at": "14:28:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-181",
+   "alias": "d8",
+   "keys": [
+    "r4/business-core/disputes-radar-evidence"
+   ],
+   "notes": 0,
+   "oldLen": 5347,
+   "newLen": 5476,
+   "ok": true,
+   "at": "14:28:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-183",
+   "alias": "d9",
+   "keys": [
+    "r4/business-core/finance-demo-seed",
+    "r4/business-core/ledger-dimensions-registry"
+   ],
+   "notes": 0,
+   "oldLen": 5234,
+   "newLen": 5383,
+   "ok": true,
+   "at": "14:28:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-186",
+   "alias": "d0",
+   "keys": [
+    "r4/business-core/recurring-invoices-dunning"
+   ],
+   "notes": 0,
+   "oldLen": 5430,
+   "newLen": 5559,
+   "ok": true,
+   "at": "14:28:46Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-194",
+   "alias": "d1",
+   "keys": [
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "notes": 0,
+   "oldLen": 5411,
+   "newLen": 5540,
+   "ok": true,
+   "at": "14:28:46Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-195",
+   "alias": "d2",
+   "keys": [
+    "r4/growth/crm-schema-routers-page-specs",
+    "r4/growth/in-app-messages-and-announcements"
+   ],
+   "notes": 0,
+   "oldLen": 5091,
+   "newLen": 5240,
+   "ok": true,
+   "at": "14:28:46Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-197",
+   "alias": "d3",
+   "keys": [
+    "r4/growth/help-center-knowledge-base",
+    "r4/growth/support-ai-reply-drafts",
+    "r4/growth/support-sla-and-business-hours"
+   ],
+   "notes": 0,
+   "oldLen": 5741,
+   "newLen": 5909,
+   "ok": true,
+   "at": "14:28:46Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-198",
+   "alias": "d4",
+   "keys": [
+    "r4/migration/importer-test-accounts-and-fixture-workspaces"
+   ],
+   "notes": 0,
+   "oldLen": 11220,
+   "newLen": 11349,
+   "ok": true,
+   "at": "14:28:46Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-209",
+   "alias": "d5",
+   "keys": [
+    "r4/libraries/facts-security-quality"
+   ],
+   "notes": 0,
+   "oldLen": 5240,
+   "newLen": 5369,
+   "ok": true,
+   "at": "14:28:46Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-212",
+   "alias": "d6",
+   "keys": [
+    "r4/libraries/spike-harness-kit"
+   ],
+   "notes": 0,
+   "oldLen": 4837,
+   "newLen": 4966,
+   "ok": true,
+   "at": "14:28:46Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-214",
+   "alias": "d7",
+   "keys": [
+    "r4/libraries/compose-smoke-workflow"
+   ],
+   "notes": 0,
+   "oldLen": 5422,
+   "newLen": 5551,
+   "ok": true,
+   "at": "14:28:46Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-216",
+   "alias": "d8",
+   "keys": [
+    "r4/libraries/dependency-hygiene",
+    "r4/libraries/import-census",
+    "r4/libraries/library-cost-model",
+    "r4/libraries/patch-fork-policy"
+   ],
+   "notes": 0,
+   "oldLen": 6275,
+   "newLen": 6462,
+   "ok": true,
+   "at": "14:28:46Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-217",
+   "alias": "d9",
+   "keys": [
+    "r4/libraries/dependency-hygiene",
+    "r4/libraries/patch-fork-policy"
+   ],
+   "notes": 0,
+   "oldLen": 5515,
+   "newLen": 5664,
+   "ok": true,
+   "at": "14:28:46Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-220",
+   "alias": "d0",
+   "keys": [
+    "r4/identity/auth-abuse-controls",
+    "r4/identity/mfa-recovery",
+    "r4/identity/sessions-stepup"
+   ],
+   "notes": 0,
+   "oldLen": 5094,
+   "newLen": 5262,
+   "ok": true,
+   "at": "14:28:49Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-225",
+   "alias": "d1",
+   "keys": [],
+   "notes": 1,
+   "oldLen": 3092,
+   "newLen": 3355,
+   "ok": true,
+   "at": "14:28:49Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-229",
+   "alias": "d2",
+   "keys": [
+    "r4/identity/field-permissions",
+    "r4/identity/permission-propagation"
+   ],
+   "notes": 0,
+   "oldLen": 3509,
+   "newLen": 3658,
+   "ok": true,
+   "at": "14:28:49Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-257",
+   "alias": "d3",
+   "keys": [
+    "r4/forge/supply-chain-provenance"
+   ],
+   "notes": 0,
+   "oldLen": 3478,
+   "newLen": 3607,
+   "ok": true,
+   "at": "14:28:49Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-271",
+   "alias": "d4",
+   "keys": [
+    "r4/data-layer/local-data-protection"
+   ],
+   "notes": 0,
+   "oldLen": 2420,
+   "newLen": 2549,
+   "ok": true,
+   "at": "14:28:49Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-273",
+   "alias": "d5",
+   "keys": [
+    "r4/app-shell/upgrade-package-registry"
+   ],
+   "notes": 0,
+   "oldLen": 2432,
+   "newLen": 2561,
+   "ok": true,
+   "at": "14:28:49Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-281",
+   "alias": "d6",
+   "keys": [
+    "r4/pm-linear/orchestrator-promotion-pass"
+   ],
+   "notes": 0,
+   "oldLen": 4591,
+   "newLen": 4720,
+   "ok": true,
+   "at": "14:28:49Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-282",
+   "alias": "d7",
+   "keys": [
+    "r4/agents/docs-context-pack-and-cache-friendly-prompts"
+   ],
+   "notes": 0,
+   "oldLen": 4838,
+   "newLen": 4967,
+   "ok": true,
+   "at": "14:28:49Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-288",
+   "alias": "d8",
+   "keys": [],
+   "notes": 1,
+   "oldLen": 4145,
+   "newLen": 4408,
+   "ok": true,
+   "at": "14:28:49Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-289",
+   "alias": "d9",
+   "keys": [
+    "r4/input/command-context-menus",
+    "r4/input/multi-window-command-and-focus-routing",
+    "r4/input/native-menu-from-command-manifest"
+   ],
+   "notes": 0,
+   "oldLen": 3168,
+   "newLen": 3336,
+   "ok": true,
+   "at": "14:28:49Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-298",
+   "alias": "d0",
+   "keys": [
+    "r4/agents/deny-list-policy-file-and-hook",
+    "r4/agents/request-approval-mcp-interception-and-backstops"
+   ],
+   "notes": 0,
+   "oldLen": 8913,
+   "newLen": 9062,
+   "ok": true,
+   "at": "14:28:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-299",
+   "alias": "d1",
+   "keys": [
+    "r4/agents/injection-eval-suite-and-canaries",
+    "r4/agents/trust-tiers-wrapper-scanner-and-actor-verification"
+   ],
+   "notes": 0,
+   "oldLen": 7998,
+   "newLen": 8147,
+   "ok": true,
+   "at": "14:28:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-302",
+   "alias": "d2",
+   "keys": [],
+   "notes": 1,
+   "oldLen": 6384,
+   "newLen": 6629,
+   "ok": true,
+   "at": "14:28:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-304",
+   "alias": "d3",
+   "keys": [
+    "r4/data-layer/idempotency-batch",
+    "r4/data-layer/rate-limits"
+   ],
+   "notes": 0,
+   "oldLen": 7815,
+   "newLen": 7964,
+   "ok": true,
+   "at": "14:28:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-323",
+   "alias": "d4",
+   "keys": [
+    "r4/collab/watchers-subscriptions"
+   ],
+   "notes": 0,
+   "oldLen": 3080,
+   "newLen": 3209,
+   "ok": true,
+   "at": "14:28:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-331",
+   "alias": "d5",
+   "keys": [
+    "r4/input/clipboard-port"
+   ],
+   "notes": 0,
+   "oldLen": 3118,
+   "newLen": 3247,
+   "ok": true,
+   "at": "14:28:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-340",
+   "alias": "d6",
+   "keys": [
+    "r4/tables/records-crud-procedures"
+   ],
+   "notes": 0,
+   "oldLen": 2480,
+   "newLen": 2609,
+   "ok": true,
+   "at": "14:28:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-342",
+   "alias": "d7",
+   "keys": [
+    "r4/input/clipboard-port",
+    "r4/input/undo-manager"
+   ],
+   "notes": 0,
+   "oldLen": 2426,
+   "newLen": 2575,
+   "ok": true,
+   "at": "14:28:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-360",
+   "alias": "d8",
+   "keys": [
+    "r4/spec-builder/entity-field-grammar"
+   ],
+   "notes": 0,
+   "oldLen": 7011,
+   "newLen": 7140,
+   "ok": true,
+   "at": "14:28:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-361",
+   "alias": "d9",
+   "keys": [
+    "r4/spec-builder/entity-field-grammar",
+    "r4/spec-builder/schema-v1-1-extensions"
+   ],
+   "notes": 1,
+   "oldLen": 7104,
+   "newLen": 7423,
+   "ok": true,
+   "at": "14:28:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-362",
+   "alias": "d0",
+   "keys": [
+    "r4/spec-builder/entity-backend-codegen"
+   ],
+   "notes": 0,
+   "oldLen": 6232,
+   "newLen": 6361,
+   "ok": true,
+   "at": "14:28:54Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-378",
+   "alias": "d1",
+   "keys": [
+    "r4/spec-builder/msw-fixtures-from-data"
+   ],
+   "notes": 0,
+   "oldLen": 4067,
+   "newLen": 4196,
+   "ok": true,
+   "at": "14:28:54Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-380",
+   "alias": "d2",
+   "keys": [
+    "r4/spec-builder/schema-v1-1-extensions"
+   ],
+   "notes": 0,
+   "oldLen": 3804,
+   "newLen": 3933,
+   "ok": true,
+   "at": "14:28:54Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-381",
+   "alias": "d3",
+   "keys": [
+    "r4/app-shell/native-push-registration",
+    "r4/realtime/live-events-channel",
+    "r4/realtime/web-push"
+   ],
+   "notes": 0,
+   "oldLen": 5114,
+   "newLen": 5267,
+   "ok": true,
+   "at": "14:28:54Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-395",
+   "alias": "d4",
+   "keys": [
+    "r4/business-core/discounts-and-promo-codes",
+    "r4/business-core/item-catalogue"
+   ],
+   "notes": 0,
+   "oldLen": 2451,
+   "newLen": 2600,
+   "ok": true,
+   "at": "14:28:54Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-396",
+   "alias": "d5",
+   "keys": [],
+   "notes": 1,
+   "oldLen": 2093,
+   "newLen": 2343,
+   "ok": true,
+   "at": "14:28:54Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-402",
+   "alias": "d6",
+   "keys": [
+    "r4/growth/outbound-sandbox-ledger"
+   ],
+   "notes": 0,
+   "oldLen": 2659,
+   "newLen": 2788,
+   "ok": true,
+   "at": "14:28:54Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-404",
+   "alias": "d7",
+   "keys": [
+    "r4/growth/outbound-sandbox-ledger"
+   ],
+   "notes": 0,
+   "oldLen": 2426,
+   "newLen": 2555,
+   "ok": true,
+   "at": "14:28:54Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-410",
+   "alias": "d8",
+   "keys": [
+    "r4/growth/support-ai-reply-drafts"
+   ],
+   "notes": 0,
+   "oldLen": 2284,
+   "newLen": 2413,
+   "ok": true,
+   "at": "14:28:54Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-423",
+   "alias": "d9",
+   "keys": [
+    "r4/business-core/fx-rates-and-conversion"
+   ],
+   "notes": 0,
+   "oldLen": 3342,
+   "newLen": 3471,
+   "ok": true,
+   "at": "14:28:54Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-433",
+   "alias": "d0",
+   "keys": [
+    "r4/module-system/lifecycle-and-health",
+    "r4/module-system/port-resilience",
+    "r4/module-system/port-usage-tracking"
+   ],
+   "notes": 0,
+   "oldLen": 5793,
+   "newLen": 5961,
+   "ok": true,
+   "at": "14:28:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-435",
+   "alias": "d1",
+   "keys": [],
+   "notes": 1,
+   "oldLen": 4961,
+   "newLen": 5133,
+   "ok": true,
+   "at": "14:28:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-441",
+   "alias": "d2",
+   "keys": [
+    "r4/module-system/conformance-normaliser",
+    "r4/module-system/module-scaffold",
+    "r4/module-system/sample-module",
+    "r4/module-system/test-kernel"
+   ],
+   "notes": 1,
+   "oldLen": 5174,
+   "newLen": 5531,
+   "ok": true,
+   "at": "14:28:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-442",
+   "alias": "d3",
+   "keys": [
+    "r4/module-system/contract-diff",
+    "r4/module-system/sample-module",
+    "r4/module-system/swap-linear-umbrella"
+   ],
+   "notes": 0,
+   "oldLen": 5421,
+   "newLen": 5589,
+   "ok": true,
+   "at": "14:28:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-445",
+   "alias": "d4",
+   "keys": [
+    "r4/module-system/contract-diff",
+    "r4/module-system/lifecycle-and-health"
+   ],
+   "notes": 0,
+   "oldLen": 3959,
+   "newLen": 4108,
+   "ok": true,
+   "at": "14:28:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-446",
+   "alias": "d5",
+   "keys": [
+    "r4/module-system/sample-module"
+   ],
+   "notes": 0,
+   "oldLen": 5289,
+   "newLen": 5418,
+   "ok": true,
+   "at": "14:28:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-449",
+   "alias": "d6",
+   "keys": [
+    "r4/forge/merge-automation",
+    "r4/forge/mirror-drift-monitor"
+   ],
+   "notes": 0,
+   "oldLen": 5937,
+   "newLen": 6086,
+   "ok": true,
+   "at": "14:28:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-455",
+   "alias": "d7",
+   "keys": [
+    "r4/module-system/service-swap-drill"
+   ],
+   "notes": 1,
+   "oldLen": 6032,
+   "newLen": 6331,
+   "ok": true,
+   "at": "14:28:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-474",
+   "alias": "d8",
+   "keys": [
+    "r4/collab/notification-core"
+   ],
+   "notes": 0,
+   "oldLen": 5916,
+   "newLen": 6045,
+   "ok": true,
+   "at": "14:28:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-491",
+   "alias": "d9",
+   "keys": [],
+   "notes": 2,
+   "oldLen": 6232,
+   "newLen": 6574,
+   "ok": true,
+   "at": "14:28:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-498",
+   "alias": "d0",
+   "keys": [
+    "r4/app-shell/upgrade-codemods-fleet"
+   ],
+   "notes": 0,
+   "oldLen": 4406,
+   "newLen": 4535,
+   "ok": true,
+   "at": "14:28:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-499",
+   "alias": "d1",
+   "keys": [
+    "r4/app-shell/upgrade-package-registry"
+   ],
+   "notes": 0,
+   "oldLen": 3665,
+   "newLen": 3794,
+   "ok": true,
+   "at": "14:28:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-500",
+   "alias": "d2",
+   "keys": [
+    "r4/forge/repo-cleanup"
+   ],
+   "notes": 0,
+   "oldLen": 4186,
+   "newLen": 4315,
+   "ok": true,
+   "at": "14:28:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-501",
+   "alias": "d3",
+   "keys": [
+    "r4/module-system/modules-settings-page"
+   ],
+   "notes": 0,
+   "oldLen": 3404,
+   "newLen": 3500,
+   "ok": true,
+   "at": "14:28:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-502",
+   "alias": "d4",
+   "keys": [
+    "r4/app-shell/tauri-e2e-harness"
+   ],
+   "notes": 0,
+   "oldLen": 3900,
+   "newLen": 4004,
+   "ok": true,
+   "at": "14:28:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-505",
+   "alias": "d5",
+   "keys": [
+    "r4/app-shell/warm-pool-job"
+   ],
+   "notes": 0,
+   "oldLen": 4248,
+   "newLen": 4356,
+   "ok": true,
+   "at": "14:28:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-507",
+   "alias": "d6",
+   "keys": [
+    "r4/app-shell/pr-preview-environments"
+   ],
+   "notes": 0,
+   "oldLen": 3630,
+   "newLen": 3759,
+   "ok": true,
+   "at": "14:28:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-508",
+   "alias": "d7",
+   "keys": [
+    "r4/app-shell/tauri-crash-reporting"
+   ],
+   "notes": 0,
+   "oldLen": 4151,
+   "newLen": 4251,
+   "ok": true,
+   "at": "14:28:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-509",
+   "alias": "d8",
+   "keys": [
+    "r4/app-shell/starter-kit-demo-seed"
+   ],
+   "notes": 0,
+   "oldLen": 4462,
+   "newLen": 4533,
+   "ok": true,
+   "at": "14:28:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-511",
+   "alias": "d9",
+   "keys": [
+    "r4/app-shell/tauri-e2e-harness"
+   ],
+   "notes": 0,
+   "oldLen": 3851,
+   "newLen": 3980,
+   "ok": true,
+   "at": "14:28:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-512",
+   "alias": "d0",
+   "keys": [
+    "r4/app-shell/upgrade-codemods-fleet"
+   ],
+   "notes": 0,
+   "oldLen": 3260,
+   "newLen": 3389,
+   "ok": true,
+   "at": "14:29:01Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-513",
+   "alias": "d1",
+   "keys": [
+    "r4/app-shell/native-push-registration",
+    "r4/app-shell/shell-layout-presets",
+    "r4/app-shell/tauri-e2e-harness"
+   ],
+   "notes": 0,
+   "oldLen": 3172,
+   "newLen": 3284,
+   "ok": true,
+   "at": "14:29:01Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-514",
+   "alias": "d2",
+   "keys": [
+    "r4/app-shell/native-push-registration",
+    "r4/app-shell/store-distribution"
+   ],
+   "notes": 0,
+   "oldLen": 2762,
+   "newLen": 2911,
+   "ok": true,
+   "at": "14:29:01Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-515",
+   "alias": "d3",
+   "keys": [
+    "r4/app-shell/client-telemetry"
+   ],
+   "notes": 0,
+   "oldLen": 2977,
+   "newLen": 3082,
+   "ok": true,
+   "at": "14:29:01Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-517",
+   "alias": "d4",
+   "keys": [
+    "r4/spec-builder/seo-public-metadata"
+   ],
+   "notes": 0,
+   "oldLen": 4520,
+   "newLen": 4529,
+   "ok": true,
+   "at": "14:29:01Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-520",
+   "alias": "d5",
+   "keys": [
+    "r4/forge/forge-observability"
+   ],
+   "notes": 0,
+   "oldLen": 3426,
+   "newLen": 3555,
+   "ok": true,
+   "at": "14:29:01Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-522",
+   "alias": "d6",
+   "keys": [
+    "r4/app-shell/template-fixture-repo",
+    "r4/forge/mirror-drift-monitor"
+   ],
+   "notes": 0,
+   "oldLen": 3404,
+   "newLen": 3524,
+   "ok": true,
+   "at": "14:29:01Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-523",
+   "alias": "d7",
+   "keys": [
+    "r4/forge/supply-chain-provenance"
+   ],
+   "notes": 0,
+   "oldLen": 3411,
+   "newLen": 3513,
+   "ok": true,
+   "at": "14:29:01Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-524",
+   "alias": "d8",
+   "keys": [
+    "r4/forge/supply-chain-install-policy"
+   ],
+   "notes": 0,
+   "oldLen": 3751,
+   "newLen": 3849,
+   "ok": true,
+   "at": "14:29:01Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-525",
+   "alias": "d9",
+   "keys": [
+    "r4/data-layer/maintenance-mode"
+   ],
+   "notes": 0,
+   "oldLen": 3302,
+   "newLen": 3431,
+   "ok": true,
+   "at": "14:29:01Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-526",
+   "alias": "d0",
+   "keys": [
+    "r4/app-shell/template-fixture-repo",
+    "r4/forge/mirror-drift-monitor",
+    "r4/forge/repo-cleanup"
+   ],
+   "notes": 0,
+   "oldLen": 2723,
+   "newLen": 2862,
+   "ok": true,
+   "at": "14:29:03Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-527",
+   "alias": "d1",
+   "keys": [
+    "r4/forge/github-app-identities"
+   ],
+   "notes": 0,
+   "oldLen": 4639,
+   "newLen": 4718,
+   "ok": true,
+   "at": "14:29:03Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-528",
+   "alias": "d2",
+   "keys": [
+    "r4/forge/merge-automation"
+   ],
+   "notes": 0,
+   "oldLen": 3964,
+   "newLen": 4053,
+   "ok": true,
+   "at": "14:29:03Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-530",
+   "alias": "d3",
+   "keys": [
+    "r4/forge/forge-observability",
+    "r4/forge/mirror-drift-monitor"
+   ],
+   "notes": 0,
+   "oldLen": 3603,
+   "newLen": 3752,
+   "ok": true,
+   "at": "14:29:03Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-531",
+   "alias": "d4",
+   "keys": [
+    "r4/app-shell/pr-preview-environments",
+    "r4/app-shell/warm-pool-job"
+   ],
+   "notes": 0,
+   "oldLen": 3595,
+   "newLen": 3702,
+   "ok": true,
+   "at": "14:29:03Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-532",
+   "alias": "d5",
+   "keys": [
+    "r4/forge/lfs-and-artifacts",
+    "r4/forge/portability-checker",
+    "r4/forge/runner-autoscaling"
+   ],
+   "notes": 0,
+   "oldLen": 3210,
+   "newLen": 3378,
+   "ok": true,
+   "at": "14:29:03Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-533",
+   "alias": "d6",
+   "keys": [
+    "r4/app-shell/upgrade-package-registry",
+    "r4/forge/github-app-identities"
+   ],
+   "notes": 0,
+   "oldLen": 3755,
+   "newLen": 3879,
+   "ok": true,
+   "at": "14:29:03Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-534",
+   "alias": "d7",
+   "keys": [
+    "r4/forge/merge-automation",
+    "r4/forge/mirror-drift-monitor",
+    "r4/forge/push-protection"
+   ],
+   "notes": 0,
+   "oldLen": 3000,
+   "newLen": 3105,
+   "ok": true,
+   "at": "14:29:03Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-535",
+   "alias": "d8",
+   "keys": [
+    "r4/forge/forge-observability",
+    "r4/module-system/service-swap-drill"
+   ],
+   "notes": 0,
+   "oldLen": 2804,
+   "newLen": 2953,
+   "ok": true,
+   "at": "14:29:03Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-536",
+   "alias": "d9",
+   "keys": [
+    "r4/forge/forge-observability",
+    "r4/forge/playwright-runner-image"
+   ],
+   "notes": 0,
+   "oldLen": 2884,
+   "newLen": 2983,
+   "ok": true,
+   "at": "14:29:03Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-538",
+   "alias": "d0",
+   "keys": [
+    "r4/app-shell/flags-settings-page"
+   ],
+   "notes": 0,
+   "oldLen": 3319,
+   "newLen": 3448,
+   "ok": true,
+   "at": "14:29:05Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-541",
+   "alias": "d1",
+   "keys": [
+    "r4/module-system/sample-module"
+   ],
+   "notes": 0,
+   "oldLen": 3458,
+   "newLen": 3587,
+   "ok": true,
+   "at": "14:29:05Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-542",
+   "alias": "d2",
+   "keys": [
+    "r4/module-system/conformance-normaliser",
+    "r4/module-system/module-scaffold",
+    "r4/module-system/test-kernel"
+   ],
+   "notes": 0,
+   "oldLen": 3932,
+   "newLen": 4100,
+   "ok": true,
+   "at": "14:29:05Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-543",
+   "alias": "d3",
+   "keys": [
+    "r4/app-shell/upgrade-package-registry",
+    "r4/module-system/sample-module"
+   ],
+   "notes": 0,
+   "oldLen": 4211,
+   "newLen": 4335,
+   "ok": true,
+   "at": "14:29:05Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-545",
+   "alias": "d4",
+   "keys": [
+    "r4/module-system/kernel-integrations",
+    "r4/module-system/sample-module"
+   ],
+   "notes": 0,
+   "oldLen": 3981,
+   "newLen": 4074,
+   "ok": true,
+   "at": "14:29:05Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-546",
+   "alias": "d5",
+   "keys": [
+    "r4/module-system/kernel-otel",
+    "r4/module-system/modules-settings-page",
+    "r4/module-system/port-resilience"
+   ],
+   "notes": 0,
+   "oldLen": 3967,
+   "newLen": 4135,
+   "ok": true,
+   "at": "14:29:05Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-548",
+   "alias": "d6",
+   "keys": [
+    "r4/module-system/kernel-otel",
+    "r4/module-system/lifecycle-and-health"
+   ],
+   "notes": 0,
+   "oldLen": 4072,
+   "newLen": 4166,
+   "ok": true,
+   "at": "14:29:05Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-549",
+   "alias": "d7",
+   "keys": [
+    "r4/module-system/kernel-otel",
+    "r4/module-system/modules-settings-page"
+   ],
+   "notes": 0,
+   "oldLen": 3774,
+   "newLen": 3900,
+   "ok": true,
+   "at": "14:29:05Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-550",
+   "alias": "d8",
+   "keys": [
+    "r4/module-system/contract-diff"
+   ],
+   "notes": 0,
+   "oldLen": 3739,
+   "newLen": 3843,
+   "ok": true,
+   "at": "14:29:05Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-551",
+   "alias": "d9",
+   "keys": [
+    "r4/app-shell/starter-kit-demo-seed",
+    "r4/module-system/conformance-normaliser",
+    "r4/module-system/sample-module",
+    "r4/module-system/test-kernel"
+   ],
+   "notes": 0,
+   "oldLen": 4136,
+   "newLen": 4294,
+   "ok": true,
+   "at": "14:29:05Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-552",
+   "alias": "d0",
+   "keys": [
+    "r4/module-system/kernel-devtools"
+   ],
+   "notes": 0,
+   "oldLen": 3458,
+   "newLen": 3560,
+   "ok": true,
+   "at": "14:29:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-553",
+   "alias": "d1",
+   "keys": [
+    "r4/module-system/modules-settings-page"
+   ],
+   "notes": 0,
+   "oldLen": 3426,
+   "newLen": 3522,
+   "ok": true,
+   "at": "14:29:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-554",
+   "alias": "d2",
+   "keys": [
+    "r4/forge/github-app-identities"
+   ],
+   "notes": 0,
+   "oldLen": 3253,
+   "newLen": 3357,
+   "ok": true,
+   "at": "14:29:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-555",
+   "alias": "d3",
+   "keys": [
+    "r4/data-layer/events-outbox-dispatcher",
+    "r4/data-layer/pii-registry",
+    "r4/identity/permission-propagation"
+   ],
+   "notes": 0,
+   "oldLen": 4994,
+   "newLen": 5141,
+   "ok": true,
+   "at": "14:29:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-556",
+   "alias": "d4",
+   "keys": [
+    "r4/data-layer/events-core",
+    "r4/realtime/live-events-channel"
+   ],
+   "notes": 0,
+   "oldLen": 4993,
+   "newLen": 5090,
+   "ok": true,
+   "at": "14:29:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-557",
+   "alias": "d5",
+   "keys": [
+    "r4/data-layer/pii-registry",
+    "r4/data-layer/rate-limits"
+   ],
+   "notes": 0,
+   "oldLen": 4969,
+   "newLen": 5077,
+   "ok": true,
+   "at": "14:29:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-558",
+   "alias": "d6",
+   "keys": [
+    "r4/data-layer/idempotency-batch",
+    "r4/identity/auth-abuse-controls"
+   ],
+   "notes": 0,
+   "oldLen": 4865,
+   "newLen": 4988,
+   "ok": true,
+   "at": "14:29:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-559",
+   "alias": "d7",
+   "keys": [
+    "r4/data-layer/events-core",
+    "r4/data-layer/retention-jobs",
+    "r4/data-layer/tenant-purge"
+   ],
+   "notes": 0,
+   "oldLen": 4519,
+   "newLen": 4600,
+   "ok": true,
+   "at": "14:29:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-560",
+   "alias": "d8",
+   "keys": [
+    "r4/data-layer/pii-registry",
+    "r4/data-layer/tenant-purge"
+   ],
+   "notes": 0,
+   "oldLen": 4583,
+   "newLen": 4690,
+   "ok": true,
+   "at": "14:29:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-562",
+   "alias": "d9",
+   "keys": [
+    "r4/data-layer/platform-dr-drill"
+   ],
+   "notes": 0,
+   "oldLen": 4364,
+   "newLen": 4467,
+   "ok": true,
+   "at": "14:29:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-563",
+   "alias": "d0",
+   "keys": [
+    "r4/data-layer/platform-backups"
+   ],
+   "notes": 0,
+   "oldLen": 4543,
+   "newLen": 4672,
+   "ok": true,
+   "at": "14:29:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-564",
+   "alias": "d1",
+   "keys": [
+    "r4/data-layer/events-outbox-dispatcher",
+    "r4/data-layer/jobs-admin"
+   ],
+   "notes": 0,
+   "oldLen": 4760,
+   "newLen": 4909,
+   "ok": true,
+   "at": "14:29:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-565",
+   "alias": "d2",
+   "keys": [
+    "r4/data-layer/jobs-core"
+   ],
+   "notes": 0,
+   "oldLen": 3131,
+   "newLen": 3260,
+   "ok": true,
+   "at": "14:29:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-566",
+   "alias": "d3",
+   "keys": [
+    "r4/data-layer/search-semantic"
+   ],
+   "notes": 0,
+   "oldLen": 4084,
+   "newLen": 4189,
+   "ok": true,
+   "at": "14:29:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-567",
+   "alias": "d4",
+   "keys": [
+    "r4/data-layer/search-keyword"
+   ],
+   "notes": 0,
+   "oldLen": 4003,
+   "newLen": 4132,
+   "ok": true,
+   "at": "14:29:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-568",
+   "alias": "d5",
+   "keys": [
+    "r4/data-layer/events-core",
+    "r4/data-layer/idempotency-batch"
+   ],
+   "notes": 0,
+   "oldLen": 4997,
+   "newLen": 5080,
+   "ok": true,
+   "at": "14:29:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-572",
+   "alias": "d6",
+   "keys": [
+    "r4/data-layer/pii-registry",
+    "r4/realtime/live-events-channel"
+   ],
+   "notes": 0,
+   "oldLen": 4587,
+   "newLen": 4689,
+   "ok": true,
+   "at": "14:29:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-575",
+   "alias": "d7",
+   "keys": [
+    "r4/data-layer/migration-safety",
+    "r4/realtime/connection-status"
+   ],
+   "notes": 0,
+   "oldLen": 4111,
+   "newLen": 4211,
+   "ok": true,
+   "at": "14:29:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-576",
+   "alias": "d8",
+   "keys": [
+    "r4/data-layer/tenant-purge",
+    "r4/realtime/doc-history"
+   ],
+   "notes": 0,
+   "oldLen": 4418,
+   "newLen": 4525,
+   "ok": true,
+   "at": "14:29:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-577",
+   "alias": "d9",
+   "keys": [
+    "r4/data-layer/upload-scanning"
+   ],
+   "notes": 0,
+   "oldLen": 3199,
+   "newLen": 3280,
+   "ok": true,
+   "at": "14:29:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-578",
+   "alias": "d0",
+   "keys": [
+    "r4/data-layer/events-core",
+    "r4/identity/permission-propagation",
+    "r4/identity/tenancy-ui"
+   ],
+   "notes": 0,
+   "oldLen": 4922,
+   "newLen": 5004,
+   "ok": true,
+   "at": "14:29:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-579",
+   "alias": "d1",
+   "keys": [
+    "r4/data-layer/local-data-protection",
+    "r4/identity/console-frame",
+    "r4/identity/portal-frame",
+    "r4/identity/tenancy-core"
+   ],
+   "notes": 0,
+   "oldLen": 4483,
+   "newLen": 4670,
+   "ok": true,
+   "at": "14:29:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-580",
+   "alias": "d2",
+   "keys": [
+    "r4/data-layer/rate-limits",
+    "r4/identity/auth-abuse-controls",
+    "r4/identity/session-policy",
+    "r4/identity/sessions-stepup"
+   ],
+   "notes": 0,
+   "oldLen": 4567,
+   "newLen": 4645,
+   "ok": true,
+   "at": "14:29:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-581",
+   "alias": "d3",
+   "keys": [
+    "r4/data-layer/events-core",
+    "r4/data-layer/local-data-protection",
+    "r4/identity/mfa-recovery",
+    "r4/identity/session-policy"
+   ],
+   "notes": 0,
+   "oldLen": 4498,
+   "newLen": 4624,
+   "ok": true,
+   "at": "14:29:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-582",
+   "alias": "d4",
+   "keys": [
+    "r4/identity/access-checker",
+    "r4/identity/console-admin-pages",
+    "r4/identity/custom-roles",
+    "r4/identity/tenancy-ui"
+   ],
+   "notes": 0,
+   "oldLen": 4439,
+   "newLen": 4566,
+   "ok": true,
+   "at": "14:29:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-583",
+   "alias": "d5",
+   "keys": [
+    "r4/identity/console-frame",
+    "r4/identity/custom-roles",
+    "r4/identity/tenancy-core",
+    "r4/identity/tenancy-ui"
+   ],
+   "notes": 0,
+   "oldLen": 4224,
+   "newLen": 4392,
+   "ok": true,
+   "at": "14:29:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-584",
+   "alias": "d6",
+   "keys": [
+    "r4/identity/portal-account-pages",
+    "r4/identity/tenancy-ui"
+   ],
+   "notes": 0,
+   "oldLen": 3942,
+   "newLen": 4047,
+   "ok": true,
+   "at": "14:29:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-585",
+   "alias": "d7",
+   "keys": [
+    "r4/identity/portal-frame",
+    "r4/identity/sessions-stepup"
+   ],
+   "notes": 0,
+   "oldLen": 4186,
+   "newLen": 4291,
+   "ok": true,
+   "at": "14:29:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-586",
+   "alias": "d8",
+   "keys": [
+    "r4/data-layer/rate-limits",
+    "r4/identity/agent-attribution-quotas",
+    "r4/identity/delegated-authority",
+    "r4/identity/tenancy-core"
+   ],
+   "notes": 0,
+   "oldLen": 4808,
+   "newLen": 4917,
+   "ok": true,
+   "at": "14:29:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-587",
+   "alias": "d9",
+   "keys": [
+    "r4/data-layer/events-core",
+    "r4/identity/agent-keys",
+    "r4/identity/delegated-authority"
+   ],
+   "notes": 0,
+   "oldLen": 3732,
+   "newLen": 3854,
+   "ok": true,
+   "at": "14:29:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-588",
+   "alias": "d0",
+   "keys": [
+    "r4/identity/console-admin-pages",
+    "r4/identity/permission-propagation",
+    "r4/identity/resource-grants",
+    "r4/identity/tenancy-core"
+   ],
+   "notes": 0,
+   "oldLen": 4367,
+   "newLen": 4425,
+   "ok": true,
+   "at": "14:29:13Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-589",
+   "alias": "d1",
+   "keys": [
+    "r4/data-layer/rate-limits",
+    "r4/identity/permission-propagation",
+    "r4/identity/tenancy-core"
+   ],
+   "notes": 0,
+   "oldLen": 4712,
+   "newLen": 4763,
+   "ok": true,
+   "at": "14:29:13Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-590",
+   "alias": "d2",
+   "keys": [
+    "r4/data-layer/entity-factory",
+    "r4/data-layer/pii-registry",
+    "r4/tables/field-level-permissions"
+   ],
+   "notes": 0,
+   "oldLen": 4809,
+   "newLen": 4931,
+   "ok": true,
+   "at": "14:29:13Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-591",
+   "alias": "d3",
+   "keys": [
+    "r4/data-layer/events-core",
+    "r4/identity/custom-roles",
+    "r4/identity/resource-grants",
+    "r4/identity/tenancy-core",
+    "r4/realtime/live-events-channel"
+   ],
+   "notes": 0,
+   "oldLen": 4966,
+   "newLen": 4999,
+   "ok": true,
+   "at": "14:29:13Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-592",
+   "alias": "d4",
+   "keys": [
+    "r4/data-layer/rate-limits",
+    "r4/identity/mfa-recovery"
+   ],
+   "notes": 0,
+   "oldLen": 4466,
+   "newLen": 4537,
+   "ok": true,
+   "at": "14:29:13Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-593",
+   "alias": "d5",
+   "keys": [
+    "r4/data-layer/platform-dr-drill",
+    "r4/identity/tenancy-core"
+   ],
+   "notes": 0,
+   "oldLen": 4498,
+   "newLen": 4628,
+   "ok": true,
+   "at": "14:29:13Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-594",
+   "alias": "d6",
+   "keys": [
+    "r4/identity/agent-attribution-quotas",
+    "r4/identity/agent-keys",
+    "r4/identity/permission-propagation",
+    "r4/identity/sessions-stepup"
+   ],
+   "notes": 0,
+   "oldLen": 4901,
+   "newLen": 4936,
+   "ok": true,
+   "at": "14:29:13Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-595",
+   "alias": "d7",
+   "keys": [
+    "r4/identity/console-frame",
+    "r4/identity/mfa-recovery",
+    "r4/identity/permission-propagation",
+    "r4/identity/sessions-stepup",
+    "r4/identity/tenancy-core"
+   ],
+   "notes": 0,
+   "oldLen": 3961,
+   "newLen": 4019,
+   "ok": true,
+   "at": "14:29:13Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-596",
+   "alias": "d8",
+   "keys": [
+    "r4/identity/console-frame",
+    "r4/identity/custom-roles",
+    "r4/identity/delegated-authority",
+    "r4/identity/field-permissions"
+   ],
+   "notes": 0,
+   "oldLen": 3703,
+   "newLen": 3770,
+   "ok": true,
+   "at": "14:29:13Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-597",
+   "alias": "d9",
+   "keys": [
+    "r4/data-layer/rate-limits",
+    "r4/identity/agent-keys",
+    "r4/identity/auth-abuse-controls",
+    "r4/identity/sessions-stepup"
+   ],
+   "notes": 0,
+   "oldLen": 4156,
+   "newLen": 4219,
+   "ok": true,
+   "at": "14:29:13Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-598",
+   "alias": "d0",
+   "keys": [
+    "r4/identity/console-frame",
+    "r4/identity/custom-roles",
+    "r4/identity/permission-propagation",
+    "r4/identity/tenancy-core",
+    "r4/identity/tenancy-ui"
+   ],
+   "notes": 0,
+   "oldLen": 3745,
+   "newLen": 3811,
+   "ok": true,
+   "at": "14:29:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-599",
+   "alias": "d1",
+   "keys": [
+    "r4/data-layer/events-outbox-dispatcher",
+    "r4/data-layer/local-data-protection",
+    "r4/data-layer/pii-registry",
+    "r4/identity/permission-propagation",
+    "r4/realtime/connection-status",
+    "r4/realtime/web-push"
+   ],
+   "notes": 0,
+   "oldLen": 4940,
+   "newLen": 5054,
+   "ok": true,
+   "at": "14:29:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-600",
+   "alias": "d2",
+   "keys": [
+    "r4/app-shell/native-push-registration",
+    "r4/identity/portal-account-pages",
+    "r4/identity/sessions-stepup",
+    "r4/realtime/live-events-channel"
+   ],
+   "notes": 0,
+   "oldLen": 4718,
+   "newLen": 4743,
+   "ok": true,
+   "at": "14:29:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-601",
+   "alias": "d3",
+   "keys": [
+    "r4/identity/agent-keys",
+    "r4/realtime/load-runs-tuning",
+    "r4/realtime/test-kit"
+   ],
+   "notes": 0,
+   "oldLen": 4114,
+   "newLen": 4225,
+   "ok": true,
+   "at": "14:29:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-602",
+   "alias": "d4",
+   "keys": [
+    "r4/realtime/load-harness"
+   ],
+   "notes": 0,
+   "oldLen": 4129,
+   "newLen": 4258,
+   "ok": true,
+   "at": "14:29:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-603",
+   "alias": "d5",
+   "keys": [
+    "r4/realtime/doc-history",
+    "r4/realtime/editor-features"
+   ],
+   "notes": 0,
+   "oldLen": 4688,
+   "newLen": 4815,
+   "ok": true,
+   "at": "14:29:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-604",
+   "alias": "d6",
+   "keys": [
+    "r4/realtime/editor-core"
+   ],
+   "notes": 0,
+   "oldLen": 4137,
+   "newLen": 4266,
+   "ok": true,
+   "at": "14:29:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-605",
+   "alias": "d7",
+   "keys": [
+    "r4/identity/resource-grants",
+    "r4/realtime/ephemeral-signals",
+    "r4/realtime/presence-components"
+   ],
+   "notes": 0,
+   "oldLen": 4931,
+   "newLen": 5073,
+   "ok": true,
+   "at": "14:29:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-606",
+   "alias": "d8",
+   "keys": [
+    "r4/realtime/presence-core"
+   ],
+   "notes": 0,
+   "oldLen": 3301,
+   "newLen": 3430,
+   "ok": true,
+   "at": "14:29:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-607",
+   "alias": "d9",
+   "keys": [
+    "r4/data-layer/retention-jobs",
+    "r4/data-layer/tenant-purge",
+    "r4/identity/permission-propagation",
+    "r4/realtime/conflict-ux-impl",
+    "r4/realtime/editor-core"
+   ],
+   "notes": 0,
+   "oldLen": 4948,
+   "newLen": 5063,
+   "ok": true,
+   "at": "14:29:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-609",
+   "alias": "d0",
+   "keys": [
+    "r4/data-layer/local-data-protection",
+    "r4/data-layer/maintenance-mode",
+    "r4/realtime/live-events-channel"
+   ],
+   "notes": 0,
+   "oldLen": 4922,
+   "newLen": 4984,
+   "ok": true,
+   "at": "14:29:17Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-610",
+   "alias": "d1",
+   "keys": [
+    "r4/identity/agent-keys",
+    "r4/identity/service-principals",
+    "r4/realtime/doc-history",
+    "r4/realtime/editor-features",
+    "r4/realtime/test-kit"
+   ],
+   "notes": 0,
+   "oldLen": 4961,
+   "newLen": 4990,
+   "ok": true,
+   "at": "14:29:17Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-611",
+   "alias": "d2",
+   "keys": [
+    "r4/realtime/presence-components",
+    "r4/realtime/presence-core"
+   ],
+   "notes": 0,
+   "oldLen": 3560,
+   "newLen": 3643,
+   "ok": true,
+   "at": "14:29:17Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-612",
+   "alias": "d3",
+   "keys": [
+    "r4/realtime/conflict-ux-impl",
+    "r4/realtime/editor-core",
+    "r4/realtime/headless-client",
+    "r4/realtime/load-harness"
+   ],
+   "notes": 0,
+   "oldLen": 4158,
+   "newLen": 4345,
+   "ok": true,
+   "at": "14:29:17Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-615",
+   "alias": "d4",
+   "keys": [
+    "r4/app-shell/starter-kit-demo-seed",
+    "r4/tables/records-crud-procedures",
+    "r4/tables/view-renderer-registry-and-host"
+   ],
+   "notes": 0,
+   "oldLen": 4861,
+   "newLen": 4936,
+   "ok": true,
+   "at": "14:29:17Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-616",
+   "alias": "d5",
+   "keys": [
+    "r4/tables/extra-field-types",
+    "r4/tables/records-crud-procedures"
+   ],
+   "notes": 0,
+   "oldLen": 3870,
+   "newLen": 4019,
+   "ok": true,
+   "at": "14:29:17Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-617",
+   "alias": "d6",
+   "keys": [
+    "r4/tables/view-toolbar-sort-group-aggregates"
+   ],
+   "notes": 0,
+   "oldLen": 4335,
+   "newLen": 4464,
+   "ok": true,
+   "at": "14:29:17Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-618",
+   "alias": "d7",
+   "keys": [
+    "r4/tables/filter-builder-component",
+    "r4/tables/view-renderer-registry-and-host"
+   ],
+   "notes": 0,
+   "oldLen": 3993,
+   "newLen": 4106,
+   "ok": true,
+   "at": "14:29:17Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-619",
+   "alias": "d8",
+   "keys": [
+    "r4/tables/view-renderer-registry-and-host"
+   ],
+   "notes": 0,
+   "oldLen": 3769,
+   "newLen": 3862,
+   "ok": true,
+   "at": "14:29:17Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-620",
+   "alias": "d9",
+   "keys": [
+    "r4/tables/filter-builder-component",
+    "r4/tables/records-crud-procedures"
+   ],
+   "notes": 0,
+   "oldLen": 4996,
+   "newLen": 5117,
+   "ok": true,
+   "at": "14:29:17Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-621",
+   "alias": "d0",
+   "keys": [
+    "r4/tables/extended-chart-types",
+    "r4/tables/view-renderer-registry-and-host"
+   ],
+   "notes": 0,
+   "oldLen": 4314,
+   "newLen": 4463,
+   "ok": true,
+   "at": "14:29:19Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-622",
+   "alias": "d1",
+   "keys": [
+    "r4/tables/chart-view-echarts",
+    "r4/tables/geocoding-job"
+   ],
+   "notes": 0,
+   "oldLen": 3866,
+   "newLen": 4015,
+   "ok": true,
+   "at": "14:29:19Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-623",
+   "alias": "d2",
+   "keys": [
+    "r4/tables/field-level-permissions",
+    "r4/tables/view-toolbar-sort-group-aggregates"
+   ],
+   "notes": 0,
+   "oldLen": 4344,
+   "newLen": 4454,
+   "ok": true,
+   "at": "14:29:19Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-624",
+   "alias": "d3",
+   "keys": [
+    "r4/tables/saved-views-switcher-and-audience-defaults",
+    "r4/tables/view-export-csv-xlsx-ics-print"
+   ],
+   "notes": 0,
+   "oldLen": 4694,
+   "newLen": 4843,
+   "ok": true,
+   "at": "14:29:19Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-625",
+   "alias": "d4",
+   "keys": [
+    "r4/tables/public-view-links-and-embeds",
+    "r4/tables/scheduled-view-snapshots",
+    "r4/tables/view-toolbar-sort-group-aggregates"
+   ],
+   "notes": 0,
+   "oldLen": 4564,
+   "newLen": 4666,
+   "ok": true,
+   "at": "14:29:19Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-626",
+   "alias": "d5",
+   "keys": [
+    "r4/tables/filter-builder-component",
+    "r4/tables/gallery-and-list-views",
+    "r4/tables/view-export-csv-xlsx-ics-print"
+   ],
+   "notes": 0,
+   "oldLen": 4235,
+   "newLen": 4374,
+   "ok": true,
+   "at": "14:29:19Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-627",
+   "alias": "d6",
+   "keys": [
+    "r4/tables/system-fields"
+   ],
+   "notes": 1,
+   "oldLen": 4161,
+   "newLen": 4466,
+   "ok": true,
+   "at": "14:29:19Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-628",
+   "alias": "d7",
+   "keys": [
+    "r4/tables/records-crud-procedures"
+   ],
+   "notes": 0,
+   "oldLen": 4210,
+   "newLen": 4311,
+   "ok": true,
+   "at": "14:29:19Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-629",
+   "alias": "d8",
+   "keys": [
+    "r4/tables/records-crud-procedures"
+   ],
+   "notes": 0,
+   "oldLen": 3523,
+   "newLen": 3624,
+   "ok": true,
+   "at": "14:29:19Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-630",
+   "alias": "d9",
+   "keys": [
+    "r4/input/undo-manager"
+   ],
+   "notes": 0,
+   "oldLen": 3495,
+   "newLen": 3608,
+   "ok": true,
+   "at": "14:29:19Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-631",
+   "alias": "d0",
+   "keys": [
+    "r4/tables/view-renderer-registry-and-host"
+   ],
+   "notes": 0,
+   "oldLen": 3571,
+   "newLen": 3664,
+   "ok": true,
+   "at": "14:29:21Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-632",
+   "alias": "d1",
+   "keys": [
+    "r4/growth/contact-company-merge-and-dedup"
+   ],
+   "notes": 0,
+   "oldLen": 3431,
+   "newLen": 3560,
+   "ok": true,
+   "at": "14:29:21Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-635",
+   "alias": "d2",
+   "keys": [
+    "r4/tables/chart-view-echarts",
+    "r4/tables/view-export-csv-xlsx-ics-print"
+   ],
+   "notes": 0,
+   "oldLen": 2722,
+   "newLen": 2871,
+   "ok": true,
+   "at": "14:29:21Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-636",
+   "alias": "d3",
+   "keys": [
+    "r4/tables/chart-view-echarts"
+   ],
+   "notes": 0,
+   "oldLen": 2557,
+   "newLen": 2663,
+   "ok": true,
+   "at": "14:29:21Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-638",
+   "alias": "d4",
+   "keys": [
+    "r4/tables/records-crud-procedures"
+   ],
+   "notes": 0,
+   "oldLen": 3355,
+   "newLen": 3456,
+   "ok": true,
+   "at": "14:29:21Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-639",
+   "alias": "d5",
+   "keys": [
+    "r4/tables/view-export-csv-xlsx-ics-print"
+   ],
+   "notes": 0,
+   "oldLen": 2749,
+   "newLen": 2878,
+   "ok": true,
+   "at": "14:29:21Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-641",
+   "alias": "d6",
+   "keys": [
+    "r4/realtime/editor-core",
+    "r4/tables/grid-fill-handle",
+    "r4/tables/grid-find-and-replace"
+   ],
+   "notes": 0,
+   "oldLen": 4739,
+   "newLen": 4907,
+   "ok": true,
+   "at": "14:29:21Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-646",
+   "alias": "d7",
+   "keys": [
+    "r4/input/undo-manager"
+   ],
+   "notes": 0,
+   "oldLen": 4711,
+   "newLen": 4824,
+   "ok": true,
+   "at": "14:29:21Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-647",
+   "alias": "d8",
+   "keys": [
+    "r4/input/switch-access-scanning"
+   ],
+   "notes": 0,
+   "oldLen": 4920,
+   "newLen": 5049,
+   "ok": true,
+   "at": "14:29:21Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-648",
+   "alias": "d9",
+   "keys": [
+    "r4/input/undo-manager"
+   ],
+   "notes": 0,
+   "oldLen": 4223,
+   "newLen": 4320,
+   "ok": true,
+   "at": "14:29:21Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-649",
+   "alias": "d0",
+   "keys": [
+    "r4/app-shell/desktop-os-integration",
+    "r4/input/command-context-menus",
+    "r4/input/multi-window-command-and-focus-routing"
+   ],
+   "notes": 0,
+   "oldLen": 4906,
+   "newLen": 4977,
+   "ok": true,
+   "at": "14:29:24Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-650",
+   "alias": "d1",
+   "keys": [
+    "r4/input/accessibility-input-preferences"
+   ],
+   "notes": 0,
+   "oldLen": 3436,
+   "newLen": 3495,
+   "ok": true,
+   "at": "14:29:24Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-651",
+   "alias": "d2",
+   "keys": [
+    "r4/tables/gallery-and-list-views"
+   ],
+   "notes": 0,
+   "oldLen": 3770,
+   "newLen": 3899,
+   "ok": true,
+   "at": "14:29:24Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-652",
+   "alias": "d3",
+   "keys": [
+    "r4/input/virtual-keyboard-viewport",
+    "r4/tables/gallery-and-list-views"
+   ],
+   "notes": 0,
+   "oldLen": 4479,
+   "newLen": 4570,
+   "ok": true,
+   "at": "14:29:24Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-654",
+   "alias": "d4",
+   "keys": [
+    "r4/input/undo-manager"
+   ],
+   "notes": 0,
+   "oldLen": 4586,
+   "newLen": 4683,
+   "ok": true,
+   "at": "14:29:24Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-656",
+   "alias": "d5",
+   "keys": [
+    "r4/design-system/dataviz-tokens-and-microcharts"
+   ],
+   "notes": 0,
+   "oldLen": 3959,
+   "newLen": 4046,
+   "ok": true,
+   "at": "14:29:24Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-658",
+   "alias": "d6",
+   "keys": [
+    "r4/design-system/specialised-inputs",
+    "r4/identity/console-admin-pages"
+   ],
+   "notes": 0,
+   "oldLen": 4622,
+   "newLen": 4745,
+   "ok": true,
+   "at": "14:29:24Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-660",
+   "alias": "d7",
+   "keys": [
+    "r4/design-system/form-layout-and-unsaved-changes",
+    "r4/tables/form-view-runtime-and-public-submit"
+   ],
+   "notes": 0,
+   "oldLen": 3862,
+   "newLen": 3968,
+   "ok": true,
+   "at": "14:29:24Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-663",
+   "alias": "d8",
+   "keys": [
+    "r4/design-system/navigation-components"
+   ],
+   "notes": 0,
+   "oldLen": 4837,
+   "newLen": 4966,
+   "ok": true,
+   "at": "14:29:24Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-664",
+   "alias": "d9",
+   "keys": [
+    "r4/design-system/cell-renderer-registry-and-cells"
+   ],
+   "notes": 0,
+   "oldLen": 4591,
+   "newLen": 4676,
+   "ok": true,
+   "at": "14:29:24Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-665",
+   "alias": "d0",
+   "keys": [
+    "r4/tables/chart-view-echarts",
+    "r4/tables/conditional-formatting"
+   ],
+   "notes": 0,
+   "oldLen": 4395,
+   "newLen": 4521,
+   "ok": true,
+   "at": "14:29:26Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-666",
+   "alias": "d1",
+   "keys": [
+    "r4/input/accessibility-input-preferences"
+   ],
+   "notes": 0,
+   "oldLen": 3804,
+   "newLen": 3933,
+   "ok": true,
+   "at": "14:29:26Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-667",
+   "alias": "d2",
+   "keys": [
+    "r4/design-system/form-state-adapters",
+    "r4/input/virtual-keyboard-viewport"
+   ],
+   "notes": 0,
+   "oldLen": 4321,
+   "newLen": 4470,
+   "ok": true,
+   "at": "14:29:26Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-674",
+   "alias": "d3",
+   "keys": [
+    "r4/quality/security-event-catalogue-emitters"
+   ],
+   "notes": 0,
+   "oldLen": 4765,
+   "newLen": 4896,
+   "ok": true,
+   "at": "14:29:26Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-676",
+   "alias": "d4",
+   "keys": [
+    "r4/quality/dast-zap-nightly-and-authenticated-scans"
+   ],
+   "notes": 0,
+   "oldLen": 4930,
+   "newLen": 5061,
+   "ok": true,
+   "at": "14:29:26Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-680",
+   "alias": "d5",
+   "keys": [
+    "r4/quality/review-fix-loop"
+   ],
+   "notes": 0,
+   "oldLen": 3619,
+   "newLen": 3750,
+   "ok": true,
+   "at": "14:29:26Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-686",
+   "alias": "d6",
+   "keys": [
+    "r4/quality/diff-coverage-gate"
+   ],
+   "notes": 0,
+   "oldLen": 3058,
+   "newLen": 3189,
+   "ok": true,
+   "at": "14:29:26Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-689",
+   "alias": "d7",
+   "keys": [
+    "r4/quality/gate-metrics-and-pipeline-health"
+   ],
+   "notes": 0,
+   "oldLen": 3769,
+   "newLen": 3900,
+   "ok": true,
+   "at": "14:29:26Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-693",
+   "alias": "d8",
+   "keys": [
+    "r4/pm-linear/linear-estimates-and-size-labels"
+   ],
+   "notes": 0,
+   "oldLen": 3715,
+   "newLen": 3846,
+   "ok": true,
+   "at": "14:29:26Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-694",
+   "alias": "d9",
+   "keys": [
+    "r4/pm-linear/orchestrator-promotion-pass"
+   ],
+   "notes": 0,
+   "oldLen": 4672,
+   "newLen": 4803,
+   "ok": true,
+   "at": "14:29:26Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-696",
+   "alias": "d0",
+   "keys": [
+    "r4/pm-linear/orchestrator-promotion-pass"
+   ],
+   "notes": 0,
+   "oldLen": 4188,
+   "newLen": 4319,
+   "ok": true,
+   "at": "14:29:29Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-697",
+   "alias": "d1",
+   "keys": [
+    "r4/pm-linear/linear-triage-enable-and-intake-state-machine"
+   ],
+   "notes": 0,
+   "oldLen": 4687,
+   "newLen": 4818,
+   "ok": true,
+   "at": "14:29:29Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-698",
+   "alias": "d2",
+   "keys": [
+    "r4/pm-linear/due-dates-slack-and-risk-alerts",
+    "r4/pm-linear/linear-initiatives-rollup"
+   ],
+   "notes": 0,
+   "oldLen": 4172,
+   "newLen": 4325,
+   "ok": true,
+   "at": "14:29:29Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-699",
+   "alias": "d3",
+   "keys": [],
+   "notes": 1,
+   "oldLen": 4563,
+   "newLen": 4735,
+   "ok": true,
+   "at": "14:29:29Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-701",
+   "alias": "d4",
+   "keys": [
+    "r4/pm-linear/due-dates-slack-and-risk-alerts"
+   ],
+   "notes": 0,
+   "oldLen": 3748,
+   "newLen": 3879,
+   "ok": true,
+   "at": "14:29:29Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-703",
+   "alias": "d5",
+   "keys": [
+    "r4/pm-linear/pipeline-views-as-code"
+   ],
+   "notes": 0,
+   "oldLen": 4241,
+   "newLen": 4372,
+   "ok": true,
+   "at": "14:29:29Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-705",
+   "alias": "d6",
+   "keys": [
+    "r4/pm-linear/session-model-and-effort-routing"
+   ],
+   "notes": 0,
+   "oldLen": 3995,
+   "newLen": 4126,
+   "ok": true,
+   "at": "14:29:29Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-706",
+   "alias": "d7",
+   "keys": [
+    "r4/pm-linear/orchestrator-promotion-pass"
+   ],
+   "notes": 1,
+   "oldLen": 4538,
+   "newLen": 4839,
+   "ok": true,
+   "at": "14:29:29Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-708",
+   "alias": "d8",
+   "keys": [
+    "r4/pm-linear/issue-attachments-and-evidence-bundle",
+    "r4/pm-linear/pm-model-initiatives-updates-cycles-rollups"
+   ],
+   "notes": 0,
+   "oldLen": 3411,
+   "newLen": 3564,
+   "ok": true,
+   "at": "14:29:29Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-710",
+   "alias": "d9",
+   "keys": [
+    "r4/agents/character-bundles-and-enforce-scope-hook"
+   ],
+   "notes": 0,
+   "oldLen": 3712,
+   "newLen": 3843,
+   "ok": true,
+   "at": "14:29:29Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-711",
+   "alias": "d0",
+   "keys": [
+    "r4/agents/character-bundles-and-enforce-scope-hook"
+   ],
+   "notes": 0,
+   "oldLen": 4751,
+   "newLen": 4882,
+   "ok": true,
+   "at": "14:29:31Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-712",
+   "alias": "d1",
+   "keys": [
+    "r4/agents/deny-list-policy-file-and-hook"
+   ],
+   "notes": 0,
+   "oldLen": 5118,
+   "newLen": 5249,
+   "ok": true,
+   "at": "14:29:31Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-714",
+   "alias": "d2",
+   "keys": [
+    "r4/agents/trust-tiers-wrapper-scanner-and-actor-verification"
+   ],
+   "notes": 1,
+   "oldLen": 4864,
+   "newLen": 5165,
+   "ok": true,
+   "at": "14:29:31Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-715",
+   "alias": "d3",
+   "keys": [
+    "r4/agents/character-bundles-and-enforce-scope-hook"
+   ],
+   "notes": 0,
+   "oldLen": 5037,
+   "newLen": 5168,
+   "ok": true,
+   "at": "14:29:31Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-717",
+   "alias": "d4",
+   "keys": [
+    "r4/agents/character-bundles-and-enforce-scope-hook"
+   ],
+   "notes": 1,
+   "oldLen": 4551,
+   "newLen": 4852,
+   "ok": true,
+   "at": "14:29:31Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-718",
+   "alias": "d5",
+   "keys": [
+    "r4/quality/recorded-http-fixtures-kit"
+   ],
+   "notes": 0,
+   "oldLen": 4346,
+   "newLen": 4477,
+   "ok": true,
+   "at": "14:29:31Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-720",
+   "alias": "d6",
+   "keys": [
+    "r4/pm-linear/session-model-and-effort-routing"
+   ],
+   "notes": 0,
+   "oldLen": 4575,
+   "newLen": 4706,
+   "ok": true,
+   "at": "14:29:31Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-721",
+   "alias": "d7",
+   "keys": [
+    "r4/agents/claude-code-plugin-packaging"
+   ],
+   "notes": 0,
+   "oldLen": 4200,
+   "newLen": 4331,
+   "ok": true,
+   "at": "14:29:31Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-726",
+   "alias": "d8",
+   "keys": [
+    "r4/collab/notification-core"
+   ],
+   "notes": 0,
+   "oldLen": 3362,
+   "newLen": 3447,
+   "ok": true,
+   "at": "14:29:31Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-727",
+   "alias": "d9",
+   "keys": [
+    "r4/collab/ask-paperos"
+   ],
+   "notes": 0,
+   "oldLen": 3782,
+   "newLen": 3911,
+   "ok": true,
+   "at": "14:29:31Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-729",
+   "alias": "d0",
+   "keys": [
+    "r4/collab/notification-core"
+   ],
+   "notes": 0,
+   "oldLen": 3657,
+   "newLen": 3764,
+   "ok": true,
+   "at": "14:29:33Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-730",
+   "alias": "d1",
+   "keys": [
+    "r4/collab/notification-core"
+   ],
+   "notes": 0,
+   "oldLen": 3495,
+   "newLen": 3624,
+   "ok": true,
+   "at": "14:29:33Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-732",
+   "alias": "d2",
+   "keys": [
+    "r4/collab/agent-readable-docs"
+   ],
+   "notes": 0,
+   "oldLen": 3541,
+   "newLen": 3670,
+   "ok": true,
+   "at": "14:29:33Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-733",
+   "alias": "d3",
+   "keys": [
+    "r4/collab/docs-reference-hub",
+    "r4/collab/notification-core"
+   ],
+   "notes": 0,
+   "oldLen": 3952,
+   "newLen": 4079,
+   "ok": true,
+   "at": "14:29:33Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-734",
+   "alias": "d4",
+   "keys": [
+    "r4/collab/collab-demo-seeds",
+    "r4/collab/notification-core",
+    "r4/collab/watchers-subscriptions"
+   ],
+   "notes": 0,
+   "oldLen": 3899,
+   "newLen": 4018,
+   "ok": true,
+   "at": "14:29:33Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-735",
+   "alias": "d5",
+   "keys": [
+    "r4/collab/agent-readable-docs",
+    "r4/collab/build-journals"
+   ],
+   "notes": 0,
+   "oldLen": 3386,
+   "newLen": 3492,
+   "ok": true,
+   "at": "14:29:33Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-736",
+   "alias": "d6",
+   "keys": [
+    "r4/collab/notification-core"
+   ],
+   "notes": 0,
+   "oldLen": 3377,
+   "newLen": 3484,
+   "ok": true,
+   "at": "14:29:33Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-737",
+   "alias": "d7",
+   "keys": [
+    "r4/collab/notification-core",
+    "r4/collab/watchers-subscriptions"
+   ],
+   "notes": 0,
+   "oldLen": 3508,
+   "newLen": 3630,
+   "ok": true,
+   "at": "14:29:33Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-738",
+   "alias": "d8",
+   "keys": [
+    "r4/collab/agent-readable-docs"
+   ],
+   "notes": 0,
+   "oldLen": 3371,
+   "newLen": 3500,
+   "ok": true,
+   "at": "14:29:33Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-739",
+   "alias": "d9",
+   "keys": [
+    "r4/spec-builder/entity-backend-codegen",
+    "r4/spec-builder/mutation-input-constraints"
+   ],
+   "notes": 0,
+   "oldLen": 4745,
+   "newLen": 4828,
+   "ok": true,
+   "at": "14:29:33Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-740",
+   "alias": "d0",
+   "keys": [
+    "r4/spec-builder/flags-modules-compile",
+    "r4/spec-builder/page-budgets",
+    "r4/spec-builder/seo-public-metadata",
+    "r4/spec-builder/spec-versioning-tooling"
+   ],
+   "notes": 0,
+   "oldLen": 4246,
+   "newLen": 4433,
+   "ok": true,
+   "at": "14:29:36Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-741",
+   "alias": "d1",
+   "keys": [
+    "r4/spec-builder/entity-field-grammar"
+   ],
+   "notes": 0,
+   "oldLen": 4996,
+   "newLen": 5125,
+   "ok": true,
+   "at": "14:29:36Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-742",
+   "alias": "d2",
+   "keys": [
+    "r4/spec-builder/entity-backend-codegen",
+    "r4/spec-builder/entity-field-grammar"
+   ],
+   "notes": 0,
+   "oldLen": 4519,
+   "newLen": 4635,
+   "ok": true,
+   "at": "14:29:36Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-744",
+   "alias": "d3",
+   "keys": [
+    "r4/spec-builder/schema-v1-1-extensions"
+   ],
+   "notes": 0,
+   "oldLen": 4074,
+   "newLen": 4203,
+   "ok": true,
+   "at": "14:29:36Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-745",
+   "alias": "d4",
+   "keys": [
+    "r4/collab/docs-i18n",
+    "r4/spec-builder/flags-modules-compile",
+    "r4/spec-builder/schema-v1-1-extensions"
+   ],
+   "notes": 0,
+   "oldLen": 3987,
+   "newLen": 4155,
+   "ok": true,
+   "at": "14:29:36Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-746",
+   "alias": "d5",
+   "keys": [
+    "r4/spec-builder/entity-backend-codegen",
+    "r4/spec-builder/schema-v1-1-extensions"
+   ],
+   "notes": 0,
+   "oldLen": 3568,
+   "newLen": 3684,
+   "ok": true,
+   "at": "14:29:36Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-747",
+   "alias": "d6",
+   "keys": [
+    "r4/spec-builder/entity-field-grammar",
+    "r4/spec-builder/mutation-input-constraints"
+   ],
+   "notes": 0,
+   "oldLen": 3713,
+   "newLen": 3825,
+   "ok": true,
+   "at": "14:29:36Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-748",
+   "alias": "d7",
+   "keys": [
+    "r4/spec-builder/entity-field-grammar",
+    "r4/spec-builder/spec-diff-pr-comment"
+   ],
+   "notes": 0,
+   "oldLen": 3606,
+   "newLen": 3755,
+   "ok": true,
+   "at": "14:29:36Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-750",
+   "alias": "d8",
+   "keys": [
+    "r4/spec-builder/schema-v1-1-extensions"
+   ],
+   "notes": 0,
+   "oldLen": 4056,
+   "newLen": 4185,
+   "ok": true,
+   "at": "14:29:36Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-751",
+   "alias": "d9",
+   "keys": [
+    "r4/spec-builder/schema-v1-1-extensions",
+    "r4/spec-builder/spec-fixture-corpus"
+   ],
+   "notes": 0,
+   "oldLen": 3724,
+   "newLen": 3843,
+   "ok": true,
+   "at": "14:29:36Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-752",
+   "alias": "d0",
+   "keys": [
+    "r4/spec-builder/schema-v1-1-extensions"
+   ],
+   "notes": 0,
+   "oldLen": 2915,
+   "newLen": 3044,
+   "ok": true,
+   "at": "14:29:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-755",
+   "alias": "d1",
+   "keys": [
+    "r4/libraries/dependency-health-page"
+   ],
+   "notes": 0,
+   "oldLen": 3569,
+   "newLen": 3698,
+   "ok": true,
+   "at": "14:29:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-757",
+   "alias": "d2",
+   "keys": [
+    "r4/collab/agent-readable-docs",
+    "r4/libraries/library-guardrails-lint"
+   ],
+   "notes": 0,
+   "oldLen": 4071,
+   "newLen": 4165,
+   "ok": true,
+   "at": "14:29:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-758",
+   "alias": "d3",
+   "keys": [
+    "r4/libraries/library-usage-notes"
+   ],
+   "notes": 0,
+   "oldLen": 3710,
+   "newLen": 3812,
+   "ok": true,
+   "at": "14:29:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-760",
+   "alias": "d4",
+   "keys": [
+    "r4/collab/docs-reference-hub",
+    "r4/libraries/patch-fork-policy"
+   ],
+   "notes": 0,
+   "oldLen": 3597,
+   "newLen": 3721,
+   "ok": true,
+   "at": "14:29:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-761",
+   "alias": "d5",
+   "keys": [
+    "r4/libraries/dependency-health-page",
+    "r4/libraries/library-usage-notes"
+   ],
+   "notes": 0,
+   "oldLen": 3531,
+   "newLen": 3653,
+   "ok": true,
+   "at": "14:29:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-762",
+   "alias": "d6",
+   "keys": [
+    "r4/spec-builder/page-spec-templates"
+   ],
+   "notes": 0,
+   "oldLen": 3476,
+   "newLen": 3605,
+   "ok": true,
+   "at": "14:29:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-763",
+   "alias": "d7",
+   "keys": [
+    "r4/libraries/facts-security-quality",
+    "r4/libraries/library-guardrails-lint",
+    "r4/libraries/library-usage-notes"
+   ],
+   "notes": 0,
+   "oldLen": 3709,
+   "newLen": 3847,
+   "ok": true,
+   "at": "14:29:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-764",
+   "alias": "d8",
+   "keys": [
+    "r4/collab/notification-core",
+    "r4/libraries/dependency-health-page"
+   ],
+   "notes": 0,
+   "oldLen": 2992,
+   "newLen": 3119,
+   "ok": true,
+   "at": "14:29:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-765",
+   "alias": "d9",
+   "keys": [
+    "r4/business-core/tenant-metered-billing",
+    "r4/growth/consent-compliance-centre"
+   ],
+   "notes": 0,
+   "oldLen": 4968,
+   "newLen": 5087,
+   "ok": true,
+   "at": "14:29:39Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-766",
+   "alias": "d0",
+   "keys": [
+    "r4/business-core/year-end-close"
+   ],
+   "notes": 0,
+   "oldLen": 4105,
+   "newLen": 4234,
+   "ok": true,
+   "at": "14:29:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-770",
+   "alias": "d1",
+   "keys": [
+    "r4/business-core/bank-reconciliation-matching"
+   ],
+   "notes": 0,
+   "oldLen": 3596,
+   "newLen": 3725,
+   "ok": true,
+   "at": "14:29:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-771",
+   "alias": "d2",
+   "keys": [
+    "r4/business-core/bank-feed-port-and-statement-import"
+   ],
+   "notes": 0,
+   "oldLen": 3231,
+   "newLen": 3360,
+   "ok": true,
+   "at": "14:29:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-772",
+   "alias": "d3",
+   "keys": [
+    "r4/business-core/finance-permissions-and-roles",
+    "r4/business-core/fx-rates-and-conversion",
+    "r4/business-core/purchase-orders-and-receiving"
+   ],
+   "notes": 0,
+   "oldLen": 4033,
+   "newLen": 4084,
+   "ok": true,
+   "at": "14:29:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-773",
+   "alias": "d4",
+   "keys": [
+    "r4/business-core/inventory-stock-and-cogs",
+    "r4/business-core/item-catalogue",
+    "r4/business-core/vendor-bills-and-ap-payments"
+   ],
+   "notes": 0,
+   "oldLen": 3119,
+   "newLen": 3185,
+   "ok": true,
+   "at": "14:29:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-774",
+   "alias": "d5",
+   "keys": [
+    "r4/business-core/fx-rates-and-conversion",
+    "r4/business-core/inventory-stock-and-cogs"
+   ],
+   "notes": 0,
+   "oldLen": 3431,
+   "newLen": 3545,
+   "ok": true,
+   "at": "14:29:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-775",
+   "alias": "d6",
+   "keys": [
+    "r4/business-core/item-catalogue",
+    "r4/business-core/purchase-orders-and-receiving"
+   ],
+   "notes": 0,
+   "oldLen": 3612,
+   "newLen": 3694,
+   "ok": true,
+   "at": "14:29:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-776",
+   "alias": "d7",
+   "keys": [
+    "r4/growth/consent-compliance-centre"
+   ],
+   "notes": 0,
+   "oldLen": 2745,
+   "newLen": 2844,
+   "ok": true,
+   "at": "14:29:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-777",
+   "alias": "d8",
+   "keys": [
+    "r4/business-core/document-refunds-and-credit-balance",
+    "r4/business-core/recurring-invoices-dunning"
+   ],
+   "notes": 0,
+   "oldLen": 3458,
+   "newLen": 3569,
+   "ok": true,
+   "at": "14:29:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-778",
+   "alias": "d9",
+   "keys": [
+    "r4/business-core/item-catalogue"
+   ],
+   "notes": 0,
+   "oldLen": 3431,
+   "newLen": 3534,
+   "ok": true,
+   "at": "14:29:41Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-780",
+   "alias": "d0",
+   "keys": [
+    "r4/business-core/cash-forecast-scenarios",
+    "r4/business-core/ledger-dimensions-registry"
+   ],
+   "notes": 0,
+   "oldLen": 3002,
+   "newLen": 3113,
+   "ok": true,
+   "at": "14:29:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-781",
+   "alias": "d1",
+   "keys": [
+    "r4/business-core/finance-permissions-and-roles"
+   ],
+   "notes": 0,
+   "oldLen": 3409,
+   "newLen": 3497,
+   "ok": true,
+   "at": "14:29:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-782",
+   "alias": "d2",
+   "keys": [
+    "r4/business-core/finance-permissions-and-roles"
+   ],
+   "notes": 0,
+   "oldLen": 3279,
+   "newLen": 3367,
+   "ok": true,
+   "at": "14:29:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-783",
+   "alias": "d3",
+   "keys": [
+    "r4/business-core/discounts-and-promo-codes",
+    "r4/business-core/inventory-stock-and-cogs",
+    "r4/business-core/item-catalogue"
+   ],
+   "notes": 0,
+   "oldLen": 3515,
+   "newLen": 3584,
+   "ok": true,
+   "at": "14:29:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-784",
+   "alias": "d4",
+   "keys": [
+    "r4/business-core/bank-reconciliation-matching"
+   ],
+   "notes": 0,
+   "oldLen": 2971,
+   "newLen": 3060,
+   "ok": true,
+   "at": "14:29:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-785",
+   "alias": "d5",
+   "keys": [
+    "r4/business-core/item-catalogue",
+    "r4/business-core/recurring-invoices-dunning"
+   ],
+   "notes": 0,
+   "oldLen": 3293,
+   "newLen": 3378,
+   "ok": true,
+   "at": "14:29:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-786",
+   "alias": "d6",
+   "keys": [
+    "r4/business-core/disputes-radar-evidence",
+    "r4/business-core/finance-permissions-and-roles"
+   ],
+   "notes": 0,
+   "oldLen": 3570,
+   "newLen": 3678,
+   "ok": true,
+   "at": "14:29:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-788",
+   "alias": "d7",
+   "keys": [
+    "r4/business-core/item-catalogue",
+    "r4/business-core/recurring-invoices-dunning"
+   ],
+   "notes": 0,
+   "oldLen": 3145,
+   "newLen": 3230,
+   "ok": true,
+   "at": "14:29:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-789",
+   "alias": "d8",
+   "keys": [
+    "r4/business-core/recurring-invoices-dunning",
+    "r4/business-core/vendor-bills-and-ap-payments"
+   ],
+   "notes": 0,
+   "oldLen": 3092,
+   "newLen": 3201,
+   "ok": true,
+   "at": "14:29:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-790",
+   "alias": "d9",
+   "keys": [
+    "r4/business-core/fx-rates-and-conversion",
+    "r4/growth/consent-compliance-centre"
+   ],
+   "notes": 0,
+   "oldLen": 4212,
+   "newLen": 4361,
+   "ok": true,
+   "at": "14:29:43Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-791",
+   "alias": "d0",
+   "keys": [
+    "r4/business-core/recurring-invoices-dunning",
+    "r4/growth/contact-company-merge-and-dedup",
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "notes": 0,
+   "oldLen": 4973,
+   "newLen": 5141,
+   "ok": true,
+   "at": "14:29:45Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-792",
+   "alias": "d1",
+   "keys": [
+    "r4/growth/consent-compliance-centre",
+    "r4/growth/crm-schema-routers-page-specs",
+    "r4/growth/email-broadcast-campaigns"
+   ],
+   "notes": 0,
+   "oldLen": 3306,
+   "newLen": 3474,
+   "ok": true,
+   "at": "14:29:45Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-793",
+   "alias": "d2",
+   "keys": [
+    "r4/growth/consent-compliance-centre",
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "notes": 0,
+   "oldLen": 3791,
+   "newLen": 3910,
+   "ok": true,
+   "at": "14:29:45Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-794",
+   "alias": "d3",
+   "keys": [
+    "r4/growth/experiments-and-ab-tests",
+    "r4/growth/lead-forms-embed-and-submit-pipeline"
+   ],
+   "notes": 0,
+   "oldLen": 3448,
+   "newLen": 3597,
+   "ok": true,
+   "at": "14:29:45Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-795",
+   "alias": "d4",
+   "keys": [
+    "r4/growth/booking-pages-and-availability"
+   ],
+   "notes": 0,
+   "oldLen": 2821,
+   "newLen": 2950,
+   "ok": true,
+   "at": "14:29:45Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-796",
+   "alias": "d5",
+   "keys": [
+    "r4/growth/consent-compliance-centre",
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "notes": 0,
+   "oldLen": 3382,
+   "newLen": 3501,
+   "ok": true,
+   "at": "14:29:45Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-797",
+   "alias": "d6",
+   "keys": [
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "notes": 0,
+   "oldLen": 3347,
+   "newLen": 3476,
+   "ok": true,
+   "at": "14:29:45Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-798",
+   "alias": "d7",
+   "keys": [
+    "r4/growth/consent-compliance-centre",
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "notes": 0,
+   "oldLen": 3485,
+   "newLen": 3634,
+   "ok": true,
+   "at": "14:29:45Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-799",
+   "alias": "d8",
+   "keys": [
+    "r4/growth/consent-compliance-centre",
+    "r4/growth/email-engagement-tracking",
+    "r4/growth/outbound-sandbox-ledger"
+   ],
+   "notes": 1,
+   "oldLen": 3963,
+   "newLen": 4271,
+   "ok": true,
+   "at": "14:29:45Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-800",
+   "alias": "d9",
+   "keys": [
+    "r4/growth/consent-compliance-centre"
+   ],
+   "notes": 0,
+   "oldLen": 2967,
+   "newLen": 3096,
+   "ok": true,
+   "at": "14:29:45Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-801",
+   "alias": "d0",
+   "keys": [
+    "r4/growth/contact-enrichment-port",
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "notes": 0,
+   "oldLen": 3131,
+   "newLen": 3280,
+   "ok": true,
+   "at": "14:29:48Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-802",
+   "alias": "d1",
+   "keys": [
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "notes": 0,
+   "oldLen": 3017,
+   "newLen": 3146,
+   "ok": true,
+   "at": "14:29:48Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-804",
+   "alias": "d2",
+   "keys": [
+    "r4/growth/consent-compliance-centre",
+    "r4/growth/in-app-messages-and-announcements"
+   ],
+   "notes": 0,
+   "oldLen": 3436,
+   "newLen": 3547,
+   "ok": true,
+   "at": "14:29:48Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-805",
+   "alias": "d3",
+   "keys": [
+    "r4/growth/support-ai-reply-drafts"
+   ],
+   "notes": 0,
+   "oldLen": 3067,
+   "newLen": 3196,
+   "ok": true,
+   "at": "14:29:48Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-806",
+   "alias": "d4",
+   "keys": [
+    "r4/growth/help-center-knowledge-base"
+   ],
+   "notes": 0,
+   "oldLen": 3605,
+   "newLen": 3734,
+   "ok": true,
+   "at": "14:29:48Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-809",
+   "alias": "d5",
+   "keys": [
+    "r4/growth/email-broadcast-campaigns",
+    "r4/growth/in-app-messages-and-announcements",
+    "r4/growth/webflow-landing-publisher-and-editor"
+   ],
+   "notes": 0,
+   "oldLen": 3338,
+   "newLen": 3476,
+   "ok": true,
+   "at": "14:29:48Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-810",
+   "alias": "d6",
+   "keys": [
+    "r4/business-core/fx-rates-and-conversion",
+    "r4/business-core/item-catalogue"
+   ],
+   "notes": 0,
+   "oldLen": 3238,
+   "newLen": 3326,
+   "ok": true,
+   "at": "14:29:48Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-811",
+   "alias": "d7",
+   "keys": [
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "notes": 0,
+   "oldLen": 3127,
+   "newLen": 3222,
+   "ok": true,
+   "at": "14:29:48Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-812",
+   "alias": "d8",
+   "keys": [
+    "r4/growth/email-broadcast-campaigns"
+   ],
+   "notes": 0,
+   "oldLen": 2807,
+   "newLen": 2936,
+   "ok": true,
+   "at": "14:29:48Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-814",
+   "alias": "d9",
+   "keys": [
+    "r4/migration/importer-test-accounts-and-fixture-workspaces"
+   ],
+   "notes": 0,
+   "oldLen": 3987,
+   "newLen": 4063,
+   "ok": true,
+   "at": "14:29:48Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-815",
+   "alias": "d0",
+   "keys": [
+    "r4/migration/importer-test-accounts-and-fixture-workspaces"
+   ],
+   "notes": 0,
+   "oldLen": 4146,
+   "newLen": 4275,
+   "ok": true,
+   "at": "14:29:50Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-816",
+   "alias": "d1",
+   "keys": [
+    "r4/migration/source-oauth-connections-and-token-refresh"
+   ],
+   "notes": 0,
+   "oldLen": 3546,
+   "newLen": 3675,
+   "ok": true,
+   "at": "14:29:50Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-817",
+   "alias": "d2",
+   "keys": [
+    "r4/migration/linear-connector-and-pm-mapping"
+   ],
+   "notes": 0,
+   "oldLen": 3033,
+   "newLen": 3162,
+   "ok": true,
+   "at": "14:29:50Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-818",
+   "alias": "d3",
+   "keys": [
+    "r4/business-core/inventory-stock-and-cogs",
+    "r4/business-core/recurring-invoices-dunning"
+   ],
+   "notes": 0,
+   "oldLen": 3884,
+   "newLen": 3959,
+   "ok": true,
+   "at": "14:29:50Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-819",
+   "alias": "d4",
+   "keys": [
+    "r4/business-core/ledger-dimensions-registry",
+    "r4/business-core/recurring-invoices-dunning",
+    "r4/growth/booking-pages-and-availability"
+   ],
+   "notes": 0,
+   "oldLen": 3500,
+   "newLen": 3557,
+   "ok": true,
+   "at": "14:29:50Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-820",
+   "alias": "d5",
+   "keys": [
+    "r4/migration/source-oauth-connections-and-token-refresh"
+   ],
+   "notes": 0,
+   "oldLen": 3044,
+   "newLen": 3173,
+   "ok": true,
+   "at": "14:29:50Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-821",
+   "alias": "d6",
+   "keys": [
+    "r4/growth/contact-company-merge-and-dedup"
+   ],
+   "notes": 0,
+   "oldLen": 3049,
+   "newLen": 3142,
+   "ok": true,
+   "at": "14:29:50Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-824",
+   "alias": "d7",
+   "keys": [
+    "r4/growth/crm-schema-routers-page-specs",
+    "r4/migration/import-duplicate-detection-and-merge-preview"
+   ],
+   "notes": 0,
+   "oldLen": 2985,
+   "newLen": 3134,
+   "ok": true,
+   "at": "14:29:50Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-825",
+   "alias": "d8",
+   "keys": [
+    "r4/migration/linear-connector-and-pm-mapping"
+   ],
+   "notes": 0,
+   "oldLen": 2959,
+   "newLen": 3088,
+   "ok": true,
+   "at": "14:29:50Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-826",
+   "alias": "d9",
+   "keys": [
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "notes": 0,
+   "oldLen": 3132,
+   "newLen": 3261,
+   "ok": true,
+   "at": "14:29:50Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-827",
+   "alias": "d0",
+   "keys": [
+    "r4/business-core/fx-rates-and-conversion",
+    "r4/business-core/inventory-stock-and-cogs",
+    "r4/business-core/item-catalogue"
+   ],
+   "notes": 0,
+   "oldLen": 3620,
+   "newLen": 3717,
+   "ok": true,
+   "at": "14:29:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-830",
+   "alias": "d1",
+   "keys": [
+    "r4/migration/scheduled-resync-and-sync-status"
+   ],
+   "notes": 0,
+   "oldLen": 3162,
+   "newLen": 3291,
+   "ok": true,
+   "at": "14:29:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-831",
+   "alias": "d2",
+   "keys": [
+    "r4/growth/crm-schema-routers-page-specs",
+    "r4/migration/linear-connector-and-pm-mapping"
+   ],
+   "notes": 0,
+   "oldLen": 3345,
+   "newLen": 3494,
+   "ok": true,
+   "at": "14:29:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-835",
+   "alias": "d3",
+   "keys": [
+    "r4/assistant/conversation-runtime",
+    "r4/assistant/model-and-provider-port",
+    "r4/assistant/portal-assistant",
+    "r4/assistant/staff-chat-panel"
+   ],
+   "notes": 0,
+   "oldLen": 5211,
+   "newLen": 5398,
+   "ok": true,
+   "at": "14:29:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-836",
+   "alias": "d4",
+   "keys": [
+    "r4/assistant/action-catalogue",
+    "r4/assistant/contract-publish",
+    "r4/assistant/metering-limits",
+    "r4/assistant/nl-to-views",
+    "r4/assistant/portal-assistant",
+    "r4/assistant/staff-chat-panel",
+    "r4/assistant/summaries-and-drafting"
+   ],
+   "notes": 0,
+   "oldLen": 5732,
+   "newLen": 5976,
+   "ok": true,
+   "at": "14:29:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-837",
+   "alias": "d5",
+   "keys": [
+    "r4/assistant/conversation-runtime",
+    "r4/assistant/nl-to-views",
+    "r4/assistant/retrieval-grounding",
+    "r4/assistant/summaries-and-drafting"
+   ],
+   "notes": 0,
+   "oldLen": 4813,
+   "newLen": 5000,
+   "ok": true,
+   "at": "14:29:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-838",
+   "alias": "d6",
+   "keys": [
+    "r4/assistant/business-characters",
+    "r4/assistant/conversation-runtime",
+    "r4/assistant/portal-assistant"
+   ],
+   "notes": 0,
+   "oldLen": 5402,
+   "newLen": 5570,
+   "ok": true,
+   "at": "14:29:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-839",
+   "alias": "d7",
+   "keys": [
+    "r4/assistant/staff-chat-panel"
+   ],
+   "notes": 0,
+   "oldLen": 5066,
+   "newLen": 5195,
+   "ok": true,
+   "at": "14:29:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-840",
+   "alias": "d8",
+   "keys": [
+    "r4/assistant/conversation-runtime"
+   ],
+   "notes": 0,
+   "oldLen": 4912,
+   "newLen": 5041,
+   "ok": true,
+   "at": "14:29:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-841",
+   "alias": "d9",
+   "keys": [
+    "r4/assistant/action-catalogue",
+    "r4/assistant/retrieval-grounding"
+   ],
+   "notes": 0,
+   "oldLen": 5113,
+   "newLen": 5262,
+   "ok": true,
+   "at": "14:29:51Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-842",
+   "alias": "d0",
+   "keys": [
+    "r4/assistant/action-catalogue",
+    "r4/assistant/portal-assistant"
+   ],
+   "notes": 0,
+   "oldLen": 5226,
+   "newLen": 5375,
+   "ok": true,
+   "at": "14:29:53Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-843",
+   "alias": "d1",
+   "keys": [
+    "r4/assistant/action-catalogue",
+    "r4/assistant/business-characters",
+    "r4/assistant/conversation-runtime"
+   ],
+   "notes": 0,
+   "oldLen": 4404,
+   "newLen": 4572,
+   "ok": true,
+   "at": "14:29:53Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-844",
+   "alias": "d2",
+   "keys": [
+    "r4/assistant/conversation-runtime"
+   ],
+   "notes": 0,
+   "oldLen": 4192,
+   "newLen": 4321,
+   "ok": true,
+   "at": "14:29:53Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-845",
+   "alias": "d3",
+   "keys": [
+    "r4/assistant/contract-publish",
+    "r4/assistant/wire"
+   ],
+   "notes": 0,
+   "oldLen": 5035,
+   "newLen": 5184,
+   "ok": true,
+   "at": "14:29:53Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-846",
+   "alias": "d4",
+   "keys": [
+    "r4/assistant/conformance",
+    "r4/assistant/contract-publish"
+   ],
+   "notes": 0,
+   "oldLen": 5716,
+   "newLen": 5865,
+   "ok": true,
+   "at": "14:29:53Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-848",
+   "alias": "d5",
+   "keys": [
+    "r4/data-layer/recurrence-engine"
+   ],
+   "notes": 0,
+   "oldLen": 4943,
+   "newLen": 5046,
+   "ok": true,
+   "at": "14:29:53Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-849",
+   "alias": "d6",
+   "keys": [
+    "r4/business-core/fx-rates",
+    "r4/workflows/contract-publish",
+    "r4/workflows/workflow-model"
+   ],
+   "notes": 0,
+   "oldLen": 5409,
+   "newLen": 5557,
+   "ok": true,
+   "at": "14:29:53Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-850",
+   "alias": "d7",
+   "keys": [
+    "r4/workflows/approvals-framework"
+   ],
+   "notes": 0,
+   "oldLen": 3898,
+   "newLen": 4027,
+   "ok": true,
+   "at": "14:29:53Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-851",
+   "alias": "d8",
+   "keys": [
+    "r4/workflows/approvals-framework",
+    "r4/workflows/canvas-editor",
+    "r4/workflows/step-catalogue",
+    "r4/workflows/workflow-model"
+   ],
+   "notes": 0,
+   "oldLen": 5215,
+   "newLen": 5402,
+   "ok": true,
+   "at": "14:29:53Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-852",
+   "alias": "d9",
+   "keys": [
+    "r4/workflows/canvas-editor",
+    "r4/workflows/run-engine"
+   ],
+   "notes": 0,
+   "oldLen": 4250,
+   "newLen": 4399,
+   "ok": true,
+   "at": "14:29:53Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-853",
+   "alias": "d0",
+   "keys": [
+    "r4/workflows/step-catalogue"
+   ],
+   "notes": 0,
+   "oldLen": 4079,
+   "newLen": 4208,
+   "ok": true,
+   "at": "14:29:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-854",
+   "alias": "d1",
+   "keys": [
+    "r4/data-layer/file-scanning-previews",
+    "r4/workflows/forms-publishing",
+    "r4/workflows/workflow-model"
+   ],
+   "notes": 0,
+   "oldLen": 4729,
+   "newLen": 4897,
+   "ok": true,
+   "at": "14:29:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-855",
+   "alias": "d2",
+   "keys": [
+    "r4/workflows/forms-schema-runtime"
+   ],
+   "notes": 0,
+   "oldLen": 4826,
+   "newLen": 4955,
+   "ok": true,
+   "at": "14:29:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-856",
+   "alias": "d3",
+   "keys": [
+    "r4/workflows/document-generation",
+    "r4/workflows/esign-core",
+    "r4/workflows/workflow-model"
+   ],
+   "notes": 0,
+   "oldLen": 4141,
+   "newLen": 4309,
+   "ok": true,
+   "at": "14:29:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-857",
+   "alias": "d4",
+   "keys": [
+    "r4/tables/scheduled-view-delivery",
+    "r4/workflows/document-templates",
+    "r4/workflows/esign-core"
+   ],
+   "notes": 0,
+   "oldLen": 4136,
+   "newLen": 4304,
+   "ok": true,
+   "at": "14:29:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-858",
+   "alias": "d5",
+   "keys": [
+    "r4/workflows/document-generation",
+    "r4/workflows/document-templates",
+    "r4/workflows/esign-audit-compliance"
+   ],
+   "notes": 0,
+   "oldLen": 5083,
+   "newLen": 5251,
+   "ok": true,
+   "at": "14:29:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-859",
+   "alias": "d6",
+   "keys": [
+    "r4/workflows/esign-core"
+   ],
+   "notes": 0,
+   "oldLen": 4362,
+   "newLen": 4491,
+   "ok": true,
+   "at": "14:29:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-860",
+   "alias": "d7",
+   "keys": [
+    "r4/workflows/contract-publish",
+    "r4/workflows/wire"
+   ],
+   "notes": 0,
+   "oldLen": 5121,
+   "newLen": 5270,
+   "ok": true,
+   "at": "14:29:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-861",
+   "alias": "d8",
+   "keys": [
+    "r4/workflows/conformance",
+    "r4/workflows/contract-publish"
+   ],
+   "notes": 0,
+   "oldLen": 5726,
+   "newLen": 5875,
+   "ok": true,
+   "at": "14:29:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-863",
+   "alias": "d9",
+   "keys": [
+    "r4/data-layer/recurrence-engine"
+   ],
+   "notes": 0,
+   "oldLen": 4424,
+   "newLen": 4527,
+   "ok": true,
+   "at": "14:29:56Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-864",
+   "alias": "d0",
+   "keys": [
+    "r4/engagement/booking-pages",
+    "r4/engagement/calendar-sync",
+    "r4/engagement/contract-publish",
+    "r4/engagement/memberships-checkin",
+    "r4/engagement/scheduling-model"
+   ],
+   "notes": 0,
+   "oldLen": 4778,
+   "newLen": 4984,
+   "ok": true,
+   "at": "14:29:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-865",
+   "alias": "d1",
+   "keys": [
+    "r4/collab/sms-notification-channel",
+    "r4/engagement/booking-engine",
+    "r4/workflows/forms-schema-runtime"
+   ],
+   "notes": 0,
+   "oldLen": 4674,
+   "newLen": 4814,
+   "ok": true,
+   "at": "14:29:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-866",
+   "alias": "d2",
+   "keys": [
+    "r4/engagement/booking-engine"
+   ],
+   "notes": 0,
+   "oldLen": 4645,
+   "newLen": 4774,
+   "ok": true,
+   "at": "14:29:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-867",
+   "alias": "d3",
+   "keys": [
+    "r4/collab/sms-notification-channel",
+    "r4/data-layer/file-scanning-previews",
+    "r4/growth/bulk-campaigns"
+   ],
+   "notes": 0,
+   "oldLen": 5053,
+   "newLen": 5221,
+   "ok": true,
+   "at": "14:29:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-869",
+   "alias": "d4",
+   "keys": [
+    "r4/engagement/reviews-requests",
+    "r4/workflows/forms-schema-runtime"
+   ],
+   "notes": 0,
+   "oldLen": 4477,
+   "newLen": 4598,
+   "ok": true,
+   "at": "14:29:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-870",
+   "alias": "d5",
+   "keys": [
+    "r4/engagement/surveys-nps"
+   ],
+   "notes": 0,
+   "oldLen": 3711,
+   "newLen": 3840,
+   "ok": true,
+   "at": "14:29:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-871",
+   "alias": "d6",
+   "keys": [
+    "r4/design-system/labels-barcodes-qr",
+    "r4/engagement/booking-engine",
+    "r4/engagement/loyalty-gift-cards"
+   ],
+   "notes": 0,
+   "oldLen": 5354,
+   "newLen": 5462,
+   "ok": true,
+   "at": "14:29:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-872",
+   "alias": "d7",
+   "keys": [
+    "r4/engagement/memberships-checkin",
+    "r4/workflows/approvals-framework"
+   ],
+   "notes": 0,
+   "oldLen": 4961,
+   "newLen": 5083,
+   "ok": true,
+   "at": "14:29:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-874",
+   "alias": "d8",
+   "keys": [
+    "r4/workflows/forms-publishing"
+   ],
+   "notes": 0,
+   "oldLen": 3603,
+   "newLen": 3732,
+   "ok": true,
+   "at": "14:29:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-875",
+   "alias": "d9",
+   "keys": [
+    "r4/engagement/contract-publish",
+    "r4/engagement/wire"
+   ],
+   "notes": 0,
+   "oldLen": 5248,
+   "newLen": 5397,
+   "ok": true,
+   "at": "14:29:58Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-876",
+   "alias": "d0",
+   "keys": [
+    "r4/engagement/conformance",
+    "r4/engagement/contract-publish"
+   ],
+   "notes": 0,
+   "oldLen": 5812,
+   "newLen": 5961,
+   "ok": true,
+   "at": "14:30:00Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-878",
+   "alias": "d1",
+   "keys": [
+    "r4/business-core/fx-rates"
+   ],
+   "notes": 0,
+   "oldLen": 4953,
+   "newLen": 5082,
+   "ok": true,
+   "at": "14:30:00Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-879",
+   "alias": "d2",
+   "keys": [
+    "r4/commerce/contract-publish",
+    "r4/commerce/customer-subscriptions",
+    "r4/commerce/domain-model",
+    "r4/commerce/orders-fulfilment",
+    "r4/commerce/pos-mode",
+    "r4/commerce/purchasing-ap",
+    "r4/design-system/labels-barcodes-qr"
+   ],
+   "notes": 0,
+   "oldLen": 5282,
+   "newLen": 5466,
+   "ok": true,
+   "at": "14:30:00Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-880",
+   "alias": "d3",
+   "keys": [
+    "r4/commerce/catalog-inventory",
+    "r4/commerce/marketplace-model",
+    "r4/commerce/pos-mode"
+   ],
+   "notes": 0,
+   "oldLen": 5252,
+   "newLen": 5420,
+   "ok": true,
+   "at": "14:30:00Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-881",
+   "alias": "d4",
+   "keys": [
+    "r4/commerce/orders-fulfilment"
+   ],
+   "notes": 0,
+   "oldLen": 4967,
+   "newLen": 5096,
+   "ok": true,
+   "at": "14:30:00Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-882",
+   "alias": "d5",
+   "keys": [
+    "r4/commerce/catalog-inventory",
+    "r4/workflows/approvals-framework"
+   ],
+   "notes": 0,
+   "oldLen": 4519,
+   "newLen": 4641,
+   "ok": true,
+   "at": "14:30:00Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-883",
+   "alias": "d6",
+   "keys": [
+    "r4/commerce/domain-model",
+    "r4/commerce/hr-core"
+   ],
+   "notes": 0,
+   "oldLen": 4630,
+   "newLen": 4779,
+   "ok": true,
+   "at": "14:30:00Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-884",
+   "alias": "d7",
+   "keys": [
+    "r4/commerce/projects-time-billing"
+   ],
+   "notes": 0,
+   "oldLen": 5189,
+   "newLen": 5318,
+   "ok": true,
+   "at": "14:30:00Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-885",
+   "alias": "d8",
+   "keys": [
+    "r4/commerce/catalog-inventory",
+    "r4/commerce/projects-time-billing",
+    "r4/data-layer/recurrence-engine"
+   ],
+   "notes": 0,
+   "oldLen": 4845,
+   "newLen": 5013,
+   "ok": true,
+   "at": "14:30:00Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-886",
+   "alias": "d9",
+   "keys": [
+    "r4/commerce/catalog-inventory"
+   ],
+   "notes": 0,
+   "oldLen": 4857,
+   "newLen": 4986,
+   "ok": true,
+   "at": "14:30:00Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-887",
+   "alias": "d0",
+   "keys": [
+    "r4/commerce/orders-fulfilment"
+   ],
+   "notes": 0,
+   "oldLen": 4550,
+   "newLen": 4679,
+   "ok": true,
+   "at": "14:30:04Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-888",
+   "alias": "d1",
+   "keys": [
+    "r4/commerce/pack-conformance-tests"
+   ],
+   "notes": 0,
+   "oldLen": 4234,
+   "newLen": 4363,
+   "ok": true,
+   "at": "14:30:04Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-889",
+   "alias": "d2",
+   "keys": [
+    "r4/commerce/assets-work-orders",
+    "r4/commerce/customer-subscriptions",
+    "r4/commerce/orders-fulfilment",
+    "r4/commerce/pack-conformance-tests",
+    "r4/commerce/vertical-packs-wave2"
+   ],
+   "notes": 0,
+   "oldLen": 4279,
+   "newLen": 4485,
+   "ok": true,
+   "at": "14:30:04Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-890",
+   "alias": "d3",
+   "keys": [
+    "r4/commerce/vertical-packs-wave2",
+    "r4/commerce/vertical-packs-wave3"
+   ],
+   "notes": 0,
+   "oldLen": 3171,
+   "newLen": 3320,
+   "ok": true,
+   "at": "14:30:04Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-891",
+   "alias": "d4",
+   "keys": [
+    "r4/commerce/contract-publish",
+    "r4/commerce/wire"
+   ],
+   "notes": 0,
+   "oldLen": 5310,
+   "newLen": 5459,
+   "ok": true,
+   "at": "14:30:04Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-892",
+   "alias": "d5",
+   "keys": [
+    "r4/commerce/conformance",
+    "r4/commerce/contract-publish"
+   ],
+   "notes": 0,
+   "oldLen": 5709,
+   "newLen": 5858,
+   "ok": true,
+   "at": "14:30:04Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-894",
+   "alias": "d6",
+   "keys": [
+    "r4/app-shell/settings-registry",
+    "r4/platform-ops/abuse-controls",
+    "r4/platform-ops/compliance-profiles",
+    "r4/platform-ops/contract-publish",
+    "r4/platform-ops/tenant-health-scores"
+   ],
+   "notes": 0,
+   "oldLen": 5753,
+   "newLen": 5959,
+   "ok": true,
+   "at": "14:30:04Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-895",
+   "alias": "d7",
+   "keys": [
+    "r4/platform-ops/contract-publish",
+    "r4/platform-ops/trust-center"
+   ],
+   "notes": 0,
+   "oldLen": 4839,
+   "newLen": 4988,
+   "ok": true,
+   "at": "14:30:04Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-896",
+   "alias": "d8",
+   "keys": [
+    "r4/platform-ops/compliance-profiles",
+    "r4/platform-ops/evidence-automation",
+    "r4/platform-ops/trust-center"
+   ],
+   "notes": 0,
+   "oldLen": 4787,
+   "newLen": 4955,
+   "ok": true,
+   "at": "14:30:04Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-897",
+   "alias": "d9",
+   "keys": [
+    "r4/platform-ops/experiments",
+    "r4/platform-ops/session-replay",
+    "r4/platform-ops/tenant-health-scores"
+   ],
+   "notes": 0,
+   "oldLen": 5214,
+   "newLen": 5382,
+   "ok": true,
+   "at": "14:30:04Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-898",
+   "alias": "d0",
+   "keys": [
+    "r4/platform-ops/product-analytics"
+   ],
+   "notes": 0,
+   "oldLen": 4670,
+   "newLen": 4799,
+   "ok": true,
+   "at": "14:30:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-899",
+   "alias": "d1",
+   "keys": [
+    "r4/platform-ops/product-analytics"
+   ],
+   "notes": 0,
+   "oldLen": 4374,
+   "newLen": 4503,
+   "ok": true,
+   "at": "14:30:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-900",
+   "alias": "d2",
+   "keys": [
+    "r4/platform-ops/superadmin-console"
+   ],
+   "notes": 0,
+   "oldLen": 5201,
+   "newLen": 5330,
+   "ok": true,
+   "at": "14:30:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-901",
+   "alias": "d3",
+   "keys": [
+    "r4/platform-ops/product-analytics",
+    "r4/platform-ops/superadmin-console"
+   ],
+   "notes": 0,
+   "oldLen": 3762,
+   "newLen": 3911,
+   "ok": true,
+   "at": "14:30:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-902",
+   "alias": "d4",
+   "keys": [
+    "r4/platform-ops/compliance-controls"
+   ],
+   "notes": 0,
+   "oldLen": 5349,
+   "newLen": 5478,
+   "ok": true,
+   "at": "14:30:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-903",
+   "alias": "d5",
+   "keys": [
+    "r4/platform-ops/compliance-controls",
+    "r4/platform-ops/trust-center"
+   ],
+   "notes": 0,
+   "oldLen": 4315,
+   "newLen": 4464,
+   "ok": true,
+   "at": "14:30:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-904",
+   "alias": "d6",
+   "keys": [
+    "r4/platform-ops/compliance-controls",
+    "r4/platform-ops/evidence-automation",
+    "r4/platform-ops/status-page"
+   ],
+   "notes": 0,
+   "oldLen": 3832,
+   "newLen": 4000,
+   "ok": true,
+   "at": "14:30:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-906",
+   "alias": "d7",
+   "keys": [
+    "r4/platform-ops/contract-publish",
+    "r4/platform-ops/wire"
+   ],
+   "notes": 0,
+   "oldLen": 5252,
+   "newLen": 5401,
+   "ok": true,
+   "at": "14:30:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-907",
+   "alias": "d8",
+   "keys": [
+    "r4/platform-ops/conformance",
+    "r4/platform-ops/contract-publish"
+   ],
+   "notes": 0,
+   "oldLen": 5856,
+   "newLen": 6005,
+   "ok": true,
+   "at": "14:30:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-914",
+   "alias": "d9",
+   "keys": [
+    "r4/identity/portal-account-pages"
+   ],
+   "notes": 0,
+   "oldLen": 1289,
+   "newLen": 1420,
+   "ok": true,
+   "at": "14:30:07Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-916",
+   "alias": "d0",
+   "keys": [
+    "r4/libraries/library-usage-notes",
+    "r4/quality/docs-and-spec-reviewer"
+   ],
+   "notes": 0,
+   "oldLen": 1201,
+   "newLen": 1354,
+   "ok": true,
+   "at": "14:30:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-918",
+   "alias": "d1",
+   "keys": [
+    "r4/collab/agent-readable-docs",
+    "r4/collab/build-journals"
+   ],
+   "notes": 0,
+   "oldLen": 1235,
+   "newLen": 1388,
+   "ok": true,
+   "at": "14:30:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-919",
+   "alias": "d2",
+   "keys": [
+    "r4/forge/git-credential-helper",
+    "r4/identity/sessions-stepup"
+   ],
+   "notes": 0,
+   "oldLen": 1218,
+   "newLen": 1371,
+   "ok": true,
+   "at": "14:30:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-920",
+   "alias": "d3",
+   "keys": [
+    "r4/spec-builder/msw-fixtures-from-data"
+   ],
+   "notes": 0,
+   "oldLen": 1261,
+   "newLen": 1392,
+   "ok": true,
+   "at": "14:30:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-921",
+   "alias": "d4",
+   "keys": [
+    "r4/app-shell/onboarding-funnel-admin"
+   ],
+   "notes": 0,
+   "oldLen": 1302,
+   "newLen": 1433,
+   "ok": true,
+   "at": "14:30:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-923",
+   "alias": "d5",
+   "keys": [
+    "r4/spec-builder/flags-modules-compile",
+    "r4/spec-builder/mutation-input-constraints"
+   ],
+   "notes": 0,
+   "oldLen": 1214,
+   "newLen": 1367,
+   "ok": true,
+   "at": "14:30:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-925",
+   "alias": "d6",
+   "keys": [
+    "r4/app-shell/desktop-os-integration",
+    "r4/business-core/discounts-and-promo-codes",
+    "r4/input/clipboard-port",
+    "r4/input/native-menu-from-command-manifest"
+   ],
+   "notes": 0,
+   "oldLen": 1355,
+   "newLen": 1544,
+   "ok": true,
+   "at": "14:30:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-929",
+   "alias": "d7",
+   "keys": [
+    "r4/growth/deal-products-and-quotes"
+   ],
+   "notes": 0,
+   "oldLen": 1294,
+   "newLen": 1423,
+   "ok": true,
+   "at": "14:30:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-935",
+   "alias": "d8",
+   "keys": [
+    "r4/libraries/library-guardrails-lint"
+   ],
+   "notes": 0,
+   "oldLen": 1237,
+   "newLen": 1368,
+   "ok": true,
+   "at": "14:30:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-936",
+   "alias": "d9",
+   "keys": [
+    "r4/design-system/surface-and-feedback-components"
+   ],
+   "notes": 0,
+   "oldLen": 1340,
+   "newLen": 1469,
+   "ok": true,
+   "at": "14:30:09Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-938",
+   "alias": "d0",
+   "keys": [
+    "r4/migration/drive-dropbox-files-import"
+   ],
+   "notes": 0,
+   "oldLen": 1332,
+   "newLen": 1461,
+   "ok": true,
+   "at": "14:30:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-939",
+   "alias": "d1",
+   "keys": [
+    "r4/growth/help-center-knowledge-base"
+   ],
+   "notes": 0,
+   "oldLen": 1292,
+   "newLen": 1392,
+   "ok": true,
+   "at": "14:30:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-940",
+   "alias": "d2",
+   "keys": [
+    "r4/business-core/discounts-and-promo-codes"
+   ],
+   "notes": 0,
+   "oldLen": 1361,
+   "newLen": 1492,
+   "ok": true,
+   "at": "14:30:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-942",
+   "alias": "d3",
+   "keys": [
+    "r4/forge/git-credential-helper"
+   ],
+   "notes": 0,
+   "oldLen": 1255,
+   "newLen": 1386,
+   "ok": true,
+   "at": "14:30:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-944",
+   "alias": "d4",
+   "keys": [
+    "r4/tables/duplicate-detection-and-merge"
+   ],
+   "notes": 0,
+   "oldLen": 1199,
+   "newLen": 1330,
+   "ok": true,
+   "at": "14:30:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-949",
+   "alias": "d5",
+   "keys": [
+    "r4/tables/map-view-maplibre-and-geo-field"
+   ],
+   "notes": 0,
+   "oldLen": 1316,
+   "newLen": 1447,
+   "ok": true,
+   "at": "14:30:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-950",
+   "alias": "d6",
+   "keys": [
+    "r4/app-shell/shell-layout-presets"
+   ],
+   "notes": 1,
+   "oldLen": 1228,
+   "newLen": 1603,
+   "ok": true,
+   "at": "14:30:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-953",
+   "alias": "d7",
+   "keys": [
+    "r4/business-core/year-end-close"
+   ],
+   "notes": 0,
+   "oldLen": 1294,
+   "newLen": 1425,
+   "ok": true,
+   "at": "14:30:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-956",
+   "alias": "d8",
+   "keys": [
+    "r4/migration/source-oauth-connections-and-token-refresh"
+   ],
+   "notes": 0,
+   "oldLen": 1418,
+   "newLen": 1547,
+   "ok": true,
+   "at": "14:30:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-957",
+   "alias": "d9",
+   "keys": [
+    "r4/identity/permission-propagation"
+   ],
+   "notes": 0,
+   "oldLen": 1482,
+   "newLen": 1582,
+   "ok": true,
+   "at": "14:30:11Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-959",
+   "alias": "d0",
+   "keys": [
+    "r4/identity/portal-frame"
+   ],
+   "notes": 0,
+   "oldLen": 1204,
+   "newLen": 1335,
+   "ok": true,
+   "at": "14:30:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-964",
+   "alias": "d1",
+   "keys": [
+    "r4/growth/contact-enrichment-port"
+   ],
+   "notes": 0,
+   "oldLen": 1275,
+   "newLen": 1404,
+   "ok": true,
+   "at": "14:30:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-965",
+   "alias": "d2",
+   "keys": [
+    "r4/business-core/tenant-metered-billing"
+   ],
+   "notes": 0,
+   "oldLen": 1639,
+   "newLen": 1770,
+   "ok": true,
+   "at": "14:30:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-970",
+   "alias": "d3",
+   "keys": [
+    "r4/migration/placeholder-users-and-invite-conversion"
+   ],
+   "notes": 0,
+   "oldLen": 1257,
+   "newLen": 1386,
+   "ok": true,
+   "at": "14:30:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-971",
+   "alias": "d4",
+   "keys": [
+    "r4/module-system/kernel-otel"
+   ],
+   "notes": 0,
+   "oldLen": 1222,
+   "newLen": 1353,
+   "ok": true,
+   "at": "14:30:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-973",
+   "alias": "d5",
+   "keys": [
+    "r4/collab/build-journals"
+   ],
+   "notes": 0,
+   "oldLen": 1216,
+   "newLen": 1347,
+   "ok": true,
+   "at": "14:30:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-975",
+   "alias": "d6",
+   "keys": [
+    "r4/app-shell/tauri-e2e-harness"
+   ],
+   "notes": 0,
+   "oldLen": 1232,
+   "newLen": 1363,
+   "ok": true,
+   "at": "14:30:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-977",
+   "alias": "d7",
+   "keys": [
+    "r4/spec-builder/spec-diff-pr-comment"
+   ],
+   "notes": 0,
+   "oldLen": 1205,
+   "newLen": 1336,
+   "ok": true,
+   "at": "14:30:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-979",
+   "alias": "d8",
+   "keys": [
+    "r4/libraries/dependency-health-page",
+    "r4/spec-builder/analytics-events-section"
+   ],
+   "notes": 0,
+   "oldLen": 1213,
+   "newLen": 1366,
+   "ok": true,
+   "at": "14:30:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-982",
+   "alias": "d9",
+   "keys": [
+    "r4/pm-linear/linear-cycles-weekly-and-auto-assignment"
+   ],
+   "notes": 0,
+   "oldLen": 1259,
+   "newLen": 1390,
+   "ok": true,
+   "at": "14:30:15Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-989",
+   "alias": "d0",
+   "keys": [
+    "r4/data-layer/document-previews",
+    "r4/design-system/static-data-table",
+    "r4/tables/view-renderer-registry-and-host"
+   ],
+   "notes": 0,
+   "oldLen": 1346,
+   "newLen": 1516,
+   "ok": true,
+   "at": "14:30:16Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-991",
+   "alias": "d1",
+   "keys": [
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "notes": 0,
+   "oldLen": 1240,
+   "newLen": 1371,
+   "ok": true,
+   "at": "14:30:16Z"
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-994",
+   "alias": "d2",
+   "keys": [
+    "r4/forge/dr-cron-and-report"
+   ],
+   "notes": 0,
+   "oldLen": 1205,
+   "newLen": 1336,
+   "ok": true,
+   "at": "14:30:16Z"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-347",
+   "blocked": "PAP-770",
+   "alias": "r0",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-348",
+   "blocked": "PAP-770",
+   "alias": "r1",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-43",
+   "blocked": "PAP-772",
+   "alias": "r2",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-205",
+   "blocked": "PAP-432",
+   "alias": "r3",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-33",
+   "blocked": "PAP-432",
+   "alias": "r4",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-43",
+   "blocked": "PAP-432",
+   "alias": "r5",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-178",
+   "blocked": "PAP-431",
+   "alias": "r6",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-25",
+   "blocked": "PAP-431",
+   "alias": "r7",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-35",
+   "blocked": "PAP-431",
+   "alias": "r8",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-179",
+   "blocked": "PAP-424",
+   "alias": "r9",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-128",
+   "blocked": "PAP-419",
+   "alias": "r0",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-17",
+   "blocked": "PAP-404",
+   "alias": "r1",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-25",
+   "blocked": "PAP-371",
+   "alias": "r2",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-50",
+   "blocked": "PAP-371",
+   "alias": "r3",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-25",
+   "blocked": "PAP-370",
+   "alias": "r4",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-43",
+   "blocked": "PAP-370",
+   "alias": "r5",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-19",
+   "blocked": "PAP-369",
+   "alias": "r6",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-25",
+   "blocked": "PAP-369",
+   "alias": "r7",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-16",
+   "blocked": "PAP-367",
+   "alias": "r8",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-33",
+   "blocked": "PAP-367",
+   "alias": "r9",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:17Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-58",
+   "blocked": "PAP-367",
+   "alias": "r0",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:18Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-17",
+   "blocked": "PAP-366",
+   "alias": "r1",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:18Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-33",
+   "blocked": "PAP-366",
+   "alias": "r2",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:18Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-35",
+   "blocked": "PAP-366",
+   "alias": "r3",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:18Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-16",
+   "blocked": "PAP-368",
+   "alias": "r4",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:18Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-17",
+   "blocked": "PAP-368",
+   "alias": "r5",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:18Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-40",
+   "blocked": "PAP-356",
+   "alias": "r6",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:18Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-155",
+   "blocked": "PAP-344",
+   "alias": "r7",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:18Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-164",
+   "blocked": "PAP-344",
+   "alias": "r8",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:18Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-37",
+   "blocked": "PAP-339",
+   "alias": "r9",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:18Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-267",
+   "blocked": "PAP-327",
+   "alias": "r0",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-123",
+   "blocked": "PAP-320",
+   "alias": "r1",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-270",
+   "blocked": "PAP-326",
+   "alias": "r2",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-271",
+   "blocked": "PAP-326",
+   "alias": "r3",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-70",
+   "blocked": "PAP-318",
+   "alias": "r4",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-209",
+   "blocked": "PAP-296",
+   "alias": "r5",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-70",
+   "blocked": "PAP-290",
+   "alias": "r6",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-209",
+   "blocked": "PAP-293",
+   "alias": "r7",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-209",
+   "blocked": "PAP-294",
+   "alias": "r8",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-35",
+   "blocked": "PAP-276",
+   "alias": "r9",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-32",
+   "blocked": "PAP-267",
+   "alias": "r0",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-57",
+   "blocked": "PAP-230",
+   "alias": "r1",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-57",
+   "blocked": "PAP-231",
+   "alias": "r2",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-163",
+   "blocked": "PAP-183",
+   "alias": "r3",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-34",
+   "blocked": "PAP-175",
+   "alias": "r4",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-163",
+   "blocked": "PAP-171",
+   "alias": "r5",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-123",
+   "blocked": "PAP-132",
+   "alias": "r6",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-243",
+   "blocked": "PAP-85",
+   "alias": "r7",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-243",
+   "blocked": "PAP-84",
+   "alias": "r8",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-240",
+   "blocked": "PAP-83",
+   "alias": "r9",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:19Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-246",
+   "blocked": "PAP-83",
+   "alias": "r0",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:20Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-236",
+   "blocked": "PAP-69",
+   "alias": "r1",
+   "fix": "text-hard-dep",
+   "ok": false,
+   "at": "14:30:20Z",
+   "error": [
+    "Syntax Error: Expected \"$\", found \")\"."
+   ],
+   "note": "first attempt failed on a mutation-syntax bug (no variables); retried successfully below"
+  },
+  {
+   "kind": "fields",
+   "identifier": "PAP-636",
+   "alias": "f0",
+   "input": {
+    "projectMilestoneId": "5a6ecd45-07b7-40e2-80d5-fbbba5c9c0f8"
+   },
+   "why": "child milestone -> parent PAP-170 milestone 'All view types' (deferred child, no dueDate)",
+   "ok": true,
+   "at": "14:30:20Z"
+  },
+  {
+   "kind": "fields",
+   "identifier": "PAP-627",
+   "alias": "f1",
+   "input": {
+    "projectMilestoneId": "06d9484b-ddc1-466a-bd89-a495a8fe2ba7",
+    "dueDate": "2026-09-28"
+   },
+   "why": "child milestone -> parent PAP-164 milestone 'Grid with sort, filter, group'; dueDate 09-29 -> 09-28 (all 7 blockers due <= 09-28; dependents due 09-29+); also repairs umbrella PAP-164 due < last child due",
+   "ok": true,
+   "at": "14:30:20Z"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-347",
+   "blocked": "PAP-770",
+   "alias": "r0",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:53Z",
+   "relationId": "fa9c9df0-b57e-4b49-8128-d3d6a8af395e"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-348",
+   "blocked": "PAP-770",
+   "alias": "r1",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:53Z",
+   "relationId": "36be62df-3dc3-41cd-aa36-bea29b85f7fe"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-43",
+   "blocked": "PAP-772",
+   "alias": "r2",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:53Z",
+   "relationId": "34e6db88-f209-4429-a841-b2cbea01cfe3"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-205",
+   "blocked": "PAP-432",
+   "alias": "r3",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:53Z",
+   "relationId": "73fc128a-3c89-421a-ae9d-12fc86caa9aa"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-33",
+   "blocked": "PAP-432",
+   "alias": "r4",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:53Z",
+   "relationId": "ef990e3f-447a-4d7d-a3df-bf14c1d2c9a4"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-43",
+   "blocked": "PAP-432",
+   "alias": "r5",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:53Z",
+   "relationId": "e1ee8720-8ca6-4736-9081-8ea1b9576431"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-178",
+   "blocked": "PAP-431",
+   "alias": "r6",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:53Z",
+   "relationId": "ae3092bc-ef05-412e-a0e2-8636796ab223"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-25",
+   "blocked": "PAP-431",
+   "alias": "r7",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:53Z",
+   "relationId": "1369cd58-3555-498a-aad7-5af7c2152fee"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-35",
+   "blocked": "PAP-431",
+   "alias": "r8",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:53Z",
+   "relationId": "28f19ce5-4e0e-4096-84bf-286e01aac3f8"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-179",
+   "blocked": "PAP-424",
+   "alias": "r9",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:53Z",
+   "relationId": "cb6d062d-ca23-4bcb-ab11-218696b9f07e"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-128",
+   "blocked": "PAP-419",
+   "alias": "r0",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:55Z",
+   "relationId": "35e20952-a356-4b36-8451-8589d5729830"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-17",
+   "blocked": "PAP-404",
+   "alias": "r1",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:55Z",
+   "relationId": "427b0f7b-620f-4ed5-9a43-a5f416e5ed50"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-25",
+   "blocked": "PAP-371",
+   "alias": "r2",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:55Z",
+   "relationId": "be76b54f-6210-4735-96da-0dba8876e3d0"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-50",
+   "blocked": "PAP-371",
+   "alias": "r3",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:55Z",
+   "relationId": "fc2ead5d-ad49-46c5-af2e-64557131eb55"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-25",
+   "blocked": "PAP-370",
+   "alias": "r4",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:55Z",
+   "relationId": "c4aba9f6-c6be-4e0b-9e31-6b5c2e15766a"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-43",
+   "blocked": "PAP-370",
+   "alias": "r5",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:55Z",
+   "relationId": "131b3439-facc-41b2-9c20-eca890a4f193"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-19",
+   "blocked": "PAP-369",
+   "alias": "r6",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:55Z",
+   "relationId": "28de505c-951f-4fd7-9777-51916f8a8635"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-25",
+   "blocked": "PAP-369",
+   "alias": "r7",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:55Z",
+   "relationId": "8e19509f-6646-485d-9c12-6b742303dea2"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-16",
+   "blocked": "PAP-367",
+   "alias": "r8",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:55Z",
+   "relationId": "b7744d37-1eae-4652-9e74-511c20166551"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-33",
+   "blocked": "PAP-367",
+   "alias": "r9",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:55Z",
+   "relationId": "32bbf367-f160-4b97-a64b-1075e3bd67a0"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-58",
+   "blocked": "PAP-367",
+   "alias": "r0",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:58Z",
+   "relationId": "84903d5f-9d95-4aa2-aef7-ef6ba6cde4e6"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-17",
+   "blocked": "PAP-366",
+   "alias": "r1",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:58Z",
+   "relationId": "0cb831b5-7033-4553-90eb-5bbce005132a"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-33",
+   "blocked": "PAP-366",
+   "alias": "r2",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:58Z",
+   "relationId": "f7743cac-d69a-45f9-b9a3-2c6725613194"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-35",
+   "blocked": "PAP-366",
+   "alias": "r3",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:58Z",
+   "relationId": "3e1f3e50-bc17-45da-99f8-4cf9a113c165"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-16",
+   "blocked": "PAP-368",
+   "alias": "r4",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:58Z",
+   "relationId": "1ac8005e-5330-4c11-97dc-62f4c140068a"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-17",
+   "blocked": "PAP-368",
+   "alias": "r5",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:58Z",
+   "relationId": "1a8779ad-2b23-427f-ac5b-bf4089f9b7e7"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-40",
+   "blocked": "PAP-356",
+   "alias": "r6",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:58Z",
+   "relationId": "719caf38-8840-4893-8765-b993a1704672"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-155",
+   "blocked": "PAP-344",
+   "alias": "r7",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:58Z",
+   "relationId": "cb573b54-b8db-480f-b2e4-ebf3e79692ad"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-164",
+   "blocked": "PAP-344",
+   "alias": "r8",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:58Z",
+   "relationId": "dcf11d6a-d91e-45dd-a1f6-b798b1d3a9d7"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-37",
+   "blocked": "PAP-339",
+   "alias": "r9",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:30:58Z",
+   "relationId": "74d4c646-88da-41ca-bd4c-7dae948ff5ad"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-267",
+   "blocked": "PAP-327",
+   "alias": "r0",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:00Z",
+   "relationId": "586e6b56-7632-45b5-9117-b49f38929c5e"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-123",
+   "blocked": "PAP-320",
+   "alias": "r1",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:00Z",
+   "relationId": "f2166793-7620-4c2f-99c5-8566d3168b0f"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-270",
+   "blocked": "PAP-326",
+   "alias": "r2",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:00Z",
+   "relationId": "149ba35f-cfcd-4443-b10a-76683399f8a1"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-271",
+   "blocked": "PAP-326",
+   "alias": "r3",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:00Z",
+   "relationId": "7ee8074e-6751-42fa-a487-aeab8f88cba6"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-70",
+   "blocked": "PAP-318",
+   "alias": "r4",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:00Z",
+   "relationId": "658a05f6-140f-46ea-9ff5-45c5bfadde0d"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-209",
+   "blocked": "PAP-296",
+   "alias": "r5",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:00Z",
+   "relationId": "1bde4cbd-6313-4e87-b40c-f1ef4c20115c"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-70",
+   "blocked": "PAP-290",
+   "alias": "r6",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:00Z",
+   "relationId": "745525f6-cef7-4a79-bcc2-cc8e8130438d"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-209",
+   "blocked": "PAP-293",
+   "alias": "r7",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:00Z",
+   "relationId": "82a6c52a-97f1-4640-b7b1-7d12357acef7"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-209",
+   "blocked": "PAP-294",
+   "alias": "r8",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:00Z",
+   "relationId": "efa6a871-0cdc-4ff3-bd99-2ee9b97aa969"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-35",
+   "blocked": "PAP-276",
+   "alias": "r9",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:00Z",
+   "relationId": "1fee763b-0a39-40d2-a3c0-741ea5f6b599"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-32",
+   "blocked": "PAP-267",
+   "alias": "r0",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:03Z",
+   "relationId": "e19ec839-4605-4edd-9442-47221693c8a7"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-57",
+   "blocked": "PAP-230",
+   "alias": "r1",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:03Z",
+   "relationId": "93260d5e-6de8-4e4f-adb6-579a9bdeeb0c"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-57",
+   "blocked": "PAP-231",
+   "alias": "r2",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:03Z",
+   "relationId": "58e83233-00e8-434d-9712-bf00200da1c6"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-163",
+   "blocked": "PAP-183",
+   "alias": "r3",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:03Z",
+   "relationId": "4d593d80-fa06-487b-8392-cc74e1f8be75"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-34",
+   "blocked": "PAP-175",
+   "alias": "r4",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:03Z",
+   "relationId": "9cebecfb-e2c2-40c7-a830-01c0b793407b"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-163",
+   "blocked": "PAP-171",
+   "alias": "r5",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:03Z",
+   "relationId": "72d4889a-a91e-4c1d-b65e-ff89b2455413"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-123",
+   "blocked": "PAP-132",
+   "alias": "r6",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:03Z",
+   "relationId": "7c9bb089-b36e-48c6-8e5f-8dec0aca242b"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-243",
+   "blocked": "PAP-85",
+   "alias": "r7",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:03Z",
+   "relationId": "e4b41968-4b74-4dbe-a482-089f18201369"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-243",
+   "blocked": "PAP-84",
+   "alias": "r8",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:03Z",
+   "relationId": "9c040401-71ab-44d2-8fd4-898d811edd38"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-240",
+   "blocked": "PAP-83",
+   "alias": "r9",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:03Z",
+   "relationId": "4cd14bc5-4601-4e60-9032-d4ca9f6ad314"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-246",
+   "blocked": "PAP-83",
+   "alias": "r0",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:04Z",
+   "relationId": "37c16ae4-8a13-4176-a851-c08227f2594d"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-236",
+   "blocked": "PAP-69",
+   "alias": "r1",
+   "fix": "text-hard-dep",
+   "ok": true,
+   "at": "14:31:04Z",
+   "relationId": "10703e9f-b3b6-445b-aadc-1c6a782ae840"
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-33",
+   "blocked": "PAP-506",
+   "fix": "umbrella-inbound-propagation:PAP-367",
+   "ok": true,
+   "relationId": "1e155d39-ed4f-4f67-adae-43b70729a8b1",
+   "at": "14:33:48Z",
+   "error": null
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-58",
+   "blocked": "PAP-506",
+   "fix": "umbrella-inbound-propagation:PAP-367",
+   "ok": true,
+   "relationId": "c437b07b-5157-4866-bfc7-bf4e181ec617",
+   "at": "14:33:48Z",
+   "error": null
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-17",
+   "blocked": "PAP-501",
+   "fix": "umbrella-inbound-propagation:PAP-366",
+   "ok": true,
+   "relationId": "95896d96-9571-4927-a0c3-2d25a36703e2",
+   "at": "14:33:48Z",
+   "error": null
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-33",
+   "blocked": "PAP-501",
+   "fix": "umbrella-inbound-propagation:PAP-366",
+   "ok": true,
+   "relationId": "2f8c7378-f9b5-404f-82d5-780a5f1a7cb9",
+   "at": "14:33:48Z",
+   "error": null
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-35",
+   "blocked": "PAP-501",
+   "fix": "umbrella-inbound-propagation:PAP-366",
+   "ok": true,
+   "relationId": "df58dbca-57ed-427f-879f-88ffb538dd9b",
+   "at": "14:33:48Z",
+   "error": null
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-16",
+   "blocked": "PAP-502",
+   "fix": "umbrella-inbound-propagation:PAP-368",
+   "ok": true,
+   "relationId": "edfad5a1-79f8-4978-a9aa-0d437296db11",
+   "at": "14:33:48Z",
+   "error": null
+  },
+  {
+   "kind": "relation",
+   "blocker": "PAP-17",
+   "blocked": "PAP-502",
+   "fix": "umbrella-inbound-propagation:PAP-368",
+   "ok": true,
+   "relationId": "a13c53dd-9600-4cfe-9290-0205b80515e0",
+   "at": "14:33:48Z",
+   "error": null
+  },
+  {
+   "kind": "description",
+   "identifier": "PAP-302",
+   "alias": "manual",
+   "ok": true,
+   "at": "14:37:32Z",
+   "note": "removed the critique's own soft-dependency note about PAP-13: the Dependencies text says 'None hard (pure package on the PAP-13 layout)' and the parser misread the word 'hard' in that sentence; no relation was created"
+  }
+ ],
+ "skipped": [
+  {
+   "blocker": "PAP-235",
+   "blocked": "PAP-396",
+   "reason": "deferred blocker -> scheduled",
+   "fix": "text-hard-dep"
+  },
+  {
+   "blocker": "PAP-13",
+   "blocked": "PAP-302",
+   "reason": "would block a Ready issue",
+   "fix": "text-hard-dep"
+  },
+  {
+   "blocker": "PAP-40",
+   "blocked": "PAP-288",
+   "reason": "milestone inversion 2026-09-30 > 2026-09-25",
+   "fix": "text-hard-dep"
+  },
+  {
+   "blocker": "PAP-19",
+   "blocked": "PAP-225",
+   "reason": "milestone inversion 2026-09-24 > 2026-09-23",
+   "fix": "text-hard-dep"
+  },
+  {
+   "blocker": "PAP-132",
+   "blocked": "PAP-123",
+   "reason": "milestone inversion 2026-09-29 > 2026-09-26",
+   "fix": "text-hard-dep"
+  }
+ ],
+ "finishedAt": "2026-09-18T14:31:05Z",
+ "summary": {
+  "descriptions": 443,
+  "relations": 59,
+  "fields": 2,
+  "failedFirstAttempt": 52,
+  "propagation": 7
+ }
+}
