@@ -1,0 +1,430 @@
+from gen_common import trio
+
+K = 'platform-ops'
+MS = ['Ops contract, super-admin console and status page', 'Product analytics, experiments and abuse controls', 'Compliance evidence, residency and swap']
+
+PROJECT = {
+    'key': K,
+    'name': 'Platform Operations, Analytics & Compliance',
+    'lead': 'Sentinel',
+    'phase': 'P2',
+    'description': 'What PaperOS itself needs to run as a product for many tenants: a platform super-admin console, a public status page with incident comms, product analytics and session replay with privacy controls, experiments on flags, abuse and signup-fraud controls, tenant health, a control framework mapping SOC 2, GDPR and HIPAA to the evidence the platform already produces, compliance profiles per tenant, a trust center, and the multi-region and data-residency design.',
+    'content': """Goal: the eighteen projects build the product a tenant uses and the pipeline that builds it; nobody builds the product Justin operates. There is no place to list tenants, override a plan, flip a flag for one customer, drain a dead-letter queue or see who is healthy (PAP-63 is the tenant's console, PAP-43 has a jobs view, PAP-366 stores flags), no public status page or incident channel (PAP-40 and PAP-356 alert internally), no product analytics beyond acquisition (PAP-194) and traces (PAP-40), no experiments beyond flag variants, no signup-fraud controls beyond rate limits (PAP-304), and no mapping from the many security issues (PAP-34, PAP-38, PAP-219, PAP-354 to PAP-359) to the SOC 2, GDPR and HIPAA controls a clinic or a school will ask about. This project adds one module with a `platform` audience: a super-admin console at `/admin` whose every action is audited and MFA-gated; a status page with components, incidents, maintenance windows and subscribers fed by existing alerts; a `track()` product analytics SDK with a schema registry, consent, funnels, retention and feature adoption as datasets, exposed to tenants for their own customers too; session replay (rrweb) with PII masking from the schema annotations; experiments with assignment, exposure and readouts on PAP-366 variants; abuse controls (captcha port, disposable-email and velocity checks, quarantine, sending reputation guard, report-abuse); tenant health scores; a `controls.yaml` framework with automated evidence collection and an auditor export; compliance profiles (`standard`, `gdpr`, `hipaa`, `student-privacy`) that enforce settings per tenant from the PAP-126 business profile; a trust center; and the multi-region and data-residency ADR with a provisioning plan for an EU region. Non-goals in v0.2: a formal SOC 2 audit (this produces the evidence, not the report), HIPAA BAA legal text (Needs Justin), running the second region.
+
+## Contract
+
+**Provides**
+
+* `@paperos/contract-platform-ops`: `PlatformAdminPort` (`tenants`, `overrideEntitlement`, `setFlagRule`, `toggleModule`, `impersonate` handoff, `jobs`), `StatusPort` (`components`, `incidents`, `maintenance`, `subscribe`), `AnalyticsPort` (`track`, `identify`, `defineEvent`, `funnels`, `retention`), `ReplayPort` (`capture`, `list`, `mask`), `ExperimentPort` (`define`, `assign`, `expose`, `readout`), `AbusePort` (`CaptchaPort`, `checkSignup`, `quarantine`, `reportAbuse`), `HealthPort` (`scoreTenant`, `signals`), `CompliancePort` (`controls`, `evidence`, `profileFor`, `enforce`), `ResidencyPort` (`regionFor`, `route`); slots `admin.nav`, `admin.tenant.tabs`, `trust.sections`.
+* Events: `platform.tenant.overridden`, `platform.flag.changed`, `status.incident.opened|updated|resolved`, `analytics.event` (envelope for the pipeline), `experiment.exposed`, `abuse.flagged`, `abuse.quarantined`, `health.score.changed`, `compliance.evidence.collected`, `compliance.control.failed`.
+* Datasets: `product_events`, `funnels`, `retention_cohorts`, `feature_adoption`, `experiments`, `tenant_health`, `compliance_controls`, `compliance_evidence`, `status_incidents`.
+
+**Requires**
+
+* identity: `platform` audience and roles (PAP-55), impersonation (PAP-61), sessions and MFA (PAP-220), permission engine and attribute predicates (PAP-59, PAP-227), privacy tooling (PAP-221).
+* data-layer: audit (PAP-38), jobs (PAP-43), retention and PII annotations (PAP-355), backups and DR (PAP-354), observability (PAP-40), rate limits (PAP-304), event bus (PAP-303), tenant lifecycle (PAP-432), field encryption (PAP-353).
+* app-shell: flags (PAP-366), module toggles (PAP-266), error reporting (PAP-368), custom domains (PAP-431), deploy pipeline (PAP-26), business profile (PAP-126 in spec-builder).
+* business-core: entitlements and metering (PAP-178, PAP-391). growth: attribution collector and consent modes (PAP-194), consent centre (PAP-187 WP0), segments (PAP-195), outreach compliance (PAP-405). quality: security telemetry (PAP-356), gate artefacts (PAP-239), SAST and DAST results (PAP-80, PAP-357), release train (PAP-252 to PAP-254), accessibility report (PAP-160). collab: notifications (PAP-136), docs engine (PAP-128), ADRs (PAP-130). tables: datasets and dashboards (PAP-161, PAP-173). agents: budgets and prompt log (PAP-111, PAP-129). engagement: announcements with `scope: platform` (optional).
+
+**Consumed by**
+
+* every module's admin needs (flag rules, module toggles, entitlement overrides live here), quality release digest (health, compliance and status sections), growth (tenant health as churn-risk segment), business-core (usage and health on the billing page), assistant (usage and safety evidence), migration (compliance profile picked in onboarding), engagement and commerce (tenant-facing analytics for their customers' behaviour).
+
+**Owner**: Sentinel leads; Forge builds the console, status page and residency; Sentinel builds compliance, abuse and evidence; Nova builds analytics, replay and experiments; Atlas approves control mappings. Milestones: Ops contract, super-admin console and status page (2026-10-01), Product analytics, experiments and abuse controls (2026-10-09, deferred v0.2), Compliance evidence, residency and swap (2026-10-16, deferred v0.2).""",
+    'milestones': [
+        {'name': MS[0], 'targetDate': '2026-10-01', 'description': 'Contract v0.1, the platform super-admin console, the public status page, and the control framework mapping.'},
+        {'name': MS[1], 'targetDate': '2026-10-09', 'description': 'Deferred (v0.2). Product analytics SDK and datasets, session replay with masking, experiments on flags, abuse and signup-fraud controls, tenant health scores.'},
+        {'name': MS[2], 'targetDate': '2026-10-16', 'description': 'Deferred (v0.2). Compliance profiles and enforcement, automated evidence collection, trust center, data residency design, conformance suite and kernel wiring.'},
+    ],
+}
+
+ISSUES = [
+ {
+  'key': f'r4/{K}/superadmin-console', 'title': 'Build the platform super-admin console at /admin: tenant list and detail, entitlement overrides, flag rules, module toggles, jobs and dead-letter queue, usage and health, every action audited and MFA-gated',
+  'type': 'Build', 'tier': 'opus', 'size': 'M', 'priority': 2, 'surfaces': ['Staff', 'Developer'], 'milestone': MS[0], 'deferred': False,
+  'blockedBy': [f'r4/{K}/contract-publish', 'PAP-63', 'PAP-55', 'PAP-220', 'PAP-366', 'PAP-266', 'PAP-178', 'PAP-43', 'PAP-61', 'PAP-38'], 'blocks': [f'r4/{K}/tenant-health-scores', f'r4/{K}/abuse-controls'],
+  'goal': "Give Justin and platform staff the console PaperOS itself has been missing: a `/admin` surface for the `platform` audience, separate from the tenant console (PAP-63), listing every tenant with plan, usage, health and lifecycle state, with tabs to override entitlements, set per-tenant flag rules, toggle modules, inspect jobs and drain the dead-letter queue, start an audited impersonation, and see errors and sync lag, where every action requires a fresh MFA step-up and writes an audit row with a reason.",
+  'scope_in': [
+    "`apps/web/src/admin/` routes under `/admin` (specs per page) on the PAP-70 `AppFrame` with `admin.nav` slot: Tenants (grid over a `platform_tenants` dataset: name, plan, state PAP-432, seats, storage, MRR, health score, last active), Tenant detail tabs via `admin.tenant.tabs`: Overview, Entitlements (PAP-178 overrides as a JSON-with-form editor), Flags (PAP-366 rule editor scoped to the tenant), Modules (PAP-266 toggles with dependency warnings), Jobs (PAP-43 queue and DLQ filtered by tenant, retry and discard), Usage (PAP-391), Errors (PAP-368 reports), Sync (PAP-328 lag), Audit (PAP-38 for the tenant), Impersonate (PAP-61 handoff)",
+    "Platform-wide pages: Flags (all rules), Jobs (global DLQ), Releases (PAP-254 RC state), Announcements (`scope: platform` when engagement exists), Platform audit",
+    "`PlatformAdminPort` adapter: procedures under `admin.*` requiring `audience: platform`, `mfaAge < 10 min` (PAP-220 step-up), and a `reason` string on every mutation; audit rows carry `actor_kind: platform`",
+    "Security: `/admin` served only on the platform host (never tenant domains, PAP-431), CSP and headers per PAP-219, IP allow-list optional, session idle timeout 15 minutes, every page in the PAP-64 permission matrix tests",
+  ],
+  'scope_out': ['Tenant-facing settings (PAP-63 and `r4/app-shell/settings-registry`)', 'Billing operations beyond overrides (Stripe dashboard is the tool)', 'Metrics dashboards beyond links into Grafana (PAP-40)'],
+  'spec': [
+    'Overrides are typed and time-boxed by default (expiry required, max 90 days without a Needs Justin note); expiry job reverts and notifies',
+    'Flag rule edits from the console go through the same PAP-366 procedures and appear in the flag audit; a kill switch is one click with confirmation',
+    'DLQ actions: retry with the original payload, discard with reason, or open a Linear issue prefilled (PAP-97 pattern); bulk limited to 50',
+    'Impersonation entry shows the PAP-61 consent and banner rules; exit returns to the tenant detail',
+    'The console is itself a module (`platform-ops`), so a tenant without the `platform` audience never loads its routes or bundle chunk',
+  ],
+  'provides': "`/admin` routes and pages, `PlatformAdminPort` default adapter, `admin.*` procedures, `platform_tenants` dataset, slots `admin.nav` and `admin.tenant.tabs`, `platform.tenant.overridden` and `platform.flag.changed` events",
+  'consumes': "tenant console patterns (PAP-63), platform audience (PAP-55), MFA step-up and sessions (PAP-220), flags (PAP-366), module toggles (PAP-266), entitlements (PAP-178), jobs and DLQ (PAP-43), impersonation (PAP-61), audit (PAP-38), usage (PAP-391), error reports (PAP-368), sync lag (PAP-328), RC state (PAP-254)",
+  'consumed_by': f"`r4/{K}/tenant-health-scores` (renders scores), `r4/{K}/abuse-controls` (quarantine actions), `r4/{K}/compliance-profiles` (profile view), every module needing a per-tenant admin action, PAP-89 digest links",
+  'dod': ['Console live on staging behind the platform audience; override, flag rule, module toggle, DLQ retry and impersonation each produce an audit row with reason and require step-up; permission matrix tests prove non-platform principals get `DeniedState`; screenshots at 1024 and 1920'],
+  'tests': {
+    'Unit': 'override expiry logic; reason validation; bulk limits',
+    'Integration': 'step-up enforcement (stale MFA rejected); tenant-host request to `/admin` returns 404; DLQ retry replays the original payload once',
+    'E2E': 'tenant search, open detail, set an expiring override, flip a flag, retry a DLQ job, start and exit impersonation; keyboard navigation',
+  },
+  'demo': "Search the demo tenant in `/admin`, grant a 7-day `assistant` entitlement override with a reason after an MFA prompt, flip its `module.tables.impl` flag to `next`, retry a dead-lettered job and show all three in the platform audit.",
+  'edge': ['Two platform admins edit the same override: last write wins with the audit showing both; the UI warns on stale data (PAP-144 banner)', 'Platform admin who is also a tenant member: the audiences are separate sessions contexts; `/admin` never inherits tenant scope and impersonation is explicit'],
+  'deps': f"`r4/{K}/contract-publish` (hard), PAP-63, PAP-55, PAP-220 (hard), PAP-366, PAP-266, PAP-178, PAP-43, PAP-61, PAP-38 (hard), PAP-391, PAP-368, PAP-328, PAP-254 (soft).",
+  'builder': 'Forge', 'reviewer': 'Sentinel (Security Auditor)',
+ },
+ {
+  'key': f'r4/{K}/status-page', 'title': 'Build the public status page and incident comms: components, incidents with updates, scheduled maintenance, subscribers by email, SMS and RSS, fed by observability alerts and security S0 events, with per-tenant embedding',
+  'type': 'Build', 'tier': 'sonnet', 'effort': 'medium', 'size': 'M', 'priority': 3, 'surfaces': ['Customer', 'Staff'], 'milestone': MS[0], 'deferred': False,
+  'blockedBy': [f'r4/{K}/contract-publish', 'PAP-40', 'PAP-356', 'PAP-370', 'PAP-136', 'PAP-26'], 'blocks': [f'r4/{K}/trust-center'],
+  'goal': "Tell customers the truth when something breaks: a public status page at `status.<PAPEROS_DOMAIN>` (and embeddable per tenant) listing components (web, API, sync, jobs, payments, email, desktop updates), incidents with timeline updates and templates, scheduled maintenance windows, subscriber notifications by email, SMS (when the channel exists) and RSS, and automatic incident drafts from PAP-40 alert rules and PAP-356 S0 events so the page is never silent while Grafana is red.",
+  'scope_in': [
+    "`packages/platform-ops/src/status/`: tables `status_component`, `status_incident` (severity, affected components, status investigating|identified|monitoring|resolved, updates[], postmortem link), `status_maintenance`, `status_subscriber` (email or phone, verified, components); `StatusPort` adapter; public routes `/status`, `/status/incidents/:id`, `/status/history`, `/status/rss` server-rendered static HTML with a 60 s cache, hosted from a separate static path so it stays up when the app is down (PAP-26 deploys it to Pages as well as the VPS)",
+    "Feeds: Grafana alert webhook (PAP-40) and PAP-356 S0 events create a draft incident in `/admin/status` with the affected component pre-selected; a human publishes; auto-resolve suggestion when the alert clears; uptime per component computed from alert history and health checks (PAP-269 `/api/health`)",
+    "Comms: templates per incident stage with plain-language guidance (Quill reviews), subscriber notifications through PAP-370 and the notification kinds registry (`status.incident.*`) with double opt-in; tenant embed `<StatusBadge/>` and a `/portal` banner hook when a component the tenant uses is degraded",
+  ],
+  'scope_out': ['Third-party status aggregation', 'Postmortem authoring (docs engine PAP-128 holds them; the page links)'],
+  'spec': [
+    'The status page has no dependency on the API at read time: it is regenerated as static files on every change and on a 5-minute schedule; a stale marker appears if regeneration fails',
+    'Incident updates are append-only; corrections are new updates; resolved incidents stay in history for 90 days on the page and forever in the dataset',
+    'Subscriber PII lives under PAP-355 rules; unsubscribe is one click; SMS requires the messaging channel module and consent',
+    'Severity maps to PAP-79 taxonomy; S0 incidents also open the pinned Linear issue path (PAP-356) automatically',
+  ],
+  'provides': "`StatusPort` default adapter, tables and dataset, public static status pages and RSS, admin incident editor, notification kinds `status.*`, `<StatusBadge/>`, `status.incident.*` events",
+  'consumes': "alerting (PAP-40), security S0 events (PAP-356), email (PAP-370), notifications (PAP-136), deploy pipeline and Pages (PAP-26), health endpoint (PAP-269), severity taxonomy (PAP-79), docs engine for postmortems (PAP-128)",
+  'consumed_by': f"`r4/{K}/trust-center` (uptime), PAP-89 release digest (incident section), tenants (embed and banner), quality release train (maintenance windows for RC deploys)",
+  'dod': ['Status page live on staging and Pages; a simulated PAP-40 alert drafts an incident, a human publishes two updates, subscribers receive them, RSS validates, badge renders in the portal; page loads with the API stopped'],
+  'tests': {
+    'Unit': 'uptime computation; static regeneration; template rendering',
+    'Integration': 'alert webhook → draft; S0 → draft plus pinned issue; double opt-in; unsubscribe',
+    'E2E': 'public page at 375 and 1920; admin editor flow; screenshots',
+  },
+  'demo': "Fire a test alert for the sync component, publish the drafted incident with an update, receive the subscriber email in Mailpit, then stop the API container and reload the status page to show it still serves.",
+  'edge': ['Incident spans a maintenance window: the page shows both with the maintenance context; uptime excludes announced maintenance per the SLA definition (documented)', 'Alert flapping: drafts are deduplicated per component per hour; the editor shows the flap count'],
+  'deps': f"`r4/{K}/contract-publish` (hard), PAP-40, PAP-356 (hard: feeds), PAP-370, PAP-136 (hard), PAP-26, PAP-269 (soft).",
+  'builder': 'Forge', 'reviewer': 'Sentinel (Code Reviewer)', 'tenant_data': False,
+ },
+ {
+  'key': f'r4/{K}/compliance-controls', 'title': 'Specify the control framework: controls.yaml mapping SOC 2 trust criteria, GDPR articles and HIPAA safeguards to the issues, artefacts and evidence the platform already produces, with the gap list',
+  'type': 'Spec', 'tier': 'opus', 'size': 'M', 'priority': 2, 'surfaces': ['Developer', 'Staff'], 'milestone': MS[0], 'deferred': False,
+  'blockedBy': ['PAP-219', 'PAP-359', 'PAP-355', 'PAP-354', 'PAP-356', 'PAP-38', 'PAP-221', 'PAP-160'], 'blocks': [f'r4/{K}/compliance-profiles', f'r4/{K}/evidence-automation', f'r4/{K}/trust-center'],
+  'goal': "Answer the security questionnaire before it arrives: one `controls.yaml` that names each control PaperOS claims (access control, change management, encryption, logging and monitoring, backup and recovery, vendor management, incident response, data subject rights, PHI safeguards), maps it to SOC 2 trust services criteria, GDPR articles and HIPAA safeguards, points at the issue that implements it and the artefact that evidences it (gate files, audit tables, backup reports, DAST results), and lists the gaps honestly as issues on the owning projects.",
+  'scope_in': [
+    "`docs/compliance/controls.yaml` with a Zod schema (`packages/platform-ops/src/compliance/schema.ts`): `Control` (`id`, `title`, `statement`, `frameworks: { soc2: ['CC6.1'], gdpr: ['Art. 32'], hipaa: ['164.312(a)(1)'] }`, `owner agent`, `implementedBy: PAP ids`, `evidence: [{ kind: artefact|table|report|policy, source, frequency }]`, `status implemented|partial|gap|not-applicable`, `testProcedure`)",
+    "Coverage: at minimum the SOC 2 common criteria CC1 to CC9 and A1, GDPR Articles 5, 15 to 22, 25, 28, 30, 32 to 35, HIPAA administrative, physical and technical safeguards relevant to a SaaS with no physical PHI; each mapped to existing work (PAP-34 RLS, PAP-38 audit, PAP-219 baseline, PAP-220 MFA, PAP-221 DSAR, PAP-300 broker, PAP-353 encryption, PAP-354 DR, PAP-355 retention, PAP-356 telemetry, PAP-357 DAST, PAP-358 supply chain, PAP-359 PCI, PAP-80 SAST, PAP-88 release train, PAP-160 a11y) or marked `gap`",
+    "`docs/compliance/gap-list.md` with one proposed issue per gap (vendor and subprocessor register, access review procedure, incident response runbook, security awareness for agent characters, BAA process, risk assessment cadence) filed as `crossProjectSuggestions` or issues in this project",
+    "`pnpm compliance:lint` validating the file, checking every `implementedBy` id exists in the Linear snapshot and every `evidence.source` path pattern resolves in the repo or artefact catalogue (PAP-239)",
+  ],
+  'scope_out': ['Running an audit', 'Writing policies (templates in the trust center issue)', 'Evidence collection automation (own issue)'],
+  'spec': [
+    'Control statements are written in plain language a customer\'s security reviewer can read, and each has a test procedure an agent can execute (query, artefact check, screenshot)',
+    'Framework mappings cite the exact criterion identifiers; a control may map to several; `not-applicable` requires a rationale',
+    'The file is the single source for the trust center, the evidence collector and the compliance profiles; nothing else hard-codes a control',
+    'Every `gap` has an owner project and a target version; the lint fails on a gap without one',
+  ],
+  'provides': "`controls.yaml`, its schema, `compliance:lint`, the gap list and proposed issues, `compliance_controls` dataset registration",
+  'consumes': "threat model and baseline (PAP-219), PCI posture (PAP-359), retention and PII (PAP-355), DR (PAP-354), security telemetry (PAP-356), audit (PAP-38), privacy tooling (PAP-221), accessibility report (PAP-160), gate artefacts (PAP-239), Linear snapshot (PAP-306 tooling)",
+  'consumed_by': f"`r4/{K}/compliance-profiles`, `r4/{K}/evidence-automation`, `r4/{K}/trust-center`, PAP-89 (compliance section), sales conversations",
+  'dod': ['`controls.yaml` merged with ≥ 60 controls, lint green, every SOC 2 common criterion touched, gap list filed; Atlas approves the mapping and Justin sees a one-page summary in Needs Justin (informational, not blocking)'],
+  'tests': {
+    'Static': 'schema validation; id existence against the snapshot; source pattern resolution',
+    'Review': 'Sentinel (Security Auditor) and Atlas walk every `implemented` control against the cited issue\'s Definition of done; any overclaim becomes `partial`',
+  },
+  'demo': "Open the controls file filtered to HIPAA technical safeguards; show `164.312(b)` audit controls mapped to PAP-38 with its evidence query, then the gap entry for the BAA process with its owner.",
+  'edge': ['An implementing issue is deferred to v0.2: the control becomes `partial` automatically when the lint reads the `Deferred` label from the snapshot'],
+  'deps': 'PAP-219, PAP-359, PAP-355, PAP-354, PAP-356, PAP-38 (hard: the things being mapped), PAP-221, PAP-160 (soft), PAP-239, PAP-306 (soft).',
+  'builder': 'Sentinel', 'reviewer': 'Atlas (Merger)', 'tenant_data': False, 'module_edge': False,
+ },
+ {
+  'key': f'r4/{K}/product-analytics', 'title': 'Build product analytics: track() SDK with an event schema registry, consent-aware first-party pipeline reusing the attribution collector, funnels, retention and feature adoption datasets, tenant-facing analytics for their own customers',
+  'type': 'Build', 'tier': 'sonnet', 'effort': 'high', 'size': 'M', 'priority': 4, 'surfaces': ['Staff', 'Developer', 'Customer'], 'milestone': MS[1], 'deferred': True,
+  'blockedBy': ['PAP-194', 'PAP-303', 'PAP-355', 'PAP-173', 'PAP-291', 'PAP-187'], 'blocks': [f'r4/{K}/session-replay', f'r4/{K}/experiments', f'r4/{K}/tenant-health-scores'],
+  'goal': "Know what people do in the product without a third-party tracker: a `track(event, props)` SDK for web and Tauri with a schema registry so events are typed and reviewed, a consent-aware first-party pipeline that extends the PAP-194 collector, monthly-partitioned `product_events`, and funnels, retention cohorts and feature adoption as datasets and dashboard blocks, at two levels: PaperOS about its tenants, and each tenant about its own customers in the portal.",
+  'scope_in': [
+    "`packages/analytics`: `defineEvent(name, schema)` registry (`events.yaml` generated, reviewed in PR like topics), `track`, `identify` (principal hash, never email), `page` (route spec key), `group` (tenant); client batching under 4 KB gzipped extra over PAP-194's SDK; server-side `track` for API and jobs; automatic events from the command registry telemetry (PAP-291) and page specs (`page.viewed`, `state.shown`)",
+    "Pipeline: `POST /api/v1/public/collect` extended (PAP-194) → outbox → `product_events(tenant_id, actor_hash, event, props jsonb, ts, session_id, source)` partitioned monthly; consent modes from PAP-194 and PAP-187 (GPC, DNT, tenant consent mode) enforced at the edge; `pii` lint on props schemas (PAP-355)",
+    "Datasets and blocks: `funnels` (defined in `funnels.yaml` or in-app: ordered steps with windows), `retention_cohorts` (weekly), `feature_adoption` (per command and page), `active_users`; PAP-173 blocks; tenant scope selectable: platform (all tenants, platform audience) or tenant (their customers)",
+    "Tenant-facing: `/console/analytics` showing their customers' portal behaviour (bookings funnel, order funnel) built from the same events with the tenant as `group`; portal consent banner integration",
+  ],
+  'scope_out': ['Session replay (next issue)', 'Ad-platform conversion APIs', 'Data warehouse export (PAP-205 archive gains events in v0.3)'],
+  'spec': [
+    'No event ships without a schema entry; unknown events are dropped at the edge and counted; props are validated and PII-linted in CI',
+    'Actor identity is a per-tenant salted hash of the principal id; anonymous visitors use the PAP-194 first-party cookie; identify stitches with `attr_identity`',
+    'Retention: raw events 13 months, rollups indefinitely (PAP-355 rules); tenants can shorten',
+    'Query performance: funnels and retention computed by SQL over partitions with daily rollups; p95 under 2 s for 90 days on the demo volume (PAP-242 budget)',
+    'Consent off means nothing is stored, not stored-and-hidden; the SDK returns immediately',
+  ],
+  'provides': "`AnalyticsPort` default adapter, `packages/analytics` SDK and registry, `product_events` and rollup datasets, funnel and retention blocks, `/console/analytics`, `analytics.event` envelope",
+  'consumes': "attribution collector and consent (PAP-194), consent centre (PAP-187), event bus (PAP-303), PII annotations and retention (PAP-355), dashboards (PAP-173), command telemetry (PAP-291), page specs (PAP-114), performance budgets (PAP-242)",
+  'consumed_by': f"`r4/{K}/session-replay`, `r4/{K}/experiments`, `r4/{K}/tenant-health-scores`, growth segments (behavioural attributes, PAP-195), engagement announcements (v0.3 behavioural targeting), assistant (usage questions)",
+  'dod': ['20 platform events and 10 portal events defined and flowing on staging; onboarding funnel and weekly retention render for the platform audience; a demo tenant sees its booking funnel; consent off proven to store nothing; PII lint catches a fixture'],
+  'tests': {
+    'Unit': 'schema validation and drop; hashing; consent gating; funnel SQL over fixtures',
+    'Integration': 'SDK batch → collector → partition; rollup job; tenant scoping in datasets (RLS)',
+    'E2E': 'portal consent banner off → no events; on → events; console analytics renders',
+  },
+  'demo': "Walk a new user through onboarding on staging, then open the platform onboarding funnel and see the drop-off step; switch to the demo tenant and show their booking funnel from the portal.",
+  'edge': ['Clock-skewed client timestamps: server time wins for partitioning; client time kept in props for ordering within a session', 'Event schema changed incompatibly: new version name (`event.v2`) required; the lint blocks in-place changes'],
+  'deps': "PAP-194 (hard: collector and consent), PAP-303, PAP-355 (hard), PAP-173, PAP-291 (soft), PAP-187 (soft).",
+  'builder': 'Nova', 'reviewer': 'Sentinel (Security Auditor)',
+ },
+ {
+  'key': f'r4/{K}/session-replay', 'title': 'Build session replay: rrweb capture with PII masking driven by schema annotations, consent and sampling, storage budget, replay viewer linked to errors and support conversations, decision ADR',
+  'type': 'Build', 'tier': 'opus', 'size': 'M', 'priority': 4, 'surfaces': ['Staff', 'Developer'], 'milestone': MS[1], 'deferred': True,
+  'blockedBy': [f'r4/{K}/product-analytics', 'PAP-355', 'PAP-368', 'PAP-37', 'PAP-296', 'PAP-412'], 'blocks': [],
+  'goal': "See what the user saw when something went wrong, without seeing what they typed: rrweb capture in web and Tauri with masking of every input and of elements bound to `pii`-annotated fields (PAP-355), consent and sampling (100 percent on error, 5 percent otherwise, tenant-configurable), a storage budget on MinIO (PAP-37), a replay viewer in `/admin` and the tenant console linked from error reports (PAP-368) and support conversations (PAP-412), recorded as an ADR against the PAP-296 self-hosting budget.",
+  'scope_in': [
+    "`packages/analytics/src/replay/`: rrweb 2.x recorder with `maskAllInputs`, `maskTextSelector` generated from the PAP-355 `pii` annotations (components bound to a `pii` field render `data-pii`), block list for payment and signature routes (PAP-359, e-sign), canvas and media excluded; chunked upload to MinIO under `replays/<tenant>/<session>/` with a 30-day lifecycle",
+    "Sampling and consent: capture starts only with analytics consent; always-on buffer of 60 s flushed on `reportError` (PAP-368) so errors have context; otherwise 5 percent of sessions; tenant setting to disable entirely; platform staff sessions never captured on `/admin`",
+    "Viewer: `<ReplayPlayer/>` (rrweb-player) with the console log, network summary (no bodies) and the error timeline; links from PAP-368 error reports, PAP-412 conversations (when the customer consented) and PAP-40 traces via `session_id`",
+    "ADR `docs/adr/NNNN-session-replay.md`: rrweb self-hosted versus PostHog or OpenReplay against the PAP-296 6 GB budget and privacy posture; storage estimate per 1,000 sessions",
+  ],
+  'scope_out': ['Heatmaps', 'Replay of portal customers for tenants beyond consented support cases'],
+  'spec': [
+    'Masking is fail-closed: an element without a resolvable binding inside a form is masked; the PAP-85 edge-case hunter fuzzes the DOM for leaks',
+    'Replays are keyed to the actor hash, not the principal; support access to a customer replay requires the customer\'s consent flag on the conversation and is audited',
+    'Storage budget per tenant from PAP-178 (`replayGb`); exceeding drops sampling to error-only',
+    'Recorder overhead under 5 percent CPU and 2 MB memory on a mid-range phone (measured in PAP-87 runs)',
+  ],
+  'provides': "`ReplayPort` default adapter, recorder integration, masking rules generator, `<ReplayPlayer/>`, links from errors and conversations, the ADR",
+  'consumes': "analytics consent and pipeline, PII annotations (PAP-355), error reporting (PAP-368), object storage (PAP-37), resource budget (PAP-296), support inbox (PAP-412), traces (PAP-40), entitlements (PAP-178)",
+  'consumed_by': "quality (visual gate cross-reference), growth support, assistant (\"what happened?\" summaries of a replay in v0.3)",
+  'dod': ['Replay of a seeded error on staging shows the last 60 s masked correctly; DOM fuzz finds zero unmasked `pii` text across 200 pages; storage lifecycle and budget proven; ADR merged'],
+  'tests': {
+    'Unit': 'masking selector generation; sampling decisions; budget downgrade',
+    'Integration': 'error → buffer flush → viewer link; consent revoked → capture stops and pending chunks dropped',
+    'Adversarial': 'PAP-85 fixtures render PII in unusual elements (tooltips, aria-labels, title attributes) and must be masked',
+  },
+  'demo': "Trigger a seeded error in the demo tenant's invoice page, open the error report in `/admin`, play the replay and show masked amounts and names with the console log beside it.",
+  'edge': ['Tauri window with a detached panel (PAP-262): each window records its own session linked by the window bus id', 'Replay chunk upload fails offline: chunks are dropped, never stored locally beyond memory'],
+  'deps': f"`r4/{K}/product-analytics` (hard), PAP-355, PAP-368, PAP-37 (hard), PAP-296 (hard: budget), PAP-412, PAP-40, PAP-178 (soft).",
+  'builder': 'Nova', 'reviewer': 'Sentinel (Security Auditor)',
+ },
+ {
+  'key': f'r4/{K}/experiments', 'title': 'Build experiments on feature flags: experiment definitions over PAP-366 variants, deterministic assignment, exposure events, metrics from product analytics, sequential readouts with guardrails and a results page',
+  'type': 'Build', 'tier': 'sonnet', 'effort': 'high', 'size': 'M', 'priority': 4, 'surfaces': ['Staff', 'Developer'], 'milestone': MS[1], 'deferred': True,
+  'blockedBy': [f'r4/{K}/product-analytics', 'PAP-366', 'PAP-435', 'PAP-173'], 'blocks': [],
+  'goal': "Turn flag variants into learning: an `experiment` wraps a PAP-366 variant flag with a hypothesis, audience, allocation, primary and guardrail metrics from product analytics, deterministic assignment by actor hash, `experiment.exposed` events, a sequential-test readout (always-valid inference so peeking is safe) and a results page, for PaperOS about its tenants and for tenants about their portal customers.",
+  'scope_in': [
+    "`experiment` (flag key, hypothesis, variants with weights, audience `FilterTree` over segments, start, end, primary metric, guardrails, minimum sample), `experiment_assignment` (actor hash, variant, first exposure); `ExperimentPort.assign` integrates with the PAP-366 evaluator as a rule source so `useVariant` returns the assigned variant and logs exposure once per actor per experiment",
+    "Readout job: metrics computed from `product_events` (conversion, count, sum) per variant; mSPRT sequential test with a configurable alpha; guardrail metrics with stop rules; results page `/admin/experiments/:id` and tenant `/console/experiments` with charts (PAP-173 blocks), decision log (ship, stop, extend) written as an ADR-lite record",
+    "Module swap integration: `module.<id>.impl` shadow and canary runs (PAP-435) can be declared as experiments so a swap gets a statistical readout of error rate and latency",
+  ],
+  'scope_out': ['Bayesian or CUPED variance reduction (v0.3)', 'Multi-armed bandits'],
+  'spec': [
+    'Assignment is a pure function of `(experimentId, actorHash, salt)`; changing weights mid-experiment creates a new experiment version and is discouraged by the UI',
+    'Exposure is logged only when the variant actually affects rendering (`useVariant` call site), not at assignment, so dilution is measured correctly',
+    'Guardrail breach (error rate, latency from PAP-40, refund rate) auto-stops and reverts to control through the flag kill switch with a notification',
+    'Sample ratio mismatch check runs daily and flags broken assignment',
+  ],
+  'provides': "`ExperimentPort` default adapter, tables, assignment rule source for flags, readout job, results pages, `experiment.exposed` event, decision records",
+  'consumes': "product analytics events and datasets, flags and evaluator (PAP-366), swap mechanism (PAP-435), dashboards (PAP-173), latency metrics (PAP-40), notifications (PAP-136)",
+  'consumed_by': "module-system swap playbook (PAP-442 canary readouts), growth (landing page and pricing tests for tenants), engagement (announcement copy tests in v0.3)",
+  'dod': ['A demo experiment on the onboarding template step runs on staging with synthetic traffic, reaches a readout, and a guardrail breach fixture auto-stops it; a module swap declared as an experiment produces an error-rate readout'],
+  'tests': {
+    'Unit': 'assignment determinism and weights; mSPRT math against reference values; SRM check',
+    'Integration': 'exposure once per actor; guardrail stop flips the kill switch; results page numbers equal SQL over fixtures',
+  },
+  'demo': "Create an experiment on the portal booking button copy for the demo tenant, generate synthetic exposures and conversions, open the readout and show the sequential confidence band, then trigger a guardrail and watch it stop.",
+  'edge': ['Actor consents to analytics after being assigned: assignment stands (flag consistency) but exposure and metrics start from consent time; the readout notes the censoring'],
+  'deps': f"`r4/{K}/product-analytics` (hard), PAP-366 (hard), PAP-435, PAP-173, PAP-40 (soft).",
+  'builder': 'Nova', 'reviewer': 'Sentinel (Edge Case Hunter)',
+ },
+ {
+  'key': f'r4/{K}/abuse-controls', 'title': 'Build abuse and signup-fraud controls: CaptchaPort, disposable-email and velocity checks, verification gates, tenant quarantine, outbound sending reputation guard, report-abuse endpoint and review queue',
+  'type': 'Build', 'tier': 'opus', 'size': 'M', 'priority': 4, 'surfaces': ['Staff', 'Customer', 'Developer'], 'milestone': MS[1], 'deferred': True,
+  'blockedBy': [f'r4/{K}/superadmin-console', 'PAP-304', 'PAP-405', 'PAP-356', 'PAP-57', 'PAP-432'], 'blocks': [],
+  'goal': "Keep free signups and public forms from turning PaperOS into a spam relay or a fraud tool: a `CaptchaPort` (Turnstile adapter) on signup, public forms and booking pages, disposable-email and velocity checks at signup, email verification before any outbound sending, a tenant risk score that quarantines suspicious tenants (no outbound email, SMS, webhooks or Connect payouts until reviewed), an outbound reputation guard that pauses sending on bounce and complaint spikes (extending PAP-405 warmup), a `report-abuse` endpoint on every public page and email footer, and a review queue in `/admin`.",
+  'scope_in': [
+    "`packages/platform-ops/src/abuse/`: `CaptchaPort` (`turnstile`, `noop`), `checkSignup({ email, ip, userAgent, fingerprintHash })` scoring disposable domains (maintained list plus MX heuristics), velocity per IP and ASN (PAP-304 counters), known-bad lists; `tenant_risk` (score, factors, state normal|watch|quarantined|banned, reviewer notes)",
+    "Gates: signup (PAP-57 hooks) requires captcha above a risk threshold and email verification always before outbound capabilities; quarantined tenants get `FORBIDDEN_QUARANTINED` on `sendEmail` (PAP-370), outreach (PAP-404), webhooks (PAP-222), payouts (PAP-181) with a banner explaining review; public forms and booking pages call the captcha port when the tenant or the platform enables it",
+    "Reputation guard: per-tenant bounce and complaint rates from PAP-370 suppression events and PAP-405 metrics; thresholds pause sending and notify; recovery requires a review or a cool-down",
+    "`POST /api/v1/public/report-abuse` with a token identifying the message or page; review queue `/admin/abuse` with evidence, actions (quarantine, ban, clear), audit; security events `abuse.flagged|quarantined` (PAP-356)",
+  ],
+  'scope_out': ['Payment fraud (Stripe Radar and PAP-408 rules)', 'Content moderation of tenant data beyond reports'],
+  'spec': [
+    'Risk scoring is explainable: every score lists its factors; no opaque third-party score in v0.2',
+    'Quarantine never deletes or hides tenant data and never blocks the tenant\'s own users from logging in; it blocks outbound side effects only',
+    'False-positive path: quarantined tenants can request review in-app; SLA 1 business day with a Needs Justin escalation on day 2',
+    'Captcha is invisible-first (Turnstile managed mode); accessibility fallback documented; never on authenticated staff flows',
+    'All lists (disposable domains, bad ASNs) are versioned files reviewed by Scout monthly (PAP-218 routine)',
+  ],
+  'provides': "`AbusePort` and `CaptchaPort` default adapters, `tenant_risk`, signup and outbound gates, reputation guard, report-abuse endpoint, `/admin/abuse` queue, `abuse.*` events",
+  'consumes': "super-admin console, rate limits (PAP-304), outreach compliance and warmup (PAP-405), security telemetry (PAP-356), auth hooks (PAP-57), tenant lifecycle states (PAP-432), email suppression (PAP-370), webhooks (PAP-222), payouts (PAP-181)",
+  'consumed_by': "workflows forms publishing (`CaptchaPort`), engagement booking pages and feedback board, growth outreach (reputation guard), business-core payouts (quarantine gate), identity signup (PAP-57)",
+  'dod': ['Signup with a disposable email from a high-velocity IP is challenged and then quarantined on staging; quarantined tenant cannot send email or trigger webhooks and sees the banner; a bounce spike pauses sending; a report lands in the queue and is cleared with audit'],
+  'tests': {
+    'Unit': 'risk factors and score; thresholds; list parsing',
+    'Integration': 'gates on `sendEmail`, outreach, webhooks, payouts; reputation pause and recovery; report token validation',
+    'E2E': 'signup challenge flow with Turnstile test keys; review queue actions',
+  },
+  'demo': "Sign up five tenants from one IP with throwaway addresses; watch the fourth get a captcha and the fifth land in quarantine; try to send a campaign from it and see the block; clear it from the queue.",
+  'edge': ['Legitimate agency creating many client tenants: an allow-listed platform partner flag bypasses velocity but not verification', 'Shared corporate NAT IP: velocity uses IP plus fingerprint plus email domain, and the threshold for known corporate ASNs is higher'],
+  'deps': f"`r4/{K}/superadmin-console` (hard), PAP-304, PAP-405, PAP-356 (hard), PAP-57, PAP-432, PAP-370 (hard), PAP-222, PAP-181 (soft).",
+  'builder': 'Sentinel', 'reviewer': 'Forge',
+ },
+ {
+  'key': f'r4/{K}/tenant-health-scores', 'title': 'Build tenant health scores and ops dashboards: activation, usage, errors, sync lag, storage, billing state and NPS per tenant, alerts to platform staff, churn-risk segment feeding growth',
+  'type': 'Build', 'tier': 'sonnet', 'effort': 'medium', 'size': 'S', 'priority': 4, 'surfaces': ['Staff'], 'milestone': MS[1], 'deferred': True,
+  'blockedBy': [f'r4/{K}/superadmin-console', f'r4/{K}/product-analytics', 'PAP-391', 'PAP-368', 'PAP-328', 'PAP-195'], 'blocks': [],
+  'goal': "See which tenants are thriving and which are about to leave: a nightly health score per tenant from activation milestones, active users, feature adoption, error rate, sync lag, storage growth, billing state and NPS when present, explained by factor, shown in `/admin` and as dashboard blocks, with alerts to platform staff on drops and a `churn-risk` segment (PAP-195) so growth sequences can act.",
+  'scope_in': [
+    "`tenant_health` (date, score 0 to 100, factors jsonb, trend) computed by a PAP-43 nightly job from: onboarding steps (PAP-367), `active_users` and `feature_adoption` (analytics), error rate (PAP-368), sync lag (PAP-328), storage and seats (PAP-391, PAP-432 counters), billing state (PAP-177), NPS (engagement, soft); weights in `health.yaml` with an ADR",
+    "`/admin` tenant grid column and detail tab with factor breakdown and 90-day trend; platform dashboard blocks (distribution, movers); alerts kind `health.dropped` when a tenant falls 15 points in a week",
+    "Segment source: `segments` rule attribute `tenant.healthScore` for the platform CRM (PAP-195); `health.score.changed` event",
+  ],
+  'scope_out': ['Predictive churn models (v0.3)', 'Tenant-facing health (tenants see their own analytics, not the platform\'s score)'],
+  'spec': [
+    'Scores are explainable and reproducible: the job stores inputs alongside the score; a weight change recomputes history with a version marker',
+    'Missing signals (module disabled) are excluded and weights renormalised, never treated as zero',
+    'Only the platform audience reads `tenant_health`; RLS denies tenants',
+  ],
+  'provides': "`HealthPort` default adapter, `tenant_health` dataset, `health.yaml`, admin column and tab, blocks, alert kind, segment attribute, `health.score.changed` event",
+  'consumes': "super-admin console, analytics datasets, usage (PAP-391), errors (PAP-368), sync lag (PAP-328), onboarding progress (PAP-367), billing state (PAP-177), segments (PAP-195), NPS (soft)",
+  'consumed_by': "growth (churn-risk sequences), PAP-89 digest (health section), business-core (billing page context for support)",
+  'dod': ['Scores for all staging tenants nightly with factor breakdowns; a fixture drop triggers the alert and the segment membership; trend renders'],
+  'tests': {
+    'Unit': 'weighting and renormalisation; trend and drop detection',
+    'Integration': 'nightly job idempotency; RLS denial for tenant principals; segment attribute evaluation',
+  },
+  'demo': "Open `/admin`, sort tenants by health, open the lowest, read the factor breakdown (no logins in 14 days, sync lag), and show it appearing in the churn-risk segment.",
+  'edge': ['Brand-new tenant (under 7 days): score shown as "activating" with milestone progress instead of a number'],
+  'deps': f"`r4/{K}/superadmin-console` and `r4/{K}/product-analytics` (hard), PAP-391, PAP-368, PAP-328 (soft: factors degrade), PAP-195 (soft).",
+  'builder': 'Forge', 'reviewer': 'Sentinel (Code Reviewer)',
+ },
+ {
+  'key': f'r4/{K}/compliance-profiles', 'title': 'Build compliance profiles per tenant: standard, gdpr, hipaa and student-privacy profiles from the business profile enforcing MFA, session timeouts, PHI access logging, encryption of phi columns, export restrictions and BAA acknowledgement',
+  'type': 'Build', 'tier': 'opus', 'size': 'M', 'priority': 4, 'surfaces': ['Staff', 'Developer'], 'milestone': MS[2], 'deferred': True,
+  'blockedBy': [f'r4/{K}/compliance-controls', 'PAP-126', 'PAP-220', 'PAP-353', 'PAP-38', 'PAP-355', 'PAP-59'], 'blocks': [],
+  'goal': "Make a clinic tenant safer than a bakery tenant by declaration: compliance profiles selected from the PAP-126 business profile (`standard`, `gdpr`, `hipaa`, `student-privacy`) that enforce settings the tenant cannot weaken: MFA required for staff, shorter session and idle timeouts, access logging of every read on `phi`-annotated data, encryption at rest for `phi` and `sensitive` columns through PAP-353, restricted exports and sharing, minimum retention, and a BAA or DPA acknowledgement step before the profile activates.",
+  'scope_in': [
+    "`CompliancePort.profileFor(tenant)` and `enforce()`: profiles in `profiles.yaml` (settings, controls required from `controls.yaml`, column classes affected); tenant setting from `app.spec.yaml business.compliance` (PAP-126) and the onboarding wizard (PAP-367) with a confirmation and the acknowledgement document (e-sign when present, else a recorded checkbox with version)",
+    "Enforcement points: Better Auth hooks (PAP-220: MFA required, session max 8 h and idle 15 min for `hipaa`), permission engine attribute (PAP-59: `profile.hipaa` blocks public views and embeds PAP-172 for `phi` datasets), `phi` and `sensitive` column classes in the PAP-355 annotation set mapped to `encrypted()` (PAP-353) by a migration generator, read-access logging via a PAP-38 extension (`audit_read` for `phi` tables, 6-year retention), export (PAP-205, PAP-421) requires a platform-verified destination, assistant grounding excludes `phi` unless the profile allows with logging",
+    "Console `/console/settings/compliance`: current profile, enforced settings (read-only), acknowledgement history, control status from `controls.yaml`, request profile change (Needs Justin approval for downgrades)",
+  ],
+  'scope_out': ['Legal texts (Needs Justin)', 'Physical safeguards', 'Certification'],
+  'spec': [
+    'A profile can only be strengthened by the tenant; weakening requires platform approval and is audited with the acknowledgement revoked',
+    'Enforcement is server-side in every case; the UI mirrors it; conformance cases prove each setting cannot be bypassed via API',
+    '`phi` read logging captures actor, purpose (from route spec `purpose`), rows touched (ids only) and is queryable for the "accounting of disclosures"',
+    'Profiles are versioned; a new version applies after notification with a 30-day window unless it only strengthens',
+    'The student-privacy profile hides guardian and student PII from other guardians via generated attribute policies and forbids third-party analytics scripts (none exist, asserted)',
+  ],
+  'provides': "`CompliancePort.profileFor|enforce`, `profiles.yaml`, enforcement hooks, `phi` column class and read logging, compliance settings page, acknowledgement records",
+  'consumes': "controls framework, business profile (PAP-126), auth hooks and sessions (PAP-220), field encryption (PAP-353), audit (PAP-38), PII classes and retention (PAP-355), permission engine (PAP-59), sharing (PAP-172), exports (PAP-205, PAP-421), onboarding (PAP-367), e-sign (soft)",
+  'consumed_by': "packs (clinic, school defaults), assistant (grounding exclusions), engagement and commerce (profile-aware behaviour), trust center (profile list), PAP-221 DSAR (profile-driven SLAs)",
+  'dod': ['Clinic demo tenant on `hipaa`: staff without MFA is forced to enrol, idle session expires at 15 minutes, a `phi` read appears in `audit_read`, the `patients` dataset cannot be shared publicly, export requires verification; API bypass attempts fail in conformance tests'],
+  'tests': {
+    'Unit': 'profile resolution and versioning; strengthen-only rule; policy generation',
+    'Integration': 'each enforcement point via API without UI; read logging volume and retention; encryption migration generator on a fixture schema',
+    'E2E': 'onboarding selects clinic → profile prompt → acknowledgement → settings page reflects it',
+  },
+  'demo': "Switch the demo clinic to `hipaa`, sign the acknowledgement, log in as staff without MFA and get enrolled, open a patient record and show the read log entry, then try to publish a public view of patients and get the block.",
+  'edge': ['Tenant applies the clinic pack on `standard`: the pack recommends `hipaa` and the wizard explains the consequences; nothing is forced', 'Profile strengthened while a public view exists: the view is disabled with a notification listing what changed'],
+  'deps': f"`r4/{K}/compliance-controls` (hard), PAP-126, PAP-220, PAP-353, PAP-38, PAP-355, PAP-59 (hard), PAP-172, PAP-205, PAP-421, PAP-367 (soft).",
+  'builder': 'Sentinel', 'reviewer': 'Forge',
+ },
+ {
+  'key': f'r4/{K}/evidence-automation', 'title': 'Build automated compliance evidence collection: nightly snapshots of access reviews, backup verification, vulnerability scans, change management gates, incident records and agent policy checks into compliance_evidence with retention and an auditor export',
+  'type': 'Build', 'tier': 'sonnet', 'effort': 'medium', 'size': 'M', 'priority': 4, 'surfaces': ['Staff', 'Developer'], 'milestone': MS[2], 'deferred': True,
+  'blockedBy': [f'r4/{K}/compliance-controls', 'PAP-354', 'PAP-80', 'PAP-357', 'PAP-239', 'PAP-43', 'PAP-298'], 'blocks': [f'r4/{K}/trust-center'],
+  'goal': "Stop collecting screenshots for auditors: a nightly job that runs each control's `testProcedure` from `controls.yaml`, stores the result and artefact (query output, gate file hash, backup drill report, scan summary, policy diff) in `compliance_evidence` with 7-year retention, flags failed controls as `compliance.control.failed` with a Linear issue, and produces an auditor export (zip with an index) per period.",
+  'scope_in': [
+    "`packages/platform-ops/src/compliance/collectors/`: one collector per evidence kind: `access-review` (memberships and roles snapshot with diffs, PAP-58, PAP-227), `backup` (PAP-354 drill and PAP-30 PITR reports), `vuln-scan` (PAP-80 SAST and dependency audit, PAP-357 DAST summaries), `change-management` (every production release PAP-254 with its gate artefacts PAP-239 and approvals), `incidents` (status incidents and PAP-356 S0 events with response times), `agent-policy` (PAP-298 deny list and PAP-106 allowlist hashes unchanged or diffed), `retention` (PAP-355 job outcomes), `training` (agent character rule versions as the platform equivalent of awareness)",
+    "`compliance_evidence` (control id, period, collected_at, status pass|fail|manual, artefact file id, summary); job schedule nightly plus on release; failures open a Linear issue on the control owner project via PAP-97 patterns",
+    "Auditor export: `compliance.export(period)` zip with `index.json`, control statements, evidence files and hashes, signed manifest; staff page `/admin/compliance` with control status grid and evidence drill-down",
+  ],
+  'scope_out': ['Manual evidence upload workflows beyond a simple attach (v0.3)', 'Auditor portal access'],
+  'spec': [
+    'Collectors are idempotent per `(control, period)`; re-runs overwrite the same row and keep prior artefacts as versions',
+    'Evidence artefacts are immutable files with hashes; the export manifest lets an auditor verify nothing changed',
+    'A control with no collector is `manual` and appears in the grid for a human to attach evidence, never silently `pass`',
+    'Access review diffs highlight privilege increases and dormant admins (no login 90 days) for review sign-off',
+  ],
+  'provides': "collectors, `compliance_evidence` dataset, nightly job, failure issues, auditor export, `/admin/compliance`, `compliance.evidence.collected|control.failed` events",
+  'consumes': "controls framework, DR and backups (PAP-354, PAP-30), scans (PAP-80, PAP-357), gate artefacts and releases (PAP-239, PAP-254), security telemetry (PAP-356), agent policies (PAP-298, PAP-106), retention jobs (PAP-355), memberships (PAP-58), jobs (PAP-43), status incidents",
+  'consumed_by': f"`r4/{K}/trust-center` (live control status), PAP-89 digest (compliance section), assistant safety evidence, sales",
+  'dod': ['Nightly run stores evidence for every automated control on staging; a broken control fixture opens an issue; export zip verifies; `/admin/compliance` grid renders with drill-down'],
+  'tests': {
+    'Unit': 'each collector against fixtures; manifest signing and verification',
+    'Integration': 'idempotent re-run; failure → issue; access review diff detection of a privilege increase',
+  },
+  'demo': "Open `/admin/compliance`, click CC6.1 to see last night's access review diff showing a new admin, then export the quarter and verify the manifest hash offline.",
+  'edge': ['Collector source unavailable (Grafana down): the row is `fail:unavailable` with retry, not `pass`; three consecutive failures escalate'],
+  'deps': f"`r4/{K}/compliance-controls` (hard), PAP-354, PAP-80, PAP-357, PAP-239, PAP-43 (hard), PAP-298, PAP-254, PAP-356 (soft).",
+  'builder': 'Sentinel', 'reviewer': 'Atlas (Merger)', 'tenant_data': False,
+ },
+ {
+  'key': f'r4/{K}/trust-center', 'title': 'Build the trust center: security overview, live control status, subprocessor register, policy documents from the docs engine, DPA and BAA template downloads, uptime from the status page, accessibility report link and change subscriptions',
+  'type': 'Build', 'tier': 'sonnet', 'effort': 'medium', 'size': 'S', 'priority': 4, 'surfaces': ['Customer'], 'milestone': MS[2], 'deferred': True,
+  'blockedBy': [f'r4/{K}/compliance-controls', f'r4/{K}/evidence-automation', f'r4/{K}/status-page', 'PAP-128', 'PAP-160', 'PAP-221'], 'blocks': [],
+  'goal': "Publish the answers: a public trust center at `trust.<PAPEROS_DOMAIN>` with a security overview, live control status from the evidence collector (pass counts, never raw evidence), a subprocessor register with change notifications, policy documents rendered from the docs engine (security, privacy, acceptable use, incident response summary), DPA and BAA templates for download (texts approved by Justin), uptime from the status page, the accessibility conformance report link (PAP-160), and a subscribe-to-changes form.",
+  'scope_in': [
+    "Public routes `/trust`, `/trust/controls`, `/trust/subprocessors`, `/trust/policies/:slug`, `/trust/documents` as static pages regenerated on change (same mechanism as the status page); `trust.sections` slot for modules to add sections (for example the assistant's model provider disclosure)",
+    "`subprocessor` register (name, purpose, location, data categories, DPA link, added date) with a 30-day advance notification to subscribers on additions; policies are MDX in `docs/policies/**` (PAP-134 indexes them; PAP-128 renders); document downloads are versioned files with hashes",
+    "Tenant-facing: a `/console/settings/trust` page where a tenant downloads the signed DPA or BAA for their profile and sees which controls apply; per-tenant white-label of the trust center is out of scope",
+  ],
+  'scope_out': ['Questionnaire automation (SIG, CAIQ exports; v0.3)', 'Legal text authoring'],
+  'spec': [
+    'Control status shows counts and last-evaluated dates only; evidence stays behind `/admin`',
+    'Every published policy page carries its version, effective date and a changelog; unpublished drafts never render',
+    'Subprocessor notifications go through PAP-370 with double opt-in and unsubscribe',
+    'Lighthouse ≥ 95 on performance, accessibility and SEO; no third-party scripts',
+  ],
+  'provides': "trust center static pages, `subprocessor` register and notifications, `trust.sections` slot, document downloads, tenant trust settings page",
+  'consumes': "controls and evidence, status page uptime, docs engine and rules index (PAP-128, PAP-134), accessibility report (PAP-160), legal pages (PAP-221), email (PAP-370)",
+  'consumed_by': "sales and onboarding (link in the wizard), tenants (their customers ask them), PAP-89 digest",
+  'dod': ['Trust center live on staging with ≥ 60 controls summarised, 8 subprocessors, 4 policies, DPA and BAA downloads marked draft until Justin approves; a subprocessor addition notifies a test subscriber'],
+  'tests': {
+    'Unit': 'static generation; register diff notification',
+    'E2E': 'public pages at 375 and 1920; subscribe with double opt-in; policy version display',
+  },
+  'demo': "Open the trust center, show live control counts updating after last night's run, add a subprocessor in `/admin` and receive the 30-day notice email.",
+  'edge': ['Evidence run failed last night: the trust page shows the previous evaluation date rather than a false green'],
+  'deps': f"`r4/{K}/compliance-controls`, `r4/{K}/evidence-automation`, `r4/{K}/status-page` (hard), PAP-128, PAP-134, PAP-160, PAP-221 (soft), PAP-370 (hard).",
+  'builder': 'Quill', 'reviewer': 'Sentinel (Security Auditor)', 'tenant_data': False,
+ },
+ {
+  'key': f'r4/{K}/data-residency', 'title': 'Design multi-region and data residency: region per tenant, EU region stack, host and API routing, per-region backups, residency in the business profile and provisioning plan, as an ADR with a runbook',
+  'type': 'Spec', 'tier': 'opus', 'size': 'M', 'priority': 4, 'surfaces': ['Developer'], 'milestone': MS[2], 'deferred': True,
+  'blockedBy': ['PAP-25', 'PAP-26', 'PAP-354', 'PAP-431', 'PAP-126', 'PAP-270'], 'blocks': [],
+  'goal': "Decide how PaperOS will keep EU (and later other) tenants' data in region before a customer asks: an ADR choosing region-per-tenant on independent stacks (Postgres, MinIO, Hocuspocus, Electric, jobs) over a shared control plane, how a tenant's region is chosen (PAP-126 business profile and onboarding) and never changed without a migration job, how hosts and the API route by tenant region (Caddy and the PAP-431 host resolution), what is global (identity directory, billing on Stripe, Linear, the platform admin), per-region backups and DR (PAP-354), and a provisioning runbook and cost table for the first EU region.",
+  'scope_in': [
+    "`docs/adr/NNNN-data-residency.md`: options (single region, region-per-tenant, cell architecture), decision, consequences; `docs/platform/regions.md` with the routing design (`tenant.region` column, region-aware `PAPEROS_REGION` in PAP-17 config, Caddy per region, a global router that redirects by tenant host or session), the global versus regional data inventory, and the cross-region rules (no cross-region joins; global services hold only pointers)",
+    "Business profile: `business.residency: eu|us|uk` in `app.spec.yaml` (PAP-126) and the onboarding question; `ResidencyPort.regionFor(tenant)` and `route(request)` interfaces in the contract with a single-region default implementation",
+    "Provisioning plan: Coolify project per region on a Hetzner EU location (PAP-25 pattern), compose files parametrised by region, secrets per region (PAP-300 broker scopes), backups to an in-region bucket (PAP-354), DR drill per region; cost table; migration procedure for moving a tenant (export PAP-205 → import PAP-422 → cutover with a freeze window)",
+  ],
+  'scope_out': ['Running the second region (Needs Justin decision with the cost table)', 'Active-active replication'],
+  'spec': [
+    'Residency is a property of the tenant set at creation; changing it is a supervised migration, never a flag flip',
+    'Global services never store tenant business data: identity holds accounts and tenant pointers; Stripe holds billing; Linear holds work; everything else is regional',
+    'Every regional stack runs the same images and migrations; the compat matrix (PAP-440) and release train (PAP-254) deploy regions sequentially with a per-region status component',
+    'Backups never leave their region; the DR drill restores in-region; the platform admin console shows region per tenant',
+  ],
+  'provides': "the residency ADR, `regions.md` design, `ResidencyPort` interface with a single-region adapter, business profile field, provisioning runbook and cost table",
+  'consumes': "VPS and deploy pipeline (PAP-25, PAP-26), DR (PAP-354), host resolution (PAP-431), business profile (PAP-126), Electric deployment (PAP-270), config layer (PAP-17), credential broker (PAP-300), export and import (PAP-205, PAP-422)",
+  'consumed_by': "app-shell config, data-layer deployments, platform admin console (region column), onboarding wizard, compliance profiles (gdpr recommends eu)",
+  'dod': ['ADR merged and approved by Atlas; `ResidencyPort` in the contract with the single-region adapter passing conformance; cost table and runbook filed to Needs Justin as an informational decision for when the first EU tenant asks'],
+  'tests': {
+    'Static': 'contract interfaces and fixtures; business profile schema change validated',
+    'Review': 'Forge and Sentinel review the global/regional inventory against the data model (PAP-33) for any leak of tenant data into global tables',
+  },
+  'demo': "Walk the design diagram: a UK clinic's request hitting the global router, redirected to the EU stack, its backups in Falkenstein, while its Stripe billing and Linear issues stay global.",
+  'edge': ['Tenant with staff in two regions: the tenant lives in one region; users are global; latency for the far staff is accepted and documented', 'Shared demo tenant used by golden-path tests: pinned to the primary region'],
+  'deps': 'PAP-25, PAP-26, PAP-354, PAP-431 (hard: designs being extended), PAP-126, PAP-270, PAP-17, PAP-300 (soft).',
+  'builder': 'Forge', 'reviewer': 'Atlas (Merger)', 'tenant_data': False, 'module_edge': False,
+ },
+]
+
+TRIO = trio({
+    'key': K, 'lead': 'Sentinel', 'owner': 'Sentinel', 'kind': 'runtime', 'swapRisk': 'medium', 'impl': 'packages/platform-ops, packages/analytics, apps/web/src/admin',
+    'milestones': MS, 'impl_keys': [f'r4/{K}/superadmin-console', f'r4/{K}/status-page', f'r4/{K}/product-analytics', f'r4/{K}/abuse-controls'],
+    'publish_blockedBy': ['PAP-55', 'PAP-366'],
+    'trio_priority': 3,
+    'ports': ['`PlatformAdminPort` (`tenants`, `overrideEntitlement`, `setFlagRule`, `toggleModule`, `jobs`, `impersonate`) with `TenantSummary`, `Override`', '`StatusPort` (`components`, `incidents`, `maintenance`, `subscribe`) with `Incident`, `Component`', '`AnalyticsPort` (`track`, `identify`, `defineEvent`, `funnels`, `retention`) with `EventSchema`, `Funnel`; `ReplayPort` (`capture`, `list`, `mask`)', '`ExperimentPort` (`define`, `assign`, `expose`, `readout`) with `Experiment`, `Assignment`', '`AbusePort` (`checkSignup`, `quarantine`, `reportAbuse`) and `CaptchaPort` (`verify`) with `RiskScore`', '`HealthPort` (`scoreTenant`, `signals`) and `CompliancePort` (`controls`, `evidence`, `profileFor`, `enforce`) with `Control`, `Evidence`, `ComplianceProfile`', '`ResidencyPort` (`regionFor`, `route`)', 'slots `admin.nav`, `admin.tenant.tabs`, `trust.sections`'],
+    'events': ['platform.tenant.overridden', 'platform.flag.changed', 'status.incident.opened', 'status.incident.updated', 'status.incident.resolved', 'analytics.event', 'experiment.exposed', 'abuse.flagged', 'abuse.quarantined', 'health.score.changed', 'compliance.evidence.collected', 'compliance.control.failed'],
+    'requires': ['`@paperos/contract-identity` ^0.1 (`platform` audience, MFA step-up, impersonation, attribute predicates)', '`@paperos/contract-data-layer` ^0.1 (audit, jobs, retention, backups, observability, rate limits)', '`@paperos/contract-app-shell` ^0.1 (flags, module toggles, error reporting, domains, config)', '`@paperos/contract-business-core` ^0.1 (entitlements, metering)', '`@paperos/contract-growth` ^0.1 (attribution collector and consent, segments; optional)', '`@paperos/contract-quality` ^0.1 (gate artefacts, security telemetry, release state)', '`@paperos/contract-collab` ^0.1 (notifications, docs)', '`@paperos/contract-tables` ^0.1 (datasets, dashboards)'],
+    'fixtures': 'ten tenant summaries with overrides and health inputs, three incidents across the status machine with subscribers, twenty event schemas and 5,000 synthetic product events with a funnel and a retention cohort, two experiments with assignments and readouts, eight signup risk cases, sixty controls with evidence rows across pass, fail and manual, four compliance profiles, two region routing cases',
+    'consumers': 'every module\'s per-tenant admin actions, quality release digest (PAP-89), growth (churn-risk segment), business-core (usage and health on billing), assistant (safety evidence), migration (compliance profile in onboarding), engagement and commerce (tenant-facing analytics)',
+})
+
+ISSUES = [TRIO[0]] + ISSUES + TRIO[1:]
