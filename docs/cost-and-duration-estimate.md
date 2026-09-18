@@ -141,3 +141,21 @@ Justin's credit terms changed after this estimate was written: he pays **$50 for
 | B (recommended) | Opus 5 | Spec and Research issues, every reviewer session, the 4 RC reviews | 4 | $7,909 | **$158.17** (4 x $50 billed whole) | 37.3 h |
 
 The 42 deferred issues are an optional final chunk: +$1,387 list ($27.75) on A, +$983 ($19.66) on B, +5.5 h. Per-issue models for mix B: `round3/model-effort-B.json` (planning session; Linear labels are updated by the verify stage, not by this document). The 37 hours are session time only; the `Needs Justin` gates and merge conflicts listed in section 5 still set the calendar.
+
+## 9. Round 4 results (2026-09-18)
+
+Re-run of the same token model, prices and scheduler over the live graph after round 4 (`plan/round4/sched/graph.json`, takenAt 2026-09-18T14:12:52Z; model `plan/round4/sched/model.py`; chunk plan `plan/round4/chunks-v2.json`; narrative in `docs/build-chunks.md`). Inventory: 901 specified issues, 105 umbrellas, 796 leaves, **601 scheduled** (S 198 / M 401 / L 2 from the Fibonacci estimates; Build 409, Infra 68, Spec 59, Research 20, Docs 17, Review 28; P0 156 / P1 314 / P2 131) and 195 deferred. 3,041 live `blocks` relations (3,551 effective leaf edges after mapping umbrella edges onto children), no cycles. Builder models are read from the `Model` labels (Sonnet 5 400, Opus 5 182, Fable 5.1 11, Haiku 4.5 8), Effort from the `Reasoning effort` labels (high 359, medium 223, low 16, max 3).
+
+| | Mix A (all Fable 5.1) | **Mix B (canonical)** | Mix B, round-3 definition (reference) |
+|---|---|---|---|
+| Builders | Fable 5.1 | `Model` label (Opus 5 default); Fable 5.1 on Spec / Research | Opus 5 on every code / docs / review issue; Fable 5.1 on Spec / Research |
+| Reviewer / QA gate / RC reviews | Fable / Fable / Fable | Fable 5.1 high / Opus 5 low / Fable 5.1 | Fable 5.1 high / Opus 5 low / Fable 5.1 |
+| List, 601 issues + 4 RC reviews | $18,522 | **$10,450** | $12,892 |
+| To Justin (x0.02) | $370.44 | **$209.00** | $257.85 |
+| Chunks ($2,500 list), billed whole | 8 ($400) | **5 ($250)** | 6 ($300) |
+| + 195 deferred (`v0.2`) | +$6,572 (+$131.43) | +$3,418 (+$68.36) | +$4,412 (+$88.23) |
+| Everything | $25,093 ($501.87), 11 chunks | **$13,868 ($277.35), 6 chunks** | $17,304 ($346.08), 7 chunks |
+
+Duration (both mixes): critical path **27.8 h** with the branch-start rule (40.4 h if every dependent waited for its blocker's review and QA); serial 925.8 h; **38.6 h at 16 builders 24/7** (2026-09-18T14:15Z to 2026-09-20T04:50Z, mean builders busy 15.7, so the build is capacity-bound rather than chain-bound); +14.3 h for the deferred set. Per-day builder starts: 2026-09-18 163, 2026-09-19 341, 2026-09-20 97, v0.2 (after RC3) 195.
+
+Delta versus round 3 (326 issues, 4 chunks, $7,909 / $158.17, 37.3 h): +275 scheduled leaves (46 round-3 leaves became umbrellas and are replaced by their children; 60 module-system issues PAP-433..497 and 261 round-4 issues joined; 155 round-4 issues are deferred); list cost +32% because the builders now run on the labelled models, mostly Sonnet 5, instead of Opus 5 everywhere (the round-3 definition gives 6 chunks / $12,892 / $257.85 on the same graph); wall clock +1.3 h because the extra build minutes saturate 16 builders even though the branch-start rule cut the longest chain to 27.8 h. The reviewer overlay on Fable 5.1 is now 61% of the mix-B list cost; applying section 4b's reviewer rule instead would save about a chunk and is the first lever if Justin wants fewer than 5 chunks.

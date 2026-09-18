@@ -1,0 +1,318 @@
+{
+ "takenAt": "2026-09-18T14:12:52Z",
+ "t0": "2026-09-18T14:15Z",
+ "issues": 901,
+ "umbrellas": 105,
+ "deferredUmbrellas": 9,
+ "leaves": 796,
+ "deferredLeaves": 195,
+ "activeLeaves": 601,
+ "edgesRaw": 3041,
+ "effectiveLeafEdges": 3551,
+ "sizes": {
+  "S": 198,
+  "M": 401,
+  "L": 2
+ },
+ "types": {
+  "Build": 409,
+  "Spec": 59,
+  "Infra": 68,
+  "Docs": 17,
+  "Review": 28,
+  "Research": 20
+ },
+ "phases": {
+  "P2": 131,
+  "P1": 314,
+  "P0": 156
+ },
+ "labelModels": {
+  "Model: Sonnet 5": 400,
+  "Model: Opus 5": 182,
+  "Model: Fable 5.1": 11,
+  "Model: Haiku 4.5": 8
+ },
+ "efforts": {
+  "Effort: medium": 223,
+  "Effort: high": 359,
+  "Effort: max": 3,
+  "Effort: low": 16
+ },
+ "criticalPath": {
+  "branchStartMin": 1670,
+  "branchStartHours": 27.8,
+  "branchStartChain": [
+   "PAP-13",
+   "PAP-42",
+   "PAP-32",
+   "PAP-33",
+   "PAP-267",
+   "PAP-268",
+   "PAP-565",
+   "PAP-37",
+   "PAP-663",
+   "PAP-339",
+   "PAP-340",
+   "PAP-627",
+   "PAP-341",
+   "PAP-342",
+   "PAP-343",
+   "PAP-617",
+   "PAP-618",
+   "PAP-623",
+   "PAP-624",
+   "PAP-625",
+   "PAP-420",
+   "PAP-421",
+   "PAP-422"
+  ],
+  "fullMin": 2425,
+  "fullHours": 40.4,
+  "fullChain": [
+   "PAP-13",
+   "PAP-42",
+   "PAP-32",
+   "PAP-33",
+   "PAP-267",
+   "PAP-268",
+   "PAP-565",
+   "PAP-37",
+   "PAP-663",
+   "PAP-339",
+   "PAP-340",
+   "PAP-627",
+   "PAP-341",
+   "PAP-342",
+   "PAP-343",
+   "PAP-617",
+   "PAP-618",
+   "PAP-623",
+   "PAP-624",
+   "PAP-625",
+   "PAP-420",
+   "PAP-421",
+   "PAP-422"
+  ]
+ },
+ "serialHours": 925.8,
+ "wallClock": {
+  "builders": 16,
+  "hours": 38.6,
+  "days24h": 1.61,
+  "end": "2026-09-20T04:50Z",
+  "meanBuildersBusy": 15.7,
+  "withDeferredHours": 52.9,
+  "withDeferredEnd": "2026-09-20T19:10Z"
+ },
+ "rcEvents": [
+  {
+   "rc": "RC0",
+   "label": "RC0 staging + sign-in + orchestrator claiming",
+   "at": "2026-09-18T22:20Z",
+   "gateIssues": [
+    "PAP-223",
+    "PAP-224",
+    "PAP-25",
+    "PAP-269",
+    "PAP-281",
+    "PAP-282",
+    "PAP-283",
+    "PAP-30"
+   ]
+  },
+  {
+   "rc": "RC1",
+   "label": "RC1 v0.1.0-rc.1: RLS permissions, installers, Yjs server, codegen, Stripe test mode, story baselines",
+   "at": "2026-09-19T07:20Z",
+   "gateIssues": [
+    "PAP-140",
+    "PAP-177",
+    "PAP-227",
+    "PAP-228",
+    "PAP-229",
+    "PAP-246",
+    "PAP-256",
+    "PAP-257",
+    "PAP-314",
+    "PAP-315",
+    "PAP-316",
+    "PAP-522"
+   ]
+  },
+  {
+   "rc": "RC2",
+   "label": "RC2 v0.1.0-rc.2, first real cut: gates 1-4, grid + compiler, comments, record sync, ledger + invoices, imports, drill",
+   "at": "2026-09-20T02:20Z",
+   "gateIssues": [
+    "PAP-254",
+    "PAP-29",
+    "PAP-317",
+    "PAP-318",
+    "PAP-319",
+    "PAP-326",
+    "PAP-327",
+    "PAP-328",
+    "PAP-335",
+    "PAP-336",
+    "PAP-337",
+    "PAP-341",
+    "PAP-342",
+    "PAP-343",
+    "PAP-347",
+    "PAP-348",
+    "PAP-349",
+    "PAP-392",
+    "PAP-393",
+    "PAP-394",
+    "PAP-395",
+    "PAP-396",
+    "PAP-397"
+   ]
+  },
+  {
+   "rc": "RC3",
+   "label": "RC3 = v0.1.0: every non-deferred issue Done",
+   "at": "2026-09-20T04:50Z",
+   "gateIssues": []
+  }
+ ],
+ "mixes": {
+  "A": {
+   "chunks": 8,
+   "issues": 601,
+   "points": 1609,
+   "listCost": 18521.76,
+   "discountedCost": 370.44,
+   "wholeChunksBilled": 8,
+   "wholeChunksBilledUsd": 400,
+   "wallClockHours": 38.6,
+   "wallClockDays24h": 1.61,
+   "end": "2026-09-20T04:50Z",
+   "byType": {
+    "Build": 14414.5,
+    "Docs": 178.6,
+    "Infra": 1690.43,
+    "Research": 291.06,
+    "Review": 598.82,
+    "Spec": 1073.36
+   },
+   "byPhase": {
+    "P0": 4204.35,
+    "P1": 9963.71,
+    "P2": 4078.71
+   },
+   "builderCostByModel": {
+    "claude-fable-5-1": 11290.45
+   },
+   "buildersByModel": {
+    "claude-fable-5-1": 601
+   },
+   "rcReviews": 275.0,
+   "withDeferred": {
+    "listCost": 25093.47,
+    "discountedCost": 501.87,
+    "wallClockHours": 52.9,
+    "end": "2026-09-20T19:10Z",
+    "chunks": 11
+   }
+  },
+  "B": {
+   "chunks": 5,
+   "issues": 601,
+   "points": 1609,
+   "listCost": 10449.76,
+   "discountedCost": 209.0,
+   "wholeChunksBilled": 5,
+   "wholeChunksBilledUsd": 250,
+   "wallClockHours": 38.6,
+   "wallClockDays24h": 1.61,
+   "end": "2026-09-20T04:50Z",
+   "byType": {
+    "Build": 7317.69,
+    "Docs": 86.87,
+    "Infra": 996.75,
+    "Research": 291.06,
+    "Review": 409.03,
+    "Spec": 1073.36
+   },
+   "byPhase": {
+    "P0": 2727.73,
+    "P1": 5271.8,
+    "P2": 2175.23
+   },
+   "builderCostByModel": {
+    "claude-fable-5-1": 980.78,
+    "claude-haiku-4-5": 5.4,
+    "claude-opus-5": 1693.27,
+    "claude-sonnet-5": 1615.87
+   },
+   "buildersByModel": {
+    "claude-sonnet-5": 374,
+    "claude-fable-5-1": 80,
+    "claude-opus-5": 139,
+    "claude-haiku-4-5": 8
+   },
+   "rcReviews": 275.0,
+   "withDeferred": {
+    "listCost": 13867.52,
+    "discountedCost": 277.35,
+    "wallClockHours": 52.9,
+    "end": "2026-09-20T19:10Z",
+    "chunks": 6
+   }
+  },
+  "B3": {
+   "chunks": 6,
+   "issues": 601,
+   "points": 1609,
+   "listCost": 12892.41,
+   "discountedCost": 257.85,
+   "wholeChunksBilled": 6,
+   "wholeChunksBilledUsd": 300,
+   "wallClockHours": 38.6,
+   "wallClockDays24h": 1.61,
+   "end": "2026-09-20T04:50Z",
+   "byType": {
+    "Build": 9589.85,
+    "Docs": 123.37,
+    "Infra": 1130.74,
+    "Research": 291.06,
+    "Review": 409.03,
+    "Spec": 1073.36
+   },
+   "byPhase": {
+    "P0": 3023.72,
+    "P1": 6785.72,
+    "P2": 2807.97
+   },
+   "builderCostByModel": {
+    "claude-fable-5-1": 974.59,
+    "claude-opus-5": 5763.37
+   },
+   "buildersByModel": {
+    "claude-opus-5": 522,
+    "claude-fable-5-1": 79
+   },
+   "rcReviews": 275.0,
+   "withDeferred": {
+    "listCost": 17303.91,
+    "discountedCost": 346.08,
+    "wallClockHours": 52.9,
+    "end": "2026-09-20T19:10Z",
+    "chunks": 7
+   }
+  }
+ },
+ "perDayStarts": {
+  "2026-09-18": 163,
+  "2026-09-19": 341,
+  "2026-09-20": 97,
+  "v0.2 (after RC3)": 195
+ },
+ "perDayStartsAll": {
+  "2026-09-18": 163,
+  "2026-09-19": 341,
+  "2026-09-20": 292
+ }
+}

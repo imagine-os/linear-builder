@@ -1,0 +1,77 @@
+[
+ {
+  "day": "2026-09-18",
+  "sessions": "51/111/1",
+  "buildStartsByPhase": "62/49/4",
+  "build": 891,
+  "qa": 1633,
+  "plan": 384,
+  "docs": 10,
+  "research": 142,
+  "dayUsd": 3060,
+  "planLine": 3060,
+  "justinUsd": 61.2,
+  "allowanceCrossCheck": 3002,
+  "starts": 163,
+  "landed": 139,
+  "rc": [
+   "RC0"
+  ]
+ },
+ {
+  "day": "2026-09-19",
+  "sessions": "64/276/1",
+  "buildStartsByPhase": "34/174/71",
+  "build": 1945,
+  "qa": 4088,
+  "plan": 367,
+  "docs": 10,
+  "research": 60,
+  "dayUsd": 6470,
+  "planLine": 9530,
+  "justinUsd": 190.59,
+  "allowanceCrossCheck": 6762,
+  "starts": 341,
+  "landed": 344,
+  "rc": [
+   "RC1"
+  ]
+ },
+ {
+  "day": "2026-09-20",
+  "sessions": "83/14/0",
+  "buildStartsByPhase": "6/46/31",
+  "build": 210,
+  "qa": 672,
+  "plan": 16,
+  "docs": 16,
+  "research": 5,
+  "dayUsd": 920,
+  "planLine": 10450,
+  "justinUsd": 209.0,
+  "allowanceCrossCheck": 1138,
+  "starts": 97,
+  "landed": 118,
+  "rc": [
+   "RC2",
+   "RC3"
+  ]
+ },
+ {
+  "day": "v0.2 (after RC3)",
+  "sessions": "47/143/5",
+  "buildStartsByPhase": "0/0/184",
+  "build": 1185,
+  "qa": 2211,
+  "plan": 16,
+  "docs": 1,
+  "research": 5,
+  "dayUsd": 3418,
+  "planLine": 13868,
+  "justinUsd": 277.35,
+  "allowanceCrossCheck": 3866,
+  "starts": 195,
+  "landed": 195,
+  "rc": []
+ }
+]

@@ -1,6 +1,6 @@
 # PaperOS Execution Schedule
 
-Day-by-day plan from 2026-09-17T03:30Z to 2026-10-01 for team PAP: 251 schedulable units (PAP-13..PAP-218 plus children and gap issues PAP-219..PAP-279; split parents PAP-19, 20, 21, 28, 35, 36, 45, 54, 57, 59, 65, 67, 81, 82, 85, 88 are tracked through their children), of which 223 are scheduled and 28 deferred. Simulated over the live `blocks` graph (444 relations, no cycles); model in `round2/sched/`.
+Plan for team PAP under the round-4 graph (2026-09-18): 901 specified issues, 105 umbrellas tracked through their children, 796 leaves of which 601 are scheduled and 195 deferred to `v0.2`. Simulated over the live `blocks` graph (3,041 relations, no cycles) with 16 builder sessions running 24/7 from 2026-09-18T14:15Z; model in `plan/round4/sched/` (round 2's 15-day half-day model stays in `round2/sched/` for history). The rules in section 1 are unchanged; the Round 4 note at the end of section 1 records what changed in Linear.
 
 ## 1. Scheduling rules
 
@@ -11,29 +11,33 @@ Day-by-day plan from 2026-09-17T03:30Z to 2026-10-01 for team PAP: 251 schedulab
 * **Deferred to v0.2 (not claimable before 10-01):** PAP-23, 137, 149, 157, 158, 182, 185, 190, 191, 193, 194, 195, 196, 197, 203, 204, 206, 207, 218, 221, 222, 230, 231, 232, 235, 276, 277, 278 ($812 of allowances). Each carries the team label `Deferred`, priority 4 and a deferral line under Goal (FIX-4, 2026-09-17); PAP-96 never claims a `Deferred` issue and promotion skips them. Two scheduled issues used to depend on this set and both edges were made soft on 2026-09-17: PAP-235 → PAP-180 (FIX-1; invoices render PDFs with their own template until the theme lands) and PAP-190 → PAP-192 (FIX-4; the content agent drafts into its own `campaign_draft` queue and never publishes). After those two deletions no `blocks` edge runs from a deferred issue to a scheduled one; the only edges out of the set stay inside it (PAP-230/231 → 232, PAP-276 → 277 → 278).
 * **Justin.** `Needs Justin` holds at most five open items (PAP-94). Conditional escalations (ADR contradictions from PAP-44 or PAP-56, S0 waivers from PAP-80, cycles from PAP-99) are not pre-scheduled.
 
-## 2. Day by day
+### Round 4 (2026-09-18)
 
-Identifiers omit `PAP-`. In flight on a day = that day's starts plus M and L starts still running from the previous two days. *Peak* = concurrent builder sessions.
+* **Scope re-planned over the expanded graph.** Team PAP now holds 901 specified issues (PAP-13 upward, Triage ideas excluded): 105 umbrellas, 796 leaves of which 195 carry `Deferred` (own label or a deferred umbrella) and 601 are scheduled. The tables in sections 2 and 4 were regenerated from `plan/round4/sched/model.py` under Justin's 24/7 terms (16 builders, $50 per $2,500 list, mix B); the rules above are unchanged, only the calendar moved from 15 days of half-day sessions to 38.6 hours of continuous sessions (2026-09-18T14:15Z to 2026-09-20T04:50Z), plus 14.3 h for the `v0.2` set. The `Needs Justin` items keep their NJ numbers; section 2 shows the block in which each is first needed.
+* **Cycles hold in-flight work only.** Linear moves a Backlog issue to the default unstarted state when it joins a cycle, so planned issues never carry a cycle; `cycleIssueAutoAssignStarted` is on for team PAP and an issue joins the active cycle (C1 to 09-25, C2 to 10-02, C3 v0.2 stretch) the moment it moves to In Progress. Ready for Claude issues sit in the current cycle. Planned timing lives in due dates and Chunk labels, not in cycles.
+* **Estimates are Fibonacci points**: S = 2 (half a session-day), M = 3 (one), L = 5 (two), set on every leaf; umbrellas carry none so Linear rolls up their children. The scheduler reads the estimate, not the `**Size**` text. Scheduled scope: 1609 points; deferred: 548.
+* **Due dates are milestone target dates**, not the simulated landing time: every non-deferred issue's `dueDate` equals its project milestone's `targetDate` (section 7 dates; the five round-4 projects use 10-01 / 10-09 / 10-16). The simulation lands everything well before those dates; the dates stay as the commitment the burn report measures slips against.
+* **Chunk labels follow mix B** of `docs/build-chunks.md`: `Chunk 1`..`Chunk 5` on the 601 scheduled leaves, `Chunk: v0.2` on the 195 deferred leaves, none on umbrellas (exactly one per leaf; round 3 had applied mix A to 326 leaves and left 46 issues that later became umbrellas labelled). Log: `plan/round4/changes/chunks-relabel.json`. The orchestrator uses the chunk order only as a tie-breaker among Ready for Claude issues.
+* **Deferred set.** The 28 issues listed under *Deferred to v0.2* above grew to 195 leaves and 9 umbrellas in rounds 3-4 (label `Deferred`, priority 4, `Chunk: v0.2`, no cycle, no due date); the two FIX rules still hold: no `blocks` edge runs from a deferred issue to a scheduled one (verified 2026-09-18, `plan/round4/verify.md`) and PAP-96 never claims one.
 
-| Day | Starts | Peak | Reviewer sessions | Needs Justin / checkpoint |
-| -- | -- | -- | -- | -- |
-| 09-17 | 13 14 25 31 55 56 66 79 209 212 | 8 | manual `/code-review` | NJ-1 Linear: upgrade the workspace plan (Basic is enough; issueCreate returns USAGE_LIMIT_EXCEEDED at 275 issues; \~165 specified issues in the "Round 2 pending issues" documents wait on it). Filed on PAP-91, which sits in Needs Justin until `/approve` or `/reject`; also posted as a comment on PAP-5. Nothing waits on the answer: the 12 hard dependencies on pending issues were folded into PAP-198 (WP2 test accounts), PAP-187 (WP0 consent centre), PAP-180 (WP4 recurring and dunning) and PAP-114 (spec versioning out of scope) on 09-17 (FIX-5). On approve, create `agents/runtime-sandbox` first, then PAP-96 and PAP-104 children, then `agents/session-observability`, then the rest by phase (order and scripts in PAP-91). NJ-2 Infra batch (PAP-25): Hetzner account and cpx41, registrar or Cloudflare token (or accept [sslip.io](<http://sslip.io>)), Resend sign-up, sops recovery key. NJ-3 GitHub App on org `imagine-os` with repo+workflow scope (PAP-47). NJ-4 Anthropic Console: orchestrator API key, $10K hard limit, usage export (PAP-98). |
-| 09-18 | 16 17 30 32 42 46 78 91 92 94 127 150 214 236 239 273 279 | 12 | manual; Gate 1 CI live (PAP-78) | NJ-5 Linear: orchestrator API key and webhook signing secret (PAP-92, PAP-97). |
-| 09-19 | 26 33 68 96 103 104 105 114 128 139 161 210 213 219 237 243 255 274 275 | 16 | manual; harness PAP-243 lands | NJ-6 Code signing (PAP-256): enroll in the Apple Developer Program and pick Azure Trusted Signing for Windows, or accept unsigned v0.1.0 installers. Default after 48 h: unsigned. |
-| 09-20 | 15 18 34 43 44 47 48 49 93 95 115 117 133 175 211 223 238 244 245 256 267 | 20 | Gate 2 dry run | NJ-7 License of the template code (PAP-211): MIT, Apache-2.0 or proprietary; default Apache-2.0. NJ-8 Approve `docs/pm/justin-queue.md` (PAP-94) and the issue contract (PAP-93). |
-| 09-21 | 22 27 38 69 70 71 80 97 98 99 130 151 162 198 224 225 226 227 233 257 268 | 20 | Gate 2 on every PR from here | NJ-9 Hire the roster (PAP-104, PAP-210): nine leads, 28 sub-characters, tool scope classes. **RC0.** |
-| 09-22 | 37 50 58 74 106 110 118 121 152 164 179 215 228 229 234 240 258 261 262 269 | 20 | Gate 2; SAST (PAP-80) | NJ-10 Stripe test-mode account and restricted key (PAP-177); Google Cloud OAuth consent screen for PAP-224 and PAP-200. One item. |
-| 09-23 | 51 52 73 87 116 119 120 129 140 163 177 246 259 260 263 264 270 | 20 | Gate 2; evals (PAP-110) | Queue drains. |
-| 09-24 | 39 61 63 86 107 108 111 122 132 141 142 155 180 199 247 249 271 | 20 | Gate 2; story baselines (PAP-246) | NJ-11 Domain: set `PAPEROS_DOMAIN` or keep [sslip.io](<http://sslip.io>) for v0.1.0. **RC1.** |
-| 09-25 | 62 72 109 112 123 131 134 145 156 165 168 170 176 220 241 242 248 250 265 272 | 20 | Gates 2-3; calibration (PAP-241) | NJ-12 Payroll provider (PAP-176): sign the Check sandbox agreement (default) or Gusto Embedded. NJ-13 Airtable demo base and token (PAP-202); Slack incoming webhook (PAP-136). |
-| 09-26 | 60 83 84 100 124 143 153 154 167 169 178 187 188 200 201 251 252 253 266 | 20 | Gates 2-3; PAP-83, 84, 251 land | Queue drains. |
-| 09-27 | 24 64 101 102 135 136 166 171 172 181 183 184 189 202 205 254 | 18 | Gates 2-4; nightly staging (PAP-253) | NJ-14 Stop-loss checkpoint: go or no-go on the stretch pool (section 5). |
-| 09-28 | 29 75 89 125 138 144 147 173 174 192 216 | 16 | Gates 2-4; calibration sample; RC2 certify | NJ-15 `Release candidate 2026-40 (v0.1.0-rc.2)` from PAP-254: `/approve` or `/reject`. **RC2.** PAP-29 result on PAP-5 (informational). |
-| 09-29 | 40 41 53 76 90 113 126 146 148 159 160 217 | 14 | Gates 2-4; PAP-147, PAP-53 drills | NJ-16 Approve the content agent (PAP-192) and migration agent (PAP-208). NJ-17 Accessibility statement wording (PAP-160). |
-| 09-30 | 77 186 208 | 10 | Gates 2-4; no new claims after 12:00Z | NJ-18 Industry list and terminology defaults (PAP-126). NJ-19 Scope freeze: deferred list becomes milestone v0.2. |
-| 10-01 | (none; RC3 regression only) | 2 | Gates 2-4 on RC3 | NJ-20 `Release candidate v0.1.0`: `/approve` promotes and tags. **RC3.** NJ-21 PAP-5: close or keep as scoreboard (PAP-95 vs PAP-29). |
+## 2. Block by block
 
-Zero-slack chains (a slip moves the section 7 milestone by the same amount): orchestrator PAP-25 → 96 → 97/98/99 (09-21pm); API and sync PAP-33 → 267 → 268 → 269 → 270 → 271 → 272 → 143 (09-27pm); permissions PAP-279/34 → 227 → 228/229 → 140 → 142 → 131 (09-27pm); gates PAP-239 → 243 → 244/245 (09-20pm) then 240 → 246 → 247 → 248 (09-25pm); tables PAP-228 → 163 → 165 → 166/172 → 173/174 (09-30am). Two half-days of slack: release train 248 → 252 → 253 → 254 → 89 (09-29am); auth 33 → 223 → 224 → 58 (09-23am). Atlas re-simulates nightly and republishes this table.
+Identifiers omit `PAP-`. Regenerated 2026-09-18 from `plan/round4/sched/model.py` (16 builders 24/7, branch-start rule, clock start 2026-09-18T14:15Z); one row per six-hour block because the whole scheduled scope lands in 38.6 h. *Starts* = builder sessions launched in the block; *Peak* = concurrent builder sessions; *Landed* = PRs whose review and QA finish in the block (one reviewer session each, on top of the builder cap); *Chunk* = the `Chunk` label(s) of the issues starting in the block (`v0.2` = deferred set, after RC3 and NJ-14 only). Raw rows: `plan/round4/sched/days.json`.
+
+| Block (UTC) | Starts | Peak | Landed (reviewer sessions) | Chunk | Needs Justin / checkpoint |
+| -- | -- | -- | -- | -- | -- |
+| 2026-09-18 12-18Z | 69: 13 14 25 46 55 56 66 127 139 150 161 209 279 302 433 555 31 91 92 114 212 295 476 644 93 103 210 292 16 17 30 42 68 255 281 556 657 32 72 236 273 284 296 44 285 286 293 305 117 256 282 447 508 691 79 198 449 33 237 274 297 666 78 94 105 219 275 564 739 | 16 | 47 | 1 | NJ-1 Linear: upgrade the workspace plan (PAP-91). Resolved: workspace is on Linear Basic. NJ-2 Infra batch (PAP-25): Hetzner account and cpx41, registrar or Cloudflare token (or accept sslip.io), Resend sign-up, sops recovery key. NJ-5 Linear: orchestrator API key and webhook signing secret (PAP-92, PAP-97). NJ-6 Code signing (PAP-256): Apple Developer Program + Azure Trusted Signing, or accept unsigned v0.1.0 installers (default after 48 h: unsigned). NJ-8 Approve docs/pm/justin-queue.md (PAP-94) and the issue contract (PAP-93). NJ-9 Hire the roster (PAP-104, PAP-210): nine leads, 28 sub-characters, tool scope classes. |
+| 2026-09-18 18-24Z | 94: 121 257 283 287 436 519 520 521 665 34 238 267 97 223 448 38 239 456 503 115 258 350 704 108 264 294 526 227 268 655 659 70 224 225 226 289 537 557 74 175 259 558 438 662 713 228 229 565 656 660 269 290 578 661 37 152 641 260 270 642 643 392 459 664 140 335 338 484 768 240 291 579 663 667 678 741 271 311 645 234 265 393 714 912 312 336 603 613 616 651 177 246 314 582 | 16 | 92 | 1, 2 | NJ-3 GitHub App on org imagine-os with repo+workflow scope (PAP-47). NJ-10 Stripe test-mode account and restricted key (PAP-177); Google Cloud OAuth consent screen (PAP-224, PAP-200). **RC0.** |
+| 2026-09-19 00-06Z | 78: 243 339 272 394 562 586 116 329 337 604 652 178 315 467 583 340 740 326 80 129 395 505 122 162 317 353 615 133 266 370 658 351 627 327 247 396 709 790 118 123 313 318 330 465 584 668 679 341 347 527 244 563 261 328 331 504 69 319 361 587 64 87 128 262 316 585 320 342 348 614 725 344 352 475 483 522 566 675 | 16 | 83 | 2 | Queue drains. |
+| 2026-09-19 06-12Z | 92: 40 126 397 791 343 619 621 629 630 245 349 599 834 15 248 710 360 362 718 18 99 211 242 542 677 711 617 620 622 100 176 188 252 308 359 492 73 86 201 323 466 507 541 153 300 462 167 253 263 321 333 474 618 524 580 673 382 567 676 398 414 600 388 450 623 765 833 863 878 249 493 683 288 364 439 500 692 694 699 712 216 307 309 389 568 605 624 702 485 501 523 682 | 16 | 91 | 2, 3 | NJ-7 License of the template code (PAP-211): MIT, Apache-2.0 or proprietary; default Apache-2.0. NJ-11 Domain: set PAPEROS_DOMAIN or keep sslip.io for v0.1.0 (RC1). NJ-12 Payroll provider (PAP-176): sign the Check sandbox agreement (default) or Gusto Embedded. NJ-13 Airtable demo base and token (PAP-202); Slack incoming webhook (PAP-136). NJ-18 Industry list and terminology defaults (PAP-126). **RC1.** |
+| 2026-09-19 12-18Z | 92: 156 324 372 437 766 767 769 531 647 280 385 451 452 457 460 463 538 625 848 468 469 98 254 495 322 61 145 332 334 345 386 420 470 847 477 478 479 486 487 488 494 183 189 376 383 399 415 421 581 674 653 835 836 862 877 893 693 250 325 429 440 453 560 561 601 703 670 716 306 310 717 722 757 144 502 606 696 729 200 680 107 125 160 373 387 539 559 631 669 672 849 84 | 16 | 87 | 3, 4 | NJ-4 Anthropic Console: orchestrator API key, hard spend limit, usage export (PAP-98). NJ-17 Accessibility statement wording (PAP-160). |
+| 2026-09-19 18-24Z | 79: 83 89 109 111 134 135 346 528 543 544 369 371 454 455 458 461 464 471 472 473 480 481 482 489 490 491 496 497 509 510 511 546 548 549 569 570 588 589 590 593 594 607 608 646 697 715 728 742 102 113 138 148 181 186 217 743 756 814 192 208 377 378 384 390 391 400 416 422 432 498 654 815 864 879 894 90 375 379 431 | 16 | 83 | 4 | NJ-16 Approve the content agent (PAP-192) and migration agent (PAP-208). |
+| 2026-09-20 00-06Z | 114: 626 24 130 251 628 648 695 731 749 837 895 29 76 112 444 301 446 602 896 530 753 445 512 529 532 533 534 545 754 540 547 550 551 571 572 591 592 597 609 610 612 698 705 706 720 727 748 506 681 700 701 719 721 726 744 745 758 813 746 747 755 759 760 146 374 380 499 525 552 761 762 763 792 908 553 573 574 575 595 413 596 611 649 671 684 730 732 733 734 850 41 49 95 241 685 77 750 23 182 185 194 235 276 401 404 407 410 423 426 636 778 793 851 838 | 16 | 119 | 4, 5, v0.2 | NJ-14 Stop-loss checkpoint: go or no-go on the stretch pool (deferred set). NJ-15 Release candidate v0.1.0-rc.2 from PAP-254: /approve or /reject (RC2). NJ-19 Scope freeze: deferred list becomes milestone v0.2. NJ-20 Release candidate v0.1.0: /approve promotes and tags (RC3, PAP-254). NJ-21 PAP-5: close or keep as scoreboard (PAP-95 vs PAP-29). **RC2.** **RC3.** |
+| 2026-09-20 06-12Z | 75: 158 195 221 222 230 231 277 405 411 417 427 856 880 883 402 408 412 424 770 772 774 794 805 816 841 857 885 888 845 852 854 858 860 865 867 868 871 875 884 891 897 900 418 707 906 137 149 157 218 232 278 403 406 425 869 903 515 516 536 889 576 598 632 633 634 635 637 638 650 689 735 737 738 751 771 | 16 | 71 | v0.2 | Queue drains. |
+| 2026-09-20 12-18Z | 97: 773 775 777 780 781 782 783 785 786 788 789 795 796 797 798 799 801 804 806 808 809 810 811 817 818 819 821 822 823 825 826 827 839 840 842 846 853 855 859 861 866 872 876 881 882 886 887 892 409 419 554 843 890 898 899 902 905 907 913 428 513 514 517 518 535 577 639 640 686 687 688 690 708 723 736 752 764 776 779 784 787 800 802 803 807 812 820 824 829 830 831 832 844 870 873 874 901 | 16 | 85 | v0.2 | Queue drains. |
+| 2026-09-20 18-24Z | 6: 724 828 904 909 910 911 | 16 | 38 | v0.2 | Queue drains. |
+
+Longest chain (branch-start, 27.8 h): 13 -> 42 -> 32 -> 33 -> 267 -> 268 -> 565 -> 37 -> 663 -> 339 -> 340 -> 627 -> 341 -> 342 -> 343 -> 617 -> 618 -> 623 -> 624 -> 625 -> 420 -> 421 -> 422. Without the branch-start rule the same chain is 40.4 h. The schedule is capacity-bound (16 builders busy 15.7 of the time), so a slipped issue moves its milestone only if it sits on this chain or on the tables / identity / realtime P1 chains; Atlas re-simulates nightly and republishes this table.
 
 ## 3. Release-candidate checkpoints
 
@@ -48,35 +52,27 @@ Freeze: no new claims after 09-30 12:00Z except `release-blocker` issues.
 
 ## 4. Credit burn model
 
-Allowance per builder session: **S $10, M $22, L $50**; PAP-98 meters, PAP-111 enforces 2x as the hard stop (S $20, M $44, L $100). Overlays per landed PR: Gate 2 $6 (three reviewers), vision and video $1.50, re-review $1.80 average (30 percent bounce rate), Quill changelog $2; plus Gate 4 hunter $30 per night from 09-27 and Atlas $20 per day. Rounds 1-2 of planning are booked at $300 until Ledger has the console figure.
+Round 4: list price under mix B from the token model of `docs/cost-and-duration-estimate.md` section 3 (builder tokens by Size, Effort as labeled, reviewer 40% on Fable 5.1, QA gate 25% on Opus 5 for code issues, x1.25 contingency, RC reviews $68.75 each), booked on the day a session starts. *Build $* = builder sessions of Build / Infra issues; *QA $* = every reviewer session, QA gate and RC review; *Plan $* = Spec builders; *Docs $*, *Research $* = those builders. *To Justin* is the cumulative plan line x0.02 (billed as whole $2,500 chunks: 5 x $50 = $250 for the scheduled scope, +$100 with `v0.2`). The *allowance cross-check* is the old per-session allowance (S $10, M $22, L $50) summed over the day's builder starts: it tracks the builder columns within about 15%, so PAP-98 metering and the PAP-111 2x hard stop (S $20, M $44, L $100) keep their numbers. Raw rows: `plan/round4/sched/burn.json`.
 
-| Day | Sessions S/M/L | Build starts P0/P1/P2 | Build $ | QA $ | Plan $ | Docs $ | Research $ | Day $ | Plan line $ |
-| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
-| 09-17 | 3/7/0 | 3/0/0 | 66 | 84 | 74 | 18 | 64 | 306 | 306 |
-| 09-18 | 6/10/1 | 9/0/0 | 174 | 121 | 106 | 36 | 60 | 497 | 803 |
-| 09-19 | 5/11/3 | 11/0/0 | 274 | 140 | 118 | 40 | 60 | 632 | 1,435 |
-| 09-20 | 7/14/0 | 13/2/0 | 294 | 195 | 84 | 62 | 0 | 635 | 2,070 |
-| 09-21 | 2/18/1 | 12/7/0 | 422 | 195 | 20 | 42 | 44 | 723 | 2,793 |
-| 09-22 | 3/13/4 | 6/10/1 | 422 | 167 | 64 | 36 | 50 | 739 | 3,532 |
-| 09-23 | 2/12/3 | 3/12/0 | 390 | 289 | 42 | 36 | 0 | 757 | 4,289 |
-| 09-24 | 0/13/4 | 2/13/1 | 464 | 167 | 42 | 36 | 0 | 709 | 4,998 |
-| 09-25 | 5/12/3 | 1/14/1 | 400 | 199 | 20 | 58 | 10 | 687 | 5,685 |
-| 09-26 | 3/14/2 | 0/11/4 | 362 | 158 | 74 | 34 | 22 | 650 | 6,335 |
-| 09-27 | 0/10/6 | 0/4/10 | 476 | 182 | 20 | 50 | 0 | 728 | 7,063 |
-| 09-28 | 1/8/2 | 0/3/4 | 210 | 245 | 30 | 48 | 0 | 533 | 7,596 |
-| 09-29 | 3/9/0 | 0/1/6 | 142 | 192 | 42 | 72 | 0 | 448 | 8,044 |
-| 09-30 | 1/2/0 | 0/0/2 | 44 | 132 | 20 | 22 | 10 | 228 | 8,272 |
-| 10-01 | 0/0/0 | 0/0/0 | 0 | 49 | 20 | 4 | 0 | 73 | 8,345 |
+| Day | Sessions S/M/L | Build starts P0/P1/P2 | Landed | Build $ | QA $ | Plan $ | Docs $ | Research $ | Day $ | Plan line $ | To Justin (x0.02) | Allowance cross-check $ |
+| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| 2026-09-18 (RC0) | 51/111/1 | 62/49/4 | 139 | 891 | 1,633 | 384 | 10 | 142 | 3,060 | 3,060 | $61.20 | 3,002 |
+| 2026-09-19 (RC1) | 64/276/1 | 34/174/71 | 344 | 1,945 | 4,088 | 367 | 10 | 60 | 6,470 | 9,530 | $190.59 | 6,762 |
+| 2026-09-20 (RC2, RC3) | 83/14/0 | 6/46/31 | 118 | 210 | 672 | 16 | 16 | 5 | 920 | 10,450 | $209.00 | 1,138 |
+| v0.2 (after RC3) | 47/143/5 | 0/0/184 | 195 | 1,185 | 2,211 | 16 | 1 | 5 | 3,418 | 13,868 | $277.35 | 3,866 |
 
-Reconciliation to the 12/45/30/8/5 split of $10,000:
+Reconciliation to the round-2 12/45/30/8/5 split (scheduled scope, mix B, list):
 
-| Bucket | Scheduled | Pools and reserves | Total | Share |
+| Bucket | List $ | Share | To Justin | Round-2 share |
 | -- | -- | -- | -- | -- |
-| Planning | 776 (26 Spec units $476, Atlas $300) | 300 rounds 1-2, 124 reserve | 1,200 | 12% |
-| Building | 4,140 (166 Build/Infra units: 20 S, 120 M, 26 L; P0 $1,272 / P1 $1,974 / P2 $894) | 360 retry pool (about 16 M retries) | 4,500 | 45% |
-| Automated QA | 2,515 (per-PR gates $2,335, 7 Review units $142, hunter, calibration) | 485 evals (PAP-110), RC3 regression | 3,000 | 30% |
-| Docs, changelog, prompt logs | 594 (10 Docs units $148, Quill $446) | 206 handbook and release notes (PAP-112, PAP-89) | 800 | 8% |
-| Research and scouting | 320 (14 Research units, cap $30 each) | 180 spikes and Scout | 500 | 5% |
+| Planning (59 Spec builders) | $767 | 7% | $15.33 | 12% |
+| Building (477 Build / Infra builders) | $3,048 | 29% | $60.96 | 45% |
+| Automated QA (601 reviewer sessions, 477 QA gates, 4 RC reviews, 28 Review builders) | $6,391 | 61% | $127.83 | 30% |
+| Docs (17 Docs builders) | $36 | 0% | $0.72 | 8% |
+| Research (20 Research builders) | $208 | 2% | $4.16 | 5% |
+| **Total** | **$10,450** | 100% | **$209.00** | |
+
+QA is the largest bucket because the reviewer overlay runs on Fable 5.1 behind 374 Sonnet 5 builders; the retry pool ($360), the $500 RC3 reserve and the stop-loss rules of section 5 are unchanged and sit outside these figures.
 
 ## 5. Stop-loss rules
 
