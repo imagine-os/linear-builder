@@ -1,0 +1,1231 @@
+{
+ "project": "business-core",
+ "projectName": "Business Core: Payments, Finance & Payroll",
+ "benchmarks": [
+  "Stripe (Billing, Connect, Tax, Invoicing, Terminal, Radar, Billing Meters)",
+  "QuickBooks Online",
+  "Xero",
+  "FreshBooks",
+  "Wave",
+  "Bill.com",
+  "Expensify",
+  "Square POS",
+  "Gusto",
+  "Rippling",
+  "Check",
+  "Deel",
+  "Toggl and Harvest (time)",
+  "Brex and Ramp (spend)",
+  "Chargebee and Stripe Billing (usage and recognition)"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "Finance data model: parties, chart of accounts, periods, Money",
+   "coveredBy": [
+    "PAP-175"
+   ],
+   "status": "covered",
+   "note": "Six default charts; Money decided in contracts doc"
+  },
+  {
+   "feature": "Exchange rates and FX conversion",
+   "coveredBy": [
+    "r4/business-core/fx-rates-and-conversion"
+   ],
+   "status": "gap",
+   "note": "Referenced by five specs, defined nowhere"
+  },
+  {
+   "feature": "Ledger dimensions (department, location, project, class)",
+   "coveredBy": [
+    "PAP-183",
+    "r4/business-core/ledger-dimensions-registry"
+   ],
+   "status": "partial",
+   "note": "jsonb exists, no registry or validation"
+  },
+  {
+   "feature": "Platform plans, subscriptions, customer portal (Stripe Billing)",
+   "coveredBy": [
+    "PAP-177"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Entitlements and limits",
+   "coveredBy": [
+    "PAP-178"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Platform usage metering and metered prices",
+   "coveredBy": [
+    "PAP-391"
+   ],
+   "status": "covered",
+   "note": "Amend to Billing Meters API"
+  },
+  {
+   "feature": "Double-entry journal, immutability, gapless numbering",
+   "coveredBy": [
+    "PAP-392"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Hash chain, reversals, period close and lock",
+   "coveredBy": [
+    "PAP-393"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Posting rule registry and journal UI",
+   "coveredBy": [
+    "PAP-394"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Finance permissions, role presets, separation of duties",
+   "coveredBy": [
+    "r4/business-core/finance-permissions-and-roles"
+   ],
+   "status": "gap",
+   "note": "Permissions invented per spec, never registered"
+  },
+  {
+   "feature": "Quotes, invoices, receipts, credit notes, bills model",
+   "coveredBy": [
+    "PAP-395"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Branded PDFs, public pay page, Checkout",
+   "coveredBy": [
+    "PAP-396"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Invoice postings, reminders, portal invoice list, emails",
+   "coveredBy": [
+    "PAP-397"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Recurring invoices and dunning ladder",
+   "coveredBy": [
+    "PAP-180",
+    "r4/business-core/recurring-invoices-dunning"
+   ],
+   "status": "partial",
+   "note": "Inline work package; now a child"
+  },
+  {
+   "feature": "Item and service catalogue with prices and accounts",
+   "coveredBy": [
+    "r4/business-core/item-catalogue"
+   ],
+   "status": "gap",
+   "note": "Lines are free text today"
+  },
+  {
+   "feature": "Discounts, coupons and promotion codes",
+   "coveredBy": [
+    "r4/business-core/discounts-and-promo-codes"
+   ],
+   "status": "gap",
+   "note": "PAP-408 assumes Stripe coupons"
+  },
+  {
+   "feature": "Deposits, retainers and instalment plans",
+   "coveredBy": [
+    "r4/business-core/deposits-retainers-installments"
+   ],
+   "status": "gap",
+   "note": "Agency and clinic packs need it"
+  },
+  {
+   "feature": "Refunds and customer credit balances",
+   "coveredBy": [
+    "r4/business-core/document-refunds-and-credit-balance"
+   ],
+   "status": "gap",
+   "note": "Credit notes exist, money never returns"
+  },
+  {
+   "feature": "Customer statements of account",
+   "coveredBy": [
+    "r4/business-core/customer-statements"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Metered billing for tenant customers",
+   "coveredBy": [
+    "r4/business-core/tenant-metered-billing"
+   ],
+   "status": "gap",
+   "note": "PAP-180 out; SaaS pack needs it"
+  },
+  {
+   "feature": "Revenue recognition and deferred revenue",
+   "coveredBy": [
+    "r4/business-core/revenue-recognition"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Stripe Connect onboarding, direct charges, payouts",
+   "coveredBy": [
+    "PAP-181"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Connect reconciliation and discrepancy dataset",
+   "coveredBy": [
+    "PAP-181"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Disputes, chargebacks, Radar rules",
+   "coveredBy": [
+    "PAP-181",
+    "r4/business-core/disputes-radar-evidence"
+   ],
+   "status": "partial",
+   "note": "Postings only; no inbox or evidence"
+  },
+  {
+   "feature": "Sales tax and VAT (Stripe Tax) with evidence",
+   "coveredBy": [
+    "PAP-182"
+   ],
+   "status": "covered",
+   "note": "Deferred v0.2"
+  },
+  {
+   "feature": "P&L, balance sheet, cash flow, aging, GL, trial balance",
+   "coveredBy": [
+    "PAP-183"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Report exports CSV, XLSX, PDF",
+   "coveredBy": [
+    "PAP-183"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Budgets and variance reporting",
+   "coveredBy": [
+    "r4/business-core/budgets-and-variance"
+   ],
+   "status": "gap",
+   "note": "PAP-183 out"
+  },
+  {
+   "feature": "Cash-flow dashboard and runway",
+   "coveredBy": [
+    "PAP-186"
+   ],
+   "status": "covered",
+   "note": "MRR source needs amendment"
+  },
+  {
+   "feature": "Cash forecast scenarios",
+   "coveredBy": [
+    "r4/business-core/cash-forecast-scenarios"
+   ],
+   "status": "gap",
+   "note": "PAP-186 out"
+  },
+  {
+   "feature": "Bank feeds and statement import",
+   "coveredBy": [
+    "r4/business-core/bank-feed-port-and-statement-import"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Bank reconciliation and matching",
+   "coveredBy": [
+    "r4/business-core/bank-reconciliation-matching"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Vendor bills, approval and AP payments",
+   "coveredBy": [
+    "r4/business-core/vendor-bills-and-ap-payments"
+   ],
+   "status": "gap",
+   "note": "bill kind exists, no AP workflow"
+  },
+  {
+   "feature": "Purchase orders and receiving",
+   "coveredBy": [
+    "r4/business-core/purchase-orders-and-receiving"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Inventory stock and COGS",
+   "coveredBy": [
+    "r4/business-core/inventory-stock-and-cogs"
+   ],
+   "status": "gap",
+   "note": "Retail and restaurant packs"
+  },
+  {
+   "feature": "Expense capture with receipt OCR",
+   "coveredBy": [
+    "PAP-185"
+   ],
+   "status": "covered",
+   "note": "Deferred v0.2"
+  },
+  {
+   "feature": "Mileage and per diem",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "v0.3; PAP-185 out; no issue this round"
+  },
+  {
+   "feature": "Payroll provider research and ADR",
+   "coveredBy": [
+    "PAP-176"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Payroll adapter, webhooks, contract suite",
+   "coveredBy": [
+    "PAP-398"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Payroll company and employee onboarding",
+   "coveredBy": [
+    "PAP-399"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Payroll runs, approval, postings, paystubs",
+   "coveredBy": [
+    "PAP-400"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Contractors and 1099 tracking",
+   "coveredBy": [
+    "r4/business-core/contractors-and-1099"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Timesheets, time-off and hours into payroll",
+   "coveredBy": [
+    "r4/business-core/timesheets-to-payroll-hours"
+   ],
+   "status": "gap",
+   "note": "PAP-184 out"
+  },
+  {
+   "feature": "Payroll filings status, W-2 and 1099 forms, deductions and benefits mapping",
+   "coveredBy": [
+    "r4/business-core/payroll-filings-forms-and-deductions"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Point of sale and Stripe Terminal",
+   "coveredBy": [
+    "r4/business-core/stripe-terminal-pos"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Year-end close and closing entries",
+   "coveredBy": [
+    "r4/business-core/year-end-close"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Fixed assets and depreciation",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "v0.3; no issue this round"
+  },
+  {
+   "feature": "Multi-entity consolidation",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "Explicit non-goal (PAP-183); v0.3"
+  },
+  {
+   "feature": "PCI SAQ-A posture and key custody",
+   "coveredBy": [
+    "PAP-359"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Finance demo seed and golden fixtures",
+   "coveredBy": [
+    "PAP-183",
+    "PAP-487",
+    "r4/business-core/finance-demo-seed"
+   ],
+   "status": "partial",
+   "note": "Three issues each seed their own numbers"
+  },
+  {
+   "feature": "Contract package, conformance, kernel wiring",
+   "coveredBy": [
+    "PAP-484",
+    "PAP-487",
+    "PAP-490"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Accountant hand-off exports (GL CSV)",
+   "coveredBy": [
+    "PAP-183",
+    "PAP-420"
+   ],
+   "status": "partial",
+   "note": "Covered by report exports and archive; no QBO-shaped file"
+  },
+  {
+   "feature": "Tenant webhooks for finance events",
+   "coveredBy": [
+    "PAP-222"
+   ],
+   "status": "covered",
+   "note": "Identity project; deferred"
+  },
+  {
+   "feature": "Notifications for finance alerts",
+   "coveredBy": [
+    "PAP-186",
+    "PAP-136"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Multi-currency documents and FX gain or loss postings",
+   "coveredBy": [
+    "PAP-397",
+    "r4/business-core/fx-rates-and-conversion"
+   ],
+   "status": "partial",
+   "note": "Needs the rates table"
+  },
+  {
+   "feature": "Audit trail on money movement",
+   "coveredBy": [
+    "PAP-38",
+    "PAP-393"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Agent guardrails on money (draft only, deny list)",
+   "coveredBy": [
+    "PAP-359",
+    "PAP-298"
+   ],
+   "status": "covered",
+   "note": ""
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/business-core/recurring-invoices-dunning",
+   "title": "Recurring invoice schedules, dunning ladder with late fees and saved-card retry on the connected account",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Ledger and reports",
+   "dueDate": "2026-09-29",
+   "parent": "PAP-180",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-395",
+    "PAP-396",
+    "PAP-397",
+    "PAP-43"
+   ],
+   "blocks": [
+    "PAP-186"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nGive a clinic, agency or landlord that bills its own customers monthly a recurring path in the PAP-180 document model: schedules that generate and send invoices, a dunning ladder of reminders, late fees and card retries, and saved payment methods on the connected account. Formerly PAP-180 work package 4 (folded in 2026-09-17, FIX-5), now the fourth child so it is claimable on its own. Tenant-to-customer billing only; platform subscriptions stay in PAP-177.\n\n**Scope**\n\nIn: `packages/finance/src/recurring/` (jobs `recurring.generate` hourly, `dunning.walk` daily), tables `fin_recurring_schedule (party_id, template_document_id, cadence: weekly|monthly|quarterly|yearly, day_of_period, next_run_at, timezone, auto_send, auto_charge, status: active|paused|ended, ends_at?)` and `fin_dunning_policy (name, steps jsonb [{ offset_days, action: remind|late_fee|retry|escalate, template_id?, fee }], is_default)` with per-party override, procedures `recurring.*` and `dunning.*`, `/finance/recurring` page, portal Upcoming list, `stripe_payment_method_id` on `fin_customer` via SetupIntent from the pay page.\n\nOut: usage-based tenant billing (`r4/business-core/tenant-metered-billing`), proration, contracts and e-signature, platform dunning (Stripe Billing handles PAP-177).\n\n**Spec**\n\n* Generation creates the next document from the template with `{{period.start}}` and `{{period.end}}` substitutions, issues it via `documents.issue`, sends when `auto_send`, charges the saved method when `auto_charge` through a PaymentIntent on the PAP-181 account (platform test mode otherwise); idempotent per `(schedule_id, period_start)`.\n* `next_run_at` in the schedule timezone; the 31st uses the last day of shorter months; DST never skips or doubles a period.\n* Dunning walks overdue documents through `steps` by `offset_days`, recording each action as a `document.event` (and `crm_activity` through `@paperos/contract-growth` when enabled); a late fee adds a `fee` line posted through PAP-397 rules; retries follow Stripe smart-retry windows, capped at four; a payment cancels pending steps.\n* Reminders pass `canContact(contact, 'email', 'transactional')` from the growth consent centre when present; an opted-out party still accrues fees, receives nothing and is flagged for manual contact.\n* All amounts are `Money`; fee caps and percentages use `Money.allocate`, never floats.\n* Agents may create and pause schedules, never enable `auto_charge`; every charge is audited.\n\n**Interface contract**\n\nProvides: `recurring.*`, `dunning.policies.*`, `dunning.run(documentId)`, events `recurring.generated`, `dunning.step_applied` (v1), dataset `finance.recurring`, portal route `_portal/upcoming`, `finance.mrr` input for PAP-186. Consumes: documents and state machine (PAP-395), pay page and Checkout (PAP-396), posting rules and email templates (PAP-397), jobs and test clock (PAP-43), connected charges (PAP-181, optional), consent centre (`r4/growth/consent-compliance-centre`, soft), automations `recurring.pause|resume` (PAP-174, soft).\n\n**Definition of done**\n\n* Unit and integration suites green on the compose stack with a Stripe test clock; PAP-359 Semgrep rules pass.\n* Playwright: schedule from an invoice, preview three dates, edit the dunning policy, portal Upcoming list; screenshots at 375, 1024, 1920 in three themes.\n* `docs/finance/recurring-dunning.md`; CHANGELOG; Linear comment on PAP-180 with the test-clock replay.\n\n**Test plan**\n\n* Unit: next-run computation across month ends, leap years and DST; substitution; idempotency key; late-fee maths with caps; retry window selection; `canContact` refusal path.\n* E2E: on a Stripe test clock a monthly schedule generates three invoices over three simulated months, the second stays unpaid and receives remind, late fee and retry on the right days; a paused schedule skips a period; saved-card charge succeeds (`4242`) and fails (`4000000000000341`).\n\n**Demo**\n\nReviewer turns a seeded invoice into a monthly schedule, advances the test clock a month, sees the generated invoice, advances past due and watches the reminder and late fee appear. Under two minutes.\n\n**Edge cases**\n\n* Template edited: applies to future occurrences only; in-flight documents keep their lines.\n* Restricted connected account: charges skipped, invoices still generated with bank-transfer instructions and a finance banner.\n* Party archived mid-schedule: schedule `ended` with reason, no further sends.\n* Concurrent resume by two admins: one generation per period (advisory lock on `schedule_id`).\n\n**Dependencies**\n\nHard: PAP-395, PAP-396, PAP-397, PAP-43. Soft: PAP-181, PAP-174, `r4/growth/consent-compliance-centre`. Blocks PAP-186 (`finance.mrr`).\n\n**Agent**\n\nBuilder: Ledger (Payments Integrator with Bookkeeper on fee postings). Reviewer: Sentinel (Security Auditor for saved-method handling, Edge Case Hunter for calendars).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/fx-rates-and-conversion",
+   "title": "Exchange rate table and FX service: daily rates job with a fixture provider, rateAt lookup, functional-currency conversion and realised gain or loss helpers",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Ledger and reports",
+   "dueDate": "2026-09-29",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-175",
+    "PAP-43"
+   ],
+   "blocks": [
+    "PAP-183",
+    "PAP-185",
+    "PAP-423"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nFive specs (PAP-175 `convert(rate)`, PAP-179 `fx_gain_loss`, PAP-183 functional amounts, PAP-185 receipt FX, PAP-206 and PAP-423 base equivalents) say 'from the rates table' and none defines it. This issue owns the table, the daily job, the lookup and the gain or loss arithmetic so every multi-currency line converts the same way.\n\n**Scope**\n\nIn: `packages/finance/src/fx/` with table `fin_fx_rate (tenant_id nullable for platform rates, base char(3), quote char(3), rate numeric(18,8), as_of date, source: ecb|openexchangerates|manual|fixture, fetched_at)` unique on `(tenant_id, base, quote, as_of)`; job `fx.fetch` daily (PAP-43) behind a `RateProvider` port with `ecb` (free XML feed), `openexchangerates` (key from PAP-17) and `fixture` (committed JSON, the CI default) adapters; `fx.rateAt(date, from, to)` with previous-business-day fallback and triangulation through the base; `convertToFunctional(money, date)`; `realisedGainLoss(bookedFunctional, settledFunctional)`; procedures `fx.rates.list|setManual`; settings section for manual overrides.\n\nOut: hedging, unrealised revaluation at period end (`r4/business-core/year-end-close` notes it), crypto.\n\n**Spec**\n\n* Rates are stored as decimal strings and multiplied with `decimal.js`; results round half-even to the currency exponent from the PAP-175 ISO table (JPY 0, KWD 3).\n* `rateAt` returns `{ rate, asOf, source, stale: boolean }`; `stale` when `as_of` is more than 3 business days before the requested date; consumers surface stale as a footnote, never as an error.\n* Manual rates win over provider rates for the same day and tenant; platform rates (`tenant_id null`) are the default for every tenant.\n* `fixture` adapter ships 400 days of EUR, USD, GBP, JPY, CAD, AUD, CHF, KWD so tests are deterministic without network; the provider port is registered in the manifest as a swappable adapter (`docs/module-system.md`).\n* Realised gain or loss posts to the `fx_gain_loss` subtype through the PAP-394 `adjustment` rule with the source document as `subject`.\n\n**Interface contract**\n\nProvides: `RateProvider` port, `fx.rateAt`, `convertToFunctional`, `realisedGainLoss`, table and dataset `finance.fxRates`, job `fx.fetch`, settings section `shell.settings.sections:fx`. Consumes: `Money` and ISO exponents (PAP-175), jobs (PAP-43), env (PAP-17), posting (PAP-394), settings slot (PAP-264).\n\n**Definition of done**\n\n* Property tests (`fast-check`) show conversion round trips within one minor unit and never produce floats; fixture adapter passes offline in CI; ECB adapter tested against a recorded XML response.\n* PAP-183 multi-currency footnote and PAP-397 FX handling read `rateAt` (integration test posts a EUR invoice into a USD tenant and settles at a different rate, asserting the `fx_gain_loss` line).\n* `docs/finance/fx.md`; CHANGELOG; Linear comment naming the consumers switched over.\n\n**Test plan**\n\n* Unit: triangulation, half-even rounding per exponent, previous-business-day fallback, manual override precedence, stale flag, gain or loss sign.\n* E2E: settings page lists today's rates, an admin sets a manual GBP rate and the next invoice preview uses it with a 'manual' badge.\n\n**Demo**\n\nReviewer runs `pnpm tsx scripts/fx-demo.ts 2026-09-15 EUR JPY 1999` and reads the converted amount, source and staleness, then sets a manual rate in settings and reruns. Under one minute.\n\n**Edge cases**\n\n* Weekend or holiday: fallback to the last published rate, `stale: false` within 3 business days.\n* Currency pair with no path through the base: `VALIDATION` naming both currencies.\n* Provider outage: job retries with backoff; yesterday's rates remain; alert after two missed days (PAP-40).\n* Functional currency change is blocked by PAP-175; this issue never rewrites history.\n\n**Dependencies**\n\nHard: PAP-175, PAP-43. Soft: PAP-17, PAP-394, PAP-40. Blocks PAP-183 (footnote), PAP-185, PAP-423 (soft for both).\n\n**Agent**\n\nBuilder: Ledger (Bookkeeper). Reviewer: Sentinel (Code Reviewer, Edge Case Hunter for rounding).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/business-core/finance-demo-seed",
+   "title": "Finance demo seed: twelve months of balanced journals, invoices, bills, subscriptions and payroll runs for the demo tenant and the conformance fixtures",
+   "type": "Docs",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Staff"
+   ],
+   "milestone": "Ledger and reports",
+   "dueDate": "2026-09-29",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Haiku 4.5",
+   "modelId": "claude-haiku-4-5-20251001",
+   "effort": "low",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-175",
+    "PAP-392",
+    "PAP-395"
+   ],
+   "blocks": [
+    "PAP-183",
+    "PAP-186",
+    "PAP-487"
+   ],
+   "description": "**Model / Effort:** Haiku 4.5 (`claude-haiku-4-5-20251001`) / low — Docs S\n\n**Goal**\n\nPAP-183 wants a textbook fixture, PAP-186 wants a seeded tenant, PAP-487 wants twelve golden transactions and PAP-208 seeds demo data, each separately. One seed profile produces all of them from a single YAML source so numbers agree across reports, dashboard and conformance.\n\n**Scope**\n\nIn: `packages/finance/seed/demo-finance.yaml` (parties, chart `saas`, 12 months of dated business events), generator `pnpm db:seed --profile demo-finance` that replays events through `ledger.postEvent` and `documents.*` (never raw inserts), `test/fixtures/finance/textbook.json` with the expected P&L, balance sheet, cash flow, AR and AP aging per month on accrual and cash bases, and the twelve golden transactions plus expected journal lines exported for PAP-487.\n\nOut: pack sample data (PAP-427), payroll provider sandbox data (mock adapter events only).\n\n**Spec**\n\n* Events: 40 customer invoices (three currencies, two partially paid, one voided, one credit note), 20 vendor bills, 24 Stripe-shaped platform events, 6 payroll runs through the mock adapter, 3 manual adjustments, one period close; every event carries a deterministic `source.id` so re-seeding is idempotent.\n* Expected report values are computed by an independent 80-line script (plain arithmetic on the YAML) and committed; PAP-183 asserts equality to the cent.\n* Seed runs in under 60 s on PGlite and Postgres; `--reset` rolls back by reversing entries (ledger immutability respected).\n* Fixture names and amounts are obviously fictional; no real company names.\n\n**Interface contract**\n\nProvides: `demo-finance` seed profile, `textbook.json`, golden transactions for `@paperos/contract-business-core/fixtures`, `pnpm db:seed --profile demo-finance`. Consumes: finance model and seeds (PAP-175), posting (PAP-392, PAP-394), documents (PAP-395), demo seed conventions (PAP-208).\n\n**Definition of done**\n\n* Seed idempotent (second run creates zero entries); `verifyChain` green after seeding; expected values file committed with the generator script.\n* PAP-183 and PAP-186 test suites consume the fixture (comment on both issues); PAP-487 fixtures folder points at the exported transactions.\n* `docs/finance/demo-seed.md` lists every event; CHANGELOG.\n\n**Test plan**\n\n* Unit: generator determinism (same YAML, same ids), expected-value script against three hand-checked months.\n* E2E: `pnpm db:seed --profile demo-finance && pnpm ledger verify demo` exits 0 and `/finance/reports/pnl` shows the September net income from `textbook.json`.\n\n**Demo**\n\nReviewer seeds, opens the P&L and compares three lines with `textbook.json`. Under two minutes.\n\n**Edge cases**\n\n* Seed on a tenant with existing entries: refused unless `--tenant` is a fresh demo tenant.\n* Chart subtype missing (custom chart): seed fails naming the subtype before writing.\n\n**Dependencies**\n\nHard: PAP-175, PAP-392, PAP-395. Soft: PAP-394, PAP-208. Blocks PAP-183, PAP-186, PAP-487 (fixtures).\n\n**Agent**\n\nBuilder: Ledger (Bookkeeper) with Quill. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/business-core/finance-permissions-and-roles",
+   "title": "Finance permission set and role presets: bookkeeper, accountant read-only, payroll admin and billing admin, with the ledger:post and payroll.approve guards in the permission matrix",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Ledger and reports",
+   "dueDate": "2026-09-29",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-175",
+    "PAP-59",
+    "PAP-227"
+   ],
+   "blocks": [
+    "PAP-394",
+    "PAP-400",
+    "PAP-183"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build S\n\n**Goal**\n\nEleven finance specs each invent permissions (`ledger.post`, `payroll.approve`, `billing.manage`, `payments.manage`, `expense.approve`, `reports.read`, `tax.manage`, `documents.*`) and none registers them or says which role gets them. This issue defines the finance permission set once, ships role presets and wires them into the PAP-64 matrix so separation of duties is testable.\n\n**Scope**\n\nIn: `packages/finance/src/permissions.ts` registering resources and actions with PAP-59 (`finance.accounts|periods|journal|documents|payments|payroll|expenses|reports|tax|billing` by `read|write|post|approve|export|manage`), role presets `bookkeeper`, `accountant` (read and export only), `payroll_admin`, `billing_admin` layered on the PAP-55 base roles and installed on finance module enablement, separation-of-duties rules (`payroll.approve` never with `payroll.write` on the same principal unless owner; `expense.approve` denied to the submitter), agent principal defaults (draft only), `finance.access.md` matrix, PAP-64 fixtures per role.\n\nOut: row-level restrictions by dimension (v0.3), customer portal permissions (PAP-62).\n\n**Spec**\n\n* Permissions are `resource:action` strings per the contracts document; conditions use PAP-227 attributes (`actor.attributes.character` for agents, `record.created_by` for self-approval denial).\n* Presets are `is_system` roles cloned per tenant; owners may edit copies; the matrix test regenerates when a preset changes.\n* Every finance procedure declares its permission in its oRPC meta; a Vitest scan fails when a `finance.*` procedure has none.\n* Sensitive actions (`ledger.post`, `payroll.approve`, `payments.manage`, `billing.manage`) require a human session or an agent character carrying the exact scope; `X-PaperOS-Reason` mandatory for agents (PAP-38).\n\n**Interface contract**\n\nProvides: permission registry `financePermissions`, presets, `requireFinance(action)` middleware, matrix fixtures, `docs/finance/access.md`. Consumes: permission engine (PAP-59, PAP-227), base roles (PAP-55), matrix generator (PAP-64), audit (PAP-38), agent principals (PAP-60).\n\n**Definition of done**\n\n* Matrix at policy, HTTP and UI level green for the four presets plus owner and a customer principal on every finance page spec; separation-of-duties tests green.\n* Procedure scan finds zero unregistered finance procedures; presets installed by `installFinanceRoles(tenantId)` idempotently.\n* `docs/finance/access.md`; CHANGELOG; comments on PAP-394, PAP-400, PAP-183 naming the permission each uses.\n\n**Test plan**\n\n* Unit: registry completeness, preset composition, self-approval denial, agent default scope.\n* E2E: an `accountant` can open every report and export CSV but the Post button is absent in `/finance/journal`; a `payroll_admin` cannot approve a run they created.\n\n**Demo**\n\nReviewer logs in as the seeded accountant, opens the journal, sees no Post action, then as payroll admin tries to approve their own run and reads the separation-of-duties message. Under two minutes.\n\n**Edge cases**\n\n* Tenant with a single owner: separation rules relax for `owner` with an audit note.\n* Role deleted while sessions are active: PAP-223 payload refresh applies within one request.\n* Agent asks for `ledger:post`: only through a roster change (NJ item), never self-granted.\n\n**Dependencies**\n\nHard: PAP-175, PAP-59, PAP-227. Soft: PAP-55, PAP-64, PAP-60. Blocks PAP-394, PAP-400, PAP-183 (soft: they may start with inline checks and adopt the registry).\n\n**Agent**\n\nBuilder: Ledger (Compliance sub-agent). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/business-core/ledger-dimensions-registry",
+   "title": "Ledger dimension registry: department, location, project and class dimensions per tenant, validated on posting and exposed as report filters",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Ledger and reports",
+   "dueDate": "2026-09-29",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-392"
+   ],
+   "blocks": [
+    "PAP-183",
+    "PAP-424"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\n`dimensions jsonb` appears on transactions, journal lines, documents and payroll postings, PAP-183 takes a `dimensions` parameter and PAP-424 asks whether the ledger 'supports dimensions', but nothing defines which dimensions exist or validates values. A small registry closes that.\n\n**Scope**\n\nIn: table `fin_dimension (tenant_id, key, label, kind: select|relation, options jsonb?, dataset_key?, required_on: kind[]?, is_active)`, seeded `department`, `location`, `project`, `class`; validation inside `ledger_post` (unknown key or option rejects with `VALIDATION`); `dimensions` filter and group-by in PAP-183 `defineReport` params; settings page `/finance/settings/dimensions`; posting rules may set defaults from the source (payroll department, document line dimension).\n\nOut: row-level permissions by dimension, hierarchies beyond one parent level.\n\n**Spec**\n\n* Dimension values on lines are `{ key: value }` with `value` an option key or a record id of `dataset_key`; a `relation` dimension resolves labels through PAP-161 at read time.\n* Deactivating a dimension keeps history; new postings may not use it; reports still group by it for past periods.\n* GIN index on `fin_journal_line.dimensions` and a materialised per-period balance by `(account_id, dimension key, value)` refreshed with `fin_account_balance`.\n\n**Interface contract**\n\nProvides: `fin_dimension`, `validateDimensions`, `dimensions.*` procedures, report param support, settings page. Consumes: journal tables and `ledger_post` (PAP-392), reports (PAP-183), datasets (PAP-161).\n\n**Definition of done**\n\n* Posting with an unknown dimension rejected; P&L grouped by department matches a brute-force sum on the demo seed; settings page screenshots at 375, 1024, 1920.\n* `docs/finance/dimensions.md`; CHANGELOG; comment on PAP-424 confirming dimensions exist for tracking categories.\n\n**Test plan**\n\n* Unit: validation matrix (unknown key, inactive option, relation id missing), balance maintenance per dimension.\n* E2E: add a `location` option, post a manual entry with it, filter the P&L by that location.\n\n**Demo**\n\nReviewer adds `location: Austin`, posts an entry and filters the P&L to it. Under two minutes.\n\n**Edge cases**\n\n* Line without a required dimension: rejected naming the dimension and the rule that requires it.\n* Option renamed: label changes, key stable, history intact.\n\n**Dependencies**\n\nHard: PAP-392. Soft: PAP-183, PAP-161. Blocks PAP-183 and PAP-424 (soft).\n\n**Agent**\n\nBuilder: Ledger (Bookkeeper). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/business-core/bank-feed-port-and-statement-import",
+   "title": "Bank feed port with a fixture adapter and statement import (CSV, OFX, CAMT.053) into bank accounts and bank transactions",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-175",
+    "PAP-392",
+    "PAP-37"
+   ],
+   "blocks": [
+    "r4/business-core/bank-reconciliation-matching"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nBooks are only trustworthy when the `cash` account agrees with the bank. This issue brings bank data in: a `BankFeedPort` with a deterministic fixture adapter first (Plaid, GoCardless Bank Account Data and Stripe Financial Connections as later adapters behind the same port) and statement file import so every tenant can reconcile even without a feed provider.\n\n**Scope**\n\nIn: `packages/finance/src/bank/` with tables `fin_bank_account (party-less, ledger_account_id with subtype cash, institution, mask_last4, currency, feed_connection_id?, feed_status)`, `fin_bank_transaction (bank_account_id, external_id unique per account, posted_at, amount_minor, currency, description, counterparty, category_hint, raw jsonb, matched_entry_id?, status: unmatched|matched|excluded)`; `BankFeedPort { connect(), listAccounts(), sync(cursor), disconnect() }` with `fixture` adapter (committed 90-day statement) and the adapter registry entry for `plaid` and `gocardless` (dryRun stubs only, credentials are an NJ item); parsers for CSV (bank presets), OFX/QFX and ISO 20022 CAMT.053 via the PAP-199 import framework as a `bank-statement` connector.\n\nOut: matching and reconciliation UI (sibling), payments initiation, card feeds beyond Stripe balance (PAP-181).\n\n**Spec**\n\n* Statement import uses `SourceConnector` so dry run, dedupe by `external_id` or `(posted_at, amount, description hash)` and rollback come free (PAP-347, PAP-348, PAP-201).\n* Sync is incremental by provider cursor; duplicates across feed and file import collapse on the same hash; amounts are `Money`.\n* Feed credentials are stored through PAP-353 `encrypted()`; account numbers never stored beyond `mask_last4`.\n* Events `bank.transaction.imported` (`defineTopic`, v1); dataset `finance.bankTransactions` for the grid.\n\n**Interface contract**\n\nProvides: `BankFeedPort`, `bankFeeds[id]` registry, tables, connector `bank-statement`, dataset, `bank.accounts.*`, `bank.sync`. Consumes: cash accounts (PAP-175), ledger (PAP-392), files (PAP-37), import framework (PAP-347, PAP-348, PAP-201), encryption (PAP-353), jobs (PAP-43).\n\n**Definition of done**\n\n* Fixture adapter and three statement formats import 90 days with zero duplicates on rerun; Vitest and integration green offline.\n* Bank accounts page screenshots at 375, 1024, 1920 in three themes.\n* `docs/finance/bank-feeds.md` with the provider activation checklist (NJ item template); CHANGELOG.\n\n**Test plan**\n\n* Unit: each parser on five real-shaped fixtures (dates, negative formats, multi-currency), hash dedupe, cursor resume, mask.\n* E2E: upload an OFX file, see transactions listed as unmatched, rerun and see zero new rows.\n\n**Demo**\n\nReviewer connects the fixture bank, syncs, uploads a CSV for the same period and sees the duplicates collapsed. Under two minutes.\n\n**Edge cases**\n\n* Pending transactions that later post with a new id: matched by amount and date within two days, old row superseded.\n* Statement in a currency different from the account: rejected with the currency named.\n* Feed revoked by the bank: `feed_status: reauth_required`, banner, file import still works.\n\n**Dependencies**\n\nHard: PAP-175, PAP-392, PAP-37, PAP-347, PAP-348. Soft: PAP-201, PAP-353. Blocks `r4/business-core/bank-reconciliation-matching`.\n\n**Agent**\n\nBuilder: Ledger (Bookkeeper). Reviewer: Sentinel (Security Auditor for credentials, Edge Case Hunter for parsers).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/bank-reconciliation-matching",
+   "title": "Bank reconciliation: automatic matching rules, suggested matches, split and create-from-bank actions, reconciliation statement and month-end lock check",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "r4/business-core/bank-feed-port-and-statement-import",
+    "PAP-394",
+    "PAP-397"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nTurn bank transactions into a reconciled cash account: match them to existing journal lines and documents automatically, let staff confirm, split or create entries from a bank line, and produce the reconciliation statement a period close needs.\n\n**Scope**\n\nIn: `bank/match.ts` rules (exact amount and date within 3 days, Stripe payout ids, invoice number in description, vendor name via `pg_trgm`, learned vendor to account), `bank.suggest`, `bank.match`, `bank.unmatch`, `bank.split`, `bank.createEntry` (posts through PAP-394 rules `bank.payment|receipt|transfer|fee`), rules editor for tenant patterns, `/finance/bank/reconcile` two-pane page, reconciliation statement `finance.bankReconciliation` (opening, cleared, uncleared, ending) with PDF export, PAP-393 close hook refusing close when unreconciled items exceed a threshold unless overridden with reason.\n\nOut: feed adapters and parsers (sibling), receipt OCR (PAP-185).\n\n**Spec**\n\n* Matching never posts on its own; suggestions carry `confidence` and `reason`; one-click confirm for confidence above 0.9, review list otherwise.\n* A bank line may match many ledger lines and vice versa (many-to-many through `fin_bank_match`); sums must agree to the cent or a `fees|fx` remainder line is proposed.\n* Transfers between two tenant bank accounts are detected by mirror amounts and post a single `transfer` entry.\n* Excluding a line records a reason; excluded lines show on the statement.\n\n**Interface contract**\n\nProvides: matching procedures, `fin_bank_match`, rules editor, reconciliation dataset and statement, close hook `ledger.beforeClose`. Consumes: bank transactions (sibling), posting rules (PAP-394), document payments (PAP-397), period close (PAP-393), grid (PAP-165), PDF (PAP-235).\n\n**Definition of done**\n\n* Fixture month reconciles to zero difference with 85 percent auto-matched; unit and Playwright green; statement PDF snapshot.\n* Screenshots at 375, 1024, 1920 in three themes; keyboard-only match flow.\n* `docs/finance/reconciliation.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: each rule on fixtures, many-to-many sums, remainder proposal, transfer detection, threshold logic.\n* E2E: confirm a suggestion, split one bank line across two invoices, create an entry from an unknown fee, export the statement, attempt a period close and read the unreconciled warning.\n\n**Demo**\n\nReviewer opens Reconcile, confirms the green suggestions, splits one line and exports the statement showing a zero difference. Under two minutes.\n\n**Edge cases**\n\n* Same amount twice on one day: both suggestions shown at lower confidence, never auto-confirmed.\n* Match to a line in a locked period: allowed (bank side only) with a note; ledger untouched.\n* Unmatch after close: opens an adjustment in the current period, never edits history.\n\n**Dependencies**\n\nHard: `r4/business-core/bank-feed-port-and-statement-import`, PAP-394, PAP-397. Soft: PAP-393, PAP-165, PAP-235.\n\n**Agent**\n\nBuilder: Ledger (Bookkeeper). Reviewer: Sentinel (Edge Case Hunter, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/vendor-bills-and-ap-payments",
+   "title": "Vendor bills and accounts payable: bill entry and approval, due-date scheduling, payment batches via Stripe or manual, remittance advice and AP postings",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-395",
+    "PAP-397",
+    "PAP-181"
+   ],
+   "blocks": [
+    "PAP-183"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-180 defines a `bill` kind and PAP-183 an AP aging, but nobody owns entering, approving and paying vendor bills. Every business pays suppliers; this closes the payable half of the ledger.\n\n**Scope**\n\nIn: `packages/finance/src/payables/`: bill editor on `fin_document kind bill` (vendor, lines to expense accounts, due date from vendor terms, attachment), approval flow with `fin_settings.bill_approval_threshold_minor`, `bills.schedulePayment`, payment batches `fin_payment_batch (method: stripe_transfer|ach_manual|check|wire|card, status, total_minor, executed_at)`, execution through PAP-181 `createTransfer` to vendor Connect accounts when both sides are onboarded, else `mark paid` with reference; remittance advice email (PAP-397 templates); postings `bill.approved` (debit expense per line, credit `ap`), `bill.paid` (debit `ap`, credit `cash`), partial payments; vendor portal-less: remittance PDF only.\n\nOut: purchase orders and three-way matching (`r4/business-core/purchase-orders-and-receiving`), receipt OCR (PAP-185, which creates bills here), payroll (PAP-184).\n\n**Spec**\n\n* Bill statuses `draft|pending_approval|approved|scheduled|partial|paid|void`; transitions are the only writes; approval by a second user above threshold (reuses `r4/business-core/finance-permissions-and-roles` separation rules).\n* Payment execution is a PAP-43 job with idempotency key `bill:<id>:<attempt>`; Stripe transfers use the restricted `payouts` key from PAP-359; failures leave the bill `scheduled` with the error.\n* Early-payment discount terms (`2/10 net 30`) compute the discount line when paid inside the window.\n* Agents may draft and propose payments, never execute (deny list: payouts and transfers).\n\n**Interface contract**\n\nProvides: `bills.*`, `paymentBatches.*`, posting rules `bill.*`, dataset `finance.bills` (AP aging source), notification kinds `bill.approval_requested|paid`. Consumes: documents (PAP-395), templates and postings (PAP-397), Connect transfers (PAP-181), jobs (PAP-43), permissions (`r4/business-core/finance-permissions-and-roles`), files (PAP-37).\n\n**Definition of done**\n\n* Test-mode flow recorded: bill entered, approved by a second user, scheduled, executed through a Stripe test transfer, `ap` at zero; no live key.\n* Rule fixtures balance; Playwright bill editor and batch approval; screenshots at 375, 1024, 1920 in three themes.\n* `docs/finance/payables.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: transitions, threshold routing, discount window maths, partial payment allocation with `Money.allocate`, idempotency.\n* E2E: enter a bill from a PDF attachment, approve as a second user, add to a batch, execute in test mode, see remittance email in the sandbox and the journal entries.\n\n**Demo**\n\nReviewer creates a bill over the threshold, sees approval requested, approves as the seeded accountant, pays it in a test batch and opens the AP aging showing it gone. Under two minutes.\n\n**Edge cases**\n\n* Vendor without a Connect account: batch offers manual methods only.\n* Bill in a foreign currency: FX at approval and payment via `r4/business-core/fx-rates-and-conversion`.\n* Duplicate bill (same vendor, number, total): warned before save.\n* Void after partial payment: refused; credit note path instead.\n\n**Dependencies**\n\nHard: PAP-395, PAP-397, PAP-181, PAP-43. Soft: `r4/business-core/finance-permissions-and-roles`, `r4/business-core/fx-rates-and-conversion`, PAP-185. Blocks PAP-183 AP aging completeness (soft).\n\n**Agent**\n\nBuilder: Ledger (Payments Integrator with Bookkeeper). Reviewer: Sentinel (Security Auditor for money movement, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/purchase-orders-and-receiving",
+   "title": "Purchase orders and receiving: PO editor from vendor items, approval, partial receipts, three-way match to vendor bills and open-PO reporting",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "r4/business-core/vendor-bills-and-ap-payments",
+    "r4/business-core/item-catalogue"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nRetail, restaurant and construction businesses order before they are billed. Purchase orders with receiving and a three-way match (PO, receipt, bill) stop paying for goods never delivered and feed inventory quantities.\n\n**Scope**\n\nIn: `fin_purchase_order (vendor_id, number, status: draft|approved|sent|partial|received|closed|cancelled, expected_at, ship_to jsonb, notes)`, `fin_purchase_order_line (item_id?, description, qty_ordered, qty_received, unit_cost_minor, expense_or_inventory_account_id)`, `fin_receipt (po_id, received_at, lines)`; PO PDF and send email via PAP-396 and PAP-397 templates; receiving screen with barcode-free quantity entry; `bills.createFromPo` pre-filling lines and flagging variances over tolerance; dataset `finance.openPurchaseOrders`; inventory hook `onReceive` for `r4/business-core/inventory-stock-and-cogs`.\n\nOut: supplier portals, EDI, drop-shipping, landed cost allocation (v0.3).\n\n**Spec**\n\n* Receiving posts nothing for expense lines; inventory lines post `inventory.received` (debit `inventory`, credit `goods_received_not_invoiced`) when the inventory issue is present, else nothing until the bill.\n* Three-way match tolerance per tenant (`fin_settings.po_match_tolerance_pct`, default 2); variances become a review item on the bill.\n* Numbering through the PAP-395 sequence mechanism (`PO-` prefix format in `fin_settings`).\n* Closing a PO with unreceived quantity records the shortfall reason.\n\n**Interface contract**\n\nProvides: `purchaseOrders.*`, `receipts.*`, `bills.createFromPo`, hook `onReceive`, datasets, PDF template `purchase-order`. Consumes: bills (`r4/business-core/vendor-bills-and-ap-payments`), items (`r4/business-core/item-catalogue`), PDF and email (PAP-396, PAP-397), sequences (PAP-395), grid (PAP-165).\n\n**Definition of done**\n\n* Unit and Playwright green; PDF snapshot; screenshots at 375, 1024, 1920 in three themes.\n* Three-way match test: bill within tolerance auto-approves match, over tolerance creates a variance item.\n* `docs/finance/purchasing.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: status machine, partial receipt arithmetic, tolerance logic, bill pre-fill.\n* E2E: create a PO for two items, receive one fully and one partially, create the bill from the PO and see the variance flag.\n\n**Demo**\n\nReviewer raises a PO, receives part of it, converts it to a bill and reads the variance banner. Under two minutes.\n\n**Edge cases**\n\n* Over-receipt beyond ordered quantity: allowed with a warning and a note on the line.\n* Vendor changes price on the bill: variance by line, not total.\n* PO cancelled after partial receipt: remaining lines cancelled, received lines kept.\n\n**Dependencies**\n\nHard: `r4/business-core/vendor-bills-and-ap-payments`, `r4/business-core/item-catalogue`. Soft: `r4/business-core/inventory-stock-and-cogs`, PAP-396, PAP-397.\n\n**Agent**\n\nBuilder: Ledger (Bookkeeper). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/item-catalogue",
+   "title": "Item catalogue: products and services with SKU, prices per currency, default revenue and expense accounts, tax codes and Stripe Price sync for tenant checkout",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Ledger and reports",
+   "dueDate": "2026-09-29",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-395",
+    "PAP-175"
+   ],
+   "blocks": [
+    "r4/business-core/inventory-stock-and-cogs",
+    "r4/business-core/purchase-orders-and-receiving",
+    "r4/business-core/stripe-terminal-pos"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nInvoice, quote and bill lines are free text today. A shared catalogue of what a business sells and buys gives consistent pricing, correct revenue accounts and tax codes per line, and is the object inventory, POS, purchase orders and CRM deal products all reference.\n\n**Scope**\n\nIn: `fin_item (tenant_id, sku unique, name, kind: product|service|bundle, description, unit, is_active, sell: { prices jsonb [{ currency, amount_minor, price_list? }], revenue_account_id, tax_code, stripe_product_id?, stripe_price_ids jsonb }, buy: { default_cost_minor, expense_or_inventory_account_id, preferred_vendor_id? }, track_inventory bool, custom jsonb)`; `items.*` procedures; item picker in the PAP-395 line editor filling description, price, account and tax; price lists per customer group; optional Stripe Product and Price sync on the connected account (`items.syncStripe`) so PAP-396 Checkout uses catalogue prices; dataset and grid `/finance/items`; CSV import through PAP-200 with a preset.\n\nOut: stock quantities and COGS (`r4/business-core/inventory-stock-and-cogs`), variants matrices (retail pack models them as items with attributes), subscriptions for tenant customers (recurring issue).\n\n**Spec**\n\n* Prices are `Money` per currency; missing currency falls back through `r4/business-core/fx-rates-and-conversion` with a badge.\n* Changing an item's account or price never rewrites issued documents (lines snapshot the values at issue).\n* Stripe sync is idempotent on `metadata.paperos_item_id`; archived items archive the Stripe price, never delete.\n* Bundles expand to component lines at pick time with the bundle price allocated by `Money.allocate`.\n\n**Interface contract**\n\nProvides: `fin_item`, `items.*`, `ItemPicker`, `items.syncStripe`, dataset `finance.items`, CSV preset `items`. Consumes: document lines and sequences (PAP-395), accounts and tax codes (PAP-175, PAP-182 optional), Stripe client (PAP-177), Connect (PAP-181 optional), grid (PAP-165), CSV importer (PAP-200).\n\n**Definition of done**\n\n* Unit and Playwright green; Stripe sync verified in test mode with recorded fixtures; screenshots at 375, 1024, 1920 in three themes.\n* Invoice created from three catalogue items posts revenue to three different accounts (integration test).\n* `docs/finance/items.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: price resolution order (customer price list, currency, fallback), bundle allocation, sync idempotency, snapshot on issue.\n* E2E: create two items, build a quote from the picker, accept it, and see the revenue split in the journal.\n\n**Demo**\n\nReviewer adds a service item with a USD and EUR price, creates an invoice for a EUR customer from the picker and sees the right price and account. Under two minutes.\n\n**Edge cases**\n\n* SKU collision on import: suffixed and reported by the dry run.\n* Item archived while on a draft document: line kept with a warning at issue.\n* Tax code unsupported by Stripe Tax: manual rate path from PAP-182.\n\n**Dependencies**\n\nHard: PAP-395, PAP-175. Soft: PAP-177, PAP-181, PAP-182, PAP-200, `r4/business-core/fx-rates-and-conversion`. Blocks inventory, purchase orders and POS issues.\n\n**Agent**\n\nBuilder: Ledger (Payments Integrator). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/inventory-stock-and-cogs",
+   "title": "Inventory stock levels and COGS: stock movements per location, weighted-average and FIFO costing, cost of goods sold postings on sale, adjustments and low-stock alerts",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "r4/business-core/item-catalogue",
+    "PAP-394"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nRetail and restaurant packs model inventory as plain tables with no accounting behind them. This gives stock quantities per location and the COGS postings that make gross profit on the P&L real, behind the item catalogue so every sale and receipt moves stock consistently.\n\n**Scope**\n\nIn: `fin_stock_movement (item_id, location_id, qty numeric(14,4), unit_cost_minor, kind: receipt|sale|adjustment|transfer|count, source EntityRef, occurred_at)` append-only, `fin_stock_level` materialised per `(item, location)`, `fin_location`; costing method per tenant (`weighted_average` default, `fifo` with layers); hooks: `onReceive` from purchase orders, `invoice.issued` lines with `track_inventory` post `cogs` (debit `cogs`, credit `inventory`) at the current cost; adjustments and stock counts with variance postings; low-stock alert via PAP-136 when `qty < reorder_point`; datasets `finance.stockLevels`, `finance.stockMovements`; grid pages under `/finance/inventory`.\n\nOut: serial and lot tracking, manufacturing and BOMs, landed cost, multi-warehouse transfers in transit (v0.3).\n\n**Spec**\n\n* Movements are immutable; corrections are new movements; every posting carries the movement id as `source_id` so `ledger.postEvent` stays idempotent.\n* Weighted average recomputed per receipt; FIFO consumes layers oldest first and stores the layer ids on the sale movement; both proven against a textbook fixture.\n* Negative stock allowed per tenant setting with a warning; COGS uses the last known cost until the next receipt back-fills the variance to `cogs_adjustment`.\n* Voided invoices reverse the COGS posting and the movement (new `sale` movement with negative qty).\n\n**Interface contract**\n\nProvides: tables, `inventory.*` procedures, costing engine `costOf(item, location, qty)`, posting rules `inventory.*`, `cogs`, datasets, alert kind `inventory.low_stock`. Consumes: items (`r4/business-core/item-catalogue`), posting rules (PAP-394), documents (PAP-395, PAP-397 void), purchase orders (`r4/business-core/purchase-orders-and-receiving`, optional), notifications (PAP-136), grid (PAP-165).\n\n**Definition of done**\n\n* Textbook fixture: 12 receipts and sales under both methods match hand-computed COGS to the cent; property test that stock value equals the `inventory` account balance after any movement sequence.\n* Playwright: receive, sell through an invoice, count and adjust; screenshots at 375, 1024, 1920 in three themes.\n* `docs/finance/inventory.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: weighted average, FIFO layers, negative stock path, void reversal, reorder alert once per crossing.\n* E2E: receive 10 units at two costs, invoice 6, check gross profit on the P&L and the remaining layer.\n\n**Demo**\n\nReviewer receives stock via a PO, issues an invoice for part of it and opens the P&L to see COGS and gross profit appear. Under two minutes.\n\n**Edge cases**\n\n* Sale before any receipt: COGS at zero cost, flagged, back-filled on the first receipt.\n* Item switched from service to product: movements start from a counted opening balance.\n* Costing method change: allowed only at a period boundary with an opening revaluation entry.\n\n**Dependencies**\n\nHard: `r4/business-core/item-catalogue`, PAP-394. Soft: PAP-395, PAP-397, `r4/business-core/purchase-orders-and-receiving`, PAP-136.\n\n**Agent**\n\nBuilder: Ledger (Bookkeeper). Reviewer: Sentinel (Edge Case Hunter for costing, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/customer-statements",
+   "title": "Customer statements and account balances: per-party statement of account with running balance, PDF and portal download, batch send and overdue summary",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Ledger and reports",
+   "dueDate": "2026-09-29",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-397",
+    "PAP-183"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nCustomers with several open invoices ask 'what do I owe you' and finance answers with a spreadsheet. A statement of account per party, rendered with the PAP-235 kit and available in the portal, answers it and doubles as the dunning escalation document.\n\n**Scope**\n\nIn: `statements.generate(partyId, range)` building opening balance, invoices, payments, credit notes and closing balance from the ledger `ar` subaccount by party; PDF template `statement`; `statements.send` through PAP-397 templates with `canContact` transactional check; batch send to all parties with balance over zero on a schedule; portal `_portal/statement` page; dataset `finance.customerBalances` (balance, oldest open, last payment) for CRM company pages.\n\nOut: vendor statements reconciliation (v0.3), interest on overdue (dunning issue handles fees).\n\n**Spec**\n\n* Statement lines come from journal lines with `party_id`, so manual payments and FX adjustments appear; totals reconcile to AR aging for the same as-of date (test).\n* Range presets `thisMonth|lastMonth|last90|custom`; running balance in functional currency with per-currency subtotals when mixed.\n* Batch send skips parties with `do_not_contact` and logs the skip.\n\n**Interface contract**\n\nProvides: `statements.generate|send|batch`, PDF template, portal route, dataset `finance.customerBalances`, activity source `statement.sent`. Consumes: postings and templates (PAP-397), aging (PAP-183), PDF kit (PAP-235, PAP-396), portal shell (PAP-64), consent (`r4/growth/consent-compliance-centre`, soft).\n\n**Definition of done**\n\n* Statement total equals AR aging for every seeded party (integration test); PDF snapshot at two brands; portal Playwright; screenshots at 375, 1024.\n* `docs/finance/statements.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: running balance arithmetic, range presets, currency subtotals, skip rules.\n* E2E: generate a statement for a seeded party, download from the portal, batch send and read the sandbox emails.\n\n**Demo**\n\nReviewer opens a company page, clicks Statement, sees the running balance and downloads the PDF from the portal as that customer. Under two minutes.\n\n**Edge cases**\n\n* Party is both customer and vendor: statement shows AR only; AP netting is out of scope and stated.\n* Credit balance (overpayment): shown negative with a 'credit available' note.\n\n**Dependencies**\n\nHard: PAP-397, PAP-183. Soft: PAP-235, PAP-64, `r4/growth/consent-compliance-centre`.\n\n**Agent**\n\nBuilder: Ledger (Bookkeeper). Reviewer: Sentinel (Visual Inspector, Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/business-core/deposits-retainers-installments",
+   "title": "Deposits, retainers and installment plans: partial payment schedules on quotes and invoices, retainer balances with drawdown, deferred liability postings",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-395",
+    "PAP-396",
+    "PAP-397"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nAgencies take retainers, contractors take deposits, clinics take instalments. PAP-180 handles a whole invoice paid at once or partially by hand; this adds payment schedules, deposit requests on quotes and retainer balances drawn down by later invoices, with the liability accounting done right.\n\n**Scope**\n\nIn: `fin_payment_schedule (document_id, installments jsonb [{ due_date, amount_minor, status, stripe_checkout_session_id? }])` on quotes and invoices; deposit request on quote acceptance (PAP-395 `accept` creates the deposit checkout via PAP-396); `fin_retainer (party_id, balance_minor, currency, terms)` funded by a `retainer` document kind and drawn down by `documents.applyRetainer`; postings `deposit.received` (debit cash, credit `customer_deposits` liability), `deposit.applied` (debit liability, credit `ar`), retainer analogues; pay page shows the schedule with one Pay button per due instalment; portal Upcoming integration with the recurring issue.\n\nOut: financing or BNPL providers, interest, refunds of deposits beyond the refund issue.\n\n**Spec**\n\n* Instalment sums must equal the document total (`Money.allocate` for even splits); editing a schedule after any payment only touches unpaid instalments.\n* Each instalment payment is idempotent on `stripe_event.id`; the document becomes `partial` until the last instalment, then `paid`.\n* Retainer drawdown is capped at the balance; the remainder of an invoice stays open on `ar`.\n* Unapplied deposits older than a tenant-set number of days appear in a review dataset.\n\n**Interface contract**\n\nProvides: `schedules.*`, `retainers.*`, `documents.applyRetainer`, posting rules `deposit.*`, `retainer.*`, pay-page schedule component, dataset `finance.unappliedDeposits`. Consumes: documents (PAP-395), pay page and Checkout (PAP-396), postings and receipts (PAP-397), portal (PAP-64), recurring Upcoming list (`r4/business-core/recurring-invoices-dunning`, soft).\n\n**Definition of done**\n\n* Test-mode flow recorded: quote with 30 percent deposit accepted and paid, invoice issued, two instalments paid, liability at zero; no live key.\n* Rule fixtures balance; Playwright schedule editor and pay page; screenshots at 375, 1024, 1920 in three themes.\n* `docs/finance/deposits-retainers.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: allocation, schedule edit rules, drawdown cap, status transitions, liability arithmetic.\n* E2E: accept a quote with a deposit, pay it with `4242`, issue the invoice, apply the deposit and pay the remaining instalment.\n\n**Demo**\n\nReviewer funds a retainer, issues an invoice larger than the balance, applies the retainer and sees the remaining AR and the liability entries. Under two minutes.\n\n**Edge cases**\n\n* Instalment paid early: allowed; later instalments unchanged.\n* Deposit on a quote that is later declined: stays as an unapplied deposit awaiting refund or credit.\n* Currency of retainer differs from invoice: refused with the currency named.\n\n**Dependencies**\n\nHard: PAP-395, PAP-396, PAP-397. Soft: PAP-64, `r4/business-core/recurring-invoices-dunning`, `r4/business-core/document-refunds-and-credit-balance`.\n\n**Agent**\n\nBuilder: Ledger (Payments Integrator with Bookkeeper). Reviewer: Sentinel (Security Auditor for the pay page, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/discounts-and-promo-codes",
+   "title": "Discounts and promotion codes: tenant-level coupon rules for quotes, invoices and checkout plus Stripe Coupons and Promotion Codes for platform plans",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-395",
+    "PAP-177"
+   ],
+   "blocks": [
+    "PAP-408"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nTwo audiences need discounts: PaperOS itself (plan promotions, referral credits in PAP-408) and every tenant selling to its customers. One `fin_discount` model covers percentage, fixed and free-period rules with limits, redemption tracking and correct revenue contra postings, syncing to Stripe where Stripe collects the money.\n\n**Scope**\n\nIn: `fin_discount (scope: platform|tenant, code, kind: percent|fixed|free_periods, value, currency?, applies_to: all|items[]|plans[], starts_at, ends_at, max_redemptions, per_customer_limit, min_subtotal_minor, stackable, status)`, `fin_discount_redemption`; validation `discounts.validate(code, cart)`; document-level and line-level discount application in PAP-395 `computeTotals` (contra-revenue line to `discounts_given`); Checkout `discounts` and `allow_promotion_codes` on PAP-396 sessions; platform scope synced to Stripe Coupons and Promotion Codes for PAP-177 plans; settings pages for both scopes; redemption dataset.\n\nOut: loyalty points and gift cards (v0.3, noted in the matrix), affiliate reward calculation (PAP-408 consumes credits from here).\n\n**Spec**\n\n* Code normalisation: uppercase, Crockford-safe, profanity filter shared with PAP-407.\n* Redemption counting is transactional with an advisory lock per code; `max_redemptions` never exceeded under 50 parallel checkouts (test).\n* Discount lines snapshot the rule at issue; deleting a rule never changes issued documents.\n* Platform sync idempotent on `metadata.paperos_discount_id`; credit-type rewards from PAP-408 become Stripe customer balance adjustments through this module's `discounts.grantCredit`.\n\n**Interface contract**\n\nProvides: `fin_discount`, `discounts.validate|apply|grantCredit|sync`, `computeTotals` discount hook, Checkout wiring, datasets `finance.discounts`, `finance.redemptions`. Consumes: documents and totals (PAP-395), Checkout (PAP-396), Stripe client and plans (PAP-177), items (`r4/business-core/item-catalogue`, soft), profanity filter (PAP-407, soft).\n\n**Definition of done**\n\n* Unit, concurrency and Playwright green; Stripe sync verified in test mode with recorded fixtures; screenshots at 375, 1024, 1920 in three themes.\n* PAP-408 credit rewards flow through `grantCredit` (comment on PAP-408).\n* `docs/finance/discounts.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: each rule kind, stacking rules, limits, min subtotal, code normalisation, contra-revenue posting.\n* E2E: create a 10 percent code, apply it on an invoice, pay via Checkout with the promotion code and see the contra-revenue line.\n\n**Demo**\n\nReviewer creates `WELCOME10`, adds it to a quote, accepts and pays it in test mode and sees the discount line and redemption count. Under two minutes.\n\n**Edge cases**\n\n* Expired code at checkout time: rejected with the expiry date.\n* Percentage on a multi-rate tax invoice: applied pre-tax per line with `Money.allocate`.\n* Stripe coupon deleted in the Dashboard: sync recreates it and comments in the settings page.\n\n**Dependencies**\n\nHard: PAP-395, PAP-177. Soft: PAP-396, PAP-407, `r4/business-core/item-catalogue`. Blocks PAP-408 (credit rewards).\n\n**Agent**\n\nBuilder: Ledger (Payments Integrator). Reviewer: Sentinel (Edge Case Hunter for stacking, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/disputes-radar-evidence",
+   "title": "Disputes and fraud controls: Stripe Radar rules per tenant, dispute inbox with evidence assembly from documents and activity, deadlines, outcome postings",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-181",
+    "PAP-397"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-181 posts `charge.dispute.*` to a reserve and stops there. Losing a dispute by missing the deadline is the most expensive thing a small business can do with cards; this adds the inbox, the evidence pack and the outcome accounting.\n\n**Scope**\n\nIn: `fin_dispute (stripe_dispute_id, charge_id, document_id?, amount_minor, reason, status, evidence_due_by, submitted_at, outcome)` from connected webhooks; `/finance/disputes` inbox with countdown; evidence assembler pulling the invoice PDF, pay-page view log, receipt email, portal login history and support conversation (through `@paperos/contract-growth`, optional) into Stripe's evidence fields via `disputes.update`; submit action with confirmation; Radar rule presets per tenant (block on high risk score, require 3DS above an amount) written to the connected account's Radar rules where the API allows, else documented; postings on `won` (reserve back to `stripe_balance`) and `lost` (reserve to `disputes_expense`, fee to `fees`).\n\nOut: chargeback insurance, manual card-not-present reviews, non-Stripe rails.\n\n**Spec**\n\n* Deadline alerts via PAP-136 at 7, 3 and 1 days before `evidence_due_by`; the inbox sorts by deadline.\n* Evidence files are uploaded through Stripe `files.create` with `purpose: dispute_evidence`, never stored twice; the pack is content-addressed in PAP-37 for the audit trail.\n* Submission requires `payments.manage`; agents may assemble, never submit.\n\n**Interface contract**\n\nProvides: `fin_dispute`, `disputes.list|assemble|submit`, posting rules `dispute.won|lost`, inbox route, notification kind `dispute.deadline`. Consumes: Connect webhooks and postings (PAP-181), documents and receipts (PAP-397, PAP-396), notifications (PAP-136), files (PAP-37), support conversations (`@paperos/contract-growth`, optional).\n\n**Definition of done**\n\n* Fixture disputes (`stripe trigger charge.dispute.created`) appear in the inbox with deadlines; evidence assembled and submitted in test mode, recorded; outcome postings balance.\n* Screenshots at 375, 1024, 1920 in three themes; `docs/finance/disputes.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: deadline alert schedule, evidence field mapping, outcome postings, permission gate.\n* E2E: trigger a dispute, open the inbox, assemble evidence, submit, trigger `charge.dispute.closed` won and see the reserve released.\n\n**Demo**\n\nReviewer triggers a test dispute, watches it appear with a 7-day countdown, assembles the pack and submits it. Under two minutes.\n\n**Edge cases**\n\n* Dispute on a charge with no PaperOS document (imported history): evidence limited to Stripe data, flagged.\n* Deadline passed: inbox shows 'expired', posting on `lost` when the webhook arrives.\n* Partial dispute amount: reserve moves the disputed amount only.\n\n**Dependencies**\n\nHard: PAP-181, PAP-397. Soft: PAP-136, PAP-37, PAP-396, growth support contract.\n\n**Agent**\n\nBuilder: Ledger (Payments Integrator). Reviewer: Sentinel (Security Auditor, Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/business-core/budgets-and-variance",
+   "title": "Budgets and variance: per-account and per-dimension budgets by period, budget import from spreadsheet, variance columns in the P&L and threshold alerts",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-183",
+    "r4/business-core/ledger-dimensions-registry"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-183 explicitly leaves budgeting out and PAP-186 leaves forecasting out. A founder who can read the P&L next wants to compare it with a plan; budgets per account and department with variance in the same report close that loop cheaply because the report engine already exists.\n\n**Scope**\n\nIn: `fin_budget (name, fiscal_year, status: draft|active|archived, basis)`, `fin_budget_line (budget_id, account_id, dimension jsonb?, period_id, amount_minor)`; budget editor grid (PAP-165 with inline edit and fill-right); `budgets.import` via PAP-200 CSV preset (account code by month columns); `comparison: budget` option in PAP-183 `ReportParams` adding Budget, Variance and Variance percent columns; alerts when actuals exceed budget by a threshold (PAP-136, once per period per line); dataset `finance.budgetVsActual`; dashboard block for PAP-186.\n\nOut: driver-based forecasting, rolling reforecasts (`r4/business-core/cash-forecast-scenarios`), approval workflows on budgets.\n\n**Spec**\n\n* Budget amounts are `Money` in functional currency; lines without a dimension apply to the account total, dimension lines to that slice; both can coexist and the report shows the finer one where present.\n* Copying last year's actuals into a draft budget with a percentage uplift is one action (`budgets.seedFromActuals`).\n* Variance sign convention: favourable positive for revenue and negative for expense, stated in the column header tooltip.\n\n**Interface contract**\n\nProvides: tables, `budgets.*`, report comparison `budget`, dataset, block `finance.budgetVariance`, CSV preset `budget`. Consumes: reports (PAP-183), dimensions (`r4/business-core/ledger-dimensions-registry`), grid (PAP-165), CSV importer (PAP-200), notifications (PAP-136), dashboards (PAP-173).\n\n**Definition of done**\n\n* Variance on the demo seed equals a brute-force calculation; alert fires once; Playwright editor and report; screenshots at 375, 1024, 1920 in three themes.\n* `docs/finance/budgets.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: line precedence (dimension over account), variance signs, uplift seeding, alert once-per-period.\n* E2E: seed a budget from actuals plus 10 percent, edit two cells, open the P&L with budget comparison and click a variance to drill.\n\n**Demo**\n\nReviewer seeds next year's budget from actuals, edits marketing, opens the P&L with the Budget comparison and reads the variance. Under two minutes.\n\n**Edge cases**\n\n* Fiscal year starting July: periods align to `fiscal_year_start_month`.\n* Account deactivated mid-year: budget line kept, flagged.\n* Budget in a locked fiscal year: read-only.\n\n**Dependencies**\n\nHard: PAP-183, `r4/business-core/ledger-dimensions-registry`. Soft: PAP-165, PAP-200, PAP-136, PAP-173.\n\n**Agent**\n\nBuilder: Ledger (Bookkeeper). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/contractors-and-1099",
+   "title": "Contractor payments and 1099 tracking: contractor onboarding through the payroll provider, payments via provider or Connect transfers, W-9 status, 1099-NEC threshold tracking and year-end forms",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-398",
+    "PAP-399",
+    "PAP-181"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-175 knows contractors (`employment_type`, `w9_on_file`) and PAP-176 lists `contractors?` as an optional provider capability, but no issue pays a contractor or tracks the 1099 threshold. Agencies, salons, construction and gig businesses are mostly contractors.\n\n**Scope**\n\nIn: `payroll_contractor_link (party_id, external_contractor_id, onboarding_status, w9_status, tax_classification)`; onboarding through the provider's hosted link when `capabilities.contractors`, else PaperOS collects only W-9 status flags (never the TIN) and pays via PAP-181 `createTransfer` to the contractor's Connect Express account; `contractorPayments.create|approve|pay` with typed-total approval like PAP-400; postings `contractor.paid` (debit `contractor_expense`, credit cash); YTD paid per contractor with the 1099-NEC threshold (configurable, default 600.00) and a year-end dataset `finance.form1099`; provider filing status surfaced when supported; portal page for contractors to see payments and download forms provided by the provider.\n\nOut: international contractors and withholding (capability flag only), EOR products, W-2 employees (PAP-400).\n\n**Spec**\n\n* No TIN or bank number stored by PaperOS; provider-hosted or Stripe-hosted collection only (PAP-359 rules apply; Semgrep gate).\n* Payments are idempotent on `paperos:<tenant>:contractor_payment:<id>`; failures leave `approved` with error.\n* Threshold tracking by calendar year in USD only in v0.2; other jurisdictions get a capability note.\n* Agents may draft payments, never approve or pay (deny list).\n\n**Interface contract**\n\nProvides: tables, `contractors.*`, `contractorPayments.*`, posting rule, datasets `finance.contractorPayments`, `finance.form1099`, portal route `_portal/contractor`. Consumes: provider adapter and capabilities (PAP-398), onboarding patterns (PAP-399), Connect transfers (PAP-181), approval UX (PAP-400), permissions (`r4/business-core/finance-permissions-and-roles`), portal (PAP-64).\n\n**Definition of done**\n\n* Mock adapter and Stripe test-mode flows recorded: onboard, pay two contractors, one crosses the threshold and appears in the 1099 dataset; postings balance; no live key.\n* Screenshots at 375, 1024, 1920 in three themes; `docs/finance/contractors.md` with the year-end checklist; CHANGELOG.\n\n**Test plan**\n\n* Unit: threshold arithmetic across years, idempotency, approval guard, capability branching.\n* E2E: onboard via the mock link, approve a payment with the typed total, trigger the paid event, open the 1099 dataset.\n\n**Demo**\n\nReviewer pays a seeded contractor twice, the second payment crosses 600.00 and the contractor appears in the 1099 list with the YTD total. Under two minutes.\n\n**Edge cases**\n\n* Contractor becomes an employee mid-year: both datasets show the split by date (PAP-175 history).\n* Payment reversed: negative row, YTD adjusted.\n* Provider lacks contractor support: Connect path only, banner explains filings are the tenant's job.\n\n**Dependencies**\n\nHard: PAP-398, PAP-399, PAP-181. Soft: PAP-400, PAP-64, `r4/business-core/finance-permissions-and-roles`.\n\n**Agent**\n\nBuilder: Ledger (Payroll Adapter with Payments Integrator). Reviewer: Sentinel (Security Auditor, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/timesheets-to-payroll-hours",
+   "title": "Timesheets and time-off: time entries with approval, PTO policies and balances through the provider where supported, and hours flowing into the payroll run grid",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-400",
+    "PAP-175"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-400's hours grid is typed by hand. Restaurants, clinics, gyms and agencies already record hours and time off; feeding those into payroll removes the most error-prone step of a run and gives agencies billable-time data for invoices.\n\n**Scope**\n\nIn: `fin_time_entry (employee_party_id, date, minutes, kind: regular|overtime|pto|sick|holiday, project_dimension?, billable, customer_party_id?, status: draft|submitted|approved|paid, approved_by)`, weekly timesheet page and mobile-friendly clock in and out; approval by managers (`manager_party_id` from PAP-175) with `timesheets.approve`; `fin_pto_policy` and balances computed locally or read from the provider when `capabilities.timeOff`; time-off request flow with calendar view (PAP-168); `payroll.runs.importHours(runId)` filling the PAP-400 grid from approved entries for the period with overtime rules per tenant (daily over 8, weekly over 40 as defaults); billable entries exposed to invoicing as `documents.linesFromTime`.\n\nOut: geofencing, biometric clocks, shift scheduling (restaurant pack models shifts as a table; sync is v0.3).\n\n**Spec**\n\n* Entries are immutable once `paid`; corrections create adjusting entries in the next period.\n* Overtime rules are pure functions with fixtures per jurisdiction preset (US federal default).\n* Provider time-off sync is one-way from provider when it owns accruals; otherwise PaperOS accrues per policy nightly (PAP-43).\n* Employees see only their own entries and balances in the portal; managers their reports; `timesheets.read|write|approve` registered with the finance permission set.\n\n**Interface contract**\n\nProvides: tables, `timesheets.*`, `timeOff.*`, `payroll.runs.importHours`, `documents.linesFromTime`, portal routes `_portal/timesheet`, `_portal/time-off`, datasets. Consumes: payroll run grid (PAP-400), employees and managers (PAP-175), calendar view (PAP-168), jobs (PAP-43), portal (PAP-64), permissions (`r4/business-core/finance-permissions-and-roles`), provider capabilities (PAP-398).\n\n**Definition of done**\n\n* Overtime fixtures green; import fills a run with the right regular and overtime minutes (integration); portal Playwright; screenshots at 375, 1024, 1920 in three themes.\n* `docs/finance/timesheets.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: overtime rules, accrual maths, immutability after paid, permission scope.\n* E2E: clock in and out over a week, submit, approve as manager, import into a payroll run and see the hours grid populated.\n\n**Demo**\n\nReviewer submits a week with 44 hours, approves it and imports it into the next run, seeing 40 regular and 4 overtime. Under two minutes.\n\n**Edge cases**\n\n* Entry spanning midnight: split at the boundary.\n* Time-off over balance: refused unless policy allows negative.\n* Employee terminated: entries approved through the end date only.\n\n**Dependencies**\n\nHard: PAP-400, PAP-175. Soft: PAP-168, PAP-43, PAP-64, PAP-398, `r4/business-core/finance-permissions-and-roles`.\n\n**Agent**\n\nBuilder: Ledger (Payroll Adapter). Reviewer: Sentinel (Edge Case Hunter for overtime, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/stripe-terminal-pos",
+   "title": "Point of sale with Stripe Terminal: in-person checkout screen from the item catalogue, reader pairing and simulated reader, tips, receipts and daily Z-report postings",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "r4/business-core/item-catalogue",
+    "PAP-181",
+    "PAP-397"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nRetail, restaurants, salons and clinics take payments at a counter. A simple POS on the item catalogue with Stripe Terminal (simulated reader in test mode) turns the platform into a till without building a payment processor, and posts each day's sales the same way invoices do.\n\n**Scope**\n\nIn: `/pos` route (staff, tablet-first layout, offline-tolerant cart in the PAP-148 queue), item grid with search and categories, cart with discounts (`r4/business-core/discounts-and-promo-codes`), tips, split tender (card via Terminal, cash, other), Stripe Terminal JS SDK with `simulated: true` readers in test mode and reader registration in settings, `fin_pos_sale` records creating a paid `receipt` document per sale through PAP-395 and PAP-397 postings, cash drawer sessions with opening float and Z-report at close (sales by tender, tips payable, over or short posting), receipt print via PAP-235 and email or SMS receipt.\n\nOut: Tap to Pay on phones (Tauri capability spike later), kitchen display, table management (restaurant pack tables are records), inventory decrement beyond the hook to `r4/business-core/inventory-stock-and-cogs`.\n\n**Spec**\n\n* Every sale is a `fin_transaction kind payment source pos` and a receipt document; refunds go through the refunds issue; tips post to `tips_payable`.\n* Card entry happens only on the reader or Stripe-hosted surfaces (PAP-359); the app never sees PAN; Semgrep rule set applies.\n* Offline: cart and cash sales queue locally and sync; card sales require connectivity and say so.\n* Z-report is immutable once closed; reopening creates a new session.\n\n**Interface contract**\n\nProvides: `pos.*` procedures, route, Terminal connection token endpoint, `fin_pos_sale`, `fin_drawer_session`, Z-report dataset `finance.posDaily`, receipt templates. Consumes: items (`r4/business-core/item-catalogue`), Connect account (PAP-181), documents and postings (PAP-395, PAP-397), discounts, inventory hook, offline queue (PAP-148), PDF theme (PAP-235), SMS via growth outreach provider (optional).\n\n**Definition of done**\n\n* Simulated-reader flow recorded: three sales (card, cash, split with tip), close drawer, Z-report balanced to the ledger; no live key.\n* Tablet screenshots at 768, 1024 landscape and 375; keyboard and touch tests; `docs/finance/pos.md` with the reader activation NJ checklist; CHANGELOG.\n\n**Test plan**\n\n* Unit: cart arithmetic with `Money`, split tender, tip allocation, Z-report totals, over or short.\n* E2E: open a drawer, sell two items with a promo code paid by simulated card, one cash sale, close the drawer and open the Z-report and journal.\n\n**Demo**\n\nReviewer rings up a coffee and a pastry, pays on the simulated reader, prints the receipt PDF, closes the day and reads the Z-report. Under two minutes.\n\n**Edge cases**\n\n* Reader disconnects mid-payment: PaymentIntent status polled; sale stays `pending` until resolved.\n* Cash sale offline then price change online: sale keeps its snapshot.\n* Tip exceeds a tenant cap: confirmation required.\n\n**Dependencies**\n\nHard: `r4/business-core/item-catalogue`, PAP-181, PAP-397. Soft: `r4/business-core/discounts-and-promo-codes`, `r4/business-core/inventory-stock-and-cogs`, PAP-148, PAP-235.\n\n**Agent**\n\nBuilder: Ledger (Payments Integrator). Reviewer: Sentinel (Security Auditor, Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/year-end-close",
+   "title": "Year-end close and closing entries: retained earnings roll-forward, close checklist, accountant review package and reopening rules",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-393",
+    "PAP-183"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-393 closes and locks months; PAP-183 computes retained earnings on the fly. A fiscal year still needs closing entries, a checklist and a package an external accountant can review, otherwise the balance sheet drifts from what the accountant files.\n\n**Scope**\n\nIn: `ledger.closeYear(fiscalYear)` posting income and expense balances to `retained_earnings` as one closing entry dated the last day (reversible by PAP-393 rules), guarded by a checklist (`fin_close_checklist`: all periods closed, bank reconciled or overridden, unapplied deposits reviewed, AR and AP aging reviewed, FX revaluation noted, chain verified); review package export (trial balance, general ledger, P&L, balance sheet, AR and AP aging, fixed list of open items) as XLSX and PDF via PAP-183 `exportReport`; `ledger.reopenYear` with reason for owners only; year status on the periods page.\n\nOut: tax return preparation, unrealised FX revaluation entries (noted as manual adjustment in the checklist), consolidation.\n\n**Spec**\n\n* Closing entry uses the `adjustment` rule with `source_type: year_close` so it is idempotent per fiscal year.\n* Checklist items are computed live from datasets, each with a link to fix and an override with reason recorded in audit.\n* Package files are content-addressed in PAP-37 and linked from the year row; regenerating after a reopen creates a new version.\n\n**Interface contract**\n\nProvides: `ledger.closeYear|reopenYear|closeChecklist`, `fin_close_checklist`, review package job, year status UI. Consumes: period close and chain (PAP-393), reports and exports (PAP-183), reconciliation statement (`r4/business-core/bank-reconciliation-matching`, soft), files (PAP-37), permissions.\n\n**Definition of done**\n\n* Demo seed: closing entry brings income and expense accounts to zero and the balance sheet still balances (test); reopen and re-close idempotent.\n* Checklist Playwright; screenshots at 375, 1024, 1920 in three themes; `docs/finance/year-end.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: closing entry composition, fiscal year boundaries with July starts, checklist evaluation, reopen guard.\n* E2E: run the checklist, override one item with a reason, close the year, download the package, reopen with a reason.\n\n**Demo**\n\nReviewer opens Periods, sees the checklist for the seeded year, closes it and downloads the package. Under two minutes.\n\n**Edge cases**\n\n* Post-close import backdated into the closed year: PAP-393 refuses; offered next open period.\n* Multiple currencies: closing entry per functional currency only; translation is out of scope and stated.\n\n**Dependencies**\n\nHard: PAP-393, PAP-183. Soft: PAP-37, `r4/business-core/bank-reconciliation-matching`.\n\n**Agent**\n\nBuilder: Ledger (Bookkeeper). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/business-core/revenue-recognition",
+   "title": "Revenue recognition schedules: deferred revenue for prepaid periods and multi-period services, monthly recognition job and deferred revenue roll-forward report",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-397",
+    "PAP-393"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nAn annual plan invoiced upfront is not a year of revenue in one month. SaaS, gyms, schools and agencies with retainers need deferred revenue; without it the P&L PAP-183 renders is wrong for exactly the businesses that prepay.\n\n**Scope**\n\nIn: `fin_recognition_schedule (document_line_id, method: straight_line|on_event|milestones, start_at, end_at, total_minor, recognised_minor, status)` created at `invoice.issued` for lines whose item or line flag sets `recognise_over_period`; posting at issue moves revenue to `deferred_revenue` (liability) for such lines; monthly job (PAP-43) posting `revenue.recognised` (debit `deferred_revenue`, credit revenue) with day-weighted straight line; manual `recognise` for `on_event`; credit notes and voids reverse the unrecognised remainder; report dataset `finance.deferredRevenue` (opening, additions, recognised, closing by month) and a P&L footnote linking deferred balances.\n\nOut: multi-element allocation (SSP), usage-based recognition (metered issue posts on usage), IFRS 15 disclosures beyond the roll-forward.\n\n**Spec**\n\n* Schedules are computed in functional currency at issue; FX differences on later recognition go to `fx_gain_loss`.\n* Recognition job is idempotent per `(schedule_id, period_id)`; a locked period defers recognition to the first open period with a note.\n* Item catalogue exposes `recognition: { method, period_from: service_dates|invoice_date }` so schedules need no manual setup for standard items.\n\n**Interface contract**\n\nProvides: tables, `recognition.*`, posting rules `revenue.deferred|recognised`, job `recognition.run`, dataset and report. Consumes: postings and issue flow (PAP-397), periods (PAP-393), items (`r4/business-core/item-catalogue`, soft), reports (PAP-183), recurring schedules (`r4/business-core/recurring-invoices-dunning`, soft).\n\n**Definition of done**\n\n* Textbook fixture: a 12-month prepaid invoice recognises to the cent across months including February and a leap year; void mid-term reverses the remainder; property test that deferred balance equals unrecognised sum.\n* Report screenshots at 375, 1024, 1920 in three themes; `docs/finance/revenue-recognition.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: day weighting, rounding remainder to the last month, void and credit note reversal, locked period deferral.\n* E2E: issue an annual invoice for a recognised item, run the job for three months, open the roll-forward and the P&L.\n\n**Demo**\n\nReviewer issues a 1,200.00 annual invoice, advances the job three months and reads 300.00 recognised and 900.00 deferred. Under two minutes.\n\n**Edge cases**\n\n* Service dates missing: schedule starts at issue date with a warning.\n* Schedule shortened by a cancellation: remaining months re-spread, history untouched.\n* Recognition in a currency other than functional: schedule fixed at issue rate.\n\n**Dependencies**\n\nHard: PAP-397, PAP-393. Soft: PAP-183, `r4/business-core/item-catalogue`, `r4/business-core/recurring-invoices-dunning`.\n\n**Agent**\n\nBuilder: Ledger (Bookkeeper). Reviewer: Sentinel (Edge Case Hunter for calendars, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/document-refunds-and-credit-balance",
+   "title": "Refunds and customer credit balances: refund a paid document through Stripe or manually, credit note application to future invoices, credit balance tracking and postings",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Ledger and reports",
+   "dueDate": "2026-09-29",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-396",
+    "PAP-397",
+    "PAP-181"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-395 issues credit notes against paid balances but money never goes back. Refunds and credit balances are how every business fixes a wrong charge; the flow must be idempotent, permission-gated and correctly posted on both the platform and connected accounts.\n\n**Scope**\n\nIn: `documents.refund({ documentId, amountMinor, method: stripe|manual, reason })` creating a `refund` `fin_transaction`, calling `stripe.refunds.create` on the right account with `refund_application_fee` per the PAP-181 policy and idempotency key `refund:<document>:<n>`, or recording a manual refund with reference; webhook `charge.refunded` reconciles; postings `refund.issued` (debit revenue or `refunds_contra`, credit cash or `stripe_balance`; sales tax reversal via PAP-182 `createReversal` when enabled); `fin_customer.credit_balance_minor` maintained from credit notes and overpayments; `documents.applyCredit` on issue; portal shows credit available and refund status; approval above `fin_settings.refund_approval_threshold_minor`.\n\nOut: chargebacks (`r4/business-core/disputes-radar-evidence`), refunds of platform subscriptions (Stripe Billing and PAP-177 portal), gift cards.\n\n**Spec**\n\n* A refund may not exceed the document's `paid_minor` minus prior refunds (checked under a document lock).\n* Manual refunds require `payments.manage`; Stripe refunds additionally require the restricted key with refund scope, held by the worker, never by a session (deny list PAP-298).\n* Credit balance application creates a `credit_applied` line and posts liability to `ar`; balances are `Money` per currency.\n* Receipts for refunds render with the PAP-396 template variant `refund-receipt`.\n\n**Interface contract**\n\nProvides: `documents.refund|applyCredit`, `fin_refund` rows, posting rules `refund.*`, `credit.applied`, portal credit display, notification kind `document.refunded`. Consumes: pay page and receipts (PAP-396), postings and templates (PAP-397), Connect (PAP-181), tax reversal (PAP-182, optional), permissions (`r4/business-core/finance-permissions-and-roles`), audit (PAP-38).\n\n**Definition of done**\n\n* Test-mode flow recorded: full and partial Stripe refunds via `stripe trigger charge.refunded`, one manual refund, one credit note applied to the next invoice; postings balance; duplicate webhook idempotent; no live key.\n* Screenshots at 375, 1024, 1920 in three themes; `docs/finance/refunds.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: over-refund guard, allocation across lines, credit balance maths, approval routing, idempotency.\n* E2E: pay an invoice with `4242`, refund half, see the refund receipt and journal, then issue a credit note and apply it to a new invoice.\n\n**Demo**\n\nReviewer refunds part of a paid invoice, watches the webhook reconcile it and applies a credit note to the next invoice. Under two minutes.\n\n**Edge cases**\n\n* Refund after payout already left the connected balance: Stripe debits the next payout; posting to `stripe_balance` may go negative with a banner.\n* Refund in a different currency than paid: refused; refund in payment currency only.\n* Approver equals requester: separation-of-duties rule applies.\n\n**Dependencies**\n\nHard: PAP-396, PAP-397, PAP-181. Soft: PAP-182, PAP-38, `r4/business-core/finance-permissions-and-roles`.\n\n**Agent**\n\nBuilder: Ledger (Payments Integrator). Reviewer: Sentinel (Security Auditor, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/payroll-filings-forms-and-deductions",
+   "title": "Payroll filings, year-end forms and deduction codes: provider filing status, W-2 and 1099 availability in the portal, benefit and garnishment deduction mapping to ledger accounts",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-398",
+    "PAP-400"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-176's interface lists `taxes.filings` and PAP-184 leaves benefits out. Employees ask for W-2s and owners ask whether the quarterly filing went through; a thin surface over provider capabilities answers both and maps every deduction to the right liability account so payroll postings stop lumping them.\n\n**Scope**\n\nIn: `payroll.filings.list` over the provider when `capabilities.filings` with a status page and PAP-136 alerts on `rejected|action_required`; year-end form availability (`W-2`, `1099`) surfaced in the PAP-400 paystub portal via provider-hosted links; `payroll_deduction_code (code, label, kind: pre_tax_benefit|post_tax_benefit|garnishment|reimbursement, liability_account_id, employer_match_account_id?)` and mapping of provider deduction ids to codes so `payroll.approved` postings split `payroll_liability` into per-code liabilities; benefits enrolment via provider-hosted link when `capabilities.benefits`; capability matrix rendered in settings.\n\nOut: running filings ourselves, benefits carrier integrations, local tax registrations (provider owns).\n\n**Spec**\n\n* Forms are never downloaded to PaperOS storage; only short-lived provider URLs are proxied, consistent with PAP-359.\n* Unmapped deduction ids post to `payroll_liability_unmapped` and raise a finance review item.\n* Capability-driven UI: absent capabilities render an explanatory card, never an error.\n\n**Interface contract**\n\nProvides: `payroll.filings.*`, `payroll.deductionCodes.*`, posting split in `payroll.approved`, portal forms card, settings capability matrix. Consumes: adapter capabilities and webhooks (PAP-398), run postings and portal (PAP-400), notifications (PAP-136), accounts (PAP-175).\n\n**Definition of done**\n\n* Mock adapter exposes filings and deductions; postings split per code and balance (fixture); unmapped path tested; screenshots at 375, 1024, 1920.\n* `docs/finance/payroll.md` gains filings and deductions sections; CHANGELOG.\n\n**Test plan**\n\n* Unit: deduction split arithmetic, unmapped fallback, capability branching, alert once per status change.\n* E2E: map two deduction codes, approve a mock run and see separate liability lines; open the portal forms card as an employee.\n\n**Demo**\n\nReviewer maps a 401k code, approves a run and reads the split liabilities in the journal, then opens the filings page showing a mock quarterly status. Under two minutes.\n\n**Edge cases**\n\n* Provider changes a deduction id: old mapping kept for history, new id flagged.\n* Filing rejected after the period is locked: alert only; corrections are the provider's flow.\n\n**Dependencies**\n\nHard: PAP-398, PAP-400. Soft: PAP-136, PAP-175.\n\n**Agent**\n\nBuilder: Ledger (Payroll Adapter). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/business-core/tenant-metered-billing",
+   "title": "Metered billing for tenants' own customers: usage meters on items, usage ingestion API, monthly usage invoicing through recurring schedules and Stripe Billing Meters on the connected account",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "r4/business-core/recurring-invoices-dunning",
+    "r4/business-core/item-catalogue",
+    "PAP-181"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-391 meters PaperOS's own tenants. A SaaS built on PaperOS (the SaaS pack) needs the same thing for its customers: record usage against a metered item, roll it up per billing period and invoice it, optionally through Stripe Billing Meters on the connected account.\n\n**Scope**\n\nIn: `fin_item.sell.metered: { unit, aggregation: sum|max|last, tiers? }`; `usage.record(partyId, itemId, quantity, { idempotencyKey, occurredAt })` via oRPC and the public API (PAP-222 keys, `X-PaperOS-Env: test` honoured), stored in `fin_usage_event` partitioned monthly; hourly rollup `fin_usage_period`; recurring schedule step `usage` that adds a usage line at generation with tiered pricing (`Money.allocate` for graduated tiers); optional Stripe path: `billing.meterEvents.create` on the connected account for imported subscriptions (PAP-423) with `stripe_meter_id` on the item; customer portal usage page; dataset `finance.customerUsage`.\n\nOut: platform metering (PAP-391), real-time entitlements for tenant customers, rating engines beyond tiers.\n\n**Spec**\n\n* Ingestion is idempotent on `idempotencyKey` and fire-and-forget through PAP-43; rollups are recomputable from events.\n* Tier pricing: volume or graduated per item; totals to the cent with the remainder on the last tier.\n* Usage lines snapshot the quantity and tier table at invoice generation; late events after generation go to the next period with a note.\n\n**Interface contract**\n\nProvides: `usage.record|forParty`, tables, recurring `usage` step, Stripe meter sync, portal route `_portal/usage`, dataset. Consumes: recurring generation (`r4/business-core/recurring-invoices-dunning`), items (`r4/business-core/item-catalogue`), Connect (PAP-181), API keys (PAP-222, soft), jobs (PAP-43), portal (PAP-64).\n\n**Definition of done**\n\n* 10k events roll up correctly and generate one usage line with tiered pricing (fixture); duplicate keys ignored; Stripe meter events verified with recorded fixtures in test mode.\n* Portal screenshots at 375, 1024; `docs/finance/metered-billing.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: aggregation modes, graduated versus volume tiers, idempotency, late-event routing.\n* E2E: record usage through the API, force a rollup, generate the monthly invoice and read the usage line in the portal.\n\n**Demo**\n\nReviewer posts 1,500 API-call events for a demo customer, advances the schedule and sees an invoice with two tier lines. Under two minutes.\n\n**Edge cases**\n\n* Meter unit changed mid-period: refused until period end.\n* Negative quantity (correction): allowed with reason, floors at zero for the period.\n* Customer without a schedule: usage accrues and shows 'unbilled' in the dataset.\n\n**Dependencies**\n\nHard: `r4/business-core/recurring-invoices-dunning`, `r4/business-core/item-catalogue`, PAP-181. Soft: PAP-222, PAP-43, PAP-64, PAP-423.\n\n**Agent**\n\nBuilder: Ledger (Payments Integrator). Reviewer: Sentinel (Edge Case Hunter for double counting).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/business-core/cash-forecast-scenarios",
+   "title": "Cash forecast scenarios: 13-week projection from open AR and AP, recurring schedules, payroll calendar and manual assumptions with best, base and worst cases",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Payroll adapter and cash dashboard",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-186",
+    "r4/business-core/recurring-invoices-dunning"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-186 shows runway from history. Founders decide with a forward view: when do open invoices land, what bills and payroll leave, and what if a customer pays late. A deterministic 13-week forecast from data the ledger already has, plus editable assumptions, is the natural next block.\n\n**Scope**\n\nIn: `fin_forecast_scenario (name, assumptions jsonb { collectionDelayDays, collectionRatePct, growthPct, oneOffs[] })`; projection engine `forecast.project(scenarioId, weeks=13)` combining open AR by due date and historical days-to-pay per party, open AP and scheduled payments, recurring schedules and expected usage, payroll calendar (next runs estimated from the last paid run), platform subscription costs, and manual one-offs; three default scenarios; chart block (PAP-170 line with band) and weekly table on `/finance/forecast` with a scenario switcher and assumption sliders; alert when any week's projected balance drops below zero; export CSV.\n\nOut: ML forecasting, bank-feed-based categorisation (reconciliation issue feeds actuals), budgeting (separate issue).\n\n**Spec**\n\n* Engine is pure and deterministic given inputs; fixtures assert week-by-week balances.\n* Days-to-pay per party is the median over the last six paid invoices, falling back to terms plus the tenant default delay.\n* Actuals replace projections as weeks pass; variance between last week's projection and actual is shown.\n\n**Interface contract**\n\nProvides: tables, `forecast.*`, block `finance.cashForecast`, route, alert kind `finance.forecast_negative`, CSV export. Consumes: cash series and runway (PAP-186), aging (PAP-183), recurring schedules, payroll runs (PAP-400), subscriptions (PAP-177), bills (`r4/business-core/vendor-bills-and-ap-payments`, soft), charts (PAP-170), notifications (PAP-136).\n\n**Definition of done**\n\n* Fixture forecast matches hand-computed weeks; scenario switch re-renders under 500 ms; screenshots at 375, 1024, 1920 in three themes.\n* `docs/finance/forecast.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: days-to-pay median, collection rate application, one-off placement, negative week detection.\n* E2E: open the forecast, drag collection delay to 30 days, see the band widen and a negative week alert appear.\n\n**Demo**\n\nReviewer switches from base to worst case and reads which week cash goes negative, then adds a one-off inflow and watches it recover. Under two minutes.\n\n**Edge cases**\n\n* No history for a new tenant: terms-based projection with an 'estimate' badge.\n* Payroll module disabled: payroll line hidden.\n* Multi-currency: functional totals with a footnote.\n\n**Dependencies**\n\nHard: PAP-186, `r4/business-core/recurring-invoices-dunning`. Soft: PAP-183, PAP-400, PAP-177, PAP-170, PAP-136, `r4/business-core/vendor-bills-and-ap-payments`.\n\n**Agent**\n\nBuilder: Ledger (Bookkeeper) with Iris on the chart. Reviewer: Sentinel (Visual Inspector, Code Reviewer).\n\n**Size**\n\nM: one session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-186",
+   "section": "Spec",
+   "append": "Round 4 clarification: `finance.mrr` cannot read 'active subscriptions on the connected account' because PAP-181 creates no subscription model and PAP-177 subscriptions are PaperOS's own plans. Compute tenant MRR from active `fin_recurring_schedule` rows (`r4/business-core/recurring-invoices-dunning`, normalised monthly) plus imported Stripe subscriptions when PAP-423 has run; show 'n/a' with an enable link when neither exists."
+  },
+  {
+   "identifier": "PAP-391",
+   "section": "Spec",
+   "append": "Round 4: Stripe deprecated `subscriptionItems.createUsageRecord` in favour of Billing Meters. For the pinned `apiVersion`, use `billing.meterEvents.create({ event_name, payload: { stripe_customer_id, value } })` with `meterId` declared per metered price in `plans.ts`, keep the usage-record path only behind a `legacyUsageRecords` flag for older API versions, and store `stripe_meter_event_id` instead of `stripe_usage_record_id`."
+  },
+  {
+   "identifier": "PAP-175",
+   "section": "Spec",
+   "append": "Round 4: `convert(rate)` takes a rate from `fin_fx_rate` owned by `r4/business-core/fx-rates-and-conversion`; PAP-183, PAP-185, PAP-206 and PAP-423 must call `fx.rateAt` rather than keeping their own rates. Add `fin_item` (`r4/business-core/item-catalogue`) and `fin_dimension` (`r4/business-core/ledger-dimensions-registry`) to the ER diagram as planned tables."
+  },
+  {
+   "identifier": "PAP-177",
+   "section": "Edge cases",
+   "append": "Round 4: the concurrent-upgrade refund is executed by the webhook worker with the restricted key that has refund scope, never by an agent session (deny list, PAP-298) and never in live mode without the PAP-359 custody card; the integration test uses a Stripe test clock and `stripe trigger` only."
+  },
+  {
+   "identifier": "PAP-399",
+   "section": "Definition of done",
+   "append": "Round 4: the CI gate is the mock adapter path (onboarding, sync, conflict review) with recorded fixtures; the sandbox recording is attached when `PAYROLL_SANDBOX_KEY` exists and otherwise the test reports `skipped: no-credentials`, so this child is mergeable before NJ-12 resolves."
+  },
+  {
+   "identifier": "PAP-183",
+   "section": "Dependencies",
+   "append": "Round 4: the `dimensions` parameter resolves keys and options through `r4/business-core/ledger-dimensions-registry` (soft; until it lands only free-form `department` from payroll postings is accepted). Textbook expected values come from `r4/business-core/finance-demo-seed` so PAP-186 and PAP-487 agree to the cent."
+  },
+  {
+   "identifier": "PAP-181",
+   "section": "Edge cases",
+   "append": "Round 4: dispute evidence deadlines, the evidence pack and the `won|lost` outcome postings move to `r4/business-core/disputes-radar-evidence`; this issue only posts the reserve movement on `charge.dispute.created` and emits `connect.dispute.opened` with `evidence_due_by`."
+  },
+  {
+   "identifier": "PAP-395",
+   "section": "Spec",
+   "append": "Round 4: line editors accept an optional `item_id` from `r4/business-core/item-catalogue` that pre-fills description, unit price, revenue account and tax code; the line snapshots those values at issue, so catalogue edits never rewrite issued documents. `computeTotals` exposes a `discounts` hook consumed by `r4/business-core/discounts-and-promo-codes`."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "growth",
+   "title": "Deal products and quote-from-deal use the finance item catalogue",
+   "why": "CRM deals need line items priced from `fin_item` and a 'create quote' action through `documents.create`; growth owns the UI, business-core the catalogue (`r4/business-core/item-catalogue`)."
+  },
+  {
+   "targetProject": "identity",
+   "title": "Portal customer to finance party link (`fin_party.user_id`) surfaced in the portal shell",
+   "why": "Statements, credit balances, contractor pages and paystubs all resolve the logged-in customer to a party; PAP-62 should expose `usePortalParty()` once rather than each finance page re-deriving it."
+  },
+  {
+   "targetProject": "data-layer",
+   "title": "Monthly partition helper for finance event tables",
+   "why": "`fin_usage_event`, `usage_event` (PAP-391) and `attr_event` (PAP-194) each write their own partition-ahead job; one `definePartitionedTable()` helper in `packages/db` would remove three copies."
+  },
+  {
+   "targetProject": "tables",
+   "title": "`Money` field editor with currency picker and per-currency exponent",
+   "why": "Budget grids, item prices and bank transaction grids edit `Money` inline; PAP-164 has a currency type but the editor must honour ISO exponents (JPY 0, KWD 3) and never round through floats."
+  }
+ ]
+}

@@ -1,0 +1,1143 @@
+{
+ "project": "growth",
+ "projectName": "Growth: Marketing, Outreach & CRM",
+ "benchmarks": [
+  "HubSpot (CRM, Marketing Hub, Service Hub)",
+  "Attio",
+  "Twenty CRM",
+  "Pipedrive",
+  "Mailchimp",
+  "Listmonk",
+  "Customer.io",
+  "Buffer",
+  "Postiz",
+  "Intercom",
+  "Chatwoot",
+  "Cal.com",
+  "Dub",
+  "PostHog and GA4",
+  "Formbricks (NPS)",
+  "Twilio (SMS, WhatsApp)",
+  "Webflow"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "CRM entities: contacts, companies, leads, deals, pipelines, activities, tags",
+   "coveredBy": [
+    "PAP-187",
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "status": "covered",
+   "note": "Schema half split out as a child"
+  },
+  {
+   "feature": "Consent records, suppression list, preference centre, double opt-in",
+   "coveredBy": [
+    "PAP-187",
+    "r4/growth/consent-compliance-centre"
+   ],
+   "status": "partial",
+   "note": "Inline WP0; now a child"
+  },
+  {
+   "feature": "Pipeline kanban, contacts grid, detail pages",
+   "coveredBy": [
+    "PAP-189"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Tasks, follow-ups, My Day, reminders",
+   "coveredBy": [
+    "r4/growth/crm-tasks-followups-my-day"
+   ],
+   "status": "gap",
+   "note": "task kind exists, no surface"
+  },
+  {
+   "feature": "Duplicate detection and merge",
+   "coveredBy": [
+    "r4/growth/contact-company-merge-and-dedup"
+   ],
+   "status": "gap",
+   "note": "Referenced by five specs"
+  },
+  {
+   "feature": "Email logging and mailbox sync (Gmail, Outlook)",
+   "coveredBy": [
+    "r4/growth/email-sync-gmail-outlook"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Meetings and booking pages",
+   "coveredBy": [
+    "r4/growth/booking-pages-and-availability"
+   ],
+   "status": "gap",
+   "note": "PAP-352 decides Cal.com mode"
+  },
+  {
+   "feature": "Deal products and quotes from deals",
+   "coveredBy": [
+    "r4/growth/deal-products-and-quotes"
+   ],
+   "status": "gap",
+   "note": "Needs the finance item catalogue"
+  },
+  {
+   "feature": "Sales dashboard, funnel, forecast",
+   "coveredBy": [
+    "PAP-189",
+    "r4/growth/sales-dashboard-and-forecast"
+   ],
+   "status": "partial",
+   "note": "PAP-189 stops at pipeline value"
+  },
+  {
+   "feature": "Lead scoring and routing, SLA on new leads",
+   "coveredBy": [
+    "r4/growth/lead-scoring-and-routing"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Contact and company enrichment, email verification",
+   "coveredBy": [
+    "r4/growth/contact-enrichment-port"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Custom fields on CRM records",
+   "coveredBy": [
+    "PAP-187",
+    "PAP-164"
+   ],
+   "status": "covered",
+   "note": "via `custom jsonb` and tables field types"
+  },
+  {
+   "feature": "Record detail, timeline, comments, attachments",
+   "coveredBy": [
+    "PAP-333",
+    "PAP-189"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Segments from CRM, usage and billing",
+   "coveredBy": [
+    "PAP-195"
+   ],
+   "status": "covered",
+   "note": "Deferred v0.2"
+  },
+  {
+   "feature": "Outreach sequences (email, SMS), provider adapters",
+   "coveredBy": [
+    "PAP-404"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Send-time compliance, warmup, STOP, bounces, replies",
+   "coveredBy": [
+    "PAP-405"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Sequence builder, template editor, domain wizard",
+   "coveredBy": [
+    "PAP-406"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "One-off email broadcasts and newsletters",
+   "coveredBy": [
+    "r4/growth/email-broadcast-campaigns"
+   ],
+   "status": "gap",
+   "note": "Sequences are drip only"
+  },
+  {
+   "feature": "Open and click engagement tracking",
+   "coveredBy": [
+    "r4/growth/email-engagement-tracking"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Deliverability: DKIM, SPF, DMARC, warmup",
+   "coveredBy": [
+    "PAP-370",
+    "PAP-405"
+   ],
+   "status": "covered",
+   "note": "Email package in data-layer"
+  },
+  {
+   "feature": "Transactional email package and sandbox mode",
+   "coveredBy": [
+    "PAP-370"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Outbound sandbox proof for reviewers (email, SMS, social, webhooks)",
+   "coveredBy": [
+    "PAP-370",
+    "r4/growth/outbound-sandbox-ledger"
+   ],
+   "status": "partial",
+   "note": "Email only today; SMS and social attempts not recorded in one place"
+  },
+  {
+   "feature": "Social scheduler: schema, approval, composer, calendar",
+   "coveredBy": [
+    "PAP-401"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Social adapters and publishing worker",
+   "coveredBy": [
+    "PAP-402",
+    "PAP-403"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Social analytics and best-time suggestions",
+   "coveredBy": [
+    "PAP-402",
+    "r4/growth/social-analytics-report"
+   ],
+   "status": "partial",
+   "note": "Metrics fetched, no report"
+  },
+  {
+   "feature": "Social inbox: comments and DMs",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "PAP-190 out; v0.3, no issue this round"
+  },
+  {
+   "feature": "Content agent drafting posts and emails",
+   "coveredBy": [
+    "PAP-192"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Landing pages and Webflow publishing",
+   "coveredBy": [
+    "PAP-193",
+    "r4/growth/webflow-landing-publisher-and-editor"
+   ],
+   "status": "covered",
+   "note": "Split into two children"
+  },
+  {
+   "feature": "Lead capture forms and embed",
+   "coveredBy": [
+    "PAP-193",
+    "r4/growth/lead-forms-embed-and-submit-pipeline"
+   ],
+   "status": "covered",
+   "note": "Child"
+  },
+  {
+   "feature": "Experiments and A/B tests",
+   "coveredBy": [
+    "r4/growth/experiments-and-ab-tests"
+   ],
+   "status": "gap",
+   "note": "Excluded by PAP-193 and PAP-192"
+  },
+  {
+   "feature": "Attribution: UTM, referral, funnel, privacy-first collector",
+   "coveredBy": [
+    "PAP-194"
+   ],
+   "status": "covered",
+   "note": "Revenue join needs amendment"
+  },
+  {
+   "feature": "Short links and QR codes",
+   "coveredBy": [
+    "r4/growth/short-links-and-qr"
+   ],
+   "status": "gap",
+   "note": "PAP-188 hypothesises Dub"
+  },
+  {
+   "feature": "Referral and affiliate programs with payouts",
+   "coveredBy": [
+    "PAP-407",
+    "PAP-408",
+    "PAP-409"
+   ],
+   "status": "covered",
+   "note": "Deferred; scope clarification amendment"
+  },
+  {
+   "feature": "Shared support inbox: email parsing, threading",
+   "coveredBy": [
+    "PAP-410"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Portal chat widget and internal notes",
+   "coveredBy": [
+    "PAP-411"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Three-pane inbox, macros, metrics",
+   "coveredBy": [
+    "PAP-412"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Help center and knowledge base",
+   "coveredBy": [
+    "r4/growth/help-center-knowledge-base"
+   ],
+   "status": "gap",
+   "note": "PAP-197 out"
+  },
+  {
+   "feature": "AI reply drafts and FAQ bot with handoff",
+   "coveredBy": [
+    "r4/growth/support-ai-reply-drafts"
+   ],
+   "status": "gap",
+   "note": "PAP-197 out (auto-replies); drafts only"
+  },
+  {
+   "feature": "SLA policies and business hours",
+   "coveredBy": [
+    "PAP-197",
+    "r4/growth/support-sla-and-business-hours"
+   ],
+   "status": "partial",
+   "note": "`sla jsonb` stored, no policy"
+  },
+  {
+   "feature": "CSAT, NPS and review requests",
+   "coveredBy": [
+    "r4/growth/nps-csat-and-review-requests"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "In-app messages and announcements targeted by segment",
+   "coveredBy": [
+    "r4/growth/in-app-messages-and-announcements"
+   ],
+   "status": "gap",
+   "note": "PAP-195 demo assumes it"
+  },
+  {
+   "feature": "WhatsApp channel",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "v0.3 via Twilio; no issue this round"
+  },
+  {
+   "feature": "Web push notifications",
+   "coveredBy": [
+    "PAP-381",
+    "PAP-136"
+   ],
+   "status": "partial",
+   "note": "Realtime push transport; marketing use v0.3"
+  },
+  {
+   "feature": "Consent for cookies and privacy pages",
+   "coveredBy": [
+    "PAP-221"
+   ],
+   "status": "covered",
+   "note": "Identity project"
+  },
+  {
+   "feature": "DSAR export of CRM and consent data",
+   "coveredBy": [
+    "PAP-221",
+    "r4/growth/consent-compliance-centre"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "CRM import from spreadsheets and HubSpot",
+   "coveredBy": [
+    "PAP-200",
+    "PAP-413"
+   ],
+   "status": "covered",
+   "note": "Migration project"
+  },
+  {
+   "feature": "Contract package, conformance, kernel wiring",
+   "coveredBy": [
+    "PAP-485",
+    "PAP-488",
+    "PAP-491"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Stack survey and ADR (Twenty, Postiz, Listmonk, Dub, Chatwoot)",
+   "coveredBy": [
+    "PAP-188",
+    "PAP-351"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Campaign hub grouping posts, emails, pages with budget",
+   "coveredBy": [
+    "PAP-401",
+    "r4/growth/email-broadcast-campaigns"
+   ],
+   "status": "partial",
+   "note": "`social_campaign` and `campaign`; unified hub v0.3"
+  },
+  {
+   "feature": "Portal customer to contact identity link",
+   "coveredBy": [
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "status": "partial",
+   "note": "`crm_contact.user_id` added in the child"
+  },
+  {
+   "feature": "Agent guardrails: draft only, approval hash, no live sends",
+   "coveredBy": [
+    "PAP-401",
+    "PAP-192",
+    "PAP-298"
+   ],
+   "status": "covered",
+   "note": ""
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/growth/crm-schema-routers-page-specs",
+   "title": "CRM schema, routers, datasets, search registrations and the three page specs (the schema half of PAP-187)",
+   "type": "Spec",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "CRM core",
+   "dueDate": "2026-09-29",
+   "parent": "PAP-187",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-33",
+    "PAP-34",
+    "PAP-279"
+   ],
+   "blocks": [
+    "PAP-189",
+    "PAP-401",
+    "PAP-404",
+    "PAP-410",
+    "PAP-193",
+    "PAP-194",
+    "PAP-195",
+    "PAP-485",
+    "r4/growth/consent-compliance-centre"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Spec M\n\n**Goal**\n\nPAP-187 is an L that carries two deliverables: the customer-graph schema every growth issue waits on, and the consent centre folded in as work package 0. Splitting them makes the schema claimable on day one and reviewable as a Spec. This child is the schema half: the twelve `crm_*` tables, Zod types, routers, datasets, search registrations, events and the three page specs, exactly as PAP-187's Spec decides them.\n\n**Scope**\n\nIn: `packages/growth/src/crm/schema.ts` (`crm_company`, `crm_contact`, `crm_contact_company`, `crm_lead`, `crm_pipeline`, `crm_pipeline_stage`, `crm_deal`, `crm_activity`, `crm_segment`, `crm_segment_member`, `crm_tag`, `crm_entity_tag`, `crm_external_ref`) with RLS, `drizzle-zod` types, routers `crm.companies|contacts|leads|deals|activities|segments.*` plus `crm.leads.convert` and `crm.deals.move`, `registerDataset` and search registrations, `defineTopic` for `crm.deal.stage_changed`, `crm.lead.converted`, `crm.contact.created`, page specs `specs/crm/pipeline|contacts|company-detail.spec.yaml`, `docs/growth/crm-model.md` with ER diagram and Twenty and HubSpot mapping.\n\nOut: consent, suppression and the public preference routes (sibling `r4/growth/consent-compliance-centre`), UI (PAP-189), segment evaluation (PAP-195), importers.\n\n**Spec**\n\n* Columns per the PAP-187 Spec; add `crm_contact.user_id uuid?` (portal principal link used by PAP-195 `useInSegment`, PAP-397 portal invoices and PAP-411 chat) and `crm_contact.party_id?` to `fin_party` for statements and payments; `crm_deal.amount_minor bigint` plus `currency` per the contracts document.\n* `consent jsonb` on `crm_contact` is reserved as a denormalised cache the sibling fills; this child ships it empty with a comment.\n* Conversion `crm.leads.convert` is one transaction creating contact, optional company and deal and emitting `crm.lead.converted`; stage change trigger writes a `system` activity and sets `won_at|lost_at`.\n* Permissions `crm.*.read|write|export` registered with PAP-59; customer audiences never see CRM datasets.\n* Cursor pagination and `FilterTree` filters per PAP-268; every table is a dataset so PAP-189 views are JSON only.\n\n**Interface contract**\n\nProvides: the twelve tables, Zod types, routers, datasets `crm.contacts|companies|deals|activities`, search registrations, the three events, three page specs, `docs/growth/crm-model.md`. Consumes: core entities (PAP-33), RLS (PAP-34), `FilterTree` (PAP-279), API conventions (PAP-268), search (PAP-39), datasets (PAP-161, stub if absent), spec schema (PAP-117), `fin_party` (PAP-175, soft).\n\n**Definition of done**\n\n* Migration applies and rolls back on Postgres 17; `pnpm db:check` clean; cross-tenant harness green on all twelve tables.\n* Three page specs validate with PAP-117; ER diagram renders; contract doc reviewed by Quill and Ledger.\n* Drizzle Studio screenshot of seed data at 1280 and 1920; ADR `docs/adr/00xx-crm-model.md`; CHANGELOG; Linear comment on PAP-187.\n\n**Test plan**\n\n* Unit: unique email and domain constraints, conversion rollback on failure, stage trigger, cursor pagination per router, `crm.deals.move` bulk.\n* E2E: none beyond Studio screenshots (no UI); `pnpm tsx scripts/crm-demo.ts` converts a lead, moves the deal to Won and prints the system activity and outbox event.\n\n**Demo**\n\nReviewer runs `pnpm db:seed --profile demo`, browses contacts and deals in Drizzle Studio, then runs the CRM demo script. Under two minutes.\n\n**Edge cases**\n\n* Phone-only contact allowed; phone uniqueness is a merge suggestion, not a constraint.\n* Same person at two companies: `crm_contact_company` history with from and to dates.\n* Deleting a stage with deals blocked until moved.\n* Foreign-currency amount stored as given; reporting converts via `r4/business-core/fx-rates-and-conversion`.\n\n**Dependencies**\n\nHard: PAP-33, PAP-34, PAP-279. Soft: PAP-268, PAP-39, PAP-117, PAP-161, PAP-175. Blocks PAP-189, PAP-401, PAP-404, PAP-410, PAP-193, PAP-194, PAP-195, PAP-485 and the consent sibling.\n\n**Agent**\n\nBuilder: Beacon (CRM Builder) with Forge (Schema Wright). Reviewer: Sentinel (Security Auditor, Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/consent-compliance-centre",
+   "title": "Consent and marketing compliance centre: consent records per channel and purpose, shared suppression list, canContact, public preference and one-click unsubscribe routes, double opt-in",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "CRM core",
+   "dueDate": "2026-09-29",
+   "parent": "PAP-187",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "r4/growth/crm-schema-routers-page-specs",
+    "PAP-43",
+    "PAP-370"
+   ],
+   "blocks": [
+    "PAP-405",
+    "PAP-193",
+    "r4/business-core/recurring-invoices-dunning"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nFormerly PAP-187 work package 0 (folded in 2026-09-17, FIX-5), now a child so it can be claimed and cited on its own. One consent record per contact, channel and purpose, one suppression list, a `canContact` decision function and public preference and unsubscribe pages give PAP-405, PAP-193, PAP-136 and finance reminders a single lawful gate under GDPR, CAN-SPAM and TCPA.\n\n**Scope**\n\nIn: `packages/growth/src/consent/`: tables `consent_record (contact_id, channel: email|sms|push, purpose: marketing|transactional|product_updates, status: granted|denied|pending_double_opt_in|withdrawn, source, evidence jsonb, version, granted_at, withdrawn_at)` append-only with a current-row view, `suppression_entry (kind: email|phone|domain, value_hash, reason: unsubscribe|complaint|hard_bounce|manual|legal, source)`; `canContact(contactId, channel, purpose) -> { ok, reason }`; public routes `/c/:token` preference centre and `/u/:token` one-click unsubscribe (RFC 8058 POST) plus double opt-in confirm; `unsubscribeHeaders(contactId, channel)`; staff pages `_app/marketing/compliance`; dataset `growth.compliance`; DSAR export of consent history for PAP-221.\n\nOut: cookie banners for marketing sites (PAP-221), consent for agent data access (PAP-60), outreach sending (PAP-404), the schema tables of the sibling.\n\n**Spec**\n\n* Decision table: transactional is allowed without marketing consent unless suppressed with `reason: legal|complaint|hard_bounce`; marketing requires `granted`; SMS marketing requires explicit opt-in with evidence and honours PAP-405 quiet hours; `do_not_contact` wins over everything.\n* Tokens are signed per contact with rotation via `preferenceLink(contactId)`; pages show only a masked email; rate limited per PAP-267; tenant branding via PAP-74.\n* Double opt-in: forms (PAP-169, PAP-193) create `pending_double_opt_in` and send the confirm email through PAP-370 `sendEmail` (sandbox rewrite applies); unconfirmed expires after 30 days (PAP-43 job).\n* `suppression.check(values[])` is batched and indexed on `value_hash`; STOP keywords from PAP-405 and PAP-370 bounces and complaints write here; `reason: legal` cannot be removed by staff.\n* `crm_contact.consent jsonb` is the denormalised cache of current rows, refreshed by trigger; events `consent.changed`, `suppression.added` via `defineTopic`.\n\n**Interface contract**\n\nProvides: `canContact`, `consent.record|withdraw|history`, `suppression.add|check|list`, `preferenceLink`, `unsubscribeHeaders`, public routes, dataset `growth.compliance`, events, staff compliance page. Consumes: CRM schema (sibling), jobs (PAP-43), email package with sandbox (PAP-370), forms (PAP-169, PAP-193 soft), rate limiting (PAP-267), theming (PAP-74), DSAR registry (PAP-221 soft).\n\n**Definition of done**\n\n* Unit decision table green (channel by purpose by status by suppression); token signing and expiry; double opt-in expiry; header generation.\n* Integration: an unsubscribe POST suppresses a running PAP-404 test sequence and a PAP-136 digest in one test; form submission goes pending then granted on confirm; history export matches records; all in PAP-370 sandbox mode.\n* Playwright: open the preference link, toggle SMS marketing off, one-click unsubscribe from an email header; screenshots at 320, 375, 768, 1024, 1280, 1536, 1920 light and dark for the preference centre (two brands) and the staff page; axe clean.\n* `docs/growth/consent.md` with the rule table per jurisdiction; CHANGELOG; Linear comment on PAP-187 with a live preference link on the demo tenant.\n\n**Test plan**\n\n* Unit: decision table exhaustively, hash normalisation (case, plus-address policy), token rotation, expiry job, header formats.\n* E2E: the Playwright flows above plus a form submission that lands `pending_double_opt_in` and flips to `granted` on the confirm link.\n\n**Demo**\n\nReviewer opens a contact's preference link from the CRM page, turns off marketing email, enrols the contact in a test sequence and watches `canContact` refuse with the reason, then one-click unsubscribes from a sandbox email and sees the suppression entry. Under two minutes.\n\n**Edge cases**\n\n* Contact merged (`r4/growth/contact-company-merge-and-dedup`): records re-pointed, most restrictive status wins.\n* Withdrawal then re-grant: new record with fresh evidence, history intact.\n* Suppressed domain refuses every contact at it.\n* Leaked token shows no PII beyond a masked email and rotates on next `preferenceLink`.\n\n**Dependencies**\n\nHard: `r4/growth/crm-schema-routers-page-specs`, PAP-43, PAP-370. Soft: PAP-169, PAP-267, PAP-74, PAP-221. Blocks PAP-405 (hard), PAP-193 and `r4/business-core/recurring-invoices-dunning` (soft, they stub with `do_not_contact` until this merges).\n\n**Agent**\n\nBuilder: Beacon (CRM Builder) with Quill on the jurisdiction table. Reviewer: Sentinel (Security Auditor for public routes and PII, Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/outbound-sandbox-ledger",
+   "title": "Outbound sandbox ledger: one record of every email, SMS, social post and webhook the growth module would send, with the gate decision, for sandbox-only verification",
+   "type": "Infra",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Staff"
+   ],
+   "milestone": "Campaigns and social",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-370",
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nEvery growth Definition of done must be provable without a live send (deny list, Security Model section 4) yet each child records its attempts differently: PAP-404 rewrites recipients, PAP-402 has `dryRun`, PAP-193 logs. One `outbound_attempt` table and a dev page make 'nothing left the building' a query and give reviewers one place to read what would have gone out and why it was allowed or refused.\n\n**Scope**\n\nIn: table `outbound_attempt (tenant_id, channel: email|sms|social|webhook|push, provider, recipient_hash, recipient_masked, subject_or_preview, payload_file_id?, gate: { ok, reason }, mode: sandbox|dryRun|live, provider_message_id?, status, source EntityRef, created_at)`; `recordOutbound()` helper called by PAP-370 `sendEmail` (sandbox mode), the PAP-404 provider layer, PAP-402 adapters and PAP-193 notifications; dev route `_app/dev/outbound` (staff, non-production) with filters and payload preview; Vitest matcher `expectNoLiveSend()` reading the table; nightly assertion job on staging that `mode = live` count is zero until NJ approval flags exist.\n\nOut: deliverability analytics, message archive for compliance (PAP-355 retention applies: 30 days).\n\n**Spec**\n\n* Recipient stored as SHA-256 with tenant salt plus a masked display (`j***@e***.com`); payload bodies go to PAP-37 files with 30-day retention, never into the row.\n* `mode` is derived, never passed: `live` only when the provider call used a non-sandbox credential, which the credential broker (PAP-300) labels.\n* The helper is fire-and-forget on the PAP-43 queue with an idempotency key from the source event so retries do not double count.\n\n**Interface contract**\n\nProvides: `outbound_attempt`, `recordOutbound`, `expectNoLiveSend`, dev route, dataset `growth.outboundAttempts`. Consumes: email package (PAP-370), CRM schema (sibling), jobs (PAP-43), files (PAP-37), credential broker labels (PAP-300, soft). Consumed by PAP-404, PAP-405, PAP-402, PAP-193, `r4/growth/email-broadcast-campaigns`, `r4/growth/consent-compliance-centre` tests.\n\n**Definition of done**\n\n* Helper wired into `sendEmail` sandbox path with a test; matcher used by at least one PAP-370 test; dev page screenshots at 375, 1024, 1920.\n* `docs/growth/sandbox.md` explaining how a reviewer proves no live send; CHANGELOG; comments on PAP-404 and PAP-402 pointing at the helper.\n\n**Test plan**\n\n* Unit: hashing and masking, mode derivation, idempotency, retention purge.\n* E2E: trigger a sandbox email from the demo tenant and read it on `_app/dev/outbound` with `gate.ok = true`; trigger a suppressed one and read the refusal reason.\n\n**Demo**\n\nReviewer sends a test receipt in sandbox, opens the outbound page and sees the masked recipient, the preview and `mode: sandbox`. Under one minute.\n\n**Edge cases**\n\n* Provider returns success but the row insert fails: send is not retried (money-like semantics); a `outbound.record_failed` telemetry event fires.\n* Production tenant: the dev route is hidden and the table is still written for audit.\n\n**Dependencies**\n\nHard: PAP-370, `r4/growth/crm-schema-routers-page-specs`. Soft: PAP-43, PAP-37, PAP-300.\n\n**Agent**\n\nBuilder: Beacon (Outreach Sequencer). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/growth/lead-forms-embed-and-submit-pipeline",
+   "title": "Lead forms: form builder, 8 KB embed script, public submit endpoint with spam scoring and rate limits, lead upsert with UTM and consent, submissions grid",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Campaigns and social",
+   "dueDate": "2026-09-30",
+   "parent": "PAP-193",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "r4/growth/crm-schema-routers-page-specs",
+    "PAP-267"
+   ],
+   "blocks": [
+    "r4/growth/webflow-landing-publisher-and-editor"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nHalf of PAP-193 works on any website, not only Webflow: a form the tenant embeds anywhere that lands in the CRM with attribution and consent. Splitting it from the publisher lets the form ship even when the Webflow OAuth app is still in review.\n\n**Scope**\n\nIn: tables `lead_form (name, fields jsonb, success_action, notify_user_ids, honeypot_field, recaptcha: none|turnstile, allowed_origins[])`, `form_submission (form_id, payload jsonb, lead_id, utm jsonb, referrer, ip_hash, user_agent_class, spam_score, status: accepted|spam|error)`; form builder with field types text, email, phone, select, checkbox, textarea, hidden and drag reorder (PAP-155); embed `form.js` under 8 KB gzipped at `/embed/forms/<id>.js` with success callbacks; `POST /api/v1/public/forms/<id>/submit`; pipeline: validate, honeypot, optional Turnstile, spam score, upsert `crm_lead` by email, attach UTM and referrer, write consent through `consent.record`, emit `lead.created`; submissions grid; notification to `notify_user_ids`.\n\nOut: landing pages and Webflow (sibling), payments in forms, multi-page forms (PAP-169 owns table forms; this is the marketing lead form that writes leads, not records).\n\n**Spec**\n\n* The submit endpoint is the only unauthenticated write besides PAP-169 forms: CORS to `allowed_origins`, 20 per minute per IP via PAP-267, 64 KB body, client nonce idempotency for five minutes.\n* `ip_hash` is SHA-256 with a tenant salt; raw IP never stored (PAP-355 `pii()` annotations on payload columns).\n* Spam score from disposable-domain list, link count and submission velocity; `spam` rows are kept 30 days for review, never create leads.\n* Embed renders with the tenant theme tokens inline and works without JavaScript frameworks; verified in Chromium, WebKit and Firefox.\n\n**Interface contract**\n\nProvides: `landing.forms.*`, `form.js` contract (`data-form-id`, callbacks), public submit route, event `lead.created { leadId, formId, utm }`, dataset `form_submission`, `<FormEmbedSnippet />`. Consumes: CRM leads (sibling schema), consent (`r4/growth/consent-compliance-centre`, soft), rate limiting (PAP-267), notifications (PAP-136), drag (PAP-155), attribution client hook (PAP-194, soft), outbound ledger for notifications.\n\n**Definition of done**\n\n* Vitest, integration and Playwright green; `form.js` size budget in CI; three browser projects.\n* Screenshots at 320, 375, 768, 1024, 1280, 1536, 1920 light and dark for builder and an embedded form on a third-party test page; axe clean.\n* `docs/growth/lead-forms.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: field validation, spam fixtures, lead upsert by email, UTM normalisation, CORS and rate-limit middleware, nonce idempotency.\n* E2E: build a form, embed it in a fixture HTML page served by Playwright, submit with a UTM link, see the lead on the contacts grid with source and consent pending.\n\n**Demo**\n\nReviewer builds a three-field form, pastes the snippet into the test page, submits and opens `/crm/contacts` to find the new lead with its UTM. Under two minutes.\n\n**Edge cases**\n\n* Double submit: nonce idempotency.\n* Email matches an existing customer: lead created and linked, contact untouched.\n* Turnstile down: accept with flag when the honeypot passes.\n* Non-allowlisted origin: 403 logged with a settings hint.\n\n**Dependencies**\n\nHard: `r4/growth/crm-schema-routers-page-specs`, PAP-267. Soft: `r4/growth/consent-compliance-centre`, PAP-136, PAP-155, PAP-194. Blocks the Webflow sibling.\n\n**Agent**\n\nBuilder: Beacon (CRM Builder). Reviewer: Sentinel (Security Auditor for the public endpoint, Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/webflow-landing-publisher-and-editor",
+   "title": "Landing page editor and Webflow publisher: block content model, CMS collection mapping, site publish with a GitHub Pages fallback, approval before publish",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Campaigns and social",
+   "dueDate": "2026-09-30",
+   "parent": "PAP-193",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "r4/growth/lead-forms-embed-and-submit-pipeline",
+    "PAP-15"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nThe publishing half of PAP-193: compose a landing page from blocks, attach a lead form, and publish it to the tenant's Webflow site through the Data API or to GitHub Pages when Webflow is not connected, with the same approval state machine the rest of growth uses.\n\n**Scope**\n\nIn: `landing_page (title, slug, webflow_site_id, webflow_page_id, webflow_item_id, status: draft|pending_approval|published|archived, content jsonb blocks, seo jsonb, form_id, published_at)`; block editor (hero, features, testimonial, form, CTA, FAQ) with live preview; `webflow-api` 3.x integration with per-tenant OAuth (encrypted via PAP-353), CMS collection 'Landing Pages' field mapping stored per site, `sites.publish`; Pages fallback rendering static HTML with the embed script into the tenant's Pages repo (PAP-15); `landing.drafts.create` for PAP-192; settings page for the Webflow connection.\n\nOut: visual page builder, Designer API extensions, A/B tests (`r4/growth/experiments-and-ab-tests`), custom domains beyond what Webflow or Pages provide.\n\n**Spec**\n\n* Publishing requires `landing.publish`; agent drafts stop at `pending_approval`; publish is idempotent by `webflow_item_id`.\n* In `dryRun` (the CI default) the Webflow adapter writes the exact CMS payload to a snapshot; live publish is per-tenant and off until Justin connects a site.\n* Content blocks are Zod-validated and render identically in the preview, Webflow (through CMS rich text) and Pages HTML; a golden render test compares the three.\n* Quota exceeded or API error: `pending_publish` with retry and a banner.\n\n**Interface contract**\n\nProvides: `landing.pages.*`, `landing.drafts.create`, `LandingPagePublisherPort` with `webflow` and `pages` adapters, block schemas, settings page. Consumes: lead forms (sibling), Pages fallback (PAP-15), Webflow OAuth app (Needs Justin), encryption (PAP-353), content agent drafts (PAP-192), approval badge `drafted_by` (PAP-401 pattern).\n\n**Definition of done**\n\n* Adapter snapshot tests for Webflow payloads; Pages fallback publishes a static page in the fixture repo (CI); golden render comparison green.\n* Playwright: build, attach a form, submit for approval, approve, publish to Pages; screenshots at 320, 375, 768, 1024, 1280, 1536, 1920 light and dark.\n* `docs/growth/landing-pages.md` with Webflow setup; CHANGELOG; comment on PAP-193.\n\n**Test plan**\n\n* Unit: block validation, CMS mapping rename safety, idempotent publish, state machine.\n* E2E: the Playwright flow above; a recorded Webflow staging publish when `WEBFLOW_TEST_TOKEN` exists, else `skipped: no-credentials`.\n\n**Demo**\n\nReviewer composes a hero and form page, approves it and publishes to Pages, then opens the URL and submits the form. Under two minutes.\n\n**Edge cases**\n\n* Webflow site disconnected after publish: page stays published there; PaperOS marks the connection stale.\n* Slug collision on the site: suffixed and reported.\n* Draft edited after approval: returns to `pending_approval` (hash binding).\n\n**Dependencies**\n\nHard: `r4/growth/lead-forms-embed-and-submit-pipeline`, PAP-15. Soft: PAP-353, PAP-192, Webflow account (NJ).\n\n**Agent**\n\nBuilder: Beacon (Campaign Composer). Reviewer: Sentinel (Security Auditor for OAuth tokens, Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/crm-tasks-followups-my-day",
+   "title": "CRM tasks and follow-ups: task activities with due dates and assignees, snooze, recurring follow-ups, My Day view and due reminders",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "CRM core",
+   "dueDate": "2026-09-29",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-189",
+    "PAP-136"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\n`crm_activity` has a `task` kind with `due_at` but no surface. A rep's day is a list of follow-ups; without it the pipeline is a picture, not a workflow. This adds task semantics on the existing activity table, a My Day view and reminders through the notification centre.\n\n**Scope**\n\nIn: task semantics on `crm_activity kind task` (`assignee_user_id`, `priority`, `snoozed_until`, `recurrence jsonb`, `completed_at`); procedures `crm.tasks.create|complete|snooze|reassign|list`; `/crm/my-day` list view (PAP-169) grouped overdue, today, upcoming with keyboard shortcuts (PAP-151); task creation from deal, contact and company pages and from the record panel; reminders `crm.task.due` via PAP-136 at due time and daily digest; automations trigger `task.completed`; recurring follow-ups generated by a PAP-43 job.\n\nOut: team workload views, calendar sync (`r4/growth/booking-pages-and-availability`), project management (PM module).\n\n**Spec**\n\n* Completing a recurring task schedules the next occurrence; editing the recurrence affects future occurrences only.\n* My Day is a saved view over `crm.activities` with a `mine` filter and relative-date buckets (PAP-279 relative dates), so it inherits sharing and defaults (PAP-172).\n* Reminders are idempotent per `(task, bucket)` through PAP-136's idempotency rule; snooze cancels pending reminders.\n\n**Interface contract**\n\nProvides: task procedures, My Day route, notification kind `crm.task.due`, automation trigger `task.completed`, `TaskQuickAdd` component for record pages. Consumes: CRM views and detail pages (PAP-189), notifications (PAP-136), list view (PAP-169), commands (PAP-151), jobs (PAP-43), automations (PAP-174, soft).\n\n**Definition of done**\n\n* Unit and Playwright green; screenshots at 375, 1024, 1920 light and dark; keyboard-only completion flow.\n* `docs/growth/tasks.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: recurrence generation, bucket assignment across timezones, reminder idempotency, snooze.\n* E2E: create a follow-up from a deal, see it under Today, snooze it, complete it and see the next occurrence.\n\n**Demo**\n\nReviewer opens My Day, completes two tasks with `e`, snoozes one and watches the recurring task reappear next week in the fixture clock. Under two minutes.\n\n**Edge cases**\n\n* Assignee leaves the tenant: tasks reassigned to the deal owner with a note.\n* Due date in a past bucket after timezone change: shown overdue, never lost.\n\n**Dependencies**\n\nHard: PAP-189, PAP-136. Soft: PAP-169, PAP-151, PAP-43, PAP-174, PAP-172.\n\n**Agent**\n\nBuilder: Beacon (CRM Builder). Reviewer: Sentinel (Visual Inspector, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/contact-company-merge-and-dedup",
+   "title": "Contact and company merge and duplicate detection: fuzzy duplicate candidates, side-by-side merge with field pick, external ref and consent re-pointing, undo window",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "CRM core",
+   "dueDate": "2026-09-29",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "r4/growth/crm-schema-routers-page-specs",
+    "PAP-189"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nFive specs mention merging (PAP-187 edge cases, consent centre, PAP-197 'merge suggested manually', PAP-413, PAP-425) and none implements it. Every import and every form doubles contacts; a merge that keeps history, consent and external references intact is the difference between a CRM and a list.\n\n**Scope**\n\nIn: `crm.duplicates.scan` job producing `crm_duplicate_candidate (kind, a_id, b_id, score, reasons[])` from normalised email, phone E.164, name plus company (`pg_trgm`), company domain; review page `_app/crm/duplicates`; `crm.merge({ kind, winnerId, loserIds[], fieldPicks })` in one transaction re-pointing activities, deals, segment members, tags, `crm_external_ref`, consent records (most restrictive wins), support conversations and `fin_party` links through contract ports, writing `merged_into` on the loser and an audit row; 30-day undo via a stored merge plan; merge hook for importers (`onDuplicate: merge|skip|create`).\n\nOut: automatic merges without review (only exact-email matches from imports may auto-merge, per tenant setting), cross-tenant dedupe.\n\n**Spec**\n\n* Scoring is explainable: each reason carries a weight; thresholds per kind editable in settings; candidates expire when either record changes materially.\n* Merge is idempotent and resumable; a failure mid-transaction rolls back entirely; undo replays the inverse plan and refuses when the winner changed in a conflicting field.\n* External references from many systems on one record are allowed (PAP-201 `merged_into` on the mapping side).\n\n**Interface contract**\n\nProvides: `crm.duplicates.*`, `crm.merge`, `crm.unmerge`, review page, `MergeDialog`, importer hook `onDuplicate`. Consumes: CRM schema, views (PAP-189), consent records (`r4/growth/consent-compliance-centre`), external refs (PAP-201, soft), support (PAP-410, soft), audit (PAP-38), `fin_party` link (PAP-175, soft).\n\n**Definition of done**\n\n* Fixture set of 200 contacts with 40 planted duplicates: recall over 90 percent at the default threshold; merge and undo property test returns the graph to its prior hash.\n* Playwright review and merge; screenshots at 375, 1024, 1920 light and dark; `docs/growth/merge.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: normalisers, scoring weights, re-pointing per relation, consent precedence, undo conflict detection.\n* E2E: scan the seeded tenant, merge a pair picking fields from both, verify activities and deals moved, undo and verify restoration.\n\n**Demo**\n\nReviewer opens Duplicates, merges two obvious contacts choosing the newer phone, opens the winner's timeline showing both histories, then undoes. Under two minutes.\n\n**Edge cases**\n\n* Loser has a portal login (`user_id`): both users kept, winner gets the primary; the other can still log in and sees the merged record.\n* Two companies with the same domain but different legal entities: 'not a duplicate' marks the pair and suppresses future candidates.\n\n**Dependencies**\n\nHard: `r4/growth/crm-schema-routers-page-specs`, PAP-189. Soft: `r4/growth/consent-compliance-centre`, PAP-201, PAP-410, PAP-38, PAP-175.\n\n**Agent**\n\nBuilder: Beacon (CRM Builder). Reviewer: Sentinel (Edge Case Hunter, Security Auditor for PII).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/email-sync-gmail-outlook",
+   "title": "Email logging and mailbox sync: BCC-to-CRM address, Gmail and Microsoft Graph OAuth sync of threads with matched contacts, send-from-CRM with the rep's own mailbox",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Acquisition analytics",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "r4/growth/crm-schema-routers-page-specs",
+    "PAP-57",
+    "PAP-353"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nSequences (PAP-191) send from the platform; reps still live in Gmail and Outlook. Logging one-to-one email against contacts, either by BCC or by mailbox sync, is table stakes in HubSpot, Attio and Twenty and the main reason CRMs are abandoned when missing.\n\n**Scope**\n\nIn: per-tenant BCC address `log+<token>@<PAPEROS_DOMAIN>` parsed by the PAP-410 inbound pipeline into `crm_activity kind email`; `mailbox_connection (user_id, provider: gmail|microsoft, scopes, history_cursor, status)` with OAuth through PAP-57 generic providers and tokens encrypted via PAP-353; incremental sync (Gmail `history.list`, Graph delta queries) every 5 minutes for threads whose participants match CRM contacts, storing headers, snippet and sanitised body with attachments as references; per-user privacy controls (never sync domains list, per-thread 'do not log'); send-from-CRM composing through the rep's mailbox so replies thread; activity timeline rendering on PAP-189 pages.\n\nOut: shared support mailboxes (PAP-197), calendar sync (booking issue), full mailbox search.\n\n**Spec**\n\n* Only threads with at least one participant that is a CRM contact are stored; internal-only threads are skipped; `never_sync_domains` defaults to the tenant's own domains.\n* Bodies are sanitised with the PAP-410 allowlist and classified `pii()`; retention follows PAP-355; users can delete a logged thread which also blocks re-sync of it.\n* Sync is idempotent on provider message id; token refresh 24 h before expiry; revoked tokens flag `reauth_required`.\n* In CI the providers are `nock`-recorded; live sync requires the Google and Microsoft OAuth apps (NJ).\n\n**Interface contract**\n\nProvides: `mailboxes.connect|disconnect|status`, BCC logging, `crm.emails.send`, activity source `email.synced`, privacy settings page. Consumes: CRM schema, inbound parsing and sanitiser (PAP-410), OAuth (PAP-57), encryption (PAP-353), jobs (PAP-43), retention (PAP-355), outbound ledger for sends.\n\n**Definition of done**\n\n* Recorded-fixture tests for both providers; BCC path integration test; privacy rules tested; screenshots at 375, 1024, 1920 light and dark.\n* `docs/growth/email-sync.md` with the OAuth app checklist and privacy notice; CHANGELOG.\n\n**Test plan**\n\n* Unit: participant matching, domain exclusions, delta cursor handling, sanitisation, idempotency.\n* E2E: BCC a fixture email, see it on the contact timeline; connect a mocked Gmail, run sync, see two threads; mark one 'do not log' and confirm it disappears and stays gone.\n\n**Demo**\n\nReviewer connects the mocked mailbox, syncs and opens a contact to read the threaded emails, then sends a reply from the CRM. Under two minutes.\n\n**Edge cases**\n\n* Contact email changes: earlier threads stay linked by contact id.\n* Thread with a suppressed contact: logged (inbound) but send blocked by `canContact` transactional rules.\n* Rep leaves: connection revoked, logged emails stay.\n\n**Dependencies**\n\nHard: `r4/growth/crm-schema-routers-page-specs`, PAP-57, PAP-353. Soft: PAP-410, PAP-43, PAP-355, OAuth apps (NJ).\n\n**Agent**\n\nBuilder: Beacon (CRM Builder). Reviewer: Sentinel (Security Auditor, Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/booking-pages-and-availability",
+   "title": "Booking pages and availability: public scheduling links with availability rules, Google and Microsoft calendar busy-time checks, meeting activities, reminders and reschedule links",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Acquisition analytics",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "r4/growth/crm-schema-routers-page-specs",
+    "PAP-352",
+    "PAP-168"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nSalons, clinics, agencies and sales teams all book meetings. PAP-352 decides whether Cal.com is embedded or borrowed; either way PaperOS needs the CRM-facing half: a booking link per staff member or team, availability, a public page and a `meeting` activity with reminders.\n\n**Scope**\n\nIn: `booking_event_type (owner_user_id|team, slug, duration_min, buffer, availability jsonb weekly rules, timezone, location: video|phone|in_person, questions jsonb, round_robin)`, `booking (event_type_id, contact_id, starts_at, ends_at, status: confirmed|cancelled|rescheduled|no_show, calendar_event_id)`; public `/book/:slug` page with slot picker honouring tenant branding; busy-time checks via Google Calendar and Microsoft Graph (OAuth per PAP-57, tokens via PAP-353) or the embedded Cal.com adapter behind a `BookingProviderPort` when PAP-352 says embed; ICS attachments and calendar event creation; reminders and reschedule and cancel links through PAP-370 and PAP-405 SMS; `crm_activity kind meeting` and lead creation for unknown bookers with consent capture.\n\nOut: payments at booking (deposits issue in business-core), resource booking (rooms, chairs: restaurant and salon packs model them as tables; v0.3 links them).\n\n**Spec**\n\n* Slot computation is pure and tested across DST and timezone boundaries; double booking prevented with an advisory lock per owner and slot.\n* Provider port has `fixture` (deterministic busy times), `google`, `microsoft` and `calcom` adapters; CI uses `fixture` only.\n* Reminders at 24 h and 1 h via PAP-136 kinds; the public page is rate limited (PAP-267) and stores `ip_hash` only.\n\n**Interface contract**\n\nProvides: `booking.*` procedures, `BookingProviderPort`, public route, `BookingWidget` for portal and landing pages, activity source `meeting`, notification kinds `booking.*`. Consumes: CRM schema, OSS mode decision (PAP-352), calendar view (PAP-168) for staff schedule, OAuth (PAP-57), encryption (PAP-353), email and SMS (PAP-370, PAP-405 soft), consent centre, rate limits (PAP-267).\n\n**Definition of done**\n\n* Slot engine property tests; no double booking under 50 concurrent requests; fixture adapter end to end; screenshots at 320, 375, 768, 1024, 1920 light and dark; axe clean.\n* `docs/growth/booking.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: availability rules, buffers, DST, round robin fairness, ICS generation.\n* E2E: create an event type, open the public page, book as a new visitor, see the meeting on the contact timeline and the staff calendar, reschedule via the link.\n\n**Demo**\n\nReviewer publishes a 30-minute link, books a slot in a private window and watches the meeting appear on the calendar and the contact. Under two minutes.\n\n**Edge cases**\n\n* Owner's calendar token expired: slots computed from rules only with a banner to the owner.\n* Booker's timezone differs: both shown on the confirmation.\n* Cancellation inside the buffer: allowed, marked late.\n\n**Dependencies**\n\nHard: `r4/growth/crm-schema-routers-page-specs`, PAP-352, PAP-168. Soft: PAP-57, PAP-353, PAP-370, PAP-405, PAP-267, `r4/growth/consent-compliance-centre`.\n\n**Agent**\n\nBuilder: Beacon (CRM Builder) with Nova on the slot picker. Reviewer: Sentinel (Edge Case Hunter for time zones, Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/email-broadcast-campaigns",
+   "title": "Email broadcast campaigns: one-off sends to a segment with template editor, send-time scheduling, subject-line test, per-campaign stats and compliance gates",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Campaigns and social",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-404",
+    "PAP-405",
+    "PAP-195"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nSequences (PAP-191) are drip automation for individuals. Newsletters and announcements are one send to many; Mailchimp, Listmonk and Customer.io treat them as a first-class object with their own stats. The provider layer, consent gate and segments already exist; this adds the campaign object and the batching that keeps a 50k send inside warmup caps.\n\n**Scope**\n\nIn: `campaign (name, channel: email, segment_id, template_id, status: draft|pending_approval|scheduled|sending|sent|cancelled, scheduled_at, batch_size, stats jsonb)`, `campaign_recipient (campaign_id, contact_id, status, message_id, events)`; audience freeze at schedule time (PAP-195 `freeze`); send worker batching through the PAP-404 provider with warmup caps from PAP-405 and per-recipient `canContact` at send time; subject-line test on 10 percent with winner selection after 2 hours; stats (sent, delivered, opened, clicked, bounced, unsubscribed) from provider webhooks and `r4/growth/email-engagement-tracking` when present; approval by owner or admin binding a content hash; `_app/marketing/campaigns` list and editor.\n\nOut: SMS broadcasts (TCPA volume rules, v0.3), automation journeys beyond sequences, template marketplace.\n\n**Spec**\n\n* Sending is resumable: `campaign_recipient` rows are claimed with `FOR UPDATE SKIP LOCKED`; a crash resumes without duplicates (unique message per recipient).\n* Sandbox: every recipient is rewritten by PAP-370 rules and recorded in the outbound ledger; the live flip is Needs Justin per tenant.\n* Unsubscribe headers from the consent centre on every message; the footer is mandatory and cannot be removed in the editor.\n* Content agent (PAP-192) may create `pending_approval` campaigns via `ContentDraftPort`.\n\n**Interface contract**\n\nProvides: `campaigns.*`, send worker `campaign.send`, stats dataset `growth.campaignStats`, editor route, event `campaign.sent|failed` (already in the contract catalogue). Consumes: provider and templates (PAP-404), gate and warmup (PAP-405), segments (PAP-195), consent centre, outbound ledger, engagement tracking (soft), approval pattern (PAP-401).\n\n**Definition of done**\n\n* Test-clock integration: a 2,000-recipient fixture campaign sends in warmup-capped batches, 5 percent suppressed recipients skipped with reasons, stats reconcile to recipient rows; crash-and-resume test; all sandbox.\n* Playwright editor, schedule, approve; screenshots at 320, 375, 768, 1024, 1280, 1536, 1920 light and dark; axe clean; `docs/growth/campaigns.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: audience freeze, batching under caps, subject test split and winner rule, stats aggregation, hash binding.\n* E2E: build a campaign for a frozen segment, schedule, approve, advance the clock and read stats on the outbound ledger.\n\n**Demo**\n\nReviewer creates a newsletter to the 'Customers' segment, approves it, advances the clock and reads sent and skipped counts with reasons. Under two minutes.\n\n**Edge cases**\n\n* Segment shrinks after freeze: frozen list wins; new members get nothing.\n* Provider outage mid-send: batches retry up to six hours, then `partial` with a report.\n* Template variable missing for one contact: that recipient fails with reason, campaign continues.\n\n**Dependencies**\n\nHard: PAP-404, PAP-405, PAP-195. Soft: `r4/growth/consent-compliance-centre`, `r4/growth/outbound-sandbox-ledger`, `r4/growth/email-engagement-tracking`, PAP-192.\n\n**Agent**\n\nBuilder: Beacon (Campaign Composer). Reviewer: Sentinel (Security Auditor for compliance, Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/email-engagement-tracking",
+   "title": "Email engagement tracking: privacy-respecting open pixel and click wrapping with per-tenant toggle, bot filtering, activity and segment feeds",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Acquisition analytics",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-404",
+    "PAP-194"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nSequences and campaigns report sent and bounced; reps and marketers act on opened and clicked. A first-party tracker consistent with the PAP-194 privacy stance (no third-party, consent-aware, bot-filtered) closes the loop without inviting a compliance problem.\n\n**Scope**\n\nIn: `/t/o/:token.gif` open pixel and `/t/c/:token` click redirect on the PAP-194 collector origin; token signed per message and link; `outreach_message.events` and `campaign_recipient.events` updated; `crm_activity kind email` gains `opened_at`, `clicked_at`; bot filtering (Apple Mail Privacy Protection proxy ranges and known scanners flagged `machine_open`); per-tenant toggles (opens, clicks, both off) and per-contact `essential-only` consent mode disables tracking; segment operators `opened email in last N days` via PAP-195 extension hook; links rewritten at render time in PAP-404 templates with an allowlist for untracked links.\n\nOut: heatmaps, third-party pixels, ad platform pixels.\n\n**Spec**\n\n* Redirect resolves in under 50 ms from a signed token with no database write on the hot path (event queued to PAP-43).\n* Opens from machine proxies are stored but excluded from 'opened' counts by default with a toggle.\n* Tracking domain is the tenant's sending domain when DNS is set (CNAME), else the platform domain, so DMARC alignment holds.\n\n**Interface contract**\n\nProvides: tracking routes, `wrapLinks(html, messageId)`, events `email.opened|clicked`, segment operators, tenant settings. Consumes: templates and messages (PAP-404), collector origin and privacy modes (PAP-194), segments hook (PAP-195), consent centre, jobs (PAP-43), sending domain (PAP-405).\n\n**Definition of done**\n\n* Unit and integration green; latency test for the redirect; bot list fixtures; screenshots of the settings and a contact timeline with engagement at 375, 1024.\n* `docs/growth/engagement-tracking.md` with the privacy notice text; CHANGELOG.\n\n**Test plan**\n\n* Unit: token signing, link rewriting with allowlist, bot classification, consent mode gating.\n* E2E: send a sandbox sequence email, open the pixel and click a link from Playwright, see the activity update and a segment membership change.\n\n**Demo**\n\nReviewer opens a sandbox email preview, clicks a tracked link and watches the contact timeline show the click. Under one minute.\n\n**Edge cases**\n\n* Link already tracked by an external tool: allowlisted domains left untouched.\n* Token replay after 30 days: 404, no event.\n* Tenant turns tracking off: existing wrapped links still redirect, record nothing.\n\n**Dependencies**\n\nHard: PAP-404, PAP-194. Soft: PAP-195, PAP-405, PAP-43, `r4/growth/consent-compliance-centre`.\n\n**Agent**\n\nBuilder: Beacon (Outreach Sequencer). Reviewer: Sentinel (Security Auditor for privacy).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/growth/lead-scoring-and-routing",
+   "title": "Lead scoring and routing: fit and engagement score rules, lifecycle promotion thresholds, round-robin and territory assignment, SLA timer on new leads",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Acquisition analytics",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "r4/growth/crm-schema-routers-page-specs",
+    "PAP-195",
+    "PAP-194"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nLeads arrive from forms, imports and referrals and sit in `new`. Scoring turns attributes and behaviour into a number, routing hands the lead to a person, and the lifecycle moves from `lead` to `mql` and `sql` on rules instead of by hand.\n\n**Scope**\n\nIn: `crm_score_model (name, rules jsonb [{ clause: FilterTree, points, decay_days? }], thresholds { mql, sql })` evaluated incrementally by a PAP-43 job on contact changes and attribution events; `crm_contact.score`, `score_updated_at`, breakdown panel on the contact page; routing rules `crm_routing_rule (clause, strategy: owner|round_robin|territory, pool user_ids[], territory_field)` applied on `lead.created` and score threshold crossing; SLA timer (`first_touch_due_at`) with PAP-136 alert and escalation to manager; lifecycle promotion writes a `system` activity; datasets for reporting.\n\nOut: predictive or ML scoring, external enrichment (`r4/growth/contact-enrichment-port` feeds attributes), quota management.\n\n**Spec**\n\n* Rules reuse `FilterTree` from PAP-279 with the PAP-195 extensions (`performed X at least N times in window`), so the same builder edits them.\n* Scores recompute incrementally (only contacts touched since the watermark) with a nightly full pass; decay reduces engagement points by day.\n* Round robin is fair per pool and skips users out of office (PAP-136 status if available); assignment is idempotent per lead.\n\n**Interface contract**\n\nProvides: `crm.scoring.*`, `crm.routing.*`, contact score fields and breakdown component, activity kinds, dataset `crm.scoreDistribution`, event `crm.lead.assigned`. Consumes: CRM schema, segments grammar (PAP-195), attribution events (PAP-194), jobs (PAP-43), notifications (PAP-136), filter builder (PAP-166).\n\n**Definition of done**\n\n* Fixture of 500 contacts scores deterministically and matches a brute-force evaluation; round robin fairness within one; Playwright rule builder; screenshots at 375, 1024, 1920 light and dark.\n* `docs/growth/scoring-routing.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: rule evaluation, decay, threshold crossings in both directions, routing strategies, SLA timers.\n* E2E: define a model, submit a fixture form lead with UTM, see the score, the assignment and the SLA badge; let the fixture clock pass the SLA and see the escalation.\n\n**Demo**\n\nReviewer creates two rules, watches a seeded lead cross the MQL threshold and land on a rep with a 2-hour SLA badge. Under two minutes.\n\n**Edge cases**\n\n* Rule references a deleted custom field: model paused, owner notified (PAP-195 pattern).\n* Territory field empty: falls back to round robin with a note.\n* Score drop below threshold: lifecycle never demotes automatically; an activity records it.\n\n**Dependencies**\n\nHard: `r4/growth/crm-schema-routers-page-specs`, PAP-195, PAP-194. Soft: PAP-43, PAP-136, PAP-166.\n\n**Agent**\n\nBuilder: Beacon (CRM Builder). Reviewer: Sentinel (Code Reviewer, Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/contact-enrichment-port",
+   "title": "Contact and company enrichment port: provider adapter interface with a fixture adapter, domain-based company enrichment, email verification, consent-aware field writes and cost caps",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Acquisition analytics",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "r4/growth/crm-schema-routers-page-specs",
+    "PAP-111"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nA lead that arrives as an email address becomes useful when the company, size and industry are filled in. Attio and HubSpot enrich automatically; PaperOS does it behind a port so Clearbit, Apollo, Hunter or an OSS lookup can be swapped, with a fixture adapter for CI and hard spend caps.\n\n**Scope**\n\nIn: `EnrichmentPort { enrichCompany(domain), enrichPerson(email), verifyEmail(email), capabilities() }` with `fixture` adapter (deterministic data for demo domains), `clearbit` and `apollo` adapters in `dryRun` until keys exist (NJ), `mx` adapter for verification without a vendor; `enrichment_result` cache table with TTL; write policy: only fills empty fields unless `overwrite`, records `source: enrichment:<provider>` per field in `custom.__sources`; triggers on `crm.contact.created` and manual 'Enrich' action; monthly cost cap per tenant via PAP-111-style counters; settings page.\n\nOut: people-search prospecting lists (purchased data is out of scope for compliance), enrichment of personal data beyond business contact fields.\n\n**Spec**\n\n* Only business fields (company name, domain, industry, size band, location, logo, job title) are written; personal social profiles are not fetched by default.\n* Results cached 90 days per key; the same domain is never billed twice in a period.\n* Verification status writes `crm_contact.email_status` (`valid|risky|invalid|unknown`) used by PAP-405 to skip invalid sends.\n\n**Interface contract**\n\nProvides: `EnrichmentPort`, adapters registry, `crm.enrich`, cache table, field source annotations, settings. Consumes: CRM schema, cost controls pattern (PAP-111), jobs (PAP-43), secrets (PAP-17), outbound suppression on invalid (PAP-405, soft).\n\n**Definition of done**\n\n* Fixture adapter end to end; `mx` verification tests with recorded DNS; cost cap trips in a test; screenshots at 375, 1024 of the settings and the enriched company card.\n* `docs/growth/enrichment.md` with the vendor comparison and privacy note; CHANGELOG.\n\n**Test plan**\n\n* Unit: write policy (empty-only versus overwrite), cache TTL, cap counters, status mapping.\n* E2E: create a contact at a demo domain, see the company card fill from the fixture adapter, hit the cap and see the pause banner.\n\n**Demo**\n\nReviewer adds `ana@acme.example`, watches Acme's industry and size appear with a source badge, then runs verify and sees `valid`. Under one minute.\n\n**Edge cases**\n\n* Provider disagrees with user-entered data: never overwritten; a suggestion chip offers it.\n* Domain is a free mail provider: company enrichment skipped.\n* Vendor 429: backoff; no partial writes.\n\n**Dependencies**\n\nHard: `r4/growth/crm-schema-routers-page-specs`, PAP-111. Soft: PAP-43, PAP-17, PAP-405.\n\n**Agent**\n\nBuilder: Beacon (CRM Builder). Reviewer: Sentinel (Security Auditor for data minimisation).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/growth/short-links-and-qr",
+   "title": "Short links and QR codes: first-party /l/:code redirects with click attribution, optional Dub adapter, UTM builder and printable QR for offline campaigns",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Acquisition analytics",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-194",
+    "PAP-188"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nSocial posts, printed menus, flyers and SMS need short trackable links. PAP-188 hypothesises Dub via API; whichever it decides, the CRM needs a link object whose clicks land in attribution and whose QR codes work on a restaurant table.\n\n**Scope**\n\nIn: `short_link (code, target_url, utm jsonb, campaign_id?, owner, clicks, status, expires_at?)`; `/l/:code` redirect on the public routes with PAP-267 rate limits recording an `attr_event` (`link_clicked`) with channel classification; `ShortLinkPort` with `first_party` and `dub` adapters (Dub in `dryRun` until a key exists); UTM builder component used by PAP-401 composer, PAP-404 templates and campaigns; QR generation (`qrcode` package) as SVG and PNG with tenant colours and a print sheet; link analytics dataset.\n\nOut: custom domains per tenant beyond a CNAME instruction, link retargeting pixels.\n\n**Spec**\n\n* Codes are 7-character Crockford base32, case-insensitive, profanity filtered (shared with PAP-407); vanity codes unique per tenant.\n* Redirect is a 302 with no cookies; the click event carries `referrer_host` and `device_class` only (PAP-194 privacy rules).\n* QR SVG passes a contrast check against the tenant background token.\n\n**Interface contract**\n\nProvides: `links.*`, redirect route, `ShortLinkPort`, `UtmBuilder`, `QrCode` component, dataset `growth.linkClicks`. Consumes: attribution collector and classification (PAP-194), stack decision (PAP-188), rate limits (PAP-267), composer and templates (PAP-401, PAP-404, soft), profanity filter (PAP-407, soft).\n\n**Definition of done**\n\n* Redirect latency under 50 ms in a bench; click events appear in `attr.channels`; QR decodes in a test with `jsqr`; screenshots at 375, 1024.\n* `docs/growth/links.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: code generation and collisions, UTM merge precedence, QR contrast, expiry.\n* E2E: create a link with UTM, print the QR sheet, scan it via a fixture decode, follow the redirect and see the click on the attribution report.\n\n**Demo**\n\nReviewer creates `/l/menu`, downloads the QR, opens the link and sees one click in the channel report under `offline`. Under one minute.\n\n**Edge cases**\n\n* Target URL changed after clicks: history kept, new clicks go to the new target.\n* Expired link: 410 page with tenant branding.\n* Dub outage: first-party fallback records the click and syncs later.\n\n**Dependencies**\n\nHard: PAP-194, PAP-188. Soft: PAP-267, PAP-401, PAP-404, PAP-407.\n\n**Agent**\n\nBuilder: Beacon (Campaign Composer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/growth/nps-csat-and-review-requests",
+   "title": "NPS and CSAT surveys and review requests: one-question surveys after resolved conversations and paid invoices, response capture, detractor alerts and Google or Yelp review links",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Acquisition analytics",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "r4/growth/consent-compliance-centre",
+    "PAP-370",
+    "PAP-352"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nEvery local business lives on reviews and every SaaS on NPS. Triggered one-question surveys after a support resolution or a paid invoice, with detractor alerts and a review-site handoff for promoters, close the loop between service and growth. PAP-352 decides whether Formbricks is embedded; this issue owns the CRM side either way.\n\n**Scope**\n\nIn: `survey (kind: nps|csat|custom, trigger: support.conversation.resolved|invoice.paid|manual, delay_hours, channel: email|sms|in_app, question, follow_up_question, review_links jsonb { google, yelp, trustpilot }, status)`, `survey_response (survey_id, contact_id, score, comment, source_event, responded_at)`; public response page `/s/:token` (one click from the email) with follow-up comment; in-app variant through `r4/growth/in-app-messages-and-announcements` when present; sends through PAP-370 or PAP-405 SMS gated by `canContact('marketing'|'transactional' per tenant legal setting)`; detractor alert (score under 7) to the assignee via PAP-136; promoters see review links; datasets `growth.nps` with rolling 30-day score and a dashboard block; frequency cap per contact (one survey per 90 days).\n\nOut: multi-question forms (PAP-169 forms), incentives for reviews (policy), public review widgets.\n\n**Spec**\n\n* Tokens are single-use per contact and survey; the response page stores no PII beyond the linked contact id.\n* Whether NPS emails count as marketing or transactional is a tenant legal setting with jurisdiction defaults documented in `docs/growth/consent.md`.\n* Formbricks adapter behind `SurveyPort` when PAP-352 says embed; `native` adapter otherwise; CI uses `native`.\n\n**Interface contract**\n\nProvides: `surveys.*`, response route, `SurveyPort`, datasets, block `growth.nps`, notification kind `survey.detractor`, activity source `survey.responded`. Consumes: consent centre, email (PAP-370), SMS (PAP-405, soft), OSS decision (PAP-352), support events (PAP-410, soft), invoice events (PAP-397, soft), notifications (PAP-136), dashboards (PAP-173).\n\n**Definition of done**\n\n* Trigger, delay, cap and gate tests; response round trip in sandbox; rolling NPS matches brute force; screenshots at 320, 375, 1024 light and dark for the response page (two brands) and the block.\n* `docs/growth/surveys.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: trigger matching, delay scheduling, frequency cap, score maths, token single use.\n* E2E: resolve a fixture conversation, advance the clock, open the sandbox email, click 9, see the promoter review links and the response on the contact.\n\n**Demo**\n\nReviewer marks a conversation resolved, advances the clock, answers the survey from the outbound ledger preview and sees the NPS block update. Under two minutes.\n\n**Edge cases**\n\n* Contact answered 60 days ago: skipped by the cap with a log line.\n* Score submitted twice: second ignored (single-use token).\n* No review links configured: promoters see a thank-you only.\n\n**Dependencies**\n\nHard: `r4/growth/consent-compliance-centre`, PAP-370, PAP-352. Soft: PAP-405, PAP-410, PAP-397, PAP-136, PAP-173, `r4/growth/in-app-messages-and-announcements`.\n\n**Agent**\n\nBuilder: Beacon (Campaign Composer). Reviewer: Sentinel (Security Auditor for the public route, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/help-center-knowledge-base",
+   "title": "Public help center: articles from the docs engine with categories, search, portal embed, article suggestions in the support widget and deflection metrics",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Acquisition analytics",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-128",
+    "PAP-411",
+    "PAP-39"
+   ],
+   "blocks": [
+    "r4/growth/support-ai-reply-drafts"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-197 leaves the public knowledge base out. Intercom and Chatwoot deflect a third of tickets with articles; the docs engine (PAP-128) already renders MDX, so the help center is mostly a public route, a category model and search wired into the chat widget.\n\n**Scope**\n\nIn: `help_article` metadata over PAP-128 docs under `docs/help/**` or the runtime docs store (PAP-379) with `category`, `audience`, `status: draft|published`, `keywords`; public route `/help` and `/help/:slug` with tenant branding, category navigation and PAP-39 search; article suggestions in `<SupportChat/>` (PAP-411) from the visitor's typed message before a conversation opens; 'Was this helpful' votes; deflection dataset (suggestions shown, article opened, conversation avoided); staff 'insert article link' in the PAP-412 reply box; sitemap and `noindex` per article.\n\nOut: AI-generated answers (`r4/growth/support-ai-reply-drafts`), multi-language articles beyond PAP-27 locale routing, community forums.\n\n**Spec**\n\n* Articles are docs: authoring, versioning and comments come from PAP-128 and PAP-131; this issue adds metadata and public rendering only.\n* Public search is scoped to `published` articles of the tenant and rate limited per PAP-267; queries are logged without PII for the 'no results' report.\n* Suggestion ranking is BM25 from PAP-39 with keyword boosts; the widget shows at most three.\n\n**Interface contract**\n\nProvides: help routes, `helpArticles.*`, `HelpSuggestions` component for the widget, datasets `growth.helpDeflection`, `growth.helpSearchMisses`. Consumes: docs engine and store (PAP-128, PAP-379 soft), chat widget (PAP-411), search (PAP-39), console reply box (PAP-412 soft), theming (PAP-74), rate limits (PAP-267).\n\n**Definition of done**\n\n* Public pages render from fixture articles with search; suggestions appear in the widget in Playwright; deflection dataset increments; screenshots at 320, 375, 768, 1024, 1920 light and dark; axe clean.\n* `docs/growth/help-center.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: metadata validation, ranking boosts, vote idempotency per visitor hash, sitemap generation.\n* E2E: publish two articles, search from `/help`, type a matching question in the portal widget and click the suggestion instead of opening a conversation.\n\n**Demo**\n\nReviewer publishes an article, opens the portal widget, types a related question and clicks the suggested article, then reads the deflection count. Under two minutes.\n\n**Edge cases**\n\n* Article unpublished while linked from a conversation: link shows 'no longer available'.\n* Search with zero results: logged for the misses report, widget offers to start a conversation.\n\n**Dependencies**\n\nHard: PAP-128, PAP-411, PAP-39. Soft: PAP-379, PAP-412, PAP-74, PAP-267.\n\n**Agent**\n\nBuilder: Beacon (CRM Builder) with Quill. Reviewer: Sentinel (Visual Inspector, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/support-ai-reply-drafts",
+   "title": "Support AI reply drafts and FAQ bot: grounded suggested replies for staff, a help-center-grounded first response in the widget with human handoff, never auto-sent",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "Acquisition analytics",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "r4/growth/help-center-knowledge-base",
+    "PAP-412",
+    "PAP-111"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-197 excludes AI auto-replies, rightly. Drafts are different: a grounded suggestion the agent edits and sends cuts handling time, and a widget bot that answers from the help center and hands off to a human when unsure deflects without pretending to be a person. Everything stays inside the approval rule that governs every growth agent.\n\n**Scope**\n\nIn: Beacon sub-character `support-drafter` (`claude-sonnet-5`, tools: read conversation, search help articles, read CRM summary fields; no send tools) with prompt and skill; `support.drafts.suggest(conversationId)` returning `{ body, sources[], confidence }` validated by Zod, shown in the PAP-412 reply box as an editable draft with a 'Drafted by' badge; widget bot mode (per-tenant toggle) answering with citations when confidence is above a threshold and otherwise creating the conversation with the transcript; per-tenant budget via PAP-111; eval set of 30 conversations with golden drafts for PAP-110; feedback (accepted, edited, rejected) recorded for the eval loop.\n\nOut: autonomous sending, voice, translation (PAP-27 handles locale of the UI), training on tenant data.\n\n**Spec**\n\n* Grounding: every claim cites an article or a prior message; drafts with unsupported claims fail self-check and are dropped.\n* The bot discloses it is automated in the first message; any 'human' keyword or two low-confidence turns hand off immediately.\n* No contact PII beyond first name is placed in the prompt; conversation bodies are passed through the PAP-410 sanitiser first; prompt and completion logged to PAP-129 with redaction.\n\n**Interface contract**\n\nProvides: character and skill, `support.drafts.*`, widget bot mode, eval task `support-drafter`, feedback dataset `growth.supportDraftFeedback`. Consumes: help center articles and suggestions, console reply box (PAP-412), widget (PAP-411), cost controls (PAP-111), evals (PAP-110), prompt log (PAP-129), roster (PAP-104), agent principals (PAP-60).\n\n**Definition of done**\n\n* Eval at or above 0.8 on the 30 fixtures with zero unsupported claims; tool scope test proves no send capability; budget cap trips in a test.\n* Playwright: draft appears, agent edits and sends; bot answers a fixture question with a citation and hands off on 'human'; screenshots at 375, 1024, 1920 light and dark.\n* `docs/agents/support-drafter.md`; CHANGELOG; Justin approves the character (NJ item).\n\n**Test plan**\n\n* Unit: output schema validation, citation check, confidence threshold, handoff triggers, PII scrubbing.\n* E2E: the Playwright flows above using the PAP-110 runner with recorded model responses.\n\n**Demo**\n\nReviewer opens a fixture conversation, reads the suggested reply with two citations, edits one sentence and sends; then asks the widget bot a question and types 'human' to see the handoff. Under two minutes.\n\n**Edge cases**\n\n* Help center empty: bot mode disabled with an explanation; drafts fall back to conversation context only.\n* Model refusal or timeout: no draft, agent sees nothing but a retry link.\n* Customer writes in another language: draft in that language when the article set supports it, else handoff.\n\n**Dependencies**\n\nHard: `r4/growth/help-center-knowledge-base`, PAP-412, PAP-111. Soft: PAP-411, PAP-110, PAP-129, PAP-104, PAP-60.\n\n**Agent**\n\nBuilder: Beacon (lead) with Quill on the prompt. Reviewer: Sentinel (Security Auditor for tool scope and PII, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/support-sla-and-business-hours",
+   "title": "Support SLA policies and business hours: first-response and resolution targets per priority, business-hour calendars, breach warnings and escalation to a manager or Linear",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Acquisition analytics",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-412",
+    "PAP-136"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-197 stores `sla jsonb` and leaves policies out. Targets per priority with business hours, warnings before breach and an escalation path make the inbox measurable and are what a clinic or agency promises its clients.\n\n**Scope**\n\nIn: `support_sla_policy (name, applies: FilterTree over conversation fields, targets { first_response_min, resolution_min } per priority, business_hours_id)`, `support_business_hours (timezone, weekly rules, holidays[])`; computation of `first_response_due_at` and `resolution_due_at` in business time, paused while `pending` on the customer; warnings at 75 percent via PAP-136 to the assignee, breach to the manager; optional escalation action creating a Linear issue through PAP-131's escalation path; SLA badges in the PAP-412 list and conversation header; metrics (attainment percent) added to `support.metrics`.\n\nOut: contractual SLA reporting to customers, multi-level escalation trees.\n\n**Spec**\n\n* Due times are pure functions of policy, business hours and status history; fixtures cover weekends, holidays and DST.\n* Policy matching picks the most specific policy (most clauses) then the newest; changes apply to open conversations prospectively.\n* Badges use the PAP-71 status chip with `on_track|warning|breached`.\n\n**Interface contract**\n\nProvides: `support.sla.*`, `support.businessHours.*`, due-time computation, badges, notification kinds `support.sla.warning|breached`, metrics extension. Consumes: inbox and conversation view (PAP-412), notifications (PAP-136), Linear escalation (PAP-131), filter builder (PAP-166), status chip (PAP-71).\n\n**Definition of done**\n\n* Due-time fixtures green; warning and breach fire once each in a test clock run; Playwright badges; screenshots at 375, 1024, 1920 light and dark.\n* `docs/growth/support.md` gains an SLA section; CHANGELOG.\n\n**Test plan**\n\n* Unit: business-hour arithmetic, pause on pending, policy specificity, once-only alerts.\n* E2E: set a 1-hour first-response target, open a fixture conversation, advance the clock 45 minutes to see the warning, then past to see the breach and the manager alert.\n\n**Demo**\n\nReviewer creates a policy, opens the inbox sorted by due time and advances the clock to watch a badge turn to breached. Under two minutes.\n\n**Edge cases**\n\n* Holiday added retroactively: open conversations recomputed; closed ones untouched.\n* Conversation reopened after resolution: resolution timer restarts from the reopen.\n\n**Dependencies**\n\nHard: PAP-412, PAP-136. Soft: PAP-131, PAP-166, PAP-71.\n\n**Agent**\n\nBuilder: Beacon (CRM Builder). Reviewer: Sentinel (Edge Case Hunter for calendars).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/growth/in-app-messages-and-announcements",
+   "title": "In-app messages and announcements: banner, modal and tooltip messages targeted by segment and route, scheduling and approval, frequency caps and view or dismiss stats",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Acquisition analytics",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-195",
+    "PAP-64",
+    "PAP-401"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-195's demo shows a portal banner gated by `useInSegment`, but no issue lets a marketer create that banner. In-app messaging (Intercom, Customer.io) is the cheapest channel because it needs no consent for product updates and no deliverability; it needs a composer, targeting and stats.\n\n**Scope**\n\nIn: `inapp_message (kind: banner|modal|tooltip|checklist_step, title, body_json, cta { label, url }, targeting { segmentId?, audiences[], routes[] }, schedule { starts_at, ends_at }, frequency { max_views, cooldown_days }, status: draft|pending_approval|live|ended)`; `inapp_impression (message_id, user_id, viewed_at, dismissed_at, clicked_at)`; delivery hook `<InAppMessages />` in the portal (PAP-64) and console shells via the `shell.banner` slot and route matching; targeting evaluation through PAP-195 `contains` under 20 ms; approval binding a content hash (PAP-401 pattern); stats dataset; composer with live preview at portal widths.\n\nOut: mobile push (PAP-381 push transport is the future carrier), product tours with multi-step anchoring (v0.3), email fallback.\n\n**Spec**\n\n* Messages render from the design system components only (PAP-237 Dialog, Toast, banner) so they inherit theme and accessibility; no raw HTML.\n* Frequency caps evaluated client-side from a per-user impression cache and enforced server-side on write.\n* Content agent drafts land in `pending_approval` through `ContentDraftPort`.\n\n**Interface contract**\n\nProvides: `inapp.*`, `<InAppMessages />`, slot fill `shell.banner:inapp`, dataset `growth.inappStats`, event `inapp.message.viewed|clicked`. Consumes: segments (PAP-195), portal shell and slots (PAP-64, PAP-438 slot runtime), approval pattern (PAP-401), overlay components (PAP-237), content agent (PAP-192, soft), attribution (PAP-194, soft).\n\n**Definition of done**\n\n* Targeting and cap unit tests; Playwright: create, approve, see it as a segment member in the portal, dismiss, not see it again; screenshots at 320, 375, 768, 1024, 1920 light and dark; axe clean.\n* `docs/growth/in-app-messages.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: route matching, schedule window, frequency caps, hash binding, targeting evaluation.\n* E2E: the Playwright flow above with a portal user who is and is not in the segment.\n\n**Demo**\n\nReviewer composes a banner for the 'Trial ending' segment, approves it, logs in as a member and sees it, dismisses it and reloads. Under two minutes.\n\n**Edge cases**\n\n* User in two overlapping messages: priority order, one banner at a time, modals never stack.\n* Segment evaluation stale: the message uses the last known membership with a 'may be stale' indicator in stats.\n* Message ended while open: dismissed on next route change.\n\n**Dependencies**\n\nHard: PAP-195, PAP-64, PAP-401. Soft: PAP-438, PAP-237, PAP-192, PAP-194.\n\n**Agent**\n\nBuilder: Beacon (Campaign Composer). Reviewer: Sentinel (Visual Inspector, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/experiments-and-ab-tests",
+   "title": "Experiments and A/B tests: deterministic assignment by anonymous or contact id, variants for landing blocks, email subjects and in-app messages, conversion goals from attribution and significance readout",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Acquisition analytics",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-194",
+    "r4/growth/webflow-landing-publisher-and-editor"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-193 and PAP-192 both exclude A/B tests and PAP-194 stops at reporting. One experiment primitive (assignment, exposure, goal) that landing pages, campaigns and in-app messages share turns the attribution pipeline into a decision tool instead of a dashboard.\n\n**Scope**\n\nIn: `experiment (key, hypothesis, variants jsonb [{ key, weight }], surface: landing|email_subject|inapp|custom, goal_event, status: draft|running|stopped|concluded, started_at, winner?)`; assignment `assign(experimentKey, unitId)` by hashing `(experiment, unit)` so it is deterministic and stateless with a stored `attr_event` `experiment_exposed`; SDK method in `@paperos/attribution` and server helper; hooks in the landing publisher (block variants), campaigns (subject test reuses this) and in-app messages; results dataset joining exposures to goal events with per-variant conversion, lift and a two-proportion z-test readout with a 'not yet significant' guard; concluding an experiment pins the winner.\n\nOut: multi-armed bandits, feature flags for engineering (PAP-366 owns flags), server-side experiments on pricing (business-core).\n\n**Spec**\n\n* Assignment unit is `anonymous_id` before identify and `contact_id` after, stitched by PAP-194 so a visitor keeps their variant.\n* Exposure is recorded once per unit per experiment; goals count once per unit; results exclude bot-flagged events.\n* Minimum sample and runtime guards are shown before any winner is suggested; the readout states the test used.\n\n**Interface contract**\n\nProvides: `experiments.*`, `assign`, SDK `experiment(key)`, results dataset `attr.experiments`, hooks for landing, campaigns and in-app. Consumes: attribution SDK, stitching and rollups (PAP-194), landing blocks (sibling), campaigns (`r4/growth/email-broadcast-campaigns`, soft), in-app messages (soft), flags (PAP-366, for the readout kill switch).\n\n**Definition of done**\n\n* Assignment distribution test within 1 percent of weights over 100k units; stitching keeps variants in a fixture; z-test verified against known values; screenshots at 375, 1024, 1920 light and dark of the results page.\n* `docs/growth/experiments.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: hash assignment, weight distribution, once-only exposure and goal, z-test, guards.\n* E2E: run a two-variant landing experiment with fixture traffic through the collector, submit goals for one variant more often, see lift and significance appear after the guard threshold.\n\n**Demo**\n\nReviewer starts a hero-copy experiment, replays a fixture traffic script and reads the results table with a significant winner. Under two minutes.\n\n**Edge cases**\n\n* Variant removed mid-run: existing units keep it; results mark it 'retired'.\n* Goal event also fired by non-exposed users: excluded.\n* Experiment key reused: refused; keys are unique per tenant forever.\n\n**Dependencies**\n\nHard: PAP-194, `r4/growth/webflow-landing-publisher-and-editor`. Soft: `r4/growth/email-broadcast-campaigns`, `r4/growth/in-app-messages-and-announcements`, PAP-366.\n\n**Agent**\n\nBuilder: Beacon (CRM Builder) with Nova on the SDK. Reviewer: Sentinel (Edge Case Hunter, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/deal-products-and-quotes",
+   "title": "Deal products and quote from deal: line items on deals from the finance item catalogue, amount roll-up, one-click quote creation and acceptance syncing the deal to Won",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "CRM core",
+   "dueDate": "2026-09-29",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-189",
+    "r4/business-core/item-catalogue",
+    "PAP-395"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nA deal amount typed by hand and an invoice typed again is how numbers diverge. Deal line items priced from the catalogue, a quote generated from them through the finance document port and acceptance moving the deal to Won connect CRM and finance the way HubSpot Quotes and Pipedrive Products do.\n\n**Scope**\n\nIn: `crm_deal_line (deal_id, item_id?, description, quantity, unit_price_minor, currency, discount_pct, position)` with roll-up trigger to `crm_deal.amount_minor`; line editor on the deal page using the finance `ItemPicker` through `@paperos/contract-business-core`; `crm.deals.createQuote` calling `documents.create` with the lines and linking `crm_deal.quote_document_id`; listeners on `document.accepted|paid` (catalogue topics `invoice.*` and the quote acceptance event) moving the deal stage per pipeline settings (`won_on: accepted|paid`); quote status chip on the kanban card; pipeline value reports use line data when present.\n\nOut: CPQ rules and approval matrices, subscriptions from deals (recurring issue), e-signature (business-core out).\n\n**Spec**\n\n* Currency per deal; mixed-currency lines refused; amounts are `Money` and roll up with `Money.add`.\n* Quote creation snapshots lines; later deal edits prompt to regenerate a new quote version rather than mutate an issued one.\n* All finance access goes through the contract ports resolved from the kernel, never `packages/finance` imports (lint R8).\n\n**Interface contract**\n\nProvides: `crm_deal_line`, `crm.deals.lines.*`, `crm.deals.createQuote`, stage automation on acceptance, kanban quote chip, dataset `crm.dealLines`. Consumes: CRM views (PAP-189), item catalogue (`r4/business-core/item-catalogue`), documents (PAP-395, PAP-396 acceptance), kernel ports (PAP-490), FX (`r4/business-core/fx-rates-and-conversion`, soft).\n\n**Definition of done**\n\n* Roll-up trigger tests; quote creation integration through the kernel-resolved port; acceptance moves the deal in a test; Playwright line editor; screenshots at 375, 1024, 1920 light and dark.\n* `docs/growth/deal-products.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: roll-up with discounts, currency guard, snapshot versioning, stage mapping.\n* E2E: add two catalogue items to a deal, create the quote, accept it from the public page and see the deal in Won with the amount matching the quote total.\n\n**Demo**\n\nReviewer prices a deal from the picker, clicks Create quote, accepts it in a private window and watches the kanban card move to Won. Under two minutes.\n\n**Edge cases**\n\n* Business-core module disabled for the tenant: line editor hidden, amount editable by hand (fail-open read, `MODULE_DISABLED` on quote creation).\n* Item archived after adding: line kept with a warning at quote time.\n* Deal lost after quote issued: quote voided with a prompt.\n\n**Dependencies**\n\nHard: PAP-189, `r4/business-core/item-catalogue`, PAP-395. Soft: PAP-396, PAP-490, `r4/business-core/fx-rates-and-conversion`.\n\n**Agent**\n\nBuilder: Beacon (CRM Builder) with Ledger consulted. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/sales-dashboard-and-forecast",
+   "title": "Sales dashboard and forecast: pipeline funnel, win rate, velocity, weighted forecast by stage probability, activity leaderboard and stale-deal alerts as dashboard blocks",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Acquisition analytics",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-189",
+    "PAP-173"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-189 stops at 'pipeline value'. The questions a founder asks next (how much will close this month, where do deals stall, who is following up) are five datasets over tables that already exist, rendered by the dashboard engine that PAP-186 already proves.\n\n**Scope**\n\nIn: datasets `crm.funnel` (deals entering each stage per period with conversion), `crm.winRate` (by owner, source, period), `crm.velocity` (median days per stage), `crm.forecast` (open deals times stage probability by expected close month, plus commit and best-case from an owner-set `forecast_category`), `crm.activityLeaderboard`, `crm.staleDeals` (no activity for N days); seeded dashboard `crm.sales` installed with the CRM module; number blocks `crm.pipelineValue|weightedForecast|winRate`; stale-deal alert kind via PAP-136 weekly; drill-down from every block to the filtered pipeline view.\n\nOut: quota management, AI forecasting, revenue recognition (finance).\n\n**Spec**\n\n* Forecast uses `crm_pipeline_stage.probability` and `crm_deal.expected_close_date`; deals without a date fall into 'unscheduled'.\n* Stage history for funnel and velocity comes from the `system` activities the PAP-187 trigger writes, so no new table is needed.\n* Datasets compile through PAP-163 with `FilterTree` params and respect `crm.*.read` scoping (a rep sees own deals by default).\n\n**Interface contract**\n\nProvides: six datasets, three number blocks, dashboard `crm.sales`, alert kind `crm.deal.stale`, drill filters. Consumes: CRM views and seed (PAP-189), dashboard engine and print (PAP-173), compiler (PAP-163), charts (PAP-170), notifications (PAP-136), stage history trigger (`r4/growth/crm-schema-routers-page-specs`).\n\n**Definition of done**\n\n* Datasets equal brute-force calculations on the demo seed; dashboard settles under 2 s; cross-filter replay; screenshots at 375, 768, 1024, 1440, 1920 in three themes; every block has a text summary.\n* `docs/growth/sales-dashboard.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: funnel conversion maths, median velocity, weighted forecast by month, stale detection, permission scoping.\n* E2E: open `/crm/dashboard`, click a funnel stage to filter the pipeline, change the period, export PDF.\n\n**Demo**\n\nReviewer opens the sales dashboard on the seeded tenant, reads this month's weighted forecast, clicks the stalled-deals block and lands on the filtered pipeline. Under two minutes.\n\n**Edge cases**\n\n* Pipeline with custom stages: probabilities default from stage kind (open 20, won 100, lost 0) until edited.\n* Deal moved backwards: velocity counts the re-entry; funnel counts the first entry only.\n* Owner with zero deals: leaderboard shows them with zeros, never hidden.\n\n**Dependencies**\n\nHard: PAP-189, PAP-173. Soft: PAP-163, PAP-170, PAP-136, `r4/growth/crm-schema-routers-page-specs`.\n\n**Agent**\n\nBuilder: Beacon (CRM Builder) with Nova on blocks. Reviewer: Sentinel (Visual Inspector, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/growth/social-analytics-report",
+   "title": "Social analytics report: per-post and per-account metrics history, engagement rate by platform and time slot, best-time suggestions in the composer and a campaign roll-up block",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Campaigns and social",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-402",
+    "PAP-173"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-402 fetches metrics into `social_post_target.metrics` and stops. Buffer and Postiz sell the report: what worked, when, on which platform. A history table, two datasets and a best-time hint in the composer finish the loop cheaply.\n\n**Scope**\n\nIn: `social_metric_snapshot (target_id, captured_at, impressions, likes, comments, shares, clicks, video_views)` captured by the PAP-402 metrics job at 1 h, 24 h, 72 h and 7 d after publish; datasets `social.postPerformance` (engagement rate, by platform, campaign, author) and `social.bestTimes` (engagement by weekday and hour in tenant timezone over 90 days); composer hint 'best time for LinkedIn: Tue 09:00' when data exists; dashboard block `social.engagement` and report route `_app/marketing/social/analytics`; CSV export.\n\nOut: competitor benchmarking, paid ad metrics, comment moderation.\n\n**Spec**\n\n* Snapshots are append-only; the latest is denormalised to `metrics` for cards; rates divide by the account follower count captured daily when the adapter exposes it, else by impressions.\n* Best-time suggestions require at least 20 posts in the window; below that the composer shows nothing.\n* All adapters in `dryRun` return fixture metrics so the report renders in CI.\n\n**Interface contract**\n\nProvides: snapshot table, datasets, block, composer hint component, report route, CSV export. Consumes: metrics fetch and adapters (PAP-402, PAP-403), dashboards and charts (PAP-173, PAP-170), composer (PAP-401), campaigns (`r4/growth/email-broadcast-campaigns` for the cross-channel roll-up, soft).\n\n**Definition of done**\n\n* Datasets equal brute force on a fixture of 200 posts; hint threshold test; screenshots at 375, 1024, 1920 light and dark; CSV opens.\n* `docs/growth/social.md` gains an analytics section; CHANGELOG.\n\n**Test plan**\n\n* Unit: engagement rate maths, weekday and hour bucketing across DST, threshold, snapshot schedule.\n* E2E: publish three posts through the mock adapter, run the metrics job with fixture values, open the report and see the best-time hint in the composer.\n\n**Demo**\n\nReviewer opens Social analytics on the seeded tenant, switches to LinkedIn and reads the best-time heatmap, then opens the composer and sees the hint. Under one minute.\n\n**Edge cases**\n\n* Platform rate limits on metrics: snapshots skipped and marked; report shows gaps, never zeros.\n* Account disconnected: history kept, new snapshots stop.\n\n**Dependencies**\n\nHard: PAP-402, PAP-173. Soft: PAP-403, PAP-170, PAP-401.\n\n**Agent**\n\nBuilder: Beacon (Campaign Composer) with Iris on the heatmap. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-194",
+   "section": "Spec",
+   "append": "Round 4 clarification: the revenue join must use tenant revenue, not PaperOS platform billing. Join `attr_touch.contact_id` to `fin_party` (via `crm_contact.party_id` from `r4/growth/crm-schema-routers-page-specs`) and sum `invoice.paid` postings from PAP-397 and connected charges from PAP-181; PAP-177 subscriptions are PaperOS's own revenue and belong only to the platform-admin funnel (PAP-367 `/admin/onboarding`)."
+  },
+  {
+   "identifier": "PAP-407",
+   "section": "Spec",
+   "append": "Round 4 clarification: two referral modes exist. Tenant mode (v0.2 scope) attributes a tenant's own customers: 'signup' is portal registration (PAP-62, PAP-64) and 'first payment' is `invoice.paid` from PAP-397 or a connected charge from PAP-181. Platform mode (PaperOS recruiting tenants through PAP-57 signup and PAP-177 Checkout) reuses the same tables with `scope: platform` and is enabled only for the PaperOS demo tenant."
+  },
+  {
+   "identifier": "PAP-402",
+   "section": "Definition of done",
+   "append": "Round 4: the merge gate is the mock-adapter worker run plus X `validate` unit tests and a recorded (`nock`) publish fixture; the single real X publish is optional evidence, requires the NJ item for the X developer account and the tenant's live flag, and is reported as `skipped: no-credentials` otherwise (Security Model section 4 forbids live publishing outside an approved queue item). Record the attempt in `r4/growth/outbound-sandbox-ledger`."
+  },
+  {
+   "identifier": "PAP-404",
+   "section": "Definition of done",
+   "append": "Round 4: CI passes with `noop` providers and recorded Resend and Twilio fixtures; the sandbox delivery to allowlisted addresses is attached when `RESEND_TEST_KEY` and `TWILIO_TEST_SID` exist, otherwise `skipped: no-credentials`. Every attempt is written to `r4/growth/outbound-sandbox-ledger` so reviewers can prove nothing left the allowlist."
+  },
+  {
+   "identifier": "PAP-410",
+   "section": "Definition of done",
+   "append": "Round 4: the 30 fixture emails are the gate; the real staging round trip is attached when the mailbox DNS (NJ) exists and is otherwise `skipped: no-credentials`. Inbound fixtures must include one message with a prompt-injection payload in the body and assert it is wrapped as T3 untrusted content before any agent (PAP-192, `r4/growth/support-ai-reply-drafts`) reads it."
+  },
+  {
+   "identifier": "PAP-195",
+   "section": "Spec",
+   "append": "Round 4: `useInSegment` resolves the current portal user's contact through `crm_contact.user_id` (added by `r4/growth/crm-schema-routers-page-specs`), falling back to `fin_party.user_id` and then email match; the resolution is cached per session and invalidated on `crm.contact.updated`. In-app targeting UI for marketers lives in `r4/growth/in-app-messages-and-announcements`; this issue ships only the hook and the demo banner."
+  },
+  {
+   "identifier": "PAP-192",
+   "section": "Edge cases",
+   "append": "Round 4: changelog entries, spec files and docs the agent reads are T2 or T3 content under the Security Model prompt-injection tiers; wrap them with `<untrusted source= tier=>` and run the scanner before drafting. A draft that quotes an instruction-shaped line from a source is dropped and the source line is reported in the session comment."
+  },
+  {
+   "identifier": "PAP-197",
+   "section": "Dependencies",
+   "append": "Round 4: help center articles (`r4/growth/help-center-knowledge-base`), SLA policies (`r4/growth/support-sla-and-business-hours`) and AI reply drafts (`r4/growth/support-ai-reply-drafts`) extend this umbrella after its three children and depend on PAP-411 and PAP-412; none blocks the children."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "business-core",
+   "title": "Expose `documents.create|accept` and `ItemPicker` through `@paperos/contract-business-core` for deal quotes",
+   "why": "`r4/growth/deal-products-and-quotes` must create quotes and pick items via kernel-resolved ports; the contract (PAP-484) should list `DocumentPort.createFromLines` and the picker slot explicitly."
+  },
+  {
+   "targetProject": "collab",
+   "title": "Public rendering mode for the docs engine (unauthenticated, tenant-branded, `noindex` per page)",
+   "why": "The help center (`r4/growth/help-center-knowledge-base`) needs PAP-128 or PAP-379 to render selected docs publicly with search; today both assume an authenticated console."
+  },
+  {
+   "targetProject": "identity",
+   "title": "Portal registration writes a `crm.contact.created`-compatible event with `user_id`",
+   "why": "Tenant-mode referrals (PAP-407 amendment), surveys and in-app messages need the portal signup to link the new user to a CRM contact; PAP-62 owns the signup flow."
+  },
+  {
+   "targetProject": "libraries",
+   "title": "Decide the enrichment and email-verification vendor set (Clearbit, Apollo, Hunter, OSS MX) in the registry",
+   "why": "`r4/growth/contact-enrichment-port` ships adapters in `dryRun`; the Scout rubric should score cost per lookup, data-protection terms and sandbox access before any key is requested."
+  },
+  {
+   "targetProject": "realtime",
+   "title": "Push transport as the carrier for marketing web push",
+   "why": "PAP-381 is engineered for job progress; in-app messages and campaign channels would reuse it for opt-in web push in v0.3 if the transport exposes a per-user topic API."
+  }
+ ]
+}

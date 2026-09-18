@@ -1,0 +1,1043 @@
+{
+ "project": "migration",
+ "projectName": "Migration & Import Tools",
+ "benchmarks": [
+  "Airtable",
+  "Notion",
+  "ClickUp",
+  "Monday",
+  "Asana",
+  "Trello",
+  "Jira",
+  "Linear",
+  "HubSpot",
+  "Salesforce",
+  "Pipedrive",
+  "QuickBooks Online",
+  "Xero",
+  "FreshBooks",
+  "Wave",
+  "Zoho Books",
+  "Shopify",
+  "WooCommerce",
+  "Square",
+  "Google Sheets, Drive and Contacts",
+  "Dropbox and OneDrive",
+  "Baserow and NocoDB importers",
+  "Airbyte and Fivetran (connector conformance and incremental sync patterns)"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "Source research sheets, field-type matrix, fixtures",
+   "coveredBy": [
+    "PAP-198"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Importer test accounts and fixture workspaces",
+   "coveredBy": [
+    "PAP-198",
+    "r4/migration/importer-test-accounts-and-fixture-workspaces"
+   ],
+   "status": "partial",
+   "note": "Inline WP2; now its own issue"
+  },
+  {
+   "feature": "Connector interface, engine, batching, resumability",
+   "coveredBy": [
+    "PAP-347"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Dry run, commit, rollback semantics",
+   "coveredBy": [
+    "PAP-348"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Type inference, mapping wizard, run history",
+   "coveredBy": [
+    "PAP-349"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Connector conformance harness and scaffold",
+   "coveredBy": [
+    "r4/migration/connector-conformance-harness-and-scaffold"
+   ],
+   "status": "gap",
+   "note": "Referenced by seven specs, owned by none"
+  },
+  {
+   "feature": "Shared OAuth connections, token refresh and revocation",
+   "coveredBy": [
+    "r4/migration/source-oauth-connections-and-token-refresh"
+   ],
+   "status": "gap",
+   "note": "Each connector re-implements auth"
+  },
+  {
+   "feature": "External id mapping, incremental cursors, re-sync safety",
+   "coveredBy": [
+    "PAP-201"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Scheduled re-sync, sync status, health alerts",
+   "coveredBy": [
+    "PAP-201",
+    "r4/migration/scheduled-resync-and-sync-status"
+   ],
+   "status": "partial",
+   "note": "PAP-201 out: scheduling"
+  },
+  {
+   "feature": "Webhook-driven near-real-time sync",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "v0.3; noted in the resync issue"
+  },
+  {
+   "feature": "Duplicate detection and merge preview on import",
+   "coveredBy": [
+    "PAP-201",
+    "r4/migration/import-duplicate-detection-and-merge-preview"
+   ],
+   "status": "partial",
+   "note": "Exact keys only today"
+  },
+  {
+   "feature": "AI-assisted mapping suggestions",
+   "coveredBy": [
+    "r4/migration/ai-mapping-assistant"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "CSV, TSV, Excel, Google Sheets",
+   "coveredBy": [
+    "PAP-200"
+   ],
+   "status": "covered",
+   "note": "Amend legacy xls library"
+  },
+  {
+   "feature": "Airtable: connector, fields, views",
+   "coveredBy": [
+    "PAP-414",
+    "PAP-415",
+    "PAP-416"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Airtable automations",
+   "coveredBy": [
+    "r4/migration/airtable-automations-conversion"
+   ],
+   "status": "gap",
+   "note": "PAP-202 out"
+  },
+  {
+   "feature": "Notion: connector, blocks, hierarchy",
+   "coveredBy": [
+    "PAP-417",
+    "PAP-418",
+    "PAP-419"
+   ],
+   "status": "covered",
+   "note": "Deferred"
+  },
+  {
+   "feature": "ClickUp import",
+   "coveredBy": [
+    "PAP-204",
+    "r4/migration/clickup-connector-and-markup-mapping"
+   ],
+   "status": "covered",
+   "note": "Split into a child"
+  },
+  {
+   "feature": "Linear import (mirror own workspace)",
+   "coveredBy": [
+    "PAP-204",
+    "r4/migration/linear-connector-and-pm-mapping"
+   ],
+   "status": "covered",
+   "note": "Split into a child"
+  },
+  {
+   "feature": "Asana, Trello, Jira import",
+   "coveredBy": [
+    "r4/migration/asana-trello-jira-connectors"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Monday and HubSpot via CSV recipes",
+   "coveredBy": [
+    "PAP-413"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Salesforce and Pipedrive CRM import",
+   "coveredBy": [
+    "r4/migration/salesforce-and-pipedrive-crm-import"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Google and Outlook contacts, vCard",
+   "coveredBy": [
+    "r4/migration/contacts-import-google-outlook-vcard"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Stripe history into CRM, billing and ledger",
+   "coveredBy": [
+    "PAP-423"
+   ],
+   "status": "covered",
+   "note": "Rates table amendment"
+  },
+  {
+   "feature": "QuickBooks and Xero charts and opening balances",
+   "coveredBy": [
+    "PAP-424"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Finance import wizard and trial balance gate",
+   "coveredBy": [
+    "PAP-425"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "FreshBooks, Wave, Zoho Books recipes",
+   "coveredBy": [
+    "r4/migration/accounting-csv-recipes-freshbooks-wave-zoho"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Shopify, WooCommerce, Square commerce import",
+   "coveredBy": [
+    "r4/migration/shopify-woocommerce-square-import"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Files from Google Drive, Dropbox, OneDrive",
+   "coveredBy": [
+    "r4/migration/drive-dropbox-files-import"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Email and calendar history import (mbox, ICS)",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "v0.3; no issue this round"
+  },
+  {
+   "feature": "Placeholder users and invite conversion",
+   "coveredBy": [
+    "r4/migration/placeholder-users-and-invite-conversion"
+   ],
+   "status": "gap",
+   "note": "Assumed by four importers"
+  },
+  {
+   "feature": "Export archive format and streaming job",
+   "coveredBy": [
+    "PAP-420"
+   ],
+   "status": "covered",
+   "note": "PII amendment"
+  },
+  {
+   "feature": "Export UI, scheduling, encryption, links",
+   "coveredBy": [
+    "PAP-421"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Round-trip paperos connector and verification",
+   "coveredBy": [
+    "PAP-422"
+   ],
+   "status": "covered",
+   "note": "`ledger.importJournal` amendment"
+  },
+  {
+   "feature": "Per-view CSV and XLSX export",
+   "coveredBy": [
+    "PAP-322",
+    "PAP-183"
+   ],
+   "status": "covered",
+   "note": "Tables and finance projects"
+  },
+  {
+   "feature": "DSAR per-person export",
+   "coveredBy": [
+    "PAP-221"
+   ],
+   "status": "covered",
+   "note": "Identity project"
+  },
+  {
+   "feature": "Template pack format, lint, applier, upgrade",
+   "coveredBy": [
+    "PAP-426"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Packs wave 1: agency, retail, SaaS, clinic, restaurant",
+   "coveredBy": [
+    "PAP-427"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Packs wave 2: law firm, real estate, property management, construction, ecommerce",
+   "coveredBy": [
+    "r4/migration/packs-wave-2-law-real-estate-property-construction-ecommerce"
+   ],
+   "status": "gap",
+   "note": "Brief asks for every business type"
+  },
+  {
+   "feature": "Packs wave 3: nonprofit, school, church, gym, salon",
+   "coveredBy": [
+    "r4/migration/packs-wave-3-nonprofit-school-church-gym-salon"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Template gallery in onboarding and settings",
+   "coveredBy": [
+    "PAP-428",
+    "PAP-367"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Capture a tenant as a template pack",
+   "coveredBy": [
+    "r4/migration/template-pack-from-tenant"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Pack marketplace or sharing between tenants",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "v0.3; no issue this round"
+  },
+  {
+   "feature": "Migration agent (interview, plan, dry runs, approval)",
+   "coveredBy": [
+    "PAP-208"
+   ],
+   "status": "covered",
+   "note": "Approval path amendment"
+  },
+  {
+   "feature": "Migration verification dashboard and cutover checklist",
+   "coveredBy": [
+    "r4/migration/migration-verification-dashboard-and-cutover"
+   ],
+   "status": "gap",
+   "note": ""
+  },
+  {
+   "feature": "Import permissions and audit reasons",
+   "coveredBy": [
+    "PAP-347",
+    "PAP-349"
+   ],
+   "status": "partial",
+   "note": "Amendment registers `import.*` set"
+  },
+  {
+   "feature": "Rate-limit and throughput registry per source",
+   "coveredBy": [
+    "PAP-198",
+    "PAP-347"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Attachment migration before URL expiry",
+   "coveredBy": [
+    "PAP-414",
+    "PAP-418"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Large-file uploads for imports",
+   "coveredBy": [
+    "PAP-200",
+    "PAP-37"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Contract package, conformance, kernel wiring",
+   "coveredBy": [
+    "PAP-492",
+    "PAP-494",
+    "PAP-496"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Two-way sync with sources",
+   "coveredBy": [
+    "PAP-101"
+   ],
+   "status": "covered",
+   "note": "Non-goal beyond Linear (pm-linear)"
+  },
+  {
+   "feature": "Import from another PaperOS tenant (tenant move)",
+   "coveredBy": [
+    "PAP-422"
+   ],
+   "status": "covered",
+   "note": ""
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/migration/importer-test-accounts-and-fixture-workspaces",
+   "title": "Importer test accounts and fixture workspaces: idempotent seed scripts, secret names in both forges, fixtures health workflow and the NJ-13 sign-up list",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Import framework and CSV",
+   "dueDate": "2026-09-28",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-198",
+    "PAP-17",
+    "PAP-48"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nPAP-198 is Ready for Claude as a research issue and carries work package 2 (test accounts) inline; a builder finishing the nine sheets should not also wait weeks on sign-ups. This issue takes the work package out as its own claimable item: the external state every live integration test assumes (Airtable base, Notion workspace, ClickUp workspace, Stripe test account, QuickBooks sandbox, Xero demo, Google OAuth app), seeded idempotently from the PAP-198 fixtures, with credentials where CI and agents can reach them.\n\n**Scope**\n\nIn: `packages/import/fixtures/seed/<source>.ts` seeders (Airtable 8 tables, relations, lookups, rollups, 3 formulas, 40 attachments, 6 views; Notion 3 databases, 25 pages 4 deep, 30 images, inline database, synced block; ClickUp 3 lists, 150 tasks, subtasks, 5 custom fields, 40 comments, 10 attachments; Stripe 50 customers, 3 products, 40 subscriptions, 120 invoices, 10 refunds; QuickBooks sandbox chart plus 30 journals), each idempotent via the API's upsert or a stable external key; env names in the PAP-17 schema (`AIRTABLE_TEST_PAT`, `NOTION_TEST_TOKEN`, `CLICKUP_TEST_TOKEN`, `STRIPE_TEST_KEY`, `QBO_TEST_CLIENT_ID|SECRET|REALM`, `XERO_TEST_CLIENT_ID|SECRET`, `GOOGLE_TEST_CLIENT_ID|SECRET`) with values in the Forgejo and GitHub secret stores per PAP-48 and the Scout bot vault; `docs/migration/test-accounts.md`; weekly `import-fixtures-health.yml` running each connector's `discover` and commenting drift on PAP-198; commands `pnpm fixtures seed <source>` and `pnpm fixtures health`; the NJ-13 comment posted on claim day.\n\nOut: connectors themselves, production customer accounts, live-mode keys, Google consent-screen verification (stays in testing mode).\n\n**Spec**\n\n* Every workspace name starts with `PaperOS Test`, holds only fictional data and carries a banner doc saying so.\n* Seeders run offline against recorded API responses in CI (idempotence asserted on a second run) and live only when the env name is set.\n* Consumers (PAP-200, PAP-414, PAP-417, PAP-423, PAP-424, the ClickUp and Linear children) read only the env names and report `skipped: no-credentials` when unset; nothing here blocks them.\n* Xero has no persistent sandbox: pin recorded fixtures because the demo company resets monthly; QuickBooks sandbox reseed documented; Google testing-mode refresh tokens expire in 7 days and the health workflow warns 2 days before.\n* Default if NJ-13 is unanswered by 2026-09-24: proceed with Stripe, Google and ClickUp; record the rest as `skipped: no-credentials`.\n\n**Interface contract**\n\nProvides: seed scripts, env names, `docs/migration/test-accounts.md`, health workflow, `pnpm fixtures seed|health`, the NJ-13 list. Consumes: fixtures and sheets (PAP-198), env schema (PAP-17), secret conventions (PAP-48), secret scan (PAP-80), Stripe test account (NJ-10).\n\n**Definition of done**\n\n* Seed scripts committed with recorded-response tests; health workflow dry run green on recorded responses; one live run per account once credentials land or the default applied and documented.\n* Secrets present in both forges' stores (verified by `pnpm security:accounts-check`, no value in the repo); docs page merged; CHANGELOG; Linear comment on PAP-198 listing counts per source.\n\n**Test plan**\n\n* Unit: seeder idempotence on recorded responses; env-name lint against the PAP-17 schema; banner presence check.\n* E2E: `pnpm fixtures health` prints a table with green counts for every source that has credentials and `no-credentials` for the rest.\n\n**Demo**\n\nReviewer runs `pnpm fixtures health` and reads the table, then opens `docs/migration/test-accounts.md` to find who owns each login and the reseed steps. Under one minute.\n\n**Edge cases**\n\n* Airtable free tier lacks attachment API access: Team trial cost noted in NJ-13; UI-export fixtures fallback.\n* Notion integration not granted to a page: health lists it as 'no access'.\n* Provider consent-screen change: workflow fails loudly, never silently green.\n\n**Dependencies**\n\nHard: PAP-198 work package 1 (sheets and fixtures), PAP-17, PAP-48. Soft: PAP-80, NJ-10, NJ-13. Blocks nothing hard (consumers skip without credentials).\n\n**Agent**\n\nBuilder: Scout (Import Mapper) with Forge (Ops Runner) on secret stores; sign-ups by Justin. Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/migration/connector-conformance-harness-and-scaffold",
+   "title": "Connector conformance harness and scaffold: `connectorConformance()` Vitest suite every SourceConnector passes, recorded-HTTP fixture conventions and `pnpm paperos connector scaffold`",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Import framework and CSV",
+   "dueDate": "2026-09-28",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-347",
+    "PAP-348"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nSeven connector specs (PAP-202, PAP-414, PAP-417, PAP-423, PAP-424, PAP-204, PAP-422) list 'passes the framework `connectorConformance()` suite' in their test plans and no issue writes it. PAP-494 proves the module contract; this proves each connector implementation, and a scaffold command makes 'write a connector in an hour' true for the next twenty sources.\n\n**Scope**\n\nIn: `packages/import/src/testing/conformance.ts` exporting `connectorConformance({ factory, fixtures, capabilities })`: cases for `discover` shape validity, `stream` pagination and cursor resume, `capabilities` honesty (an advertised `incremental` must yield fewer records on a second cursor run), rate-limit backoff on injected 429, attachment refs fetchable through `fetchAttachment`, error mapping to framework item errors, dry-run purity (no writes), rollback hook when declared; recorded-HTTP conventions (`msw` handlers under `fixtures/<source>/api/`, `pnpm fixtures record <source>` when credentials exist); `pnpm paperos connector scaffold <name>` generating `connectors/<name>/{index,auth,discover,stream}.ts`, a fixture folder, the conformance test file and a docs stub; `docs/migration/writing-a-connector.md`.\n\nOut: module-level contract conformance and golden fixtures (PAP-494), connector-specific mapping tests (each connector), UI.\n\n**Spec**\n\n* Cases are capability-gated: a connector without `attachments` reports those cases `unsupported`, never failing; `--strict` turns `unsupported` into failure for CI of connectors that claim the capability.\n* The suite runs against the in-memory fixture connector (PAP-347) as its own reference and must pass there first.\n* Stable case ids `connector.<case>.<n>` so PAP-494 can include them and Linear comments can cite them.\n* Scaffold output passes lint, typecheck and the conformance suite with `TODO` markers only where source-specific logic goes; the generator is idempotent and refuses to overwrite edited files.\n\n**Interface contract**\n\nProvides: `connectorConformance()`, recording conventions and `pnpm fixtures record`, scaffold command, `docs/migration/writing-a-connector.md`, case id catalogue. Consumes: `SourceConnector`, engine and fixture connector (PAP-347), dry run and rollback semantics (PAP-348), test accounts env names (`r4/migration/importer-test-accounts-and-fixture-workspaces`, soft), conformance runner registration (PAP-494, soft).\n\n**Definition of done**\n\n* Suite green on the fixture connector and on the CSV connector (PAP-200) via recorded fixtures; a deliberately broken connector under `testing/negative/` fails exactly its cases.\n* Scaffold produces a connector that passes the suite unchanged; docs page reviewed by Quill; CHANGELOG; comments on PAP-414, PAP-417, PAP-423, PAP-424 naming the import path.\n\n**Test plan**\n\n* Unit: each case against the fixture connector; capability gating; strict mode; scaffold idempotence.\n* E2E: `pnpm paperos connector scaffold demo && pnpm test connectors/demo` passes in under 60 s.\n\n**Demo**\n\nReviewer scaffolds a `demo` connector, runs its tests and reads the conformance report, then breaks pagination on purpose and sees the exact case fail. Under two minutes.\n\n**Edge cases**\n\n* Connector streams faster than fixtures assume (different page size): cases assert set equality, not page boundaries.\n* Source with no stable ids (spreadsheets): cursor cases marked `unsupported` by capability.\n* Recording with credentials leaks a token into a fixture: the recorder redacts headers and the PAP-80 scan gates the commit.\n\n**Dependencies**\n\nHard: PAP-347, PAP-348. Soft: PAP-200, PAP-494, `r4/migration/importer-test-accounts-and-fixture-workspaces`. Consumed by every connector issue (soft; they may merge with unit tests and adopt the suite after).\n\n**Agent**\n\nBuilder: Scout (Import Mapper) with Sentinel on case design. Reviewer: Sentinel (Code Reviewer, Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/migration/source-oauth-connections-and-token-refresh",
+   "title": "Source connections: shared OAuth connect flow, encrypted token storage, refresh and revocation for every import connector, with a connections settings page",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Airtable, Notion, ClickUp importers",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-347",
+    "PAP-57",
+    "PAP-353"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nPAP-414 (Airtable), PAP-417 (Notion), PAP-424 (QuickBooks, Xero), PAP-200 (Google) and the Linear and ClickUp children each describe their own OAuth flow and 'encrypted' token storage. One `import_connection` model with a generic connect flow, refresh job and revoke UI is the middle tooling that lets a connector be swapped without touching auth, and the place the Security Auditor reviews once.\n\n**Scope**\n\nIn: table `import_connection (tenant_id, source, kind: oauth|pat|api_key, external_account_id, display_name, scopes[], credentials encrypted via PAP-353, expires_at, refresh_status, created_by, last_used_at, status: active|reauth_required|revoked)`; `connections.start(source)` building the provider authorization URL from a `SourceAuthSpec` each connector declares (`authorizeUrl`, `tokenUrl`, `scopes`, `pkce`), callback route `/api/import/oauth/callback` with state binding to tenant and actor, PAT and API-key paths with validation call; refresh job (PAP-43) 24 h before expiry; `connections.revoke` calling the provider's revocation endpoint when it exists; settings page `_app/settings/connections` listing connections with scopes, last use and reauth banners; `SourceConnector.auth` receives a `CredentialHandle` (never raw tokens in connector code; the framework injects headers).\n\nOut: Better Auth login providers (PAP-57 owns identity OAuth), outbound webhooks and tenant API keys (PAP-222), social platform OAuth (PAP-403 keeps its own because tokens belong to posting accounts).\n\n**Spec**\n\n* Tokens never leave the server; connectors call `credentials.fetch(url)` which the framework signs, so a connector cannot log or export a token (lint forbids reading `credentials.raw`).\n* State parameter is a signed 10-minute token bound to tenant, actor and source; callback rejects mismatches with `FORBIDDEN` and audits the attempt.\n* Scopes requested are the minimum each connector declares; the settings page shows them in plain language from the PAP-198 sheets.\n* Provider secrets (client id and secret) come from the PAP-17 env schema via the credential broker (PAP-300); test-account credentials from `r4/migration/importer-test-accounts-and-fixture-workspaces`.\n\n**Interface contract**\n\nProvides: `import_connection`, `connections.*`, callback route, `SourceAuthSpec`, `CredentialHandle`, refresh job, settings page, event `import.connection.changed`. Consumes: connector interface (PAP-347), OAuth plumbing patterns (PAP-57), encryption (PAP-353), jobs (PAP-43), env and broker (PAP-17, PAP-300), audit (PAP-38). Consumed by PAP-414, PAP-417, PAP-424, PAP-200 (Google), the Linear and ClickUp children (all soft: they may keep inline auth and migrate).\n\n**Definition of done**\n\n* Mocked-provider Playwright connect, refresh and revoke flows; state tampering rejected in a test; lint rule against raw token reads; `pnpm db:scan-secrets` shows the credentials column as encrypted.\n* Screenshots at 375, 1024, 1920 light and dark; `docs/migration/connections.md`; CHANGELOG; comments on the consuming connector issues.\n\n**Test plan**\n\n* Unit: state token signing and expiry, PKCE, refresh scheduling, revocation mapping, scope minimisation.\n* E2E: connect a mocked Airtable OAuth provider, run a dry import through the handle, expire the token in the fixture and see the reauth banner, revoke and confirm the connector fails closed.\n\n**Demo**\n\nReviewer connects a mocked source from Settings, runs a dry run, then revokes it and sees the connector refuse with `reauth_required`. Under two minutes.\n\n**Edge cases**\n\n* Provider without refresh tokens (PATs): `expires_at` null, health check on `last_used_at` weekly.\n* Two staff connect the same external account: one connection, second attempt links to it.\n* Tenant deleted: connections revoked at the provider during purge (PAP-355 hook).\n\n**Dependencies**\n\nHard: PAP-347, PAP-57, PAP-353. Soft: PAP-43, PAP-17, PAP-300, PAP-38, PAP-355. Consumers adopt softly.\n\n**Agent**\n\nBuilder: Scout (Import Mapper) with Forge on the callback route. Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/migration/linear-connector-and-pm-mapping",
+   "title": "Linear connector: teams, states, labels, projects, cycles, issues, comments, relations and attachments into the PM module with identifiers preserved and the reusable StateMapping and PeopleMatching steps",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Airtable, Notion, ClickUp importers",
+   "dueDate": "2026-09-30",
+   "parent": "PAP-204",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-347",
+    "PAP-100",
+    "PAP-201"
+   ],
+   "blocks": [
+    "r4/migration/clickup-connector-and-markup-mapping"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-204 is one M for two connectors; the Linear half is the strategic one because it mirrors PaperOS's own workspace into PM tables for PAP-102 and PAP-101. This child ships the Linear connector and the wizard steps the ClickUp sibling and every future PM importer reuse.\n\n**Scope**\n\nIn: `connectors/linear/` on `@linear/sdk`: discover teams, workflow states, labels, projects, milestones, cycles; stream issues with `updatedAt` cursor and `first: 100`, comments, attachments (streamed to PAP-37), relations; complexity-aware backoff on `X-Complexity` and 429; mapping to PAP-100 tables one to one (`pm_team`, `pm_project`, `pm_workflow_state`, `pm_issue` with `PAP-123` identifiers preserved, `parent_id`, `pm_label`, `pm_issue_relation blocks`, `pm_comment`, cycles); people matching by email with placeholder users; wizard steps `StateMapping`, `PeopleMatching`, `IdentifierStrategy` exported for reuse; incremental via PAP-201 cursors with a 'mirror deletions' toggle.\n\nOut: ClickUp (sibling), Linear roadmaps and initiatives, two-way sync (PAP-101), documents.\n\n**Spec**\n\n* Import runs as the acting staff user; `created_by` is the matched or placeholder user; audit reason `import:<run_id>`.\n* Writes `pm_external_ref` through the PAP-201 helper compatibly with PAP-101 so a later sync recognises imported rows.\n* Ordering from `sortOrder`; `completed_at` from `completedAt`; trashed issues only with 'include archived'.\n* Recorded API responses (team PAP, anonymised) are the CI fixture; the live run against team PAP uses a read-only key.\n\n**Interface contract**\n\nProvides: `registerConnector('linear')`, wizard steps `StateMapping`, `PeopleMatching`, `IdentifierStrategy`, `inferStateType(status)`, recorded fixture set. Consumes: framework (PAP-347, PAP-348, PAP-349), PM tables (PAP-100), external refs (PAP-201), files (PAP-37), board views (PAP-102), connections (`r4/migration/source-oauth-connections-and-token-refresh`, soft), conformance harness (soft).\n\n**Definition of done**\n\n* Recorded import of team PAP: issue, comment, relation and attachment counts equal the fixture; PAP-102 renders the board; rerun yields zero duplicates.\n* Wizard Playwright with state and people mapping; screenshots at 320, 375, 768, 1024, 1280, 1536, 1920 light and dark; axe clean; `docs/migration/pm-tools.md` Linear section; CHANGELOG.\n\n**Test plan**\n\n* Unit: state type inference, priority mapping, identifier strategies, people matching, relation mapping, complexity backoff.\n* E2E: run the wizard against the recorded workspace, map states one to one, commit, open the PM board grouped by state with comments intact.\n\n**Demo**\n\nReviewer runs the Linear connector against the recorded team PAP fixture, keeps identifiers, commits and opens the PM board showing this plan's issues. Under two minutes.\n\n**Edge cases**\n\n* Parent in another team: kept; allowed by the PM model.\n* Deleted comment author: placeholder 'Former member'.\n* Target team already has issues: sequence continues; source id recorded.\n\n**Dependencies**\n\nHard: PAP-347, PAP-100, PAP-201. Soft: PAP-348, PAP-349, PAP-37, PAP-102, PAP-101 coordination, connections issue, conformance harness. Blocks the ClickUp sibling (shared steps).\n\n**Agent**\n\nBuilder: Scout (Import Mapper) with Atlas on Linear fidelity. Reviewer: Sentinel (Code Reviewer, Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/migration/clickup-connector-and-markup-mapping",
+   "title": "ClickUp connector: spaces, folders, lists, tasks, subtasks, custom fields, statuses, comments and attachments into the PM module with ClickUp markup to Markdown",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Airtable, Notion, ClickUp importers",
+   "dueDate": "2026-09-30",
+   "parent": "PAP-204",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "r4/migration/linear-connector-and-pm-mapping"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nThe ClickUp half of PAP-204: a REST v2 connector whose target model is the same PM tables, reusing the wizard steps the Linear sibling ships, plus the markup converter ClickUp needs and Linear does not.\n\n**Scope**\n\nIn: `connectors/clickup/` on REST v2 (OAuth via the connections issue or PAT): discover teams, spaces, folders, lists with statuses and custom fields; stream tasks per list with `include_closed`, `subtasks`, page 100 at 100 rpm; comments; attachments streamed to PAP-37; mapping space to `pm_team`, list to `pm_project`, statuses to `pm_workflow_state` with `inferStateType`, task to `pm_issue` (custom task ids when enabled else generated, original stored in `pm_external_ref` with `external_url`), subtasks to `parent_id`, tags to `pm_label`, dependencies to `blocks`, custom fields to typed `custom jsonb` via PAP-164 types, comments with `mapClickUpMarkup(text)`; ordering from `orderindex`; `completed_at` from `date_closed`.\n\nOut: ClickUp docs and whiteboards (PAP-418 converter reuse later), time-tracking reports, goals.\n\n**Spec**\n\n* Tasks in multiple lists import once with a relation note; state mapping is per list and the user may merge states.\n* Recorded fixtures from the PaperOS Test ClickUp workspace (3 lists, 150 tasks, 5 custom fields, 40 comments, 10 attachments) are the CI gate; live run when `CLICKUP_TEST_TOKEN` exists.\n* Rate limiter is a token bucket shared per team id; 429 honours `Retry-After`.\n\n**Interface contract**\n\nProvides: `registerConnector('clickup')`, `mapClickUpMarkup(text): string`, custom-field type mapping table in `docs/migration/pm-tools.md`. Consumes: Linear sibling steps, framework (PAP-347 to PAP-349), PM tables (PAP-100), PAP-201, PAP-164, PAP-37, test accounts (soft), conformance harness (soft).\n\n**Definition of done**\n\n* Recorded workspace imports with counts equal to the fixture; rerun zero duplicates; 20 markup fixtures convert; screenshots at seven widths light and dark for state mapping and the imported board; CHANGELOG.\n\n**Test plan**\n\n* Unit: markup conversion (mentions, checklists, code, links), custom field types, multi-list dedupe, rate limiter.\n* E2E: wizard from a mocked PAT to the imported board with a merged state mapping.\n\n**Demo**\n\nReviewer imports the recorded ClickUp workspace, merges two same-meaning statuses and opens the board with comments rendered as Markdown. Under two minutes.\n\n**Edge cases**\n\n* Private attachment URL with an expired token: run pauses resumable.\n* Custom field type unknown: stored as text with a report line.\n* Subtask whose parent is excluded: imported top-level with a note.\n\n**Dependencies**\n\nHard: `r4/migration/linear-connector-and-pm-mapping`. Soft: connections issue, test accounts, conformance harness.\n\n**Agent**\n\nBuilder: Scout (Import Mapper). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/migration/packs-wave-2-law-real-estate-property-construction-ecommerce",
+   "title": "Author business packs wave 2: law firm, real estate brokerage, property management, construction and ecommerce, with page specs, views, pipelines, charts of accounts, sample data and starter docs",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Business migrations",
+   "dueDate": "2026-10-01",
+   "parent": "PAP-207",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-426",
+    "PAP-427"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\n'One size fits all' needs more than five shapes. Wave 2 covers the businesses that move the most money per record: matters and trust accounting for law firms, listings and commissions for brokerages, units and leases for property management, jobs and progress billing for construction, and a catalogue with orders for ecommerce, each passing the PAP-426 lint and conformance the first five pass.\n\n**Scope**\n\nIn: `packages/import/templates/{law-firm,real-estate,property-management,construction,ecommerce}/`: law firm (matters, clients, time entries, trust ledger accounts flagged `client_trust` with a separate `trust_cash` subtype, conflict check segment, intake sequence); real estate (listings, showings calendar, offers pipeline, commission split chart lines, buyer and seller segments); property management (properties, units, leases with recurring rent schedules via `r4/business-core/recurring-invoices-dunning`, maintenance requests kanban, deposits liability accounts); construction (jobs, estimates and change orders, progress billing with retainage liability, subcontractors as vendors, schedule Gantt saved `unsupported` until PAP-168); ecommerce (products with variants as items, orders, customers, returns, inventory hooks to `r4/business-core/inventory-stock-and-cogs`, abandoned-cart segment); staff role presets; preview screenshots by Playwright.\n\nOut: regulatory certification (trust accounting rules noted, not audited), MLS or listing-portal integrations, storefront themes.\n\n**Spec**\n\n* Each pack `extends: base`; lint minimums apply (3 page specs, 6 views, 1 pipeline, 1 chart, 2 segments, 1 sequence, 1 doc); charts balance to zero on apply.\n* Money-sensitive structures (trust cash, deposits, retainage) use ledger subtypes from PAP-175 so PAP-183 reports them correctly; sample data never shows real names or addresses.\n* Packs reference finance features by contract capability; when a module is disabled the pack applies with those sections skipped and reported.\n\n**Interface contract**\n\nProvides: five packs with previews at 1280 both themes, role presets, item counts in `docs/migration/templates.md`. Consumes: pack format and applier (PAP-426), authoring conventions from wave 1 (PAP-427), conformance (PAP-122), finance subtypes (PAP-175), recurring schedules and inventory (business-core round-4 issues, soft).\n\n**Definition of done**\n\n* All five pass lint; applied to empty tenants every page passes PAP-122 conformance, every view renders, trial balance zero (script and report attached); composing property-management plus ecommerce works.\n* Justin reviews the five content lists in one Needs Justin item; screenshots at 1280 both themes per pack plus 375 for two; CHANGELOG.\n\n**Test plan**\n\n* Unit: lint on all five; sample data relation integrity; subtype presence for trust, deposit and retainage accounts.\n* E2E: apply property management with sample data, open the units calendar and the rent schedule, remove sample data, structure intact.\n\n**Demo**\n\nReviewer applies the law-firm pack, opens a matter with its time entries and the trust ledger view, then removes sample data. Under two minutes.\n\n**Edge cases**\n\n* Tenant already applied retail: ecommerce merges product tables, never changes types.\n* Finance module disabled: charts skipped with a report line and a re-apply hint.\n\n**Dependencies**\n\nHard: PAP-426, PAP-427. Soft: PAP-122, PAP-175, PAP-168, `r4/business-core/recurring-invoices-dunning`, `r4/business-core/inventory-stock-and-cogs`.\n\n**Agent**\n\nBuilder: Scout (Template Packager) with Quill and Ledger (trust and retainage charts). Reviewer: Sentinel (Visual Inspector, Edge Case Hunter; Justin for realism).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/migration/packs-wave-3-nonprofit-school-church-gym-salon",
+   "title": "Author business packs wave 3: nonprofit, school, church, gym and salon, with donors and pledges, enrolment, membership billing, class schedules and appointment booking structures",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Business migrations",
+   "dueDate": "2026-10-01",
+   "parent": "PAP-207",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-426",
+    "PAP-427"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nWave 3 covers community and membership businesses whose shape is people and recurring relationships rather than products: donors and pledges, students and enrolment, congregations and giving, members and classes, clients and appointments. They are the strongest test of segments, recurring billing and booking structures the platform claims to cover.\n\n**Scope**\n\nIn: `packages/import/templates/{nonprofit,school,church,gym,salon}/`: nonprofit (donors, donations and pledges with fund dimensions, grants pipeline, restricted and unrestricted fund accounts, year-end statement doc); school (students, guardians, courses, enrolments, terms calendar, tuition schedules, attendance form view); church (members and households, giving with fund dimensions, groups, events calendar, volunteer scheduling); gym (members, membership plans as recurring schedules, class schedule calendar with capacity, check-ins, churn segment, win-back sequence); salon (clients, services as items, stylists, appointments calendar with booking structure for `r4/growth/booking-pages-and-availability`, product retail items, rebooking sequence); role presets; previews.\n\nOut: donation receipts tax compliance beyond a template note, LMS features, church management integrations, POS hardware.\n\n**Spec**\n\n* Fund accounting uses the `r4/business-core/ledger-dimensions-registry` `fund` dimension where present, else tags with a report line.\n* Membership and tuition billing structures are recurring schedules (`r4/business-core/recurring-invoices-dunning`) when business-core is enabled, else plain tables.\n* Every pack passes the wave-1 lint minimums and `extends: base`; sensitive fields (students, health notes in gym) marked `sensitive: true`.\n\n**Interface contract**\n\nProvides: five packs with previews, role presets, item counts in `docs/migration/templates.md`. Consumes: pack format (PAP-426), wave-1 conventions (PAP-427), conformance (PAP-122), dimensions, recurring schedules, booking structures (growth round-4 issue, soft), calendar view (PAP-168).\n\n**Definition of done**\n\n* All five pass lint and the apply script (conformance, views render, trial balance zero); composing gym plus salon works; Justin reviews content lists in one NJ item; screenshots at 1280 both themes per pack plus 375 for two; CHANGELOG.\n\n**Test plan**\n\n* Unit: lint; relation integrity; sensitive annotations present where required; fund dimension references resolve or degrade.\n* E2E: apply the gym pack with sample data, open the class calendar with capacities, enrol a fictional member, remove sample data.\n\n**Demo**\n\nReviewer applies the nonprofit pack, opens the donors grid and the fund-filtered P&L on sample data, then removes the sample data. Under two minutes.\n\n**Edge cases**\n\n* Booking issue absent: salon appointments stay a calendar view without public booking; pack notes it.\n* Fund dimension missing: giving still posts; report line suggests enabling dimensions.\n\n**Dependencies**\n\nHard: PAP-426, PAP-427. Soft: PAP-122, PAP-168, `r4/business-core/ledger-dimensions-registry`, `r4/business-core/recurring-invoices-dunning`, `r4/growth/booking-pages-and-availability`.\n\n**Agent**\n\nBuilder: Scout (Template Packager) with Quill and Beacon (sequences). Reviewer: Sentinel (Visual Inspector; Justin for realism).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/migration/scheduled-resync-and-sync-status",
+   "title": "Scheduled re-sync and sync status: per-source Routines calling runIncremental, sync status page with last run, drift and errors, pause and resume, and connector health alerts",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Airtable, Notion, ClickUp importers",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-201",
+    "PAP-349",
+    "PAP-43"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-201 makes incremental imports possible and explicitly leaves scheduling to 'a Routine'. Nobody owns that Routine, the page that shows whether last night's sync worked, or the alert when a token expires. Without them incremental import is a CLI feature.\n\n**Scope**\n\nIn: `import_schedule (source_id, cron, timezone, enabled, last_run_id, next_run_at, on_source_delete policy, failure_count)`; PAP-43 cron jobs calling `runIncremental(sourceId)` with concurrency one per source and a 5-minute overlap window; status page `_app/settings/import/sync` (last run, records changed, drift versus source counts from `discover`, errors) with pause, resume and 'run now'; alerts via PAP-136 on two consecutive failures or `reauth_required` from the connections issue; Google Sheets live-link mode as the first consumer (`gsheets` incremental via revision check) since PAP-200 leaves live sync out; `import.sync.completed|failed` events.\n\nOut: two-way sync, webhook-driven near-real-time sync (v0.3, noted), per-record sync conflicts beyond PAP-201 rules.\n\n**Spec**\n\n* Schedules run in the tenant timezone; a run that overlaps the previous is skipped and counted, never queued twice.\n* Failure backoff doubles the interval up to a day and resets on success; the page shows the effective next run.\n* Drift is computed only for connectors whose `discover` returns counts; otherwise 'unknown' with no alert.\n\n**Interface contract**\n\nProvides: `import.schedules.*`, jobs, status page, alert kinds `import.sync.failed|reauth`, events, gsheets revision-based incremental. Consumes: cursors and `runIncremental` (PAP-201), run history UI (PAP-349), jobs (PAP-43), notifications (PAP-136), connections (`r4/migration/source-oauth-connections-and-token-refresh`, soft), CSV and Sheets connector (PAP-200).\n\n**Definition of done**\n\n* Fixture-connector schedule runs three times in a test clock with one injected failure and one overlap, producing the expected runs and one alert; status page Playwright; screenshots at 375, 1024, 1920 light and dark.\n* `docs/migration/sync.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: cron and timezone next-run, overlap skip, backoff, drift arithmetic, alert once-per-transition.\n* E2E: schedule the fixture source hourly, advance the clock, see runs in history and the status page, pause and confirm no run.\n\n**Demo**\n\nReviewer schedules the demo Airtable fixture nightly, clicks Run now, watches the status update and reads the drift column. Under one minute.\n\n**Edge cases**\n\n* Source deleted at the provider: run fails with `NOT_FOUND`, schedule auto-paused with a banner.\n* Tenant timezone changes: next run recomputed; no double run.\n\n**Dependencies**\n\nHard: PAP-201, PAP-349, PAP-43. Soft: PAP-136, PAP-200, connections issue.\n\n**Agent**\n\nBuilder: Scout (Import Mapper). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/migration/import-duplicate-detection-and-merge-preview",
+   "title": "Import duplicate detection and merge preview: fuzzy matching of incoming rows against existing records, per-collection dedupe strategies and a review step before commit",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Airtable, Notion, ClickUp importers",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-348",
+    "PAP-349",
+    "PAP-201"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nThe framework dedupes on exact keys and mappings. Real migrations arrive with 'Acme Inc' and 'ACME, Inc.', two spellings of an email and a phone with and without a country code. A fuzzy pass in dry run, with a review step and per-collection strategies, is what prevents the first import from doubling the CRM.\n\n**Scope**\n\nIn: dry-run pass `detectDuplicates` scoring incoming rows against existing records by normalised email, phone E.164, company domain, name trigram (`pg_trgm`), configurable per collection (`strategy: skip|update|create|review`, threshold); `import_duplicate (run_id, item_id, target_id, score, reasons[])`; wizard step `DuplicateReview` (PAP-349) listing candidates with side-by-side values and bulk decisions; decisions applied at commit through PAP-201 mappings; growth merge hook (`r4/growth/contact-company-merge-and-dedup` `onDuplicate`) when the target is a CRM table; report section in `RunReport`.\n\nOut: post-import dedupe across the whole CRM (growth issue), cross-tenant matching.\n\n**Spec**\n\n* Normalisers are shared with growth through `@paperos/contract-growth` where they exist; the framework ships its own for generic tables.\n* Scoring is explainable and deterministic; the same input yields the same candidates; thresholds default per field kind.\n* Review decisions are stored on the mapping so a re-run applies them without asking again.\n\n**Interface contract**\n\nProvides: `detectDuplicates` pass, `import_duplicate`, `DuplicateReview` step, strategies in `MappingDefinition`, report section. Consumes: dry run (PAP-348), wizard (PAP-349), mappings (PAP-201), growth merge hook (soft), record API (PAP-164).\n\n**Definition of done**\n\n* Fixture of 1,000 incoming rows with 120 planted near-duplicates: recall over 90 percent, false positives under 2 percent at defaults; review decisions survive a rerun; Playwright review step; screenshots at 375, 1024, 1920 light and dark.\n* `docs/migration/dedupe.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: each normaliser, scoring, threshold defaults, decision persistence.\n* E2E: import the messy contacts CSV over a seeded CRM, review candidates, choose update for most and create for two, commit and verify counts.\n\n**Demo**\n\nReviewer imports `contacts-messy.csv`, sees 14 likely duplicates with reasons, accepts the suggestions and commits without creating a single duplicate. Under two minutes.\n\n**Edge cases**\n\n* Two incoming rows match each other and one existing: grouped as one candidate set.\n* Target record archived: match offered with 'unarchive' option per PAP-201 rules.\n* Very large run: detection sampled to 10k in dry run with a notice unless `--full`.\n\n**Dependencies**\n\nHard: PAP-348, PAP-349, PAP-201. Soft: PAP-164, `r4/growth/contact-company-merge-and-dedup`.\n\n**Agent**\n\nBuilder: Scout (Import Mapper). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/migration/ai-mapping-assistant",
+   "title": "AI mapping assistant: Claude-suggested field mappings, types and transforms in the wizard from sampled values and target schema, with confidence, explanations and a spend cap",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "Airtable, Notion, ClickUp importers",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-349",
+    "PAP-111",
+    "PAP-110"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-349 infers types from values; it cannot know that `Cust Ref` is the customer relation or that `1,5` needs a locale transform. PAP-208 is a whole conversational agent; this is the inline, cheap version: a single tool call per collection that proposes the mapping, explains it and lets the user accept row by row, with a hard cap on cost.\n\n**Scope**\n\nIn: `suggestMapping({ sourceSchema, samples, targetSchema })` calling the Claude API (per the `claude-api` skill) with a `propose_mapping` tool whose output is Zod-validated `{ fields: [{ source, target, type, transform?, confidence, reason }], newFields[], relations[] }`; wizard 'Suggest' button on the mapping step (PAP-349) applying suggestions as editable rows with a confidence badge and reason tooltip; feedback (accepted, changed, rejected) stored for the PAP-110 eval set; spend cap per tenant per day via PAP-111 counters; samples limited to 20 values per field with PII-classified fields masked before sending (PAP-355 `pii()`); `dryRun` mode returning a deterministic fixture in CI.\n\nOut: autonomous commits (PAP-208 owns approval tokens), training, prompt customisation per tenant.\n\n**Spec**\n\n* Prompt includes the PAP-198 field-type matrix and the target dataset's `FieldDef`s; the model may only choose from existing targets, propose new fields or mark `skip`.\n* Suggestions never write; the user's accepted mapping is what PAP-347 runs; a suggestion for a `relation` requires a resolvable key match in samples.\n* Model responses are T3 content: validated by schema, never executed, and logged to PAP-129 with redaction.\n\n**Interface contract**\n\nProvides: `suggestMapping`, wizard integration, feedback dataset `import.mappingFeedback`, eval task `mapping-assistant` with 20 fixtures. Consumes: wizard and inference (PAP-349), cost controls (PAP-111), evals (PAP-110), PII classification (PAP-355), prompt log (PAP-129), field-type matrix (PAP-198).\n\n**Definition of done**\n\n* Eval at or above 0.85 exact-target accuracy on 20 fixture collections with recorded model responses; cap trips in a test; PII masking test; Playwright suggest flow; screenshots at 375, 1024, 1920 light and dark.\n* `docs/migration/mapping-assistant.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: output validation, masking, cap counters, confidence badge thresholds, feedback recording.\n* E2E: upload the HubSpot fixture without a preset, click Suggest, accept all but one, commit and verify the pipeline stages resolved.\n\n**Demo**\n\nReviewer uploads an unfamiliar CSV, clicks Suggest and watches the mapping table fill with reasons, changes one and commits. Under one minute.\n\n**Edge cases**\n\n* Model unavailable: button disabled with the reason; inference-only mapping remains.\n* Suggestion targets a field the actor cannot write: dropped with a note.\n* Same file re-uploaded: cached suggestion by schema hash, no new spend.\n\n**Dependencies**\n\nHard: PAP-349, PAP-111, PAP-110. Soft: PAP-355, PAP-129, PAP-198.\n\n**Agent**\n\nBuilder: Scout (Import Mapper) with Quill on the prompt. Reviewer: Sentinel (Security Auditor for PII, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/migration/drive-dropbox-files-import",
+   "title": "Files import from Google Drive, Dropbox and OneDrive: folder picker, folder-to-docs and attachments mapping, hash dedupe, resumable transfer within storage quotas",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Airtable, Notion, ClickUp importers",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-347",
+    "r4/migration/source-oauth-connections-and-token-refresh",
+    "PAP-37"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nBusinesses keep contracts, photos and spreadsheets in a cloud drive, not in a database. Bringing folders into PaperOS files and docs, linked to records where a naming convention allows, is the migration step every vertical shares and none of the importers covers.\n\n**Scope**\n\nIn: `connectors/{gdrive,dropbox,onedrive}/` via the connections issue (Google via `googleapis`, Dropbox SDK, Microsoft Graph); discover as a folder tree with counts and sizes; stream files with resumable download to PAP-37 multipart upload; mapping options: folder to `docs/imported/<source>/<path>` for Markdown and Google Docs (exported as Markdown through the provider), everything else to `file` rows with folder path kept as tags; record linking rule `<Table>/<record key>/...` attaching files to matching records through the PAP-164 attachment type; hash dedupe (`sha256`) against existing files; quota check against PAP-178 `storageGb` before start; Google Sheets in a folder offered to the PAP-200 connector.\n\nOut: two-way file sync, permissions mirroring, Office document conversion beyond Google Docs to Markdown.\n\n**Spec**\n\n* Transfers stream provider to storage without buffering; 10 GB attachment limit per run from PAP-347 applies; resumable by file.\n* Shared drives and shortcuts followed once; cycles detected.\n* Files over the tenant's remaining quota are listed in dry run and the run refuses until scoped down.\n\n**Interface contract**\n\nProvides: three connectors, folder picker step, `docs` and `files` mapping modes, record-linking rule, dedupe report section. Consumes: framework (PAP-347, PAP-348, PAP-349), connections, storage (PAP-37), docs import path (PAP-128), attachments (PAP-164), entitlements (PAP-178), conformance harness.\n\n**Definition of done**\n\n* Recorded-fixture imports for all three providers (200 files, 3 levels, 20 duplicates) with counts and zero duplicate blobs; resume after a killed transfer; Playwright picker; screenshots at 375, 1024, 1920 light and dark.\n* `docs/migration/files.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: tree walk with shortcuts, dedupe, linking rule parsing, quota arithmetic, Google Docs export mapping.\n* E2E: pick two folders from the mocked Drive, map one to docs and one to attachments on `clients`, dry run, commit, open a client record with its files.\n\n**Demo**\n\nReviewer connects the mocked Drive, picks a folder and sees a client record gain three attachments and a docs tree appear. Under two minutes.\n\n**Edge cases**\n\n* File renamed between dry run and commit: matched by provider id, path updated.\n* Provider export limit for large Google Docs: kept as a link with a warning.\n* Quota exceeded mid-run: run pauses, owner notified with an upgrade link.\n\n**Dependencies**\n\nHard: PAP-347, connections issue, PAP-37. Soft: PAP-128, PAP-164, PAP-178, PAP-200, conformance harness.\n\n**Agent**\n\nBuilder: Scout (Import Mapper). Reviewer: Sentinel (Security Auditor for tokens, Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/migration/contacts-import-google-outlook-vcard",
+   "title": "Contacts import from Google Contacts, Outlook People and vCard files into the CRM with dedupe and consent-neutral defaults",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Airtable, Notion, ClickUp importers",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-347",
+    "r4/growth/crm-schema-routers-page-specs"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nThe smallest businesses keep customers in their phone. Google Contacts, Outlook People and a `.vcf` export are the on-ramp before any CRM; a small connector set over the framework makes that a two-minute job with the consent centre kept honest.\n\n**Scope**\n\nIn: `connectors/{gcontacts,mscontacts,vcard}/`: People API and Graph via the connections issue, vCard 3.0 and 4.0 parser (`vcard4` or hand-rolled with fixtures) for files and multi-card exports; mapping to `crm_contact` and `crm_company` (organisation field), phones E.164 by default region, emails normalised, photos to PAP-37; labels and groups to `crm_tag`; dedupe via `r4/migration/import-duplicate-detection-and-merge-preview` when present, else PAP-201 email key; consent defaults: imported contacts get no marketing consent (`consent_record` untouched) and a `source: import:<system>` note; preset in the CSV importer for Google and Outlook CSV exports too.\n\nOut: calendar and mail (other issues), continuous sync (scheduled resync issue applies).\n\n**Spec**\n\n* Multiple emails and phones: primary to the contact fields, the rest into `custom.alt_emails|alt_phones` arrays.\n* Duplicate people across providers: dedupe pass or email key merges them into one contact with all tags.\n* The importer never writes `granted` consent; a banner in the wizard explains why marketing sends need opt-in.\n\n**Interface contract**\n\nProvides: three connectors, vCard parser, CSV presets `google-contacts`, `outlook-contacts`, mapping to CRM. Consumes: framework (PAP-347 to PAP-349), CRM schema (growth child), connections issue, dedupe issue (soft), PAP-201, PAP-37, consent centre (read-only expectation).\n\n**Definition of done**\n\n* Fixture vCard set (50 cards, both versions, photos, groups) and recorded People and Graph responses import with correct counts and E.164 phones; consent rows remain zero; Playwright; screenshots at 375, 1024 light and dark.\n* `docs/migration/contacts.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: vCard parsing edge cases (folded lines, quoted-printable, multiple TEL types), phone normalisation by region, tag mapping.\n* E2E: upload a `.vcf`, map, dry run, commit, open the contacts grid with tags applied.\n\n**Demo**\n\nReviewer uploads a 50-card vCard, sees phones normalised and groups as tags, commits and opens the CRM. Under one minute.\n\n**Edge cases**\n\n* Card without a name: uses email or phone as the display name with a report line.\n* Non-Latin names: kept as given; trigram dedupe handles transliteration poorly and says so.\n* Photo over 5 MB: skipped with a note.\n\n**Dependencies**\n\nHard: PAP-347, `r4/growth/crm-schema-routers-page-specs`. Soft: connections issue, dedupe issue, PAP-201, PAP-37.\n\n**Agent**\n\nBuilder: Scout (Import Mapper). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/migration/asana-trello-jira-connectors",
+   "title": "Asana, Trello and Jira import into the PM module: API connectors for Asana and Jira Cloud, Trello JSON export reader, reusing StateMapping, PeopleMatching and IdentifierStrategy",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Business migrations",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "r4/migration/linear-connector-and-pm-mapping",
+    "PAP-100"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nAfter ClickUp and Linear, the next three tools a switching team names are Asana, Trello and Jira. With the PM mapping and wizard steps already built, each is a connector over the same target model; shipping them together keeps the mapping table in one place.\n\n**Scope**\n\nIn: `connectors/asana/` (REST with PATs or OAuth via the connections issue: workspaces, projects, sections to states, tasks, subtasks, custom fields, comments, attachments); `connectors/trello/` (board JSON export file and REST: lists to states, cards, checklists to subtasks or Markdown, labels, comments, attachments); `connectors/jira/` (Jira Cloud REST v3 with API token: projects, issue types, statuses and categories to state types, issues, subtasks, epics as parents, comments in ADF converted to Markdown, attachments, issue links to relations); people matching by email; identifier strategies (Jira keys preserved like Linear); recorded fixtures from public sample data.\n\nOut: Jira Server and Data Center, Asana portfolios and goals, Trello Power-Ups, two-way sync.\n\n**Spec**\n\n* ADF to Markdown covers paragraphs, headings, lists, code, mentions, links and tables; unsupported nodes become a note with a count in the report.\n* Trello checklists map to subtasks by default with a toggle to inline them as Markdown checkboxes.\n* All three pass `connectorConformance()` and register wizard steps from the Linear child unchanged.\n\n**Interface contract**\n\nProvides: three connectors, `adfToMarkdown`, Trello export reader, mapping tables in `docs/migration/pm-tools.md`. Consumes: Linear child steps and PM mapping, PM tables (PAP-100), connections issue, PAP-201, PAP-37, conformance harness.\n\n**Definition of done**\n\n* Recorded fixtures for all three import with counts equal to the fixture manifests; reruns zero duplicates; 20 ADF fixtures convert; screenshots at 375, 1024, 1920 light and dark for state mapping on Jira; CHANGELOG.\n\n**Test plan**\n\n* Unit: ADF conversion, checklist mapping toggle, status category inference, epic parenting, link mapping.\n* E2E: import the Jira sample project, keep keys, open the PM board grouped by state with epics as parents.\n\n**Demo**\n\nReviewer uploads a Trello board export, maps lists to states and opens the board with checklists as subtasks. Under two minutes.\n\n**Edge cases**\n\n* Jira issue type with no category: mapped to `unstarted` with a report line.\n* Trello card in an archived list: imported archived only with the toggle.\n* Asana task in multiple projects: imported once with relations.\n\n**Dependencies**\n\nHard: `r4/migration/linear-connector-and-pm-mapping`, PAP-100. Soft: connections issue, PAP-201, PAP-37, conformance harness.\n\n**Agent**\n\nBuilder: Scout (Import Mapper). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/migration/salesforce-and-pipedrive-crm-import",
+   "title": "Salesforce and Pipedrive CRM import: Pipedrive API connector, Salesforce Data Loader CSV recipe with preset mappings, pipelines, stages, activities and associations into the CRM",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Business migrations",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-413",
+    "r4/growth/crm-schema-routers-page-specs",
+    "PAP-201"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-413 covers HubSpot by recipe. Pipedrive is the SMB favourite with a clean API and Salesforce is what agencies and real-estate teams leave; one connector and one recipe, both landing in the CRM model with pipelines and activities intact, complete the CRM source set.\n\n**Scope**\n\nIn: `connectors/pipedrive/` (API token or OAuth via the connections issue: organizations, persons, deals with pipelines and stages, activities, notes, files; custom fields to `custom jsonb`); Salesforce recipe `docs/migration/recipes/salesforce.md` (Data Loader or Reports export of Accounts, Contacts, Leads, Opportunities with stage history, Tasks and Events, with Ids and lookup Ids) plus preset `presets/salesforce.json` resolving associations through PAP-201 with `system: salesforce-csv`, detector signatures in PAP-200's `detectSourcePreset`; stage mapping to `crm_pipeline_stage` with probability import; activity kinds mapping; owner matching by email.\n\nOut: Salesforce API connector (reopen criterion: three tenants ask), custom objects beyond a generic table import, Einstein or Pardot data.\n\n**Spec**\n\n* Opportunity stage history becomes `system` activities so the sales dashboard funnel works on imported data.\n* Pipedrive `won_time` and `lost_reason` map to `won_at`, `lost_at`, `lost_reason`; currencies kept as given.\n* Both pass the dedupe pass when present; else email and domain keys.\n\n**Interface contract**\n\nProvides: Pipedrive connector, Salesforce recipe and preset, detector signatures, stage and activity mapping tables in `docs/growth/crm-model.md` appendix. Consumes: recipe pattern and detector (PAP-413, PAP-200), CRM schema (growth child), mappings (PAP-201), connections issue, dedupe issue (soft), conformance harness.\n\n**Definition of done**\n\n* Recorded Pipedrive fixture (200 persons, 60 deals, 3 pipelines) and Salesforce fixture CSVs import with correct counts, stages and associations; rerun zero duplicates; recipe rendered with screenshots at 1280; CHANGELOG.\n\n**Test plan**\n\n* Unit: stage probability mapping, association resolution, activity kinds, detector signatures.\n* E2E: upload the Salesforce fixture set, accept the preset, commit and open the deals pipeline with stage history on a deal.\n\n**Demo**\n\nReviewer connects the mocked Pipedrive account, imports and opens the pipeline kanban with the same stages and probabilities. Under two minutes.\n\n**Edge cases**\n\n* Salesforce export in a non-English org: detector falls back to Id-column shapes and warns.\n* Deal stage not in the tenant pipeline: created with a report line (PAP-413 rule).\n* Pipedrive custom field of type `monetary`: stored as `Money` with its currency.\n\n**Dependencies**\n\nHard: PAP-413, `r4/growth/crm-schema-routers-page-specs`, PAP-201. Soft: PAP-200, connections issue, dedupe issue, conformance harness.\n\n**Agent**\n\nBuilder: Scout (Import Mapper) with Beacon on CRM mapping. Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/migration/shopify-woocommerce-square-import",
+   "title": "Commerce import from Shopify, WooCommerce and Square: products and variants to items, customers to CRM, orders and refunds to documents and balanced ledger postings, inventory levels",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Business migrations",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-347",
+    "r4/business-core/item-catalogue",
+    "PAP-394",
+    "PAP-201"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nRetail and ecommerce businesses arrive with a store. Products, customers, orders and refunds from Shopify, WooCommerce and Square map onto the item catalogue, the CRM and the ledger the same way Stripe history does in PAP-423, so gross profit and customer history are right from the conversion date.\n\n**Scope**\n\nIn: `connectors/{shopify,woocommerce,square}/` via the connections issue (Shopify Admin GraphQL with cursor pagination and cost-based throttling, WooCommerce REST v3 with keys, Square API with OAuth): products and variants to `fin_item` (SKU, prices, inventory flag), customers to `crm_contact|crm_company`, orders to `receipt` or `invoice` documents (PAP-395) with lines, discounts, shipping, taxes, and postings through `postingRulesCommerce(order)` (revenue per item, sales tax liability, processor fees from payouts where available, refunds reversing), inventory levels as opening stock movements for `r4/business-core/inventory-stock-and-cogs`, payouts as transfers; conversion-date gate like PAP-425; posting rules reviewed by Ledger.\n\nOut: storefront themes and content, live order sync (scheduled resync issue), fulfilment and shipping integrations, marketplaces.\n\n**Spec**\n\n* Amounts in minor units in order currency with functional equivalents from `r4/business-core/fx-rates-and-conversion`; every journal balances or the dry run stops.\n* Orders before the conversion date import as documents only (history) unless 'post history' is chosen; after it they post.\n* Recorded fixtures from each platform's development store are the CI gate; live runs need store credentials (NJ) and skip otherwise.\n\n**Interface contract**\n\nProvides: three connectors, `postingRulesCommerce`, variant-to-item mapping, opening stock movements, wizard steps reusing PAP-425's `ConversionDate` and `TrialBalance`. Consumes: framework, items, posting rules (PAP-394), documents (PAP-395), CRM schema, inventory (soft), FX, finance wizard steps (PAP-425), connections, conformance harness.\n\n**Definition of done**\n\n* Fixture stores import with counts equal to manifests; P&L from PAP-183 matches each platform's sales report within rounding (table attached); rollback via reversing entries returns the trial balance; Ledger signs off the posting rules doc; screenshots at 375, 1024, 1920 light and dark; CHANGELOG.\n\n**Test plan**\n\n* Unit: posting rules on 15 order fixtures (discounts, partial refunds, multi-currency, gift cards as liabilities), variant mapping, throttling.\n* E2E: connect the mocked Shopify store, pick a conversion date, review the trial balance, commit, open the P&L and the items grid.\n\n**Demo**\n\nReviewer imports the Shopify development store fixture and opens the P&L showing revenue by product and a balanced trial balance, then rolls back. Under two minutes.\n\n**Edge cases**\n\n* Order with a deleted product: line kept as description-only with a placeholder item.\n* Square cash orders: no processor fee, posted to `cash`.\n* Gift card sales: liability, not revenue, until redeemed.\n\n**Dependencies**\n\nHard: PAP-347, `r4/business-core/item-catalogue`, PAP-394, PAP-201. Soft: PAP-395, PAP-425, `r4/business-core/inventory-stock-and-cogs`, `r4/business-core/fx-rates-and-conversion`, connections issue, conformance harness.\n\n**Agent**\n\nBuilder: Scout (Import Mapper) with Ledger (Bookkeeper) owning posting rules. Reviewer: Sentinel (Security Auditor, Code Reviewer; Ledger for accounting).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/migration/accounting-csv-recipes-freshbooks-wave-zoho",
+   "title": "Accounting CSV recipes for FreshBooks, Wave and Zoho Books: guided exports, preset mappings for chart of accounts, customers, invoices and journals, and a shared opening-balance path",
+   "type": "Docs",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Business migrations",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Haiku 4.5",
+   "modelId": "claude-haiku-4-5-20251001",
+   "effort": "low",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-413",
+    "PAP-424"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Haiku 4.5 (`claude-haiku-4-5-20251001`) / low — Docs S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nQuickBooks and Xero get API connectors; the long tail of small-business accounting (FreshBooks, Wave, Zoho Books) does not justify one each before anyone asks. Recipes plus presets, in the PAP-413 pattern, let those users land a chart and opening balances through the CSV importer and the PAP-425 finance wizard.\n\n**Scope**\n\nIn: `docs/migration/recipes/{freshbooks,wave,zoho-books}.md` with export clicks and screenshots at 1280; presets `presets/{freshbooks,wave,zoho-books}.json` mapping chart of accounts (`mapChartOfAccounts` from PAP-424 by type name), customers and vendors to `fin_party`, invoices to `fin_document` history, journals or trial balance to the PAP-424 `openingJournal` path; detector signatures for each export's header set; fixture CSVs per tool; reopen criteria for API connectors.\n\nOut: API connectors, payroll history, bank feeds (bank issue in business-core).\n\n**Spec**\n\n* Each preset validates against the mapping Zod schema in CI and has a fixture with an expected table shape and a balanced opening journal.\n* Recipes state clearly what is lossy per the PAP-198 field-type matrix (for example FreshBooks expense categories to accounts by name).\n* Detector falls back to a manual 'choose your tool' picker when headers are localised.\n\n**Interface contract**\n\nProvides: three recipes, three presets, fixtures, detector signatures, an 'accounting CSV' section in `docs/migration/finance-imports.md`. Consumes: recipe pattern (PAP-413), chart mapping and opening journal (PAP-424), finance wizard (PAP-425), CSV importer (PAP-200).\n\n**Definition of done**\n\n* Each fixture imports to a chart and a balanced opening journal in the wizard (integration test); recipes rendered with screenshots; detector offers the preset; CHANGELOG; sources index updated.\n\n**Test plan**\n\n* Unit: detector on 9 header sets, preset schema validation, account type name mapping.\n* E2E: upload the Wave trial balance fixture, accept the preset, walk the finance wizard to a green trial balance.\n\n**Demo**\n\nReviewer uploads the FreshBooks chart export, accepts the preset and sees the mapped chart with kinds and a balanced opening journal. Under one minute.\n\n**Edge cases**\n\n* Export lacks account codes: generated in a reserved range and flagged (PAP-424 rule).\n* Currency column absent: functional currency assumed with a warning.\n\n**Dependencies**\n\nHard: PAP-413, PAP-424. Soft: PAP-425, PAP-200.\n\n**Agent**\n\nBuilder: Scout (Import Mapper) with Ledger reviewing mappings. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/migration/template-pack-from-tenant",
+   "title": "Template pack from a tenant: export a tenant's structure (tables, views, pipelines, chart, segments, sequences, pages, navigation) as a lint-clean pack with optional anonymised sample data",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Business migrations",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-426",
+    "PAP-420"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nThe fastest way to a fiftieth business type is not to author it but to capture it: a tenant that already works becomes a pack. This turns PAP-426's format into a round trip and lets Justin or a customer publish a vertical without writing YAML.\n\n**Scope**\n\nIn: `pnpm template capture --tenant <slug> --out <dir>` and `_app/settings/templates/capture` reading structure through the PAP-420 export writers (schema, views, pipelines, chart of accounts, segments, sequences, page specs, navigation, docs) and emitting `pack.yaml` plus files that pass `lintPack`; sample-data option sampling N rows per table through an anonymiser (names, emails, phones, addresses, free text replaced; money and dates jittered; relations preserved) with `demo: true`; `extends: base` detection; version and provenance metadata; apply-back test on an empty tenant.\n\nOut: pack marketplace or sharing between tenants (v0.3), capturing automations (PAP-174 export exists separately), capturing user data beyond anonymised samples.\n\n**Spec**\n\n* Anonymisation is deterministic per run seed so relations still resolve; PII classification from PAP-355 decides which columns are replaced; a report lists every replaced column.\n* Captured packs reference module features by capability so they apply on tenants with fewer modules.\n* Round-trip property: capture, apply to empty, capture again yields an identical pack (excluding provenance).\n\n**Interface contract**\n\nProvides: capture CLI and page, `anonymiseSample()`, provenance fields in `PackSchema`, round-trip test script. Consumes: pack schema, lint and applier (PAP-426), export writers (PAP-420), PII registry (PAP-355), conformance (PAP-122) for the apply-back test.\n\n**Definition of done**\n\n* Capturing each wave-1 pack tenant reproduces a lint-clean pack that applies back identically (round-trip test in CI); anonymiser leaves zero PII per a scan; screenshots at 375, 1024 light and dark; `docs/migration/templates.md` capture section; CHANGELOG.\n\n**Test plan**\n\n* Unit: anonymiser determinism and coverage, extends detection, provenance, round-trip equality.\n* E2E: capture the demo restaurant tenant with 20 sample rows, apply to an empty tenant, browse the reservations calendar with fictional names.\n\n**Demo**\n\nReviewer captures the demo tenant from Settings, downloads the pack, applies it to an empty tenant and sees the same structure with anonymised sample data. Under two minutes.\n\n**Edge cases**\n\n* Table with a custom field type not yet in the pack schema: captured as `unsupported` with a report line.\n* Sequences with unapproved templates: captured in unapproved state (PAP-427 rule).\n\n**Dependencies**\n\nHard: PAP-426, PAP-420. Soft: PAP-355, PAP-122.\n\n**Agent**\n\nBuilder: Scout (Template Packager). Reviewer: Sentinel (Security Auditor for anonymisation, Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/migration/migration-verification-dashboard-and-cutover",
+   "title": "Migration verification dashboard and cutover checklist: source versus target counts and hashes per collection over time, parallel-run status, freeze notice and go-live sign-off",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Business migrations",
+   "dueDate": "2026-10-01",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-349",
+    "PAP-201",
+    "PAP-173"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nImports report per run; a migration is many runs over weeks with the old tool still in use. A dashboard that compares source and target continuously, a checklist for the cutover day and a freeze notice for the team are what turn 'we imported it' into 'we moved'.\n\n**Scope**\n\nIn: `migration_project (name, sources[], target_scope, status: planning|parallel_run|frozen|cut_over|closed, cutover_at, owner)`; datasets `migration.parity` (per collection: source count from `discover`, target count, last sync, hash agreement where the connector supports content hashes via PAP-201) and `migration.runs`; seeded dashboard `migration.status` with blocks (parity table, drift trend, open errors, checklist progress); cutover checklist (final incremental sync, export baseline via PAP-205, freeze source edits notice, DNS or link updates, notify team, go-live sign-off by an owner with typed confirmation); freeze banner shown to staff during `frozen`; PAP-208 reads and updates the project and checklist; report card export as PDF.\n\nOut: automated source locking (tools rarely allow it), post-cutover two-way sync.\n\n**Spec**\n\n* Parity counts are refreshed by the scheduled resync issue's runs or on demand; discrepancies link to the PAP-349 run history filtered to that collection.\n* Checklist items are computed where possible (last sync age, export baseline exists) and manual otherwise; sign-off is audited.\n* The migration agent (PAP-208) may tick computed items, never the sign-off.\n\n**Interface contract**\n\nProvides: tables, datasets, dashboard `migration.status`, checklist component, freeze banner slot fill, PDF report card, `migration.projects.*`. Consumes: run history (PAP-349), mappings and hashes (PAP-201), dashboards (PAP-173), export (PAP-205), scheduled resync issue (soft), migration agent (PAP-208, soft), banner slot (PAP-264).\n\n**Definition of done**\n\n* Parity dataset equals brute force on a fixture migration with two sources; checklist flow Playwright with sign-off; screenshots at 375, 1024, 1920 light and dark; `docs/migration/cutover.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: parity computation, checklist auto-evaluation, state machine, sign-off guard.\n* E2E: create a migration project over the fixture Airtable and CSV sources, run syncs, watch parity reach 100 percent, walk the checklist and sign off.\n\n**Demo**\n\nReviewer opens the migration dashboard, sees one collection at 98 percent, drills to the missing rows, reruns and signs off the cutover. Under two minutes.\n\n**Edge cases**\n\n* Source count unavailable (CSV): parity shows target count only with 'no source count'.\n* Cutover reverted: state back to `parallel_run` with an audit note; banner removed.\n\n**Dependencies**\n\nHard: PAP-349, PAP-201, PAP-173. Soft: PAP-205, PAP-208, PAP-264, `r4/migration/scheduled-resync-and-sync-status`.\n\n**Agent**\n\nBuilder: Scout (Import Mapper) with Iris on the dashboard. Reviewer: Sentinel (Visual Inspector, Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/migration/placeholder-users-and-invite-conversion",
+   "title": "Placeholder users from imports and invite conversion: people matched by email become placeholders, an owner invites them in bulk, and history re-points on acceptance",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Airtable, Notion, ClickUp importers",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-201",
+    "PAP-58"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nFour importers (PAP-204's children, PAP-417 people, PAP-413, the Asana, Trello and Jira issue) create 'placeholder' users for assignees and authors and none defines what a placeholder is or how it becomes a real teammate. One model and one invite flow stop each importer inventing its own.\n\n**Scope**\n\nIn: `placeholder_user (tenant_id, email citext, display_name, source, external_ids jsonb, created_by_run_id, converted_user_id?)` referenced by `pm_issue.assignee`, `pm_comment.author`, `crm_activity.created_by` and `import_run_item` through a `principal_ref` that allows `user|placeholder`; wizard step `PeopleMatching` (from the Linear child) writes here; bulk invite page `_app/settings/import/people` sending PAP-58 invitations with role presets; on acceptance a job re-points every reference to the real user and records `converted_user_id`; display components show placeholders with a dashed avatar and 'not yet invited' state; DSAR and purge rules (PAP-355) treat placeholders as PII.\n\nOut: SCIM or directory sync, matching by name only (email or nothing), permissions for placeholders (they are never principals).\n\n**Spec**\n\n* Placeholders can never log in or hold sessions; `can()` treats them as absent; they exist only for attribution.\n* Conversion is idempotent and resumable per table; the audit row for each re-point carries `reason: placeholder_convert:<id>`.\n* Uninvited placeholders older than 180 days are listed for cleanup, never auto-deleted while referenced.\n\n**Interface contract**\n\nProvides: table and `principal_ref` type, `placeholders.*`, invite page, conversion job, `PlaceholderAvatar` component, wizard step integration. Consumes: mappings (PAP-201), invitations and memberships (PAP-58), PM and CRM tables (PAP-100, growth child), audit (PAP-38), retention (PAP-355), Linear child wizard step.\n\n**Definition of done**\n\n* Import fixture with 12 people creates placeholders; bulk invite sends through the sandboxed email package; acceptance re-points issues and comments in a test; screenshots at 375, 1024, 1920 light and dark; `docs/migration/people.md`; CHANGELOG.\n\n**Test plan**\n\n* Unit: email normalisation, principal ref validation, conversion idempotence, cleanup listing.\n* E2E: import the recorded Linear fixture, open People, invite two placeholders, accept one in a second session and see the assignments now show the real user.\n\n**Demo**\n\nReviewer imports the fixture, invites a placeholder, accepts the sandbox invite link as that user and watches their issues and comments attribute correctly. Under two minutes.\n\n**Edge cases**\n\n* Invitee's email differs from the placeholder's (alias): owner links manually before or after acceptance.\n* Placeholder matches an existing member: converted immediately, no invite.\n* Two placeholders for one person across sources: merge action combines them.\n\n**Dependencies**\n\nHard: PAP-201, PAP-58. Soft: PAP-100, PAP-38, PAP-355, `r4/growth/crm-schema-routers-page-specs`, `r4/migration/linear-connector-and-pm-mapping`.\n\n**Agent**\n\nBuilder: Scout (Import Mapper) with Forge (Schema Wright). Reviewer: Sentinel (Security Auditor, Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/migration/airtable-automations-conversion",
+   "title": "Airtable automations conversion: read automation definitions from a base, map triggers and actions to PaperOS automations where supported, and report the rest as a manual checklist",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Airtable, Notion, ClickUp importers",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-416",
+    "PAP-390"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by the Execution Schedule (NJ-14 stop-loss 09-27 can reinstate). Not claimable before 10-01.\n\nPAP-202 leaves automations out. An Airtable base is often half automations ('when status becomes Done, send an email'); recreating the common ones on PAP-174 and listing the rest as a checklist is the difference between a migrated base and a migrated workflow.\n\n**Scope**\n\nIn: reader for Airtable automation definitions (Meta API where exposed for the plan, else guided export of the automation list as JSON from the UI with a recipe) producing `SourceAutomation { trigger, conditions, actions[] }`; mapper to PAP-174 `automation` rows: triggers `record matches conditions`, `record enters view` (via PAP-416's filter parser), `form submitted`, `scheduled`; actions `update record`, `create record`, `send email` (through PAP-370, sandbox), `send Slack` (PAP-325), `run script` becomes a manual checklist item with the script attached; conversion report section in `RunReport`; automations imported disabled by default with an enable review step.\n\nOut: Airtable scripting translation, Interfaces, Zapier or Make flows.\n\n**Spec**\n\n* Every converted automation carries `source: airtable:<automationId>` for PAP-201 mapping so re-import updates rather than duplicates.\n* Field and view references resolve through the PAP-415 and PAP-416 mappings; unresolved references fail the automation into the checklist, never a broken rule.\n* Email actions render Airtable's template syntax into the PAP-389 template expressions where the variables map; otherwise the body is kept with a warning.\n\n**Interface contract**\n\nProvides: automation reader, `mapAirtableAutomation()`, report section, enable-review step, recipe for manual export. Consumes: view and filter mapping (PAP-416), automation builder and templates (PAP-390, PAP-389, PAP-388), email (PAP-370), Slack (PAP-325, soft), mappings (PAP-201).\n\n**Definition of done**\n\n* Fixture of 12 automations: 8 convert and pass PAP-390's test run, 4 land in the checklist with reasons; rerun updates not duplicates; screenshots at 375, 1024 light and dark of the report and review step; `docs/migration/airtable.md` automations section; CHANGELOG.\n\n**Test plan**\n\n* Unit: trigger and action mapping table, template variable rewriting, unresolved reference handling.\n* E2E: import the demo base with automations, review the 8 converted ones, enable one, trigger it with a record change and see the run log.\n\n**Demo**\n\nReviewer imports the demo base, opens the automations report, enables 'notify on Done' and flips a record to Done to see the sandbox email in the outbound ledger. Under two minutes.\n\n**Edge cases**\n\n* Automation references a table that was excluded: checklist item with the table named.\n* Scheduled automation in Airtable's timezone: converted with the tenant timezone and a note.\n\n**Dependencies**\n\nHard: PAP-416, PAP-390. Soft: PAP-389, PAP-388, PAP-370, PAP-325, PAP-201.\n\n**Agent**\n\nBuilder: Scout (Import Mapper) with Nova on automations. Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-198",
+   "section": "Scope",
+   "append": "Round 4: work package 2 (test accounts and fixture workspaces) is superseded by `r4/migration/importer-test-accounts-and-fixture-workspaces` once created; this issue then closes when work package 1 (nine sheets, matrix, fixtures, `index.json`) is In Review, and the NJ-13 comment is posted by whichever claimer starts first. Until the new issue exists the inline text stands."
+  },
+  {
+   "identifier": "PAP-422",
+   "section": "Spec",
+   "append": "Round 4: `ledger.importJournal` does not exist in PAP-179 or its children. Restore ledger history through `ledger.postEvent` with `source_type: 'import'`, `source_id: '<run_id>:<entry_number>'` (idempotent per the contracts document) and a `JournalDraft` per archived entry; reversal on rollback uses `ledger.reverseRun` from PAP-425. A batch `importJournal(entries[])` convenience is requested from business-core as a Spec issue (see cross-project suggestions) and adopted when it lands."
+  },
+  {
+   "identifier": "PAP-208",
+   "section": "Spec",
+   "append": "Round 4 security correction: tenant owners are not Linear users, and the Security Model treats only Justin's Linear comments as T1. Remove the 'owner's Linear comment `approve <run_id>`' path for tenants; approval tokens are minted only by the in-app button under an owner principal (or `import.approve` permission). The Linear comment path remains solely for the PaperOS demo tenant when the comment `user.id` is Justin's."
+  },
+  {
+   "identifier": "PAP-200",
+   "section": "Edge cases",
+   "append": "Round 4: the `xlsx` (SheetJS) npm package is stale (0.18.5, known advisories); use the vendor's own registry build (0.20+) pinned by URL under the PAP-211 license check, or drop `.xls` and show a 'save as .xlsx' hint. Decide in the PR and record it in the spreadsheet docs."
+  },
+  {
+   "identifier": "PAP-420",
+   "section": "Spec",
+   "append": "Round 4: `identity/users.jsonl` and every CRM and support file must honour PAP-355 `pii()` classification: exports are complete for the tenant's own data (GDPR portability) but the writer records which columns are PII in `manifest.json` so PAP-421's encryption prompt is mandatory when any are present, and `scope.redactPii: true` produces a pseudonymised archive for vendors and demos."
+  },
+  {
+   "identifier": "PAP-423",
+   "section": "Spec",
+   "append": "Round 4: 'the finance rates table' is `fin_fx_rate` from `r4/business-core/fx-rates-and-conversion`; call `fx.rateAt(invoice.created, currency, functional)` for base equivalents and mark lines `stale: true` when the rate is more than three business days old. Never store a rate computed from Stripe amounts as a platform rate."
+  },
+  {
+   "identifier": "PAP-347",
+   "section": "Spec",
+   "append": "Round 4: the `parseCurrency` transform must output `Money` (`{ amountMinor: string, currency }` on the wire, bigint at runtime) using the PAP-175 ISO exponent table; it never emits floats, and locale detection (`1.234,56` versus `1,234.56`) is an explicit transform argument with a dry-run warning when ambiguous."
+  },
+  {
+   "identifier": "PAP-349",
+   "section": "Spec",
+   "append": "Round 4: register the permission set `import.read|run|rollback|approve|manage` with PAP-59 in this child (`import.rollback` is referenced but never defined); `run` defaults to admin and owner, `approve` to owner (consumed by PAP-208 token minting), and every wizard route declares its permission in its page spec so PAP-64 generates the matrix. Every import write carries `X-PaperOS-Reason: import:<run_id>`."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "business-core",
+   "title": "`ledger.importJournal(entries[], { runId })` batch posting and `ledger.reverseRun(runId)` in `@paperos/contract-business-core`",
+   "why": "PAP-422 and PAP-425 call them; PAP-179's children expose only `postEvent`, `post` and `reverse`. A batch API with run-scoped reversal keeps import rollback inside the immutability rules and belongs to the ledger owner."
+  },
+  {
+   "targetProject": "identity",
+   "title": "Generic OAuth provider registration API for non-login connections",
+   "why": "`r4/migration/source-oauth-connections-and-token-refresh` needs to build authorization URLs and exchange codes for Airtable, Notion, QuickBooks, Xero, Dropbox and Shopify without registering them as Better Auth login providers; PAP-57 should expose the plumbing (state signing, PKCE helpers, callback mounting) as a port."
+  },
+  {
+   "targetProject": "app-shell",
+   "title": "Onboarding wizard step 'Bring your data' linking the migration agent and template gallery",
+   "why": "PAP-367 chooses a template and skips straight to invites; a step that offers `_app/settings/migrate` (PAP-208) and the CSV importer (PAP-200) is where most real tenants start."
+  },
+  {
+   "targetProject": "tables",
+   "title": "Persist `unsupported` view kinds and formula snapshots with an upgrade hook",
+   "why": "PAP-416, PAP-426 and the wave-2 packs save Gantt and unsupported views as `unsupported`; PAP-161 should define that state and an `onKindSupported` hook so imported views light up when PAP-168 lands."
+  },
+  {
+   "targetProject": "pm-linear",
+   "title": "Accept `placeholder` principals in `pm_issue.assignee` and `pm_comment.author`",
+   "why": "`r4/migration/placeholder-users-and-invite-conversion` needs PAP-100's tables to reference a `principal_ref` (`user|placeholder`) without breaking PAP-101 sync."
+  },
+  {
+   "targetProject": "collab",
+   "title": "Public or unauthenticated docs import path guard for imported Notion and Drive docs",
+   "why": "PAP-128 receives thousands of imported MDX files from PAP-419 and `r4/migration/drive-dropbox-files-import`; a bulk import path with a size budget and a `source` frontmatter contract avoids one PR per document when the repo is the store."
+  }
+ ]
+}
