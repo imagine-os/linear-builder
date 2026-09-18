@@ -1,0 +1,925 @@
+{
+ "project": "forge",
+ "projectName": "Version Control & Forge Independence",
+ "benchmarks": [
+  "GitHub (merge queue, push protection, Actions, Packages, attestations)",
+  "GitLab (stacked MRs, protected tags, runner autoscaling)",
+  "Forgejo / Gitea (Actions, packages, mirrors, indexer)",
+  "Gerrit (submit queue)",
+  "Graphite (stacked PRs)",
+  "Renovate and Dependabot",
+  "Sigstore / SLSA"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "Decision record: Git format, Forgejo primary, GitHub mirror, custom VCS deferred",
+   "coveredBy": [
+    "PAP-44"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Forgejo deployment behind Caddy with hardened app.ini",
+   "coveredBy": [
+    "PAP-45",
+    "PAP-273"
+   ],
+   "status": "covered",
+   "note": "Repo unit defaults and package retention missing (amendment)."
+  },
+  {
+   "feature": "Backups with restic and timed restore drill",
+   "coveredBy": [
+    "PAP-274"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "OIDC SSO from Better Auth",
+   "coveredBy": [
+    "PAP-275",
+    "PAP-226"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Bidirectional push mirroring",
+   "coveredBy": [
+    "PAP-47"
+   ],
+   "status": "covered",
+   "note": "Drift monitor split out (r4/forge/mirror-drift-monitor)."
+  },
+  {
+   "feature": "Scoped bot accounts on Forgejo",
+   "coveredBy": [
+    "PAP-48"
+   ],
+   "status": "covered",
+   "note": "GitHub App half split out (r4/forge/github-app-identities)."
+  },
+  {
+   "feature": "Branch protection and rulesets on both forges",
+   "coveredBy": [
+    "PAP-46"
+   ],
+   "status": "covered",
+   "note": "Protected tags missing (amendment)."
+  },
+  {
+   "feature": "Conventional commits, Linear and Character trailers, commitlint",
+   "coveredBy": [
+    "PAP-46"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Worktree per issue",
+   "coveredBy": [
+    "PAP-46"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Dependent branches and stacked PRs for the branch-start rule",
+   "coveredBy": [
+    "PAP-46",
+    "PAP-96"
+   ],
+   "status": "gap",
+   "note": "The schedule depends on it; nothing creates, retargets or rebases dependent branches (r4/forge/dependent-branches)."
+  },
+  {
+   "feature": "PR template with Linear, specs, screenshots, gates",
+   "coveredBy": [
+    "PAP-49"
+   ],
+   "status": "covered",
+   "note": "PR size lint and draft convention missing (amendment)."
+  },
+  {
+   "feature": "Merge automation and merge queue",
+   "coveredBy": [
+    "PAP-88",
+    "PAP-96"
+   ],
+   "status": "gap",
+   "note": "Justin never reviews PRs, yet no issue merges them (r4/forge/merge-automation)."
+  },
+  {
+   "feature": "CODEOWNERS routing and cross-owner reviews",
+   "coveredBy": [
+    "PAP-46"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Forgejo Actions runners on Linux",
+   "coveredBy": [
+    "PAP-50"
+   ],
+   "status": "covered",
+   "note": "Portability checker split out."
+  },
+  {
+   "feature": "Runner image with Playwright browsers for Gates 3 and 4",
+   "coveredBy": [
+    "PAP-50"
+   ],
+   "status": "gap",
+   "note": "Forge independence stops at Gate 1 today (r4/forge/playwright-runner-image)."
+  },
+  {
+   "feature": "Non-Linux CI capacity: macOS and Windows",
+   "coveredBy": [
+    "PAP-371"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Runner autoscaling for the twenty-session peak",
+   "coveredBy": [
+    "PAP-50"
+   ],
+   "status": "gap",
+   "note": "Deferred (r4/forge/runner-autoscaling)."
+  },
+  {
+   "feature": "Workflow portability checker",
+   "coveredBy": [
+    "PAP-50"
+   ],
+   "status": "partial",
+   "note": "Child r4/forge/portability-checker."
+  },
+  {
+   "feature": "Repo bootstrap: mirrors, secrets, labels, webhooks, rulesets",
+   "coveredBy": [
+    "PAP-51"
+   ],
+   "status": "covered",
+   "note": "`--check` and nightly split out (r4/forge/bootstrap-check-mode)."
+  },
+  {
+   "feature": "Semantic release tags and changelog feed",
+   "coveredBy": [
+    "PAP-52"
+   ],
+   "status": "covered",
+   "note": "Forgejo provider split out (r4/forge/release-forgejo-provider)."
+  },
+  {
+   "feature": "Signed tags, release assets, prereleases for release trains",
+   "coveredBy": [
+    "PAP-52",
+    "PAP-358"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Install and pin policy: release age, ignore-scripts, lockfile, digests",
+   "coveredBy": [
+    "PAP-358"
+   ],
+   "status": "partial",
+   "note": "Child r4/forge/supply-chain-install-policy."
+  },
+  {
+   "feature": "Provenance attestations and cosign signatures with verification",
+   "coveredBy": [
+    "PAP-358"
+   ],
+   "status": "partial",
+   "note": "Child r4/forge/supply-chain-provenance."
+  },
+  {
+   "feature": "Secret scanning in CI",
+   "coveredBy": [
+    "PAP-80"
+   ],
+   "status": "covered",
+   "note": "quality"
+  },
+  {
+   "feature": "Secret push protection: pre-commit, pre-receive, GitHub push protection",
+   "coveredBy": [
+    "PAP-80",
+    "PAP-46"
+   ],
+   "status": "gap",
+   "note": "CI catches secrets after they are in history on two forges (r4/forge/push-protection)."
+  },
+  {
+   "feature": "Git LFS on both forges and artefact retention policy",
+   "coveredBy": [
+    "PAP-47",
+    "PAP-441"
+   ],
+   "status": "gap",
+   "note": "Critique: \"LFS still assumed\" (r4/forge/lfs-and-artifacts)."
+  },
+  {
+   "feature": "Container and npm registries on Forgejo with GitHub mirrors",
+   "coveredBy": [
+    "PAP-273",
+    "PAP-26",
+    "PAP-430"
+   ],
+   "status": "covered",
+   "note": "Publishing owned by r4/app-shell/upgrade-package-registry; retention amendment on PAP-273."
+  },
+  {
+   "feature": "Disaster recovery drill with GitHub offline",
+   "coveredBy": [
+    "PAP-53"
+   ],
+   "status": "covered",
+   "note": "Cron and report split out; Gate 3 proof missing (amendment)."
+  },
+  {
+   "feature": "Vendored actions and base images for DR",
+   "coveredBy": [
+    "PAP-53",
+    "PAP-50"
+   ],
+   "status": "partial",
+   "note": "Listed as an edge case only (PAP-50 amendment)."
+  },
+  {
+   "feature": "Throwaway repo cleanup, stale branch and worktree reaper",
+   "coveredBy": [
+    "PAP-429",
+    "PAP-29",
+    "PAP-22"
+   ],
+   "status": "gap",
+   "note": "Four issues assume a cleanup command (r4/forge/repo-cleanup)."
+  },
+  {
+   "feature": "Code search across repos",
+   "coveredBy": [
+    "PAP-138"
+   ],
+   "status": "gap",
+   "note": "Deferred (r4/forge/code-search)."
+  },
+  {
+   "feature": "In-app repo browsing, diffs and PRs",
+   "coveredBy": [
+    "PAP-54",
+    "PAP-276",
+    "PAP-277",
+    "PAP-278"
+   ],
+   "status": "covered",
+   "note": "Deferred by schedule."
+  },
+  {
+   "feature": "Webhooks to the orchestrator and PR status back to Linear",
+   "coveredBy": [
+    "PAP-97",
+    "PAP-51"
+   ],
+   "status": "covered",
+   "note": "pm-linear"
+  },
+  {
+   "feature": "PR review and checks API parity in the forge contract",
+   "coveredBy": [
+    "PAP-449",
+    "PAP-81"
+   ],
+   "status": "partial",
+   "note": "`ForgePort` lacks `pulls.review` and `checks.set` (amendment)."
+  },
+  {
+   "feature": "Forge observability: metrics, mirror lag, queue depth, backup age",
+   "coveredBy": [
+    "PAP-40",
+    "PAP-275"
+   ],
+   "status": "gap",
+   "note": "r4/forge/forge-observability."
+  },
+  {
+   "feature": "Git credential helper: no raw tokens in sessions",
+   "coveredBy": [
+    "PAP-300",
+    "PAP-48"
+   ],
+   "status": "gap",
+   "note": "The broker exists on paper; git still needs an adapter (r4/forge/git-credential-helper)."
+  },
+  {
+   "feature": "Access matrix audit and token rotation",
+   "coveredBy": [
+    "PAP-48"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Forgejo upgrade procedure and runbook",
+   "coveredBy": [
+    "PAP-275"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Repository unit defaults: issues, wiki and projects off (Linear is the system of record)",
+   "coveredBy": [
+    "PAP-273"
+   ],
+   "status": "partial",
+   "note": "Amendment."
+  },
+  {
+   "feature": "Community health files: SECURITY.md, CODE_OF_CONDUCT, issue templates redirecting to Linear",
+   "coveredBy": [
+    "PAP-51"
+   ],
+   "status": "partial",
+   "note": "Amendment."
+  },
+  {
+   "feature": "Contract package, conformance suite, kernel wiring for forge",
+   "coveredBy": [
+    "PAP-449",
+    "PAP-452",
+    "PAP-455"
+   ],
+   "status": "covered",
+   "note": "PAP-455 demo names a GitHub adapter nobody builds (amendment; r4/module-system/service-swap-drill)."
+  },
+  {
+   "feature": "Engineering metrics: cycle time, review latency, CI duration",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "Cross-project suggestion to pm-linear."
+  },
+  {
+   "feature": "Fork PR handling",
+   "coveredBy": [
+    "PAP-15",
+    "PAP-50"
+   ],
+   "status": "covered",
+   "note": "Disabled by design."
+  },
+  {
+   "feature": "API rate-limit budgets across twenty agents",
+   "coveredBy": [
+    "PAP-48",
+    "PAP-99"
+   ],
+   "status": "partial",
+   "note": "Edge cases only; the App token budget line is added in r4/forge/github-app-identities."
+  },
+  {
+   "feature": "Monthly forge ops hours and reopen criteria",
+   "coveredBy": [
+    "PAP-44"
+   ],
+   "status": "covered",
+   "note": ""
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/forge/portability-checker",
+   "title": "`check-workflow-portability.ts`: GitHub-only action detection, `github.*` context fallbacks, secrets-manifest cross-check and the vendored-action allowlist for both forges",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "CI runs on both forges",
+   "parent": "PAP-50",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-24",
+   "blockedBy": [
+    "PAP-13"
+   ],
+   "blocks": [
+    "PAP-51"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-50 deploys runners and proves Gate 1 on Forgejo; the static checker that keeps every future workflow portable is a separate half-session that PAP-51 (bootstrap) and PAP-78 (Gate 1) both call. Splitting it lets the checker land before the runners are online, so workflows written this week are already portable.\n\n**Scope**\n\nIn:\n\n* `scripts/check-workflow-portability.ts` (`pnpm tsx`): parses every `.github/workflows/*.yml`, flags `uses:` actions absent from `code.forgejo.org` (mirror list fetched and cached in `ops/forge/action-mirrors.json`), unguarded `github.*` context reads, `runs-on` labels outside the PAP-50 and PAP-371 sets, secrets not listed in `ops/forge/secrets-manifest.yml`, and unpinned `uses:` (PAP-358 rule, warning here).\n* Vendored allowlist `ops/forge/vendored-actions.yml`: actions copied under `.github/actions/<name>` with source, version and digest; the checker accepts `./.github/actions/<name>` and verifies the digest.\n* Output: table per workflow with rule id, line and fix hint; `--json` for PAP-51; exit 1 on errors; fixtures under `scripts/__fixtures__/workflows/`.\n* Gate 1 step `portability` (PAP-78) and the PAP-51 bootstrap step 8 call.\n\nOut: runner deployment and proofs (PAP-50), non-Linux runners (PAP-371), pinning enforcement (PAP-358).\n\n**Spec**\n\n* Rules: `PORT-1` unmirrored action, `PORT-2` unguarded `github.*` (allowed inside `if: github.server_url == ...` or with `|| forgejo.*` fallback), `PORT-3` unknown label, `PORT-4` secret not in manifest, `PORT-5` vendored digest mismatch.\n* Mirror list refreshed weekly by a cron PR; offline runs use the cached file and note its age.\n* Runtime under 5 s for 30 workflows.\n\n**Interface contract**\n\nProvides: the script, rule ids, `action-mirrors.json`, `vendored-actions.yml`, Gate 1 step `portability`; consumed by PAP-50 (DoD), PAP-51 (step 8), PAP-78, PAP-371 (label set), PAP-53 (pre-drill check).\n\nConsumes: workflows in the template (PAP-13), secrets manifest (PAP-50 owns the file), label sets (PAP-50, PAP-371).\n\n**Definition of done**\n\n* Fixtures: one passing workflow and one failing per rule with exact messages; the template's workflows pass.\n* Step live in Gate 1; PAP-51 `--json` consumption tested; `docs/engineering/ci-portability.md` rules section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: each rule on its fixture; mirror cache age warning; vendored digest verification.\n* E2E: Gate 1 run on a PR adding `uses: some/unmirrored-action@v1` fails with `PORT-1`.\n\n**Demo**\n\nReviewer adds `uses: actions/upload-pages-artifact@v3` to a workflow, runs the checker and reads `PORT-1` with the vendoring hint; vendors it and the run passes. Under a minute.\n\n**Edge cases**\n\n* Composite action referencing another unmirrored action: recursed one level with the path shown.\n* `workflow_call` reusable workflows from `paperos-infra`: resolved by repo and checked once.\n* Forgejo-only action (`forgejo/*`) used on GitHub: symmetric rule `PORT-1` in the other direction.\n\n**Dependencies**\n\nHard: PAP-13. Soft: PAP-78, PAP-371. Blocks PAP-51 (bootstrap step 8).\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/forge/mirror-drift-monitor",
+   "title": "Mirror drift monitor: hourly `mirror-check.ts` comparing heads and tags on both forges, divergence issue through PAP-97, credential-expiry detection and the loop-safety marker test",
+   "type": "Infra",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Forgejo live and mirrored",
+   "parent": "PAP-47",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-20",
+   "blockedBy": [
+    "PAP-273"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nPAP-47 configures two propagation paths; the monitor that proves they stay in sync is separable and is what the DR drill (PAP-53) and the weekly re-audit (PAP-306) read. Splitting it means mirroring can go live on day one while the monitor hardens over the week.\n\n**Scope**\n\nIn:\n\n* `ops/forge/mirror-check.ts`: for every pair in `repos.yml`, compare `refs/heads/*` and `refs/tags/*` SHAs from both APIs; classify `in-sync`, `lagging` (one side behind by commits on the same line), `diverged` (different commits, no fast-forward), `missing`.\n* Actions: `lagging` over 10 minutes triggers the fallback fetch (PAP-50 cron); `diverged` opens a Linear issue through PAP-97 (interim: comment on PAP-47) with both SHAs and the last common ancestor; never force-pushes.\n* Credential health: 401 from either API produces a distinct `credential expired` alert naming the secret (`FORGEJO_MIRROR_TOKEN`, `GITHUB_MIRROR_PAT`).\n* Loop-safety test: a push carrying the `paperos-mirror` marker must not re-trigger the opposite mirror within the interval; asserted with a fixture repo.\n* Output `mirror-status.json` published to the infra repo hourly and read by `forge.mirrorStatus` (PAP-449 port) and PAP-53.\n\nOut: mirror configuration and the workflow path (PAP-47), repo registration (PAP-51).\n\n**Spec**\n\n* Runs as a Forgejo Actions cron hourly (PAP-50) with a GitHub Actions fallback so the monitor itself survives either forge being down.\n* Divergence issues are deduplicated by repo and branch marker; resolved automatically when heads match again.\n* Runtime under 60 s for 50 repos using the list endpoints, not per-branch calls.\n\n**Interface contract**\n\nProvides: `mirror-check.ts`, `mirror-status.json` schema `{ checkedAt, repos: [{ name, state, lagSeconds, branches: [...] }] }`, alert conventions; consumed by PAP-53, PAP-306, PAP-449 (`MirrorState`), `r4/forge/forge-observability` (lag metric).\n\nConsumes: Forgejo API (PAP-273), `repos.yml` and mirror functions (PAP-47), alert path (PAP-97, soft), runner cron (PAP-50, soft).\n\n**Definition of done**\n\n* Zero drift on all repos in the first report; a forced divergence on `mirror-fixture` opens exactly one issue and no force-push happens (transcript).\n* Expired PAT simulated: distinct message; `docs/runbooks/mirroring.md` monitor section; CHANGELOG; Linear comment with the report.\n\n**Test plan**\n\n* Unit: classification over fixture ref maps (in-sync, lagging, diverged, missing); dedupe marker; 401 handling.\n* E2E: fixture repo: push both sides, assert `diverged` and the issue; reconcile and assert auto-resolution.\n\n**Demo**\n\nReviewer runs `pnpm tsx ops/forge/mirror-check.ts` and reads the zero-drift table, then force-pushes a fixture branch on one side and sees the divergence row and the Linear comment. Under 2 minutes.\n\n**Edge cases**\n\n* Branch deleted on one side only: `missing` with the side named; mirror deletion propagates by design, so the monitor waits one interval before alerting.\n* Tag moved (release re-tag): flagged `diverged` for tags with a dedicated message, since tags must be immutable (PAP-52).\n* Repo archived: read-only compare, no fallback fetch.\n\n**Dependencies**\n\nHard: PAP-273. Soft: PAP-97, PAP-50. Sibling: the mirror configuration half of PAP-47.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/forge/github-app-identities",
+   "title": "GitHub App `paperos-agents`: installation on imagine-os, `mintGithubToken(character)`, per-character commit identities, SSH signing keys, `.mailmap` and `allowed_signers`",
+   "type": "Infra",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Agent",
+    "Developer"
+   ],
+   "milestone": "Forgejo live and mirrored",
+   "parent": "PAP-48",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-20",
+   "blockedBy": [
+    "PAP-273"
+   ],
+   "blocks": [
+    "PAP-106"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Infra M\n\n**Goal**\n\nPAP-48 covers both forges; the GitHub side is a distinct piece of work with its own credentials (NJ-3), its own token model (installation tokens minted per session) and the commit attribution and signing rules every agent PR carries. Splitting it puts the Forgejo bots (which block PAP-51) and the GitHub App (which blocks PAP-106) on parallel tracks.\n\n**Scope**\n\nIn:\n\n* GitHub App `paperos-agents` on org `imagine-os` with permissions contents, pull requests, checks, metadata, workflows; private key, app id and installation id in `ops/secrets/bots.enc.yaml` (PAP-48 layout) and mirrored to Coolify for PAP-96.\n* `packages/forge-cli/src/github-app.ts`: `mintGithubToken(character, { repos? })` returning a one-hour installation token scoped to the repositories the character's `access-matrix.yml` entry allows; cached per session; refresh at 50 minutes.\n* Commit identity: `\"<Character> (PaperOS agent) <bot-<name>@agents.<domain>>\"`; SSH signing key per character (`SIGNING_KEY_<CHARACTER>`), `allowed_signers` and `.mailmap` committed to the template; `git config` snippet applied by `worktree.sh` (PAP-46).\n* Verification: a fixture PR opened with a minted token, authored by \"Forge (PaperOS agent)\", shows the verified signature badge; `git log --show-signature` prints Good signature.\n\nOut: Forgejo bot accounts and teams (PAP-48 sibling work), MCP scope enforcement (PAP-106), rotation of Forgejo tokens.\n\n**Spec**\n\n* Tokens never written to disk; the orchestrator (PAP-96) passes them through the credential broker (PAP-300) when it exists, environment otherwise.\n* Sub-agents commit under their lead's identity with a `Sub-Agent:` trailer (PAP-48 rule).\n* Degraded mode when the org blocks Apps: fine-grained PAT per character on a machine user, documented and flagged in `bots.ts audit`.\n* Rate limits: installation tokens share the App limit (15k/h); per-character budgets documented for PAP-99.\n\n**Interface contract**\n\nProvides: `mintGithubToken`, secret names `GITHUB_APP_ID`, `GITHUB_APP_PRIVATE_KEY`, `GITHUB_APP_INSTALLATION_ID`, `SIGNING_KEY_<CHARACTER>`, `.mailmap`, `allowed_signers`, the commit identity convention; consumed by PAP-96 (session env), PAP-106 (scopes), PAP-47 (mirror PAT alternative), PAP-51, PAP-133 (attribution), PAP-114.\n\nConsumes: founder root of trust and NJ-3 approval (PAP-301), Forgejo org for the matching bot names (PAP-273), access matrix (PAP-48), sops recipients (PAP-25).\n\n**Definition of done**\n\n* App installed; a CI job mints a token and lists installation repositories; fixture PR with verified character signature (screenshot).\n* `bots.ts audit` covers the App permissions row; `gitleaks` clean; `docs/engineering/agent-identities.md`; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: JWT and installation token minting against recorded responses; repo scoping from the matrix; refresh timing with fake timers.\n* E2E: open and close a fixture PR with a minted token; assert author, signature and App attribution.\n\n**Demo**\n\nReviewer runs `pnpm tsx ops/forge/bots.ts mint bot-forge --repos paperos-template`, uses the token to push a branch and open a PR, and sees \"Forge (PaperOS agent)\" with a Verified badge. Under 2 minutes.\n\n**Edge cases**\n\n* App private key rotated: old tokens keep working until expiry; new mints use the new key; runbook step.\n* Character not in the matrix: `mint` refuses with the roster file path.\n* Token appears in a prompt log: PAP-129 redaction plus immediate revocation through the App API.\n\n**Dependencies**\n\nHard: PAP-273 and the NJ-3 credential batch (GitHub App on imagine-os). Soft: PAP-301 (founder root of trust hardens the same org accounts in parallel), PAP-300, PAP-96. Blocks PAP-106; feeds PAP-47, PAP-51.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/forge/release-forgejo-provider",
+   "title": "release-please Forgejo provider shim: dual-forge tags and releases, asset upload, the `autorelease: pending` lock and recorded-response tests",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "CI runs on both forges",
+   "parent": "PAP-52",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-24",
+   "blockedBy": [
+    "PAP-273",
+    "PAP-50"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nrelease-please knows GitHub; PAP-52 promises identical tags and releases on Forgejo so DR (PAP-53) and the mirror stay consistent. The provider shim is the risky half and a session of its own, leaving the GitHub configuration, the Linear-links plugin and the manual-version checker to the parent.\n\n**Scope**\n\nIn:\n\n* `scripts/release/forgejo-provider.ts`: implements the release-please `GitHub` client surface the CLI needs (`getCommits`, `createRelease`, `createPullRequest`, `getLabels`) over the Forgejo API v1 using the generated client (PAP-51), so `release-please release-pr` and `release-please github-release` run on Forgejo Actions.\n* Dual-forge semantics: tags are created on Forgejo first, mirrored to GitHub by PAP-47; the GitHub release job waits for the tag to arrive (poll 60 s) then creates the release and uploads assets; if the tag already exists on GitHub via the mirror the job uploads missing assets only.\n* Lock: before opening a release PR, look for an open PR labelled `autorelease: pending` on either forge; if found, update instead of create.\n* Recorded-response tests (`msw`) for every provider method; a live run on the fixture repo (`r4/app-shell/template-fixture-repo`).\n\nOut: release-please manifest configuration and bump rules (PAP-52), changelog rendering (PAP-133), artifact signing (PAP-358).\n\n**Spec**\n\n* Release notes body identical on both forges (byte compare in the test).\n* `feed.json` (PAP-52) is written once by whichever forge runs first; the second run verifies and skips.\n* Provider handles Forgejo pagination and the missing `compare` endpoint by walking commits between tags.\n* Exit codes and logs match the GitHub path so PAP-88 tooling is forge-agnostic.\n\n**Interface contract**\n\nProvides: `forgejo-provider.ts`, dual-forge release semantics, lock behaviour; consumed by PAP-52 (workflow), PAP-53 (tags present after restore), PAP-88 (`-rc.N` prereleases on both forges), PAP-256 (desktop tags).\n\nConsumes: Forgejo API and packages (PAP-273), runners (PAP-50), generated client (PAP-51), mirror timing (PAP-47), fixture repo.\n\n**Definition of done**\n\n* Fixture repo: `feat(ui):` merge yields a release PR on Forgejo; merging creates `ui-v*` tag and release on both forges with identical notes (URLs).\n* Race test: two runs, second exits on the lock; recorded-response tests green; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: every provider method against recorded responses; pagination; missing-compare fallback; lock detection.\n* E2E: live fixture run on Forgejo Actions; assert GitHub release created after mirror.\n\n**Demo**\n\nReviewer opens the Forgejo Actions run that created `ui-v0.1.1`, then the matching GitHub release page with the same notes and assets. Under a minute.\n\n**Edge cases**\n\n* Mirror lag over 10 minutes: GitHub job times out with a clear message and is retried by the next push.\n* Tag exists on GitHub but not Forgejo (manual tag): job refuses and files a divergence through `r4/forge/mirror-drift-monitor`.\n* Forgejo API version drift: provider pins the API version and fails fast on an unknown field.\n\n**Dependencies**\n\nHard: PAP-273, PAP-50. Soft: PAP-51 client, PAP-47, `r4/app-shell/template-fixture-repo`. Parent PAP-52 consumes.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/forge/supply-chain-install-policy",
+   "title": "Install and pin policy: pnpm `minimum-release-age`, `ignore-scripts` allowlist, lockfile integrity lint, action and image digest pinning lint in Gate 1",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Disaster recovery proven",
+   "parent": "PAP-358",
+   "size": "S",
+   "estimate": 2,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-78"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Infra S\n\n**Goal**\n\nPAP-358 spans install policy, pinning, provenance and signing; the first two are pure repository configuration and lint that can land the day Gate 1 exists and immediately protect twenty agents running `pnpm add`. Splitting them from the cosign work lets the cheap protection ship first.\n\n**Scope**\n\nIn:\n\n* `.npmrc` and `pnpm-workspace.yaml`: `minimum-release-age=3d` (with `minimumReleaseAgeExclude` for `@paperos/*`), `ignore-scripts=true` plus `pnpm.onlyBuiltDependencies` (`esbuild`, `sharp`, `@tauri-apps/cli`, `@biomejs/biome`), `verify-store-integrity=true`, registry pinned, `strict-peer-dependencies=false` documented.\n* `scripts/check-lockfile.ts`: fails when `pnpm-lock.yaml` changes without a `package.json` change, when any dependency resolves to a git or tarball URL outside `imagine-os`, and when `pnpm audit signatures` reports unverifiable provenance for packages that publish it.\n* `scripts/check-pins.ts`: every `uses:` pinned to a full SHA with a version comment; every `image:` in `ops/compose/**`, Dockerfiles and `devcontainer.json` pinned to `@sha256:`; Renovate `pinDigests` config (PAP-217).\n* Gate 1 steps `lockfile` and `pins`; override mechanism: `# pin-exempt: <reason> until <date>` comments with expiry enforced.\n\nOut: provenance attestations and signatures (`r4/forge/supply-chain-provenance`), vulnerability scanning (PAP-80), license policy (PAP-211).\n\n**Spec**\n\n* A package needing a postinstall not on the allowlist prints its name and the PR to add it requires Sentinel review (CODEOWNERS on `pnpm-workspace.yaml`).\n* `minimum-release-age` override per package uses `pnpm.overrides` with an expiry comment checked by the lint.\n* Both lints run under 10 s and print file, line and fix.\n\n**Interface contract**\n\nProvides: `.npmrc` policy, `check-lockfile.ts`, `check-pins.ts`, exemption comment grammar, Gate 1 steps; consumed by PAP-358 parent, PAP-217 (Renovate config), PAP-219 (`SEC-SUPPLY-*` controls), PAP-96 (worktree installs), PAP-254 (RC certification).\n\nConsumes: Gate 1 workflow (PAP-78), Renovate (PAP-217, soft), threat model controls (PAP-219, soft).\n\n**Definition of done**\n\n* Fixtures: lockfile edit without manifest change fails; git URL dependency fails; unpinned `uses:` fails; template passes with all pins applied.\n* `pnpm install` with a package published one day ago is refused (recorded); CHANGELOG under Security; Linear comment.\n\n**Test plan**\n\n* Unit: lockfile diff classifier; URL dependency detector; pin regexes for actions and images; exemption expiry parser.\n* E2E: Gate 1 on a PR adding `uses: actions/checkout@v4` fails `pins`; after pinning passes.\n\n**Demo**\n\nReviewer runs `pnpm add left-pad@latest` where the version is two days old and watches pnpm refuse; then adds an unpinned action and `pnpm check` fails naming the line. Under a minute.\n\n**Edge cases**\n\n* Urgent security fix younger than 3 days: override with expiry, flagged in the PAP-80 summary.\n* Digest of a base image changes weekly: Renovate PR groups them (PAP-217).\n* Tauri CLI postinstall downloads binaries: allowlisted with the checksum verified by the package itself.\n\n**Dependencies**\n\nHard: PAP-78. Soft: PAP-217, PAP-219. Parent PAP-358; sibling `r4/forge/supply-chain-provenance`.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/forge/supply-chain-provenance",
+   "title": "Provenance and signatures: SLSA attestations and cosign signing for container images and Tauri artifacts on both forges, verified in the Coolify pre-deploy step and the desktop updater",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Disaster recovery proven",
+   "parent": "PAP-358",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-26",
+    "PAP-256",
+    "PAP-50"
+   ],
+   "blocks": [
+    "PAP-254"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Infra M\n\n**Goal**\n\nThe second half of PAP-358: prove every deployed image and every shipped installer was built by our CI from our repository, and refuse anything else at the two consumers that matter (Coolify rollout, desktop update). This is the piece the release certification (PAP-254) needs before a candidate reaches Justin.\n\n**Scope**\n\nIn:\n\n* Reusable workflow `attest-and-sign.yml` in `paperos-infra`: on GitHub, `actions/attest-build-provenance` plus `cosign sign` keyless with the workflow identity; on Forgejo runners, `cosign attest --predicate slsa.json` and `cosign sign --key` with a key pair from sops (PAP-25), public key committed at `ops/security/cosign.pub`.\n* Attach SBOM (CycloneDX from PAP-80) as an attestation to every image in GHCR and the Forgejo registry; Tauri installers (PAP-256) get detached `.sig` files and the update manifest `latest.json` is itself signed.\n* Verification: Coolify pre-deploy command `ops/security/verify-image.sh <digest>` running `cosign verify` (identity or key) and `cosign verify-attestation --type slsaprovenance` asserting repo `imagine-os/*` and ref `main` or `v*`; the updater (PAP-257) verifies the cosign signature of `latest.json` in addition to minisign.\n* Runbook `docs/engineering/supply-chain.md` sections: keys, rotation, `--skip-verify` with Needs Justin approval logged.\n\nOut: install and pin policy (`r4/forge/supply-chain-install-policy`), vulnerability scanning (PAP-80), OS code signing (PAP-369), reproducible builds.\n\n**Spec**\n\n* Verification never bypasses on registry outage: deploy aborts (PAP-358 rule).\n* Both signature types (keyless, key-based) accepted by one verifier policy file `ops/security/policy.yaml`.\n* Attestation subjects use digests, never tags; the deploy job resolves the digest before verify.\n* Key rotation: new key added to the policy before old removed; documented 30-day overlap.\n\n**Interface contract**\n\nProvides: `attest-and-sign.yml`, `cosign.pub`, `policy.yaml`, `verify-image.sh`, signed `latest.json`; consumed by PAP-26 (pre-deploy), PAP-257 (updater), PAP-52 (release assets), PAP-254 (RC certification), PAP-53 (restored forge must verify).\n\nConsumes: image build (PAP-26), installers (PAP-256), Forgejo runners (PAP-50), SBOM (PAP-80), release workflow (PAP-52), sops (PAP-25).\n\n**Definition of done**\n\n* Images from `main` carry provenance and SBOM attestations; `cosign verify` and `verify-attestation` pass; a hand-pushed unsigned image is refused by staging pre-deploy (recording).\n* Tauri test release includes `.sig` files and a signed `latest.json` the updater accepts; a tampered manifest is rejected (test); CHANGELOG under Security; Linear comment.\n\n**Test plan**\n\n* Unit: policy evaluation over fixture signatures (keyless ok, key ok, wrong repo, wrong ref); manifest signature verification in the updater bridge.\n* E2E: build, attest, sign, verify a test image on both forges; negative unsigned deploy.\n\n**Demo**\n\nReviewer runs `cosign verify-attestation --type slsaprovenance <staging api digest>` and reads the workflow and commit, then pushes an unsigned tag to a scratch Coolify app and watches the deploy abort. Under 2 minutes.\n\n**Edge cases**\n\n* Forgejo runner lacks OIDC: key path used; both accepted.\n* Rekor transparency log unavailable: keyless verify uses the bundle offline mode; documented.\n* Renovate digest PR changes a base image: provenance still ours (we build), base image digest recorded in the SBOM.\n\n**Dependencies**\n\nHard: PAP-26, PAP-256, PAP-50. Soft: PAP-80, PAP-52, PAP-25. Blocks PAP-254. Sibling `r4/forge/supply-chain-install-policy`.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/forge/dr-cron-and-report",
+   "title": "DR drill scheduling and reporting: monthly Forgejo Actions cron, `report.json` renderer into `docs/runbooks/dr-reports/`, RTO and RPO trend and automatic follow-up issue filing",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Disaster recovery proven",
+   "parent": "PAP-53",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-50",
+    "PAP-274"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-53 runs the drill once with evidence; making it repeat monthly, render its report for the digest and file follow-ups is a separate half-session that should not delay the first real run. It also gives PAP-88 and Justin a trend instead of a one-off number.\n\n**Scope**\n\nIn:\n\n* `ops/forge/dr/drill.yml`: Forgejo Actions cron on the production instance (first Sunday 02:00 UTC) invoking `drill.sh` with `--teardown`, plus `workflow_dispatch` with `--keep`; GitHub fallback disabled by design (the drill must not need GitHub).\n* `scripts/dr/render-report.ts`: `report.json` to `docs/runbooks/dr-reports/<date>.md` with the phase table, RTO and RPO lines, mismatches, Hetzner hours and cost; `docs/runbooks/dr-reports/index.md` with a trend table over runs and a static SVG sparkline until PAP-172.\n* Follow-ups: missed RTO or RPO target, mismatched heads or a failed phase opens one Linear issue each in forge (label Infra, `drill-finding`) through the `linear-update` skill (PAP-105), deduplicated by phase marker; reopened on recurrence.\n* Digest hook: the latest report path and headline numbers exposed in `reports/dr/latest.json` for PAP-89.\n\nOut: the drill script and the first run (PAP-53), backups (PAP-274), application DR (PAP-354).\n\n**Spec**\n\n* Targets read from `ops/forge/dr/targets.yml` (`rtoMinutes: 60`, `rpoMinutes: 1440`) so a change is a PR.\n* Report rendering is deterministic; the Markdown is committed by the cron run through the PAP-48 bot with the PAP-46 trailers.\n* Cost line uses Hetzner hours from the script; target under 2 EUR per drill.\n\n**Interface contract**\n\nProvides: `drill.yml`, `render-report.ts`, `dr-reports/` and `latest.json`, `drill-finding` convention shared with PAP-429; consumed by PAP-89 (digest), PAP-88 (release gate reads the trend), PAP-354 (platform drill reuses the renderer), PAP-306.\n\nConsumes: runners and cron (PAP-50), backups and manifest (PAP-274), `report.json` schema (PAP-53), Linear skill (PAP-105, soft), bot identity (PAP-48).\n\n**Definition of done**\n\n* Renderer snapshot over a fixture report; cron registered with the first run date in the runbook; a forced failure fixture files exactly one issue.\n* `dr-reports/index.md` shows the first real run; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: renderer snapshot; target comparison; dedupe marker logic; trend table from three fixture reports.\n* E2E: dispatch `drill.yml` in dry mode (fake phases) and assert the committed report and index update.\n\n**Demo**\n\nReviewer opens `docs/runbooks/dr-reports/index.md`, reads the trend row for the latest drill and clicks through to the phase table and the linked follow-up issue. Under a minute.\n\n**Edge cases**\n\n* Cron fires while production is under maintenance (`r4/data-layer/maintenance-mode`): drill still runs (separate host) and notes the mode.\n* Report missing a phase (script crash): renderer marks it `unknown` and files a finding.\n* Linear cap (NJ-1): findings queued in `pendingIssues[]` like PAP-429.\n\n**Dependencies**\n\nHard: PAP-50, PAP-274. Soft: PAP-105, PAP-48, PAP-89. Parent PAP-53 supplies `report.json`.\n\n**Agent**\n\nBuilder: Forge (Ops Runner) with Quill on the report. Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/forge/bootstrap-check-mode",
+   "title": "`forge bootstrap --check` drift detection with per-step diff output and the nightly fixture-repo run publishing `[ok]/[changed]/[skip]` transcripts",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "CI runs on both forges",
+   "parent": "PAP-51",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-24",
+   "blockedBy": [
+    "PAP-47",
+    "PAP-48"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-51 makes bootstrap idempotent; proving that repos stay bootstrapped (labels not hand-edited, webhooks intact, rulesets applied, mirrors present) is a read-only mode plus a nightly job that the weekly re-audit (PAP-306) and the DR drill read. Separating it lets the ten write steps land first.\n\n**Scope**\n\nIn:\n\n* `--check` in `packages/forge-cli`: every step gains a `diff()` returning `{ expected, actual }` for labels, secrets (names only), webhooks, rulesets, templates, Pages and `.paperos/repo.json`; exit 1 with a table when any differs; `--json` output for automation.\n* Nightly `ops/forge/bootstrap-check.yml` over every repo in `repos.yml` on Forgejo Actions with GitHub fallback; a drifted repo opens a Linear issue (dedupe by repo) or comments on an existing one.\n* Fixture run: `forge bootstrap paperos-template-fixture` (`r4/app-shell/template-fixture-repo`) then `--check`; a manual label recolour is detected, re-bootstrap restores it; transcripts uploaded.\n\nOut: the write steps (PAP-51), ruleset content (PAP-46), mirror monitoring (`r4/forge/mirror-drift-monitor`).\n\n**Spec**\n\n* `--check` performs zero writes (asserted by `msw` recording).\n* Secrets compare names and last-updated timestamps only; values never fetched.\n* Under 30 s for 50 repos using batched list calls.\n\n**Interface contract**\n\nProvides: `forge bootstrap --check`, `bootstrap-check.yml`, drift JSON `{ repo, steps: [{ name, status, diff? }] }`; consumed by PAP-306 (re-audit), PAP-53 (post-restore check), PAP-22 (`paperos doctor` can call it).\n\nConsumes: mirror functions and `repos.yml` (PAP-47), bot tokens (PAP-48), rulesets (PAP-46), fixture repo.\n\n**Definition of done**\n\n* Fixture drift detected and repaired (transcripts); nightly job green on all repos; `docs/runbooks/repo-bootstrap.md` check section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: diff per step against recorded fresh, configured and drifted states; JSON schema.\n* E2E: nightly job on the fixture with a seeded drift files one issue.\n\n**Demo**\n\nReviewer recolours a label on the fixture repo, runs `forge bootstrap paperos-template-fixture --check` and reads the `[changed] labels` row with the diff, then re-bootstraps. Under a minute.\n\n**Edge cases**\n\n* Repo on the list but deleted: `missing` row, issue filed, mirror row removed by `r4/forge/repo-cleanup`.\n* Forgejo down: GitHub-side checks still run; Forgejo rows `unknown`.\n\n**Dependencies**\n\nHard: PAP-47, PAP-48. Soft: PAP-46, `r4/app-shell/template-fixture-repo`. Parent PAP-51 supplies the steps.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/forge/merge-automation",
+   "title": "Merge automation for agent pull requests: auto-merge when gates are green, GitHub merge queue, `forge merge` for Forgejo with rebase-and-retest, and the `merge-when-green` label contract",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Agent",
+    "Developer"
+   ],
+   "milestone": "CI runs on both forges",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-24",
+   "blockedBy": [
+    "PAP-46",
+    "PAP-48"
+   ],
+   "blocks": [
+    "PAP-88"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nThe Blueprint says Justin never reviews PRs and Atlas merges when gates are green, yet no issue owns the merge step: PAP-46 protects `main`, PAP-81 to PAP-85 post verdicts, PAP-96 spawns sessions, PAP-88 cuts candidates. With twenty parallel PRs, merging by hand or by a session polling checks is the bottleneck GitHub and GitLab solved with merge queues. This issue makes merging mechanical on both forges.\n\n**Scope**\n\nIn:\n\n* Label contract: `merge-when-green` set by the PAP-89 digest or the session at PR open; `hold` blocks; the gates (PAP-239 artefacts) are the required checks `ci / check`, `gate2 / review`, `gate3 / visual`, `gate4 / edge` (the last two required from their milestone dates).\n* GitHub: repository merge queue enabled by PAP-46 rulesets (`required_merge_queue`, squash, max 5 in queue, `ci / check` rerun on the queue branch); `paperos-agents` App (`r4/forge/github-app-identities`) enqueues on label.\n* Forgejo: `scripts/forge/merge.ts` (`forge merge <pr>`) run by a Forgejo Actions cron every 2 minutes: for labelled PRs in order of PAP-99 priority, rebase on `main`, wait for required checks on the rebased head, squash-merge with the PAP-46 commit grammar (`Linear:` and `Character:` trailers preserved), delete the branch; one at a time to emulate a queue.\n* Post-merge: comment on the Linear issue through PAP-97 (`merged <sha>`), move to `In Review` → `Done` per PAP-92, trigger the staging deploy (PAP-26).\n* Safety: never merge with a red or pending required check, an unresolved `request-changes` review from `bot-sentinel`, a `hold` label, a `Deferred` Linear issue, or when `main` is red; cross-owner PRs need the PAP-46 `cross-owner` label.\n\nOut: the gates themselves (quality), release cuts (PAP-88), human review flows.\n\n**Spec**\n\n* Squash message: `<type>(<scope>): <title> (PAP-n)` plus trailers from the PR body; body includes the PR Summary section (PAP-49).\n* Rebase conflicts: label `needs-rebase`, comment with the conflicting files, Linear comment; the owning session is re-woken by PAP-96.\n* Idempotent: a PR already merged or closed is skipped; the queue state is derived from labels and checks, never stored.\n* Throughput target: a green PR merges within 10 minutes of its last check on either forge.\n\n**Interface contract**\n\nProvides: labels `merge-when-green`, `hold`, `needs-rebase`; `forge merge`; merge-queue ruleset fragment; the required-check names list; consumed by PAP-88 (RC cut), PAP-89 (digest sets the label), PAP-96 (wake on `needs-rebase`), PAP-97 (status), PAP-99 (priority order), PAP-92 playbook.\n\nConsumes: rulesets and commit grammar (PAP-46), bot identities and App (PAP-48, `r4/forge/github-app-identities`), Gate 1 check names (PAP-78), gate artefacts (PAP-239, soft), Linear status path (PAP-97, soft), staging deploy (PAP-26, soft).\n\n**Definition of done**\n\n* Fixture repo: two labelled PRs with green checks merge in priority order on Forgejo within one cron cycle each; the same on GitHub through the queue (run URLs).\n* A PR with a red `ci / check` or a `hold` label is never merged (negative tests); conflict path labels `needs-rebase` with the file list.\n* `docs/engineering/merging.md`; PAP-92 and PAP-46 comments; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: eligibility matrix (labels × checks × reviews × main state); squash message builder preserving trailers; priority ordering from PAP-99 fixtures.\n* E2E: fixture PRs on both forges; conflict fixture; red-check fixture.\n\n**Demo**\n\nReviewer labels a green fixture PR `merge-when-green` on Forgejo and within two minutes it is squash-merged with the Linear trailer and the branch deleted; the Linear issue shows the `merged` comment. Under 3 minutes.\n\n**Edge cases**\n\n* Check re-run flips red after enqueue: GitHub queue ejects it; Forgejo script re-waits and gives up after 30 minutes with a comment.\n* Two PRs touch the same file: second rebases and re-tests; PAP-99 file-lock hints reduce this.\n* Forgejo cron and GitHub queue both see the same mirrored PR: PRs are merged on the forge they were opened on; the mirror carries the result.\n* `main` red: queue paused with a comment on the failing commit's Linear issue.\n\n**Dependencies**\n\nHard: PAP-46, PAP-48. Soft: PAP-78 (the required check `ci / check` exists from PAP-13; gate checks are added to the required list as their milestones land), PAP-239, PAP-97, PAP-26, PAP-99, `r4/forge/github-app-identities`. Blocks PAP-88.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer); Atlas (Merger) reviews policy. Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/forge/dependent-branches",
+   "title": "Dependent-branch tooling for the branch-start rule: `worktree.sh new --base`, PR base tracking in `.paperos/branch.json`, auto-retarget and rebase when the base PR merges",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Agent",
+    "Developer"
+   ],
+   "milestone": "CI runs on both forges",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-24",
+   "blockedBy": [
+    "PAP-46"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nThe Execution Schedule only fits before 10-01 because of the branch-start rule: a dependent issue starts when its blockers are In Review and works against their PR branches. PAP-96 passes `BASE_BRANCHES` into the session prompt, but nothing creates the worktree on those branches, tracks the relationship, retargets the PR when the base merges, or rebases the dependent. Graphite and GitLab stacked MRs are the reference; this issue builds the minimum for agents.\n\n**Scope**\n\nIn:\n\n* `scripts/worktree.sh new PAP-<n> --base <branch>[,<branch>]`: creates the branch from `main`, merges each base branch (octopus for two or more, fail on conflict with the file list), writes `.paperos/branch.json` `{ issue, bases: [{ branch, pr, mergedSha? }] }`.\n* PR opening (`pr-body.ts`, PAP-49): base set to the first base branch on both forges when a single base, otherwise `main` with a `Stacked on:` section listing the base PRs; label `stacked`.\n* `scripts/forge/retarget.ts` run by a cron and by the PAP-97 webhook on `pull_request.closed(merged)`: for every open PR whose base merged, retarget to `main`, rebase the branch onto `main` (dropping the base commits), push with the bot identity, comment the result; on conflict label `needs-rebase` and wake the owning session (PAP-96).\n* Status: `forge stack <PAP-n>` prints the stack with merge states; the PAP-89 digest shows stacked PRs as one row.\n\nOut: merge ordering and the queue (`r4/forge/merge-automation`), the promotion logic that decides who may start (PAP-96, PAP-93).\n\n**Spec**\n\n* A dependent PR is never eligible to merge before its bases (`merge-automation` reads `branch.json`).\n* Rebase drops base commits by `git rebase --onto main <baseTip>`; if the base was squash-merged, `git rebase` uses the recorded base tip so no duplicate commits remain.\n* Retarget runs within 5 minutes of the base merge on either forge.\n* All pushes carry the session character identity and the `Linear:` trailer is preserved (PAP-46).\n\n**Interface contract**\n\nProvides: `worktree.sh --base`, `.paperos/branch.json` schema, `retarget.ts`, `forge stack`, label `stacked`; consumed by PAP-96 (`BASE_BRANCHES` → `--base`), PAP-92 (playbook step), PAP-93 (`BLOCKED_BY_OPEN` definition of \"open\"), PAP-89, `r4/forge/merge-automation`.\n\nConsumes: branch conventions and `worktree.sh` (PAP-46), PR body tool (PAP-49, soft), webhook events (PAP-97, soft), bot identities (PAP-48, soft).\n\n**Definition of done**\n\n* Fixture: PR A open, worktree B created `--base A`, PR B opened on base A; merge A (squash) and within one cron cycle B is retargeted to `main`, rebased with only its own commits, and its checks rerun (transcripts on both forges).\n* Conflict fixture labels `needs-rebase`; `bats` for `worktree.sh --base`; `docs/engineering/branch-policy.md` stacked section; PAP-96 comment; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: `branch.json` read and write; retarget decision over fixture PR states; rebase-onto computation for squash and merge-commit bases.\n* E2E: two-PR stack on the fixture repo, both forges; three-base octopus creation.\n\n**Demo**\n\nReviewer runs `scripts/worktree.sh new PAP-999 --base forge/PAP-998-api`, commits, opens the PR (base shows PAP-998's branch), merges PAP-998 and watches PAP-999 retarget to `main` with a bot comment. Under 3 minutes.\n\n**Edge cases**\n\n* Base PR closed without merging: dependent labelled `base-abandoned`, Linear comment, no automatic action.\n* Base force-pushed after the dependent branched: recorded base tip is stale; rebase uses the merge-base fallback and reports it.\n* Three-level stack: retarget cascades one level per event.\n\n**Dependencies**\n\nHard: PAP-46. Soft: PAP-49, PAP-97, PAP-48, PAP-96. Feeds `r4/forge/merge-automation`, PAP-92, PAP-93.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer); Atlas reviews the playbook step. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/forge/lfs-and-artifacts",
+   "title": "Git LFS on both forges with mirror support, large-file and repository-size lint, and the retention policy for screenshot, video and fixture artefacts",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "CI runs on both forges",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-24",
+   "blockedBy": [
+    "PAP-273",
+    "PAP-47"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nGate 3 baselines (PAP-246), video replays (PAP-83), 20 MB Yjs fixtures (PAP-441) and template screenshots all need a home; the round-2 critique noted \"LFS still assumed\". Without a decision, agents commit binaries into history, mirrors slow down (PAP-47 edge case) and the DR restore grows. This issue turns LFS on properly and sets retention for artefacts that should not live in git at all.\n\n**Scope**\n\nIn:\n\n* Forgejo `[lfs]` storage on the PAP-25 object storage bucket (`paperos-lfs`) instead of local disk; GitHub LFS on the mirror; `mirror-all.ts` (PAP-47) sets `lfs: true` per repo and the mirror workflow pushes LFS objects (`git lfs push --all`).\n* `.gitattributes` in the template: `*.png`, `*.mp4`, `*.webm`, `fixtures/large/**` tracked by LFS; `scripts/check-large-files.ts` in Gate 1 fails a commit adding a non-LFS file over 1 MB or growing the repo pack by over 20 MB.\n* Artefact policy `docs/engineering/artifacts.md`: Gate 3 screenshots and videos are CI artefacts (14-day retention) and the baselines only are LFS; contact sheets link to the artefact store (PAP-248); fixtures over 5 MB go to `fixtures/large/` in LFS.\n* Restore path: `restore.sh` (PAP-274) includes the LFS bucket; PAP-53 verifies `git lfs fsck` on a restored repo.\n\nOut: the baselines and reporters (quality), object storage provisioning (PAP-25), MinIO for app files (PAP-37).\n\n**Spec**\n\n* LFS objects mirror both ways within the PAP-47 60 s target for objects under 50 MB; larger objects documented as slower.\n* Lint exempts `pnpm-lock.yaml` and generated JSON under 5 MB.\n* LFS bandwidth on GitHub is capped; the mirror uses Forgejo as the LFS origin for agents (`lfs.url` in `.lfsconfig`).\n\n**Interface contract**\n\nProvides: LFS configuration on both forges, `.gitattributes` and `.lfsconfig` in the template, `check-large-files.ts`, the artefact retention policy; consumed by PAP-246 (baselines), PAP-83, PAP-248, PAP-441 (`fixtures/large/`), PAP-47, PAP-53, PAP-274.\n\nConsumes: Forgejo stack and storage (PAP-273), mirror functions (PAP-47), bucket (PAP-25), backups (PAP-274, soft).\n\n**Definition of done**\n\n* A 30 MB fixture committed via LFS appears on both forges with matching OIDs within a minute; `git lfs fsck` clean on a scratch restore.\n* Lint fails a fixture PR adding a 2 MB PNG outside LFS; policy doc merged; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: large-file detector over fixture diffs; pack-growth estimate; `.gitattributes` pattern coverage test.\n* E2E: push LFS object to Forgejo, assert on GitHub; restore into scratch and fsck.\n\n**Demo**\n\nReviewer adds a 10 MB MP4 under `fixtures/large/`, pushes, and sees the LFS pointer on Forgejo and the object on GitHub; adds a 2 MB PNG elsewhere and Gate 1 fails with the LFS hint. Under 2 minutes.\n\n**Edge cases**\n\n* Agent without `git lfs` installed: `worktree.sh` (PAP-46) checks and prints the install command.\n* LFS bucket credentials rotated: Forgejo fails loudly; backup alert path (PAP-274).\n* History already containing a binary: `git filter-repo` runbook, never rewriting `main` without a Needs Justin note.\n\n**Dependencies**\n\nHard: PAP-273, PAP-47. Soft: PAP-25, PAP-274, PAP-246, PAP-441.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/forge/push-protection",
+   "title": "Secret push protection: gitleaks pre-commit through lefthook, Forgejo pre-receive hook, GitHub push protection, and the leaked-secret revocation runbook",
+   "type": "Infra",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Forgejo live and mirrored",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-20",
+   "blockedBy": [
+    "PAP-46",
+    "PAP-273"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Infra S\n\n**Goal**\n\nPAP-80 runs gitleaks in CI, after the secret is already in history on two forges and in the mirror. Twenty agent sessions with tokens in their environment will eventually paste one into a file; GitHub push protection and a server-side hook stop it at the push, and a local hook stops it at the commit. This is the cheapest security control in the plan and nobody owns it.\n\n**Scope**\n\nIn:\n\n* `lefthook.yml` (PAP-46) gains a `pre-commit` `gitleaks protect --staged` step with the shared `.gitleaks.toml` (PaperOS token formats: Forgejo, Linear, Coolify, Stripe test keys, age keys, `FORGEJO_TOKEN_*`).\n* Forgejo: `pre-receive` hook installed by `ops/forgejo/hooks/install.sh` on the `imagine-os` org (Forgejo system hooks) running gitleaks over pushed commits; rejects with the rule id and remediation URL; bypass only for `bot-atlas` with a `Needs Justin` reference in the push option `-o secret-bypass=<NJ-n>`.\n* GitHub: org-level push protection and secret scanning enabled through the App or org settings (NJ-3 batch); custom patterns mirrored from `.gitleaks.toml`.\n* Runbook `docs/runbooks/leaked-secret.md`: identify, rotate (`bots.ts rotate`, PAP-48), purge from prompt logs (PAP-129), rewrite history only with approval, verify both forges and the mirror.\n\nOut: CI scanning and SAST (PAP-80), credential broker (PAP-300), secrets storage (PAP-25, PAP-17).\n\n**Spec**\n\n* Local and server rules are the same file; CI (PAP-80) asserts the GitHub custom patterns match it.\n* Hook latency under 2 s for a typical push; large pushes scanned incrementally by commit.\n* False positives: `# gitleaks:allow` inline with a reason; the hook logs allowances to the audit channel.\n* Server hook failure (gitleaks binary missing) fails closed with a clear message; monitored by `r4/forge/forge-observability`.\n\n**Interface contract**\n\nProvides: `.gitleaks.toml`, lefthook step, Forgejo pre-receive hook and installer, GitHub pattern set, revocation runbook; consumed by PAP-80 (same config), PAP-46 (hook file), PAP-48 (rotation), PAP-219 (`SEC-SECRETS-*` controls), PAP-129.\n\nConsumes: lefthook and rulesets (PAP-46), Forgejo admin access (PAP-273), GitHub org settings (NJ-3, PAP-301), rotation script (PAP-48, soft).\n\n**Definition of done**\n\n* A commit containing a fixture Forgejo token is rejected locally and, with hooks skipped, by the Forgejo pre-receive hook and by GitHub push protection (three transcripts).\n* Bypass path tested once with a fake NJ reference and logged; runbook merged; CHANGELOG under Security; Linear comment.\n\n**Test plan**\n\n* Unit: rule set against fixture strings (true positives for each token format, negatives for UUIDs and SHAs).\n* E2E: push fixture secret to the fixture repo on both forges; assert rejection messages.\n\n**Demo**\n\nReviewer writes `FORGEJO_TOKEN_FORGE=fj_...` into a file, commits and watches lefthook refuse; commits with `--no-verify`, pushes to Forgejo and reads the pre-receive rejection naming the rule. Under a minute.\n\n**Edge cases**\n\n* Secret in a commit already on a feature branch before this landed: CI (PAP-80) catches it; runbook applies.\n* Mirror push from GitHub carrying a secret that GitHub allowed by bypass: Forgejo hook rejects; mirror alerts via `r4/forge/mirror-drift-monitor`.\n* Agent session cannot run lefthook (no node in sandbox): server hook is the guarantee.\n\n**Dependencies**\n\nHard: PAP-46, PAP-273. Soft: PAP-301 (NJ-3), PAP-48, PAP-80, PAP-129.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/forge/repo-cleanup",
+   "title": "`forge cleanup`: TTL-labelled throwaway repos (`gp-`, `drill-`, `slot-`, `cli-sandbox-`), stale branch and worktree reaper, protected list, nightly sweep on both forges and pool slot release",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "CI runs on both forges",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-24",
+   "blockedBy": [
+    "PAP-51",
+    "PAP-47"
+   ],
+   "blocks": [
+    "PAP-429"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-429 deletes `gp-` repos \"through the PAP-273 runbook script\", PAP-29 removes `drill-<date>` \"by PAP-51\", PAP-22 tears down `cli-sandbox`, PAP-365 releases pool slots on cleanup: four issues assume a cleanup command that does not exist. Twenty sessions also leave merged branches and dead worktrees behind. One reaper with a protected list closes all of it.\n\n**Scope**\n\nIn:\n\n* `forge cleanup [--dry-run] [--kind repos|branches|worktrees|all]` in `packages/forge-cli`: repos matching `ops/forge/cleanup.yml` prefixes with a `paperos-ttl: <iso>` topic or description marker past their TTL are deleted on both forges and removed from `repos.yml`; failed golden-path runs keep 24 h (PAP-429 rule).\n* Branches: merged branches older than 2 days and unmerged `<character>/PAP-n-*` branches whose Linear issue is Done or Canceled for 7 days are deleted (with a Linear comment); `release/*` and `hotfix/*` never.\n* Worktrees: `../paperos-worktrees/PAP-<n>` whose issue is Done and branch deleted are removed on the orchestrator host (PAP-96 hook).\n* Pool: swept repos that hold a warm-pool slot call `releaseSlot` (`r4/app-shell/warm-pool-job`).\n* Protected list in `cleanup.yml` (template, infra, every app repo) checked by name and id; nightly `cleanup.yml` workflow on Forgejo Actions with a GitHub fallback; summary comment on a standing Linear issue.\n\nOut: tenant data purge (PAP-355), Coolify preview teardown (`r4/app-shell/pr-preview-environments`), backup pruning (PAP-274).\n\n**Spec**\n\n* Deletion needs both the prefix match and the TTL marker; either alone is not enough.\n* `--dry-run` is the default in CI until the protected list has been reviewed by Atlas once (`cleanup.yml` `armed: true`).\n* Every deletion is logged with actor `bot-forge`, repo id and reason to the audit channel and the summary.\n* A repo deleted on one forge but not the other (API failure) is retried next night and reported as `partial`.\n\n**Interface contract**\n\nProvides: `forge cleanup`, `cleanup.yml` config and workflow, TTL marker convention `paperos-ttl`; consumed by PAP-429, PAP-29, PAP-22 (sandbox), PAP-365 and `r4/app-shell/warm-pool-job` (slot release), PAP-96 (worktree hook), PAP-51 (registers the marker at bootstrap when `--ttl` is passed).\n\nConsumes: bootstrap and `repos.yml` (PAP-51), mirror pairs (PAP-47), Linear states (PAP-91) for branch decisions, bot identity (PAP-48).\n\n**Definition of done**\n\n* Fixture: three repos with expired TTL and one protected; sweep deletes three on both forges, skips the protected one, releases one slot (transcript).\n* Merged branch older than 2 days deleted; `release/*` untouched; `docs/runbooks/cleanup.md`; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: TTL and prefix matching; protected list by id; branch decision matrix over Linear state fixtures.\n* E2E: nightly dry run on the fixture set, then armed run; assert both forges and `repos.yml`.\n\n**Demo**\n\nReviewer runs `forge cleanup --dry-run` and reads the table of what would go and why, then the armed run on the fixture repos and refreshes both forges. Under 2 minutes.\n\n**Edge cases**\n\n* TTL marker edited by hand to the past on a protected repo: protected wins.\n* Branch with an open PR: never deleted regardless of age.\n* Linear unavailable: branch sweep skipped, repo sweep proceeds.\n\n**Dependencies**\n\nHard: PAP-51, PAP-47. Soft: PAP-91, PAP-48, PAP-96, `r4/app-shell/warm-pool-job`. Blocks PAP-429.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/forge/playwright-runner-image",
+   "title": "Forgejo runner `heavy` profile with a Playwright browsers image so Gates 3 and 4 and the golden path run on Forgejo without GitHub",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Disaster recovery proven",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-50",
+    "PAP-82"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nPAP-50 proves Gate 1 on Forgejo and leaves browser images \"for when PAP-82 needs them\"; PAP-53 then proves only a Gate 1 PR on the restored forge. Forge independence that cannot run the visual gate is partial. This issue adds the heavy runner profile and image so the full gate suite runs on our own runners.\n\n**Scope**\n\nIn:\n\n* Image `git.PAPEROS_DOMAIN/imagine-os/runner-playwright:<pw-version>` built weekly from `mcr.microsoft.com/playwright` pinned by digest (PAP-358) plus Node 22, pnpm and `ffmpeg`; label `ubuntu-playwright` in the runner `config.yml`.\n* `heavy` compose profile (PAP-50): one runner on a second Hetzner host (`cpx41`) with `capacity: 2`, KVM enabled for the Android emulator (PAP-258), pnpm store and Playwright cache volumes.\n* Workflow changes: Gate 3 (PAP-82, PAP-246) and Gate 4 (PAP-85) jobs use `runs-on: [ubuntu-playwright]` with the same label defined on GitHub through a `runs-on` matrix mapping; portability checker (`r4/forge/portability-checker`) knows the label.\n* Proof: the PAP-246 screenshot matrix and one PAP-85 scenario run green on Forgejo from a commit that also ran on GitHub, artefacts compared.\n\nOut: the gate suites themselves (quality), macOS and Windows runners (PAP-371), autoscaling (`r4/forge/runner-autoscaling`).\n\n**Spec**\n\n* Image rebuild pinned to the Playwright version in `package.json`; a mismatch fails the job with the fix.\n* Video artefacts under 200 MB per run; retention 14 days on Forgejo (`r4/forge/lfs-and-artifacts` policy).\n* Host cost documented; runner stopped nightly 01:00 to 05:00 UTC when idle unless a drill is scheduled.\n\n**Interface contract**\n\nProvides: runner image and label `ubuntu-playwright`, `heavy` profile, GitHub label mapping; consumed by PAP-82, PAP-246, PAP-85, PAP-429 (golden path on Forgejo), PAP-53 (full-gate DR proof), PAP-258 (emulator).\n\nConsumes: runner deployment (PAP-50), Gate 3 suite (PAP-82), Hetzner project (PAP-25), pin policy (PAP-358, soft).\n\n**Definition of done**\n\n* Gate 3 contact sheet produced on Forgejo for the template with zero diff against the GitHub run of the same commit (both URLs).\n* Runner online in org settings; image rebuild workflow green; `docs/engineering/ci-runners.md` heavy section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: label mapping in the workflow templater; Playwright version check script.\n* E2E: Gate 3 and one Gate 4 scenario on the Forgejo runner; artefact comparison.\n\n**Demo**\n\nReviewer opens the Forgejo Actions run for Gate 3, sees the seven-width contact sheet artefact, then the GitHub run of the same SHA with the identical sheet. Under a minute.\n\n**Edge cases**\n\n* Fonts differ between images: the image installs the same font set as the GitHub job (`fonts-noto`), asserted by a font-list step.\n* Emulator needs `/dev/kvm`: documented host flag; job skips with a note when absent.\n* Second host down: jobs queue on GitHub only; PAP-53 records the gap.\n\n**Dependencies**\n\nHard: PAP-50, PAP-82. Soft: PAP-25, PAP-358, PAP-246, PAP-85. Feeds PAP-53, PAP-429.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/forge/git-credential-helper",
+   "title": "`paperos-git-credential`: git credential helper and SSH configuration that fetch short-lived per-session tokens from the credential broker for both forges, with host-key pinning",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Agent",
+    "Developer"
+   ],
+   "milestone": "Disaster recovery proven",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-300",
+    "PAP-48"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build S\n\n**Goal**\n\nPAP-300 says sessions hold no raw secrets and PAP-48 mints tokens per character; git itself still needs credentials for `push` and `fetch` on two hosts. Without a helper, sessions fall back to tokens in `.git/config` or the environment, which is exactly what the threat model forbids. This issue is the missing adapter between git and the broker.\n\n**Scope**\n\nIn:\n\n* `packages/forge-cli/src/credential-helper.ts` built as `paperos-git-credential` (`bin`): implements the git credential protocol (`get`, `store`, `erase`) and answers `get` for `git.PAPEROS_DOMAIN` and `github.com` by asking the broker (PAP-300 local socket) for a token scoped to the session character and repo; caches in memory for the token lifetime; `store` and `erase` are no-ops.\n* Session git config applied by `worktree.sh` (PAP-46) and the sandbox (PAP-280): `credential.helper=paperos-git-credential`, `credential.useHttpPath=true`, `url.https://.insteadOf=ssh://` so HTTPS is the only path; `core.sshCommand` with a pinned `known_hosts` for the rare SSH case (Forgejo 2222).\n* Host-key and CA pinning: `ops/forge/known_hosts` and the Caddy CA chain checked into the template; the helper refuses hosts not on the allowlist.\n* Audit: every `get` logged to the PAP-300 audit stream with character, repo and operation; denied repos return an empty answer and git fails with a clear message.\n\nOut: the broker itself (PAP-300), token minting (PAP-48, `r4/forge/github-app-identities`), human developer credentials (personal tokens remain their own).\n\n**Spec**\n\n* Helper answers within 200 ms from cache, under 2 s on a broker round trip.\n* Broker unavailable: helper fails closed; git prints the broker status URL; no environment fallback.\n* Tokens are never written to disk; `git credential-cache` is disabled in the session config.\n* Works with `git lfs` (uses the same helper) and with `pnpm` registry auth via a matching `.npmrc` `_authToken` shim for the Forgejo npm registry.\n\n**Interface contract**\n\nProvides: `paperos-git-credential`, session git config fragment, `known_hosts` allowlist; consumed by PAP-96 (session launch), PAP-280 (sandbox image), PAP-46 (`worktree.sh`), `r4/app-shell/upgrade-package-registry` (npm auth shim), PAP-219 controls.\n\nConsumes: broker protocol and audit (PAP-300), token scopes (PAP-48), branch tooling (PAP-46), sandbox (PAP-280, soft).\n\n**Definition of done**\n\n* Session in the sandbox clones, pushes and runs `git lfs push` to both forges with no token in the environment or on disk (`grep` and `env` proof in the transcript).\n* Denied repo yields a clear failure; broker down fails closed; `docs/engineering/agent-identities.md` git section; CHANGELOG under Security; Linear comment.\n\n**Test plan**\n\n* Unit: credential protocol parsing; host allowlist; cache expiry; broker error mapping.\n* E2E: sandbox job: clone and push to the fixture repo on both forges through the helper; negative denied repo.\n\n**Demo**\n\nReviewer opens a shell in the session sandbox, runs `env | grep -i token` (empty), `cat .git/config` (helper only), then `git push` succeeds and the broker audit shows the `get`. Under a minute.\n\n**Edge cases**\n\n* Token expires mid-push of a large repo: helper refreshes on the next `get`; git retries once by config.\n* Repo renamed: `useHttpPath` scopes by path; the broker maps by id and answers for the new path.\n* Developer laptop without a broker: helper detects no socket and exits 0 with no answer so the personal helper takes over.\n\n**Dependencies**\n\nHard: PAP-300, PAP-48. Soft: PAP-46, PAP-280, `r4/forge/github-app-identities`.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/forge/forge-observability",
+   "title": "Forge observability: Forgejo and runner metrics in Grafana, mirror lag, runner queue depth, disk, backup age and hook health alerts",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Disaster recovery proven",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-40",
+    "PAP-273"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nPAP-40 builds tracing and dashboards for the API and sync; PAP-275 leaves a \"metrics scrape hint\"; PAP-47 alerts on divergence by issue. Nothing shows whether the forge is healthy: runner queue depth when twenty sessions push, disk on the Forgejo host, hours since the last backup, mirror lag. Forge independence needs the same observability as the app.\n\n**Scope**\n\nIn:\n\n* Forgejo `[metrics] ENABLED=true` with a bearer token; Prometheus scrape jobs for Forgejo, the runners (`forgejo-runner` exporter or log-derived queue depth), node exporter on both hosts; `ops/observability/forge-dashboard.json` provisioned into the PAP-40 Grafana.\n* Derived metrics: `mirror_lag_seconds` from `mirror-status.json` (`r4/forge/mirror-drift-monitor`), `backup_age_hours` from the restic manifest (PAP-274), `prereceive_hook_failures_total` (`r4/forge/push-protection`), `merge_queue_wait_minutes` (`r4/forge/merge-automation`).\n* Alerts (Grafana rules to the PAP-97 orchestrator webhook, interim Linear comment): disk over 80 percent, backup older than 30 h, mirror lag over 15 minutes, queue depth over 8 for 30 minutes, hook failing closed.\n* Runbook links on each alert; `docs/runbooks/forgejo.md` monitoring section completed (PAP-275 placeholder).\n\nOut: application tracing (PAP-40), security telemetry (PAP-356), cost reporting (PAP-371).\n\n**Spec**\n\n* Scrape every 30 s; dashboards load in under 2 s; retention 30 days (PAP-40 Prometheus).\n* Alert thresholds in `ops/observability/forge-alerts.yml` so a change is a PR.\n* No alert flaps: 5-minute `for` on every rule.\n\n**Interface contract**\n\nProvides: dashboard, alert rules, derived metric exporters; consumed by PAP-53 (drill health), PAP-88 (release gate reads forge health), PAP-306, PAP-275 runbook.\n\nConsumes: Grafana and Prometheus (PAP-40), Forgejo config (PAP-273), mirror status, backup manifest (PAP-274), runner compose (PAP-50).\n\n**Definition of done**\n\n* Dashboard shows live panels for all metrics (screenshot at 1280); a simulated backup gap fires the alert into the webhook (log).\n* Rules file merged; runbook section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: derived exporters over fixture inputs (lag, age, queue depth).\n* E2E: stop the backup sidecar for a test window and observe the alert; restore.\n\n**Demo**\n\nReviewer opens the Forge dashboard, sees runner queue depth spike as they push three PRs, then the mirror lag panel return to zero. Under a minute.\n\n**Edge cases**\n\n* Metrics token leaked: rotate via `app.ini` reload; documented.\n* Second host down: node exporter target down alert distinct from queue depth.\n* Prometheus down: Forgejo unaffected; alert on the PAP-40 side.\n\n**Dependencies**\n\nHard: PAP-40, PAP-273. Soft: PAP-274, PAP-50, `r4/forge/mirror-drift-monitor`, `r4/forge/push-protection`, `r4/forge/merge-automation`.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/forge/code-search",
+   "title": "Enable Forgejo code indexing and expose `forge.search` in `ForgePort` for the in-app repo browser and agent sessions",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Disaster recovery proven",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-449",
+    "PAP-273"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 (past 2026-10-01). GitHub code search is what agents reach for when a symbol moves; PAP-138 unifies search over docs, comments, specs and issues but not code, and the deferred in-app browser (PAP-277) has no search box. Forgejo ships a bleve indexer; exposing it through the contract gives both the UI and the sessions one search API.\n\n**Scope**\n\nIn:\n\n* `app.ini` `[indexer] REPO_INDEXER_ENABLED=true` with bleve on a named volume; sizing documented (PAP-273 host memory).\n* `ForgePort.search(query, { repo?, path?, lang? })` added to `@paperos/contract-forge` as a minor bump with fixtures; Forgejo adapter over `/api/v1/repos/{owner}/{repo}/search`; the GitHub adapter (`r4/module-system/service-swap-drill`) marks it `unsupported`.\n* PAP-138 registers a `code` source; PAP-277 gets a search box; the `review-pr` skill (PAP-105) may call `forge.search` for symbol lookups.\n* oRPC procedure `forge.search` (PAP-276 shape) guarded by `can(actor, \"forge.read\", { repo })`, with a 30 s cache keyed by query and index timestamp; `paperos forge search <query>` CLI for sessions without the UI.\n* Conformance: two search fixtures (single repo, org-wide) added to `@paperos/contract-forge/conformance` with the `unsupported` path exercised by the GitHub double.\n\nOut: semantic code search, cross-repo refactoring tools.\n\n**Spec**\n\n* Search respects `forge.read` (PAP-276) per repo.\n* Results capped at 50 with path, line and snippet; under 500 ms on the template repo.\n* Index rebuild runbook after restore (PAP-53).\n\n**Interface contract**\n\nProvides: `ForgePort.search`, code source for unified search; consumed by PAP-138, PAP-277, PAP-105.\n\nConsumes: contract (PAP-449), Forgejo config (PAP-273), permission action (PAP-276).\n\n**Definition of done**\n\n* Query for `composeRoutes` returns the defining file across two repos in the console and in `/dev/repos`; conformance fixture added; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: query builder and result mapper against recorded responses.\n* E2E: search from PAP-277 UI with mocked and live backends.\n\n**Demo**\n\nReviewer types `defineModule` in the repo browser search and lands on `packages/core/src/modules/manifest.ts`. Under a minute.\n\n**Edge cases**\n\n* Index behind after a big push: results carry `indexedAt` and the UI shows a staleness hint.\n* Private repo without `forge.read`: excluded silently.\n* Query with regex metacharacters: escaped; Forgejo fuzzy mode off by default.\n* Index volume full: Forgejo logs, alert through `r4/forge/forge-observability`.\n\n**Dependencies**\n\nHard: PAP-449, PAP-273. Soft: PAP-276, PAP-138, PAP-277.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/forge/runner-autoscaling",
+   "title": "Ephemeral runner autoscaling: start docker runners on a second Hetzner host when the Forgejo job queue exceeds capacity and stop them when idle, with a cost cap",
+   "type": "Infra",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Disaster recovery proven",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "dueDate": "2026-09-30",
+   "blockedBy": [
+    "PAP-50",
+    "PAP-25"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra M\n\n**Goal**\n\nDeferred to v0.2 (past 2026-10-01). PAP-50 sizes four concurrent jobs and says a twenty-session spike \"queues\"; during the 09-21 to 09-26 peak the schedule runs twenty builders plus gates. GitHub absorbs the burst today; Forgejo independence at that scale needs runners that appear on demand.\n\n**Scope**\n\nIn:\n\n* `ops/forgejo-runner/autoscale.ts` polling the Forgejo Actions queue (admin API) every minute; when queued jobs exceed free capacity for 5 minutes, create a `cpx31` from a cloud-init snapshot with the runner pre-registered in ephemeral mode; destroy after 30 idle minutes; hard cap 3 extra hosts and a daily EUR budget in `autoscale.yml`.\n* Snapshot build workflow (weekly) with the PAP-50 images pre-pulled and the `r4/forge/playwright-runner-image` cached.\n* Metrics into `r4/forge/forge-observability`: hosts active, minutes, cost; daily summary line in the PAP-98 burn report so runner spend sits beside credit spend.\n* Runbook `docs/engineering/ci-runners.md` autoscale section: how to raise the cap for a drill, how to drain, how to rebuild the snapshot after a runner image change.\n\nOut: macOS and Windows capacity (PAP-371), Kubernetes.\n\n**Spec**\n\n* Ephemeral runners take one job then re-register; secrets never persist on the host; the host is destroyed, never reused, after 30 idle minutes.\n* Budget exhausted: no scale-out; alert; jobs queue on the fixed runners.\n* Hetzner API failure: retry with backoff; never leaves half-created hosts (reconcile on start compares live servers with `autoscale.state.json`).\n* Scale decisions are logged with queue depth, free capacity and the rule that fired so the threshold can be tuned from evidence.\n\n**Interface contract**\n\nProvides: `autoscale.ts`, snapshot workflow, budget config; consumed by PAP-99 (concurrency figure), PAP-53 (drill can request capacity).\n\nConsumes: runner registration (PAP-50), Hetzner token (PAP-25), observability.\n\n**Definition of done**\n\n* Simulated queue of 12 jobs scales to two hosts within 8 minutes and back to zero after idle (log with timings); cap enforced; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: scaling decision over fixture queue series; budget accounting; reconcile of orphaned hosts.\n* E2E: staging: real scale-out of one host and teardown.\n\n**Demo**\n\nReviewer dispatches ten dummy jobs, watches a new runner appear in org settings within minutes, and see it gone half an hour later. Under a minute of attention.\n\n**Edge cases**\n\n* Runner token expired in the snapshot: refreshed at boot from sops.\n* Job pinned to `heavy` label: only heavy snapshots scale for it.\n\n**Dependencies**\n\nHard: PAP-50, PAP-25. Soft: `r4/forge/playwright-runner-image`, `r4/forge/forge-observability`.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-449",
+   "section": "Spec",
+   "append": "* `ForgePort` also exports `pulls.review(pr, { verdict, findings })` and `checks.set(sha, { name, status, summaryUrl })` so Gate 2 (PAP-81, PAP-243) and the merge automation (`r4/forge/merge-automation`) post verdicts and required checks through the contract on both forges instead of calling the GitHub and Forgejo APIs directly; the Forgejo adapter maps `checks.set` to commit statuses. `mirrorStatus` reads `mirror-status.json` from `r4/forge/mirror-drift-monitor`."
+  },
+  {
+   "identifier": "PAP-273",
+   "section": "Spec",
+   "append": "* `[repository] DEFAULT_REPO_UNITS = repo.code,repo.releases,repo.actions,repo.packages` (issues, wiki, projects and pull-request discussions beyond review are disabled: Linear is the system of record). * `[packages]` retention: `LIMIT_TOTAL_OWNER_SIZE = 20 GiB`, a weekly `forgejo admin packages cleanup` cron keeping the last 20 versions per package (shared with `r4/app-shell/upgrade-package-registry`) and container images referenced by no Coolify resource for 30 days."
+  },
+  {
+   "identifier": "PAP-46",
+   "section": "Spec",
+   "append": "* Tag protection: `*-v*` tags may be created only by the release workflow identity (`bot-forge` on Forgejo, the `paperos-agents` App on GitHub); humans and other bots are rejected; documented in `branch-policy.md`. * `worktree.sh new` accepts `--base <branch>[,<branch>]` (delivered by `r4/forge/dependent-branches`) and installs the session git config from `r4/forge/git-credential-helper` when the broker socket exists."
+  },
+  {
+   "identifier": "PAP-49",
+   "section": "Spec",
+   "append": "* `pr-lint` also warns above 800 changed lines (excluding generated paths from `ownership.yaml` and lockfiles) and fails above 2,000 without the `large-change` label set by Atlas; draft PRs skip the Screenshots requirement until marked ready. * New section `Stacked on` (list of base PRs) written by `pr-body.ts` when `.paperos/branch.json` exists (`r4/forge/dependent-branches`)."
+  },
+  {
+   "identifier": "PAP-50",
+   "section": "Spec",
+   "append": "* Vendored inventory for DR: every third-party action and base image the workflows need is listed in `ops/forge/vendored-actions.yml` (`r4/forge/portability-checker`) with a mirror on `code.forgejo.org` or a copy under `.github/actions/`, and every runner and job image is mirrored into the Forgejo registry nightly by `ops/forge/mirror-images.yml`; PAP-53 asserts the list is complete by running with `ghcr.io` and `github.com` blackholed."
+  },
+  {
+   "identifier": "PAP-53",
+   "section": "Definition of done",
+   "append": "* Phase 7 runs Gate 1 and, once `r4/forge/playwright-runner-image` exists, Gate 3 at three widths on the restored forge with `heavy` capacity requested from the drill host; the report records which gates ran. * Post-restore checks include `forge bootstrap --check` over `repos.yml` (`r4/forge/bootstrap-check-mode`), `git lfs fsck` on one repo (`r4/forge/lfs-and-artifacts`) and a `cosign verify` of the restored registry image (`r4/forge/supply-chain-provenance`)."
+  },
+  {
+   "identifier": "PAP-455",
+   "section": "Demo",
+   "append": "* Clarification: at merge time the second implementation is the `next` stub named in Scope; the `forgejo` to `github` flip described here becomes possible only when the read-only GitHub adapter from `r4/module-system/service-swap-drill` (deferred) is bound. Until then the demo flips `default` to `next` for the demo tenant and shows `X-PaperOS-Impl: next` on `forge.*` procedures."
+  },
+  {
+   "identifier": "PAP-51",
+   "section": "Spec",
+   "append": "* Step 8 also commits the community health files when absent: `SECURITY.md` (disclosure address and the PAP-219 policy link), `CODE_OF_CONDUCT.md`, `.github/ISSUE_TEMPLATE/config.yml` with `blank_issues_enabled: false` and a single contact link to the Linear intake (PAP-307), and `.github/dependabot.yml` disabled in favour of Renovate (PAP-217). * `--ttl <duration>` writes the `paperos-ttl` marker consumed by `r4/forge/repo-cleanup`."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "pm-linear",
+   "title": "Engineering metrics from forge webhooks: PR cycle time, review latency, CI duration and merge-queue wait per character and project, rendered as a dashboard block",
+   "why": "DORA-style visibility for Atlas and the weekly re-audit (PAP-306); the data arrives through PAP-97 already."
+  },
+  {
+   "targetProject": "quality",
+   "title": "Required-check name contract: one file `ops/ci/required-checks.json` listing the check names each gate posts, consumed by PAP-46 rulesets and r4/forge/merge-automation",
+   "why": "Gate check names are scattered across PAP-78, PAP-81, PAP-82 and PAP-85; merging by check name needs one source of truth."
+  },
+  {
+   "targetProject": "agents",
+   "title": "Session sandbox image installs `paperos-git-credential` and the pinned `known_hosts` by default, and runs `git` only through the helper (PAP-280)",
+   "why": "The credential helper (r4/forge/git-credential-helper) is only a guarantee if the sandbox cannot bypass it."
+  }
+ ]
+}

@@ -1,0 +1,1207 @@
+{
+ "project": "app-shell",
+ "projectName": "Universal App Shell & Repo Template",
+ "benchmarks": [
+  "Tauri 2 apps (Linear desktop, Arc, Zed)",
+  "Electron apps (VS Code, Slack, Notion, Figma desktop)",
+  "PWAs (Twitter Lite, Starbucks, Excalidraw)",
+  "Create-T3 / Nx / Turborepo starter templates",
+  "Vercel and Coolify preview environments",
+  "Expo EAS and fastlane release pipelines"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "Monorepo scaffold: pnpm, Turborepo, strict TS, Biome, Vitest",
+   "coveredBy": [
+    "PAP-13"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "React 19 + Vite web app with typed alias and CI check",
+   "coveredBy": [
+    "PAP-13"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "File-based typed router with layout slots driven by page specs",
+   "coveredBy": [
+    "PAP-16"
+   ],
+   "status": "covered",
+   "note": "Route-level lazy chunks per module missing (amendment)."
+  },
+  {
+   "feature": "Typed env and config layer per target",
+   "coveredBy": [
+    "PAP-17"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Client secret storage: browser session, OS keychain, mobile secure storage",
+   "coveredBy": [
+    "PAP-17"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Installable PWA, service worker, offline shell, install prompt",
+   "coveredBy": [
+    "PAP-18"
+   ],
+   "status": "covered",
+   "note": "Per-tenant manifest on custom domains missing (amendment)."
+  },
+  {
+   "feature": "Update flow: SW update toast shared with the desktop updater",
+   "coveredBy": [
+    "PAP-18",
+    "PAP-257"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Desktop target Tauri 2: scaffold, capabilities, menu, tray",
+   "coveredBy": [
+    "PAP-19",
+    "PAP-255"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Desktop installers for three OSes from CI with draft release",
+   "coveredBy": [
+    "PAP-256"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Desktop auto-updater, single instance, paperos:// deep links",
+   "coveredBy": [
+    "PAP-257"
+   ],
+   "status": "covered",
+   "note": "Update channels (stable/beta) missing (amendment)."
+  },
+  {
+   "feature": "Desktop OS integration: native notifications, badge, jump list, global shortcut",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "Linear and Slack desktop table stakes; deferred to v0.2 (r4/app-shell/desktop-os-integration)."
+  },
+  {
+   "feature": "Desktop crash reporting: Rust panic hook, relaunch to last route",
+   "coveredBy": [
+    "PAP-368"
+   ],
+   "status": "partial",
+   "note": "PAP-368 lists it as one bullet; Rust work split out (r4/app-shell/tauri-crash-reporting)."
+  },
+  {
+   "feature": "Desktop E2E automation (tauri-driver on Linux)",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "Five issues cite \"Tauri WebDriver\" with no harness; r4/app-shell/tauri-e2e-harness."
+  },
+  {
+   "feature": "Mobile targets iOS and Android from the shared crate, CI builds",
+   "coveredBy": [
+    "PAP-20",
+    "PAP-258"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Native capability shim with web fallbacks",
+   "coveredBy": [
+    "PAP-259"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Mobile plugins, safe areas, back button, keyboard, device proofs",
+   "coveredBy": [
+    "PAP-260"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Mobile universal links and Android app links",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "Magic links must open the app; deferred (r4/app-shell/mobile-universal-links)."
+  },
+  {
+   "feature": "Native push registration APNs and FCM",
+   "coveredBy": [
+    "PAP-381"
+   ],
+   "status": "gap",
+   "note": "PAP-381 is the connected-client transport only; deferred (r4/app-shell/native-push-registration)."
+  },
+  {
+   "feature": "Store distribution: TestFlight and Play internal lanes",
+   "coveredBy": [
+    "PAP-369"
+   ],
+   "status": "gap",
+   "note": "PAP-369 signs; nothing uploads; deferred (r4/app-shell/store-distribution)."
+  },
+  {
+   "feature": "Code signing and notarisation",
+   "coveredBy": [
+    "PAP-369"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Linux distribution: apt repo, Flatpak",
+   "coveredBy": [
+    "PAP-256"
+   ],
+   "status": "gap",
+   "note": "Deferred (r4/app-shell/linux-packaging)."
+  },
+  {
+   "feature": "Device matrix and seven-width breakpoints",
+   "coveredBy": [
+    "PAP-14"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Container-query breakpoints and layout hooks",
+   "coveredBy": [
+    "PAP-261"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Multi-monitor window manager: detach, dock, topology persistence",
+   "coveredBy": [
+    "PAP-262"
+   ],
+   "status": "covered",
+   "note": "macOS recordings unverifiable from Linux (PAP-21 amendment)."
+  },
+  {
+   "feature": "Web pop-out fallback and panel affordances",
+   "coveredBy": [
+    "PAP-263"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Cross-window and cross-tab state coherence",
+   "coveredBy": [
+    "PAP-145"
+   ],
+   "status": "covered",
+   "note": "realtime"
+  },
+  {
+   "feature": "Kiosk and multi-display signage mode",
+   "coveredBy": [
+    "PAP-23"
+   ],
+   "status": "covered",
+   "note": "Deferred by schedule."
+  },
+  {
+   "feature": "Shell layout persistence, session restore, named presets",
+   "coveredBy": [
+    "PAP-262",
+    "PAP-260"
+   ],
+   "status": "partial",
+   "note": "Only detached windows and mobile route are persisted; r4/app-shell/shell-layout-presets."
+  },
+  {
+   "feature": "Tabbed or split main area (multi-document workspace)",
+   "coveredBy": [
+    "PAP-70"
+   ],
+   "status": "gap",
+   "note": "SplitPane exists in design-system; tabs deliberately not filed before 10-01; cross-project note."
+  },
+  {
+   "feature": "Command bar slot and command palette",
+   "coveredBy": [
+    "PAP-16",
+    "PAP-151",
+    "PAP-290"
+   ],
+   "status": "covered",
+   "note": "input"
+  },
+  {
+   "feature": "Keyboard shortcuts, keymaps, focus management",
+   "coveredBy": [
+    "PAP-151",
+    "PAP-152",
+    "PAP-153"
+   ],
+   "status": "covered",
+   "note": "input"
+  },
+  {
+   "feature": "Notification centre in the shell",
+   "coveredBy": [
+    "PAP-136",
+    "PAP-323"
+   ],
+   "status": "covered",
+   "note": "collab"
+  },
+  {
+   "feature": "Tenant switcher, customer portal and staff console shells",
+   "coveredBy": [
+    "PAP-58",
+    "PAP-62",
+    "PAP-63"
+   ],
+   "status": "covered",
+   "note": "identity"
+  },
+  {
+   "feature": "Theming: light, dark, high contrast, tenant branding",
+   "coveredBy": [
+    "PAP-75"
+   ],
+   "status": "covered",
+   "note": "design-system"
+  },
+  {
+   "feature": "Internationalisation, RTL, pseudo-locale, Intl helpers",
+   "coveredBy": [
+    "PAP-27"
+   ],
+   "status": "covered",
+   "note": "Translation skill and catalog CI split out (r4/app-shell/i18n-translate-skill)."
+  },
+  {
+   "feature": "Client error boundaries, error catalogue, reporting",
+   "coveredBy": [
+    "PAP-368"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Client telemetry: web vitals, route timings, feature usage, consent",
+   "coveredBy": [
+    "PAP-40",
+    "PAP-87",
+    "PAP-194"
+   ],
+   "status": "gap",
+   "note": "Server traces, lab Lighthouse and marketing attribution exist; no field RUM (r4/app-shell/client-telemetry)."
+  },
+  {
+   "feature": "Performance budgets and bundle size",
+   "coveredBy": [
+    "PAP-87"
+   ],
+   "status": "covered",
+   "note": "quality; route-level code splitting amendment on PAP-16."
+  },
+  {
+   "feature": "Web security headers and CSP",
+   "coveredBy": [
+    "PAP-219",
+    "PAP-255"
+   ],
+   "status": "partial",
+   "note": "Baseline defined in PAP-219 and Tauri CSP in PAP-255; web image Caddyfile not wired (PAP-26 amendment)."
+  },
+  {
+   "feature": "Runtime feature flags per tenant and audience with kill switches",
+   "coveredBy": [
+    "PAP-366"
+   ],
+   "status": "covered",
+   "note": "Settings page split out (r4/app-shell/flags-settings-page)."
+  },
+  {
+   "feature": "Maintenance mode and read-only degradation banner",
+   "coveredBy": [
+    "PAP-267",
+    "PAP-272"
+   ],
+   "status": "covered",
+   "note": "Filed this round by data-layer as r4/data-layer/maintenance-mode (middleware, banner, CLI); app-shell duplicate withdrawn."
+  },
+  {
+   "feature": "Deploy pipeline: images, staging on merge, production on tag, rollback",
+   "coveredBy": [
+    "PAP-26"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Per-PR preview environments with seeded demo tenant",
+   "coveredBy": [
+    "PAP-26"
+   ],
+   "status": "partial",
+   "note": "One bullet in PAP-26 but consumed by five gates; child r4/app-shell/pr-preview-environments."
+  },
+  {
+   "feature": "GitHub Pages static demos with PR previews",
+   "coveredBy": [
+    "PAP-15"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "VPS, Coolify, Caddy, DNS, object storage, sops",
+   "coveredBy": [
+    "PAP-25"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Per-tenant custom domains with on-demand TLS",
+   "coveredBy": [
+    "PAP-431"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Public route prerendering, SEO and Open Graph",
+   "coveredBy": [
+    "PAP-363",
+    "PAP-193"
+   ],
+   "status": "gap",
+   "note": "Head tags, OG image, sitemap and robots filed by spec-builder (r4/spec-builder/seo-public-metadata); static prerendering deferred (r4/app-shell/public-seo-prerender)."
+  },
+  {
+   "feature": "Module manifests and removable modules at generation and runtime",
+   "coveredBy": [
+    "PAP-28",
+    "PAP-264",
+    "PAP-265",
+    "PAP-266"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Package boundary map and dependency lint",
+   "coveredBy": [
+    "PAP-305"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "`paperos create` CLI: clone, rename, push, provision",
+   "coveredBy": [
+    "PAP-22"
+   ],
+   "status": "covered",
+   "note": "Linear seeding split out (r4/app-shell/cli-linear-seeding); `.paperos/template.json` not written (amendment)."
+  },
+  {
+   "feature": "Golden path driver with checkpoints",
+   "coveredBy": [
+    "PAP-364"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Golden path provisioning DAG and warm pools",
+   "coveredBy": [
+    "PAP-365"
+   ],
+   "status": "covered",
+   "note": "Pool job split out (r4/app-shell/warm-pool-job)."
+  },
+  {
+   "feature": "Golden path acceptance test nightly",
+   "coveredBy": [
+    "PAP-429"
+   ],
+   "status": "covered",
+   "note": "Depends on cleanup and fixtures that did not exist (r4/forge/repo-cleanup, r4/app-shell/template-fixture-repo)."
+  },
+  {
+   "feature": "Default surfaces starter kit and deterministic demo tenant",
+   "coveredBy": [
+    "PAP-363"
+   ],
+   "status": "covered",
+   "note": "Seed split out (r4/app-shell/starter-kit-demo-seed)."
+  },
+  {
+   "feature": "First-run tenant onboarding wizard",
+   "coveredBy": [
+    "PAP-367"
+   ],
+   "status": "covered",
+   "note": "Staff funnel split out (r4/app-shell/onboarding-funnel-admin)."
+  },
+  {
+   "feature": "`paperos upgrade` template upgrades with three-way merge",
+   "coveredBy": [
+    "PAP-430"
+   ],
+   "status": "covered",
+   "note": "Registry publishing and codemods/fleet split out (two children)."
+  },
+  {
+   "feature": "Fixture template repository for CLI, upgrade and golden path tests",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "Four issues assume it; r4/app-shell/template-fixture-repo."
+  },
+  {
+   "feature": "Developer environment: devcontainer, one-command dev, toolchain doctor",
+   "coveredBy": [
+    "PAP-22",
+    "PAP-42"
+   ],
+   "status": "partial",
+   "note": "Doctor checks tokens only; no composed dev command; r4/app-shell/dev-environment-bootstrap."
+  },
+  {
+   "feature": "Repo template guide, CLAUDE.md, rules",
+   "coveredBy": [
+    "PAP-24"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Contract package, conformance suite, kernel wiring",
+   "coveredBy": [
+    "PAP-447",
+    "PAP-450",
+    "PAP-453"
+   ],
+   "status": "covered",
+   "note": "PAP-453 variant naming inconsistency (amendment)."
+  },
+  {
+   "feature": "Blank-screen-to-running-app drill",
+   "coveredBy": [
+    "PAP-29"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Shell accessibility: skip links, focus, reduced motion, axe",
+   "coveredBy": [
+    "PAP-152",
+    "PAP-72",
+    "PAP-73"
+   ],
+   "status": "covered",
+   "note": "input and design-system"
+  },
+  {
+   "feature": "Idle lock and shared-device mode",
+   "coveredBy": [
+    "PAP-220"
+   ],
+   "status": "gap",
+   "note": "Kiosks and shared tablets; cross-project suggestion to identity."
+  },
+  {
+   "feature": "Print stylesheet and PDF export",
+   "coveredBy": [
+    "PAP-235",
+    "PAP-387"
+   ],
+   "status": "covered",
+   "note": "design-system and tables"
+  },
+  {
+   "feature": "In-app feedback and bug report to Linear with screenshot",
+   "coveredBy": [
+    "PAP-137",
+    "PAP-307"
+   ],
+   "status": "covered",
+   "note": "collab and pm-linear"
+  },
+  {
+   "feature": "Recents and favourites navigation",
+   "coveredBy": [
+    "PAP-151"
+   ],
+   "status": "gap",
+   "note": "Notion and Linear pattern; cross-project suggestion to input."
+  },
+  {
+   "feature": "Local-first data persisted on desktop disk (PGlite on Tauri fs)",
+   "coveredBy": [
+    "PAP-271"
+   ],
+   "status": "partial",
+   "note": "PGlite in IndexedDB only; cross-project suggestion to data-layer."
+  },
+  {
+   "feature": "Health and version endpoints",
+   "coveredBy": [
+    "PAP-26",
+    "PAP-269"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Environment parity and test mode",
+   "coveredBy": [
+    "PAP-17",
+    "PAP-240"
+   ],
+   "status": "covered",
+   "note": ""
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/app-shell/upgrade-package-registry",
+   "title": "Publish `@paperos/*` packages to the Forgejo npm registry on every template tag with a GitHub Packages mirror and a generated-app `.npmrc`",
+   "type": "Infra",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": "PAP-430",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-273",
+    "PAP-52",
+    "PAP-48"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra M\n\n**Goal**\n\nGenerated apps must consume `@paperos/*` as versioned packages so `paperos upgrade` (PAP-430) can bump versions instead of copying files. This child publishes every workspace package to the Forgejo npm registry (`git.PAPEROS_DOMAIN/api/packages/imagine-os/npm/`) on each `template-v*` tag, mirrors to GitHub Packages for DR, and ships the `.npmrc` the template and generated apps use. PAP-430 folded `gap/forge/template-upgrade` in and listed this as one bullet; it is a session of its own.\n\n**Scope**\n\nIn:\n\n* `.github/workflows/publish-packages.yml` triggered by `template-v*` tags (PAP-52 format): `pnpm -r publish --no-git-checks --registry <forgejo>` for every `packages/*` with `private: false`, then `npm publish` to GitHub Packages as the mirror.\n* Package metadata: `publishConfig.registry`, `files`, `exports` and `types` on every publishable package; `size-limit` per package; `pnpm pack --dry-run` check in Gate 1 so a package that forgets `files` fails before a tag.\n* `templates/.npmrc` and `apps/*/.npmrc`: scoped registry for `@paperos`, `//git.PAPEROS_DOMAIN/...:_authToken=${FORGEJO_NPM_TOKEN}`, GitHub Packages as `@paperos-mirror` fallback documented in `docs/cli/upgrade.md`.\n* Auth: CI uses the PAP-48 `bot-forge` token with `write:package`; developers use a personal Forgejo token; tokens never in the repo.\n* Retention: keep the last 20 versions per package; `forge packages prune` script and a monthly cron.\n\nOut: the upgrade merge logic (PAP-430), codemods and fleet mode (`r4/app-shell/upgrade-codemods-fleet`), publishing to npmjs.org.\n\n**Spec**\n\n* Versions come from release-please (PAP-52); this workflow never edits `version` fields (`check-no-manual-version` stays green).\n* Publish is idempotent: an existing version is skipped with `[skip]`, never overwritten; a changed tarball for an existing version fails the job.\n* Provenance: when PAP-358 lands, `npm publish --provenance` on GitHub and a cosign attestation on Forgejo.\n* Generated apps pin exact versions in `package.json`; the template pins `workspace:*`.\n* Registry down: `pnpm install` in generated apps falls back to the GitHub Packages mirror through the second scoped line in `.npmrc`.\n\n**Interface contract**\n\nProvides: workflow `publish-packages.yml`, `.npmrc` templates, `forge packages prune`, the rule that `@paperos/*` versions are release-please versions; consumed by PAP-430 (version bumps in the upgrade PR), PAP-22 (copies `.npmrc`), PAP-53 (registry restore check).\n\nConsumes: Forgejo packages enabled (PAP-273), tag format (PAP-52), bot tokens (PAP-48), provenance steps (PAP-358, soft).\n\n**Definition of done**\n\n* Tag `template-v0.0.1-test` publishes every public package to both registries; `npm view @paperos/core --registry <forgejo>` shows the version; the tag is then deleted.\n* A generated fixture app installs from the Forgejo registry with `--frozen-lockfile`, then from the mirror with the Forgejo host blackholed (recording).\n* `pnpm pack --dry-run` check in Gate 1; prune script tested; `docs/cli/upgrade.md` registry section; CHANGELOG; Linear comment with the package list.\n\n**Test plan**\n\n* Unit: `files` and `exports` lint over every package with a fixture missing `types`.\n* Unit: prune script keeps the newest 20 of 25 fake versions.\n* Unit: idempotent publish: existing version yields `[skip]`, changed tarball fails.\n* E2E: CI: publish on a test tag to both registries, install in the fixture app from each, remove the tag.\n\n**Demo**\n\nReviewer runs `npm view @paperos/ui versions --registry https://git.PAPEROS_DOMAIN/api/packages/imagine-os/npm/` and sees the tagged versions, then opens the GitHub Packages page showing the same version. Under a minute.\n\n**Edge cases**\n\n* Package with a build step that emits to `dist/`: `prepack` runs `pnpm build`; a missing `dist` fails `pack --dry-run`.\n* Private package (`packages/pm` until PAP-100 stabilises) is skipped and listed in the summary.\n* Token rotated mid-publish: job fails on the first 401 with the secret name, no partial version left because the version check runs first.\n\n**Dependencies**\n\nHard: PAP-273 (packages enabled), PAP-52 (tags), PAP-48 (bot token). Soft: PAP-358. Consumed by PAP-430, PAP-22, PAP-53.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/app-shell/upgrade-codemods-fleet",
+   "title": "Template codemod runner (`templates/codemods/<from>-<to>/*.ts`) and `paperos upgrade --fleet` listing every generated app and its template tag",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": "PAP-430",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-22"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nTwo separable halves of PAP-430: the codemod runner that rewrites renamed APIs in app-owned files during an upgrade, and fleet mode that lets Atlas see which generated apps are behind. Splitting them lets the merge engine (the parent) land without waiting on ts-morph work.\n\n**Scope**\n\nIn:\n\n* `packages/cli/src/upgrade/codemods.ts`: discover `templates/codemods/<fromTag>-<toTag>/*.ts` in the template checkout, order them by tag range, run each with `ts-morph` over `app`-owned and `shared`-owned paths from `ownership.yaml`, collect a per-file result.\n* Codemod authoring contract: `export default defineCodemod({ id, description, files: glob[], transform(sourceFile) })`; `paperos codemod test <id>` runs the codemod over `__fixtures__/before` and diffs against `after`.\n* `paperos upgrade --fleet <org> [--json]`: lists apps from the GitHub org (PAP-22 `GitHubClient`), reads `.paperos/template.json` from each default branch, prints name, tag, versions behind, last upgrade PR.\n* Two shipped codemods as examples: `rename-useLayout-to-useShellLayout` (fixture) and `move-offlinebanner-import` (PAP-18 moved `OfflineBanner` to `@paperos/ui`).\n\nOut: three-way merge and PR creation (PAP-430), registry publishing (`r4/app-shell/upgrade-package-registry`), fleet scheduling of upgrades (Atlas by hand).\n\n**Spec**\n\n* Codemods are pure functions over a `ts-morph` project; a throw in one file is recorded and the runner continues.\n* Range selection: upgrading `t1` to `t3` runs `t1-t2` then `t2-t3`; a codemod folder named for a skipped minor is an error.\n* Fleet listing uses the GitHub client; the Forgejo client (PAP-276, deferred) is used when its token exists, otherwise a warning line.\n* `--json` output `{ apps: [{ name, tag, behind, lastUpgradePr }] }` for the PAP-306 weekly re-audit.\n\n**Interface contract**\n\nProvides: `runCodemods(range, paths): CodemodReport`, `defineCodemod`, `paperos codemod test`, `paperos upgrade --fleet`; consumed by PAP-430 (calls `runCodemods` after the merge), PAP-306 (fleet JSON), PAP-24 (authoring section).\n\nConsumes: PAP-22 `GitHubClient` and `.paperos/template.json` schema (co-owned with PAP-430), `ownership.yaml` classes (PAP-430).\n\n**Definition of done**\n\n* Both example codemods pass their fixture tests; the runner applies them in range order on the fixture app.\n* Fleet listing renders three fake apps at mixed tags; JSON validates.\n* `docs/cli/upgrade.md` codemod authoring section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: range ordering across three tags, skipped-minor error, throw-in-one-file continues.\n* Unit: fixture before/after diff for both codemods.\n* Unit: fleet table rendering with a missing `template.json` (shown as `unknown`).\n* E2E: integration with PAP-430: upgrade fixture app `t1` to `t2`, assert the renamed import compiles.\n\n**Demo**\n\nReviewer runs `paperos codemod test rename-useLayout-to-useShellLayout` and sees the fixture diff pass, then `paperos upgrade --fleet imagine-os --json` against the fake client listing three apps. Under a minute.\n\n**Edge cases**\n\n* Codemod touches a `template`-owned path: refused; those paths are merged, not transformed.\n* App with hundreds of files: `ts-morph` project loads only matched globs; under 30 s for 2,000 files.\n* Rate limit while listing the fleet: header-driven wait, partial table with a warning.\n\n**Dependencies**\n\nHard: PAP-22. Soft: PAP-276 (deferred; GitHub listing is the default), PAP-306. Parent PAP-430 consumes `runCodemods`.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/app-shell/warm-pool-job",
+   "title": "Warm pool job: nightly `warm-pool.yml` and `paperos pool fill|drain|reconcile` keeping preview, database and mirror slots ready with `pool.json` state and a lease mutex",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": "PAP-365",
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-26",
+    "PAP-30",
+    "PAP-47"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra M\n\n**Goal**\n\nThe warm pool is what turns provisioning from minutes into a rename (Golden Path §6). PAP-365 owns the DAG runner and claims; this child owns the resources themselves: the nightly job that keeps five preview applications, five template databases and five mirror repos ready, the state file, the mutex and the reconcile that returns leaked slots.\n\n**Scope**\n\nIn:\n\n* `ops/pool/warm-pool.ts` in `paperos-infra` with `fill` (create until `size`), `drain` (release all free), `reconcile` (compare `claimed[]` with live repos, release orphans after reset), `status`; `.github/workflows/warm-pool.yml` nightly 03:30 UTC and `workflow_dispatch`.\n* Slot kinds: Coolify preview apps `gp-slot-<n>` from `ops/coolify/preview-slot.json` pointed at the staging API (PAP-26); Postgres `app_slot_<n>` created `TEMPLATE app_slot_template` with baseline migrations (PAP-30, PAP-32) and a per-slot role; Forgejo repos `imagine-os/slot-<n>` with push mirroring pre-authorised (PAP-47).\n* `ops/pool/pool.json` schema `{ version, size, min, kinds: { preview|db|mirror: { free: [], claimed: [{ slot, app, claimedAt }] } } }`; lease mutex as a Forgejo issue comment with a 30 s lease and one retry (PAP-365 semantics).\n* Alert: when `free < min` two nights running, open a Linear issue in app-shell (label Infra) through the `linear-update` skill; template drift (new baseline migration) rebuilds `app_slot_template` and recreates free db slots.\n* Runbook `docs/runbooks/warm-pool.md`: fill, drain, reclaim leaked slots, resize.\n\nOut: the DAG runner, `claimSlot`/`releaseSlot` call sites and budgets (PAP-365), production databases (PAP-30), preview app definition itself (PAP-26).\n\n**Spec**\n\n* Every operation is idempotent and prints `[ok]/[changed]/[skip]` per slot like `forge bootstrap`.\n* Database slots never hold tenant data before claim; `reconcile` resets a released slot by `DROP DATABASE` and recreate from template.\n* Coolify slot reset clears env vars and points the image back to the placeholder.\n* Mirror slot reset deletes all branches except `main` and removes the GitHub remote.\n* The job runs under the PAP-48 `bot-forge` identity; secrets from sops (PAP-25).\n\n**Interface contract**\n\nProvides: `pool.json` schema and file, `paperos pool fill|drain|reconcile|status`, `warm-pool.yml`, the slot naming convention; consumed by PAP-365 (`claimSlot`, `releaseSlot`), PAP-429 (pool `free >= 3` precondition), `r4/forge/repo-cleanup` (releases slots of swept repos).\n\nConsumes: Coolify preview definitions and API (PAP-26), Postgres host and roles (PAP-30), baseline migrations (PAP-32), mirror functions (PAP-47), bot identity (PAP-48), sops (PAP-25).\n\n**Definition of done**\n\n* `pool.json` shows five free slots of each kind after the first nightly run; `status` output attached.\n* Drain then fill in staging recorded with timings; reconcile releases a deliberately orphaned slot.\n* Alert path proven once by draining below `min` for two simulated nights; runbook merged; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: state transitions free→claimed→free with fakes; reconcile detects an orphan; lease expiry retry.\n* Unit: template drift detection compares the migration list hash.\n* E2E: staging: real fill of one slot per kind, claim through PAP-365 fakes, release, reset verified (empty db, placeholder image, single branch).\n\n**Demo**\n\nReviewer runs `paperos pool status` (five free per kind), `paperos pool drain --kind preview --count 1`, watches the Coolify app return to placeholder, then `fill` restores it. Under 2 minutes.\n\n**Edge cases**\n\n* Coolify API down: fill fails for `preview` only, other kinds proceed, job exit code 1 with the kind named.\n* Slot claimed by a repo deleted by hand: reconcile releases it after 24 h of no matching repo.\n* Two fills overlap (dispatch during nightly): the lease makes the second wait, then it finds nothing to do.\n\n**Dependencies**\n\nHard: PAP-26, PAP-30, PAP-47. Soft: PAP-32, PAP-48, PAP-25. Parent PAP-365 consumes the pool; PAP-429 asserts its size.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/app-shell/flags-settings-page",
+   "title": "Flags settings page `/settings/flags`: kill switches, per-tenant and per-audience overrides, rule editor with priority, audit trail and `flags.yaml` declaration status",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": "PAP-366",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-59",
+    "PAP-236"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-366 ships the flag tables, evaluator and hooks; the staff page that operates them is a separate half-session so the evaluator can merge first and the module swap page (`r4/module-system/modules-settings-page`) can reuse the same components. This is the surface Justin and Atlas use to turn risky work on for one tenant and off for everyone in five seconds.\n\n**Scope**\n\nIn:\n\n* Spec `specs/pages/staff/settings-flags.spec.yaml` with `access: { audiences: [staff.owner, agent.atlas] }` and route `/settings/flags` in the `shell.settings.sections` slot.\n* Components in `apps/web/src/pages/settings/flags/`: `FlagTable` (key, kind, default, declared-in-repo badge, rule count, kill state), `RuleEditor` (tenant, audience, segment, value, priority), `KillSwitch` with confirm and reason, `FlagHistory` reading PAP-38 audit events.\n* Procedures used: `flags.list|update|kill` (PAP-366); a `flags.declared` procedure returning the generated `FlagKey` union so undeclared database keys show a warning badge.\n* Storybook stories for the four states (empty, populated, killed, undeclared) at 375 and 1280.\n\nOut: the evaluator, tables and hooks (PAP-366), segment authoring (PAP-195), experimentation statistics.\n\n**Spec**\n\n* Every mutation requires `can(actor, \"flags.manage\")` and writes an audit event with `reason`; the page shows the last ten events per flag.\n* Kill switch confirm shows the affected tenant count and the propagation target (5 s).\n* Rule conflicts (same tenant, two values) are prevented in the editor and rejected by the API with `FLAG_RULE_CONFLICT`.\n* Reading works offline from the last `FlagSnapshot`; editing requires online and shows the PAP-234 `OfflineBanner`.\n\n**Interface contract**\n\nProvides: route `/settings/flags`, `FlagTable`, `RuleEditor`, `KillSwitch` components reused by `r4/module-system/modules-settings-page`; consumed by PAP-88 (release train toggles), PAP-435, Atlas.\n\nConsumes: `flags.*` procedures and `FlagKey` (PAP-366), `can` (PAP-59), form and table primitives (PAP-236, PAP-238), audit events (PAP-38), `OfflineBanner` (PAP-234).\n\n**Definition of done**\n\n* Playwright: staff toggles a flag for one tenant and the customer tab changes without reload; kill switch measured under 5 s; customer principal gets `DeniedState`.\n* Screenshots at 375, 768, 1280, 1920 light and dark; a11y (axe) clean; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: rule conflict detection in the editor reducer.\n* Unit: undeclared-key badge from `flags.declared` diff.\n* E2E: toggle, kill, history visible; `callAs(customer)` forbidden on `flags.update`.\n\n**Demo**\n\nReviewer opens `/settings/flags`, adds a tenant rule for `dashboard.newChart`, sees the audit row appear, hits Kill with a reason and watches the rule table grey out. Under 90 seconds.\n\n**Edge cases**\n\n* Flag deleted from `flags.yaml` but rows remain: shown with an `undeclared` badge and a one-click archive.\n* Thousands of rules: table virtualised, filter by tenant.\n* Two staff edit the same rule: last write wins, both audit events shown (PAP-366 rule).\n\n**Dependencies**\n\nHard: PAP-59, PAP-236; the evaluator and procedures half of PAP-366 (sibling work). Soft: PAP-38, PAP-234, PAP-195.\n\n**Agent**\n\nBuilder: Iris (Component Crafter) with Forge on procedures. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/app-shell/tauri-crash-reporting",
+   "title": "Tauri crash reporting: Rust panic hook and `tauri-plugin-log` forwarding to `/api/otel`, relaunch to the last route, crash-loop guard and offline report queue",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Desktop and mobile shells build",
+   "parent": "PAP-368",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-24",
+   "blockedBy": [
+    "PAP-255"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-368 defines `reportError` and the boundary for the web layer; native crashes need Rust work that a TypeScript session should not block on. This child wires the Tauri side so a desktop or mobile crash produces the same report shape as a browser error and the app comes back where the user was.\n\n**Scope**\n\nIn:\n\n* `apps/desktop/src-tauri/src/crash.rs`: `std::panic::set_hook` capturing message, location and a backtrace (release builds with `debug = 1`), writing `crash-<ts>.json` to the app data dir before exit; `tauri-plugin-log` targets stdout and a rolling file (5 MB, 3 files).\n* TS bridge `packages/core/src/native/crash.ts`: on launch, read pending crash files through the `crash_drain` command, convert to the PAP-368 `AppError` envelope (`code: NATIVE_PANIC`, `fingerprint`), send through `reportError`, delete on success.\n* Relaunch: `tauri-plugin-process` relaunch after a panic with `--restore-route=<last route>` read from the PAP-262 store; the shell navigates there and shows a toast \"PaperOS restarted after a crash\" with copy diagnostics.\n* Crash-loop guard: three panics within 60 s disables relaunch, opens on `/` with the sidebar collapsed and offers \"reset local state\".\n* Rust unit tests with a mocked transport; capability `crash_drain` limited to the main window.\n\nOut: browser error capture and the catalogue (PAP-368), server error mapping (PAP-267), alert rules (PAP-40).\n\n**Spec**\n\n* Reports carry `target` (`desktop|ios|android`), app version, OS and the topology hash (PAP-262) but never the window contents or secrets.\n* PII scrub with the PAP-40 denylist before send; file paths are reduced to the crate-relative form.\n* Offline: crash files stay on disk until sent; capped at 20 files, oldest dropped.\n* Mobile: the same hook compiled under the mobile features; on iOS the backtrace is symbolicated in CI with the dSYM from PAP-258 builds when available, otherwise raw.\n\n**Interface contract**\n\nProvides: command `crash_drain`, `--restore-route` argv, `NATIVE_PANIC` code in `errors.yaml`, rolling log location documented for support; consumed by PAP-368 (envelope), PAP-40 (dashboards), PAP-29 (drill friction evidence).\n\nConsumes: crate and capabilities (PAP-255), `reportError` and `AppError` (PAP-368), window store (PAP-262, soft), collector (PAP-40, soft).\n\n**Definition of done**\n\n* Recording on Linux: trigger a test panic from a dev command, app relaunches on the same route with the toast, report visible in the collector with `NATIVE_PANIC`.\n* Three forced panics in a minute open the safe mode; `cargo test` and Vitest green; `docs/shell/errors.md` native section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: Rust: hook writes a file with message and location; drain returns and deletes; loop guard counts within the window.\n* Unit: TS: crash file to `AppError` mapping, scrub of a path containing a username.\n* E2E: Tauri WebDriver (`r4/app-shell/tauri-e2e-harness`) on Linux: invoke `__test_panic`, assert relaunch and toast.\n\n**Demo**\n\nReviewer runs the desktop build, triggers `paperos://open/__test/panic` (dev builds only), watches the app close and reopen on the same page with the restart toast, then finds the report in Grafana Explore by fingerprint. Under 90 seconds.\n\n**Edge cases**\n\n* Panic inside the panic hook (allocation failure): hook is re-entrancy guarded and falls back to stderr.\n* App data dir unwritable: report kept in memory for the relaunch only.\n* Relaunch loop on a corrupt store: the guard resets the PAP-262 store after the third restart with a visible note.\n\n**Dependencies**\n\nHard: PAP-255. Soft: PAP-368 (envelope; a local shape until it merges), PAP-262, PAP-40, `r4/app-shell/tauri-e2e-harness` for the automated proof.\n\n**Agent**\n\nBuilder: Forge (Tauri Smith). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/app-shell/cli-linear-seeding",
+   "title": "`paperos create` Linear seeding: project with milestones, starter issues from `templates/linear/starter-issues.yaml`, module list in the project description and the `--json` step summary",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Desktop and mobile shells build",
+   "parent": "PAP-22",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-24",
+   "blockedBy": [
+    "PAP-91"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nThe Linear half of `paperos create` is independent of the git and forge steps and is what makes a new app appear in the orchestrator queue with work already decomposed. Splitting it lets Atlas review the seeding payloads while Forge finishes the clone and push steps of PAP-22.\n\n**Scope**\n\nIn:\n\n* `packages/cli/src/create/linear.ts`: `LinearClient` interface with a fake; `ensureProject(name)` (team PAP, state planned, three milestones from `templates/linear/milestones.yaml`, description containing the module list and the six URLs), `seedIssues(projectId)` from `templates/linear/starter-issues.yaml`.\n* Schema (Zod) for `starter-issues.yaml`: `{ title, description, labels: string[], state, milestone?, priority?, blockedBy?: string[] }` with label and state ids resolved from the PAP-91 workspace config; descriptions use the PAP-93 issue contract sections.\n* Default starter set (five issues): second page spec, connect billing, invite team, first import, first release candidate; each `Type: Spec` or `Build`, state Backlog, one `Ready for Claude` (the second page spec).\n* Idempotency: project looked up by name before create; issues deduplicated by a `paperos-starter:<slug>` marker in the description; `--dry-run` prints the payloads.\n\nOut: clone, rename, push and forge bootstrap (PAP-22), golden path report posting (PAP-364), Linear webhooks (PAP-97).\n\n**Spec**\n\n* Project name collision: suffix `-<yyyymmdd>` and warn (PAP-22 rule).\n* `RATELIMITED` handled with the header wait; total Linear time budgeted at 20 s (PAP-365 budget table).\n* The `--json` summary gains `linearProject: { id, url, issues: [{ identifier, title }] }` read by PAP-29 and PAP-364.\n* Descriptions pass the PAP-93 validator (`pnpm linear:validate --file`) in a unit test so starter issues never bounce from Ready.\n\n**Interface contract**\n\nProvides: `ensureProject`, `seedIssues`, `starter-issues.yaml` and `milestones.yaml` schemas, `linearProject` in the `--json` summary; consumed by PAP-22 (step 9), PAP-364 (first issue comment), PAP-29, PAP-96 (queue).\n\nConsumes: label and state ids (PAP-91), issue contract sections (PAP-93), `@linear/sdk`, the module list from `--without` (PAP-266, soft).\n\n**Definition of done**\n\n* Fake-client snapshot of `projectCreate` and five `issueCreate` payloads committed; validator passes on every starter description.\n* Real run against a sandbox project recorded; rerun creates nothing; `--dry-run` writes nothing.\n* `docs/cli/create.md` Linear section; CHANGELOG; Linear comment with the sandbox project link.\n\n**Test plan**\n\n* Unit: schema rejects unknown label; marker dedupe; collision suffix; rate-limit wait with fake timers.\n* E2E: nightly `cli-sandbox` run (PAP-22) asserts the project and issue count, then archives the project.\n\n**Demo**\n\nReviewer runs `paperos create demo-clinic --linear-project --dry-run` and reads the five issue payloads, then the real run and opens the Linear project with milestones and one Ready issue. Under 2 minutes.\n\n**Edge cases**\n\n* Workspace issue cap (`USAGE_LIMIT_EXCEEDED`, NJ-1): the step records `pending` with the payload file so it can be replayed, and the summary says so instead of failing the create.\n* Milestone names already used elsewhere: milestones are per project, no collision.\n* `--without pm-linear`: seeding still runs (Linear is external), the description notes the module is off.\n\n**Dependencies**\n\nHard: PAP-91. Soft: PAP-93 validator, PAP-266. Parent PAP-22 calls this as step 9.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer); Atlas (Dispatcher) reviews payloads. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/app-shell/i18n-translate-skill",
+   "title": "Translation skill and catalog CI: `.claude/skills/translate` producing locale PRs, fuzzy-entry thresholds, missing-string report and the `en-XA` pseudo-locale column in Gate 3",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Desktop and mobile shells build",
+   "parent": "PAP-27",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-24",
+   "blockedBy": [
+    "PAP-105"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-27 builds `@paperos/i18n` and the catalogs; the agent workflow that keeps catalogs full is a separate half-session that Quill owns. Without it, every new string ships English-only and the RTL and pseudo-locale promises decay.\n\n**Scope**\n\nIn:\n\n* `.claude/skills/translate/SKILL.md` in the PAP-105 format: inputs (locale, catalog path), steps (extract, diff against `en`, translate missing and fuzzy entries with glossary constraints, compile, run the format-helper tests, open a PR with the PAP-49 template), forbidden actions (never edit source strings).\n* Glossary `apps/web/src/locales/glossary.yaml` (terms that stay untranslated or have fixed translations: product names, `PAP-n`, currency codes) enforced by a lint on catalog PRs.\n* CI `i18n-check` step in Gate 1: `pnpm i18n:extract --check` (no unextracted literals), fuzzy ratio warn above 2 percent and fail above 10 percent for enabled locales, `missing-strings.json` artefact per locale.\n* Gate 3 pseudo-locale column: register `en-XA` as a Playwright project variant in `ops/ci/breakpoints.json` consumers (PAP-246) at 375 and 1280.\n\nOut: the i18n package, negotiation and helpers (PAP-27), spec-string extraction (PAP-375), tenant content translation.\n\n**Spec**\n\n* The skill runs as Quill with `repo:write specs/ docs/ apps/web/src/locales` only; PRs carry `Character: Quill` and the `i18n` label.\n* Translations of plural forms are validated by compiling the catalog and asserting every CLDR category for the locale is present.\n* A catalog PR that changes an `en` msgid is rejected by the lint (source strings live in code).\n* Machine-translation is the agent itself; no external MT API in this build (PAP-27 out-of-scope stays).\n\n**Interface contract**\n\nProvides: skill `translate`, glossary schema, Gate 1 step `i18n-check`, `missing-strings.json`, the `en-XA` Gate 3 variant; consumed by PAP-27 (DoD \"translation skill produces an `es` PR\"), PAP-375 (reuses extraction), PAP-82/PAP-246 (variant), PAP-108 (skills library index).\n\nConsumes: skill format (PAP-105), Gate 1 workflow (PAP-78), catalogs and scripts from PAP-27, PR template (PAP-49), Playwright matrix (PAP-246, soft).\n\n**Definition of done**\n\n* Skill run produces an `es` PR that compiles and passes `i18n-check`; Quill merges it (link).\n* Seeded unextracted literal fails Gate 1; fuzzy thresholds tested with fixture catalogs.\n* `en-XA` screenshots at 375 and 1280 in the Gate 3 contact sheet; `docs/platform/i18n.md` skill section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: glossary lint on a fixture PR that translates a product name; plural completeness for `ar` and `pl`; fuzzy ratio arithmetic.\n* E2E: skill dry run against the fixture app produces the expected PR body and file list.\n\n**Demo**\n\nReviewer adds a new `t\\`Export\\`` call to a page, runs `pnpm i18n:extract`, invokes the skill for `es` and opens the resulting PR with the translated entry and the glossary check green. Under 2 minutes.\n\n**Edge cases**\n\n* Locale with no catalog yet: skill creates it from `en` with all entries fuzzy and the PR is draft.\n* String with ICU select on gender: the skill keeps every branch or the compile fails.\n* Concurrent catalog PRs: `.po` merge conflicts resolved by re-running extract, documented in the skill.\n\n**Dependencies**\n\nHard: PAP-105 (skill format). Sibling: the package half of PAP-27. Soft: PAP-78 (the `i18n-check` step runs inside `pnpm check` until Gate 1 lands), PAP-49, PAP-246, PAP-375.\n\n**Agent**\n\nBuilder: Quill (Page Spec Writer) with Forge on the CI step. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/app-shell/pr-preview-environments",
+   "title": "Per-PR preview environments: `preview.yml`, Coolify preview application lifecycle, seeded demo tenant, sticky PR comment with URLs and teardown within five minutes of close",
+   "type": "Infra",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Desktop and mobile shells build",
+   "parent": "PAP-26",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-24",
+   "blockedBy": [
+    "PAP-25",
+    "PAP-30"
+   ],
+   "blocks": [
+    "PAP-86",
+    "PAP-83"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Infra M\n\n**Goal**\n\nGate 3 (PAP-82), video replays (PAP-83), e2e flows (PAP-86), the vision agent (PAP-84) and the golden path all run against `pr-<n>.preview.PAPEROS_DOMAIN`. PAP-26 lists previews as one bullet among staging, production and rollback; they are the most-consumed part and deserve their own session so the gates are not waiting on production tagging work.\n\n**Scope**\n\nIn:\n\n* `.github/workflows/preview.yml`: on `pull_request` opened, synchronize, reopened: build images once (PAP-26 build job reused via `workflow_call`), create or update a Coolify preview application per PR from `ops/coolify/preview.json` (web, api, worker sharing one preview database), set env from `ops/secrets/preview-api.enc.yaml`, deploy, wait for `/healthz` and `/__version == sha`; on `closed`: delete the application and drop the database.\n* Preview database: `CREATE DATABASE pr_<n> TEMPLATE app_slot_template` (shared with `r4/app-shell/warm-pool-job`), migrations as pre-deploy, then `POST /__test/seed` (PAP-240) so demo audiences can sign in.\n* Sticky PR comment (`marocchino/sticky-pull-request-comment`) with preview URL, Pages URL (PAP-15), API docs URL, demo accounts, SHA and the gate status table placeholder that PAP-89 fills.\n* Concurrency group per PR; forks skipped with a comment; `preview-<n>` label for manual redeploy; TTL: previews idle 7 days are removed by a nightly job even if the PR is open.\n\nOut: staging and production deploys and rollback (PAP-26), Pages static previews (PAP-15), the seed content (PAP-240, PAP-363).\n\n**Spec**\n\n* Preview URL contract `https://pr-<n>.preview.PAPEROS_DOMAIN` and `https://api.pr-<n>.preview.PAPEROS_DOMAIN`; wildcard DNS and certificate from PAP-25.\n* Preview `PUBLIC_ENV=preview`; test-mode endpoints enabled only here and in dev; production never.\n* Budget: preview live within 5 minutes of push on a warm image cache (measured in the job summary); teardown within 5 minutes of close.\n* Resource cap: at most 20 concurrent previews; beyond that the oldest idle preview is recycled and the PR comment says so.\n* Secrets: previews get the `preview` sops file only (test Stripe keys, sandbox email through PAP-370 allowlist), never staging credentials.\n\n**Interface contract**\n\nProvides: `preview.yml`, the URL contract, `ops/coolify/preview.json`, sticky comment template `ops/ci/templates/preview-comment.md`, TTL job; consumed by PAP-82, PAP-83, PAP-84, PAP-86, PAP-89, PAP-364 (C6), PAP-429.\n\nConsumes: host, wildcard DNS and sops (PAP-25), Postgres host (PAP-30), image build job and `/__version` (PAP-26), seed endpoint (PAP-240, soft), Trivy gate (PAP-80, soft).\n\n**Definition of done**\n\n* Open a test PR: preview live within 5 minutes with seeded demo users; close: gone within 5 minutes and database dropped (job logs with timings).\n* Twenty-one concurrent previews recycle the oldest idle one (simulated in staging).\n* Playwright smoke against the preview signs in as `staff@demo`; `docs/runbooks/preview.md`; CHANGELOG; Linear comment with a preview URL.\n\n**Test plan**\n\n* Unit: Coolify status polling and version assertion against a mocked API; TTL selection of the oldest idle preview.\n* E2E: open, push twice, close a test PR; assert application and database lifecycle via the Coolify and Postgres APIs.\n\n**Demo**\n\nReviewer opens any PR, clicks the preview URL in the sticky comment, signs in as `staff@demo.<app>.test`, then closes the PR and refreshes the URL after five minutes to see it gone. Under 3 minutes plus wait.\n\n**Edge cases**\n\n* Migration fails on the preview database: the PR comment shows the error and the preview keeps the previous image.\n* Two pushes within a minute: the concurrency group cancels the older deploy.\n* Coolify API rate limit: retries with backoff; the comment shows `pending` rather than a stale URL.\n* PR reopened after teardown: full recreate, new database, comment updated.\n\n**Dependencies**\n\nHard: PAP-25, PAP-30. Soft: PAP-240 (seed), PAP-80, PAP-370, `r4/app-shell/warm-pool-job` (shared template database). Unblocks PAP-83, PAP-86; feeds PAP-82, PAP-84, PAP-89, PAP-364, PAP-429.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/app-shell/onboarding-funnel-admin",
+   "title": "Onboarding funnel for staff: `/admin/onboarding` tenants by step reached, drop-off counts, resume nudges through the notification centre and the `onboarding.funnel` query",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": "PAP-367",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-16",
+    "PAP-38"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-367 builds the customer-facing wizard; the staff view that shows where tenants stall is separable and feeds growth analytics (PAP-194). Splitting it keeps the wizard session focused on the five steps and the resume logic.\n\n**Scope**\n\nIn:\n\n* Spec `specs/pages/staff/admin-onboarding.spec.yaml` (`access: [staff.owner, agent.atlas]`), route `/admin/onboarding` in the staff console (PAP-63).\n* Procedure `onboarding.funnel` aggregating `tenant.settings.onboarding` into `{ step, count, medianMinutes, stalledOver24h }` per step, plus `onboarding.nudge(tenantId)` posting a `onboarding.stalled` notification (PAP-136 kind) to the tenant owner.\n* UI: funnel bars per step (PAP-71 data display), stalled list with last activity from PAP-38 audit, nudge button with rate limit (one per tenant per day).\n* Event `onboarding.step.completed` published from the wizard procedures so PAP-194 can attribute.\n\nOut: the wizard itself (PAP-367), acquisition analytics (PAP-194), email copy beyond the notification kind.\n\n**Spec**\n\n* Funnel excludes demo tenants (`attributes.demo`, PAP-363).\n* Nudge writes an audit event with actor and reason; customers never see this page (`DeniedState`).\n* Query under 200 ms for 10k tenants (index on `(settings->>'onboardingStep')` or a materialised column).\n\n**Interface contract**\n\nProvides: route `/admin/onboarding`, `onboarding.funnel`, `onboarding.nudge`, topic `onboarding.step.completed`; consumed by PAP-194, PAP-136 (kind), Atlas digests.\n\nConsumes: staff console shell (PAP-63), audit log (PAP-38), notification kinds (PAP-136, soft), the wizard state shape (PAP-367).\n\n**Definition of done**\n\n* Seeded tenants at mixed steps render the funnel; nudge sends one notification and refuses a second within a day.\n* Screenshots at 375, 1024, 1920; a11y clean; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: funnel aggregation over fixture tenants; nudge rate limit.\n* E2E: staff opens the page, nudges a stalled tenant, customer principal is denied.\n\n**Demo**\n\nReviewer opens `/admin/onboarding`, sees three tenants stalled at \"connect billing\", clicks Nudge and the owner of one receives an in-app notification. Under a minute.\n\n**Edge cases**\n\n* Tenant deleted mid-onboarding (PAP-432 lifecycle): excluded from the funnel.\n* Step order changes in a later template: funnel keys on step id, not index.\n\n**Dependencies**\n\nHard: PAP-16, PAP-38. Sibling: PAP-367 wizard procedures. Soft: PAP-63 (the route moves into the staff console shell when it lands; a plain `_app/admin` layout until then), PAP-136, PAP-194, PAP-432.\n\n**Agent**\n\nBuilder: Forge with Iris (Component Crafter). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/app-shell/starter-kit-demo-seed",
+   "title": "Deterministic demo tenant seed: `seedDemoTenant(db, appSpec)`, `paperos seed demo --reset`, faker-by-field-type with constraints and the production guard shared by `/__test/seed`",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": "PAP-363",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-240",
+    "PAP-117"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nEvery gate, drill and preview signs in as `customer@demo.<app>.test` and expects 25 realistic rows per entity. PAP-363 bundles the seed with six starter page specs and the README renderer; the seed is the part Gate 3 and Gate 4 depend on first, so it gets its own half-session and lands before the specs.\n\n**Scope**\n\nIn:\n\n* `packages/db/seed/demo-tenant.ts`: `seedDemoTenant(db, app: AppSpec, opts: { reset?: boolean; seed?: string })` creating tenant `demo`, one user per audience with `attributes.demo: true`, 25 records per entity, three comment threads, five audit events, following the PAP-240 fixture shapes.\n* Value generators per PAP-164 field type in `packages/db/seed/generators.ts` (`faker` seeded with the app id): unique fields distinct, relations resolved two-pass, dates within 90 days, currency as `Money` minor units, select values from the field options, two-sentence comment bodies without lorem ipsum.\n* `paperos seed demo [--reset] [--tenant demo]` CLI and the `/__test/seed` hook (PAP-240) calling the same function; `--reset` truncates only the demo tenant under RLS (PAP-34).\n* Production guard: refuses when `PUBLIC_ENV=production` or the tenant is not flagged demo; exit 2 without touching the database.\n\nOut: starter page specs and README renderer (PAP-363), test-mode endpoints themselves (PAP-240), business template packs (PAP-427).\n\n**Spec**\n\n* Writes go through the API when Electric shapes may be subscribed (PAP-36) so sync clients see them; direct SQL only for `--reset`.\n* Idempotent: rerun without `--reset` upserts by deterministic ids (UUIDv7 derived from the seed and row index).\n* Runtime under 10 s for the three canned apps; measured in the test.\n* Demo users sign in by magic link in preview and dev (PAP-57 test mode), never by password.\n\n**Interface contract**\n\nProvides: `seedDemoTenant`, `generators`, `paperos seed demo`, the account convention `<audience>@demo.<app>.test`; consumed by PAP-363 (starter kit), PAP-364 (C6), `r4/app-shell/pr-preview-environments`, PAP-82, PAP-85, PAP-240 (hook body), PAP-29.\n\nConsumes: `AppSpec` entities and audiences (PAP-117, PAP-55), fixture shapes and hook (PAP-240), field types (PAP-164, soft; primitives only until it lands), RLS (PAP-34), magic link test mode (PAP-57, soft).\n\n**Definition of done**\n\n* Seed of the clinic fixture yields 25 rows per entity, three threads, five audit events in under 10 s (CI timing); `--reset` leaves other tenants untouched (row counts asserted).\n* `PUBLIC_ENV=production` run exits 2 with no writes; CHANGELOG; Linear comment with timings.\n\n**Test plan**\n\n* Unit: generator per field type honours uniqueness, options and date window; deterministic ids across two runs.\n* E2E: compose stack: seed, sign in as each demo user by magic link, grid shows 25 rows; `--reset` then counts.\n\n**Demo**\n\nReviewer runs `paperos seed demo --reset` on the dev stack, opens the app as `staff@demo.clinic.test` and sees 25 appointments with realistic names and dates. Under a minute.\n\n**Edge cases**\n\n* Entity with no fields beyond name: rows still valid; status defaults to the first option.\n* App with no customer audience: only staff and owner users are created.\n* Relation cycle (A references B references A): second pass fills both; a self-relation gets nulls on 20 percent of rows.\n\n**Dependencies**\n\nHard: PAP-240, PAP-117. Soft: PAP-164, PAP-34, PAP-57, PAP-36. Parent PAP-363 copies and calls it; PAP-364 runs it at C6.\n\n**Agent**\n\nBuilder: Forge (Schema Wright). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/app-shell/tauri-e2e-harness",
+   "title": "Tauri WebDriver E2E harness: `tauri-driver` on Linux CI, test helpers for windows, deep links, updater and menu actions, and recorded runs attached to PRs",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Desktop and mobile shells build",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-24",
+   "blockedBy": [
+    "PAP-255"
+   ],
+   "blocks": [
+    "PAP-262",
+    "PAP-257"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Infra M\n\n**Goal**\n\nPAP-257, PAP-262, PAP-263, PAP-23 and `r4/app-shell/tauri-crash-reporting` all say \"Tauri WebDriver on Linux\" in their test plans, but no issue sets it up. A Linux-only Claude session cannot produce the macOS recordings those DoDs also ask for, so an automated Linux harness is the only proof the gates can check. This issue builds it once for everyone.\n\n**Scope**\n\nIn:\n\n* `apps/desktop/e2e/` with `tauri-driver` and WebdriverIO (the Tauri-supported stack) running against a debug build under Xvfb on `ubuntu-22.04`; `pnpm e2e:desktop` locally and `ops/ci/desktop-e2e.yml` on PRs touching `apps/desktop` or `packages/core/src/{native,windows}`.\n* Helpers in `apps/desktop/e2e/lib/`: `launchApp({ argv, env })`, `windows()` (labels, bounds, focus), `deepLink(url)` (via `xdg-open`), `menu(path)` (via the `__test_menu` dev command), `waitForRoute(path)`, `screenshot(name)` at 960x600, 1280x800, 1920x1080, `recordVideo()` with `ffmpeg` on the Xvfb display.\n* Dev-only Tauri commands guarded by `cfg(debug_assertions)`: `__test_menu`, `__test_panic`, `__test_displays(topology)` to fake a two-display layout for PAP-262.\n* Baseline suite: launch shows the web bundle and version; single instance (second launch focuses the first); deep link navigates; detach and dock a panel; update toast from a local `latest.json` server.\n* Artefacts: screenshots and MP4 uploaded in the PAP-239 `videos.json` shape so Gate 3 tooling lists them.\n\nOut: macOS and Windows automation (PAP-371 runners can run the same suite later; documented as `pending-runner`), mobile Maestro flows (PAP-260), the features under test.\n\n**Spec**\n\n* Runs in under 8 minutes on CI including the debug build with a Rust cache.\n* Fake displays: `__test_displays` makes `list_displays` return the given topology so topology-hash tests are deterministic.\n* Every helper is typed and documented in `docs/shell/desktop-e2e.md`; a failing test uploads the video and the `tauri-plugin-log` file.\n* Wayland is not exercised in CI (Xvfb is X11); the harness records `display: x11` in the artefact.\n\n**Interface contract**\n\nProvides: `pnpm e2e:desktop`, helpers, dev-only test commands, `desktop-e2e.yml`, artefacts in `videos.json`; consumed by PAP-257, PAP-262, PAP-263, PAP-23, `r4/app-shell/tauri-crash-reporting`, PAP-84 (video inspection), PAP-29.\n\nConsumes: the crate and dev scripts (PAP-255), Gate 1 workflow conventions (PAP-78), artefact schema (PAP-239, soft), breakpoints for window sizes (PAP-14).\n\n**Definition of done**\n\n* Baseline suite green on CI with video and screenshots attached to the PR; a seeded failing test uploads its video.\n* `__test_displays` two-display fixture drives a detach test that asserts the panel window bounds.\n* `docs/shell/desktop-e2e.md`; the four consuming issues comment that their test plans now cite this harness; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: helper parsing of window lists and deep-link URLs; artefact writer validates against `videos.json`.\n* E2E: the baseline suite is the E2E: launch, single instance, deep link, detach and dock, update toast.\n\n**Demo**\n\nReviewer opens the CI run, downloads `desktop-e2e.mp4` and watches the app launch, receive `paperos://open/settings`, detach the inspector to a fake second display and show the update toast. Under 2 minutes.\n\n**Edge cases**\n\n* `tauri-driver` version drifts from the Tauri crate: pinned together in `rust-toolchain.toml` and `package.json`; Renovate groups them (PAP-217).\n* Xvfb without a compositor: window decorations absent; tests assert bounds, not chrome pixels.\n* Debug build too slow: the workflow caches `target/` keyed on `Cargo.lock`.\n* A test needs network (updater): served from a local static server started by the helper; no internet.\n\n**Dependencies**\n\nHard: PAP-255. Soft: PAP-78 (the workflow joins Gate 1 when it lands; standalone `desktop-e2e.yml` until then), PAP-239, PAP-14, PAP-217. Unblocks the automated proofs of PAP-257 and PAP-262.\n\n**Agent**\n\nBuilder: Forge (Tauri Smith) with Sentinel on artefacts. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/app-shell/dev-environment-bootstrap",
+   "title": "Developer environment bootstrap: devcontainer, `pnpm setup`, `paperos dev` running compose, api, worker and web together, and `paperos doctor --toolchain` for Rust, Android and Xcode",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Desktop and mobile shells build",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-24",
+   "blockedBy": [
+    "PAP-13",
+    "PAP-42"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nA cold Claude session in a worktree needs one command to get Postgres, Electric, Hocuspocus, the API, the worker and the web app running with the right env. PAP-13 gives `pnpm dev` for web only, PAP-42 the compose stack, PAP-22 a `doctor` for tokens; nothing composes them or checks toolchains, and the orchestrator sandbox (PAP-280) needs a reproducible image. This issue is the DX layer that makes \"clone and run\" true.\n\n**Scope**\n\nIn:\n\n* `.devcontainer/devcontainer.json` and `Dockerfile` (Node 22, pnpm 10, Rust toolchain from `rust-toolchain.toml`, `libwebkit2gtk-4.1`, Playwright deps, `sops`, `age`, `restic` CLI) usable by VS Code, Codespaces and the PAP-280 sandbox image.\n* `pnpm setup` (`scripts/setup.ts`): checks Node and pnpm versions, copies `.env.example` to `.env.local` if missing, runs `pnpm i --frozen-lockfile`, `pnpm env:check` (PAP-17), starts the PAP-42 stack, runs migrations and the demo seed (`r4/app-shell/starter-kit-demo-seed`), prints the URLs.\n* `paperos dev [--only web,api,worker] [--no-stack]`: one process supervisor (`concurrently` with prefixed logs) running the compose stack, `apps/api`, `apps/worker`, `apps/web` and Electric; a `/__dev` status page listing services, ports, health and the current worktree database name.\n* `paperos doctor --toolchain`: Rust, cargo, `tauri-cli`, Android SDK and `ANDROID_HOME`, Xcode and simulators (macOS only), `adb`, Playwright browsers; prints install commands per OS and never values of secrets (PAP-22 rule).\n\nOut: the compose services themselves (PAP-42), the orchestrator sandbox runtime (PAP-280), the template guide prose (PAP-24; this issue supplies the commands it documents).\n\n**Spec**\n\n* Per-worktree isolation: `paperos dev` derives the database name and ports from the worktree path hash (PAP-42 convention) so twenty sessions run side by side.\n* Idempotent: `pnpm setup` on a configured checkout finishes in under 20 s with all `[skip]`.\n* `--json` output for the orchestrator (`{ services: [{ name, port, healthy }] }`).\n* The devcontainer image is built weekly by CI and pushed to the Forgejo registry (PAP-273) and GHCR; `devcontainer.json` pins the digest (PAP-358 rule).\n\n**Interface contract**\n\nProvides: `pnpm setup`, `paperos dev`, `paperos doctor --toolchain`, `/__dev` page, devcontainer image `git.PAPEROS_DOMAIN/imagine-os/devcontainer`; consumed by PAP-24 (commands), PAP-92 (session playbook), PAP-280 (base image), PAP-96 (worktree launch), every builder session.\n\nConsumes: workspace (PAP-13), compose stack and per-worktree databases (PAP-42), env check (PAP-17), migrations (PAP-32), seed (`r4/app-shell/starter-kit-demo-seed`, soft), registry (PAP-273, soft).\n\n**Definition of done**\n\n* Fresh clone in the devcontainer: `pnpm setup && paperos dev` serves web, api and worker with green health in under 4 minutes on a warm image (timed in CI).\n* Two worktrees run `paperos dev` concurrently without port or database collision (test).\n* `doctor --toolchain` output screenshots on Linux with and without Rust; `docs/template-guide.md` \"Run it\" section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: setup step planner with fakes (skip when configured); port and db derivation from paths; doctor parsers for `rustc --version`, `adb version`, `xcodebuild -version`.\n* E2E: CI job builds the devcontainer, runs `pnpm setup` and `paperos dev --json`, asserts all services healthy, then runs the Playwright smoke against `/__dev`.\n\n**Demo**\n\nReviewer opens the repo in a Codespace, runs `pnpm setup`, then `paperos dev`, opens `/__dev` and sees six green services and the demo accounts, then `paperos doctor --toolchain` listing what is missing for Android. Under 5 minutes wall clock.\n\n**Edge cases**\n\n* Docker unavailable (Codespaces without DinD): `--no-stack` prints instructions for a remote stack URL and `paperos dev` still runs the Node processes.\n* Port already in use by another worktree: next free port chosen and printed.\n* Rust missing: web and api still run; desktop commands print the install command from `doctor`.\n* Corporate proxy: `pnpm setup` honours `HTTPS_PROXY` and prints the CA bundle hint.\n\n**Dependencies**\n\nHard: PAP-13, PAP-42. Soft: PAP-17, PAP-32, `r4/app-shell/starter-kit-demo-seed`, PAP-273, PAP-280. Feeds PAP-24, PAP-92, PAP-96.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/app-shell/client-telemetry",
+   "title": "Client telemetry: web vitals, route timings, feature-usage events and a consent gate flowing into `/api/otel` with per-tenant dashboards and a `useTrack()` hook",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-16",
+    "PAP-17"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nPAP-40 traces the API and sync, PAP-368 reports client errors, PAP-87 measures Lighthouse in CI and PAP-194 tracks acquisition; nobody measures what real users experience in the shell: LCP and INP per route, navigation timings, feature usage per audience. Linear, Arc and VS Code all ship this. Without it the vision agent judges screenshots while the product flies blind.\n\n**Scope**\n\nIn:\n\n* `packages/core/src/telemetry/`: `initTelemetry({ consent })`, `web-vitals` collection (LCP, INP, CLS, TTFB) per route id, TanStack Router navigation timings, `track(event, props)` and `useTrack()` for feature usage, batching to `POST /api/otel` (PAP-40 collector) as OTel logs with the PAP-40 PII denylist applied.\n* Consent gate: `tenant.settings.telemetry` (`off|essential|full`) plus the user cookie consent from PAP-221; `essential` sends vitals only, anonymised; `full` includes feature events with `principal.id` hashed per tenant.\n* Dashboards: Grafana `client-vitals.json` (p75 LCP and INP per route and breakpoint, PAP-14 names) and `feature-usage.json` (events per audience) provisioned by PAP-40 conventions; a `/settings/telemetry` staff toggle.\n* Event catalogue `telemetry-events.yaml` (name, props schema, owner module) validated in CI; undeclared events fail typecheck through a generated `TrackEvent` union (PAP-366 pattern).\n\nOut: acquisition and marketing attribution (PAP-194), error reporting (PAP-368), session replay, third-party analytics SDKs.\n\n**Spec**\n\n* Sampling: vitals 100 percent, navigation timings 10 percent, feature events 100 percent under `full`; configurable per tenant.\n* Payload size under 2 KB per batch on average; flushed on `visibilitychange` and every 10 s; queued in IndexedDB offline (shared queue with PAP-368, capped 500).\n* Route ids, not URLs, are recorded so record ids never leak; search params dropped.\n* Desktop and mobile add `target` and app version; kiosk adds `display`.\n\n**Interface contract**\n\nProvides: `initTelemetry`, `track`, `useTrack`, `TrackEvent` union, `telemetry-events.yaml`, dashboards, `/settings/telemetry`; consumed by PAP-194 (funnel events via the same catalogue), PAP-87 (field data beside lab data), PAP-88 digests, PAP-113 (agent console usage), PAP-84 (route-level regressions).\n\nConsumes: collector and denylist (PAP-40), router (PAP-16), consent records (PAP-221, soft), tenant settings (PAP-58), breakpoint names (PAP-14), flags (PAP-366, soft).\n\n**Definition of done**\n\n* Navigating three routes on the preview produces vitals rows in Grafana within a minute (screenshot); `essential` mode sends no `principal` field (assertion).\n* `TrackEvent` typecheck fails on an undeclared event; offline queue flushes on reconnect (Playwright).\n* Dashboards committed; `docs/platform/telemetry.md`; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: consent matrix (tenant × user) to fields sent; batching and flush triggers; denylist scrub; catalogue validation.\n* E2E: Playwright toggles consent, navigates, asserts request payloads; offline queue.\n\n**Demo**\n\nReviewer opens `/settings/telemetry`, sets `full`, navigates the dashboard and grid, then opens the Grafana client-vitals board and sees p75 INP per route for the demo tenant. Under 2 minutes.\n\n**Edge cases**\n\n* Ad blocker blocks `/api/otel`: silent failure, no retries storm (max 3 then drop).\n* Very long session (kiosk, 24 h): route timing buffer bounded; periodic flush.\n* Tenant switches consent to `off`: queue cleared immediately, no further sends.\n\n**Dependencies**\n\nHard: PAP-16, PAP-17. Soft: PAP-40 (console and OTLP-file exporter until the collector and dashboards land; the dashboards ship when PAP-40 is In Review), PAP-221, PAP-58, PAP-366, PAP-368 (shared queue). Feeds PAP-194, PAP-87, PAP-88.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/app-shell/shell-layout-presets",
+   "title": "Shell layout presets and session restore: persisted panel sizes and collapse state per device, last route on launch, named presets synced per user and a Reset layout command",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-16",
+    "PAP-261",
+    "PAP-57"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nVS Code, Linear and Arc reopen exactly where you left them; PaperOS today forgets sidebar width, inspector state and the last route on every launch. PAP-262 persists detached windows and PAP-260 restores the mobile route, but the everyday layout state of the main window has no owner. This issue gives the shell a `LayoutStore` with per-device persistence, per-user synced presets and session restore.\n\n**Scope**\n\nIn:\n\n* `packages/core/src/shell/layoutStore.ts`: Zod-validated `{ version, panels: { sidebar: { width, collapsed }, inspector: { width, open } }, lastRoute, presets: { [name]: PanelState } }` in `localStorage` (web) and the PAP-262 store (desktop), with versioned migrations.\n* Sync: presets and the default preset saved to `user.settings.layout` through `settings.update` (PAP-57 profile) and merged on sign-in; device-local sizes stay local.\n* Session restore: on launch, if the last route is still valid and the user is signed in, navigate there (desktop and PWA standalone only; browsers keep URL semantics); a `Continue where you left off` toast when the route needs data.\n* Commands registered with PAP-151: `layout.savePreset`, `layout.applyPreset`, `layout.reset`; `Reset layout` in the user menu slot; keyboard `Ctrl/Cmd+Shift+L` cycles presets.\n* Resize handles on sidebar and inspector (PAP-70 `SplitPane`) writing to the store with debounce.\n\nOut: detached window persistence (PAP-262), tabs or split main area (deferred), server-side layout for kiosk (PAP-23).\n\n**Spec**\n\n* Store writes are debounced 250 ms and never block paint; reads are synchronous at boot to avoid layout shift.\n* Container queries (PAP-261) still win: a saved 400 px sidebar collapses under `md` and restores above.\n* Presets are named, at most 10 per user, and include slot visibility but never record data or search params other than `ShellSearch`.\n* Sign-out clears synced presets from the device; demo users (PAP-363) never sync.\n\n**Interface contract**\n\nProvides: `useLayoutStore`, `LayoutState` schema, commands `layout.*`, `user.settings.layout` shape; consumed by PAP-70 (`SplitPane` handles), PAP-262 (shares the store file), PAP-23 (kiosk presets), PAP-151 (commands), PAP-63 (console default preset).\n\nConsumes: `AppShell` and `ShellSearch` (PAP-16), container hooks (PAP-261), sessions and settings (PAP-57), command registry (PAP-151, soft), `SplitPane` (PAP-70, soft).\n\n**Definition of done**\n\n* Resize the sidebar, reload: width restored; quit the desktop app on `/settings`, relaunch: lands on `/settings` (recordings).\n* Save a preset on one browser, sign in on another: preset available; `layout.reset` restores defaults.\n* Vitest for migrations and merge; Playwright at 375 and 1280; screenshots; `docs/shell/layout.md`; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: store migrations v1 to v2; merge of synced presets with local sizes; preset cap; container-query override.\n* E2E: Playwright: resize, reload, restore; save and apply preset; desktop restore via `r4/app-shell/tauri-e2e-harness`.\n\n**Demo**\n\nReviewer drags the inspector wider, opens the grid, quits the desktop app, relaunches and is back on the grid with the wide inspector; `Ctrl+Shift+L` switches to the \"Review\" preset with the sidebar hidden. Under 90 seconds.\n\n**Edge cases**\n\n* Last route no longer exists after an upgrade: fall back to the audience home with a toast.\n* Store corrupted: schema failure resets to defaults and reports through PAP-368.\n* Two tabs open: last writer wins via the `BroadcastChannel` used by PAP-145.\n\n**Dependencies**\n\nHard: PAP-16, PAP-261, PAP-57. Soft: PAP-70, PAP-151, PAP-262, PAP-145. Feeds PAP-23, PAP-63.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer) with Iris on handles. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/app-shell/template-fixture-repo",
+   "title": "Fixture template repository `paperos-template-fixture` with pinned tags `t1`, `t2`, `t3` for CLI create, bootstrap, upgrade and golden path tests",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Haiku 4.5",
+   "modelId": "claude-haiku-4-5-20251001",
+   "effort": "low",
+   "deferred": false,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-13",
+    "PAP-22"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Haiku 4.5 (`claude-haiku-4-5-20251001`) / low — Infra S\n\n**Goal**\n\nPAP-22 tests against `imagine-os/cli-sandbox`, PAP-51 against `paperos-bootstrap-fixture`, PAP-430 against a \"fixture template repo\" with tags `t1..t3` and a deliberate CLAUDE.md conflict, PAP-429 against three canned ideas. Each assumes a fixture nobody owns. One small, versioned fixture repo makes those tests reproducible and lets a cold session run them without touching the real template.\n\n**Scope**\n\nIn:\n\n* Repo `imagine-os/paperos-template-fixture`: a 30-file miniature of the template (two packages, one route, one spec, `ownership.yaml`, `.paperos/template.json`) generated from the real template by `scripts/fixture/build.ts` so it never drifts by hand.\n* Tags: `t1` baseline; `t2` renames `useLayout` to `useShellLayout` and changes CI (exercises codemods and template-owned merge); `t3` edits CLAUDE.md in a way that conflicts with an app-side edit (exercises draft PRs with markers).\n* Companion fixture apps under `fixtures/apps/` in `paperos-template`: `clinic-t1` created from `t1` with one app-side change, used by PAP-430 and PAP-364 tests; the three idea text files for PAP-429.\n* `fixtures/README.md` listing every fixture, the tests that use it and how to regenerate.\n\nOut: the tests themselves (PAP-22, PAP-51, PAP-430, PAP-429), the production template.\n\n**Spec**\n\n* `build.ts` is deterministic; CI compares the generated tree with the tagged one and fails on drift (`fixture-drift` step).\n* Tags are immutable; a new scenario adds `t4`, never rewrites `t2`.\n* The fixture repo is bootstrapped by `forge bootstrap` (PAP-51) so it also serves as that command's fixture; mirrored to Forgejo (PAP-47).\n* No secrets, no real tenant data; `.paperos/template.json` points at the fixture tags.\n\n**Interface contract**\n\nProvides: repo and tags, `fixtures/apps/clinic-t1`, idea files, `fixture-drift` step; consumed by PAP-22, PAP-51, PAP-430, `r4/app-shell/upgrade-codemods-fleet`, PAP-429, PAP-364.\n\nConsumes: template layout (PAP-13), CLI create for the fixture app (PAP-22), bootstrap (PAP-51, soft), mirroring (PAP-47, soft).\n\n**Definition of done**\n\n* Repo exists on both forges with the three tags; `build.ts` regenerates `t1` byte-identically; `fixture-drift` green.\n* PAP-430 and PAP-51 comment that their tests point at these fixtures; `fixtures/README.md`; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: `build.ts` determinism (two runs identical); tag content assertions (rename present in `t2`, conflict in `t3`).\n* E2E: `forge bootstrap paperos-template-fixture --dry-run` lists ten steps against it.\n\n**Demo**\n\nReviewer runs `git clone` of the fixture, `git diff t1 t2 --stat` shows the rename and CI change, `git diff t2 t3` shows the CLAUDE.md edit. Under a minute.\n\n**Edge cases**\n\n* Real template renames a file the miniature copies: `build.ts` fails with the path, fixture updated in the same PR as the template change.\n* Fixture used concurrently by two nightly jobs: read-only use only; writes go to throwaway `gp-` repos.\n\n**Dependencies**\n\nHard: PAP-13, PAP-22. Soft: PAP-51, PAP-47. Feeds PAP-430, PAP-429, PAP-364.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/app-shell/desktop-os-integration",
+   "title": "Desktop OS integration: native notifications with actions, dock and taskbar badge counts, jump-list and dock-menu recents, and a global shortcut that summons the command bar",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Customer"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-255",
+    "PAP-136"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 (past 2026-10-01). Linear and Slack desktop feel native because notifications, badges and recents come from the OS. PAP-255 ships menu and tray, PAP-136 the notification centre and PAP-151 shortcuts; the OS-level glue between them has no owner. This issue adds it once the notification centre exists.\n\n**Scope**\n\nIn:\n\n* `tauri-plugin-notification` bridge: PAP-136 in-app notifications mirrored to OS notifications when the window is unfocused, with `Open` and `Mark read` actions routed through `paperos://open/<route>` (PAP-257).\n* Badge: unread count on the dock icon (macOS), taskbar overlay (Windows) and Unity launcher (Linux) through the window API; cleared when the inbox is opened.\n* Recents: last five records or pages in the macOS dock menu and Windows jump list, fed by `r4/app-shell/shell-layout-presets` last-route history.\n* `tauri-plugin-global-shortcut`: `Ctrl/Cmd+Shift+Space` shows the window and opens the command bar (PAP-151); configurable in `/settings/shortcuts` (PAP-153).\n\nOut: mobile push (`r4/app-shell/native-push-registration`), tray (PAP-255), notification preferences (PAP-136).\n\n**Spec**\n\n* OS notifications respect `notification_preference` (PAP-136) and quiet hours (PAP-324); never shown while the window is focused.\n* Badge counts come from the same `notifications.unreadCount` query the bell uses; no second source of truth.\n* Global shortcut registration failure (already taken) is logged and shown once in settings, never fatal.\n* Capabilities limited to the main window; no wildcard permissions (PAP-255 rule).\n\n**Interface contract**\n\nProvides: `useOsNotifications`, badge updater, recents feed, global shortcut registration; consumed by PAP-136 (delivery channel `os`), PAP-151, PAP-153.\n\nConsumes: crate and plugins (PAP-255), notification centre (PAP-136), deep links (PAP-257), command registry (PAP-151), recents (`r4/app-shell/shell-layout-presets`).\n\n**Definition of done**\n\n* Linux and macOS recordings: comment mention while unfocused shows an OS notification; clicking opens the record; badge shows 1 then clears.\n* Global shortcut summons the command bar from another app; Rust and TS tests; `docs/shell/desktop.md` section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: focus gating; badge count mapping; recents dedupe.\n* E2E: `r4/app-shell/tauri-e2e-harness`: unfocused notification path with a fake notification provider.\n\n**Demo**\n\nReviewer switches to another app, a teammate mentions them, the OS notification appears; clicking it brings PaperOS forward on the comment; `Cmd+Shift+Space` from the desktop opens the command bar. Under a minute.\n\n**Edge cases**\n\n* Do Not Disturb enabled at OS level: notifications suppressed, badge still updates.\n* Wayland has no global shortcut API: feature hidden on Wayland with a note.\n* Windows jump list limited to 10 items; recents capped.\n\n**Dependencies**\n\nHard: PAP-255, PAP-136. Soft: PAP-257, PAP-151, PAP-153, PAP-324, `r4/app-shell/shell-layout-presets`.\n\n**Agent**\n\nBuilder: Forge (Tauri Smith). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/app-shell/mobile-universal-links",
+   "title": "Mobile universal links and Android app links: `apple-app-site-association`, `assetlinks.json`, route handoff into the app, and a web smart banner for installed apps",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-260",
+    "PAP-257"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 (past 2026-10-01). PAP-257 registers `paperos://` on desktop; on phones the equivalent is `https://app.<domain>/...` opening the installed app. Magic-link emails (PAP-224) and shared record links must land in the app, not the browser. This issue completes the deep-link story for iOS and Android.\n\n**Scope**\n\nIn:\n\n* `apps/api` serves `/.well-known/apple-app-site-association` and `/.well-known/assetlinks.json` generated from `app.spec.yaml` identifier and the signing fingerprints (PAP-369), per custom domain (PAP-431).\n* Tauri mobile config: associated domains entitlement (iOS) and intent filters with `autoVerify` (Android) in the PAP-258 project; `onDeepLink` (PAP-257 API) handles `https://` URLs on mobile.\n* Route handoff: `/_link/<token>` for magic links opens the app when installed, else the web sign-in; the web page shows the PAP-18 install sheet or a smart banner when the app exists.\n\nOut: store distribution (`r4/app-shell/store-distribution`), push (`r4/app-shell/native-push-registration`).\n\n**Spec**\n\n* Association files are cached 24 h and validated in CI against Apple and Google schemas.\n* A link that opens the app while signed out lands on sign-in and then the target route (PAP-225 flow).\n* Unknown path in the app: falls back to the web URL in the system browser.\n\n**Interface contract**\n\nProvides: well-known endpoints, mobile link handling, `/_link` route; consumed by PAP-224 (magic links), PAP-225, PAP-431 (per-domain files), growth links (PAP-407 `/r/{code}`).\n\nConsumes: mobile plugins and back handling (PAP-260), deep-link API (PAP-257), signing fingerprints (PAP-369), custom domains (PAP-431, soft).\n\n**Definition of done**\n\n* Recording on Android emulator and iOS simulator: tapping a magic link in Mail opens the app on the target route.\n* Association files validate; smart banner shown on iOS Safari; `docs/shell/mobile.md` links section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: association file generation from spec and fingerprints; handoff state machine.\n* E2E: Maestro: open link via `adb shell am start` and `xcrun simctl openurl`, assert route.\n\n**Demo**\n\nReviewer sends themselves a magic link on the emulator, taps it in Gmail and the PaperOS app opens signed in on the portal home. Under 2 minutes.\n\n**Edge cases**\n\n* Custom domain not yet verified: files served only for `active` hosts.\n* Debug builds with a different fingerprint: `assetlinks.json` lists both debug and release fingerprints in preview only.\n\n**Dependencies**\n\nHard: PAP-260, PAP-257. Soft: PAP-369, PAP-431, PAP-224, PAP-225.\n\n**Agent**\n\nBuilder: Forge (Tauri Smith). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/app-shell/store-distribution",
+   "title": "Store distribution pipeline: TestFlight and Google Play internal testing lanes with fastlane, store metadata generated from `app.spec.yaml` and screenshots reused from Gate 3",
+   "type": "Infra",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Developer"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-369",
+    "PAP-258",
+    "PAP-371"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra M\n\n**Goal**\n\nDeferred to v0.2 (past 2026-10-01). PAP-369 signs builds and PAP-258 produces a debug APK and simulator app; nothing uploads a build where a customer can install it. This issue adds the internal-testing lanes so a generated app reaches testers without a laptop.\n\n**Scope**\n\nIn:\n\n* `fastlane/` in `apps/mobile` with lanes `ios_testflight` (`match` for profiles, `gym`, `pilot`) and `android_internal` (`gradle bundleRelease`, `supply` to the internal track); workflow `ops/ci/mobile-release.yml` on `mobile-v*` tags (PAP-52) using the PAP-371 macOS runner.\n* Metadata generator `scripts/store/metadata.ts`: name, subtitle, description from `app.spec.yaml` and the idea sentence; screenshots picked from the Gate 3 contact sheet (PAP-248) at store sizes; privacy labels from `telemetry-events.yaml` (`r4/app-shell/client-telemetry`) and PAP-221 categories.\n* Secrets: App Store Connect API key and Play service account JSON in sops (PAP-369 layout); `verify.sh` extended with `pilot` and `supply` dry runs.\n\nOut: public store review submission, store listing copywriting beyond generation, in-app purchases.\n\n**Spec**\n\n* Lanes are idempotent: an existing build number is skipped; build numbers derive from the release-please version plus CI run number.\n* Internal tracks only; promotion to production is a manual Needs Justin step documented in the runbook.\n* Metadata regenerated on every tag and diffed in the PR so copy changes are reviewed.\n\n**Interface contract**\n\nProvides: lanes, `mobile-release.yml`, metadata generator, privacy label mapping; consumed by PAP-88 (release train mobile step), PAP-369, PAP-29 (C4 mobile).\n\nConsumes: signing keys and profiles (PAP-369), mobile project (PAP-258), macOS runner (PAP-371), tags (PAP-52), Gate 3 screenshots (PAP-248, soft), telemetry catalogue (soft).\n\n**Definition of done**\n\n* One TestFlight build and one Play internal build installed on a tester device from a tag run (recording); metadata diff in the PR.\n* Runbook `docs/shell/store-release.md`; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: metadata generation snapshot for the clinic fixture; build-number derivation.\n* E2E: dispatch the workflow with `--dry-run` lanes on the macOS runner and assert artefacts.\n\n**Demo**\n\nReviewer opens TestFlight on an iPhone, installs the latest build of the clinic app and signs in as a demo user. Under 2 minutes after processing.\n\n**Edge cases**\n\n* Apple processing delays: lane returns after upload, a follow-up job polls `pilot` status.\n* Play first upload must be manual: runbook step with the one-time console action.\n* macOS minutes cap (PAP-371): lane skipped with a summary line when within 10 percent of the cap.\n\n**Dependencies**\n\nHard: PAP-369, PAP-258, PAP-371. Soft: PAP-52, PAP-248, PAP-221, `r4/app-shell/client-telemetry`.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/app-shell/native-push-registration",
+   "title": "Native push registration (APNs and FCM) behind `NativeCapabilitiesPort.notify`, device token storage per principal and a bridge from the push transport to OS notifications",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Staff"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-260",
+    "PAP-259"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nDeferred to v0.2 (past 2026-10-01). PAP-381 builds the server-to-client push transport for connected clients and PAP-136 the notification centre; a closed mobile app receives nothing. This issue registers device tokens through the native capability shim and forwards notification deliveries to APNs and FCM.\n\n**Scope**\n\nIn:\n\n* `notify.register()` in the PAP-259 capability returning a device token via the Tauri notification plugin on iOS and Android; table `push_device` (`principal_id`, `platform`, `token`, `app_version`, `last_seen`) with RLS.\n* Delivery adapter in `packages/email`-style provider shape: `PushProvider` with `ApnsProvider` (token-based auth, key in sops) and `FcmProvider` (service account), selected per device; `notification_delivery` channel `push` (PAP-136).\n* Tap handling: payload carries the route; `onDeepLink` (PAP-257 API) navigates; badge count set from `unreadCount`.\n\nOut: web push (PWA) for browsers, marketing push, the notification kinds and preferences (PAP-136).\n\n**Spec**\n\n* Tokens rotate: `register()` on every launch upserts; stale tokens (APNs 410, FCM `UNREGISTERED`) are deleted.\n* Payloads contain no PII beyond the notification title; body fetched on open when `sensitive`.\n* Quiet hours and preferences (PAP-324) apply before sending; a delivery row records provider response.\n* Preview builds use APNs sandbox and an FCM test project.\n\n**Interface contract**\n\nProvides: `push_device` table, `PushProvider` interface and two adapters, channel `push`; consumed by PAP-136 (channel), PAP-381 (fallback when disconnected), PAP-260 (capability wiring).\n\nConsumes: capability shim and plugins (PAP-259, PAP-260), push transport (PAP-381), notification centre and preferences (PAP-136, PAP-324), sops (PAP-25), signing entitlements (PAP-369).\n\n**Definition of done**\n\n* Emulator and simulator recordings: comment mention with the app closed shows an OS notification; tap opens the record.\n* Stale token cleanup tested with provider fixtures; `docs/shell/mobile.md` push section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: provider payload builders; token rotation and cleanup; quiet-hours gate.\n* E2E: Maestro with a mock provider endpoint asserting a delivery row and tap navigation.\n\n**Demo**\n\nReviewer closes the app on the emulator, mentions themselves from the web, the notification arrives and opens the comment. Under 2 minutes.\n\n**Edge cases**\n\n* User declines notification permission: `status: denied` and settings deep link (PAP-260 rule); no token row.\n* Same principal on three devices: each gets the push; read state syncs back through PAP-136.\n\n**Dependencies**\n\nHard: PAP-260, PAP-259. Soft: PAP-381 (disconnected-client fallback wiring), PAP-136, PAP-324, PAP-369, PAP-257.\n\n**Agent**\n\nBuilder: Forge (Tauri Smith) with Nova on the transport. Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/app-shell/public-seo-prerender",
+   "title": "Public route prerendering: build-time static HTML for `_public` routes with React 19 hydration checks, `noindex` on preview hosts, wired into the Pages build and the web image",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-363",
+    "PAP-15",
+    "r4/spec-builder/seo-public-metadata"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 (past 2026-10-01). The starter landing page (PAP-363) is a client-rendered SPA: crawlers and link previews receive an empty shell. `r4/spec-builder/seo-public-metadata` emits titles, Open Graph tags, the OG image route, sitemap and robots from the spec; those tags only help if the HTML that carries them exists before JavaScript runs. This issue adds the prerender step so public routes ship as static HTML with the spec-emitted head, and leaves everything about the tags themselves to the spec-builder issue.\n\n**Scope**\n\nIn:\n\n* `scripts/prerender.ts` (Playwright against the built bundle, or `vite-plugin-prerender` if the ADR in PAP-213 prefers it) rendering every route with `layout.template: public` from the route tree to `dist/<route>/index.html`, keeping the TanStack `head()` output and a hydration marker; runs in the PAP-15 Pages build and the PAP-26 web image build.\n* Hydration check: React 19 hydration warnings during a post-build smoke render fail the build; a `data-prerendered` attribute lets Gate 3 (PAP-82) assert the landing page paints before JavaScript.\n* Environment rules: preview and staging hosts add `<meta name=\"robots\" content=\"noindex\">` and `X-Robots-Tag` from the Caddy config (PAP-26); production emits what the spec says.\n* Cache and invalidation: prerendered HTML carries the build SHA; the service worker (PAP-18) treats prerendered routes as precached shell entries.\n\nOut: head tags, OG image, sitemap and robots (`r4/spec-builder/seo-public-metadata`), SSR of authenticated routes, marketing site (PAP-193), per-tenant branding in HTML beyond what the spec emits.\n\n**Spec**\n\n* Prerender is deterministic for a given SHA and spec set; the Pages build fails on a diff between two consecutive renders of the same input.\n* Routes with loaders (public pricing from Stripe) prerender with the loader's fallback state and revalidate on hydration; no network at build time.\n* Build time budget: under 20 s for ten public routes on the CI runner; routes are rendered in parallel.\n* Locale: one HTML per enabled locale under `/<locale>/` when PAP-27 has more than `en` enabled; `hreflang` comes from the spec-builder issue.\n\n**Interface contract**\n\nProvides: `pnpm prerender`, the `data-prerendered` marker, the noindex environment rule, prerender step in Pages and image builds; consumed by PAP-363 (landing), `r4/spec-builder/seo-public-metadata` (its tags become visible to crawlers), PAP-87 (SEO Lighthouse category), PAP-407 (referral landing previews).\n\nConsumes: starter landing spec (PAP-363), Pages build (PAP-15), web image (PAP-26), spec-emitted head and crawl files (`r4/spec-builder/seo-public-metadata`), locales (PAP-27, soft), service worker precache (PAP-18, soft).\n\n**Definition of done**\n\n* `curl` of the preview landing page returns rendered HTML containing the spec-emitted title and OG tags before any script tag; Playwright with JavaScript disabled reads the hero text; hydration produces zero console warnings.\n* Preview host serves `noindex`; production build does not; Lighthouse SEO at or above 90 on the preview (the spec-builder issue asserts the tags, this issue asserts they are in static HTML); CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: route selection by `layout.template`; noindex rule by environment; determinism check of two renders.\n* E2E: Playwright with JavaScript disabled loads the landing page text from the Pages preview; hydration console assertion on the same page with JavaScript enabled.\n\n**Demo**\n\nReviewer runs `curl -s https://imagine-os.github.io/<repo>/ | head -40` and reads the rendered hero and Open Graph tags, then pastes the URL into Slack and sees the unfurl. Under a minute.\n\n**Edge cases**\n\n* Public route that depends on the tenant host (PAP-431 custom domains): prerendered once with the default branding; host-specific head values are patched at the edge by the spec-builder issue's per-host route, documented as the limit of static prerendering.\n* Route added to `_public` without `layout.template: public` in its spec: validator (PAP-115) warns and the route is skipped, not silently rendered.\n* Prerender crashes on one route: build fails naming the route; no partial `dist`.\n\n**Dependencies**\n\nHard: PAP-363, PAP-15, `r4/spec-builder/seo-public-metadata`. Soft: PAP-26, PAP-27, PAP-18, PAP-82, PAP-87.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/app-shell/linux-packaging",
+   "title": "Linux distribution channels: Flatpak manifest on Flathub-compatible tooling, an apt repository served from the VPS and AppImage update feed integration",
+   "type": "Infra",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Customer",
+    "Developer"
+   ],
+   "milestone": "Multi-monitor and PWA polish",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "dueDate": "2026-09-29",
+   "blockedBy": [
+    "PAP-256",
+    "PAP-25"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nDeferred to v0.2 (past 2026-10-01). PAP-256 produces `.deb`, `.rpm` and AppImage on a draft release and PAP-369 explicitly defers Linux signing. Kiosks (PAP-23) and staff Linux desktops need an install path that updates itself: an apt repository and a Flatpak are the two channels Linux users expect.\n\n**Scope**\n\nIn:\n\n* `ops/apt/`: `reprepro` repository served by Caddy at `https://apt.PAPEROS_DOMAIN`, GPG signing key in sops (PAP-25), publish step in the PAP-256 workflow, install snippet for the docs.\n* `ops/flatpak/os.imagine.paperos.yml` manifest (`org.freedesktop.Platform` runtime, WebKitGTK), `flatpak-builder` job producing a bundle attached to the release; metainfo generated from `app.spec.yaml`.\n* AppImage: `latest.json` (PAP-257) entries for `linux-x86_64` verified against the cosign signature (PAP-358); `.desktop` file and `MimeType=x-scheme-handler/paperos` shipped by every channel so deep links work from all three.\n* Docs `docs/shell/linux-install.md`: apt, Flatpak and AppImage instructions, sandbox permissions table and the key rotation runbook.\n\nOut: Snap, AUR, distro inclusion, Flathub submission (documented as a follow-up).\n\n**Spec**\n\n* apt repo signed; `apt-get update` verifies; key rotation runbook.\n* Flatpak sandbox permissions minimal (`--share=network`, `--socket=wayland`, `--socket=fallback-x11`, `--talk-name=org.freedesktop.secrets`), listed in the docs.\n* Kiosk recipe (PAP-23) uses the apt package.\n\n**Interface contract**\n\nProvides: apt repository, Flatpak manifest and bundle, install docs; consumed by PAP-23 (kiosk install), PAP-88 (release assets), PAP-29.\n\nConsumes: installers workflow (PAP-256), host and Caddy (PAP-25), tags (PAP-52), signatures (PAP-358, soft), updater feed (PAP-257).\n\n**Definition of done**\n\n* Ubuntu 24.04 VM installs from the apt repo and receives an update on the next tag (recording); Flatpak bundle installs and launches.\n* `docs/shell/desktop.md` Linux install section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: metainfo generation; repository publish script idempotency.\n* E2E: CI: publish a test tag, `apt-get install` in a container, assert version.\n\n**Demo**\n\nReviewer runs the two-line apt install on a fresh Ubuntu VM and launches PaperOS from the app grid. Under 2 minutes.\n\n**Edge cases**\n\n* Secret service missing inside Flatpak: PAP-17 encrypted-file fallback applies.\n* Repo disk full on the VPS: publish fails loudly; disk alert from PAP-25.\n\n**Dependencies**\n\nHard: PAP-256, PAP-25. Soft: PAP-52, PAP-358, PAP-257, PAP-23.\n\n**Agent**\n\nBuilder: Forge (Ops Runner). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-16",
+   "section": "Spec",
+   "append": "* Route contributions are lazy: each `RouteContribution` from a module manifest (PAP-264) is loaded with `React.lazy` so a module's code is absent from the initial chunk; `Link` prefetches on hover and focus; a `size-limit` entry for `apps/web` initial JS (under 180 KB gzipped) fails Gate 1 when a module leaks into it."
+  },
+  {
+   "identifier": "PAP-18",
+   "section": "Edge cases",
+   "append": "* Custom domains (PAP-431): the manifest is served from `/manifest.webmanifest` per host with the tenant's name, colours and icons from `tenant.branding`, cached 1 h; `start_url`, `scope` and `id` follow the host. The service worker never caches `/api/sync/shape` (Electric, PAP-270) or any response carrying `Set-Cookie` or `X-PaperOS-Env: test`."
+  },
+  {
+   "identifier": "PAP-22",
+   "section": "Interface contract",
+   "append": "* Writes `.paperos/template.json` `{ ref, tag, appliedAt, ownership: \"templates/ownership.yaml\" }` at creation (PAP-430 reads it and lists it as written here); the schema is co-owned with PAP-430. Step 9 (Linear project and starter issues) is delivered by `r4/app-shell/cli-linear-seeding`; the `--json` summary includes its `linearProject` block."
+  },
+  {
+   "identifier": "PAP-26",
+   "section": "Spec",
+   "append": "* The `apps/web` image Caddyfile applies the PAP-219 header baseline: `Content-Security-Policy` with a per-response nonce for inline scripts, `Strict-Transport-Security`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy` and `frame-ancestors 'none'` except on `/embed/*` (PAP-172); a header snapshot test in CI compares against `ops/security/headers.json`. Preview environments are owned by `r4/app-shell/pr-preview-environments`; this issue keeps staging, production and rollback."
+  },
+  {
+   "identifier": "PAP-257",
+   "section": "Spec",
+   "append": "* Update channels: `latest.json` is published per channel at `channels/<stable|beta>/latest.json`; the desktop app reads its channel from `tenant.settings.desktopChannel` (staff can opt a tenant into `beta`) with `stable` as default; `checkForUpdate({ channel })` and a Settings toggle. The manifest signature is additionally verified with cosign once `r4/forge/supply-chain-provenance` lands."
+  },
+  {
+   "identifier": "PAP-21",
+   "section": "Definition of done",
+   "append": "* Evidence rule for a Linux-only session: the Linux recording and the `r4/app-shell/tauri-e2e-harness` detach and dock test are mandatory; the macOS recording is produced by the PAP-371 hosted macOS job (`workflow_dispatch` with the recording script) or, if that runner is not yet available, recorded as a `pending-runner` finding on this issue with the exact command to run, never as a silent omission."
+  },
+  {
+   "identifier": "PAP-453",
+   "section": "Spec",
+   "append": "* Flag variants: `module.app-shell.impl` declares `default`, `next` (the re-exporting stub built here) and `minimal` (the drill shell from PAP-446, bound only when `apps/web-minimal` exists); the Demo section's `minimal` flip therefore runs after PAP-446 binds it, and the merge-time demo uses `next`."
+  },
+  {
+   "identifier": "PAP-363",
+   "section": "Edge cases",
+   "append": "* Idea paragraph yields zero entities (pure service business): the interview (PAP-360) proposes a `request` entity and the starter kit still generates the dashboard with a `ui.emptyState` block instead of failing codegen. * Starter pages pass the PAP-73 axe audit in Storybook before Gate 3 baselines are taken."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "identity",
+   "title": "Idle lock and shared-device mode: re-authenticate after inactivity, lock screen with passkey, per-tenant timeout, kiosk exemption",
+   "why": "Shared tablets and kiosks (PAP-23) need it; sessions (PAP-220) own the policy, the shell only renders the lock."
+  },
+  {
+   "targetProject": "input",
+   "title": "Recents and favourites: last opened records and pages per user, pinned favourites in the nav slot, surfaced in the command palette",
+   "why": "Notion and Linear pattern; belongs with the command registry (PAP-151) and per-user keymaps sync (PAP-153)."
+  },
+  {
+   "targetProject": "data-layer",
+   "title": "PGlite persisted to disk on Tauri targets (file-backed instead of IndexedDB) with encryption at rest via the keychain key",
+   "why": "Desktop and kiosk offline durability; PAP-271 targets browsers only."
+  },
+  {
+   "targetProject": "design-system",
+   "title": "Tabbed and split main area components (`Tabs` workspace, `SplitPane` with persisted ratios) for multi-record work",
+   "why": "VS Code and Linear multi-document pattern; the shell would persist it through r4/app-shell/shell-layout-presets. Not for 10-01."
+  },
+  {
+   "targetProject": "quality",
+   "title": "Gate 3 captures desktop window screenshots (960x600, 1280x800, 1920x1080) through the Tauri E2E harness beside the seven browser widths",
+   "why": "Desktop chrome, menus and detached panels are never screenshotted today; the harness (r4/app-shell/tauri-e2e-harness) makes it possible."
+  }
+ ]
+}

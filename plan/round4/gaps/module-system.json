@@ -1,0 +1,943 @@
+{
+ "project": "module-system",
+ "projectName": "Module System & Swap Tooling",
+ "benchmarks": [
+  "OSGi (bundle lifecycle, service registry, semantic versioning)",
+  "Backstage plugins and extension points",
+  "Nx enforce-module-boundaries and affected graph",
+  "Terraform providers (schema, versioning, registry, generators)",
+  "Pact consumer-driven contracts and api-extractor / oasdiff",
+  "LaunchDarkly and Unleash flag-driven rollout",
+  "Webpack Module Federation",
+  "Changesets and semantic-release"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "Module manifest schema and validator with diagnostics",
+   "coveredBy": [
+    "PAP-433"
+   ],
+   "status": "covered",
+   "note": "`lifecycle` and `secrets` extensions should be reserved (amendment)."
+  },
+  {
+   "feature": "Registry and DI container with typed ports and scopes",
+   "coveredBy": [
+    "PAP-434"
+   ],
+   "status": "covered",
+   "note": "Runtime enforcement of `requires` and system-scope audit missing (amendment)."
+  },
+  {
+   "feature": "Host integrations: Hono middleware, React provider, worker scope, boot files",
+   "coveredBy": [
+    "PAP-434"
+   ],
+   "status": "partial",
+   "note": "Child r4/module-system/kernel-integrations."
+  },
+  {
+   "feature": "Flag-driven swap, shadow-run diffs, kill switch",
+   "coveredBy": [
+    "PAP-435"
+   ],
+   "status": "covered",
+   "note": "Staff page split out (r4/module-system/modules-settings-page)."
+  },
+  {
+   "feature": "Event schema registry, upcasters, dual-publish",
+   "coveredBy": [
+    "PAP-436"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "API gateway routing by contract, response adapters",
+   "coveredBy": [
+    "PAP-437"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "UI slot and extension system",
+   "coveredBy": [
+    "PAP-438"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Dependency lint rules and committed dependency map",
+   "coveredBy": [
+    "PAP-439"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Contract compatibility matrix",
+   "coveredBy": [
+    "PAP-440"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Breaking-change detection and semver bump enforcement",
+   "coveredBy": [
+    "PAP-440"
+   ],
+   "status": "gap",
+   "note": "The matrix trusts version numbers; nothing checks them against the change (r4/module-system/contract-diff)."
+  },
+  {
+   "feature": "Changesets for contract packages",
+   "coveredBy": [
+    "PAP-52"
+   ],
+   "status": "gap",
+   "note": "Folded into r4/module-system/contract-diff."
+  },
+  {
+   "feature": "Conformance runner, capability handling, artefact",
+   "coveredBy": [
+    "PAP-441"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Output normaliser and fixture lock shared with shadow diffs",
+   "coveredBy": [
+    "PAP-441",
+    "PAP-435"
+   ],
+   "status": "partial",
+   "note": "Child r4/module-system/conformance-normaliser."
+  },
+  {
+   "feature": "Reference sample module with good, bad and v2 implementations",
+   "coveredBy": [
+    "PAP-441",
+    "PAP-442"
+   ],
+   "status": "gap",
+   "note": "Three issues test against a sample nobody owns (r4/module-system/sample-module)."
+  },
+  {
+   "feature": "Module scaffold generator",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "Seventeen contract issues repeat a forty-file layout by hand (r4/module-system/module-scaffold)."
+  },
+  {
+   "feature": "Test kernel binding memory doubles for consumer tests",
+   "coveredBy": [
+    "PAP-434",
+    "PAP-441"
+   ],
+   "status": "gap",
+   "note": "r4/module-system/test-kernel."
+  },
+  {
+   "feature": "Schema-driven fixture factory and negative generator",
+   "coveredBy": [
+    "PAP-441"
+   ],
+   "status": "gap",
+   "note": "r4/module-system/schema-fixture-factory."
+  },
+  {
+   "feature": "Swap playbook CLI with gates and rollback",
+   "coveredBy": [
+    "PAP-442"
+   ],
+   "status": "covered",
+   "note": "Linear integration split out (r4/module-system/swap-linear-umbrella)."
+  },
+  {
+   "feature": "Data migration adapter kit: tables, events, API",
+   "coveredBy": [
+    "PAP-443"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Yjs document schema versioning and converters",
+   "coveredBy": [
+    "PAP-443"
+   ],
+   "status": "partial",
+   "note": "Child r4/module-system/ydoc-converter."
+  },
+  {
+   "feature": "Config and secrets port",
+   "coveredBy": [
+    "PAP-444"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Tenant-level module settings forms from `settingsSchema`",
+   "coveredBy": [
+    "PAP-444",
+    "PAP-264"
+   ],
+   "status": "gap",
+   "note": "r4/module-system/module-settings-ui."
+  },
+  {
+   "feature": "Module docs generator",
+   "coveredBy": [
+    "PAP-445"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Shell swap drill",
+   "coveredBy": [
+    "PAP-446"
+   ],
+   "status": "covered",
+   "note": "Success criteria should count `apps/web` edits and require PAP-84 (amendment)."
+  },
+  {
+   "feature": "Service-kind swap drill (forge to GitHub read adapter)",
+   "coveredBy": [
+    "PAP-455"
+   ],
+   "status": "gap",
+   "note": "Deferred (r4/module-system/service-swap-drill)."
+  },
+  {
+   "feature": "Module lifecycle hooks and ordered graceful shutdown",
+   "coveredBy": [
+    "PAP-434"
+   ],
+   "status": "gap",
+   "note": "OSGi lifecycle; r4/module-system/lifecycle-and-health."
+  },
+  {
+   "feature": "Per-module health aggregated into /healthz and /readyz",
+   "coveredBy": [
+    "PAP-269"
+   ],
+   "status": "gap",
+   "note": "Folded into r4/module-system/lifecycle-and-health."
+  },
+  {
+   "feature": "Kernel observability: span per port call, per-module dashboards",
+   "coveredBy": [
+    "PAP-40"
+   ],
+   "status": "gap",
+   "note": "r4/module-system/kernel-otel."
+  },
+  {
+   "feature": "Port resilience: timeouts, circuit breakers, degraded fallbacks",
+   "coveredBy": [
+    "PAP-438",
+    "PAP-368"
+   ],
+   "status": "gap",
+   "note": "Slot fills have error boundaries; ports have nothing (r4/module-system/port-resilience)."
+  },
+  {
+   "feature": "Chaos toggle proving module isolation on staging",
+   "coveredBy": [
+    "PAP-253"
+   ],
+   "status": "gap",
+   "note": "Folded into r4/module-system/port-resilience."
+  },
+  {
+   "feature": "Kernel devtools and inspector page",
+   "coveredBy": [
+    "PAP-435"
+   ],
+   "status": "gap",
+   "note": "r4/module-system/kernel-devtools."
+  },
+  {
+   "feature": "Slot overlay for debugging fills",
+   "coveredBy": [
+    "PAP-438"
+   ],
+   "status": "gap",
+   "note": "Folded into r4/module-system/kernel-devtools."
+  },
+  {
+   "feature": "Affected-module CI from the dependency map",
+   "coveredBy": [
+    "PAP-439",
+    "PAP-78"
+   ],
+   "status": "gap",
+   "note": "r4/module-system/affected-module-ci."
+  },
+  {
+   "feature": "Port usage tracking and `requires[].ports` derivation",
+   "coveredBy": [
+    "PAP-440",
+    "PAP-439"
+   ],
+   "status": "partial",
+   "note": "Hand-maintained today (r4/module-system/port-usage-tracking)."
+  },
+  {
+   "feature": "Runtime enforcement of undeclared contract resolution",
+   "coveredBy": [
+    "PAP-434",
+    "PAP-439"
+   ],
+   "status": "partial",
+   "note": "Lint only; amendment on PAP-434."
+  },
+  {
+   "feature": "Module enable and disable per tenant with retained data",
+   "coveredBy": [
+    "PAP-266"
+   ],
+   "status": "covered",
+   "note": "app-shell"
+  },
+  {
+   "feature": "Browser-side lazy module chunks and KernelProvider hydration",
+   "coveredBy": [
+    "PAP-265",
+    "PAP-434"
+   ],
+   "status": "partial",
+   "note": "Amendment on PAP-434; route chunks amendment on PAP-16."
+  },
+  {
+   "feature": "Kernel security: system scope with reason and audit, no tenant escalation",
+   "coveredBy": [
+    "PAP-434",
+    "PAP-38"
+   ],
+   "status": "partial",
+   "note": "Amendment on PAP-434."
+  },
+  {
+   "feature": "Per-module Postgres schema namespaces",
+   "coveredBy": [
+    "PAP-265",
+    "PAP-32"
+   ],
+   "status": "gap",
+   "note": "Cross-project suggestion to data-layer."
+  },
+  {
+   "feature": "Cross-module unit of work and transaction boundaries",
+   "coveredBy": [
+    "PAP-448"
+   ],
+   "status": "gap",
+   "note": "Cross-project suggestion to data-layer."
+  },
+  {
+   "feature": "Contract packages published to a registry for generated apps",
+   "coveredBy": [
+    "PAP-430"
+   ],
+   "status": "covered",
+   "note": "r4/app-shell/upgrade-package-registry"
+  },
+  {
+   "feature": "Ownership and CODEOWNERS routing for contracts",
+   "coveredBy": [
+    "PAP-305",
+    "PAP-439"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Weekly drift audit between manifests and Linear",
+   "coveredBy": [
+    "PAP-306"
+   ],
+   "status": "covered",
+   "note": "pm-linear"
+  },
+  {
+   "feature": "Deprecation windows and response adapters",
+   "coveredBy": [
+    "PAP-440",
+    "PAP-437"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Multi-window kernel instances",
+   "coveredBy": [
+    "PAP-434"
+   ],
+   "status": "covered",
+   "note": "Edge case."
+  },
+  {
+   "feature": "Conformance green as a release-candidate certification gate",
+   "coveredBy": [
+    "PAP-254"
+   ],
+   "status": "gap",
+   "note": "Cross-project suggestion to quality."
+  },
+  {
+   "feature": "Manifest-declared jobs, permissions and migrations per module",
+   "coveredBy": [
+    "PAP-265"
+   ],
+   "status": "covered",
+   "note": "app-shell"
+  },
+  {
+   "feature": "Third-party modules outside the monorepo, plugin marketplace",
+   "coveredBy": [],
+   "status": "covered",
+   "note": "Explicit non-goal."
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/module-system/kernel-integrations",
+   "title": "Kernel host integrations: Hono request-scope middleware, React `KernelProvider` and `useKernel`, worker job scope and the `apps/*/src/kernel.ts` boot files",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Kernel and lint live",
+   "parent": "PAP-434",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-22",
+   "blockedBy": [
+    "PAP-267",
+    "PAP-13"
+   ],
+   "blocks": [
+    "PAP-437",
+    "PAP-438"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-434 builds the container; wiring it into the three hosts (API, web, worker) is separable work that touches other modules' entry points and can run in parallel once `createKernel` exists. Splitting it keeps the container session pure and gives the gateway (PAP-437) and slots (PAP-438) the integration points they import.\n\n**Scope**\n\nIn:\n\n* `packages/kernel/hono.ts`: `kernelMiddleware(kernel)` creating `kernel.scope({ tenantId, actor, requestId })` from the PAP-267 context (PAP-34 session variables) and disposing it at response end; `c.get(\"kernel\")` typed.\n* `packages/kernel/react.tsx`: `<KernelProvider kernel>` and `useKernel()`, `usePort(token)` resolving in the browser scope (tenant and principal from the session), suspense-friendly lazy providers.\n* `packages/kernel/worker.ts`: `withJobScope(job, fn)` for PAP-43 handlers creating a scope with `actor.type='service'` and the job's tenant.\n* `apps/web/src/kernel.ts`, `apps/api/src/kernel.ts`, `apps/worker/src/kernel.ts`: the only files allowed to import module packages (R8 exception, PAP-439), calling each module's `bind(kernel)`; `pnpm modules:list` reads them.\n\nOut: the container itself (PAP-434 sibling), flag selection (PAP-435), slots runtime (PAP-438).\n\n**Spec**\n\n* Scope creation per request under 50 microseconds (PAP-434 budget) including the middleware overhead.\n* A handler resolving a request-scoped port after the response ended throws `SCOPE_DISPOSED`.\n* React provider never resolves request-scoped ports; it exposes `singleton` and a browser `session` scope.\n* Boot order: manifests validated, `bind` in topological order, then hosts start; a boot failure exits non-zero with the module and port.\n\n**Interface contract**\n\nProvides: `kernelMiddleware`, `KernelProvider`, `useKernel`, `usePort`, `withJobScope`, the three `kernel.ts` boot files; consumed by PAP-437 (gateway), PAP-438 (slots), PAP-444, every `Wire <module>` issue, PAP-265, PAP-266.\n\nConsumes: `createKernel` and scopes (PAP-434 sibling), Hono app and context (PAP-267), session variables (PAP-34), jobs (PAP-43, soft), workspace layout (PAP-13).\n\n**Definition of done**\n\n* The three apps boot through the kernel on the compose stack; a request with `x-tenant` resolves a request-scoped port that sees the right `tenantId` (integration test).\n* `SCOPE_DISPOSED` and boot-failure paths tested; `docs/platform/kernel.md` integrations section; Linear comment.\n\n**Test plan**\n\n* Unit: middleware scope lifecycle with 1,000 interleaved fake requests; React hook resolution; job scope actor type.\n* E2E: compose stack boot of api and worker; web renders a slot fill through `usePort`.\n\n**Demo**\n\nReviewer starts `paperos dev`, calls the API with two different `x-tenant` headers and sees each response echo its tenant from a request-scoped port; opens the web app and `usePort` renders the identity port's principal. Under a minute.\n\n**Edge cases**\n\n* Streaming response (push transport): scope disposed on stream close, not on headers sent.\n* Vite HMR replaces `kernel.ts`: provider rebuilds singletons (PAP-434 rule) without a full reload.\n* Worker job without a tenant (platform cron): `kernel.system()` scope with reason.\n\n**Dependencies**\n\nHard: PAP-267, PAP-13; sibling: PAP-434 container. Soft: PAP-34, PAP-43. Blocks PAP-437, PAP-438.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/module-system/modules-settings-page",
+   "title": "`/settings/modules` staff page: bound implementations per module, tenant overrides, shadow toggle and diff counts, kill switch with reason and the audit trail",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Contracts and conformance wired",
+   "parent": "PAP-435",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-27",
+   "blockedBy": [
+    "PAP-59",
+    "PAP-236"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-435 builds the selection hook, shadow diffs and headers; the staff page that operates a swap is UI work that Iris can build in parallel and that shares components with the flags page (`r4/app-shell/flags-settings-page`). PAP-266 also puts module enable and disable on this route, so one page owns \"modules\" for staff.\n\n**Scope**\n\nIn:\n\n* Spec `specs/pages/staff/settings-modules.spec.yaml` (`access: [staff.owner, agent.atlas]`), route `/settings/modules` in the `shell.settings.sections` slot; tabs `Enabled` (PAP-266 toggles) and `Implementations` (this issue).\n* Components: `ModuleTable` (module, kind, swap risk, bound impls, default, tenant override, shadow state, diff count last 24 h), `ImplPicker` (per tenant, writes the `module.<id>.impl` rule through `flags.update`), `ShadowToggle`, `KillSwitch` (reused), `DiffDrawer` listing `swap_shadow_diff` rows by case id with a JSON diff view.\n* Procedures used: `modules.list` (PAP-266), `modules.shadowDiffs` and `paperos module status` data (PAP-435), `flags.update|kill` (PAP-366); audit events (PAP-38) shown per module.\n\nOut: the selection mechanism and diff table (PAP-435), enable and disable semantics (PAP-266), the swap CLI (PAP-442).\n\n**Spec**\n\n* Every change requires `can(actor, \"module:impl:force\")` and a reason; customers get `DeniedState`.\n* Choosing an impl that is bound but not declared in `flags.yaml` is refused with the generator command to run.\n* Diff drawer normalises with the conformance normaliser so case ids match the CLI output.\n* Page works with 18 modules and 100k diff rows (server-side paging).\n\n**Interface contract**\n\nProvides: route `/settings/modules`, `ModuleTable`, `ImplPicker`, `DiffDrawer`; consumed by PAP-266 (its toggles live in the `Enabled` tab), PAP-442 (links to the page in evidence), PAP-446 (canary flip through the UI), PAP-453 demo.\n\nConsumes: `can` (PAP-59), primitives (PAP-236, PAP-238), flags procedures (PAP-366), shadow diff data (PAP-435 sibling), module list (PAP-266), audit (PAP-38).\n\n**Definition of done**\n\n* Playwright: staff sets `tables` to `compiler-v2` for one tenant with shadow on, sees `X-PaperOS-Impl` change on a view request and the diff count update; kill switch returns default (recording).\n* Screenshots at 375, 768, 1280, 1920 light and dark; axe clean; Storybook stories; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: table state reducers; refusal of undeclared impl; diff drawer paging.\n* E2E: flip, shadow, kill; `callAs(customer)` denied.\n\n**Demo**\n\nReviewer opens `/settings/modules`, switches the demo tenant's `app-shell` to `minimal` with shadow on, watches the diff count stay at zero, then hits Kill and the full shell returns within five seconds. Ninety seconds.\n\n**Edge cases**\n\n* Module disabled for the tenant (PAP-266): implementation row greyed with the reason.\n* Impl unbound after an override was set: warning badge and one-click reset (PAP-435 rule).\n* Two staff edit concurrently: last write wins, both audit rows visible.\n\n**Dependencies**\n\nHard: PAP-59, PAP-236. Sibling: PAP-435 mechanism. Soft: PAP-266, PAP-366, PAP-38, PAP-238.\n\n**Agent**\n\nBuilder: Iris (Component Crafter) with Forge on procedures. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/module-system/swap-linear-umbrella",
+   "title": "Swap CLI Linear integration: umbrella and per-step issues through `PmSourcePort`, evidence comments per gate and the Needs Justin card before `flip` for critical-risk modules",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Agent",
+    "Staff"
+   ],
+   "milestone": "Shell swap drill passes",
+   "parent": "PAP-442",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-10-01",
+   "blockedBy": [
+    "PAP-465",
+    "PAP-94"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-442 encodes the seven playbook steps; the Linear side (creating a swap umbrella, one issue per step for `critical` modules, posting evidence and raising the Needs Justin card) depends on the pm-linear contract and on PAP-94's card shape, which land later. Splitting it lets the state machine merge first and keeps the CLI usable offline from Linear.\n\n**Scope**\n\nIn:\n\n* `packages/kernel/swap/linear.ts`: `ensureSwapUmbrella(moduleId, impl)` and `ensureStepIssue(step)` through `PmSourcePort` (PAP-465), idempotent by a `swap:<module>:<impl>:<step>` marker; labels `Build`, `swap`; umbrella carries the ADR link and the state file path.\n* Evidence comments: after each gate passes, a comment on the step issue with artefact links (`conformance.json`, contact sheets with `X-PaperOS-Impl`, shadow summary) in the PAP-108 handoff format.\n* Needs Justin card before `flip` for `critical` risk: created in the PAP-94 shape with the one-page summary the drill (PAP-446) also produces; the CLI blocks `flip` until the card is approved (`/approve` comment detected through PAP-97 or polled).\n* `--no-linear` flag for offline runs (records evidence locally and prints the pending comments).\n\nOut: the step state machine and gates (PAP-442 sibling), the Linear API client (pm-linear), the ADR (PAP-130).\n\n**Spec**\n\n* All writes go through `PmSourcePort`, never the Linear SDK directly (module boundary rule).\n* Issue cap (`USAGE_LIMIT_EXCEEDED`, NJ-1): queued in the state file `pendingIssues[]` and replayed; the CLI proceeds for non-critical risk.\n* Card text is generated from the state file so the reviewer sees the same numbers the CLI enforced.\n\n**Interface contract**\n\nProvides: `ensureSwapUmbrella`, `ensureStepIssue`, evidence comment format, the `swap` label, `--no-linear`; consumed by PAP-442 (calls after each step), PAP-446 (drill evidence), PAP-94 (card source), Atlas dispatch.\n\nConsumes: `PmSourcePort` (PAP-465), Needs Justin card shape (PAP-94), handoff format (PAP-108, soft), webhook approval detection (PAP-97, soft), ADR link (PAP-130, soft).\n\n**Definition of done**\n\n* Sandbox team: a scripted critical swap creates the umbrella, seven step issues and one card; evidence comments appear after each fake gate; `flip` refused until `/approve` (transcript).\n* `--no-linear` run produces the same evidence locally; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: marker idempotency; card text generation from a fixture state; cap queueing.\n* E2E: `PmSourcePort` fixture double (no live writes in CI); one live sandbox run recorded.\n\n**Demo**\n\nReviewer runs `paperos module swap sample --to v2 --step conformance` and opens the created step issue with the `conformance.json` link, then sees the card appear before `flip` and the CLI wait on it. Two minutes.\n\n**Edge cases**\n\n* Umbrella exists from an earlier aborted swap: reused; steps re-linked.\n* Justin rejects the card: the CLI records the reason and `--rollback` is offered.\n* pm-linear module disabled in the app: `--no-linear` implied with a warning.\n\n**Dependencies**\n\nHard: PAP-465, PAP-94. Sibling: PAP-442. Soft: PAP-108, PAP-97, PAP-130.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer); Atlas (Dispatcher) reviews the card. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/module-system/ydoc-converter",
+   "title": "Yjs document schema versioning: `ydocVersion` in the document meta, converter run on open through `CollabDocPort`, snapshot retention and the 20 MB guard",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Shell swap drill passes",
+   "parent": "PAP-443",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-10-01",
+   "blockedBy": [
+    "PAP-140",
+    "PAP-475"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-443 covers four data shapes; the Yjs one needs Nova and the realtime contract rather than Drizzle. A swapped docs or canvas implementation must open documents written by the old one; this child gives collaborative documents the same expand-contract discipline as tables.\n\n**Scope**\n\nIn:\n\n* `ydocVersion` (integer) in the Yjs `meta` map, written by the collab doc port on first save; `defineMigrationAdapter({ kind: \"ydoc\", from, to, upcast })` registration in `packages/kernel/migrate` where `upcast(doc: Y.Doc): Y.Doc` is pure over a fresh doc built from the old update set.\n* Open hook in `CollabDocPort` (PAP-475): if stored version < current, run the converter chain, write the new snapshot as a new Hocuspocus document version (PAP-140 persistence), keep the old snapshot until the swap CLI `remove` step; clients on the old implementation keep reading the old snapshot.\n* Guard: converted document over the 20 MB cap fails the open with `YDOC_TOO_LARGE`, old snapshot stays, a Needs Justin card is created (PAP-443 rule).\n* Fixtures: a v1 docs document and a v1 canvas overlay (PAP-321 shapes) with converters to v2 and tests that `upcast(v1) == v2` structurally.\n\nOut: tables, events and API shapes (PAP-443 sibling), the Hocuspocus server (PAP-140), the editors (PAP-142, PAP-132).\n\n**Spec**\n\n* Converters never mutate stored updates; they produce a new document and snapshot.\n* Chain application is ordered and idempotent; converting a current-version doc is a no-op.\n* Conversion runs server-side on open, under 2 s for a 5 MB document; larger documents convert in a PAP-43 job with the client shown a `converting` state (PAP-234).\n* Awareness and presence (PAP-141) are not versioned; only persisted content is.\n\n**Interface contract**\n\nProvides: `ydocVersion` convention, ydoc adapter kind, open hook, `YDOC_TOO_LARGE`; consumed by PAP-443 (kit completeness), PAP-442 (destructive detection reads ydoc adapters), PAP-379 (runtime docs store), PAP-132 (canvas overlay), PAP-142.\n\nConsumes: Hocuspocus persistence (PAP-140), `CollabDocPort` (PAP-475), jobs (PAP-43, soft), state components (PAP-234, soft).\n\n**Definition of done**\n\n* Fixture v1 documents open as v2 through the hook; the v1 snapshot still loads with the old implementation bound (test with two impls in the kernel).\n* Oversized conversion fails safely; `docs/platform/migrations.md` Yjs section; Linear comment.\n\n**Test plan**\n\n* Unit: chain ordering; no-op on current version; structural equality of converted fixtures; size guard.\n* E2E: compose stack: open a v1 doc through the API, assert new snapshot version and old snapshot retained in Postgres.\n\n**Demo**\n\nReviewer opens a seeded v1 document in the docs editor and sees it render under the v2 schema; `SELECT version FROM ydoc_snapshot WHERE doc_id = ...` shows both versions. Under a minute.\n\n**Edge cases**\n\n* Two clients open the same old doc simultaneously: conversion is serialised per document with an advisory lock; the second waits.\n* Converter throws on a malformed v1 doc: open fails with the error, old snapshot untouched, finding filed.\n* Document created by a newer implementation opened by an older one during canary: refused with `YDOC_VERSION_AHEAD`, never downgraded silently.\n\n**Dependencies**\n\nHard: PAP-140, PAP-475. Sibling: PAP-443. Soft: PAP-43, PAP-234, PAP-379, PAP-321.\n\n**Agent**\n\nBuilder: Nova (CRDT Engineer). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/module-system/conformance-normaliser",
+   "title": "Conformance output normaliser and fixture lock: placeholder rules for UUIDv7, timestamps and signed cursors, set ordering, per-port overrides and `fixtures.lock` hashing shared with shadow diffs",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Kernel and lint live",
+   "parent": "PAP-441",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-22",
+   "blockedBy": [
+    "PAP-302"
+   ],
+   "blocks": [
+    "PAP-435"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-441 bundles the suite API, the CLI, the artefact and the normaliser; the normaliser is the one piece PAP-435 (shadow diffs) also needs and it depends on the wire encodings from PAP-302, not on the runner. Splitting it lets the flag swap and the runner proceed in parallel and guarantees both speak the same diff language.\n\n**Scope**\n\nIn:\n\n* `packages/kernel/conformance/normalise.ts`: `normalise(value, rules)` replacing UUIDv7 (`<id:n>` stable within one payload), ISO timestamps (`<ts>`), signed keyset cursors from PAP-279 (`<cursor>`), `Money` strings kept verbatim (PAP-302), sorting arrays declared `unordered` by a stable key, dropping fields declared `volatile`.\n* Rule declaration per port in the suite: `describePort(name, { unordered: [\"rows\"], volatile: [\"latencyMs\"], keyBy: { rows: \"id\" } })`; defaults cover the contracts document §1 types.\n* `fixtures.lock`: SHA-256 per fixture file and per contract version; `loadFixtures()` refuses a changed hash without a contract version bump (`FIXTURE_CHANGED`); `pnpm fixtures:lock` regenerates.\n* Shared export used by PAP-435 to hash primary and secondary results (`primary_hash`, `secondary_hash`) and by PAP-442 shadow gate.\n\nOut: suite API, CLI, artefact schema and Gate 1 step (PAP-441 sibling), per-module suites.\n\n**Spec**\n\n* Normalisation is deterministic and pure; two runs over the same payload produce identical JSON text.\n* Placeholders are stable within a payload so relational references survive (`<id:1>` referenced twice stays `<id:1>`).\n* Unknown volatile fields must be declared; the normaliser never guesses by name.\n* Performance: 1 MB payload under 50 ms.\n\n**Interface contract**\n\nProvides: `normalise`, `describePort` rule shape, `fixtures.lock` and `pnpm fixtures:lock`, `FIXTURE_CHANGED`; consumed by PAP-441 (runner), PAP-435 (shadow hashes), PAP-442 (shadow gate), every `Conformance test suite` issue (PAP-450, PAP-452 and siblings).\n\nConsumes: wire encodings and `Money` (PAP-302), cursor format (PAP-279), Zod schemas of fixtures (PAP-433).\n\n**Definition of done**\n\n* Fixture payloads with ids, timestamps, cursors and unordered rows normalise to golden text; hash refusal test; PAP-435 imports the same function (import check in lint).\n* `docs/platform/conformance.md` normalisation section; Linear comment.\n\n**Test plan**\n\n* Unit: placeholder stability; unordered sort by key; volatile drop; cursor and Money handling; lock regeneration and refusal.\n* E2E: sample suite (`r4/module-system/sample-module`) run twice yields byte-identical `conformance.json` results.\n\n**Demo**\n\nReviewer runs `pnpm tsx packages/kernel/conformance/normalise.ts fixtures/sample/rows.json` and sees ids and timestamps replaced while row order is sorted by id; edits a fixture and `pnpm conformance sample` fails with `FIXTURE_CHANGED`. Under a minute.\n\n**Edge cases**\n\n* Nested unordered arrays: rules apply by JSON path; a missing path is a declaration error, not silent.\n* Timestamp inside a string message: not replaced (only whole-value ISO strings), documented.\n* BigInt at runtime (PAP-302 `Money` minor units): serialised through the codec before normalisation.\n\n**Dependencies**\n\nHard: PAP-302. Sibling: PAP-441. Soft: PAP-279, PAP-433. Blocks PAP-435.\n\n**Agent**\n\nBuilder: Sentinel (Code Reviewer sub-agent as builder) with Forge. Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/module-system/sample-module",
+   "title": "Reference module `sample`: `@paperos/contract-sample` with `good`, `bad` and `v2` implementations, fixtures, conformance suite and manifests used by the runner, swap CLI, drill rehearsal and scaffold",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Kernel and lint live",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-22",
+   "blockedBy": [
+    "PAP-433"
+   ],
+   "blocks": [
+    "PAP-441",
+    "PAP-442"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build S\n\n**Goal**\n\nPAP-441 tests with \"a sample suite with two implementations\", PAP-442 with \"a scripted swap of the sample module\", PAP-433 with golden manifests, PAP-445 with a fixture workspace; none of them owns the sample. A tiny reference module with a deliberately broken implementation and a v2 is the fixture every kernel issue needs and the template every contract author copies. It is the `hello world` of the module system.\n\n**Scope**\n\nIn:\n\n* `packages/contracts/sample/`: `@paperos/contract-sample@0.1.0` with one port `GreetingPort { greet(name): Greeting; list(cursor?): Page<Greeting> }`, one topic `sample.greeted` v1, one slot fill target `shell.header.actions`, one route `sample.greet`, Zod schemas, JSON Schema, `fixtures/` (five greetings, one cursor page pair), `conformance/` suite with memory double.\n* `packages/sample/`: implementations `good` (default), `bad` (wrong ordering and a missing capability, so exactly three cases fail), `v2` (identical behaviour, different internals, provides the same contract version) with `module.ts` manifests (`kind: runtime`, `swapRisk: low`, `owner: { agent: \"Forge\", project: \"module-system\" }`).\n* Registration in the three `kernel.ts` boot files behind `module.sample.impl`; `flags.yaml` entry; `ops/swaps/` fixture state for the CLI tests; `docs/platform/sample-module.md` as the worked example referenced by the scaffold.\n* Removal note: the sample ships in the template as a dev-only module (`optional: true`, disabled for tenants by default, excluded by `paperos create` unless `--with sample`).\n\nOut: real functionality, UI beyond one header button, the runner and CLI themselves.\n\n**Spec**\n\n* Total under 600 lines including tests; every file commented as the reference pattern.\n* `bad` fails exactly cases `sample.GreetingPort.2`, `.4` and reports `unsupported` for `list` pagination; asserted by PAP-441's mutation test.\n* `v2` passes side-by-side diff with zero differences after normalisation (`r4/module-system/conformance-normaliser`).\n* The manifest is one of the golden manifests PAP-433 validates.\n\n**Interface contract**\n\nProvides: `@paperos/contract-sample`, `packages/sample` with three impls, fixtures and suite, `module.sample.impl` flag, the worked example doc; consumed by PAP-441, PAP-442, PAP-433 (golden manifest), PAP-445 (fixture page), PAP-446 (dry rehearsal before the shell), `r4/module-system/module-scaffold` (template), `r4/module-system/test-kernel`.\n\nConsumes: manifest schema (PAP-433), contract-zero types (PAP-302, soft), kernel (PAP-434, soft; the package compiles without it).\n\n**Definition of done**\n\n* Contract, three implementations and suite merged; `pnpm modules:validate` green; `bad` fails its three cases and nothing else; `v2` diff empty.\n* Doc page merged and linked from `docs/module-system.md`; Linear comment.\n\n**Test plan**\n\n* Unit: schemas accept and reject fixtures; memory double passes; each impl's expected conformance outcome.\n* E2E: `paperos module conformance sample --impl good,bad,v2` once PAP-441 lands (its demo).\n\n**Demo**\n\nReviewer opens `packages/sample/README.md`, reads the three-file layout, then runs `pnpm test --filter @paperos/contract-sample` and sees the memory double pass and `bad` fail three named cases. Under a minute.\n\n**Edge cases**\n\n* A contract author copies the sample and forgets to rename the topic: manifest validator `TOPIC_DUPLICATE` names both modules.\n* Sample accidentally enabled in production: `optional: true` and disabled by default; the removal matrix (PAP-266) includes it.\n* Kernel not merged yet: package builds and tests standalone; `kernel.ts` registration is a follow-up commit.\n\n**Dependencies**\n\nHard: PAP-433. Soft: PAP-302, PAP-434. Blocks PAP-441, PAP-442.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer); Atlas confirms the pattern. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/module-system/module-scaffold",
+   "title": "`paperos module new <id>`: scaffold the contract package, manifest, conformance skeleton, fixtures, memory double, docs stub, ownership entry and `kernel.ts` registration",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Contracts and conformance wired",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-27",
+   "blockedBy": [
+    "PAP-433",
+    "PAP-441",
+    "PAP-305"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nSeventeen \"Publish `@paperos/contract-<module>` v0.1\" issues and every future module repeat the same forty-file layout by hand. Backstage, Nx and Terraform all ship a generator for exactly this reason. A scaffold means a cold session starts from a compiling, validating, conformance-ready skeleton and the layout never drifts between modules.\n\n**Scope**\n\nIn:\n\n* `paperos module new <id> --kind runtime|service|tooling|process --owner <agent> --project <key> --risk <level> [--port Name...] [--topic name...] [--slot id...]` in `packages/cli/src/module/new.ts`, templates in `templates/module/` copied from the sample module (`r4/module-system/sample-module`) with placeholders.\n* Generates: `packages/contracts/<id>/` (`package.json` with `size-limit`, `src/{index,ports,events,routes,slots}.ts`, `conformance/{suite,memory}.ts`, `fixtures/.gitkeep`, `fixtures.lock`), `packages/<id>/` (`module.ts` via `defineModule`, `src/adapter.ts` stubs per port, `src/bind.ts`), `docs/platform/contracts/<id>.md` stub, `ownership.json` entries (PAP-305 `packages` and `contracts` sections), `flags.yaml` `module.<id>.impl`, registration lines in the three `kernel.ts` files (R8 exception), `undeclared.baseline.json` untouched.\n* `--dry-run` prints the file tree; `--from-manifest <path>` fills ports, topics and slots from an existing manifest; idempotent rerun refuses to overwrite edited files.\n* Post-generate checks: `pnpm modules:validate`, `pnpm lint:deps`, `pnpm conformance <id> --strict` (fails as expected until ports have cases, printed as the next step).\n\nOut: writing real ports and fixtures (contract issues), the runner (PAP-441), publishing (`r4/app-shell/upgrade-package-registry`).\n\n**Spec**\n\n* Generated code compiles and validates immediately (`tsc`, `modules:validate`, R7 to R11) with zero edits.\n* Templates are the sample module with `__id__` placeholders; a drift test regenerates the sample from the templates and diffs.\n* Owner and project validated against the roster (PAP-103) and `plan.json` keys; unknown values refused.\n* The generator writes a `.paperos/module-scaffold.json` record so `paperos upgrade` (PAP-430) can re-apply template fixes to scaffolded files marked `template`.\n\n**Interface contract**\n\nProvides: `paperos module new`, `templates/module/`, scaffold record; consumed by every remaining `Publish @paperos/contract-<module>` issue (PAP-447, PAP-448, PAP-449, PAP-456, PAP-459, PAP-462, PAP-465, PAP-466, PAP-467, PAP-474, PAP-475, PAP-476, PAP-483, PAP-484, PAP-485, PAP-492, PAP-493 can regenerate their skeletons), PAP-24 (guide), PAP-445 (docs stub).\n\nConsumes: manifest schema (PAP-433), suite API (PAP-441), ownership file and rule generator (PAP-305), sample module templates, roster names (PAP-103, soft).\n\n**Definition of done**\n\n* `paperos module new demo --kind runtime --owner Forge --project module-system --risk low --port DemoPort` produces a tree that passes `pnpm check` and `modules:validate` with no edits (CI test); rerun refuses to overwrite.\n* Drift test between templates and the sample green; `docs/platform/modules.md` \"Create a module\" section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: placeholder substitution; ownership merge; kernel registration insertion idempotency; owner and project validation.\n* E2E: CI generates a module, runs the full check, deletes it; `--from-manifest` over the forge manifest reproduces its port list.\n\n**Demo**\n\nReviewer runs `paperos module new demo --port DemoPort --dry-run`, reads the 24-file tree, runs it for real and `pnpm check` passes; `pnpm modules:list` shows `demo` bound. Under 2 minutes.\n\n**Edge cases**\n\n* Module id collides with an existing package or contract: refused with the path.\n* Kind `process` (no runtime): skips `packages/<id>` runtime stubs and `kernel.ts` registration, keeps the contract and docs.\n* Ownership file has a hand-edited entry for the id: merge keeps it and warns.\n\n**Dependencies**\n\nHard: PAP-433, PAP-441, PAP-305. Soft: PAP-103, PAP-430, `r4/module-system/sample-module`.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/module-system/contract-diff",
+   "title": "`pnpm contract:diff` breaking-change detector: compare Zod schemas, port signatures, topics and slot props between the base branch and the PR, require the matching semver bump and a changeset",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Contracts and conformance wired",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "dueDate": "2026-09-27",
+   "blockedBy": [
+    "PAP-433",
+    "PAP-440"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Infra M\n\n**Goal**\n\nThe semver table in `docs/module-system.md` §2.1 is a rule agents must apply by judgement; api-extractor, oasdiff and Terraform's schema diff exist because judgement fails under pressure. The compatibility matrix (PAP-440) reacts to version numbers; nothing checks that the version number matches the change. This detector closes the loop: a PR that narrows an output or renames a port cannot merge with a patch bump.\n\n**Scope**\n\nIn:\n\n* `tools/contract-diff/`: for every `packages/contracts/<id>` changed in the PR, build both the base and head packages, load exported Zod schemas (via `z.toJSONSchema`), port interfaces (via `ts-morph` signatures), `defineTopic` registrations and slot props, and classify each change with the §2.1 table: `additive-minor`, `breaking-major`, `patch-fix`, `none`.\n* Version check: read `package.json` version and `provides.version` at base and head; fail `CONTRACT_BUMP_REQUIRED` when the classification demands a higher bump than applied; pre-1.0 mapping (minor is breaking) applied automatically.\n* Changesets: `.changeset/*.md` required for any contract change (`@changesets/cli` in the workspace); the release PR (PAP-52) consumes them for contract packages; `contract:diff --write-changeset` drafts one from the classified changes.\n* Report: Markdown table in the PR check summary (change, kind, consumers affected from `compat-matrix.json`, required bump, deprecation window start) and `contract-diff.json` artefact; Gate 1 step `contract-diff` (PAP-78).\n\nOut: deciding the change (contract owners and ADRs), the matrix itself (PAP-440), runtime adapters (PAP-437, PAP-436).\n\n**Spec**\n\n* Classification rules are data in `tools/contract-diff/rules.yaml` with tests per row of §2.1: new optional field minor, widened input major, narrowed output major, new enum value consumed by a switch major, removal major, wrong-schema fix patch (requires `fix:` commit type and a fixture proving the old schema never accepted the documented value).\n* Type-only changes count (a renamed exported type is breaking).\n* Deprecations: an `@deprecated` tag added is minor; the report lists the removal-eligible date (30 days after the major flip) from `compat-windows.json`.\n* Runtime under 60 s for the whole contracts directory; incremental by changed package.\n\n**Interface contract**\n\nProvides: `pnpm contract:diff`, `rules.yaml`, `CONTRACT_BUMP_REQUIRED`, changeset requirement, `contract-diff.json`, Gate 1 step; consumed by every contract issue and every future contract PR, PAP-440 (window start), PAP-442 (step 1 propose evidence), PAP-306 (drift), PAP-52 (changesets), PAP-24.\n\nConsumes: manifest and contract layout (PAP-433), matrix and windows (PAP-440), Gate 1 (PAP-78), JSON Schema generation (PAP-433 `gen:schemas`), release tooling (PAP-52, soft).\n\n**Definition of done**\n\n* Fixture PRs: one per §2.1 row produce the expected classification and bump verdict; a narrowed output with a patch bump fails Gate 1 with the consumer list.\n* Template contracts pass at v0.1.0 with `none`; `--write-changeset` drafts a valid file; `docs/platform/contracts.md` versioning section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: schema diff classifier over JSON Schema pairs; signature diff over `.d.ts` pairs; topic and slot diffs; bump arithmetic pre and post 1.0.\n* E2E: Gate 1 on a fixture PR renaming `ViewQueryPort.query` to `run` fails; bumping to `0.2.0` with a changeset passes and the report lists tables' consumers.\n\n**Demo**\n\nReviewer removes an optional field from `contract-sample`, opens a PR and reads the check summary: `breaking-major`, consumers `app-shell`, required `0.2.0`; bumps and adds the changeset and the check goes green. Two minutes.\n\n**Edge cases**\n\n* Contract change plus consumer bump in the same PR (allowed by §7 when the owner agrees): the report shows `ok` for updated consumers and `ahead` for the rest.\n* Generated JSON Schema stale: the step runs `gen:schemas` first and fails on drift with the fix.\n* Two contracts changed with a cycle between them: acyclicity failure comes from PAP-439; this tool reports both.\n\n**Dependencies**\n\nHard: PAP-433, PAP-440. Soft: PAP-78, PAP-52, PAP-439. Feeds PAP-442, PAP-306.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer); Atlas reviews the rules. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/module-system/test-kernel",
+   "title": "Kernel test kit: `createTestKernel({ modules, doubles, tenant, actor })` wiring memory doubles from every contract's `conformance/memory`, `withImpl`, request-scope helpers and Vitest matchers",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Contracts and conformance wired",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-27",
+   "blockedBy": [
+    "PAP-434",
+    "PAP-441"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nEvery module test that touches another module today either imports its implementation (forbidden by R8) or hand-rolls a fake. The contracts already ship memory doubles for conformance; a test kernel that binds them by default turns \"test my module against everything else\" into one line, which is what lets twenty parallel sessions test without Postgres and without each other.\n\n**Scope**\n\nIn:\n\n* `packages/kernel/testing.ts`: `createTestKernel({ modules?: ModuleManifest[], doubles?: Record<contract, factory>, tenant?, actor? })` that loads the manifests, binds each required contract to its `conformance/memory` double unless a real module or override is given, and returns `{ kernel, scope, resolve, emitted() }`.\n* Helpers: `withImpl(kernel, token, impl)` for side-by-side tests, `asActor(scope, principal)` and `asTenant(scope, id)` building request scopes from PAP-55 fixtures, `emitted(topic)` capturing events through a memory outbox (PAP-303 envelope), `advanceFlags(kernel, { \"module.x.impl\": \"v2\" })` for swap tests.\n* Vitest matchers: `toHaveEmitted(topic, payloadMatcher)`, `toResolveImpl(token, name)`.\n* `docs/platform/testing.md` with the recipe and three worked examples (unit test of a consumer, side-by-side impl test, slot fill test through `KernelProvider`).\n\nOut: the doubles themselves (per-contract conformance issues), the runner (PAP-441), Playwright fixtures (PAP-240).\n\n**Spec**\n\n* A missing double for a required contract fails the test kernel with `DOUBLE_MISSING <contract>` and the path where the conformance issue should add it.\n* Doubles are fresh per test (no shared state) and dispose with the kernel.\n* Boot of a test kernel with all eighteen doubles under 50 ms so unit suites stay fast.\n* Test kernel refuses to bind a real module whose manifest declares `kind: service` without an explicit `allowServices: true` (keeps unit tests hermetic).\n\n**Interface contract**\n\nProvides: `createTestKernel`, helpers, matchers, the recipe doc; consumed by every `Wire <module>` issue and module unit tests, PAP-450 and siblings (real-adapter runs use `withImpl`), PAP-446 (drill rehearsal), PAP-105 `page-from-spec` skill (tests it generates), PAP-122 conformance test generator.\n\nConsumes: kernel API and scopes (PAP-434), `conformance/memory` convention (PAP-441), principal fixtures (PAP-55), event envelope (PAP-303), flags (PAP-366, soft).\n\n**Definition of done**\n\n* Sample module (`r4/module-system/sample-module`) consumer test written with the kit runs without Postgres in under 100 ms; side-by-side test flips `good` to `v2` and asserts identical output.\n* `DOUBLE_MISSING` path tested; doc with three examples; Linear comment.\n\n**Test plan**\n\n* Unit: default double binding; override precedence; scope helpers; matchers; disposal isolation across 500 tests.\n* E2E: CI: `pnpm test` across the template uses the kit in at least two modules once wire issues adopt it (tracked by a grep in the DoD of those issues).\n\n**Demo**\n\nReviewer opens `packages/sample/src/greet.test.ts`, sees `const { resolve } = createTestKernel({ modules: [sampleManifest] })`, runs it green in 80 ms, then swaps to `withImpl(..., \"bad\")` and watches the ordering assertion fail. Under a minute.\n\n**Edge cases**\n\n* Double behaviour diverges from the real adapter: that is a conformance failure of the double, surfaced by PAP-441 `--impl memory,real` diff, not by this kit.\n* Test needs two tenants: two scopes from one kernel; RLS semantics are emulated by the doubles' tenant filter.\n* React component test: `KernelProvider` from `r4/module-system/kernel-integrations` accepts the test kernel.\n\n**Dependencies**\n\nHard: PAP-434, PAP-441. Soft: PAP-55, PAP-303, PAP-366, `r4/module-system/sample-module`, `r4/module-system/kernel-integrations`.\n\n**Agent**\n\nBuilder: Sentinel (Code Reviewer sub-agent as builder) with Forge. Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/module-system/lifecycle-and-health",
+   "title": "Module lifecycle and health: `onBoot`, `onReady`, `onStop` hooks in `bind`, ordered graceful shutdown, per-module health checks aggregated into `/healthz` and a boot timing report",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Contracts and conformance wired",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-27",
+   "blockedBy": [
+    "PAP-434",
+    "PAP-269"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nOSGi bundles have a lifecycle; PaperOS modules have `bind`. Without start and stop hooks, a module that needs a warm cache, a Stripe client handshake or a Hocuspocus connection does it lazily on the first request, and shutdown loses in-flight jobs. `/healthz` (PAP-269) answers for the process, not for the modules inside it, so a broken payments adapter looks healthy. This issue gives modules a lifecycle and the health endpoint a module view.\n\n**Scope**\n\nIn:\n\n* Manifest `lifecycle` block (minor bump of PAP-433 schema): `{ startupBudgetMs, healthIntervalMs, drainTimeoutMs }`; `bind(kernel)` may return `{ onBoot?, onReady?, onStop?, health? }`.\n* Kernel: `kernel.start()` runs `onBoot` in topological order with per-module budgets (over budget is a warning, throw aborts boot naming the module), then `onReady` once every module booted; `kernel.stop(signal)` runs `onStop` in reverse order with `drainTimeoutMs`, after the Hono server stops accepting and pg-boss (PAP-43) pauses; SIGTERM handled in the three hosts.\n* Health: `health()` returns `{ status: ok|degraded|down, details }`; the kernel polls per `healthIntervalMs` and caches; `/healthz` (PAP-269) gains `modules: { <id>: status }` and returns 503 only when a `requires[].optional=false` provider is `down`; `/readyz` answers 200 only after `onReady`.\n* Boot report: `kernel.describe().boot` with per-module timings, printed by `pnpm modules:list --boot` and exported as an OTel span tree (`r4/module-system/kernel-otel`).\n\nOut: process supervision (Coolify), the health endpoint route itself (PAP-269), per-port resilience (`r4/module-system/port-resilience`).\n\n**Spec**\n\n* Total boot budget for the template under 3 s on the compose stack; the report fails a Gate 1 benchmark when exceeded.\n* `onStop` must be idempotent; a second SIGTERM forces exit after `drainTimeoutMs`.\n* A `degraded` module keeps serving; the status is visible on `/settings/modules` (`r4/module-system/modules-settings-page`) and in `/healthz`.\n* Disabled modules (PAP-266) are skipped entirely and reported `disabled`.\n\n**Interface contract**\n\nProvides: `lifecycle` manifest block, `onBoot|onReady|onStop|health` hook shapes, `kernel.start|stop`, `/healthz.modules`, `/readyz`, boot report; consumed by every `Wire <module>` issue (adapters with connections), PAP-26 (deploy waits on `/readyz`), PAP-40 (health metrics), PAP-283 (orchestrator `/status`), PAP-88.\n\nConsumes: kernel and topological order (PAP-434), health endpoints (PAP-269), jobs pause (PAP-43, soft), Hono server (PAP-267).\n\n**Definition of done**\n\n* Template boots with the report showing every module under budget; SIGTERM on the API drains an in-flight request and stops modules in reverse order (log).\n* A double reporting `down` flips `/healthz` to 503 and `degraded` keeps 200 (tests); `docs/platform/kernel.md` lifecycle section; Linear comment.\n\n**Test plan**\n\n* Unit: hook ordering on chains and diamonds; budget warnings and aborts; reverse-order stop; health aggregation matrix; idempotent stop.\n* E2E: compose stack: boot report, `/readyz` timing, SIGTERM drain with a 2 s handler.\n\n**Demo**\n\nReviewer runs `pnpm modules:list --boot` and reads eighteen modules with timings, then `curl /healthz` showing `modules`, then kills the API with SIGTERM during a slow request and sees the request complete before exit. Under 2 minutes.\n\n**Edge cases**\n\n* Module `onBoot` depends on a port whose provider boots later: topological order guarantees providers first; a cycle is already a manifest error.\n* Health check itself hangs: bounded by a 2 s timeout, reported `down` with `timeout`.\n* Vite dev HMR: `onStop` and `onBoot` rerun for the replaced module only.\n\n**Dependencies**\n\nHard: PAP-434, PAP-269. Soft: PAP-43, PAP-267, PAP-266. Feeds PAP-26, PAP-283.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/module-system/kernel-otel",
+   "title": "Kernel instrumentation: one OpenTelemetry span per port call tagged with module, implementation and contract version, per-module latency and error dashboards, and cost attribution hooks",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Shell swap drill passes",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-10-01",
+   "blockedBy": [
+    "PAP-434",
+    "PAP-40"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-40 traces HTTP and SQL; the kernel sits between them and knows which module and which implementation served each call. Without kernel spans, a shadow run or canary (PAP-435) cannot be compared on latency per port, and a slow module hides inside a slow request. This is the observability the swap playbook's step 4 performance gate assumes.\n\n**Scope**\n\nIn:\n\n* `packages/kernel/otel.ts`: a resolve wrapper that starts a span `port <contract>.<port>.<method>` with attributes `paperos.module`, `paperos.impl`, `paperos.contract_version`, `paperos.tenant_id` (hashed), `paperos.shadow` and records exceptions; opt-out per port for hot paths via `describePort({ trace: \"sampled\" })`.\n* Metrics: histogram `paperos_port_latency_ms{module, impl, port}` and counter `paperos_port_errors_total`; exported through the PAP-40 collector.\n* Dashboards `ops/observability/modules.json`: per-module p50 and p95 latency, error rate, calls per minute, impl split during a canary; alert when a non-default impl has 2x the p95 of default for 10 minutes (feeds the PAP-442 shadow gate).\n* Cost hook: `kernel.on(\"port:call\", cb)` used by PAP-391 usage metering to attribute API calls to modules.\n\nOut: the collector and base dashboards (PAP-40), HTTP and SQL spans (PAP-40), business metrics.\n\n**Spec**\n\n* Overhead under 20 microseconds per call when sampled out, under 0.1 ms when recorded (benchmark in PAP-434 suite).\n* Sampling follows the PAP-40 head sampler; shadow calls are always recorded at 1 percent (PAP-435 sample) with `paperos.shadow=true`.\n* No payloads or identifiers in attributes; tenant id hashed with the PAP-40 salt.\n\n**Interface contract**\n\nProvides: resolve wrapper, metrics, dashboard and alert, `port:call` hook; consumed by PAP-435 (latency columns in `swap_shadow_diff`), PAP-442 (step 4 gate), PAP-242 (per-procedure budgets now per module), PAP-391, PAP-446 drill numbers.\n\nConsumes: kernel resolve path (PAP-434), collector, Grafana and salt (PAP-40), shadow binding (PAP-435, soft).\n\n**Definition of done**\n\n* A request through the gateway shows nested port spans with module and impl attributes in Tempo (screenshot); dashboard renders for the compose stack under load from the PAP-242 k6 smoke.\n* Overhead benchmark green; alert rule tested with a slowed `bad` sample impl; `docs/platform/observability.md` modules section; Linear comment.\n\n**Test plan**\n\n* Unit: attribute set per call; opt-out and sampling; exception recording; hook invocation.\n* E2E: compose stack: k6 smoke then Grafana query asserts per-module histograms exist.\n\n**Demo**\n\nReviewer opens Tempo for one `views.list` request and expands `port @paperos/contract-tables.ViewQueryPort.query` with `impl=compiler-v2`, then the modules dashboard showing both impls side by side. Under a minute.\n\n**Edge cases**\n\n* Port resolved inside a Yjs callback (system scope): span parented to the system trace, tenant attribute absent.\n* Recursive port calls (a port calling another): nested spans, depth capped at 10 with a warning.\n* Collector down: spans dropped, no latency added (PAP-40 exporter behaviour).\n\n**Dependencies**\n\nHard: PAP-434, PAP-40. Soft: PAP-435, PAP-242, PAP-391.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/module-system/port-resilience",
+   "title": "Port resilience: timeouts, circuit breaker and degraded fallbacks for optional ports in kernel resolve wrappers, `MODULE_DEGRADED` telemetry and the chaos toggle for staging",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Staff"
+   ],
+   "milestone": "Shell swap drill passes",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-10-01",
+   "blockedBy": [
+    "PAP-434",
+    "PAP-368"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nPlug and play also means unplug safely: when the growth module's social adapter hangs or the forge port times out, the shell and tables must keep working. PAP-438 wraps slot fills in error boundaries; ports have nothing. Backstage and OSGi treat a failing plugin as isolated; this issue gives the kernel the same containment for `optional` dependencies and clear failure for required ones.\n\n**Scope**\n\nIn:\n\n* `describePort({ timeoutMs, breaker: { failures, windowMs, halfOpenAfterMs }, fallback })` in the contract; kernel resolve wrapper applying a timeout, a circuit breaker per `(port, impl, tenant)` and, for `requires[].optional=true` consumers, a declared fallback (`unavailable` result object or a memory double) instead of a throw.\n* Required ports: on breaker open the call fails fast with `MODULE_UNAVAILABLE` (503 at the gateway with `Retry-After`), never hangs; error copy from `errors.yaml` (PAP-368).\n* Telemetry: `module.degraded|recovered` topics (kernel-owned, PAP-436 registry), `paperos_breaker_state` metric (`r4/module-system/kernel-otel`), status `degraded` in the health view (`r4/module-system/lifecycle-and-health`) and a banner slot in `/settings/modules`.\n* Chaos toggle for staging only: flag `platform.chaos` with rules `{ port, mode: latency|error|timeout, rate }` used by the PAP-253 nightly to prove containment; refused when `PUBLIC_ENV=production`.\n\nOut: HTTP client retries inside adapters (each module), rate limiting (PAP-304), UI error boundaries (PAP-438, PAP-368).\n\n**Spec**\n\n* Defaults: timeout 5 s, breaker opens after 5 failures in 30 s, half-open after 15 s; overridable per port, never disabled for `service`-kind providers.\n* Breaker state is per process; a tenant-scoped override lets one tenant's failing integration not trip others.\n* Fallback doubles are the contract's memory doubles in read-only mode where declared safe; writes are never faked.\n* Every breaker transition writes an audit event with the module and reason (PAP-38).\n\n**Interface contract**\n\nProvides: `describePort` resilience options, wrapper behaviour, `MODULE_UNAVAILABLE` and `MODULE_DEGRADED`, topics, chaos flag; consumed by every `Wire <module>` issue (declares budgets), PAP-437 (503 mapping), PAP-253 (nightly chaos run), PAP-85 (edge-case hunter network failures), PAP-446.\n\nConsumes: kernel resolve (PAP-434), error catalogue (PAP-368), event registry (PAP-436, soft), flags (PAP-366, soft), audit (PAP-38).\n\n**Definition of done**\n\n* Sample `bad` impl configured to hang: consumers with `optional` get the fallback within the timeout; required consumers get `MODULE_UNAVAILABLE` fast; breaker opens and recovers (test with fake timers and one compose run).\n* Chaos run on staging: shell and tables keep passing Gate 3 while growth ports fail at 50 percent (contact sheet); `docs/platform/resilience.md`; Linear comment.\n\n**Test plan**\n\n* Unit: timeout, breaker state machine, half-open probe, per-tenant isolation, fallback selection, production refusal of chaos.\n* E2E: compose stack with the sample `bad` impl and the chaos flag; gateway returns 503 with `Retry-After`.\n\n**Demo**\n\nReviewer enables `platform.chaos` for `contract-forge.ForgePort` at 100 percent timeout on staging, opens the dashboard: everything renders, the repo widget shows \"unavailable\", `/healthz` says `forge: degraded`; disables it and the widget recovers within 15 s. Under 2 minutes.\n\n**Edge cases**\n\n* Breaker open during a shadow run: shadow secondary skipped and recorded as `skipped`, never counted as a diff.\n* Port with streaming results: timeout applies to first byte only.\n* Fallback double returns stale-looking data: results carry `degraded: true` so UI can badge them (PAP-234 `IntegrationUnavailable`).\n\n**Dependencies**\n\nHard: PAP-434, PAP-368. Soft: PAP-436, PAP-366, PAP-38, PAP-437, `r4/module-system/kernel-otel`, `r4/module-system/lifecycle-and-health`.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/module-system/kernel-devtools",
+   "title": "Kernel devtools: `/dev/modules` page with the dependency graph, bindings and scopes, a slot overlay highlighting fills by module, topic flow and flag state, plus `paperos module explain <port>`",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Shell swap drill passes",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-10-01",
+   "blockedBy": [
+    "PAP-434",
+    "PAP-438",
+    "PAP-435"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build M\n\n**Goal**\n\nReact DevTools shows the component tree; nothing shows the module tree. A session debugging \"why does this nav item come from CRM\" or \"which impl answered this request\" today reads manifests by hand. PAP-435 gives staff `/settings/modules`; developers and agents need the inspector view: graph, bindings, slot fills in place, events flowing, flags evaluated, all from `kernel.describe()`.\n\n**Scope**\n\nIn:\n\n* Route `/dev/modules` (`access: [developer, agent]`, dev and preview only, hidden in production): dependency graph (from `dependency-map.json`, PAP-439) with live binding state, module cards (kind, risk, impl, health, boot time), a request inspector reading `X-PaperOS-Impl` and the last 50 port calls (`r4/module-system/kernel-otel` ring buffer), topic flow (last events per topic from the outbox, PAP-436).\n* Slot overlay: `Ctrl+Shift+M` toggles outlines around every rendered slot fill with `module:slot:order` labels and a click-through to the manifest line (mirrors PAP-438 registration data).\n* Flag panel: `module.*.impl` evaluation trace for the current scope (kill, tenant, audience, default) from PAP-366 `explain`.\n* CLI `paperos module explain <contract>.<port>`: prints providers, current default, consumers with the ports they use, conformance status and the last shadow diff count.\n\nOut: staff operations page (`r4/module-system/modules-settings-page`), generated docs (PAP-445), production telemetry.\n\n**Spec**\n\n* The page reads only `kernel.describe()`, the dependency map and telemetry buffers; it never resolves ports itself.\n* Overlay adds no DOM to production bundles (tree-shaken behind `import.meta.env.DEV || PUBLIC_ENV=preview`).\n* Graph renders 18 modules and 60 edges in under 200 ms using the PAP-132 canvas primitives when available, SVG fallback otherwise.\n* Agent access through the API: `GET /api/dev/modules` returns the same JSON for sessions without a browser.\n\n**Interface contract**\n\nProvides: route `/dev/modules`, `GET /api/dev/modules`, slot overlay, `paperos module explain`; consumed by builder sessions (PAP-92 playbook debugging section), PAP-446 (drill evidence screenshots), PAP-24 guide, Sentinel reviewers.\n\nConsumes: `kernel.describe()` (PAP-434), slot registry (PAP-438), flag evaluation and headers (PAP-435, PAP-366), dependency map (PAP-439), outbox (PAP-436, soft), canvas primitives (PAP-132, soft).\n\n**Definition of done**\n\n* Page renders the template graph with bindings; overlay labels every fill on the dashboard; `explain` output for `ViewQueryPort` matches the matrix (screenshots at 1280 and 1920).\n* Production build contains no devtools code (bundle grep); `docs/platform/devtools.md`; Linear comment.\n\n**Test plan**\n\n* Unit: graph data builder from describe and map; overlay label composition; explain formatter.\n* E2E: Playwright in preview: open `/dev/modules`, toggle overlay, assert labels; production build 404s the route.\n\n**Demo**\n\nReviewer opens `/dev/modules` on the preview, clicks `tables`, sees `compiler-v2` bound for the demo tenant, presses `Ctrl+Shift+M` on the dashboard and every block shows its `module:slot` label. Under a minute.\n\n**Edge cases**\n\n* Kernel failed to boot partially (dev banner, PAP-434): the page still renders with the failed module in red and the error.\n* Hundreds of port calls per second: ring buffer bounded at 50, sampled.\n* Multi-window (PAP-262): each window shows its own kernel; the page notes the window label.\n\n**Dependencies**\n\nHard: PAP-434, PAP-438, PAP-435. Soft: PAP-439, PAP-436, PAP-366, PAP-132, `r4/module-system/kernel-otel`.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer) with Iris on the overlay. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/module-system/affected-module-ci",
+   "title": "Affected-module CI: derive changed modules from the dependency map and the diff, run only their Gate 1 steps plus their consumers' conformance suites, with a full run on `main` and nightly",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Contracts and conformance wired",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-27",
+   "blockedBy": [
+    "PAP-439",
+    "PAP-78"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nNx and Turborepo both win their speed from \"affected\" graphs; PaperOS has a better graph than either, the manifest dependency map, and does not use it in CI. With eighteen modules, eighteen conformance suites and twenty PRs an hour, Gate 1 time is the schedule's hidden bottleneck. This issue makes PRs pay only for what they touch while keeping the safety of a full run on `main`.\n\n**Scope**\n\nIn:\n\n* `tools/affected/affected.ts`: from `git diff --name-only <base>...<head>` and `ownership.json` (PAP-305) map files to modules and contracts; expand through `dependency-map.json` (PAP-439) to consumers (one level for implementation changes, transitive for contract changes); output `affected.json` `{ modules, contracts, consumers, reason }`.\n* Gate 1 (PAP-78) reads it: Turbo filters `--filter=...[<base>]` unioned with the affected set; conformance step runs the affected modules' suites plus every consumer suite of a changed contract; `contract:diff` (`r4/module-system/contract-diff`) only for changed contracts.\n* Safety rails: changes to `packages/core`, `packages/kernel`, root configs, `ownership.json` or the map itself force a full run; `main` and the nightly (PAP-253) always run everything; a `full-ci` label forces it on a PR.\n* Check summary lists the affected set and the reason so a reviewer can see why a suite was skipped.\n\nOut: Turbo remote caching (off by PAP-13 decision), Gate 2 to 4 selection (quality owns; they may read `affected.json`), the dependency map itself (PAP-439).\n\n**Spec**\n\n* Determinism: same diff and map produce the same `affected.json` (golden tests).\n* Mapping unknown paths (new files without an owner) forces a full run and names the path so `ownership.json` gets updated.\n* Runtime under 3 s; the step never becomes the long pole.\n* Undeclared imports are already a Gate 1 failure (PAP-439), so the map is trustworthy as the expansion source.\n\n**Interface contract**\n\nProvides: `affected.json` schema and `pnpm affected`, Gate 1 filter wiring, `full-ci` label; consumed by PAP-78, PAP-441 (conformance step), PAP-82 (may select pages by module later), PAP-253, PAP-99 (scheduler can weigh CI cost).\n\nConsumes: dependency map and lint (PAP-439), ownership file (PAP-305), Gate 1 workflow (PAP-78), Turbo pipeline (PAP-13).\n\n**Definition of done**\n\n* Fixture PR touching only `packages/crm` runs crm tests and the growth suite, skips tables (summary shows the reason); a contract change to `contract-tables` runs all four consumers' suites; a root config change runs everything.\n* Median Gate 1 time on module-only PRs measured before and after (target under 50 percent); `docs/engineering/ci.md` affected section; CHANGELOG; Linear comment.\n\n**Test plan**\n\n* Unit: path to module mapping; one-level vs transitive expansion; safety-rail triggers; golden `affected.json` fixtures.\n* E2E: three fixture PRs on the template with timings in the job summary.\n\n**Demo**\n\nReviewer opens a PR that edits one file in `packages/finance`, reads the check summary \"affected: business-core; consumers: growth (referrals), tables? no\", and sees Gate 1 finish in half the usual time. Under a minute.\n\n**Edge cases**\n\n* Generated code (PAP-120 output) changed by a spec edit: mapped to the spec's module and the generator; both run.\n* Rename across modules: both old and new owners affected.\n* Map stale in the PR (author forgot to regenerate): PAP-439 fails first; this step reports `map-stale` and runs full.\n\n**Dependencies**\n\nHard: PAP-439, PAP-78. Soft: PAP-305, PAP-13, PAP-253, `r4/module-system/contract-diff`.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/module-system/schema-fixture-factory",
+   "title": "Schema fixture factory: `fixtureFor(schema, { seed, overrides })` generating valid instances for any contract Zod schema, `invalidFor(schema)` for negatives, used by conformance doubles, Gate 4 and the test kernel",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Contracts and conformance wired",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-09-27",
+   "blockedBy": [
+    "PAP-433",
+    "PAP-302"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nSeventeen conformance suites, their memory doubles, the edge-case hunter (PAP-85) and the demo seed (`r4/app-shell/starter-kit-demo-seed`) all need valid instances of contract types. Each writing its own generators means seventeen interpretations of `Money`, `ActorRef` and `FilterTree`. One factory that reads the Zod schema and knows the contract-zero types gives every module the same realistic data and a negative generator for free.\n\n**Scope**\n\nIn:\n\n* `packages/kernel/fixtures/factory.ts`: `fixtureFor(schema, opts)` walking Zod 4 schemas (objects, arrays with min and max, unions, discriminated unions, enums, literals, records, refinements by retry) with a seeded PRNG (`seedrandom`) and `faker` for strings by `.describe()` hints (`email`, `url`, `name`, `sentence`); registered generators for contract-zero types: UUIDv7 in time order, `Money` in minor units and valid ISO 4217, `ActorRef`, `EntityRef`, `FilterTree` (valid against PAP-279 grammar), signed cursors.\n* `invalidFor(schema)` producing one instance per top-level field that violates exactly that field (wrong type, out of range, missing required) with the expected Zod issue path, for negative conformance cases.\n* `fixtureSet(schema, n, { unique: [\"email\"] })` for lists; `pnpm fixtures:gen <contract> <schema> --count 5 --out fixtures/` to materialise golden fixtures (then locked by `fixtures.lock`).\n* Docs `docs/platform/fixtures.md` with the hint vocabulary for `.describe()`.\n\nOut: fixture curation per contract (their issues), the lock (`r4/module-system/conformance-normaliser`), UI stories data (PAP-69 may reuse).\n\n**Spec**\n\n* Determinism: same schema, seed and version produce the same instance; the factory version is part of the seed so upgrades are explicit.\n* Refinements are satisfied by bounded retry (100 attempts) then a clear error naming the refinement; contract authors add a custom generator via `registerGenerator(schemaId, fn)`.\n* Generated strings are readable (faker), never lorem ipsum; dates within the last 90 days unless the hint says otherwise.\n* Performance: 1,000 instances of a 30-field object under 200 ms.\n\n**Interface contract**\n\nProvides: `fixtureFor`, `invalidFor`, `fixtureSet`, `registerGenerator`, `pnpm fixtures:gen`, the hint vocabulary; consumed by every conformance suite and memory double, PAP-85 (Gate 4 adversarial inputs seeded from `invalidFor`), PAP-240 and `r4/app-shell/starter-kit-demo-seed` (value generators), PAP-122 (conformance test data), `r4/module-system/test-kernel`.\n\nConsumes: contract layout and Zod 4 (PAP-433), contract-zero types (PAP-302), filter grammar (PAP-279), cursor format (PAP-279).\n\n**Definition of done**\n\n* Every schema exported by `contract-sample` and `contract-data-layer` fixtures produces valid instances (parse round trip) and `invalidFor` produces exactly one failing path per field (tests).\n* `pnpm fixtures:gen` materialises the sample fixtures byte-identically across two runs; doc merged; Linear comment.\n\n**Test plan**\n\n* Unit: each Zod kind; contract-zero generators validate against their schemas; refinement retry and failure; determinism; `invalidFor` path assertions.\n* E2E: sample conformance suite uses factory output for its memory double and passes.\n\n**Demo**\n\nReviewer runs `pnpm fixtures:gen sample Greeting --count 3 --seed demo` and reads three realistic greetings with UUIDv7 ids and recent timestamps, then `invalidFor(Greeting)` printing the four violating instances with their paths. Under a minute.\n\n**Edge cases**\n\n* Recursive schema (`FilterTree`): depth capped at 4 with leaves at the cap.\n* `z.bigint()` at runtime (PAP-302 minor units): generated as bigint, serialised through the codec when written to JSON.\n* Schema with `.transform()`: factory generates the input type; output type is obtained by parsing.\n\n**Dependencies**\n\nHard: PAP-433, PAP-302. Soft: PAP-279, PAP-85, PAP-240, `r4/module-system/sample-module`.\n\n**Agent**\n\nBuilder: Sentinel (Edge Case Hunter sub-agent as builder) with Forge. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/module-system/port-usage-tracking",
+   "title": "Port usage tracking: derive `requires[].ports` from static analysis of `kernel.resolve` and `usePort` calls, compare with runtime `kernel.describe()` counters, and fail on manifest drift",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Shell swap drill passes",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-10-01",
+   "blockedBy": [
+    "PAP-439",
+    "PAP-434"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nThe compatibility matrix (PAP-440) can only say \"which port change breaks whom\" if `requires[].ports` is accurate, and today it is hand-maintained. Pact-style consumer contracts record what consumers actually use; here the code already says it. This issue derives the port list from the code, checks the manifest against it, and adds runtime counters so unused declarations are removed and undeclared usage is caught before a swap.\n\n**Scope**\n\nIn:\n\n* `tools/port-usage/scan.ts`: `ts-morph` scan of each module package for `port<...>(\"<contract>\", \"<Port>\")` tokens, `kernel.resolve(<token>)`, `usePort(<token>)` and `describePort` references; emits `port-usage.json` `{ module: { contract: [ports] } }`.\n* Manifest check `PORTS_DRIFT` in `pnpm modules:validate` (PAP-433 extension): declared but unused ports are warnings with an expiry; used but undeclared ports are errors with the manifest line to add; `--fix` writes the manifest.\n* Runtime: `kernel.describe().usage` counters per `(consumer, contract, port)` since boot, exposed in `/dev/modules` (`r4/module-system/kernel-devtools`) and exported nightly from staging (PAP-253) to `reports/port-usage/<date>.json` for the weekly re-audit (PAP-306).\n* Matrix integration: PAP-440 per-port cells read `port-usage.json` when `requires[].ports` is absent.\n\nOut: the matrix (PAP-440), the lint rules (PAP-439), dynamic resolution by string (refused by lint).\n\n**Spec**\n\n* Static scan is the source of truth for CI; runtime counters are advisory and never fail a build.\n* Tokens must be constructed with literal strings; a computed token is a lint error (`PORT_TOKEN_DYNAMIC`) so the scan stays sound.\n* Runtime under 10 s for the template.\n\n**Interface contract**\n\nProvides: `port-usage.json`, `PORTS_DRIFT`, `--fix`, runtime usage counters and nightly report; consumed by PAP-440 (per-port cells), PAP-306 (drift report), PAP-442 (step 3 lists real consumers), `r4/module-system/kernel-devtools`.\n\nConsumes: dependency lint infrastructure (PAP-439), kernel describe (PAP-434), validator (PAP-433), nightly staging (PAP-253, soft).\n\n**Definition of done**\n\n* Template scan produces the usage map; every manifest passes `PORTS_DRIFT` after `--fix`; a fixture module resolving an undeclared port fails validation with the line.\n* Nightly report committed once; `docs/platform/manifest.md` ports section; Linear comment.\n\n**Test plan**\n\n* Unit: token extraction over fixture sources; drift classification; `--fix` idempotency; dynamic token lint.\n* E2E: Gate 1 on a PR adding an undeclared `resolve` fails with `PORTS_DRIFT`.\n\n**Demo**\n\nReviewer adds `kernel.resolve(LedgerPort)` to the CRM module, runs `pnpm modules:validate` and reads `PORTS_DRIFT crm requires @paperos/contract-business-core.LedgerPort (undeclared) — add to module.ts line 14`; `--fix` writes it. Under a minute.\n\n**Edge cases**\n\n* Port used only in tests: excluded (R11 test paths) and not required in the manifest.\n* Port resolved through a helper in `@paperos/core`: the scan follows one level of re-export inside the same package.\n* Runtime shows a port used by a consumer the static scan missed: reported as `SCAN_GAP` for the tool, never as a module error.\n\n**Dependencies**\n\nHard: PAP-439, PAP-434. Soft: PAP-433, PAP-440, PAP-253, PAP-306.\n\n**Agent**\n\nBuilder: Forge (Platform Engineer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/module-system/module-settings-ui",
+   "title": "Auto-generated module settings forms from `settingsSchema` at `/settings/modules/<id>`: Zod to form fields, tenant scope, validation, secret-name display and audit",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Staff"
+   ],
+   "milestone": "Shell swap drill passes",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "dueDate": "2026-10-01",
+   "blockedBy": [
+    "PAP-444",
+    "PAP-236"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nEvery module declares `settingsSchema` (PAP-264) and PAP-444 validates it at boot, but staff have no way to set a module's tenant-level settings without a bespoke page. Backstage and Terraform render forms from schema; with eighteen modules and more coming, a generated form is the only way settings stay complete and consistent.\n\n**Scope**\n\nIn:\n\n* Route `/settings/modules/<id>` (child of `r4/module-system/modules-settings-page`) rendering a form from the module's `settingsSchema` through a Zod-to-fields mapper: strings, numbers, booleans, enums, arrays of primitives, nested objects as sections; `.describe()` as help text; PAP-233 pickers for dates.\n* Storage: tenant-scoped values in `tenant_module_settings` (`tenant_id`, `module_id`, `values jsonb`, `updated_by`) with RLS; `ConfigPort.get(module)` (PAP-444) merges tenant values over app defaults per request scope.\n* Secrets: fields declared in `secrets` show the secret name and `set|not set` status only (PAP-444 masking), with a link to the broker runbook; never an input.\n* Validation server-side with the same schema; audit event per change (PAP-38); `can(actor, \"module:settings\")`.\n\nOut: app-level defaults (`app.spec.yaml`), secrets entry (PAP-300 broker), per-user preferences.\n\n**Spec**\n\n* Form covers every Zod kind the sample and template modules use; unsupported kinds render a JSON editor fallback with validation.\n* Saving a value that would fail another module's boot validation is refused with the module and field named.\n* Changes propagate to request scopes immediately (no restart), through the PAP-444 port cache invalidation on `module.settings.changed`.\n\n**Interface contract**\n\nProvides: route, `SchemaForm` component (reusable by PAP-124 spec editor forms), `tenant_module_settings` table, topic `module.settings.changed`; consumed by PAP-444 (tenant layer), PAP-266 (module page), business-core and growth modules for provider settings, PAP-124.\n\nConsumes: config port and validation (PAP-444), form primitives (PAP-236, PAP-233), audit (PAP-38), `can` (PAP-59), kernel request scope.\n\n**Definition of done**\n\n* Sample module settings edited for one tenant and reflected in a request within a second; another tenant unchanged (test); invalid value refused with field error.\n* Screenshots at 375 and 1280 for three module schemas; a11y clean; `docs/platform/config.md` tenant section; Linear comment.\n\n**Test plan**\n\n* Unit: Zod-to-fields mapper per kind; merge order defaults then tenant; refusal on cross-module boot validation.\n* E2E: Playwright edits a setting, asserts the API response reflects it, customer denied.\n\n**Demo**\n\nReviewer opens `/settings/modules/business-core`, sees the Stripe secret as `set`, changes the invoice numbering prefix, saves, and the next invoice preview uses it. Under a minute.\n\n**Edge cases**\n\n* Schema changes in a module upgrade: stored values re-validated on load; invalid ones shown with a migration hint, not dropped.\n* Very large arrays: paginated editor with import from CSV.\n* Module disabled for the tenant: page read-only with the PAP-266 toggle link.\n\n**Dependencies**\n\nHard: PAP-444, PAP-236. Soft: PAP-233, PAP-38, PAP-59, PAP-266, `r4/module-system/modules-settings-page`.\n\n**Agent**\n\nBuilder: Iris (Component Crafter) with Forge on storage. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/module-system/service-swap-drill",
+   "title": "Second swap drill: swap the forge module to a read-only GitHub adapter behind `module.forge.impl`, walk the playbook for a `service`-kind module and record findings",
+   "type": "Review",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Shell swap drill passes",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": true,
+   "dueDate": "2026-10-01",
+   "blockedBy": [
+    "PAP-455",
+    "PAP-442"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Review M\n\n**Goal**\n\nDeferred to v0.2 (past 2026-10-01). The shell drill (PAP-446) proves the runtime-host case; service modules (forge, realtime, pm-linear) swap differently: no slots, external systems, webhooks and CI artefacts. The PAP-455 demo already imagines flipping `forgejo` to `github`; making that a real adapter and drill validates the `ForgePort` contract, the DR story (GitHub-only mode) and the playbook for `medium` risk.\n\n**Scope**\n\nIn:\n\n* `packages/forge/src/github-adapter.ts`: `ForgePort` over the GitHub REST API with the `paperos-agents` App token (`r4/forge/github-app-identities`): `repos`, `tree`, `blob`, `commits`, `pulls.list|get`; `mirrorStatus`, `bootstrap` and `pulls.create|merge` declared `unsupported`.\n* Drill: `paperos module swap forge --to github` through steps 1 to 5 (propose, fork, conformance with `unsupported` handling, shadow on read ports for one nightly, canary on the demo tenant), then rollback; step 6 and 7 intentionally not taken.\n* Measurements: conformance case coverage of the contract by the second adapter, shadow diff classes (ordering, pagination), latency delta, lines changed outside `packages/forge`.\n* Report `docs/platform/drills/service-swap-2026-10.md` with findings filed on forge and module-system; `v1.0` recommendation for `contract-forge`.\n\nOut: shipping GitHub as a production forge, write operations through GitHub, the shell drill.\n\n**Spec**\n\n* Success: zero edits outside `packages/forge` and the flag file; conformance green for supported ports; `unsupported` reported honestly (PAP-452 rule); rollback under 5 s.\n* The drill runs on staging with the fixture repos only.\n* Every workaround discovered is a finding, not a fix (PAP-446 rule).\n\n**Interface contract**\n\nProvides: GitHub read adapter, drill report and findings, timing numbers for the `service` kind; consumed by PAP-53 (GitHub-only read mode during a Forgejo outage becomes possible), PAP-442 (playbook v2), `docs/module-system.md` v2, PAP-449 `v1.0` cut.\n\nConsumes: forge wired behind the kernel (PAP-455), swap CLI (PAP-442), conformance suite (PAP-452), App tokens, staging.\n\n**Definition of done**\n\n* Report, recording and findings published; adapter merged behind the flag with `unsupported` ports documented; Linear comment with numbers.\n\n**Test plan**\n\n* Unit: adapter mappers against recorded GitHub responses; `unsupported` declarations.\n* E2E: the drill is the test: CLI state file shows steps 1 to 5 with evidence and a rollback.\n\n**Demo**\n\nReviewer watches the recording: `paperos module swap forge --to github` passes conformance with three `unsupported` ports, shadow shows only pagination-size diffs, the demo tenant's repo browser reads from GitHub, `--rollback` returns to Forgejo. Three minutes.\n\n**Edge cases**\n\n* GitHub rate limit during shadow: sampled at 1 percent (PAP-435 default) and noted.\n* Contract gap found (a port assumes Forgejo ids): filed as a Spec issue on forge with the ADR path.\n\n**Dependencies**\n\nHard: PAP-455, PAP-442. Soft: PAP-452, `r4/forge/github-app-identities`, PAP-53.\n\n**Agent**\n\nBuilder: Sentinel (Code Reviewer sub-agent as builder) with Forge. Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nM: one session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-434",
+   "section": "Spec",
+   "append": "* Runtime enforcement of `requires`: `kernel.resolve` from a module scope refuses a contract the module's manifest does not list (`REQUIRES_UNDECLARED`, throws in dev, telemetry and `undefined` in production for optional-shaped tokens), so lint R8 and the kernel agree. * `kernel.system(reason)` is the only way to obtain a scope without a tenant; it writes a PAP-38 audit row with the reason and caller module, and lint forbids it outside `packages/jobs`, `packages/sync` and `apps/*/src/kernel.ts`. * Browser: module implementation packages are loaded through `import()` per enabled module (`kernel.ts` uses dynamic imports keyed by manifest id) so the initial bundle carries the kernel and contracts only; `KernelProvider` renders `ui.skeleton` until the modules the current route needs have loaded."
+  },
+  {
+   "identifier": "PAP-441",
+   "section": "Dependencies",
+   "append": "* The sample suite and its two implementations are delivered by `r4/module-system/sample-module` (hard); the normaliser and `fixtures.lock` by `r4/module-system/conformance-normaliser` (hard, shared with PAP-435). Blocks `r4/module-system/test-kernel` and `r4/module-system/module-scaffold`."
+  },
+  {
+   "identifier": "PAP-442",
+   "section": "Spec",
+   "append": "* `--dry-run` evaluates every gate for the current step and prints the verdicts without writing the state file. * The scripted sample swap uses `r4/module-system/sample-module` (`good` to `v2`); Linear umbrella, step issues and the Needs Justin card are delivered by `r4/module-system/swap-linear-umbrella` (soft; `--no-linear` until it lands). * `contract:diff` (`r4/module-system/contract-diff`) output is required evidence for step 1 when the contract version changed."
+  },
+  {
+   "identifier": "PAP-446",
+   "section": "Spec",
+   "append": "* Success criteria also count lines changed in `apps/web` (must be zero outside the kernel boot file) and in `packages/contracts/app-shell` (must be zero, or the drill is a contract change, not a swap). * PAP-84 vision diff is a hard dependency for the screenshot classification; PAP-82 alone gives contact sheets without verdicts. * Rehearsal: the drill is first run end to end on `r4/module-system/sample-module` (`good` to `v2`) the day before, so CLI defects surface before the shell run."
+  },
+  {
+   "identifier": "PAP-433",
+   "section": "Spec",
+   "append": "* Reserved extension fields validated when present: `secrets: string[]` (PAP-444), `lifecycle: { startupBudgetMs, healthIntervalMs, drainTimeoutMs }` (`r4/module-system/lifecycle-and-health`), `resilience` per port (`r4/module-system/port-resilience`) and `issues: string[]` (PAP-439 map); unknown fields still fail. `pnpm modules:validate --fix` is reserved for `r4/module-system/port-usage-tracking`."
+  },
+  {
+   "identifier": "PAP-436",
+   "section": "Test plan",
+   "append": "* Conformance case shared with every subscriber contract: a duplicate delivery of the same `event.id` (as happens under `dualPublish`) must be a no-op, asserted by the runner for each subscriber double; `dualPublish` and PAP-304 idempotency keys are cross-referenced in `docs/platform/events.md`."
+  },
+  {
+   "identifier": "PAP-438",
+   "section": "Edge cases",
+   "append": "* Fill throws during render: the per-fill error boundary reports through PAP-368 with `slot` and `module`, renders `ui.errorState` inline and the rest of the slot renders; a fill that throws three times in a minute is unregistered for the session (`slot.fill_disabled` telemetry). * Fills are landmarks: `shell.nav` fills render inside `<nav>` with `aria-label` from the manifest `title`, checked by the PAP-73 audit."
+  },
+  {
+   "identifier": "PAP-445",
+   "section": "Spec",
+   "append": "* Generated pages include a \"Health and swaps\" section reading `/healthz.modules` (`r4/module-system/lifecycle-and-health`), the bound implementations and last shadow diff count (PAP-435) and the last `contract-diff` verdict (`r4/module-system/contract-diff`), so the module page is the one place a session checks before touching a module."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "data-layer",
+   "title": "Per-module Postgres schema namespaces (`CREATE SCHEMA <module>`) with RLS defaults, so a module's tables are physically grouped and a swap can expand-contract inside one schema",
+   "why": "PAP-265 applies migrations per module but tables share `public`; swap safety and `pnpm modules:purge` (PAP-266) become simpler with namespaces."
+  },
+  {
+   "targetProject": "data-layer",
+   "title": "Cross-module unit of work: `UnitOfWorkPort` in `contract-data-layer` that lets a request span repositories from two modules in one transaction with the outbox",
+   "why": "Business-core posting rules (PAP-394) and tables automations (PAP-388) both need it; today each module opens its own transaction."
+  },
+  {
+   "targetProject": "quality",
+   "title": "Release-candidate certification (PAP-254) requires `conformance.json` green for every registered suite and a clean `contract-diff` report, and the digest (PAP-89) lists modules whose shadow diff count is non-zero",
+   "why": "The module system produces the artefacts; the release train does not yet read them."
+  },
+  {
+   "targetProject": "realtime",
+   "title": "Window bus contract (`contract-realtime` `WindowBusPort`) as the only cross-window channel the kernel permits, with a conformance fixture for two windows",
+   "why": "PAP-434 names the window bus as the single cross-window channel but PAP-145 and PAP-262 both define `BroadcastChannel('paperos-windows')` payloads independently."
+  }
+ ]
+}
