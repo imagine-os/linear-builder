@@ -17,7 +17,9 @@ The scripts kept their original relative layout:
 |---|---|
 | `build_plan.py` | Round 1: reads `plan.json` and the spec buckets, creates team config, projects, milestones, 206 issues and relations; writes `linear-ids.json`. |
 | `lin.py`, `step*.py` | Round-1 helpers and follow-up steps (duplicates, PAP-5 handling, relations). |
-| `round2/snapshot*.py` | Full read-only snapshots of the team (`linear-snapshot*.json`). |
+| `round2/snapshot*.py` | Full read-only snapshots of the team (`linear-snapshot*.json`) up to round 3. |
+| `round4/snapshot4.py` | Round 4: the current snapshot writer. Whole team including the five new projects; per issue estimate, dueDate, cycle, labels with groups, parent/children, relations both ways, milestone, attachments, comment count, chunk label; team settings, cycles, projects with lead/priority/health/links/latest update, initiatives, templates, views, documents. Writes `plan/linear-snapshot-live.json` and `plan/round4/snapshot-summary.md`. Self-contained (`LINEAR_API_KEY`, repo root from `PAPEROS_REPO`), re-runnable, read-only. |
+| `gen_specs.py` | Regenerates `specs/<project-key>/pap-N-slug.md` and `specs/README.md` from the snapshot (round-3 format plus `estimate`, `dueDate`, `cycle`; `--no-new-keys` for the legacy format; `OUT=` and `SNAPSHOT=` to test in a temp dir). |
 | `round2/agent0..agent6/` | Round-2 audit agents per project group: `rw_*.py` rewrite descriptions, `new_*.py` hold the specs of gap and child issues, `create_*.py` create them, `relations.py` / `push_*.py` push edges and updates, `docs.py` publishes the "Round 2 pending issues" documents when `issueCreate` hits the plan cap. |
 | `round2/create_contracts.py`, `apply_golden_path.py`, `golden_path_specs.py` | Contracts and golden-path documents and their issues. |
 | `round2/characters/publish.py` | Publishes the roster and nine character sheets. |

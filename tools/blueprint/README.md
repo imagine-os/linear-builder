@@ -1,5 +1,26 @@
 # Blueprint page builder
 
+## v5 (round 4)
+
+`build_v5.js` is the current builder: `node tools/blueprint/build_v5.js` renders `site/index.html`, `site/data.json` and,
+with `PAPEROS_ARTIFACT_OUT`, the self-contained artifact body. It reads the round-4 snapshot written by
+`tools/linear/round4/snapshot4.py` (estimates, due dates, cycles, initiatives, templates, views, team settings) plus
+`plan/round4/merge-report.md`, `plan/round4/verify.md`, `plan/round4/gaps/cross-cutting.json` (keys and phases of the five
+new projects) and `docs/linear-features.md` (the Linear features table). On top of every v4 view it adds, in
+`template_v5.html` and `v5/round4.js` + `v5/round4.css`: an **Initiatives** section (five cards with linked projects,
+issues, points, ready count, progress = points done over points planned, state bar), a **Cycles** strip (C1/C2/C3 with
+dates, points assigned versus points due inside the window, the "cycles hold in-flight work; planned timing is due dates
+and Chunk labels" rule and the team settings), an **Estimates** view (points per project stacked by state with a table
+view, burn-up of cumulative points due by date against points done, 0 today), a **Round 4** section (before/after
+numbers from the snapshot, the 23 projects with new-issue counts, twelve gaps from the digests, the Linear features
+table), **Triage** and **Needs Justin** tiles on the first screen (linking to the Linear views), cycle / points /
+initiative / "new in round 4" / "in Triage" filters and due-date and points sorts in the shared filter bar, and
+estimate, due date and cycle in the issue index. New project hues (`NEW_PROJECT_STYLE`) were checked with the dataviz
+palette validator; Triage got its own state colour (`--st-triage`). `v5/views.js`, `modules.js` and `chunks.js` are the
+v4 files with the filter extensions. The previous page is kept as `site/previous/index-v4.html`.
+
+## v4
+
 `build_v4.js` renders `site/index.html` (GitHub Pages) and `site/data.json` from the live Linear snapshot, and the
 self-contained artifact body when `PAPEROS_ARTIFACT_OUT` is set. Run with Node 20+ from anywhere:
 
