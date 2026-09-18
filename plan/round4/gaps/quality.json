@@ -1,0 +1,1170 @@
+{
+ "project": "quality",
+ "projectName": "Quality Pipeline",
+ "benchmarks": [
+  "GitHub Actions",
+  "Chromatic",
+  "Percy",
+  "Playwright trace viewer",
+  "Sentry",
+  "CodeRabbit",
+  "Greptile",
+  "Snyk",
+  "SonarQube",
+  "Codecov",
+  "Stryker",
+  "Lighthouse CI",
+  "k6",
+  "OWASP ZAP",
+  "Schemathesis",
+  "BuildPulse (flake management)",
+  "GitHub merge queue",
+  "release trains (Chromium-style)"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "Static checks: typecheck, lint, format, unit tests, build, commitlint, generated drift",
+   "coveredBy": [
+    "PAP-78"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Affected-only runs and remote cache",
+   "coveredBy": [
+    "PAP-78"
+   ],
+   "status": "covered",
+   "note": "Turbo filter and remote cache"
+  },
+  {
+   "feature": "Required-checks matrix per PR type (docs-only, infra, code)",
+   "coveredBy": [
+    "PAP-78"
+   ],
+   "status": "partial",
+   "note": "path filters exist; no single aggregate check policy; amendment"
+  },
+  {
+   "feature": "Package coverage floor",
+   "coveredBy": [
+    "PAP-78"
+   ],
+   "status": "covered",
+   "note": "lines 70 per package"
+  },
+  {
+   "feature": "Patch (diff) coverage gate with inline annotations",
+   "coveredBy": [
+    "r4/quality/diff-coverage-gate"
+   ],
+   "status": "gap",
+   "note": "Codecov-style patch coverage"
+  },
+  {
+   "feature": "Mutation testing",
+   "coveredBy": [
+    "r4/quality/mutation-testing-nightly"
+   ],
+   "status": "gap",
+   "note": "Stryker nightly on three packages; deferred"
+  },
+  {
+   "feature": "Dependency vulnerability audit and SBOM",
+   "coveredBy": [
+    "PAP-80"
+   ],
+   "status": "covered",
+   "note": "osv-scanner, pnpm audit, CycloneDX"
+  },
+  {
+   "feature": "Secret scanning (diff and history)",
+   "coveredBy": [
+    "PAP-80"
+   ],
+   "status": "covered",
+   "note": "gitleaks"
+  },
+  {
+   "feature": "SAST with custom rules tied to threat-model controls",
+   "coveredBy": [
+    "PAP-80",
+    "PAP-219"
+   ],
+   "status": "covered",
+   "note": "Semgrep"
+  },
+  {
+   "feature": "Container image scanning",
+   "coveredBy": [
+    "PAP-80"
+   ],
+   "status": "covered",
+   "note": "Trivy"
+  },
+  {
+   "feature": "License policy in CI",
+   "coveredBy": [
+    "PAP-211",
+    "PAP-80"
+   ],
+   "status": "covered",
+   "note": "libraries project"
+  },
+  {
+   "feature": "Supply-chain integrity: pinned actions, provenance, signatures",
+   "coveredBy": [
+    "PAP-358"
+   ],
+   "status": "covered",
+   "note": "forge project"
+  },
+  {
+   "feature": "Dynamic application security testing (ZAP)",
+   "coveredBy": [
+    "PAP-357",
+    "r4/quality/dast-zap-nightly-and-authenticated-scans"
+   ],
+   "status": "covered",
+   "note": "split into two children this round"
+  },
+  {
+   "feature": "Security regression suite tagged with control ids",
+   "coveredBy": [
+    "PAP-357",
+    "r4/quality/security-regression-suite"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Security telemetry, alerting and weekly digest",
+   "coveredBy": [
+    "PAP-356",
+    "r4/quality/security-event-catalogue-emitters",
+    "r4/quality/security-alert-rules-routing-digest"
+   ],
+   "status": "covered",
+   "note": "split into two children this round"
+  },
+  {
+   "feature": "Migration safety lint (destructive DDL, locks, RLS gaps, reversibility)",
+   "coveredBy": [
+    "r4/quality/migration-safety-gate"
+   ],
+   "status": "gap",
+   "note": "PAP-254 asks for a reversible flag nobody computes"
+  },
+  {
+   "feature": "AI code review: correctness reviewer",
+   "coveredBy": [
+    "PAP-244"
+   ],
+   "status": "covered",
+   "note": "CodeRabbit/Greptile class"
+  },
+  {
+   "feature": "AI code review: security reviewer with scanner ingestion",
+   "coveredBy": [
+    "PAP-245"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "AI code review: spec-conformance reviewer",
+   "coveredBy": [
+    "PAP-244"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "AI review of docs, specs, prompts, ADRs, changelogs",
+   "coveredBy": [
+    "r4/quality/docs-and-spec-reviewer"
+   ],
+   "status": "gap",
+   "note": "PAP-81 excludes non-code artefacts although PAP-79 has the rubric"
+  },
+  {
+   "feature": "Review harness: read-only tools, idempotent posting, both forges",
+   "coveredBy": [
+    "PAP-243"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Reviewer model routing per builder model (cost doc 4b)",
+   "coveredBy": [
+    "PAP-243"
+   ],
+   "status": "partial",
+   "note": "PAP-243 hard-codes Fable 5.1; amendment"
+  },
+  {
+   "feature": "Review fix loop: blocking review re-queues the builder, round cap, escalation",
+   "coveredBy": [
+    "r4/quality/review-fix-loop"
+   ],
+   "status": "gap",
+   "note": "cost model assumes 30 percent bounce; nothing wires it"
+  },
+  {
+   "feature": "Review calibration, precision and recall, escaped-defect tracking",
+   "coveredBy": [
+    "PAP-241"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Rubrics and severity taxonomy shared by agents and humans",
+   "coveredBy": [
+    "PAP-79"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Gate artefact contract and status registry",
+   "coveredBy": [
+    "PAP-239",
+    "PAP-462"
+   ],
+   "status": "partial",
+   "note": "kind names disagree between PAP-239 and PAP-462; amendment"
+  },
+  {
+   "feature": "Visual regression: story capture across widths and themes",
+   "coveredBy": [
+    "PAP-246"
+   ],
+   "status": "covered",
+   "note": "Chromatic class"
+  },
+  {
+   "feature": "Visual regression: authenticated page capture and baseline workflow",
+   "coveredBy": [
+    "PAP-247"
+   ],
+   "status": "covered",
+   "note": "Percy class"
+  },
+  {
+   "feature": "Contact sheets, sharding, visual artefact",
+   "coveredBy": [
+    "PAP-248"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Video replays of critical flows per width",
+   "coveredBy": [
+    "PAP-83"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Vision agent annotation of screenshots and contact sheets",
+   "coveredBy": [
+    "PAP-84"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Pseudo-locale and RTL visual run",
+   "coveredBy": [
+    "r4/quality/pseudo-locale-and-rtl-visual-run"
+   ],
+   "status": "gap",
+   "note": "deferred"
+  },
+  {
+   "feature": "Cross-browser functional smoke (WebKit, Firefox)",
+   "coveredBy": [
+    "r4/quality/cross-browser-functional-smoke"
+   ],
+   "status": "gap",
+   "note": "deferred; Chromium only today"
+  },
+  {
+   "feature": "Desktop (Tauri) smoke",
+   "coveredBy": [
+    "r4/quality/desktop-tauri-smoke"
+   ],
+   "status": "gap",
+   "note": "deferred; PAP-86 excludes native"
+  },
+  {
+   "feature": "Mobile device e2e",
+   "coveredBy": [
+    "PAP-260"
+   ],
+   "status": "partial",
+   "note": "device proofs in app-shell; no automated flow"
+  },
+  {
+   "feature": "Functional e2e: auth, tenancy, CRUD, permissions, presence",
+   "coveredBy": [
+    "PAP-86"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Test mode: deterministic seed, reset, login-as, clock",
+   "coveredBy": [
+    "PAP-240"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Ephemeral preview stack per PR",
+   "coveredBy": [
+    "PAP-86",
+    "PAP-26"
+   ],
+   "status": "covered",
+   "note": "compose preview and Coolify previews"
+  },
+  {
+   "feature": "Test-id and fixture conventions",
+   "coveredBy": [
+    "PAP-86",
+    "PAP-240"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Recorded HTTP fixtures shared across suites",
+   "coveredBy": [
+    "r4/quality/recorded-http-fixtures-kit"
+   ],
+   "status": "gap",
+   "note": "ten suites each plan their own nock recording"
+  },
+  {
+   "feature": "Quality sandbox repo and seeded-defect catalogue",
+   "coveredBy": [
+    "r4/quality/quality-sandbox-repo-and-seeded-defects"
+   ],
+   "status": "gap",
+   "note": "eleven DoDs depend on a repo no issue creates"
+  },
+  {
+   "feature": "Edge-case hunter: scenario planning from specs",
+   "coveredBy": [
+    "PAP-249"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Edge-case hunter: executor and oracles",
+   "coveredBy": [
+    "PAP-250"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Edge-case hunter: findings, repro tests, nightly library",
+   "coveredBy": [
+    "PAP-251"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "API fuzzing from OpenAPI",
+   "coveredBy": [
+    "r4/quality/api-fuzzing-nightly"
+   ],
+   "status": "gap",
+   "note": "PAP-85 excludes API fuzzing"
+  },
+  {
+   "feature": "Property-based testing in unit suites",
+   "coveredBy": [
+    "PAP-99",
+    "PAP-103"
+   ],
+   "status": "partial",
+   "note": "fast-check used ad hoc; no shared guidance"
+  },
+  {
+   "feature": "Accessibility audit of components (axe, screen reader)",
+   "coveredBy": [
+    "PAP-73",
+    "PAP-156"
+   ],
+   "status": "covered",
+   "note": "design-system and input projects"
+  },
+  {
+   "feature": "Accessibility score budget on pages",
+   "coveredBy": [
+    "PAP-87"
+   ],
+   "status": "covered",
+   "note": "Lighthouse accessibility at or above 95"
+  },
+  {
+   "feature": "Web performance budgets (LCP, INP, CLS, bundle size)",
+   "coveredBy": [
+    "PAP-87"
+   ],
+   "status": "covered",
+   "note": "Lighthouse CI, size-limit"
+  },
+  {
+   "feature": "API and database performance budgets (k6, slow queries, image size)",
+   "coveredBy": [
+    "PAP-242"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Load testing of realtime",
+   "coveredBy": [
+    "PAP-147"
+   ],
+   "status": "covered",
+   "note": "realtime project"
+  },
+  {
+   "feature": "Flaky-test detection and quarantine",
+   "coveredBy": [
+    "PAP-90"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Gate metrics and pipeline health dashboard",
+   "coveredBy": [
+    "r4/quality/gate-metrics-and-pipeline-health"
+   ],
+   "status": "gap",
+   "note": "no aggregation of gate durations, cost, bounce, queue time"
+  },
+  {
+   "feature": "Release train: policy, environments, nightly staging",
+   "coveredBy": [
+    "PAP-252",
+    "PAP-253"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Release certification and Justin approval flow",
+   "coveredBy": [
+    "PAP-254"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Rollback and hotfix path",
+   "coveredBy": [
+    "PAP-252",
+    "PAP-254"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Canary and flag-based rollout",
+   "coveredBy": [
+    "PAP-435",
+    "PAP-366"
+   ],
+   "status": "covered",
+   "note": "module-system and app-shell"
+  },
+  {
+   "feature": "Release digest for the human reviewer",
+   "coveredBy": [
+    "PAP-89"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Changelog generation",
+   "coveredBy": [
+    "PAP-133",
+    "PAP-52"
+   ],
+   "status": "covered",
+   "note": "collab and forge"
+  },
+  {
+   "feature": "QA evidence browser in-app",
+   "coveredBy": [
+    "r4/quality/qa-evidence-browser"
+   ],
+   "status": "gap",
+   "note": "deferred; PAP-239 names a viewer nobody builds"
+  },
+  {
+   "feature": "Screenshot and video annotation to Linear issues",
+   "coveredBy": [
+    "PAP-137"
+   ],
+   "status": "covered",
+   "note": "collab, deferred by schedule"
+  },
+  {
+   "feature": "Quality handbook and how-to front door",
+   "coveredBy": [
+    "r4/quality/quality-handbook"
+   ],
+   "status": "gap",
+   "note": "fourteen reference docs, no index"
+  },
+  {
+   "feature": "Merge queue with speculative-merge gate run",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "cross-project suggestion to forge (PAP-46)"
+  },
+  {
+   "feature": "Runner capacity and CI cost budget (shards, LFS, Docker)",
+   "coveredBy": [
+    "PAP-50"
+   ],
+   "status": "partial",
+   "note": "audit flagged the assumption; cross-project suggestion to forge"
+  },
+  {
+   "feature": "Contract conformance in Gate 1",
+   "coveredBy": [
+    "PAP-441",
+    "PAP-463"
+   ],
+   "status": "covered",
+   "note": "module system"
+  },
+  {
+   "feature": "Contract compatibility matrix",
+   "coveredBy": [
+    "PAP-440"
+   ],
+   "status": "covered",
+   "note": "module system"
+  },
+  {
+   "feature": "Dependency lint and dependency map",
+   "coveredBy": [
+    "PAP-439"
+   ],
+   "status": "covered",
+   "note": "module system"
+  },
+  {
+   "feature": "Chaos and DR drills",
+   "coveredBy": [
+    "PAP-354",
+    "PAP-53"
+   ],
+   "status": "covered",
+   "note": "data-layer and forge"
+  },
+  {
+   "feature": "Agent behaviour review of transcripts",
+   "coveredBy": [
+    "PAP-79",
+    "PAP-110"
+   ],
+   "status": "covered",
+   "note": "rubric plus evals"
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/quality/security-event-catalogue-emitters",
+   "title": "Security telemetry: event catalogue, emitters in API, auth, orchestrator, proxy and Postgres, and the `security_event` table",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Edge-case hunting and release trains",
+   "dueDate": "2026-09-30",
+   "parent": "PAP-356",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-40",
+    "PAP-38"
+   ],
+   "blocks": [
+    "r4/quality/security-alert-rules-routing-digest"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nFirst half of PAP-356: define the security event catalogue once as Zod types in `packages/core`, emit the events from every boundary the threat model names (Better Auth hooks, oRPC middleware, RLS denials, orchestrator, egress proxy, webhook receivers, backup jobs) and persist S0 events in Postgres so detection survives a Loki outage. Rules, routing and the digest are the sibling child; this child makes the events exist and flow.\n\n**Scope**\n\n* In: `packages/core/src/security-events.ts` (catalogue, `emitSecurityEvent()`), emitters wired into `packages/auth` hooks (PAP-223), `apps/api` oRPC middleware (PAP-35, PAP-267), a Postgres log parser job for `42501` via Loki (PAP-40), orchestrator and broker emitters (PAP-298, PAP-300, PAP-299, PAP-111), webhook receivers (PAP-97, PAP-177), backup metrics (PAP-354); migration `security_event`; `docs/security/telemetry.md` section \"Events\".\n* Out: alert rules, Linear routing, Needs Justin cards, weekly digest, Grafana dashboard (sibling child); SIEM products; user-facing notifications (PAP-220).\n\n**Spec**\n\n* Catalogue of at least 25 events named `security.<area>.<name>` with `severity: S0|S1|S2`, `fields` Zod schema and `source` enum; areas `auth`, `authz`, `db`, `agent`, `webhook`, `files`, `backup`, `scan`, `keys`; the list in PAP-356 Spec is the minimum set.\n* `emitSecurityEvent(event)` writes an OTel log record with attribute `paperos.security.event=<name>` and, for S0, inserts into `security_event(id, name, severity, tenant_id?, actor_id?, fields jsonb, request_id, at)` in the platform tenant with 13-month retention (PAP-355 policy).\n* Emitters: `auth.login_failed|login_new_device|passkey_removed|mfa_disabled|impersonation_started|session_revoked_all` from Better Auth hooks; `authz.denied` from the oRPC FORBIDDEN path with procedure and actor; `db.rls_denied` from a Loki query job counting `42501` per role every minute; `db.bypass_used` from PAP-38 when `app.bypass` is set; `agent.*` from the deny-list hook, broker proxy and kill switch; `webhook.signature_invalid|replay_detected`; `files.mime_rejected|sha_mismatch`; `backup.stale|check_failed`; `scan.new_s0_finding` from the PAP-80 nightly; `keys.rotation_overdue` from the PAP-219 runbook cadence file.\n* Every emitter is behind a single helper so a missing OTel exporter never throws in the request path; events are sampled never (security events are complete).\n* `pnpm security:simulate <scenario>` produces each event class against the local stack for the sibling's rule tests.\n\n**Interface contract**\n\n* Provides: `emitSecurityEvent()`, `SecurityEvent` union type and JSON Schema, table `security_event`, `pnpm security:simulate`, the catalogue table in `docs/security/telemetry.md`.\n* Consumes: PAP-40 collector and Loki, PAP-38 audit bypass hook, the emitter host issues listed in Scope (soft: interim emitters from API and orchestrator only).\n\n**Definition of done**\n\n* Catalogue with 25+ events validates; JSON Schema generated and committed.\n* Every listed emitter fires in an integration test on the compose stack (PAP-42); table of event name to test.\n* S0 events appear in both Loki and `security_event` within 5 s; a Loki outage test still records the row.\n* `pnpm security:simulate login-burst` produces 25 `auth.login_failed` events (recording).\n* Docs section; changelog under \"Security\"; Linear comment with the catalogue table.\n\n**Test plan**\n\n* Unit: catalogue schema per event; helper never throws when the exporter is down; Loki `42501` parser on fixture log lines.\n* E2E: compose stack scenario per emitter; Postgres row assertions for S0.\n\n**Demo**\n\nRun `pnpm security:simulate login-burst` against the local stack, then query `security_event` and the Loki explorer for `paperos.security.event` and see 25 matching records. Under one minute.\n\n**Edge cases**\n\n* Emitter host issue not merged yet (for example PAP-177 Stripe): the emitter ships in this child behind a feature check and is listed as `pending` in the docs table.\n* Event flood from a hostile client: emission is unsampled but the sibling's cooldown handles alert noise; Postgres insert batches 100 rows per transaction.\n* Tenant context missing (platform-level event): `tenant_id` null is allowed only for `agent.*`, `backup.*`, `keys.*`, `scan.*`.\n* PII in event fields: schemas forbid free-text fields except `reason`, which is redacted by PAP-107 `redact()`.\n\n**Dependencies**\n\nHard: PAP-40, PAP-38. Soft: PAP-223, PAP-35, PAP-298, PAP-300, PAP-299, PAP-111, PAP-97, PAP-177, PAP-354, PAP-355.\n\n**Agent**\n\nBuilder: Sentinel (Security Auditor) with Forge (Ops Runner) for the Loki job. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/quality/security-alert-rules-routing-digest",
+   "title": "Security telemetry: rules engine, S0 routing to the pinned alerts issue and Needs Justin, weekly digest and Grafana dashboard",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "Edge-case hunting and release trains",
+   "dueDate": "2026-09-30",
+   "parent": "PAP-356",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "r4/quality/security-event-catalogue-emitters",
+    "PAP-97"
+   ],
+   "blocks": [
+    "PAP-89"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nSecond half of PAP-356: turn the event stream into decisions. A small rule evaluator reads `ops/security/alerts.yaml`, routes S0 hits to the pinned `PAP-SECURITY-ALERTS` issue (and to a PAP-94 decision card when the rule says `page`), accumulates S1 and S2 into a Sunday digest, and renders the `Security` Grafana dashboard, so Justin hears about an attack within five minutes and about everything else once a week.\n\n**Scope**\n\n* In: `ops/security/alerts.yaml` with Zod schema, evaluator `apps/api/src/security/alerts.ts` (worker job on PAP-43 or Grafana alerting where simpler), Linear routing through the PAP-97 `linearComment` helper and the pinned issue id in orchestrator config, `ops/security/alert-suppressions.yaml`, weekly digest job and `templates/security-digest.md`, `ops/observability/dashboards/security.json`, `docs/security/telemetry.md` sections \"Rules\" and \"Digest\".\n* Out: the events and emitters (sibling child), incident handling steps (PAP-219 playbook), the release digest itself (PAP-89 links this digest).\n\n**Spec**\n\n* Rule shape `{ id, event, window, threshold, groupBy, severity, route: alert|digest, page?: true, runbook, cooldownMin: 30 }`; initial rules are the PAP-356 list: `auth.login_failed > 20 per account per 10 min` or `> 200 per IP`, any `agent.canary_seen` (page), any `db.bypass_used` outside impersonation and purge paths, `db.rls_denied > 5 per minute` from `paperos_app`, `webhook.signature_invalid > 3 per hour`, `backup.stale`, `agent.credential_anomaly` on a `destructive` host (page), `scan.new_s0_finding`.\n* Evaluator runs every minute over Loki (or `security_event` for S0) with sliding windows; a hit posts one comment on `PAP-SECURITY-ALERTS` and edits it in place with a counter during the cooldown (PAP-97 pattern); `page` rules also call `requestDecision()` (PAP-94) with containment options from the runbook, priority Urgent; containment defaults (revoke-all via PAP-300, pause claiming via PAP-283 drain) apply immediately and are reversible.\n* Digest job Sunday 18:00 UTC renders counts per event, top actors, new findings, rotation status, backup and drill status, open S0s; posted as a comment on the alerts issue and linked from PAP-89 section 3.\n* Suppressions file with expiry, same rules and checker as PAP-80 waivers; expired suppressions fail the job.\n* Dashboard: events per minute by area, top rules firing, open S0 count, backup age, rotation status.\n\n**Interface contract**\n\n* Provides: `alerts.yaml` schema, `evaluateRules()`, pinned issue id `security.alertsIssueId` in orchestrator config, digest template, dashboard JSON, `securityDigestHealth` summary for PAP-89.\n* Consumes: sibling catalogue and `security_event`, PAP-97 Linear helper, PAP-94 `requestDecision()`, PAP-43 jobs, PAP-40 Grafana, PAP-300 `revoke --all`, PAP-283 `/admin/drain`.\n\n**Definition of done**\n\n* Induced scenarios on staging each route within 5 minutes: 25 failed logins (alert), canary in an outbound request (alert plus Needs Justin card), invalid Stripe signature (digest), paused backup job (alert after threshold); table with timestamps.\n* Alert storm test: 500 hits in a minute produce one comment edited in place.\n* One weekly digest posted with real staging data; dashboard screenshot at 1280 px light and dark.\n* Docs sections; changelog under \"Security\"; Linear comment with the scenario table.\n\n**Test plan**\n\n* Unit: window and threshold arithmetic with a fake clock, cooldown edit-in-place, suppression expiry, digest renderer snapshot.\n* E2E: staging induced scenarios from `pnpm security:simulate`; Needs Justin card appears for the canary case and is answerable with `approve`.\n\n**Demo**\n\nRun `pnpm security:simulate canary-exfil` against staging, watch the alert comment appear on `PAP-SECURITY-ALERTS`, the decision card land in Needs Justin and the Grafana panel spike; open last Sunday's digest. Ninety seconds.\n\n**Edge cases**\n\n* Justin on holiday: `page` cards keep the PAP-94 48 h default except containment defaults, which apply immediately and are reversible.\n* Loki down: S0 evaluation continues from `security_event`; a `telemetry.degraded` event is itself S1 and appears in the digest.\n* Rule references an event the catalogue lacks: schema validation fails CI with the rule id.\n* Agent legitimately hitting deny rules while exploring: `agent.deny_list_hit` is digest-only unless three S0 hits in one session (PAP-111 kill).\n\n**Dependencies**\n\nHard: r4/quality/security-event-catalogue-emitters, PAP-97. Soft: PAP-94, PAP-43, PAP-40, PAP-300, PAP-283, PAP-89.\n\n**Agent**\n\nBuilder: Sentinel (Security Auditor) with Forge (Ops Runner) for the dashboard. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/quality/dast-zap-nightly-and-authenticated-scans",
+   "title": "DAST: nightly ZAP baseline, weekly authenticated full scan per seeded audience, SARIF merge and `gate/dast` status",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Edge-case hunting and release trains",
+   "dueDate": "2026-09-30",
+   "parent": "PAP-357",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-80",
+    "PAP-240",
+    "PAP-26"
+   ],
+   "blocks": [
+    "PAP-254",
+    "r4/quality/security-regression-suite"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Infra M\n\n**Goal**\n\nFirst half of PAP-357: attack the running staging application automatically. OWASP ZAP runs a nightly baseline scan against the web app and the OpenAPI document and a weekly authenticated full scan as each seeded audience, findings land in `reports/security.json` with deterministic ids and new S0/S1 findings open deduplicated Linear issues. The hand-written regression suite is the sibling child.\n\n**Scope**\n\n* In: `.github/workflows/dast.yml` (nightly 03:30 UTC after the PAP-253 deploy, `workflow_dispatch`, label `dast` on PR previews), `ops/security/zap/` (baseline and full-scan configs, context file, authentication script using `/__test/login-as`), SARIF conversion into the PAP-80 merge step, status `gate/dast` on the RC branch, Linear issue template `DAST finding`, `docs/quality/dast.md` sections \"ZAP\".\n* Out: the regression suite (sibling), external penetration testing, fuzzing of the formula engine (PAP-85), load (PAP-242), WAF tuning.\n\n**Spec**\n\n* `zaproxy/zap-stable` on the self-hosted runner (PAP-50); nightly `zap-baseline.py -t https://staging.<domain>` and `zap-api-scan.py -t https://api.staging.<domain>/api/openapi.json -f openapi` (PAP-269 document); weekly `zap-full-scan.py` authenticated as `customer-pro`, `staff-support` and `admin` via a ZAP script that calls `POST /__test/login-as` (PAP-240) and stores the cookie.\n* Context excludes `/__test/*`, sign-out and destructive routes; the `e2e-dast` tenant is reset by `/__test/reset` after each run; a dedicated `dast` actor is allowlisted in the PAP-35 rate limiter.\n* Severity mapping to PAP-79: ZAP High = S0, Medium = S1, Low = S2, Informational dropped; finding id = `findingId('zap', pluginId, url path class, alert name)` so re-runs dedupe.\n* Output merged by `ops/security/merge-sarif.ts` (PAP-80) into `reports/security.json` with `tool: zap`; new S0/S1 open or update one Linear issue via PAP-97, deduped by finding id; `gate/dast` set on the RC branch head and required by PAP-254 certification within 7 days.\n* Runtime budgets: baseline under 10 min, API scan under 10 min, weekly full scan under 45 min; staging down at run time retries once after 60 min then posts `dast.skipped` to the security digest.\n\n**Interface contract**\n\n* Provides: workflow `dast.yml`, ZAP configs and auth script, `reports/security.json` entries with `tool: zap`, status `gate/dast`, issue template `DAST finding`, the shared waiver file usage.\n* Consumes: PAP-80 merge step and waivers, PAP-240 `login-as` and `reset`, PAP-26 staging, PAP-269 OpenAPI, PAP-50 runner, PAP-97 issue creation, PAP-239 schema.\n\n**Definition of done**\n\n* Nightly baseline and API scan green for a week with every finding fixed or waived with expiry (waiver table in the comment).\n* Weekly authenticated scan runs as three audiences; the run summary shows per-audience alert counts.\n* A seeded missing `HttpOnly` flag and a reflected parameter on a preview are reported at the mapped severity (links).\n* `gate/dast` required in the PAP-46 ruleset for `release/*` branches.\n* Docs section; changelog under \"Security\"; Linear comment with the first scan summary.\n\n**Test plan**\n\n* Unit: severity mapping table, finding id determinism across two ZAP reports, waiver expiry.\n* E2E: on-demand run against a PR preview with label `dast`; nightly staging run; reset of the `e2e-dast` tenant verified.\n\n**Demo**\n\nOpen the latest `dast.yml` run summary: baseline and API scan with zero High, three authenticated contexts; then add label `dast` to a preview PR carrying a seeded header regression and watch the S1 appear in the Security comment. Ninety seconds.\n\n**Edge cases**\n\n* ZAP spider hits a destructive route despite the exclusions: the tenant is disposable and reset; the route is added to the context file by PR.\n* False positives (CSP report-only, framework fingerprints): waived by rule id with expiry in the shared waiver file.\n* Rate limiter trips for other jobs: dedicated actor and IP allowlisted; the limiter test in the sibling uses its own actor.\n* OpenAPI document missing: API scan skipped with a notice, baseline still runs.\n\n**Dependencies**\n\nHard: PAP-80, PAP-240, PAP-26. Soft: PAP-269, PAP-50, PAP-97, PAP-239, PAP-46.\n\n**Agent**\n\nBuilder: Sentinel (Security Auditor) with Forge (Ops Runner) for the runner. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/quality/security-regression-suite",
+   "title": "Security regression suite: 30+ control-tagged tests (headers, CSRF, IDOR across tenants, rate limits, upload abuse, webhook replay, SSRF, Tauri origin) blocking the release candidate",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Edge-case hunting and release trains",
+   "dueDate": "2026-09-30",
+   "parent": "PAP-357",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-80",
+    "PAP-240",
+    "PAP-64",
+    "r4/quality/dast-zap-nightly-and-authenticated-scans"
+   ],
+   "blocks": [
+    "PAP-254"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nSecond half of PAP-357: encode the PAP-219 hardening baseline as failing tests. `packages/security-tests` holds Playwright and Vitest cases, each tagged with a `SEC-*` control id, that run in Gate 1 for PRs touching auth, files, webhooks or tenancy and nightly against staging, feeding `reports/security.json` and `gate/dast`.\n\n**Scope**\n\n* In: `packages/security-tests/` (Vitest for API cases, Playwright for browser cases), `SEC-*` tagging and `pnpm security:controls --verify test`, path-filtered Gate 1 job `security-tests`, JUnit to SARIF conversion into the PAP-80 merge, seeded-defect fixtures, `docs/quality/dast.md` section \"Regression suite\".\n* Out: ZAP scans (sibling), permission matrix tests (PAP-64 owns policy-level checks; this suite reuses its fixtures for IDOR), load (PAP-242).\n\n**Spec**\n\n* Cases, each citing a control: headers and CSP on `/`, `/auth/sign-in`, `/api/*` (no `unsafe-inline`, nonce differs per response); CSRF: mutating oRPC call with a session cookie and a foreign `Origin` returns 403; IDOR: for every entity in the PAP-64 fixtures, tenant B ids fetched as tenant A via `get`, `update`, `archive`, signed file URL (PAP-37) and Electric shape with a forged `where` (PAP-36) return 403, 404 or empty; enumeration: ids are uuid v7, numeric ids flagged; rate limit: 700 requests in a minute as one actor returns 429 with `Retry-After` (PAP-35); auth: no session fixation after login, cookie flags, account-existence parity on passwordless flows (timing and message), magic link single use and 15 min expiry, impersonation read-only (PAP-61); uploads: polyglot image rejected by sniffing, SVG served with `sandbox` CSP, 101 MB rejected (PAP-37); webhooks: Linear, forge and Stripe receivers reject bad signatures, replayed `webhookId`, timestamps older than 60 s (PAP-97, PAP-177); batch abuse of `/api/rpc/batch` capped; open redirect on `redirect_to`; SSRF on webhook endpoint creation (`169.254.169.254`, `localhost`, `10.0.0.0/8`) rejected (PAP-222); Tauri: `tauri://localhost` origin accepted only with a bearer token (PAP-225).\n* Every test is `test('SEC-API-01 ...')` and registers in `ops/security/controls.yaml` `verify: test`; `pnpm security:controls --verify test` lists unverified controls.\n* Gate 1 job runs the suite when the PR touches `apps/api/**`, `packages/auth/**`, `packages/files/**`, `packages/permissions/**`; nightly runs against staging after the ZAP baseline; results converted to SARIF (`tool: security-tests`) and merged.\n* Seeded defects under `packages/security-tests/fixtures/defects/`: route without origin check, missing `HttpOnly`, IDOR on a fixture entity, webhook receiver accepting a replay; each toggled by an env flag on the local stack.\n\n**Interface contract**\n\n* Provides: `packages/security-tests` with the `SEC-*` convention, Gate 1 job `security-tests`, SARIF entries, `pnpm security:controls --verify test`, seeded-defect flags for the calibration of the security reviewer (PAP-245).\n* Consumes: PAP-80 merge step, PAP-240 test users, PAP-64 fixtures, PAP-219 `controls.yaml`, PAP-42 local stack, sibling scan job for the nightly slot.\n\n**Definition of done**\n\n* At least 30 controls covered; every test names its `SEC-*` id; `--verify test` shows them verified.\n* Each seeded defect fails exactly its tests (table of defect to test ids).\n* Suite under 4 minutes in Gate 1; nightly staging run green for three nights.\n* PAP-81 security reviewer prompt gains the rule that routes touching auth, files, webhooks or tenancy must reference a `SEC-*` test (comment on PAP-245).\n* Docs section; changelog under \"Security\"; Linear comment with the control coverage table.\n\n**Test plan**\n\n* Unit: IDOR matrix generator from PAP-64 fixtures, signature and replay helpers, control tagging lint.\n* E2E: suite against the local stack in Gate 1 and staging nightly; seeded defect toggles.\n\n**Demo**\n\nRun `pnpm security:test` against the local stack (30 green), flip `securityHeaders({ csp: false })` and watch three tests fail naming their `SEC-*` ids; open `pnpm security:controls --verify test`. Ninety seconds.\n\n**Edge cases**\n\n* A control that cannot be tested automatically (physical key policy): marked `verify: manual` with an owner, never silently unverified.\n* New route added without a security test: the reviewer rule above flags it; the suite lint lists untagged tests.\n* Rate-limit test contaminates other suites: dedicated `sectest` actor with a reset hook.\n* Tauri case needs a desktop runner: runs as a unit test of the origin check middleware, not a real Tauri process.\n\n**Dependencies**\n\nHard: PAP-80, PAP-240, PAP-64, r4/quality/dast-zap-nightly-and-authenticated-scans. Soft: PAP-219, PAP-37, PAP-36, PAP-35, PAP-61, PAP-97, PAP-177, PAP-222, PAP-225, PAP-42.\n\n**Agent**\n\nBuilder: Sentinel (Security Auditor). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/quality/docs-and-spec-reviewer",
+   "title": "Docs and spec reviewer definition: fourth Gate 2 reviewer for PRs that change specs, docs, prompts, ADRs or changelogs",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Gates 1 and 2 on every PR",
+   "dueDate": "2026-09-25",
+   "parent": "PAP-81",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-243",
+    "PAP-79"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-79 ships a `docs-and-changelog` rubric and an `agent-behaviour` rubric, but PAP-81 only defines correctness, security and spec-conformance reviewers and lists non-code artefacts as out of scope, so a third of the PRs in this build (specs, docs, prompts, ADRs, memory) get no Gate 2 review. This child adds the fourth reviewer, path-filtered to those files, so Quill's and Atlas's output is reviewed like code.\n\n**Scope**\n\n* In: `.claude/agents/reviewers/docs-and-spec.md` (Sentinel sub-character definition), rubric embedding from PAP-79 `docs-and-changelog.md` and `agent-behaviour.md`, path filter in `review.yml`, seeded fixtures under `ops/quality/seeded-prs/docs/`, calibration cases, `docs/quality/review-agents.md` section.\n* Out: the harness (PAP-243), code reviewers (PAP-244, PAP-245), the spec validator itself (PAP-115 runs in Gate 1).\n\n**Spec**\n\n* Trigger: PR changes files under `specs/**`, `docs/**`, `.claude/**`, `docs/adr/**`, `CHANGELOG*` or `packages/agents/prompts/**` and no `apps/**` or `packages/**` source; mixed PRs run this reviewer in addition to the three others.\n* Checks: every `must` has a verifying check named beside it (Quill's rule), links resolve, ADR has status, alternatives and consequences (PAP-130 template), spec passes `pnpm spec validate` and declares states and edge cases, prompt changes keep the PAP-285 style rules (no model names, mechanism-linked limits) and the word budget, changelog entries cite PRs, memory entries carry provenance, no untrusted instruction text (PAP-299 scanner result attached).\n* Output `Finding[]` with `rubricId` from `RUB-DOC-*` and `RUB-AGENT-*`, `rubricCoverage`, statuses `gate/2-docs` (added to the PAP-239 registry) and folded into `gate/2-review`; severities: broken link or failing spec S1, style S2, wording S3.\n* Cost cap $1 per PR; `maxTurns: 20`; read-only tools.\n\n**Interface contract**\n\n* Provides: `ReviewerDefinition` `docs-and-spec`, status `gate/2-docs`, the `RUB-DOC-*` coverage report shape.\n* Consumes: PAP-243 harness, PAP-79 rubrics, PAP-115 validator output, PAP-299 scanner, PAP-285 lint rules.\n\n**Definition of done**\n\n* Seeded PRs (dangling link, ADR without alternatives, spec missing an empty state, prompt naming a model) each caught at the mapped severity; a clean docs PR yields zero blockers.\n* Calibration agreement at or above 0.8 on five docs cases added to the PAP-79 set.\n* Cost under $1 average across 10 PRs; docs section written.\n\n**Test plan**\n\n* Unit: path filter decision table, severity mapping, coverage report writer.\n* E2E: seeded docs PRs through the harness nightly with the real model; mocked SDK on PRs.\n\n**Demo**\n\nOpen the seeded ADR PR without alternatives and read the review: S1 citing `RUB-DOC-03` with the template link; open the clean PR beside it. Under one minute.\n\n**Edge cases**\n\n* PR is a generated file only (`roster.json`, docs tables): reviewer posts `n/a` and passes.\n* Very large doc (Blueprint rewrite): reviewer reviews the diff hunks, not the whole file, and says so.\n* Prompt change without an eval run: S1 pointing at the prompt change-control rule (agents project).\n\n**Dependencies**\n\nHard: PAP-243, PAP-79. Soft: PAP-115, PAP-299, PAP-285, PAP-130.\n\n**Agent**\n\nBuilder: Sentinel (Code Reviewer) with Quill on the rubric. Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/quality/quality-sandbox-repo-and-seeded-defects",
+   "title": "Create the quality sandbox repo `imagine-os/paperos-qa-sandbox` with the seeded-defect catalogue every gate's Definition of done rehearses against",
+   "type": "Infra",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Gates 1 and 2 on every PR",
+   "dueDate": "2026-09-25",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-13",
+    "PAP-51"
+   ],
+   "blocks": [
+    "PAP-243",
+    "PAP-244",
+    "PAP-245",
+    "PAP-246",
+    "PAP-90",
+    "PAP-251",
+    "PAP-254"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Infra S\n\n**Goal**\n\nEleven quality specs (PAP-81, 90, 241, 243, 244, 245, 246, 251, 254, 306, 308 and the new security suite) prove themselves on \"the sandbox repo\" and on seeded PRs, and no issue creates either. This issue provisions `imagine-os/paperos-qa-sandbox` from the template with `forge bootstrap`, mirrors it on Forgejo, and commits a catalogue of seeded defects as branches so every gate has the same deterministic thing to catch.\n\n**Scope**\n\n* In: repo `imagine-os/paperos-qa-sandbox` created from `paperos-template` (PAP-13) via `forge bootstrap` (PAP-51) with mirror, CI and labels; `ops/quality/seeded-defects.yaml` (catalogue) and one branch `seed/<id>` per defect; `pnpm qa:seed --open <id>` opening the seeded PR idempotently; `docs/quality/sandbox.md`; a `rehearsal` label on the repo.\n* Out: the gates themselves; fixture data for tests (PAP-240); the eval fixture repos (PAP-309 pins the template SHA).\n\n**Spec**\n\n* Catalogue entry `{ id, gate: 1|2|3|4|security|flake|release, branch, description, expected: { reviewer, severity, rubricId?, oracle? }, owner }`; initial set: Gate 1 type error, lint error, failing test, bad commit message, drifted generated file (PAP-78); Gate 2 authz bug, null-handling bug, missing empty state, off-by-one pagination, unwired event, cross-tenant query (PAP-244, PAP-245); Gate 3 2 px Button padding, portal heading colour (PAP-82); vision 375 px overflow, low-contrast dark badge (PAP-84); Gate 4 unhandled empty list, emoji-name crash, missing offline state, double submit (PAP-85); security fake AWS key, `lodash@4.17.15`, `dangerouslySetInnerHTML`, procedure without `authorize` (PAP-80); flaky test with 30 percent random failure (PAP-90); perf 300 KB import on the dashboard (PAP-87); release missing status and `testMode: true` (PAP-254).\n* `pnpm qa:seed --open <id>` rebases the seed branch on `main`, opens or updates one PR titled `seed(<gate>): <id>` labelled `rehearsal` and `seed:<id>`, and posts the expected findings as a PR comment for the calibration diff; `--close-all` closes seeds after a rehearsal.\n* The repo runs the same `ci.yml` as the template; secrets are the bot's (PAP-48); nightly `qa:seed --open --all` keeps the seeds rebased so gates can rehearse any morning.\n* Catalogue is validated in CI; every entry's `expected` references a rubric id that exists (PAP-79).\n\n**Interface contract**\n\n* Provides: repo and mirror, `seeded-defects.yaml` schema and catalogue, `pnpm qa:seed`, label `rehearsal`, the `seed:<id>` label grammar consumed by PAP-241 calibration and PAP-310 evals.\n* Consumes: PAP-13 template, PAP-51 bootstrap, PAP-48 bot, PAP-79 rubric ids; the gate issues consume the seeds.\n\n**Definition of done**\n\n* Repo exists on both forges with CI green on `main`; `forge bootstrap` output attached.\n* Catalogue with at least 24 seeds validates; every branch rebases cleanly and `qa:seed --open` opens 24 PRs then `--close-all` closes them (recording).\n* PAP-78 seeded failures each turn Gate 1 red on their PR (links), proving the seeds work before Gate 2 exists.\n* Docs page; changelog under \"Quality\"; Linear comment with the catalogue table.\n\n**Test plan**\n\n* Unit: catalogue schema, branch naming, idempotent PR open and update.\n* E2E: open, rebase and close cycle on the live sandbox repo.\n\n**Demo**\n\nRun `pnpm qa:seed --open gate2-authz`, open the PR, read the expected-findings comment, then watch Gate 1 stay green and (once PAP-245 lands) the security reviewer post the S0. Under two minutes.\n\n**Edge cases**\n\n* Template moves fast and seeds stop rebasing: nightly job opens a `seed-rot` issue listing the branches that failed to rebase.\n* A seed becomes a real bug in the template: the catalogue marks it `promoted` with the fixing PR and the seed is regenerated.\n* Fork PR semantics: seeds are same-repo branches so secrets are available; a separate `fork/` seed exercises the no-secrets path once.\n* Repo used for evals by mistake: PAP-309 pins fixtures to template tarballs, never this repo.\n\n**Dependencies**\n\nHard: PAP-13, PAP-51. Soft: PAP-48, PAP-79, PAP-46.\n\n**Agent**\n\nBuilder: Forge (Ops Runner) with Sentinel (Code Reviewer) on the catalogue. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/quality/review-fix-loop",
+   "title": "Review fix loop: turn a Gate 2 `REQUEST_CHANGES` into a builder re-queue with the findings in the prompt, two rounds maximum, then escalate",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Gates 1 and 2 on every PR",
+   "dueDate": "2026-09-25",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-243",
+    "PAP-281",
+    "PAP-108"
+   ],
+   "blocks": [
+    "PAP-88"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nReviewers post findings (PAP-243) and PAP-108 defines the `review-to-build` handoff, but nothing turns a red `gate/2-review` into a fix session without a human: the cost model assumes a 30 percent bounce rate and re-review, so the loop must be mechanical. This issue wires it: a blocking review re-queues the issue to the original character with the must-fix list in the prompt, the fix commit triggers an incremental re-review, and after two rounds the dispute escalates to Atlas, then Justin.\n\n**Scope**\n\n* In: orchestrator handler on `pull_request_review` with `REQUEST_CHANGES` from a reviewer bot (PAP-97 event), `fixRound` counter on `sessions`, prompt template `prompts/fix-round.md` (must-fix findings, rubric ids, suggestion diffs, `Resolved in <sha>` convention), re-review trigger label `re-review` (PAP-81), state moves `In Review -> In Progress -> In Review`, escalation after round 2 via PAP-108 `escalate`, metrics `review.bounce`, `docs/quality/review-fix-loop.md`.\n* Out: the reviewers and harness (PAP-243), autofix of S2/S3 by the reviewer itself (never), merging (Atlas Merger).\n\n**Spec**\n\n* Trigger: any reviewer status `gate/2-*` turns `fail` on a PR linked to an `In Review` issue; the handler collects `Finding[]` with severity S0 or S1 from the review artefacts (`review.json`) and builds a `review-to-build` handoff (PAP-108) addressed to the issue's builder character.\n* Re-queue: issue moves to `In Progress`, `sessions.fix_round` increments, a session launches on the same worktree and branch with `prompts/fix-round.md`: the must-fix list, the reviewer's suggestion diffs, the instruction to reply to each finding with `Resolved in <sha>` or a one-paragraph dispute, and the ban on force-pushing; budget for a fix round is 50 percent of the issue's size allowance (PAP-111).\n* Fix commit pushed: the PR gets label `re-review`; PAP-243 runs incremental mode on the new diff, updates findings in place, and the statuses recompute; S2 and S3 never trigger a round.\n* Round cap: after `fix_round = 2` with an open S0 or S1, the handler posts an `escalate` handoff to Atlas with both positions; Atlas may waive (S1 only, recorded as a waiver) or file a Needs Justin card (S0 or disputed security finding), matching the Sentinel escalation rules.\n* Metrics: `review_bounce(issue, round, findings, cost)` feeds PAP-98 (bounce cost) and PAP-241 (disputed findings are calibration input).\n\n**Interface contract**\n\n* Provides: handler `onReviewRequestChanges`, prompt template `fix-round.md`, `sessions.fix_round`, label `re-review` trigger contract, metric `review.bounce`, escalation path.\n* Consumes: PAP-243 statuses and `review.json`, PAP-97 review events and `linearComment`, PAP-281 transitions and `launchSession` (PAP-282), PAP-108 handoff kinds, PAP-111 budget hook, PAP-98 metering.\n\n**Definition of done**\n\n* Seeded PR (sandbox) with an S1 null-handling bug: reviewer blocks, a fix session starts within one poll, pushes a fix, re-review resolves the finding and `gate/2-review` turns green (recording).\n* Round cap test: a session that disputes twice produces exactly one `escalate` handoff to Atlas and no third round.\n* S2-only review never triggers a round (test); fix-round budget enforced at 50 percent.\n* Docs; changelog under \"Quality\"; Linear comment with the recording and bounce metrics.\n\n**Test plan**\n\n* Unit: finding filter (S0/S1 only), round counter, prompt rendering with suggestion diffs, escalation decision table.\n* E2E: sandbox seeded PR through reviewer, fix session and re-review with the real harness nightly; mocked SDK on PRs.\n\n**Demo**\n\nOpen the seeded PR: red `gate/2-review`, then the fix session's `Session started` comment on the issue, the fix commit, `Resolved in <sha>` replies and the green re-review. Two minutes of watching.\n\n**Edge cases**\n\n* Reviewer finding is wrong: the builder disputes once with a reason; the reviewer either resolves it or the second dispute escalates; nobody edits findings by hand.\n* Fix session cannot reproduce (flaky test): posts `flake-suspected`, PAP-90 collector classifies, round not counted.\n* PR from a character whose daily budget is exhausted: the round waits with `budget-hold` and Atlas is notified after four hours (PAP-108 rule).\n* Multiple reviewers block at once: one round handles all findings; rounds are per PR, not per reviewer.\n\n**Dependencies**\n\nHard: PAP-243, PAP-281, PAP-108. Soft: PAP-97, PAP-282, PAP-111, PAP-98, PAP-241.\n\n**Agent**\n\nBuilder: Atlas (Dispatcher) with Sentinel (Code Reviewer) on the prompt. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/quality/gate-metrics-and-pipeline-health",
+   "title": "Gate metrics and pipeline health: `qa_gate_runs` table, duration and pass-rate trends, reviewer cost per PR, bounce rate and queue time, with a Grafana board and a digest section",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Staff"
+   ],
+   "milestone": "Edge-case hunting and release trains",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-239",
+    "PAP-40"
+   ],
+   "blocks": [
+    "PAP-89"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nEvery gate writes an artefact and nobody aggregates them: Gate 1 wall time, Gate 2 cost and bounce rate, Gate 3 diff rate, Gate 4 finding yield and runner queue time are the numbers that tell Justin whether the 30 percent QA budget is buying anything. This issue collects every `GateReport` into one table, renders trends and feeds a section of the release digest.\n\n**Scope**\n\n* In: collector step in every gate workflow posting `GateReport` summaries to `POST /api/qa/gate-runs` (or committing `ops/quality/gate-runs.ndjson` on `main` until the API exists), table `qa_gate_runs`, Grafana dashboard `Quality pipeline` (`ops/observability/dashboards/quality.json`), `pnpm qa:metrics --since 7d`, `pipelineHealth` summary for PAP-89 section 3, `docs/quality/metrics.md`.\n* Out: fixing slow gates, runner provisioning (PAP-50), the flake store (PAP-90 owns `qa_flakes`).\n\n**Spec**\n\n* `qa_gate_runs(id, repo, pr, sha, gate, status, started_at, finished_at, duration_ms, queue_ms, findings_s0, findings_s1, cost_usd, shard, runner, artifact_url)` written from every `reports/*.json` via a shared composite action `ops/ci/actions/report-gate` that reads the PAP-239 shape.\n* Derived metrics: p50 and p95 duration per gate, pass rate per gate per day, reviewer cost per PR (from `review-cost.json`), bounce rate (from the fix loop metric), time from PR open to all gates green, runner queue time, findings per PR by severity, flake rate (PAP-90 join).\n* Dashboard panels for each metric with 14-day trend; budget lines from `ops/quality/budgets.yaml` (Gate 1 3 min, Gate 3 8 min, Gate 2 $6 per PR).\n* `pipelineHealth = { gates: [{ name, p95Ms, passRate, budgetOk }], reviewCostPerPr, bounceRate, medianTimeToGreen }` rendered by PAP-89.\n* Alert: a gate over budget p95 for two consecutive days opens one Linear issue for Sentinel (dedupe by gate).\n\n**Interface contract**\n\n* Provides: table `qa_gate_runs`, action `report-gate`, `pnpm qa:metrics`, dashboard JSON, `pipelineHealth` for PAP-89.\n* Consumes: PAP-239 artefacts, PAP-40 Grafana and Postgres, PAP-35 endpoint (soft, NDJSON fallback), PAP-90 flake table, the fix loop metric.\n\n**Definition of done**\n\n* Every gate workflow reports a row; 7 days of data visible on the dashboard (screenshot at 1280 px light and dark).\n* `pnpm qa:metrics --since 7d` prints the table; `pipelineHealth` validates and renders in a digest rehearsal.\n* Seeded slow gate (sleep in a job) trips the budget alert and opens the issue (screenshot).\n* Docs; changelog under \"Quality\"; Linear comment with the dashboard link.\n\n**Test plan**\n\n* Unit: row derivation from each artefact kind, percentile math, budget comparison, alert dedupe.\n* E2E: composite action in a sandbox PR writes rows for all gates.\n\n**Demo**\n\nOpen the `Quality pipeline` dashboard: Gate 1 p95 under 3 minutes, Gate 2 cost per PR, bounce rate for the week; then read the same numbers in the digest rehearsal section. Under one minute.\n\n**Edge cases**\n\n* Gate errored (no artefact): row with `status: error` from the workflow conclusion, never missing.\n* Re-runs of the same SHA: rows keep both; metrics use the latest per gate per SHA.\n* Forgejo-hosted runs: `artifact_url` falls back to the run link.\n* Cost missing for a reviewer run: `cost_usd` null, flagged in the digest as `n/a`.\n\n**Dependencies**\n\nHard: PAP-239, PAP-40. Soft: PAP-35, PAP-90, PAP-89, r4/quality/review-fix-loop.\n\n**Agent**\n\nBuilder: Sentinel (Edge Case Hunter) with Forge (Ops Runner) for the dashboard. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/quality/diff-coverage-gate",
+   "title": "Diff coverage gate: per-PR patch coverage from Vitest `lcov`, 80 percent floor on changed lines, uncovered-line annotations and a coverage delta in the sticky comment",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Gates 1 and 2 on every PR",
+   "dueDate": "2026-09-25",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-78"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nPAP-78 enforces a 70 percent lines floor per package, which lets a PR add 400 untested lines to a well-covered package. Agent-written code needs the Codecov-style check: coverage of the lines this PR changed, annotated inline, with the delta against `main`, so reviewers and Gate 2 can see what was never executed.\n\n**Scope**\n\n* In: `ops/ci/coverage/diff-cover.ts` (parses merged `lcov.info` and `git diff -U0 origin/main`), Gate 1 job `coverage` after `test`, `reports/coverage.json` as a `GateReport<'coverage'>` kind added to PAP-239, inline `::warning` annotations on uncovered changed lines, \"Coverage\" section in the sticky comment, `ops/ci/coverage.budget.json`.\n* Out: raising package floors, mutation testing (own issue), e2e coverage instrumentation.\n\n**Spec**\n\n* Vitest runs with `coverage.reporter: ['lcov', 'json-summary']` per package (Turbo task outputs); the job merges `lcov.info` files, maps paths to the repo root and intersects with changed lines from `git diff -U0 --diff-filter=AM origin/main...HEAD`.\n* Patch coverage = covered changed lines / coverable changed lines; floor 80 percent (`budget.json`, per-path overrides for `**/*.stories.tsx`, generated files and `ops/**` at 0); below the floor the job fails with S1; between 80 and 90 percent warns.\n* Delta: total coverage of `main` fetched from the last `main` run artefact; comment shows `patch 84% (floor 80) | total 71.2% (+0.3)`.\n* Annotations: `::warning file=<path>,line=<n>::uncovered changed line` capped at 50 per PR with a count of the rest; Gate 2 correctness reviewer receives `coverage.json` in its context (PAP-243 assembler) so it can cite untested branches.\n* Docs-only and generated-only PRs skip the job with `status: skipped`.\n\n**Interface contract**\n\n* Provides: `reports/coverage.json`, status `gate/1-coverage` (registry addition), comment section, `coverage.budget.json` schema, `diff-cover.ts` reusable by PAP-242 for API packages.\n* Consumes: PAP-78 `test` job artefacts and sticky comment, PAP-239 schema, PAP-243 context assembler (soft).\n\n**Definition of done**\n\n* Seeded PR adding 40 untested lines fails at 0 percent patch coverage with annotations (link); adding tests turns it green (link).\n* `main` delta computed on three consecutive PRs; missing baseline degrades to patch-only with a note.\n* Job under 30 s on top of `test`; docs section; changelog under \"Quality\".\n\n**Test plan**\n\n* Unit: lcov merge and path mapping, diff hunk parsing with renames, floor and override matching, delta math.\n* E2E: sandbox seeded PR; docs-only PR skips.\n\n**Demo**\n\nOpen the seeded PR's \"Coverage\" section: patch 0 percent in red, click an inline warning on an uncovered line, push a test and watch it turn green. Under one minute.\n\n**Edge cases**\n\n* Renamed file: `--diff-filter=AM` plus rename detection maps old lines correctly; pure renames coverable lines zero.\n* Coverage instrumentation breaks a package (ESM edge): package opts out in `budget.json` with a reason and expiry.\n* Monorepo path aliases in lcov: normalised through the Vite config `root`.\n* PR touching only `*.d.ts`: zero coverable lines, `skipped`.\n\n**Dependencies**\n\nHard: PAP-78. Soft: PAP-239, PAP-243.\n\n**Agent**\n\nBuilder: Forge (Ops Runner) with Sentinel (Code Reviewer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/quality/migration-safety-gate",
+   "title": "Migration safety gate: lint Drizzle migrations for destructive DDL, missing down path, long locks and RLS gaps; require the `migration-ack` checkbox for irreversible changes",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Gates 1 and 2 on every PR",
+   "dueDate": "2026-09-25",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-78",
+    "PAP-32"
+   ],
+   "blocks": [
+    "PAP-254"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / medium — Infra S\n\n**Goal**\n\nTwenty agents writing Drizzle migrations against a live Postgres with RLS is the fastest path to data loss. PAP-254 certification asks for a `migrations reversible` flag from PAP-32 and the digest for an acknowledgement checkbox, but no gate inspects the SQL. This job parses every new migration, flags destructive or locking statements and tables created without RLS, and turns irreversible changes into an explicit acknowledgement.\n\n**Scope**\n\n* In: `ops/ci/migrations/lint-migrations.ts` over `packages/db/migrations/**` new in the PR, rule set `ops/ci/migrations/rules.yaml`, Gate 1 job `migrations` with `reports/migrations.json` (`GateReport<'migrations'>`), the `migration-ack` PR checkbox and label, `pnpm db:lint-migrations`, `docs/quality/migrations.md`; feeds PAP-254 `certify.ts` `migrationsReversible`.\n* Out: running migrations (PAP-32), the expand-contract kit (PAP-443), backups (PAP-30).\n\n**Spec**\n\n* Rules with severities: `DROP TABLE|COLUMN|SCHEMA`, `TRUNCATE`, `ALTER COLUMN ... TYPE` on a populated table, `DELETE` or `UPDATE` without `WHERE` are S0 `destructive`; `ADD COLUMN NOT NULL` without default, `CREATE INDEX` without `CONCURRENTLY`, `ALTER TABLE ... SET NOT NULL` on large tables are S1 `locking`; `CREATE TABLE` without `ENABLE ROW LEVEL SECURITY` and a `tenant_id` policy is S0 `rls-gap` (PAP-34 helpers expected); migration without a matching `down` or an `-- irreversible: <reason>` header is S1.\n* Parser: `pgsql-ast-parser` over each SQL file with a fallback regex pass; Drizzle's `meta/_journal.json` is checked for ordering conflicts between two PRs (duplicate index).\n* Irreversible path: an S0 `destructive` rule can be accepted only when the PR body checkbox `[x] migration-ack: <reason>` is present and the PR carries label `migration-ack` added by Atlas; the acknowledgement is copied into `certification.json` and the digest's risks section (PAP-89, PAP-254).\n* Output `reports/migrations.json` with `data.migrations: [{ file, reversible, findings }]`; status `gate/1-migrations`.\n* The `expand-contract` pattern from PAP-443 is the suggested fix text in every destructive finding.\n\n**Interface contract**\n\n* Provides: `reports/migrations.json`, status `gate/1-migrations`, label and checkbox contract `migration-ack`, `migrationsReversible` input for PAP-254, rules file schema.\n* Consumes: PAP-78 job slot and comment, PAP-32 migrations layout and journal, PAP-34 RLS helpers, PAP-239 schema, PAP-443 patterns (soft).\n\n**Definition of done**\n\n* Seeded migrations (drop column, index without CONCURRENTLY, table without RLS, missing down) each produce the mapped finding (links); a clean expand-contract migration passes.\n* `migration-ack` flow: the drop-column PR passes only with the checkbox and label; `certification.json` carries the reason (test).\n* Journal conflict between two sandbox PRs detected (test).\n* Docs; changelog under \"Quality\"; Linear comment with the seeded results.\n\n**Test plan**\n\n* Unit: rule matcher on 40 SQL fixtures, journal conflict detection, checkbox parser.\n* E2E: sandbox seeded PRs; certification input read by a PAP-254 unit test.\n\n**Demo**\n\nOpen the seeded drop-column PR: red `gate/1-migrations` with the S0 and the expand-contract suggestion; tick `migration-ack`, add the label and watch it pass with the reason echoed. Under one minute.\n\n**Edge cases**\n\n* Generated migration from `drizzle-kit` that reorders columns: only the SQL is judged, not the generator.\n* Dev-only migration for `paperos_dev_*` databases (PAP-42): path-excluded.\n* Very large SQL file: parser timeout 30 s falls back to regex rules and says so.\n* Rule false positive on a `DROP` inside a `DO $$` block creating a temp table: `-- lint: allow <rule> <reason>` inline suppression with expiry, same grammar as PAP-80.\n\n**Dependencies**\n\nHard: PAP-78, PAP-32. Soft: PAP-34, PAP-239, PAP-443, PAP-254.\n\n**Agent**\n\nBuilder: Sentinel (Security Auditor) with Forge (Schema Wright). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/quality/recorded-http-fixtures-kit",
+   "title": "Recorded HTTP fixtures kit: one `msw` recorder and fixture store for Linear, GitHub, Forgejo, Anthropic and Coolify used by every pipeline test suite",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 2,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Gates 1 and 2 on every PR",
+   "dueDate": "2026-09-25",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-13"
+   ],
+   "blocks": [
+    "PAP-93",
+    "PAP-94",
+    "PAP-97",
+    "PAP-105",
+    "PAP-372"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nPAP-91, 93, 94, 97, 101, 105, 243, 306, 372 and 373 each say \"integration against `nock`-recorded Linear responses\" and each would build its own recorder, redaction and fixture layout. One shared kit records once, redacts secrets, replays deterministically in CI and fails loudly when a fixture is stale, so ten suites share fixtures instead of drifting apart.\n\n**Scope**\n\n* In: `packages/testing/http-fixtures/` with `record()`, `replay()`, `msw` handlers for `api.linear.app`, `api.github.com`, the Forgejo API, `api.anthropic.com` (Agent SDK stream shape) and the Coolify API; fixture layout `fixtures/http/<service>/<case>.json` with request matcher and redacted response; redaction rules; staleness check; `pnpm fixtures:record --service linear --case claim-race`; `docs/quality/testing.md` section \"Recorded fixtures\".\n* Out: the suites themselves; live API calls in CI (never); the test-mode seed endpoints (PAP-240).\n\n**Spec**\n\n* Recorder wraps `fetch` (undici interceptor) and the Linear SDK's client; matches on method, URL path, GraphQL `operationName` and a hash of normalised variables; responses stored with `recordedAt`, `service`, `redactions[]`.\n* Redaction: authorization headers dropped, ids from `linear-workspace.json` kept (they are not secrets), emails replaced by `user+<n>@fixture.local`, tokens by `<redacted:kind>`; PAP-107 `redact()` reused for bodies.\n* Replay mode is the default in CI (`FIXTURES_MODE=replay`); an unmatched request fails the test with the closest fixture named; `FIXTURES_MODE=record` requires the broker placeholders (PAP-300) or a local key and is refused on CI.\n* Staleness: fixtures older than 30 days for a service with a changed SDK version print a warning; `pnpm fixtures:verify` re-records against a sandbox team weekly (Atlas job) and diffs shapes.\n* Anthropic stream fixtures: NDJSON of SDK messages (assistant, tool_use, result) so PAP-243, PAP-282 and PAP-308 share one mocked session shape.\n\n**Interface contract**\n\n* Provides: `record()`, `replay()`, `fixtures/http/**` layout, `pnpm fixtures:record|verify`, the shared SDK stream fixture format.\n* Consumes: `msw` 2.x and undici interceptors, PAP-107 `redact()`, PAP-300 placeholders for recording, Linear sandbox team for `verify`.\n\n**Definition of done**\n\n* Kit used by at least three suites (PAP-93 validator webhooks, PAP-97 signatures, PAP-105 `linear-update`) with fixtures committed; their own `nock` code removed.\n* Secret scan of `fixtures/http/**` finds nothing; redaction tests on 20 recorded samples.\n* Unmatched request fails with the closest-fixture hint (test); staleness warning fires on a backdated fixture.\n* Docs section; changelog under \"Quality\"; Linear comment listing consuming suites.\n\n**Test plan**\n\n* Unit: matcher normalisation (variable order, whitespace), redaction table, staleness rule.\n* E2E: record against a Linear sandbox team locally, replay in CI for the three consuming suites.\n\n**Demo**\n\nRun `pnpm fixtures:record --service linear --case issue-update` locally, open the JSON and see the redacted response; run the PAP-93 suite in replay mode with the network disabled and watch it pass. Under one minute.\n\n**Edge cases**\n\n* GraphQL query with pagination cursors: matcher ignores `after` values and stores pages in order.\n* Linear API adds a field: replay still passes (shape superset); `verify` reports the new field.\n* Recording a mutation against production by mistake: `record` refuses unless `--team` names the sandbox team.\n* Binary responses (attachments): stored as base64 with size cap 1 MB.\n\n**Dependencies**\n\nHard: PAP-13. Soft: PAP-107, PAP-300, PAP-91.\n\n**Agent**\n\nBuilder: Sentinel (Code Reviewer) with Atlas (Dispatcher) for the Linear shapes. Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/quality/api-fuzzing-nightly",
+   "title": "API fuzzing nightly: Schemathesis against the OpenAPI document with test-mode auth, per-procedure crash and 5xx findings into `edgecases.json`",
+   "type": "Infra",
+   "phase": "P2",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Agent"
+   ],
+   "milestone": "Edge-case hunting and release trains",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-269",
+    "PAP-240",
+    "PAP-251"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nGate 4 hunts edge cases through the UI and explicitly leaves API fuzzing out. The oRPC layer exposes an OpenAPI document (PAP-269) that Schemathesis can turn into thousands of property-based requests per night, catching 5xx responses, schema violations and idempotency breaks that no Playwright scenario reaches.\n\n**Scope**\n\n* In: `ops/quality/fuzz/` with `schemathesis` config and hooks, nightly job `api-fuzz.yml` after the PAP-253 deploy against staging (and on demand against a preview), auth via `/__test/login-as` per audience, results mapped to `Finding[]` and appended to `reports/edgecases.json` with `class: api.fuzz`, Linear issues via the PAP-251 nightly template, `docs/quality/edge-cases.md` section \"API fuzzing\".\n* Out: UI scenarios (PAP-85), load (PAP-242), security exploitation (PAP-357), fuzzing of the formula engine (tables project).\n\n**Spec**\n\n* `schemathesis run https://api.staging.<domain>/api/openapi.json --checks all --hypothesis-max-examples 200 --workers 4 --header 'Cookie: <login-as>'` per audience `customer-pro`, `staff-support`, `anonymous`; `--exclude-path-regex '/__test/'`; stateful phase enabled where links exist.\n* Checks mapped to PAP-79 severities: `server_error` (5xx) S1, `response_schema_conformance` S1, `not_a_server_error` on auth routes S0 when a 5xx leaks details, `status_code_conformance` S2, `content_type_conformance` S3; idempotency check: same `Idempotency-Key` twice must yield one row (PAP-304).\n* Findings carry the reproducing `curl` from Schemathesis, deterministic `findingId('fuzz', operationId, check, statusCode)`; deduped against PAP-85 findings and prior nights.\n* Destructive operations run only against the `e2e-fuzz` tenant seeded by PAP-240 and reset afterwards; a `--dry-run` mode lists operations without calling.\n* Budget: under 20 minutes per night; over budget reduces `max-examples` and notes it.\n\n**Interface contract**\n\n* Provides: workflow `api-fuzz.yml`, `edgecases.json` entries with `class: api.fuzz`, the operationId to finding mapping, `pnpm fuzz:api --target <url>`.\n* Consumes: PAP-269 OpenAPI document, PAP-240 `login-as` and `reset`, PAP-251 report and Linear template, PAP-304 idempotency semantics, PAP-253 nightly slot.\n\n**Definition of done**\n\n* Three nightly runs against staging with reports; a seeded unhandled `null` in a list procedure is caught as S1 with a repro `curl` (link).\n* Zero findings on `/__test/*` (excluded); tenant reset verified after the run.\n* Docs section; changelog under \"Quality\"; Linear comment with the first report.\n\n**Test plan**\n\n* Unit: severity mapping, finding id determinism, dedupe against fixture findings.\n* E2E: on-demand run against a PR preview; nightly staging run.\n\n**Demo**\n\nTrigger `api-fuzz.yml` against a preview carrying the seeded null bug, open the Edge cases comment and copy the repro `curl`; run it and see the 500. Under two minutes.\n\n**Edge cases**\n\n* OpenAPI document out of date versus the router: schema conformance findings flood; the job first diffs the document against `pnpm api:procedures` and fails fast with `openapi-stale`.\n* Rate limiter trips: `fuzz` actor allowlisted like the DAST actor.\n* Long-running procedure (exports): per-request timeout 10 s, finding `timeout` at S2.\n* Stateful phase creates data the next night sees: tenant reset covers it.\n\n**Dependencies**\n\nHard: PAP-269, PAP-240, PAP-251. Soft: PAP-304, PAP-253, PAP-85.\n\n**Agent**\n\nBuilder: Sentinel (Edge Case Hunter). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/quality/quality-handbook",
+   "title": "Quality handbook: one page that explains the four gates, how to read a PR's evidence, how to update baselines, waive a finding, quarantine a flake and rehearse a release",
+   "type": "Docs",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Developer",
+    "Staff"
+   ],
+   "milestone": "Visual and video gates",
+   "dueDate": "2026-09-26",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Haiku 4.5",
+   "modelId": "claude-haiku-4-5-20251001",
+   "effort": "low",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-78",
+    "PAP-243",
+    "PAP-246"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Haiku 4.5 (`claude-haiku-4-5-20251001`) / low — Docs S\n\n**Goal**\n\nEach gate issue writes its own section of `docs/quality/*.md`, so by the release week there are fourteen documents and no front door. The handbook is the single page Justin or a new character opens to understand what a green PR means, what every status badge is, where the evidence lives and which one-line action fixes the common red states.\n\n**Scope**\n\n* In: `docs/quality/README.md` (handbook index) and `docs/quality/how-to/{read-a-pr,update-baselines,waive-a-finding,quarantine-a-flake,rehearse-a-release,run-gates-locally}.md`, a generated status table from `GATE_STATUSES` (PAP-239) with owner issue and artefact per status, a glossary, links from `CLAUDE.md`, the PR template (PAP-49) and the session playbook (PAP-92).\n* Out: per-gate reference docs (each gate issue), the rubrics (PAP-79), the character handbook (PAP-112).\n\n**Spec**\n\n* Index under 900 words: the four gates in one diagram (Mermaid), the status table generated by `pnpm docs:gates-table` from `GATE_STATUSES` and the docs frontmatter of each gate page (`status`, `artifact`, `owner`), the evidence map (sticky comment sections, Pages URLs, Linear status comment), the three rules Justin cares about (any S0 blocks, more than 3 S1 blocks, baselines change only through the label).\n* How-to pages each under 400 words with the exact command or label: `update-baselines` label (PAP-247), waiver file and who may approve (PAP-80), `Flaky:` issue flow (PAP-90), `rehearsal` label and `/approve` (PAP-254), `pnpm check`, `pnpm shots`, `pnpm e2e --grep @smoke` locally (PAP-78, PAP-82, PAP-86).\n* Glossary: gate, finding, severity, rubric id, baseline, contact sheet, quarantine, release candidate, certification, digest, waiver.\n* Lint: `pnpm docs:lint` (PAP-128) link check plus a test that every status in `GATE_STATUSES` appears in the table.\n\n**Interface contract**\n\n* Provides: `docs/quality/README.md`, how-to pages, `pnpm docs:gates-table`, the frontmatter convention `status`, `artifact`, `owner` for gate docs.\n* Consumes: PAP-239 `GATE_STATUSES`, the gate docs written by PAP-78 to PAP-90, PAP-128 docs lint, PAP-49 and PAP-92 for links.\n\n**Definition of done**\n\n* Index and six how-to pages merged; status table lists every registered status with owner and artefact (test).\n* Read-through by Justin in a comment: he can name the three blocking rules and find a PR's screenshots from the page alone.\n* Links from `CLAUDE.md`, PR template and playbook merged; changelog under \"Docs\".\n\n**Test plan**\n\n* Unit: status table generator against a fixture registry; link lint.\n* E2E: none beyond docs lint; screenshot of the rendered index at 375 and 1280 px through the docs engine when PAP-128 lands.\n\n**Demo**\n\nOpen `docs/quality/README.md`, follow \"read a PR\" to a real PR's sticky comment, then \"update baselines\" to the label workflow. Under one minute.\n\n**Edge cases**\n\n* A gate lands after the handbook: its doc frontmatter adds it to the table; the lint fails until it does.\n* Status renamed in PAP-239: table regenerates; prose references are caught by the link check.\n* Docs engine not yet live: pages readable on the forge with relative links.\n\n**Dependencies**\n\nHard: PAP-78, PAP-243, PAP-246. Soft: PAP-239, PAP-128, PAP-49, PAP-92.\n\n**Agent**\n\nBuilder: Quill (Changelog Scribe). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/quality/mutation-testing-nightly",
+   "title": "Mutation testing nightly with Stryker on `packages/core`, `packages/permissions` and `packages/finance`: mutation score floor and survivors as S2 findings",
+   "type": "Infra",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Developer"
+   ],
+   "milestone": "Edge-case hunting and release trains",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-78",
+    "r4/quality/diff-coverage-gate"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nDeferred to v0.2 by round 4 (not claimable before 2026-10-01; NJ-14 can reinstate). Coverage says a line ran, not that a test would notice it breaking. For the three packages where a silent bug costs most (shared core types and filters, the permission evaluator, the ledger), a nightly Stryker run reports the mutation score and lists surviving mutants as S2 findings for the owning character.\n\n**Scope**\n\n* In: `stryker.config.mjs` per target package, nightly job `mutation.yml` (Sunday and on label `mutation`), `reports/mutation.json` (`GateReport<'mutation'>` kind), survivors mapped to `Finding[]` with file and line, score floor in `ops/quality/budgets.yaml`, `docs/quality/mutation.md`.\n* Out: mutation testing of UI packages, running on every PR, fixing the surviving mutants.\n\n**Spec**\n\n* `@stryker-mutator/core` with the Vitest runner, `incremental: true` and the incremental file cached between nights; mutators default set minus `StringLiteral` on message catalogues; `concurrency: 4`; per-package time box 40 minutes.\n* Floor: `packages/permissions` 85, `packages/finance` 80, `packages/core` 75 mutation score; below floor opens one Linear issue for the owner (PAP-305 `ownership.json`) deduped per package; survivors above floor listed as S2 in the report only.\n* `reports/mutation.json` `data.packages: [{ name, score, killed, survived, timeout, noCoverage, survivors: [{ file, line, mutator }] }]`; Pages HTML report at `/nightly/<date>/mutation/`.\n* Label `mutation` on a PR runs the incremental set for changed files only, informational.\n\n**Interface contract**\n\n* Provides: `reports/mutation.json`, workflow `mutation.yml`, floor entries in `budgets.yaml`, HTML report URL.\n* Consumes: PAP-78 Vitest setup and Turbo tasks, diff coverage job for the changed-file set, PAP-305 ownership, PAP-239 schema.\n\n**Definition of done**\n\n* Three packages scored on three consecutive Sundays; report page linked from the digest appendix.\n* Seeded weak test (asserting only truthiness) leaves a surviving mutant listed with file and line (link).\n* Floor breach opens the owner issue once (test); docs; changelog under \"Quality\".\n\n**Test plan**\n\n* Unit: report mapping, floor comparison, dedupe of owner issues.\n* E2E: nightly run on staging runners with the incremental cache verified to shorten the second run.\n\n**Demo**\n\nOpen the Sunday mutation report: scores per package and the survivor list; click a survivor to its line in the forge. Under one minute.\n\n**Edge cases**\n\n* Run exceeds the time box: partial score reported with `timeout: true`, never a fake floor pass.\n* Equivalent mutants: `// Stryker disable next-line <mutator>: <reason>` with the same expiry grammar as other suppressions.\n* Package split or renamed: config keyed by `ownership.json` entries.\n\n**Dependencies**\n\nHard: PAP-78, r4/quality/diff-coverage-gate. Soft: PAP-305, PAP-239.\n\n**Agent**\n\nBuilder: Sentinel (Edge Case Hunter). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/quality/cross-browser-functional-smoke",
+   "title": "Cross-browser functional smoke: run the `@smoke` e2e tag on WebKit and Firefox nightly and on PRs touching input, auth or realtime packages",
+   "type": "Infra",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Developer",
+    "Customer"
+   ],
+   "milestone": "Visual and video gates",
+   "dueDate": "2026-09-26",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-86"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nDeferred to v0.2 by round 4 (not claimable before 2026-10-01; NJ-14 can reinstate). Every gate runs on Chromium; Tauri on macOS renders with WebKit and customers use Safari and Firefox. Running the existing `@smoke` functional tag on the other two engines nightly, and on PRs that touch the packages most likely to differ, catches passkey, drag-and-drop and WebSocket differences before a release.\n\n**Scope**\n\n* In: Playwright projects `webkit` and `firefox` in `playwright.functional.config.ts` limited to `@smoke`, nightly job step in PAP-253, PR path filter (`packages/input/**`, `packages/auth/**`, `packages/realtime/**`, `apps/web/src/routes/auth/**`), engine column in `reports/e2e.json`, known-difference allowlist `ops/quality/browser-known-diffs.yaml`, docs section.\n* Out: visual baselines on other engines (fonts differ; stays Chromium), mobile Safari devices, Tauri process testing.\n\n**Spec**\n\n* Projects reuse the PAP-86 fixtures; WebAuthn virtual authenticator is Chromium-only so passkey tests run `test.skip` on WebKit and Firefox with reason `webauthn-cdp` and the magic-link path covers sign-in.\n* Known differences file: `{ testId, engine, reason, expires }`; expired entries fail; the collector (PAP-90) scores flakes per engine key.\n* Nightly: both engines on staging after the Chromium `@full` run; PRs: only when the path filter matches, informational for the first week then blocking.\n* Report: `reports/e2e.json` gains `engine`; the sticky comment shows a three-column pass table.\n\n**Interface contract**\n\n* Provides: projects `webkit` and `firefox`, `browser-known-diffs.yaml` schema, engine dimension in `e2e.json` and `flakes-delta.json`.\n* Consumes: PAP-86 suite and fixtures, PAP-253 nightly slot, PAP-90 flake keys, Playwright image with all three engines (PAP-246 pin).\n\n**Definition of done**\n\n* `@smoke` passes on both engines for three nights; seeded WebKit-only difference (a `:has()` selector bug) fails only the WebKit column (link).\n* PR path filter proven on a PR touching `packages/input`; docs section; changelog under \"Quality\".\n\n**Test plan**\n\n* Unit: known-diff expiry, path filter, report column writer.\n* E2E: nightly three-engine run; a filtered PR.\n\n**Demo**\n\nOpen the nightly report: three engine columns for the smoke suite, one expired known-diff failing with its reason. Under one minute.\n\n**Edge cases**\n\n* Engine-specific flake: quarantined per engine key by PAP-90, not for all engines.\n* Runner lacks WebKit system deps: the pinned Playwright image includes them; a mismatch prints the environment warning and marks the column `error`.\n* Firefox lacks a needed API (View Transitions): `browser-known-diffs` entry with expiry and a progressive-enhancement note.\n\n**Dependencies**\n\nHard: PAP-86. Soft: PAP-253, PAP-90, PAP-246.\n\n**Agent**\n\nBuilder: Sentinel (Edge Case Hunter) with Nova on input differences. Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/quality/pseudo-locale-and-rtl-visual-run",
+   "title": "Pseudo-locale and RTL visual run: capture the Gate 3 page set in `en-XA` pseudo-locale and `ar` RTL at three widths nightly, flagging truncation and mirrored-layout defects",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Developer",
+    "Customer"
+   ],
+   "milestone": "Visual and video gates",
+   "dueDate": "2026-09-26",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-247",
+    "PAP-27"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by round 4 (not claimable before 2026-10-01; NJ-14 can reinstate). PAP-27 adds ICU catalogs, RTL flip and a pseudo-locale, and PAP-375 pseudo-locale validation for spec copy, but Gate 3 only screenshots English left-to-right. A nightly capture of the page set in `en-XA` (30 percent longer strings, accented) and `ar` (RTL) at three widths makes truncation and unmirrored icons visible to the vision agent.\n\n**Scope**\n\n* In: Playwright project variants `pseudo-en-XA` and `rtl-ar` in `playwright.visual.config.ts` at `sm-375`, `lg-1024`, `3xl-1920`, locale fixture setting the PAP-27 negotiation cookie, nightly step in PAP-253, informational baselines under `__screenshots__/i18n/`, vision pass (PAP-84) with the `RUB-VIS-*` truncation and mirroring rules enabled, docs section.\n* Out: translating the product, RTL for every locale, per-PR runs (nightly only).\n\n**Spec**\n\n* Locale fixture sets `paperos_locale` cookie and `document.dir`; pseudo-locale generated by PAP-27's `pseudo` transform, so no catalogue authoring is needed.\n* Captures use the PAP-247 page list with `screenshot: true`; results are informational (`status: warn`), diffs never block; the vision agent runs with `focus: ['truncation', 'mirroring', 'overflow']` and posts findings to the nightly Linear issue (PAP-253) grouped by page.\n* DOM metrics (PAP-84) add `direction` and `textOverflowCount` so RTL and pseudo findings get DOM confirmation.\n* Budget: 3 widths × 2 variants × page set under 6 minutes on one shard.\n\n**Interface contract**\n\n* Provides: projects `pseudo-en-XA` and `rtl-ar`, `__screenshots__/i18n/` layout, `focus` option on the vision runner, DOM metric fields `direction`, `textOverflowCount`.\n* Consumes: PAP-247 page list and fixtures, PAP-27 locale negotiation and pseudo transform, PAP-84 vision runner, PAP-253 nightly slot.\n\n**Definition of done**\n\n* Nightly run for three nights with contact sheets; seeded fixed-width button truncates in `en-XA` and is caught at S1; seeded unmirrored chevron caught in `ar` (links).\n* Docs section; changelog under \"Quality\".\n\n**Test plan**\n\n* Unit: locale fixture, focus option plumbing, DOM metric fields.\n* E2E: nightly capture and vision pass on staging.\n\n**Demo**\n\nOpen the nightly Linear issue: the i18n section lists two pages with truncation findings and their annotated thumbnails at 375 px. Under one minute.\n\n**Edge cases**\n\n* Font fallback for Arabic missing in the Docker image: image pin gains Noto Naskh; a missing glyph run prints the environment warning.\n* Pseudo-locale breaks a regex-validated field: finding at S2 pointing at the validator, not the layout.\n* Pages without `screenshot: true`: skipped, count reported.\n\n**Dependencies**\n\nHard: PAP-247, PAP-27. Soft: PAP-84, PAP-253, PAP-375.\n\n**Agent**\n\nBuilder: Sentinel (Visual Inspector) with Iris. Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/quality/qa-evidence-browser",
+   "title": "QA evidence browser: staff page `/qa` that lists PRs and release candidates with their gate reports, screenshots, replays, traces and findings read from `GateReport` artefacts",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "Edge-case hunting and release trains",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-239",
+    "PAP-248",
+    "PAP-83",
+    "PAP-165"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by round 4 (not claimable before 2026-10-01; NJ-14 can reinstate). Justin asked for screenshot checking, workflow logging on screenshots and video replays he can look at; today that evidence is scattered across sticky comments, Pages URLs, MinIO links and Linear status comments. PAP-239 already names \"the QA viewer\" as a consumer. This page renders every `GateReport` artefact for a PR or release candidate in one place inside the product, using the views engine.\n\n**Scope**\n\n* In: route `/_app/qa` with `specs/qa/evidence.spec.yaml` and `/qa/pr/:number`, `/qa/rc/:version`; data source `qa_gate_runs` (gate metrics issue) plus artefact fetch through `artifactUrl()`; components `GateTimeline`, `ContactSheetViewer` (zoom, before/after slider), `ReplayPlayer` (poster, captions from `videos.json`), `FindingsTable` (grid view with severity filter), `TraceLink` to the Playwright trace viewer; deep links from the Linear status comment (PAP-97) and the digest (PAP-89).\n* Out: editing findings, re-running gates, annotation comments (PAP-137 owns annotation to issues), prompt logs (PAP-135).\n\n**Spec**\n\n* Page spec `access.view: staff.*`; list view of recent PRs and RCs with gate badges from `qa_gate_runs`; detail renders sections in `GATE_STATUSES` order, each reading its artefact JSON through the PAP-239 schema and showing `unknown` when missing.\n* Contact sheets and diff images from `visual.json` paths via `artifactUrl(pr, path)`; replays from `videos.json` signed URLs (re-signed by the API when expired); Playwright traces linked to `https://trace.playwright.dev/?trace=<url>`.\n* Findings grid uses `tables/grid-view` with columns severity, reviewer, rubric, file, title, status (open, resolved, waived) and a filter bar (PAP-166).\n* Responsive: under 768 px the gate timeline becomes a vertical list and contact sheets scroll horizontally; screenshots at the seven widths in both themes through Gate 3.\n\n**Interface contract**\n\n* Provides: route `/qa/**`, page specs, components above in `packages/quality-ui`, deep-link format `/qa/pr/<n>#<status>` consumed by PAP-97 and PAP-89.\n* Consumes: PAP-239 schemas and `artifactUrl`, PAP-248 `visual.json`, PAP-83 `videos.json`, `qa_gate_runs`, PAP-165 grid, PAP-166 filters, PAP-37 signed URLs.\n\n**Definition of done**\n\n* Page specs validate; conformance tests pass; screenshots at seven widths in both themes.\n* A sandbox PR with all gates shows every section populated; a PR with an errored gate shows `unknown` with the re-run link.\n* Replay plays with captions; before/after slider works on a seeded visual diff (recording).\n* Deep link from a Linear status comment opens the right section; changelog under \"Quality\".\n\n**Test plan**\n\n* Unit: artefact loaders per kind on fixtures including missing artefacts, URL re-signing, badge derivation.\n* E2E: Playwright at 375 and 1280 px: list, open PR, filter findings, play replay.\n\n**Demo**\n\nOpen `/qa/pr/42` for the seeded PR: gate timeline, the 375 px contact sheet with one red badge, the replay poster, the findings grid filtered to S1. Ninety seconds.\n\n**Edge cases**\n\n* Artefacts expired (Pages 30 days): section shows the run-artifact link and the expiry date.\n* Thousands of images on an RC: contact sheets only, full images lazy-loaded per page.\n* Forgejo-hosted PR: `artifactUrl` fallback to run links; trace viewer link requires a reachable URL, else the download link.\n\n**Dependencies**\n\nHard: PAP-239, PAP-248, PAP-83, PAP-165. Soft: PAP-166, PAP-37, PAP-97, PAP-89, r4/quality/gate-metrics-and-pipeline-health.\n\n**Agent**\n\nBuilder: Nova (Views Engineer) with Sentinel (Visual Inspector). Reviewer: Sentinel (Visual Inspector).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/quality/desktop-tauri-smoke",
+   "title": "Desktop smoke via `tauri-driver` on Linux: launch the packaged app, sign in through the deep link, open a record and detach a panel, recorded nightly",
+   "type": "Infra",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Developer",
+    "Customer"
+   ],
+   "milestone": "Visual and video gates",
+   "dueDate": "2026-09-26",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-256",
+    "PAP-257",
+    "PAP-240"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nDeferred to v0.2 by round 4 (not claimable before 2026-10-01; NJ-14 can reinstate). PAP-86 excludes native Tauri e2e and PAP-156 waits on macOS and Windows runners (PAP-371). A Linux-only WebDriver smoke through `tauri-driver` against the built AppImage still proves the shell boots, the deep-link session flow works and multi-window detach behaves, nightly and on release candidates.\n\n**Scope**\n\n* In: `apps/desktop/e2e/` with `tauri-driver` and WebdriverIO, nightly job step after the PAP-256 Linux build, flows sign-in via `paperos://` deep link (PAP-225), open a record, detach a panel (PAP-262), quit; `xvfb` recording to MP4 through the PAP-83 post-processing; results into `reports/e2e.json` with `target: desktop-linux`.\n* Out: macOS and Windows (PAP-371), mobile, visual baselines of the native window chrome.\n\n**Spec**\n\n* Job downloads the AppImage artefact from the PAP-256 build, runs `tauri-driver` with `xvfb-run`, WebdriverIO connects on 4444; test-mode API on the compose stack (PAP-240) provides seed and `login-as`, and the deep-link token is minted through the PAP-225 test hook.\n* Flows are 4 steps each, `slowMo` 150, recorded with `ffmpeg -f x11grab`; failures keep the recording and the Tauri log.\n* Report rows carry `target: desktop-linux`; PAP-254 certification treats a red desktop smoke as S1 (informational for the first week).\n* Runtime under 6 minutes.\n\n**Interface contract**\n\n* Provides: `apps/desktop/e2e/**`, `target` dimension in `e2e.json`, the deep-link test hook contract with PAP-225.\n* Consumes: PAP-256 Linux build artefact, PAP-257 deep links, PAP-240 test mode, PAP-262 window manager, PAP-83 ffmpeg step, PAP-50 runner with `xvfb` and WebKitGTK deps.\n\n**Definition of done**\n\n* Three nightly runs green with recordings; a seeded broken deep-link handler fails the sign-in flow with the recording attached (link).\n* Docs section; changelog under \"Quality\".\n\n**Test plan**\n\n* Unit: none beyond the flow definitions; deep-link token minting unit test in PAP-225 scope.\n* E2E: nightly desktop smoke; on-demand on `release/*` branches.\n\n**Demo**\n\nOpen the nightly recording: the AppImage launches, the deep link signs in, a panel detaches into a second window and the app quits cleanly. Under one minute.\n\n**Edge cases**\n\n* WebKitGTK version drift on the runner: pinned in the runner image; mismatch marks the target `error` with the version.\n* Deep link cannot be delivered under `xvfb`: fallback invokes the binary with the URL argument, documented.\n* Detach opens the window off-screen: `list_displays` fixture sets a 1920×1080 virtual display.\n\n**Dependencies**\n\nHard: PAP-256, PAP-257, PAP-240. Soft: PAP-225, PAP-262, PAP-83, PAP-50, PAP-371, PAP-254.\n\n**Agent**\n\nBuilder: Forge (Tauri Smith) with Sentinel (Edge Case Hunter). Reviewer: Sentinel (Edge Case Hunter).\n\n**Size**\n\nS: half a session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-243",
+   "section": "Spec",
+   "append": "* Reviewer model routing (round 4, cost doc section 4b): `runReview()` does not hard-code `claude-fable-5-1`. It reads the PR's issue `Model` label through `linear.ids`: after an Opus 5 or Fable 5.1 builder the reviewer runs Opus 5 at `effort: high`; after a Sonnet 5 builder it runs Sonnet 5 at `high`; the QA gate summariser runs Haiku 4.5 at `low`; the four release-candidate reviews (PAP-254) run Fable 5.1 at `high`. The chosen model and effort are written into `review-cost.json` and the review footer so PAP-98 prices the run correctly."
+  },
+  {
+   "identifier": "PAP-78",
+   "section": "Spec",
+   "append": "* Required-checks matrix (round 4): one aggregate status `gates/required` computed by the `gate-1` job from the PR class: `docs-only` (paths `docs/**`, `specs/**`, `*.md`) requires `gate/1-static` and `gate/2-docs` only; `infra` (`ops/**`, `.github/**`) requires Gate 1, `gate/1-security` and `gate/2-security`; `code` requires every registered status in `GATE_STATUSES` that applies to the touched packages. The class is posted in the sticky comment header, and PAP-46 marks `gates/required` as the single required check so path-filtered gates never leave a PR waiting on a status that will not run."
+  },
+  {
+   "identifier": "PAP-462",
+   "section": "Spec",
+   "append": "* Artefact kind names (round 4 consistency fix): the contract exports exactly the kinds PAP-239 registers: `gate1`, `security`, `visual`, `videos`, `vision`, `edgecases`, `perf`, `review`, `review-cost`, `flakes-delta`, `certification`, `calibration`, `conformance`, plus the round-4 additions `coverage`, `migrations`, `mutation` and `e2e`. The names `edge.json` and `review.json` in the list above are aliases of `edgecases.json` and the `review` kind; the status registry is likewise the PAP-239 list plus `gate/2-docs`, `gate/1-coverage`, `gate/1-migrations` and `gate/dast`. A kind or status present in one file and not the other fails `pnpm contracts:build`."
+  },
+  {
+   "identifier": "PAP-253",
+   "section": "Spec",
+   "append": "* Nightly schedule table (round 4): the self-hosted runner pool is shared, so nightly jobs are staggered and documented in `ops/ci/nightly-schedule.yaml`: 02:00 UTC staging deploy and `@full` e2e (this issue), 02:40 visual 21-combination run, 03:00 PAP-80 full-history scans and PAP-110 evals (capped at 4 runners), 03:30 DAST baseline, 04:00 edge-case library (PAP-251), 04:30 API fuzzing, 05:00 PAP-306 plan audit on Mondays, 05:30 perf smoke. A job that starts while a heavier one is running waits on a concurrency group `nightly-heavy` rather than contending; the aggregate report records queue time per suite."
+  },
+  {
+   "identifier": "PAP-89",
+   "section": "Edge cases",
+   "append": "* Range with more than 40 PRs (a full week at 16 builders): section 2 groups by project and lists the ten most user-facing PRs in full, the rest as one line each; the Linear body variant keeps only section 1, the gate table and links.\n* Summarisation model unavailable: the renderer emits the template with schema-shaped data and no prose, marks the digest `prose: missing`, and PAP-254 still opens the Needs Justin issue rather than waiting.\n* Screenshot selection when no page has a visual diff: pick the two most-changed routes by PR count so Justin still sees the product."
+  },
+  {
+   "identifier": "PAP-241",
+   "section": "Definition of done",
+   "append": "* Round 4 clarification of the cadence: the calendar has room for two real weekly cycles before 2026-10-01 (weeks 39 and 40); the third cycle in the first bullet is the compressed rehearsal over the sandbox repo's seeded PRs (`imagine-os/paperos-qa-sandbox`, round-4 issue) run on the first day, so `calibration.json` exists before the first real sample. The Calibration Auditor is a separate session with a separate bundle (PAP-106) from the reviewers it audits; the blind runner refuses to start when `PAPEROS_SESSION` matches a reviewer session id."
+  },
+  {
+   "identifier": "PAP-90",
+   "section": "Spec",
+   "append": "* Environment keys (round 4): the score key gains `engine` (chromium, webkit, firefox) and `target` (web, desktop-linux) so cross-browser and desktop smoke flakes (round-4 issues) are scored and quarantined per environment; a test flaky on WebKit only stays active on Chromium."
+  },
+  {
+   "identifier": "PAP-84",
+   "section": "Spec",
+   "append": "* Focus mode (round 4): `inspectScreenshots({ focus?: ('truncation'|'mirroring'|'overflow'|'contrast')[] })` restricts the prompt and the rubric subset for special runs such as the pseudo-locale and RTL capture; findings from a focused run carry `focus` in `vision.json` so the digest groups them separately from the default PR run."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "forge",
+   "title": "Merge queue with speculative-merge Gate 1 run and auto-rebase for the Merger",
+   "why": "Twenty parallel PRs landing on `main` will pass gates on stale bases; a merge queue (GitHub merge queue plus a Forgejo equivalent driven by the Merger) re-runs Gate 1 on the merged result before landing. PAP-46 owns branch policy and PAP-52 the release tags; neither mentions a queue."
+  },
+  {
+   "targetProject": "forge",
+   "title": "Size and budget the self-hosted runner pool for 4 visual shards, 2 edge shards, reviewers and nightly heavy jobs with queue-time alerts",
+   "why": "The round-2 audit noted the 4-shard and LFS assumptions; PAP-50 provisions runners but never sizes them against the gate workload; queue time is the hidden Gate 3 budget breaker."
+  },
+  {
+   "targetProject": "design-system",
+   "title": "Storybook interaction tests as a Gate 1 job with the a11y addon failing on violations",
+   "why": "PAP-69 installs the addons and PAP-73 audits components, but no CI job fails a PR on a new axe violation in a story; the cheapest accessibility gate is the one that runs on every PR."
+  },
+  {
+   "targetProject": "libraries",
+   "title": "Mark every MCP catalog tool with a `scope` class (`readOnly`, `write`, `destructive`) and a `lastVerified` date",
+   "why": "PAP-106 and PAP-298 both read `readOnly` and `destructive` flags from the PAP-210 catalog; PAP-210 should own the field definitions and the verification cadence."
+  },
+  {
+   "targetProject": "collab",
+   "title": "Linear status comment and digest link into the QA evidence browser",
+   "why": "When the deferred `/qa` page lands, PAP-97 status comments and PAP-89 digests should deep-link to `/qa/pr/<n>#<status>` instead of raw Pages URLs."
+  },
+  {
+   "targetProject": "spec-builder",
+   "title": "Spec quality reviewer before build: run the docs-and-spec reviewer on `specs/**` PRs and block Ready for Claude on failing specs",
+   "why": "PAP-115 validates shape; the round-4 docs-and-spec reviewer judges quality (states, edge cases, verifying checks); wiring it into PAP-93 `NO_SPEC_LINK` promotion avoids building from thin specs."
+  }
+ ]
+}

@@ -1,0 +1,1090 @@
+{
+ "project": "pm-linear",
+ "projectName": "Project Management & Claude Pipeline",
+ "benchmarks": [
+  "Linear (issues, sub-issues, projects, milestones, initiatives, cycles, estimates, triage, SLAs, customer requests, views, insights, templates, automations, webhooks, GitHub and Slack integrations, project updates)",
+  "Jira (sprints, story points, automation rules, dependency reports)",
+  "Shortcut (iterations, epics, health)",
+  "Plane (self-hosted cycles and modules)",
+  "Height (auto-triage, chat intake)",
+  "GitHub Projects (merge-driven status)",
+  "Temporal-style orchestration (watchdog, retries)"
+ ],
+ "featureMatrix": [
+  {
+   "feature": "Issues with typed sections enforced by a validator",
+   "coveredBy": [
+    "PAP-93"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Sub-issues and umbrella rule",
+   "coveredBy": [
+    "PAP-93",
+    "PAP-96"
+   ],
+   "status": "covered",
+   "note": "UMBRELLA_NOT_CLAIMABLE"
+  },
+  {
+   "feature": "Projects with Contract sections and milestones",
+   "coveredBy": [
+    "PAP-91"
+   ],
+   "status": "covered",
+   "note": "18 projects, 54 milestones"
+  },
+  {
+   "feature": "Milestones with target dates",
+   "coveredBy": [
+    "PAP-91"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Initiatives and roadmap roll-up",
+   "coveredBy": [
+    "r4/pm-linear/linear-initiatives-rollup"
+   ],
+   "status": "gap",
+   "note": "zero initiatives in the workspace"
+  },
+  {
+   "feature": "Cycles (sprints) with burndown and carry-over",
+   "coveredBy": [
+    "r4/pm-linear/linear-cycles-weekly-and-auto-assignment"
+   ],
+   "status": "gap",
+   "note": "cycles disabled"
+  },
+  {
+   "feature": "Estimates (points) and progress by points",
+   "coveredBy": [
+    "r4/pm-linear/linear-estimates-and-size-labels"
+   ],
+   "status": "gap",
+   "note": "estimation notUsed; Size only in prose"
+  },
+  {
+   "feature": "Due dates and overdue indicators",
+   "coveredBy": [
+    "r4/pm-linear/due-dates-slack-and-risk-alerts"
+   ],
+   "status": "gap",
+   "note": "zero due dates"
+  },
+  {
+   "feature": "Critical path and slack computation feeding claim order",
+   "coveredBy": [
+    "r4/pm-linear/due-dates-slack-and-risk-alerts",
+    "PAP-99"
+   ],
+   "status": "partial",
+   "note": "PAP-99 scores; slack lived only in the schedule document"
+  },
+  {
+   "feature": "Priority",
+   "coveredBy": [
+    "PAP-91",
+    "PAP-93"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Label groups: Phase, Type, Model, Effort, surfaces, Character",
+   "coveredBy": [
+    "PAP-91"
+   ],
+   "status": "covered",
+   "note": "Character group pending in PAP-91"
+  },
+  {
+   "feature": "Workflow states for the agent pipeline",
+   "coveredBy": [
+    "PAP-91"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Triage inbox with accept, decline, duplicate, snooze",
+   "coveredBy": [
+    "r4/pm-linear/linear-triage-enable-and-intake-state-machine"
+   ],
+   "status": "gap",
+   "note": "triage disabled; PAP-307 listens on Todo and Backlog"
+  },
+  {
+   "feature": "Freeform to contract-valid drafting (Decomposer)",
+   "coveredBy": [
+    "PAP-307"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Slack voice memo and message intake",
+   "coveredBy": [
+    "r4/pm-linear/slack-voice-memo-intake"
+   ],
+   "status": "gap",
+   "note": "Justin sends voice memos"
+  },
+  {
+   "feature": "Customer requests (Linear Business feature)",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "cross-project suggestion to growth support inbox (PAP-412)"
+  },
+  {
+   "feature": "SLAs and stale-issue automations",
+   "coveredBy": [
+    "r4/pm-linear/pipeline-sla-timers"
+   ],
+   "status": "gap",
+   "note": "Basic plan lacks SLAs; timers scattered across PAP-94, PAP-288, PAP-306"
+  },
+  {
+   "feature": "Saved views as code for the pipeline",
+   "coveredBy": [
+    "r4/pm-linear/pipeline-views-as-code"
+   ],
+   "status": "gap",
+   "note": "six generic views; deny list forbids editing existing ones"
+  },
+  {
+   "feature": "Insights and reporting",
+   "coveredBy": [
+    "r4/pm-linear/pipeline-views-as-code",
+    "r4/pm-linear/project-updates-and-health-by-atlas"
+   ],
+   "status": "partial",
+   "note": "Insights is UI-only; documented charts"
+  },
+  {
+   "feature": "Issue templates per type, child template, decision card template, project template",
+   "coveredBy": [
+    "r4/pm-linear/issue-templates-per-type-and-card"
+   ],
+   "status": "gap",
+   "note": "one template today"
+  },
+  {
+   "feature": "Project updates and project health, lead, priority",
+   "coveredBy": [
+    "r4/pm-linear/project-updates-and-health-by-atlas"
+   ],
+   "status": "gap",
+   "note": "zero project updates"
+  },
+  {
+   "feature": "Issue attachments for PR and evidence",
+   "coveredBy": [
+    "r4/pm-linear/issue-attachments-and-evidence-bundle",
+    "PAP-97"
+   ],
+   "status": "partial",
+   "note": "PAP-97 attaches the PR only; zero attachments today"
+  },
+  {
+   "feature": "Comments as the status channel with edited-in-place PR status",
+   "coveredBy": [
+    "PAP-97"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Relations: blocks, related, duplicate",
+   "coveredBy": [
+    "PAP-93",
+    "PAP-306"
+   ],
+   "status": "covered",
+   "note": "1215 blocks relations"
+  },
+  {
+   "feature": "GitHub integration: autolink, merge-to-Done, branch format",
+   "coveredBy": [
+    "r4/pm-linear/linear-github-integration-and-state-automation"
+   ],
+   "status": "gap",
+   "note": "unconfigured; would fight the orchestrator"
+  },
+  {
+   "feature": "Forgejo integration",
+   "coveredBy": [
+    "PAP-97"
+   ],
+   "status": "covered",
+   "note": "custom receiver"
+  },
+  {
+   "feature": "Slack integration for notifications",
+   "coveredBy": [
+    "PAP-325",
+    "PAP-136"
+   ],
+   "status": "covered",
+   "note": "collab project"
+  },
+  {
+   "feature": "Webhooks inbound with signature and dedupe",
+   "coveredBy": [
+    "PAP-97"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Workspace as code with drift check",
+   "coveredBy": [
+    "PAP-91"
+   ],
+   "status": "covered",
+   "note": "extended this round for estimates, cycles, triage, initiatives, templates, views"
+  },
+  {
+   "feature": "Automations: auto-close, auto-archive",
+   "coveredBy": [
+    "PAP-91"
+   ],
+   "status": "partial",
+   "note": "never archive (deny list); auto-close via merge integration only"
+  },
+  {
+   "feature": "Orchestrator: poll, atomic claim, transitions",
+   "coveredBy": [
+    "PAP-281"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Orchestrator: worktree and session launch",
+   "coveredBy": [
+    "PAP-282"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Orchestrator: deployment, /status, runbook",
+   "coveredBy": [
+    "PAP-283"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Orchestrator: Backlog to Ready promotion (branch-start rule)",
+   "coveredBy": [
+    "r4/pm-linear/orchestrator-promotion-pass"
+   ],
+   "status": "covered",
+   "note": "lifted out of PAP-281 as its own child"
+  },
+  {
+   "feature": "Concurrency: caps, file-lock hints, dependency-aware scheduling",
+   "coveredBy": [
+    "PAP-99"
+   ],
+   "status": "covered",
+   "note": "eligibility rule needs alignment; amendment"
+  },
+  {
+   "feature": "Model and effort routing per issue with fallback chain",
+   "coveredBy": [
+    "r4/pm-linear/session-model-and-effort-routing"
+   ],
+   "status": "gap",
+   "note": "CLAUDE.md, PAP-282 and PAP-243 disagree"
+  },
+  {
+   "feature": "Credit metering and daily burn report",
+   "coveredBy": [
+    "PAP-98"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Cost per $2,500 chunk and top-up decision",
+   "coveredBy": [
+    "r4/pm-linear/chunk-progress-report"
+   ],
+   "status": "gap",
+   "note": "chunks.json planned but never joined to spend"
+  },
+  {
+   "feature": "Budgets, caps and kill switch",
+   "coveredBy": [
+    "PAP-111"
+   ],
+   "status": "covered",
+   "note": "agents project"
+  },
+  {
+   "feature": "24/7 operations: watchdog, capacity curve, night mode, morning report",
+   "coveredBy": [
+    "r4/pm-linear/always-on-operations-and-morning-report"
+   ],
+   "status": "gap",
+   "note": "Justin asked for AI running 24/7"
+  },
+  {
+   "feature": "Session playbook and footer",
+   "coveredBy": [
+    "PAP-92"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Needs Justin queue, decision cards, reply grammar",
+   "coveredBy": [
+    "PAP-94"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Weekly plan re-audit",
+   "coveredBy": [
+    "PAP-306"
+   ],
+   "status": "covered",
+   "note": "gains cycle and SLA checks"
+  },
+  {
+   "feature": "Credential broker and Linear write proxy",
+   "coveredBy": [
+    "PAP-300"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Prompt-injection actor verification for replies",
+   "coveredBy": [
+    "PAP-299"
+   ],
+   "status": "covered",
+   "note": "agents project"
+  },
+  {
+   "feature": "PM data model mirroring Linear",
+   "coveredBy": [
+    "PAP-100"
+   ],
+   "status": "covered",
+   "note": "extension deferred"
+  },
+  {
+   "feature": "PM model: initiatives, updates, health, cycle rules, roll-ups, SLA fields",
+   "coveredBy": [
+    "r4/pm-linear/pm-model-initiatives-updates-cycles-rollups"
+   ],
+   "status": "gap",
+   "note": "deferred v0.2"
+  },
+  {
+   "feature": "Linear sync: backfill and inbound",
+   "coveredBy": [
+    "PAP-372"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Linear sync: outbox and loop prevention",
+   "coveredBy": [
+    "PAP-373"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Linear sync: conflict rule and status page",
+   "coveredBy": [
+    "PAP-374"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Linear sync: new entities and fields",
+   "coveredBy": [
+    "r4/pm-linear/pm-sync-initiatives-cycles-attachments"
+   ],
+   "status": "gap",
+   "note": "deferred v0.2"
+  },
+  {
+   "feature": "PM board, list, timeline views in-app",
+   "coveredBy": [
+    "PAP-102"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "Import from Linear and ClickUp",
+   "coveredBy": [
+    "PAP-204"
+   ],
+   "status": "covered",
+   "note": "migration project, deferred"
+  },
+  {
+   "feature": "Gantt and dependency graph view",
+   "coveredBy": [
+    "PAP-102",
+    "PAP-132"
+   ],
+   "status": "partial",
+   "note": "timeline exists; dependency graph rendered by the blueprint site and canvas"
+  },
+  {
+   "feature": "Time tracking",
+   "coveredBy": [],
+   "status": "gap",
+   "note": "not planned; session duration in PAP-98 is the proxy"
+  },
+  {
+   "feature": "Custom fields",
+   "coveredBy": [
+    "PAP-100"
+   ],
+   "status": "partial",
+   "note": "`extra` jsonb"
+  },
+  {
+   "feature": "Audit log of PM changes",
+   "coveredBy": [
+    "PAP-38",
+    "PAP-300"
+   ],
+   "status": "covered",
+   "note": "proxy log plus audit table"
+  },
+  {
+   "feature": "Contract package, conformance and kernel wiring",
+   "coveredBy": [
+    "PAP-465",
+    "PAP-468",
+    "PAP-471"
+   ],
+   "status": "covered",
+   "note": "module system"
+  },
+  {
+   "feature": "Recorded API fixtures for pipeline tests",
+   "coveredBy": [
+    "r4/quality/recorded-http-fixtures-kit"
+   ],
+   "status": "covered",
+   "note": "quality project, round 4"
+  },
+  {
+   "feature": "Handoff protocol and assignee switching",
+   "coveredBy": [
+    "PAP-108"
+   ],
+   "status": "covered",
+   "note": "agents project"
+  },
+  {
+   "feature": "Session observability and stuck detection",
+   "coveredBy": [
+    "PAP-288"
+   ],
+   "status": "covered",
+   "note": "agents project"
+  },
+  {
+   "feature": "Linear rate-limit handling",
+   "coveredBy": [
+    "PAP-281",
+    "PAP-373"
+   ],
+   "status": "covered",
+   "note": ""
+  },
+  {
+   "feature": "PAP-5 scoreboard and drill",
+   "coveredBy": [
+    "PAP-95",
+    "PAP-29"
+   ],
+   "status": "covered",
+   "note": ""
+  }
+ ],
+ "newIssues": [
+  {
+   "key": "r4/pm-linear/orchestrator-promotion-pass",
+   "title": "Orchestrator: Backlog to Ready for Claude promotion pass under the branch-start rule, `promotions` table, `BASE_BRANCHES` and `pnpm linear:promote`",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Agent",
+    "Developer"
+   ],
+   "milestone": "Orchestrator claims and ships issues",
+   "dueDate": "2026-09-22",
+   "parent": "PAP-96",
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-281",
+    "PAP-93"
+   ],
+   "blocks": [
+    "PAP-99",
+    "PAP-471"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nPAP-96 folds the promotion work package into PAP-281 \"in the same session as the poll loop\", which makes PAP-281 a two-session issue on the zero-slack orchestrator chain. This child lifts the package out: every poll cycle `promote()` moves Backlog issues whose blockers are Done, Canceled or In Review with an open PR into Ready for Claude, records the decision, tells the claiming session which branches to merge first, and gives Atlas the `--dry-run` table used by hand before the loop is live.\n\n**Scope**\n\n* In: `src/promote/{promote,checks,report}.ts` and `src/cli/promote.ts` in `imagine-os/paperos-orchestrator`, migration `promotions`, comment template `templates/promoted.md`, `BASE_BRANCHES` injection point in `renderPrompt` (PAP-282), `issue.promoted` event, README section \"Promotion\".\n* Out: the poll and claim loop (PAP-281), scheduler ordering beyond the interim rule (PAP-99), the validator itself (PAP-93), umbrella closing (PAP-281 `UMBRELLA_CLOSE`).\n\n**Spec**\n\n* `promote({ dryRun, limit = 20, issue? })` scans team PAP `Backlog` paged 100 at a time and applies the four checks from PAP-96 Spec verbatim: no `Deferred` label or deferral note; no sub-issues; every inbound `blocks` issue is `Done`, `Canceled` or `In Review` with an open PR (attachment or `gh pr list --head <branch>`); `validateIssue()` (PAP-93) has no `error`, with `isOpen()` imported from PAP-93 so the two predicates cannot disagree (`promotion.validator_mismatch` logged otherwise).\n* Per promoted issue: collect `BASE_BRANCHES` from In Review blockers in identifier order; insert `promotions(issue_id, promoted_at, blockers_json, base_branches_json, dry_run)` unique per open promotion; `issueUpdate` to Ready for Claude under the `updatedAt` guard; one `linearComment` `promoted: blockers PAP-x (Done), PAP-y (In Review, branch feat/PAP-y)` with footer `status: \"promoted\"`; emit `issue.promoted`.\n* Ordering: least slack first when PAP-99 `scheduler.next()` exists, else milestone target date, priority, `createdAt`; never re-promote an issue PAP-93 bounced after its blockers last changed; never promote when the promotion would exceed `limit`.\n* CLI `pnpm linear:promote [--dry-run|--apply] [--limit n] [--issue PAP-n] [--record]` prints the candidate table (issue, milestone, blockers with state and PR, validator, `BASE_BRANCHES`, verdict, reason); exit 0 ran, 2 Linear unreachable.\n* Base-branch lifecycle: PAP-97 `pr.closed` without merge triggers re-validation of dependents promoted with that branch and bounces them; a merged base PR is dropped from `BASE_BRANCHES` at claim time.\n\n**Interface contract**\n\n* Provides: `promote()`, `PromotionReport`, table `promotions`, CLI `pnpm linear:promote`, event `issue.promoted`, prompt variable `BASE_BRANCHES`, template `promoted.md`.\n* Consumes: PAP-281 Linear client, `linearComment`, ids and tables; PAP-93 `validateIssue` and `isOpen`; PAP-282 `renderPrompt`; PAP-97 `pr.closed`; PAP-99 `next()` (soft).\n\n**Definition of done**\n\n* Fixture graph `test/fixtures/promotion-graph.json` (chains A and B, Deferred `PAP-e`, umbrella `PAP-f`, In Progress blocker `PAP-g`, In Review without PR `PAP-h`, validator failure `PAP-i`): one pass promotes exactly `PAP-b` and `PAP-d` with the specified comments and `BASE_BRANCHES`; a second pass is a no-op; moving `PAP-c` back bounces `PAP-d`.\n* `--dry-run` on the live team prints the table and changes nothing (recording); `--apply` on a rehearsal pair promotes within one cycle.\n* Live: a Backlog issue whose only blocker moves to Done is Ready within two poll cycles; the claiming session's prompt shows `BASE_BRANCHES`.\n* README section; changelog; Linear comment with the recording and the fixture table.\n\n**Test plan**\n\n* Unit: four checks individually, `isOpen` agreement test importing PAP-93, ordering rule, limit, `BASE_BRANCHES` order and pruning, comment template snapshot.\n* E2E: mocked Linear graph end to end; live rehearsal pair on team PAP.\n\n**Demo**\n\nRun `pnpm linear:promote --dry-run`, read the candidate table, then `--apply --issue PAP-<rehearsal>` and watch the issue move to Ready for Claude with the `promoted:` comment. Under one minute.\n\n**Edge cases**\n\n* Justin moves an issue to Ready by hand while `promote()` runs: the `updatedAt` guard fails, his move stands, PAP-93 validates it.\n* Blocker in Needs Justin: counts as open; the dry-run table names the card so Atlas sees what holds the chain.\n* Linear rate limit mid-pass: stop the pass, resume next cycle from the cursor; promotions already written are not repeated.\n* Validator unavailable (PAP-93 not merged): checks 1-3 plus local `parseSections`; report marked `validator: unavailable`.\n\n**Dependencies**\n\nHard: PAP-281, PAP-93. Soft: PAP-282, PAP-97, PAP-99.\n\n**Agent**\n\nBuilder: Atlas (Dispatcher). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/pm-linear/linear-estimates-and-size-labels",
+   "title": "Enable Fibonacci estimates on team PAP and backfill every issue's estimate from its Size (S=2, M=3, L=5) with roll-up on umbrellas and projects",
+   "type": "Infra",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Agent",
+    "Staff"
+   ],
+   "milestone": "Linear configured for the pipeline",
+   "dueDate": "2026-09-20",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-91"
+   ],
+   "blocks": [
+    "PAP-98",
+    "PAP-102"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nTeam PAP has `issueEstimationType: notUsed` and zero estimates, so Linear cannot show scope per milestone, project progress by points or velocity per cycle, and Size lives only in prose. Turn estimates on, derive them from the `**Size**` line of every description, keep the two in step from now on, and let Linear's native roll-ups do the reporting Atlas otherwise reimplements.\n\n**Scope**\n\n* In: extension of `ops/linear/configure-workspace.ts` (PAP-91) with `teamUpdate({ issueEstimationType: 'fibonacci', issueEstimationAllowZero: false, issueEstimationExtended: false })`, backfill script `ops/linear/backfill-estimates.ts` (Size to estimate mapping, umbrellas left at the sum of children as Linear computes), validator rule `ESTIMATE_MISMATCH` (warning) in PAP-93, `docs/pm/linear-setup.md` section \"Estimates\".\n* Out: changing Size semantics (S half session, M one, L two), time tracking, velocity targets (cycles issue), PM-module mirroring (PAP-100 already has `estimate`).\n\n**Spec**\n\n* Mapping: `S` 2, `M` 3, `L` 5; a leaf without a parsable Size gets `M` and a `needs-size` comment; umbrellas (issues with children) get no estimate of their own so Linear's project and milestone progress sum the children.\n* Backfill: `issueUpdate({ estimate })` for every non-archived PAP issue where the estimate differs; idempotent; rate-limited 5 per second; a diff table before and after in the Linear comment.\n* `linear-workspace.json` records `estimation: { type: 'fibonacci', mapping: { S: 2, M: 3, L: 5 } }`; `pnpm linear:configure --check` reports team-setting drift as `manual` (never flips a setting back without `--apply`).\n* PAP-93 gains `ESTIMATE_MISMATCH` (warn): estimate disagrees with the Size line; PAP-307 triage sets the estimate when it sets Size; PAP-96 claims never depend on it.\n* Consumers: PAP-98 records `estimate` on `usage_events` so the burn report shows cost per point; PAP-102 board cards show the estimate; the execution schedule's allowances (S $10, M $22, L $50) are documented as the dollar view of the same points.\n\n**Interface contract**\n\n* Provides: team estimation settings, `backfill-estimates.ts`, mapping constant `SIZE_ESTIMATE`, validator code `ESTIMATE_MISMATCH`, `estimate` field on `usage_events`.\n* Consumes: PAP-91 configure script and `linear-workspace.json`, PAP-93 validator, PAP-98 metering, PAP-307 triage; Linear API `teamUpdate`, `issueUpdate`.\n\n**Definition of done**\n\n* Team shows Fibonacci estimates; every leaf issue has one matching its Size; umbrellas none; counts posted.\n* Project view screenshot at 1280 px showing points per milestone; `--check` clean after `--apply`.\n* `ESTIMATE_MISMATCH` fixture passes; changelog; Linear comment with the diff table.\n\n**Test plan**\n\n* Unit: Size parsing on 30 description fixtures (`S`, `M`, `L`, `Small`, missing, umbrella), idempotent diff, rate limiter.\n* E2E: live backfill on team PAP with before and after counts.\n\n**Demo**\n\nOpen the Quality Pipeline project in Linear and read points per milestone; open PAP-342 and see estimate 3 beside `Size: M`. Under one minute.\n\n**Edge cases**\n\n* Size line says `L (umbrella; children M, M, S)`: the issue has children, so no estimate is set.\n* A future L leaf (allowed but rare): estimate 5 and a `SPLIT_CANDIDATE` note for PAP-306.\n* Justin edits an estimate by hand: the validator warns on mismatch; nothing overwrites his value until the Size line changes.\n* Linear plan lacks a setting (Basic supports estimates): documented; extended scale never enabled.\n\n**Dependencies**\n\nHard: PAP-91. Soft: PAP-93, PAP-98, PAP-102, PAP-307.\n\n**Agent**\n\nBuilder: Atlas (Dispatcher). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/pm-linear/linear-cycles-weekly-and-auto-assignment",
+   "title": "Enable one-week cycles on team PAP, assign every scheduled issue to the cycle of its execution-schedule start day, and make claim ordering prefer the active cycle",
+   "type": "Infra",
+   "phase": "P0",
+   "priority": 2,
+   "surfaces": [
+    "Agent",
+    "Staff"
+   ],
+   "milestone": "Linear configured for the pipeline",
+   "dueDate": "2026-09-20",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-91",
+    "r4/pm-linear/linear-estimates-and-size-labels"
+   ],
+   "blocks": [
+    "PAP-306"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nCycles are off (`cyclesEnabled: false`), so the day-by-day plan in the Execution Schedule exists only in a Markdown table and Linear's burndown, velocity and \"carry over\" views are dark. One-week cycles aligned to the schedule (Mon 09-15 to 09-21 partial, 09-22 to 09-28, 09-29 to 10-05) give Justin the native progress view and give the orchestrator a tie-breaker that matches the plan.\n\n**Scope**\n\n* In: `teamUpdate({ cyclesEnabled: true, cycleDuration: 1, cycleCooldownTime: 0, cycleStartDay: 1, cycleIssueAutoAssignStarted: true, cycleLockToActive: false })` in `configure-workspace.ts`; `ops/linear/assign-cycles.ts` mapping `docs/execution-schedule.md` section 2 start days (parsed from `round2/sched/*.json`) to cycles; `pickNext()` tie-break in PAP-281 (active cycle first); PAP-306 check `CYCLE_CARRYOVER`; docs section \"Cycles\".\n* Out: sprint ceremonies, velocity targets as gates, the PM-module cycle mirror (PAP-100 has `pm_cycle`; sync is the deferred sync extension).\n\n**Spec**\n\n* Cycle assignment: issue's start half-day from the schedule model decides the cycle; deferred issues get no cycle; umbrellas take the cycle of their first child; issues with no schedule row default to the milestone target date's cycle.\n* Auto-assign: `cycleIssueAutoAssignStarted` puts anything moved to In Progress into the active cycle so unplanned claims are visible as scope creep; `cycleLockToActive` stays off so Atlas can plan ahead.\n* `pickNext()` order becomes: active-cycle issues first, then least slack, priority, age (PAP-99 keeps this order in `score()` as `cycleBonus`).\n* PAP-306 gains `CYCLE_CARRYOVER` (issues carried over twice) and `CYCLE_SCOPE_CREEP` (unplanned additions above 20 percent of the cycle's points); Atlas's Monday project update (round-4 issue) quotes cycle completion.\n* `linear-workspace.json` records cycle ids by week; the configure `--check` reports setting drift as `manual`.\n\n**Interface contract**\n\n* Provides: team cycle settings, `assign-cycles.ts`, cycle ids in `linear-workspace.json`, `cycleBonus` in ordering, PAP-306 codes.\n* Consumes: PAP-91 configure script, the schedule model in `round2/sched/`, PAP-281 `pickNext`, PAP-99 `score()`, PAP-306 checks.\n\n**Definition of done**\n\n* Cycles enabled; three cycles exist with the right dates; every scheduled leaf issue is assigned; counts and a cycle view screenshot at 1280 px posted.\n* Claim ordering test: an active-cycle P2 issue is picked before a next-cycle P1 issue of equal slack.\n* `--check` clean; changelog; Linear comment with the assignment table.\n\n**Test plan**\n\n* Unit: start-day to cycle mapping across the boundary days, umbrella rule, deferred exclusion, ordering test.\n* E2E: live enable and assignment on team PAP; auto-assign verified by moving a rehearsal issue to In Progress.\n\n**Demo**\n\nOpen the team's Cycles page: the current week's burndown with points from the estimates issue; move a rehearsal issue to In Progress and see it join the cycle. Under one minute.\n\n**Edge cases**\n\n* Milestone dates move after re-simulation (Atlas nightly): `assign-cycles.ts --apply` re-runs idempotently and comments only on changed issues.\n* Cycle ends with open issues: Linear carries them over; `CYCLE_CARRYOVER` counts it; nothing is moved by hand.\n* Cooldown or lock accidentally enabled by a human: reported as drift, never changed silently.\n* Basic plan limits on cycles: none known; documented if encountered.\n\n**Dependencies**\n\nHard: PAP-91, r4/pm-linear/linear-estimates-and-size-labels. Soft: PAP-281, PAP-99, PAP-306.\n\n**Agent**\n\nBuilder: Atlas (Dispatcher). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/pm-linear/due-dates-slack-and-risk-alerts",
+   "title": "Set due dates from milestone targets, compute remaining critical path and slack per issue nightly, and post due-date risk comments and a Slack-at-risk view for chains that will miss",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 2,
+   "surfaces": [
+    "Agent",
+    "Staff"
+   ],
+   "milestone": "Orchestrator claims and ships issues",
+   "dueDate": "2026-09-22",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-91",
+    "PAP-99"
+   ],
+   "blocks": [
+    "PAP-306",
+    "r4/pm-linear/project-updates-and-health-by-atlas"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build M\n\n**Goal**\n\nZero issues carry a due date, so Linear's overdue indicators, due-soon filters and the mobile app's reminders are unused, and the schedule's zero-slack chains are visible only in a document. This issue sets `dueDate` from the milestone target on every issue, computes remaining critical path and slack per issue from sizes and the `blocks` graph every night, and turns negative slack into a comment on the issue and a row in an at-risk view, so the promotion order, Atlas's project update and Justin's phone all read the same risk.\n\n**Scope**\n\n* In: `ops/linear/set-due-dates.ts` (milestone target to `dueDate`, idempotent), `src/scheduler/slack.ts` in the orchestrator (`criticalPath(issue)`, `slackHours(issue)` from `buildGraph` (PAP-99) and Size durations), nightly job writing `issue_slack(issue_id, remaining_hours, slack_hours, chain_json, at)`, risk comment template `templates/slack-risk.md` (one per issue per day, edited in place), `/status.slack` block, `docs/pm/scheduling.md`.\n* Out: moving milestone dates (Atlas decides; PAP-306 proposes), per-issue due dates set by hand (respected, never overwritten), the PM-module mirror (`pm_issue.due_date` exists in PAP-100).\n\n**Spec**\n\n* Due date rule: `dueDate = milestone.targetDate` for every non-deferred issue lacking a hand-set date (hand-set means `dueDate` differs from the milestone and the last actor is Justin); umbrellas inherit their latest child; deferred issues get 2026-10-15 as a placeholder for the v0.2 milestone (NJ-19).\n* Slack model (Execution Schedule section 1): S 0.5 day, M 1 day, L 2 days; sessions start 03:30Z and 15:30Z; remaining critical path of an issue is the longest chain of open work from it to the end of its milestone's dependents; `slack = milestone target minus (now plus remaining path)`; branch-start rule credits an In Review blocker as done for path purposes.\n* Nightly at 05:30 UTC and on demand (`pnpm scheduler:slack --dry-run`): recompute for all open issues, upsert `issue_slack`, comment on issues whose slack turned negative or fell under one half-day (`slack-risk: -1.5 days; chain PAP-25 -> PAP-96 -> PAP-97; option: soften PAP-x or move milestone`), edit the same comment on later nights, remove nothing.\n* Ordering: `promote()` and `pickNext()` read `slack_hours` as the first key (least slack first), replacing the interim milestone-date rule.\n* Views: a workspace view `Pipeline: at risk` (filter `dueDate < +3d AND state not completed`) created by the views-as-code issue; `/status.slack` lists the ten tightest chains for PAP-113 and the Monday project update.\n\n**Interface contract**\n\n* Provides: `dueDate` on every issue, `issue_slack` table, `slackHours()`, `/status.slack`, comment template, the placeholder v0.2 date convention.\n* Consumes: PAP-91 ids and milestones, PAP-99 `buildGraph` and `score()`, PAP-281 `pickNext`, promotion pass, PAP-97 `linearComment`, `round2/sched/` model for calibration.\n\n**Definition of done**\n\n* Every open issue has a due date equal to its milestone target unless hand-set; before and after counts posted; `--check` reports drift.\n* Slack computed for the live graph matches the Execution Schedule's zero-slack chains (orchestrator, API and sync, permissions, gates, tables) within one half-day (table).\n* Seeded slip (fixture blocker moved two days) turns three downstream issues negative and posts three comments once; the second night edits, not duplicates.\n* `pickNext()` prefers the tighter chain (test); docs; changelog; Linear comment with the at-risk table and a phone screenshot of an overdue badge.\n\n**Test plan**\n\n* Unit: path and slack arithmetic on fixture graphs with cycles rejected, hand-set date detection, comment idempotency.\n* E2E: nightly job on staging against the live snapshot; seeded slip fixture.\n\n**Demo**\n\nRun `pnpm scheduler:slack --dry-run` and read the ten tightest chains; open one issue in the Linear mobile app and see its due date and the `slack-risk` comment. Under one minute.\n\n**Edge cases**\n\n* Milestone without a target date: issues keep no due date and the job lists the milestone for Atlas.\n* Justin sets a due date earlier than the milestone: respected; slack is computed against his date.\n* Graph edit creates a cycle: slack job skips the cycle members and PAP-99 reports it once.\n* Twenty comments would be posted in one night: capped at ten; the rest go to the Plan audit issue.\n\n**Dependencies**\n\nHard: PAP-91, PAP-99. Soft: PAP-281, PAP-97, PAP-306, r4/pm-linear/orchestrator-promotion-pass.\n\n**Agent**\n\nBuilder: Atlas (Dispatcher). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/pm-linear/linear-initiatives-rollup",
+   "title": "Create Linear initiatives for the v0.1.0 release, the v0.2 deferred set and the four brief themes; attach the eighteen projects and let Atlas post initiative updates",
+   "type": "Infra",
+   "phase": "P0",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "Linear configured for the pipeline",
+   "dueDate": "2026-09-20",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "low",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-91"
+   ],
+   "blocks": [
+    "r4/pm-linear/project-updates-and-health-by-atlas"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Infra S\n\n**Goal**\n\nThe workspace has zero initiatives and no roadmap, so Justin's only rollup above a project is the Blueprint document. Initiatives are the Linear layer where eighteen projects become five lines with progress bars: the Oct 1 release, the deferred v0.2 set, and the brief's themes (developer tooling core, quality and review, agent org, business plumbing). They also give the weekly project update a parent to roll into.\n\n**Scope**\n\n* In: `ops/linear/configure-initiatives.ts` (create-only, idempotent by name) in the PAP-91 script family: initiatives `PaperOS Core Platform v0.1.0 (Oct 1)`, `PaperOS v0.2 (deferred)`, `Theme: developer tooling core`, `Theme: quality and review`, `Theme: agent org`, `Theme: business plumbing`; `initiativeToProjectCreate` links per `plan/plan.json` theme mapping; initiative descriptions from the Blueprint sections; ids in `linear-workspace.json`; docs section \"Initiatives\".\n* Out: sub-initiatives, initiative updates content (the project-updates issue posts them), roadmaps (initiatives replace them), changing project names.\n\n**Spec**\n\n* Theme mapping (a project may sit in several): tooling core = app-shell, data-layer, forge, identity, design-system, spec-builder, module-system, libraries, collab, realtime, input, tables; quality and review = quality; agent org = pm-linear, agents; business plumbing = business-core, growth, migration; release = all eighteen; v0.2 = the projects owning `Deferred` issues, with the deferred issue count in the description.\n* Initiative fields: `name`, `description` (one paragraph from the Blueprint plus the milestone exit criteria), `targetDate` (2026-10-01 for the release, 2026-10-31 for v0.2), `status` `Active`, `owner` the Linear admin user (bot users cannot own initiatives on the Basic plan; documented).\n* Create-only: the script never updates or deletes an initiative a human made; drift is reported as `manual`; `linear-workspace.json.initiatives` holds ids.\n* Blueprint document gains a \"Roll-up\" line linking the release initiative; PAP-95's PAP-5 table links the release initiative as the top-level scoreboard.\n\n**Interface contract**\n\n* Provides: initiative ids in `linear-workspace.json`, the theme mapping in `plan/plan.json` (`themes[]`), `pnpm linear:configure --initiatives`.\n* Consumes: PAP-91 script and ids, `plan/plan.json`, Linear API `initiativeCreate`, `initiativeToProjectCreate`.\n\n**Definition of done**\n\n* Six initiatives exist with the right projects; screenshot of the Initiatives page at 1280 px and on a phone.\n* Second run is a no-op; `--check` clean; changelog; Linear comment with the mapping table.\n\n**Test plan**\n\n* Unit: theme mapping completeness (every project in the release initiative), idempotency on names.\n* E2E: live create on the workspace; re-run no-op.\n\n**Demo**\n\nOpen Initiatives in Linear: `PaperOS Core Platform v0.1.0 (Oct 1)` with eighteen projects and a progress bar fed by the new estimates. Under one minute.\n\n**Edge cases**\n\n* Initiatives unavailable on the plan: script prints the upgrade note and exits 0 without drift (documented on NJ-1's issue).\n* A project renamed by Justin: mapping by project id from `linear-workspace.json`, not by name.\n* Deferred set changes at NJ-14 or NJ-19: description regenerated on `--apply`; the initiative itself never recreated.\n\n**Dependencies**\n\nHard: PAP-91. Soft: PAP-95, docs/blueprint.md.\n\n**Agent**\n\nBuilder: Atlas (Dispatcher). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/pm-linear/linear-triage-enable-and-intake-state-machine",
+   "title": "Enable Linear Triage on team PAP with a `Triage` state, make PAP-307 draft from the triage inbox, and define accept, decline, merge-as-duplicate and snooze outcomes with a ten-minute drafting SLA",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "PM module syncs both ways",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-91",
+    "PAP-307"
+   ],
+   "blocks": [
+    "r4/pm-linear/slack-voice-memo-intake"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\n`triageEnabled` is false; PAP-307 listens for issues created in Todo or Backlog and the only triage today is a saved view. Linear's Triage feature gives an inbox state, accept and decline actions, duplicate merging and intake from integrations (Slack, email, API). Enabling it and pointing the Decomposer at it turns Justin's one-liners and voice memos into one queue with a measurable drafting SLA.\n\n**Scope**\n\n* In: `teamUpdate({ triageEnabled: true })` and the `Triage` workflow state (type `triage`) in `configure-workspace.ts` (PAP-91), `triageIssueState` wiring, PAP-307 trigger change (issue created in `Triage` or comment `triage:`), outcome handlers in the orchestrator (`accept` moves to Backlog with the drafted contract; `decline` cancels with a reason comment, only Justin or Atlas; `duplicate` uses `markedAsDuplicateWorkflowState`; `snooze` sets a `snoozedUntil`), SLA timer `triage.drafted_within_10m`, docs `docs/pm/triage.md` update.\n* Out: the Decomposer prompt itself (PAP-307), Slack voice-memo intake (own issue), Linear's paid SLA feature (Business plan; emulated by the pipeline SLA issue).\n\n**Spec**\n\n* State: `Triage` created with type `triage`, position before Backlog, description \"Inbox for humans and integrations; the Decomposer drafts within ten minutes\"; `team.triageIssueState` set; default state for API creates by integrations stays `Triage`, for the orchestrator's own creates `Backlog`.\n* PAP-307 handler: trigger on `Issue.create` with state `Triage` (any author) and on `triage:` comments; after drafting it leaves the issue in `Triage` with label `triaged` and the one comment; Justin's `accept` (Linear action or reply `accept`) moves it to Backlog where promotion (round-4 child) picks it up when unblocked; `decline` moves to Canceled with the reason; `duplicate` links and marks Duplicate; `snooze <n>d` hides it from the view until the date.\n* Outcome grammar reuses PAP-94 `parseReply` verbs plus `accept | decline: <reason> | duplicate PAP-n | snooze <n>d`; agent authors cannot accept.\n* SLA: `triage_sla(issue_id, created_at, drafted_at, accepted_at)`; drafting over ten minutes emits `pipeline.sla_breached` (pipeline SLA issue) and shows in the Plan audit (PAP-306).\n* Views-as-code issue adds `Pipeline: triage inbox` (state Triage, oldest first).\n\n**Interface contract**\n\n* Provides: `Triage` state id in `linear-workspace.json`, outcome grammar and handlers, `triage_sla` table, event `triage.drafted`, the intake contract for integrations (create in `Triage` with the source in the description footer).\n* Consumes: PAP-91 configure script, PAP-307 Decomposer handler, PAP-94 grammar, PAP-97 webhooks, PAP-306 audit, Linear `teamUpdate` and workflow state APIs.\n\n**Definition of done**\n\n* Triage enabled with the state; a one-line issue created in Triage is drafted within ten minutes and accepted with `accept` to Backlog (recording); `decline` and `duplicate` paths tested on rehearsal issues.\n* SLA table populated for five rehearsal issues; `--check` clean; docs; changelog; Linear comment with the recording.\n\n**Test plan**\n\n* Unit: outcome grammar table, actor checks, SLA arithmetic with a fake clock.\n* E2E: five rehearsal issues through create, draft and each outcome on team PAP.\n\n**Demo**\n\nCreate an issue in Triage titled \"invoices need a paid stamp\", watch the draft appear, reply `accept` and see it land in Backlog with the contract sections. Under two minutes.\n\n**Edge cases**\n\n* Issue created directly in Backlog by Justin (old habit): PAP-307's Backlog trigger stays for a month and comments \"next time use Triage\".\n* Integration floods Triage (Slack bot loop): drafting paused above 20 new issues per hour; Atlas notified.\n* Snoozed issue passes its date: reappears in the view; no state change.\n* `decline` by a non-Justin human (none exist today): honoured for Justin only; others get \"only Justin can decline\".\n\n**Dependencies**\n\nHard: PAP-91, PAP-307. Soft: PAP-94, PAP-97, PAP-306, r4/pm-linear/orchestrator-promotion-pass.\n\n**Agent**\n\nBuilder: Atlas (Decomposer). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/pm-linear/slack-voice-memo-intake",
+   "title": "Slack voice memo and message intake: transcribe audio posted in `#paperos-inbox`, create a Triage issue with the transcript and audio attachment, and reply in the thread with the drafted issue link",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "PM module syncs both ways",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-97",
+    "r4/pm-linear/linear-triage-enable-and-intake-state-machine",
+    "PAP-325"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nJustin steers from his phone and already sends voice memos; today someone transcribes them by hand. A Slack app listening on one channel turns each voice memo or message into a Triage issue with the transcript, the audio as an attachment and the Slack permalink, then the Decomposer (PAP-307) drafts it and the bot replies in the thread with the issue link and the one question, if any.\n\n**Scope**\n\n* In: `apps/orchestrator/src/intake/slack.ts` (Slack Events API `message` and `file_shared` in `#paperos-inbox`, signature verification), audio download through the broker (PAP-300), transcription adapter `transcribe(audio): { text, segments, language }` with a Whisper-compatible provider behind a port (local `whisper.cpp` on the VPS first, hosted API second, chosen by config), issue creation in `Triage` via `PmSourcePort` with the transcript, `attachmentCreate` for the Slack permalink and audio file (MinIO signed URL, PAP-37), thread reply with the issue link, `docs/pm/intake.md`.\n* Out: Linear's native Slack integration for notifications (PAP-325 owns tenant Slack config), Slack decision buttons for Needs Justin (cross-project suggestion to collab), non-audio attachments beyond images.\n\n**Spec**\n\n* Slack app scopes `channels:history`, `files:read`, `chat:write`, `reactions:write`; events verified with the signing secret and a 60 s timestamp window (PAP-97 pattern); only members listed in `operatorSlackUserIds` (Justin) create issues; others get a reaction and no issue.\n* Audio: `.m4a`, `.mp3`, `.ogg`, `.wav`, `.webm` up to 25 MB; downloaded with the bot token injected by the broker; transcribed with a 90 s timeout; language detected; transcript stored under `Original request` verbatim with timestamps every 30 s; a text message becomes the same issue shape without the audio.\n* Issue: title = first sentence of the transcript truncated to 80 characters, description = `Source: slack:<permalink>` footer plus the transcript, state `Triage`, label `source:slack`; audio attached as a MinIO URL (30-day lifecycle) and the Slack permalink as a second attachment; PAP-307 drafts as for any Triage issue.\n* Thread reply within two minutes: issue link, `triaged` status, and the Decomposer's one `ask:` question if present; a `:white_check_mark:` reaction on accept.\n* Idempotency by Slack `event_id` and `file_id`; retries safe.\n\n**Interface contract**\n\n* Provides: Slack intake handler, `TranscriptionPort` with two adapters, `source:slack` label, attachment convention (permalink plus audio), thread-reply template.\n* Consumes: PAP-97 receiver framework, Triage state and intake contract, PAP-307 drafting, PAP-300 broker for Slack and provider tokens, PAP-37 MinIO, PAP-325 Slack app registration (shared app; scopes added here).\n\n**Definition of done**\n\n* A 45 s voice memo in `#paperos-inbox` becomes a Triage issue with transcript and two attachments and is drafted; the thread shows the link within two minutes (recording).\n* Transcription accuracy check on five memos: Justin confirms the transcripts are usable in a comment.\n* Non-operator message creates nothing; duplicate event delivery creates one issue (tests).\n* Docs; changelog; Linear comment with the recording; Needs Justin card for the transcription provider only if the local model is too slow (default: local).\n\n**Test plan**\n\n* Unit: signature verification, event dedupe, title derivation, transcript formatting with segments.\n* E2E: recorded Slack events through the handler with a fixture audio file; live memo on the staging channel.\n\n**Demo**\n\nPost a voice memo in `#paperos-inbox`, wait for the thread reply, open the Triage issue: transcript, audio attachment, drafted contract, one question. Under two minutes.\n\n**Edge cases**\n\n* Two memos in one minute about the same thing: PAP-307's duplicate detection labels `possible-duplicate`; no merge without Justin.\n* Transcription fails or times out: issue still created with `transcript: unavailable` and the audio attached; retried once in the background.\n* Memo is a decision reply (\"approve the RC\"): the handler recognises the PAP-94 grammar in the transcript and asks Justin to confirm in Linear; voice never approves directly (T1 requires the Linear actor id, PAP-299).\n* Channel archived or bot removed: health check posts to the Plan audit issue.\n\n**Dependencies**\n\nHard: PAP-97, r4/pm-linear/linear-triage-enable-and-intake-state-machine, PAP-325. Soft: PAP-307, PAP-300, PAP-37, PAP-299, PAP-94.\n\n**Agent**\n\nBuilder: Atlas (Dispatcher) with Forge (Ops Runner) for the transcription container. Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/pm-linear/project-updates-and-health-by-atlas",
+   "title": "Atlas posts a Linear project update every Monday per project with health (on track, at risk, off track) computed from slack, cycle completion and spend, and sets project lead, priority and target dates",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "PM module syncs both ways",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-306",
+    "PAP-98",
+    "r4/pm-linear/due-dates-slack-and-risk-alerts"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nZero project updates, no project health, no leads and no priorities: Linear's project pages are inert. The weekly re-audit (PAP-306) already computes everything a project update needs. This issue renders it as a native `projectUpdate` per project with a health value, keeps `lead`, `priority` and `targetDate` filled from the plan, and rolls into the initiatives so Justin sees eighteen coloured dots instead of reading a report.\n\n**Scope**\n\n* In: `src/reports/project-update.ts` in the orchestrator (Monday 06:30 UTC after PAP-306, and `pnpm pm:project-update --project <key> [--dry-run]`), health rule, `projectUpdateCreate` with body from `templates/project-update.md`, `projectUpdate` of `lead` (bot user of the owner agent from `plan.json`), `priority` (P0 projects Urgent, P1 High, P2 Medium) and `targetDate` (last milestone), initiative update for the release initiative summarising the eighteen, docs section.\n* Out: the audit checks (PAP-306), the burn report (PAP-98), changing milestones (Atlas by hand), tenant-facing reports (PAP-102 shows the same data in-app later).\n\n**Spec**\n\n* Health: `offTrack` when any zero-slack chain in the project has negative slack or the project's remaining points exceed capacity to the target at the current landing rate; `atRisk` when slack under one day on the critical path or spend over 115 percent of the project's plan line; else `onTrack`; the rule and inputs are printed in the update.\n* Body under 2000 characters: health line and why, milestones with points done and remaining, this week's landed PRs (from PAP-97 events), next week's planned claims (from the schedule and promotion candidates), risks (top three by slack), Needs Justin items touching the project, spend versus plan line.\n* Initiative update for `PaperOS Core Platform v0.1.0 (Oct 1)`: one table of eighteen projects with health, points remaining and the RC checkpoint status.\n* Project fields set idempotently: `lead` bot user per owner agent (falls back to the admin user when bots cannot lead), `priority` from phase, `targetDate` from the latest milestone; drift reported, never fought over with Justin (his edits win for a week).\n* Dry run prints the updates; apply posts them and records ids in `project_updates_sent` for dedupe.\n\n**Interface contract**\n\n* Provides: `projectHealth(project): { health, reasons[] }`, weekly `projectUpdate` posts, initiative update, `pnpm pm:project-update`, the health rule documented for PAP-102 to render.\n* Consumes: PAP-306 findings and snapshot, PAP-98 spend per project, `issue_slack` from the due-dates issue, PAP-97 landed-PR events, initiative ids, `plan.json` owners.\n\n**Definition of done**\n\n* Eighteen updates posted for a rehearsal week with health values matching a hand check on three projects (table); initiative update posted; screenshots at 1280 px and on a phone.\n* Leads, priorities and target dates set on every project; `--check` reports no drift.\n* Dry run and dedupe tested; docs; changelog; Linear comment with screenshots.\n\n**Test plan**\n\n* Unit: health rule on fixture inputs (slack, points, spend), body length cap, dedupe by week.\n* E2E: rehearsal week on the live workspace with `--dry-run` reviewed by Atlas before `--apply`.\n\n**Demo**\n\nOpen the Initiatives page and see eighteen health dots; click Quality Pipeline and read Monday's update with the reasons for `atRisk`. Under one minute.\n\n**Edge cases**\n\n* PAP-306 failed that morning: the update posts with `audit: unavailable` and health from slack and spend only.\n* Justin changes a project's health by hand: respected for the week; the next update explains the computed value beside his.\n* Project with no open issues: `onTrack` with `complete` note; deferred-only projects report `deferred`.\n* Update body over 2000 characters: risks truncated to three with a link to the audit report.\n\n**Dependencies**\n\nHard: PAP-306, PAP-98, r4/pm-linear/due-dates-slack-and-risk-alerts. Soft: PAP-97, PAP-102, r4/pm-linear/linear-initiatives-rollup.\n\n**Agent**\n\nBuilder: Atlas (Dispatcher). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/pm-linear/issue-attachments-and-evidence-bundle",
+   "title": "Attach PRs, gate reports, screenshots, recordings and the digest to Linear issues as native attachments, and give sessions `pnpm evidence attach` to satisfy Definition-of-done evidence",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 2,
+   "surfaces": [
+    "Agent",
+    "Developer"
+   ],
+   "milestone": "Orchestrator claims and ships issues",
+   "dueDate": "2026-09-22",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-97",
+    "PAP-239"
+   ],
+   "blocks": [
+    "PAP-89",
+    "PAP-254"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nNo issue in the workspace has an attachment; PAP-97 creates one for the PR and everything else lands as links in comments that scroll away. Most Definitions of done say \"recording attached\" or \"screenshot attached\" without a tool that does it. Native attachments give the issue sidebar a stable evidence list and give PAP-254 certification and the umbrella integration test something to check.\n\n**Scope**\n\n* In: `attach(issueId, { url, title, subtitle, iconUrl, metadata })` in the orchestrator's Linear client with dedupe by URL, attachment kinds and titles per artefact (`PR #n`, `Gate 1 report`, `Visual contact sheets`, `Replays`, `Vision findings`, `Edge cases`, `Security`, `Release digest`, `Recording: <name>`), automatic attachment from PAP-97 gate events, the `linear-update attach` script extension (PAP-105) and `pnpm evidence attach --kind recording --file demo.mp4` uploading to MinIO (PAP-37) with a 180-day lifecycle, `EVIDENCE_REQUIRED` warning in PAP-93 when a DoD mentions attachments and none exist at In Review, docs section.\n* Out: rendering attachments inside PaperOS (PAP-102, PM sync of `pm_attachment` is the deferred sync extension), Linear's paid integrations, images inline in comments (PAP-97 keeps those).\n\n**Spec**\n\n* Kinds table `ops/pm/attachment-kinds.yaml`: `kind -> { title, iconUrl, source: gate artefact or manual }`; every `GateReport` posted through PAP-97 attaches its Pages or run URL once per PR (updated in place on re-runs via `attachmentUpdate`); the digest attaches to the RC issue; recordings and screenshots attach on demand.\n* `pnpm evidence attach --kind <kind> --file <path> | --url <url> [--title]` uploads files to MinIO `evidence/<issue>/<sha>/` through the broker, then calls `attach`; refuses files over 200 MB; returns the attachment id in the JSON last line (skill contract).\n* Dedupe by `(issue, url)`; metadata carries `{ kind, sha, pr, gate, expiresAt }` so PAP-89 and PAP-254 can list evidence per RC without parsing comments.\n* PAP-93 gains `EVIDENCE_REQUIRED` (warn at In Review): DoD text matches `attached|recording|screenshot` and the issue has no attachment of a matching kind; the bounce comment lists the missing kinds; PAP-254 `certify.ts` requires the gate attachments on the RC issue.\n* Umbrella closing (PAP-281 `UMBRELLA_CLOSE`) attaches the integration-test evidence to the parent using the same command.\n\n**Interface contract**\n\n* Provides: `attach()`, `attachment-kinds.yaml`, `pnpm evidence attach`, `linear-update attach` extension, validator code `EVIDENCE_REQUIRED`, `evidenceFor(issue): Attachment[]` for PAP-89 and PAP-254.\n* Consumes: PAP-97 events and Linear client, PAP-239 artefact URLs, PAP-37 MinIO signed uploads, PAP-300 broker, PAP-105 skill scripts, PAP-93 validator, PAP-254 certification.\n\n**Definition of done**\n\n* A sandbox PR produces attachments for every gate on its issue, updated in place on re-run (screenshot of the sidebar).\n* `pnpm evidence attach --kind recording --file demo.mp4` from a session attaches and the playbook (PAP-92) gains the step; `EVIDENCE_REQUIRED` fixture passes.\n* PAP-254 certification reads `evidenceFor()` on a rehearsal RC; docs; changelog; Linear comment with the sidebar screenshot.\n\n**Test plan**\n\n* Unit: kinds table validation, dedupe, metadata shape, DoD regex on 30 fixtures.\n* E2E: sandbox PR gate events; live attach from a rehearsal session through the broker.\n\n**Demo**\n\nOpen the seeded PR's issue: the sidebar lists PR, Gate 1 report, Visual contact sheets and a Recording; click the recording to play the MinIO URL. Under one minute.\n\n**Edge cases**\n\n* Pages URL expires (30 days): metadata `expiresAt` shown; PAP-89 re-signs MinIO links, Pages links stay as history.\n* Same artefact for several issues (one PR closes two): attached to each.\n* Attachment limit per issue (Linear caps are generous but finite): gate attachments update in place so the count stays under twenty.\n* MinIO unavailable: the file is kept in the run artefacts and a link attachment posted with `pending-upload` metadata; retried nightly.\n\n**Dependencies**\n\nHard: PAP-97, PAP-239. Soft: PAP-37, PAP-300, PAP-105, PAP-93, PAP-254, PAP-89.\n\n**Agent**\n\nBuilder: Atlas (Dispatcher). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/pm-linear/issue-templates-per-type-and-card",
+   "title": "Linear issue templates per Type (Build, Spec, Research, Review, Infra, Docs), a child template, a Needs Justin card template and a project template, all generated from `docs/pm/templates/`",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "Linear configured for the pipeline",
+   "dueDate": "2026-09-20",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Haiku 4.5",
+   "modelId": "claude-haiku-4-5-20251001",
+   "effort": "low",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-91",
+    "PAP-93"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Haiku 4.5 (`claude-haiku-4-5-20251001`) / low — Infra S\n\n**Goal**\n\nOne template (`PaperOS Spec`) serves every issue type, so a Research spike, a Needs Justin card and a Build issue all start from the same eleven headings and humans skip half of them. Type-specific templates with pre-filled labels, the right Model and Effort defaults and the exact section prompts the validator checks make hand-created issues pass PAP-93 on the first try.\n\n**Scope**\n\n* In: `docs/pm/templates/{build,spec,research,review,infra,docs,child,needs-justin-card,project}.md` with frontmatter (`labels`, `state`, `estimate`, `modelDefault`, `effortDefault`), `templateCreate`/`templateUpdate` in `configure-workspace.ts` keyed by name prefix `PaperOS:`, the project template with the three-milestone skeleton and `Contract` section headings, `pnpm linear:configure --templates`, docs section \"Templates\".\n* Out: the validator rules (PAP-93), the `PaperOS Spec` template's deletion (kept, marked legacy), PM-module templates (v0.2).\n\n**Spec**\n\n* Each template body carries the eleven sections with one-line prompts under each (for Research: time box and decision owner in Goal; for Review: the artefact under review and the rubric; for Infra: runbook and rollback under Spec), the `**Model / Effort:**` first line prefilled with the Type default from the cost rule (Spec P0 Opus/high, Build Sonnet/medium, Research S Sonnet/medium, Review Opus/high, Docs Sonnet/low) and `**Size**`.\n* Template `templateData` sets labels: `Type/*`, a placeholder surface, `Model: *` and `Effort: *` per default; state `Triage` for humans; estimate from the default Size.\n* Needs Justin card template mirrors PAP-94: Decision needed, Recommendation, Options (max 3), Deadline, Default if no answer, Context links; labels `Staff`; state `Needs Justin` reserved to Atlas.\n* Project template: description skeleton with Goal, Contract (Provides, Requires, Milestone exit criteria), Module contract placeholders and three milestones named by phase.\n* Generation is create-or-update by name; the legacy `PaperOS Spec` template body is updated to point at the typed ones; drift reported by `--check`.\n\n**Interface contract**\n\n* Provides: templates named `PaperOS: <Type>`, `PaperOS: Child`, `PaperOS: Needs Justin card`, `PaperOS: Project`; ids in `linear-workspace.json.templates`; the frontmatter schema in `docs/pm/templates/README.md`.\n* Consumes: PAP-91 configure script, PAP-93 section names and codes, PAP-94 card format, the cost rule defaults in `docs/cost-and-duration-estimate.md` section 4b.\n\n**Definition of done**\n\n* Nine templates exist; an issue created from `PaperOS: Build` and filled minimally passes `pnpm contract:audit` with warnings only (recording).\n* `--check` clean after `--apply`; screenshots of the template picker at 1280 px and on a phone; docs; changelog.\n\n**Test plan**\n\n* Unit: frontmatter to `templateData` mapping, section prompt presence per Type, idempotent update.\n* E2E: live create and update on the workspace.\n\n**Demo**\n\nCreate a new issue in Linear, pick `PaperOS: Research`, see the time-box prompt and the prefilled labels; save and run `pnpm contract:audit PAP-<n>`. Under one minute.\n\n**Edge cases**\n\n* Linear changes template fields: the script logs the unsupported field and continues.\n* Justin edits a template in the UI: `--check` reports drift with a `manual` marker; `--apply --force-templates` is the only way to overwrite.\n* A Type default model changes in the cost doc: templates regenerate from the doc's table (single source).\n\n**Dependencies**\n\nHard: PAP-91, PAP-93. Soft: PAP-94, docs/cost-and-duration-estimate.md.\n\n**Agent**\n\nBuilder: Quill (Changelog Scribe). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/pm-linear/pipeline-views-as-code",
+   "title": "Workspace views as code: create the pipeline views (ready by slack, in review awaiting gates, stuck sessions, per character, at risk, triage inbox, deferred v0.2, critical path) with the `Pipeline:` prefix, create-only",
+   "type": "Infra",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "Linear configured for the pipeline",
+   "dueDate": "2026-09-20",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "low",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-91"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / low — Infra S\n\n**Goal**\n\nSix custom views exist, all generic (Bugs, High Priority, My Work). The pipeline's real questions (what is Ready and tightest on slack, what sits In Review waiting on gates, which sessions are stuck, what is deferred) have no saved answer, so Justin builds filters on his phone. The deny list forbids agents from touching existing views; this issue creates new ones only, prefixed and idempotent.\n\n**Scope**\n\n* In: `ops/linear/views.yaml` (name, description, icon, colour, `filterData`, `projectFilterData`, grouping and ordering hints) and `configure-workspace.ts --views` using `customViewCreate` (never `customViewUpdate` or delete), eight initial views, ids in `linear-workspace.json.views`, a `docs/pm/views.md` page with a screenshot per view, an Insights note describing the charts Justin can pin (estimate by state, cycle burndown, health by initiative).\n* Out: editing or deleting any existing view (Threat Model section 4), Linear Insights configuration (UI only; documented), in-app PM views (PAP-102).\n\n**Spec**\n\n* Views: `Pipeline: Ready by slack` (state Ready for Claude, ordered by due date then priority), `Pipeline: In Review awaiting gates` (In Review, no `gate/…` green comment in 2 h, via label `gates-pending` set by PAP-97), `Pipeline: Stuck sessions` (In Progress and label `stuck` from PAP-288), `Pipeline: Needs Justin` (state, oldest first), `Pipeline: At risk` (due within 3 days or `slack-risk` label from the due-dates issue), `Pipeline: Triage inbox` (state Triage), `Pipeline: Deferred v0.2` (label Deferred), `Pipeline: Critical path` (label `critical-path` applied nightly to the five zero-slack chains), plus one per character `Pipeline: <Character>` once the `Character/*` group exists (PAP-91).\n* Labels the views rely on (`gates-pending`, `stuck`, `slack-risk`, `critical-path`) are created by the same script and set by the named issues; the views file documents which issue maintains each label.\n* Create-only: a view with the same name already present is recorded and left untouched; `--check` lists views in the file that do not exist.\n* Sharing: all views `shared: true`, owner the admin user; icons and colours from the file.\n\n**Interface contract**\n\n* Provides: `views.yaml` schema, `Pipeline:` naming convention, label set for view filters, view ids in `linear-workspace.json`.\n* Consumes: PAP-91 script, labels from PAP-97 (`gates-pending`), PAP-288 (`stuck`), the due-dates issue (`slack-risk`, `critical-path`), `Character/*` group.\n\n**Definition of done**\n\n* Eight views plus nine character views exist; screenshots at 1280 px and on a phone; no existing view changed (before and after listing).\n* `--check` clean; docs page; changelog; Linear comment with the screenshots.\n\n**Test plan**\n\n* Unit: filter serialisation per view against Linear's `filterData` shape, create-only guard.\n* E2E: live create; re-run no-op; deny-list test that `customViewUpdate` is never called.\n\n**Demo**\n\nOpen `Pipeline: Ready by slack` on a phone and read the top three issues with due dates; open `Pipeline: Stuck sessions` and see it empty. Under one minute.\n\n**Edge cases**\n\n* A label a view depends on does not exist yet: view still created; the filter returns empty until the label appears; documented per view.\n* Justin renames a `Pipeline:` view: `--check` reports the missing name; nothing recreated unless `--apply --recreate-view <name>`.\n* View limit on the plan: documented; character views are optional and created last.\n\n**Dependencies**\n\nHard: PAP-91. Soft: PAP-97, PAP-288, r4/pm-linear/due-dates-slack-and-risk-alerts.\n\n**Agent**\n\nBuilder: Atlas (Dispatcher). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/pm-linear/linear-github-integration-and-state-automation",
+   "title": "Configure Linear's GitHub integration for `imagine-os`: branch-name format, PR autolinking, merge-to-Done as the only automatic transition, and reconciliation with the orchestrator's own state moves",
+   "type": "Infra",
+   "phase": "P0",
+   "priority": 2,
+   "surfaces": [
+    "Agent",
+    "Developer"
+   ],
+   "milestone": "Orchestrator claims and ships issues",
+   "dueDate": "2026-09-22",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-91",
+    "PAP-47",
+    "PAP-97"
+   ],
+   "blocks": [
+    "PAP-254"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Infra S\n\n**Goal**\n\nLinear's native GitHub integration can move issues on PR open, review and merge, and the orchestrator (PAP-97, PAP-281) moves the same states itself; left unconfigured the two will fight, and left disabled Linear loses PR autolinks and the sanctioned merge-to-Done path that CLAUDE.md says only the merge flow may perform. This issue decides and configures both sides once.\n\n**Scope**\n\n* In: GitHub integration settings for the workspace (documented as a `Needs Justin` one-click since integration install is admin UI): connect org `imagine-os`, branch format `feat/PAP-{issueNumber}-{title}` (PAP-46), autolink on branch name and `Closes PAP-n`, automation: PR opened = no state change (orchestrator owns In Review), PR merged = Done, PR closed unmerged = no change; orchestrator reconciliation rules in `src/linear/reconcile.ts`; Forgejo mirror handling; `docs/pm/github-integration.md`.\n* Out: GitHub App for CI and bot tokens (PAP-47, PAP-48), the webhook receivers (PAP-97), the merge itself (Atlas Merger), Forgejo native integration (none exists; PAP-97 covers).\n\n**Spec**\n\n* Decision recorded in `docs/pm/github-integration.md`: Linear owns autolinking and merge-to-Done; the orchestrator owns Ready, In Progress, In Review, Needs Justin and retries; nothing else moves Done or Canceled (Threat Model section 4).\n* Branch format matches PAP-46 so Linear links PRs by branch name; `Closes PAP-n` in the PR body (PAP-49 template) is the fallback; mirrored Forgejo PRs are linked by PAP-97 with `attachmentCreate`, never by the integration.\n* Reconciliation: on the `Issue.update` webhook where `actor` is the Linear GitHub integration and the new state is Done, the orchestrator verifies the merge SHA is on `main` of the GitHub mirror and that the RC or merge-flow record exists; otherwise it posts `done-without-merge-record` on the issue and the Plan audit (never reverts Done, per the deny list).\n* PR opened by a session before any claim (PAP-97 edge): the integration links it; the orchestrator sets In Review and notes `no session record`.\n* Umbrella issues: the integration never links an umbrella PR (children carry the branches); `UMBRELLA_CLOSE` moves the parent to In Review by hand.\n\n**Interface contract**\n\n* Provides: the integration configuration record, `reconcile.ts` rules, the `done-without-merge-record` comment, branch-format constant shared with PAP-46 and PAP-282.\n* Consumes: Linear GitHub integration (admin UI, Needs Justin one-click), PAP-47 mirror, PAP-97 webhooks and actor ids, PAP-46 branch naming, PAP-49 template.\n\n**Definition of done**\n\n* Integration connected; a rehearsal PR autolinks by branch name and, when merged on the sandbox repo, moves the issue to Done with the merge record verified (recording).\n* PR opened and closed unmerged leaves the state untouched (test on a rehearsal issue).\n* Reconciliation posts `done-without-merge-record` on a seeded hand-move to Done (test); docs; changelog; Linear comment with the recording.\n\n**Test plan**\n\n* Unit: actor detection for the integration, merge-record verification, branch-name parsing shared with PAP-282.\n* E2E: rehearsal PRs on the sandbox repo for open, merge and close-unmerged.\n\n**Demo**\n\nOpen a rehearsal issue: the PR appears in the sidebar via the integration; merge the PR on the sandbox repo and watch the issue turn Done with no orchestrator write. Under two minutes.\n\n**Edge cases**\n\n* Squash merge rewrites the SHA: verification checks the PR merge commit, not the branch head.\n* GitHub down, Forgejo primary (DR drill PAP-53): the integration is silent; PAP-97 Forgejo events link PRs and the Merger moves Done through the sanctioned flow.\n* Justin merges a PR by hand outside the Merger: Done is honoured; the audit records it as `merge-outside-flow`.\n* Two Linear issues in one branch name: the integration links the first; PAP-97 links the rest by `Closes`.\n\n**Dependencies**\n\nHard: PAP-91, PAP-47, PAP-97. Soft: PAP-46, PAP-48, PAP-49, PAP-53, PAP-254.\n\n**Agent**\n\nBuilder: Atlas (Dispatcher) with Forge (Ops Runner). Reviewer: Sentinel (Security Auditor).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/pm-linear/pipeline-sla-timers",
+   "title": "Pipeline SLA timers in the orchestrator: Needs Justin default deadline, In Review without gate results, Ready but unclaimed, Triage undrafted and stuck sessions, each with an escalation and a label",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 3,
+   "surfaces": [
+    "Agent",
+    "Staff"
+   ],
+   "milestone": "PM module syncs both ways",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-281",
+    "PAP-288",
+    "PAP-94"
+   ],
+   "blocks": [
+    "PAP-306"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nLinear SLAs are a Business-plan feature and the workspace is on Basic, while PAP-94 (48 h default), PAP-288 (15 min stuck) and PAP-306 (weekly stale checks) each keep their own clock. One timer service in the orchestrator evaluates every open issue against a small SLA table every minute, sets a label, comments once and escalates, so the pipeline's promises are enforced in real time and visible in the views.\n\n**Scope**\n\n* In: `src/sla/{rules,evaluate,escalate}.ts` with `ops/pm/sla.yaml`, table `sla_breaches(issue_id, rule, breached_at, resolved_at, escalated_to)`, labels `sla:<rule>` created by the views issue script, comment template `templates/sla-breach.md` (edited in place), `/status.sla` block, PAP-306 `SLA_BREACHES` section, docs `docs/pm/sla.md`.\n* Out: Linear's paid SLA feature, moving states (timers only label, comment and escalate), the budget timers (PAP-111 owns spend), heartbeat detection itself (PAP-288 provides `stuck`).\n\n**Spec**\n\n* Rules: `needs-justin-default` (open in Needs Justin longer than the card's `defaultTimeoutHours`, default 48 h: apply the default per PAP-94 unless `hard-block`, then label `sla:justin-overdue` and add to the daily digest); `in-review-no-gates` (In Review for 2 h with no gate status: label `gates-pending`, comment once, alert Sentinel after 4 h); `ready-unclaimed` (Ready for Claude longer than three poll cycles while slots are free: label `sla:unclaimed`, Atlas notified; usually a routing or budget hold); `triage-undrafted` (Triage for 10 min without `triaged`: retry PAP-307 once, then Atlas); `stuck-session` (PAP-288 `stuck` for 30 min: PAP-111 abort with `reason: stuck`); `in-progress-no-pr` (In Progress for twice the Size allowance in hours with no PR: comment, Atlas).\n* Evaluator runs every minute over the orchestrator's cached issue set (refreshed by webhooks and the poll), never calling Linear per issue; a breach writes one row, sets the label and posts one comment edited in place with the elapsed time; resolution clears the label and marks the row.\n* Escalation targets: Atlas (comment on the Plan audit issue), Sentinel (comment on `PAP-SECURITY-ALERTS` only for security-related rules), Justin (never directly; only through the PAP-94 default mechanism).\n* `/status.sla` lists open breaches for PAP-113 badges; PAP-306's weekly report counts breaches per rule.\n\n**Interface contract**\n\n* Provides: `sla.yaml` schema, `evaluateSla()`, table `sla_breaches`, labels `sla:*` and `gates-pending`, `/status.sla`, comment template.\n* Consumes: PAP-281 issue cache and `linearComment`, PAP-288 `SessionStatus`, PAP-94 default application, PAP-111 abort, PAP-97 gate events, the views issue's labels.\n\n**Definition of done**\n\n* Each rule proven with a fake clock on fixtures; live: a rehearsal issue left In Review without gates gets `gates-pending` after two hours and the comment once (recording).\n* Resolution clears the label within one minute of the condition ending (test); `/status.sla` validates; docs; changelog; Linear comment with the recording.\n\n**Test plan**\n\n* Unit: rule windows and thresholds, single-comment idempotency, resolution path, escalation routing table.\n* E2E: staging soak of four hours with induced breaches.\n\n**Demo**\n\nOpen `/status.sla` and the `Pipeline: In Review awaiting gates` view during a rehearsal: one issue with `gates-pending`, the comment showing elapsed time, then the label vanishing when Gate 1 posts. Under two minutes.\n\n**Edge cases**\n\n* Orchestrator restart: breaches recomputed from state, rows reconciled, no duplicate comments (dedupe by hash).\n* Issue moved by Justin mid-breach: resolution recorded with `resolvedBy: human`.\n* Gate genuinely takes over two hours (nightly-heavy contention): `gates-pending` is informational; the 4 h alert names the runner queue time from the gate metrics table.\n* Hundreds of issues Ready during a capacity dip: `ready-unclaimed` fires once with a count, not per issue.\n\n**Dependencies**\n\nHard: PAP-281, PAP-288, PAP-94. Soft: PAP-111, PAP-97, PAP-306, r4/pm-linear/pipeline-views-as-code.\n\n**Agent**\n\nBuilder: Atlas (Dispatcher). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/pm-linear/session-model-and-effort-routing",
+   "title": "Session model and effort routing: read the issue's Model and Effort labels, map to SDK options with a documented fallback chain on overload or refusal, record the served model in the footer and `usage_events`",
+   "type": "Build",
+   "phase": "P0",
+   "priority": 1,
+   "surfaces": [
+    "Agent",
+    "Developer"
+   ],
+   "milestone": "Orchestrator claims and ships issues",
+   "dueDate": "2026-09-22",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Opus 5",
+   "modelId": "claude-opus-5",
+   "effort": "high",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-281",
+    "PAP-282"
+   ],
+   "blocks": [
+    "PAP-98",
+    "PAP-243"
+   ],
+   "description": "**Model / Effort:** Opus 5 (`claude-opus-5`) / high — Build S\n\n**Goal**\n\nCLAUDE.md says a session runs on the model named by the issue's `Model` label at the `Effort` label, falling back to Sonnet 5 / medium; PAP-282 says `model` comes from `roster.json`; PAP-243 hard-codes Fable 5.1 for reviewers. Justin asked to switch models per job and to see cost per chunk, which is impossible until one place resolves the model, applies the effort, handles overloads and writes what actually ran.\n\n**Scope**\n\n* In: `src/session/model-routing.ts`: `resolveModel(issue, character, role: 'builder'|'reviewer'|'qa'): { model, effort, source }`, label parsing (`Model: Fable 5.1|Opus 5|Sonnet 5|Haiku 4.5`, `Effort: low|medium|high|max`), map to model ids and to SDK options (`model`, `effort` or thinking budget per the `claude-api` skill table), fallback chain on HTTP 529 or 429 and on refusal stops, served-model capture from SDK messages into `sessions.model_served` and PAP-98 `usage_events.model`, footer field `model`, `docs/pm/model-routing.md`.\n* Out: choosing the labels (planning rounds and Atlas), pricing (PAP-98), the reviewer definitions (PAP-243 consumes `resolveModel`), character prompts naming models (forbidden by PAP-285).\n\n**Spec**\n\n* Precedence: issue labels; else the character's `model` and `effort` from `roster.json` (PAP-103); else Sonnet 5 / medium; the chosen `source` is logged and shown in the `Session started` comment.\n* Reviewer role (cost doc section 4b): Opus 5 / high after an Opus or Fable builder, Sonnet 5 / high after a Sonnet builder; QA gate Haiku 4.5 / low; release-candidate reviews Fable 5.1 / high; `xhigh` in character files maps to `high` until the label set grows.\n* Fallback chain on overload (529) or rate limit (429) after three backoff attempts within five minutes: Fable 5.1 to Opus 5 to Sonnet 5; Haiku stays Haiku; a fallback never goes up; the session prompt is unchanged and the footer records `modelServed` and `fallbackReason`; a refusal stop never triggers a fallback (PAP-282 rule: record and escalate).\n* Cost: `usage_events.model` is the served model, so PAP-98 prices correctly and the burn report shows planned versus served model counts; the chunk progress report (round-4 issue) uses the same field.\n* Validation: `pnpm linear:configure --check` warns when an issue has one of the two labels but not the other; PAP-93 gains `MODEL_LABELS_INCOMPLETE` (warn).\n\n**Interface contract**\n\n* Provides: `resolveModel()`, SDK option mapping table, fallback chain constant, footer field `model` and `modelServed`, `sessions.model_served`, validator code `MODEL_LABELS_INCOMPLETE`.\n* Consumes: PAP-281 labels and ids, PAP-282 `launchSession` options, PAP-103 roster fields, PAP-98 `recordUsage`, PAP-92 footer schema, the `claude-api` skill's model table for ids and effort semantics.\n\n**Definition of done**\n\n* Twenty fixture issues (all label combinations, missing labels, umbrella) resolve to the expected model and effort with the right `source` (table).\n* Mocked 529 storm triggers the fallback after three attempts and the footer shows `modelServed: claude-opus-5, fallbackReason: overloaded`; a refusal does not fall back (tests).\n* Live: one rehearsal issue per label pair runs and `usage_events.model` matches (recording of the burn report line); docs; changelog; Linear comment.\n\n**Test plan**\n\n* Unit: label parser, precedence, 4b reviewer table, fallback state machine with fake timers, footer serialisation.\n* E2E: mocked SDK stream with overload responses; live rehearsal sessions.\n\n**Demo**\n\nMove a rehearsal issue labelled `Model: Opus 5`, `Effort: high` to Ready; read the `Session started` comment naming the model and source; flip the mock to return 529 and watch the footer show the fallback. Under two minutes.\n\n**Edge cases**\n\n* Label names a model the price table lacks: resolve fails closed to Sonnet 5 / medium with a `PRICE_UNKNOWN` warning (PAP-98 flag).\n* Character file says Fable 5.1 for a Sonnet-labelled issue: labels win; the comment says so.\n* Sub-agent spawned by the session: inherits the served model unless its own character sets a cheaper one (never dearer).\n* Anthropic deprecates a model id: the table carries `deprecatedAfter`; the router warns thirty days ahead.\n\n**Dependencies**\n\nHard: PAP-281, PAP-282. Soft: PAP-103, PAP-98, PAP-92, PAP-93, PAP-243.\n\n**Agent**\n\nBuilder: Atlas (Dispatcher). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/pm-linear/chunk-progress-report",
+   "title": "Chunk progress in the burn report: which $2,500 chunk is active, issues landed versus planned per chunk from `plan/chunks.json`, forecast of chunk completion and a Needs Justin top-up card",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "Orchestrator claims and ships issues",
+   "dueDate": "2026-09-22",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-98"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nJustin pays $50 per $2,500 of list-price spend and asked what each chunk buys. `plan/chunks.json` and `docs/build-chunks.md` plan the chunks; PAP-98 meters spend; nothing joins them. This issue adds a chunk section to the daily burn report and a one-click top-up card when the current chunk is about to run out, so the money question has a standing answer.\n\n**Scope**\n\n* In: `src/metering/chunks.ts` reading `plan/chunks.json` (chunk index, planned issues, planned list dollars, planned start and end), `chunk_progress(chunk, spent_usd, landed_issues, planned_issues, forecast_end)` computed from `usage_events` and PAP-97 `pr.merged` events, burn-report section `templates/burn-report.md` (\"Chunk n of 4: $x of $2,500 (y%), issues landed a of b, forecast end <date>\"), `pnpm burn --chunks`, Needs Justin top-up card at 85 percent of the last approved chunk, docs section in `docs/pm/credit-metering.md`.\n* Out: re-planning the chunks (Atlas by hand, `plan/chunks.json` is the input), enforcement (PAP-111), Anthropic Console reconciliation (PAP-98 owns it).\n\n**Spec**\n\n* Chunk boundaries are cumulative list-price spend from `usage_events.cost_usd` since the plan start `2026-09-17T14:23Z`; the active chunk is the first whose upper bound exceeds cumulative spend; Justin's cost is `ceil(chunks) * 50` and shown beside the list total.\n* Landed issues: Done or In Review with a merged PR since the chunk start, matched against the chunk's planned issue list; unplanned landings and planned-but-missing issues are listed separately (top five each).\n* Forecast: linear regression over the last three days of spend gives the expected chunk end; compared with the planned end in `chunks.json`; a slip beyond one day is flagged in the report and in Atlas's Monday project update.\n* Top-up card (PAP-94) at 85 percent of the final approved chunk: `Decision needed: approve chunk n+1 ($50 for $2,500 list)`, recommendation from the forecast, options continue, pause P2 claims, stop; default `pause P2 claims` after 48 h; `hard-block` when the reserve would be touched.\n* Model mix per chunk (served model counts from the routing issue) shown as one line so Justin sees the Opus versus Sonnet split he asked about.\n\n**Interface contract**\n\n* Provides: `chunkProgress()`, table `chunk_progress`, burn-report section, `pnpm burn --chunks`, the top-up card key `chunk-topup-<n>`.\n* Consumes: PAP-98 `usage_events` and report job, `plan/chunks.json`, PAP-97 merge events, PAP-94 `requestDecision()`, the model-routing served-model field.\n\n**Definition of done**\n\n* Three daily reports with the chunk section on staging (screenshots at 375 and 1280 px); numbers match `pnpm burn --chunks`.\n* Seeded spend crossing 85 percent of chunk 1 files exactly one top-up card (test with mocked meter).\n* Docs; changelog; Linear comment with the screenshots.\n\n**Test plan**\n\n* Unit: boundary arithmetic, landed-issue matching, forecast regression on fixture series, card dedupe.\n* E2E: staging report job for three days.\n\n**Demo**\n\nRun `pnpm burn --chunks` and read `Chunk 1 of 4: $1,930 of $2,500 (77%), issues 41 of 58, forecast end 09-21 15:00Z`; open the burn report issue on a phone and see the same line. Under one minute.\n\n**Edge cases**\n\n* Chunk plan re-cut by Atlas mid-build: history keeps the old boundaries with a `replanned` marker; the report shows both for a day.\n* Spend recorded late (Console lag): forecast uses metered data only; reconciliation adjustments appear as a delta line.\n* Cumulative spend already past the last planned chunk: report says `beyond plan` and the top-up card is `hard-block`.\n* No PRs merged in a chunk yet (day one): landed 0 of n, no slip flag before 24 h.\n\n**Dependencies**\n\nHard: PAP-98. Soft: PAP-97, PAP-94, r4/pm-linear/session-model-and-effort-routing, plan/chunks.json.\n\n**Agent**\n\nBuilder: Ledger (Bookkeeper) with Atlas. Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/pm-linear/always-on-operations-and-morning-report",
+   "title": "24/7 operations: watchdog and auto-restart for the orchestrator, capacity curve by time of day and phase, night mode for Needs Justin escalations, and a 07:00 morning report of what ran overnight",
+   "type": "Build",
+   "phase": "P1",
+   "priority": 2,
+   "surfaces": [
+    "Staff",
+    "Agent"
+   ],
+   "milestone": "Orchestrator claims and ships issues",
+   "dueDate": "2026-09-22",
+   "parent": null,
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": false,
+   "blockedBy": [
+    "PAP-283",
+    "PAP-98",
+    "PAP-288"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nJustin asked for the AI to run 24/7. PAP-283 deploys the orchestrator with restart semantics and PAP-99 caps parallelism, but nothing schedules capacity through the night, keeps the process alive without a human, or tells Justin at breakfast what happened while he slept. This issue adds the watchdog, a capacity curve that follows the Execution Schedule's peaks, night handling for escalations and one morning comment.\n\n**Scope**\n\n* In: `ops/orchestrator/watchdog.sh` and a Coolify health check with auto-restart and a crash-loop breaker (three restarts in 15 min pauses claiming and pages Atlas), `ops/orchestrator/capacity.yaml` (target `maxParallel` per hour and phase, from Execution Schedule section 2's peak curve), night mode (00:00 to 07:00 Justin local: Needs Justin cards queue silently, `page` security alerts still fire, no new P2 claims in the last hour before the daily cap), morning report job at 07:00 local on the burn report issue from `templates/morning-report.md`, `/status.capacity`, docs `docs/pm/operations.md`.\n* Out: the scheduler algorithm (PAP-99), budgets (PAP-111), the burn numbers (PAP-98), notification transport beyond Linear comments (PAP-136).\n\n**Spec**\n\n* Watchdog: `/healthz` polled every 30 s by Coolify; two failures restart the container; `interrupted` sessions re-queue per PAP-283; a crash loop opens one Plan audit comment with the last 50 log lines and pauses claiming until Atlas resumes.\n* Capacity curve: `capacity.yaml` maps `(date range, hour range) -> maxParallel` with the schedule's 8, 12, 16, 20 peaks and the 09-27 to 09-30 taper; the loop reads it every cycle; a manual override `POST /admin/capacity { maxParallel, until }` with an admin token; reviewers stay outside the cap.\n* Night mode: decision cards created at night are held with `queued-for-justin` until 07:00 unless `Urgent` or security `page`; the PAP-94 48 h default clock still runs; no session is started in the final hour before `globalPerDayUsd` would be reached (PAP-111 pre-flight consults the curve).\n* Morning report under 2500 characters: sessions started, landed, bounced, killed overnight; PRs merged; gates red now; Needs Justin cards waiting with one-line asks; spend overnight and chunk line; stuck or interrupted sessions; the day's planned claims from the promotion dry run.\n* `/status.capacity` exposes the current target, override and night-mode flag for PAP-113.\n\n**Interface contract**\n\n* Provides: watchdog and crash-loop breaker, `capacity.yaml` schema, `POST /admin/capacity`, night-mode rules, morning report template and job, `/status.capacity`.\n* Consumes: PAP-283 deployment and `/healthz`, PAP-98 spend, PAP-288 statuses, PAP-94 governor, PAP-111 pre-flight, PAP-97 merge events, the promotion dry run.\n\n**Definition of done**\n\n* Kill the container on staging: it restarts within a minute and re-queues the interrupted session (recording); a forced crash loop pauses claiming and posts the log excerpt.\n* Capacity follows the curve across a simulated day with a fake clock (test); override honoured and expires.\n* Three morning reports posted on staging (screenshots at 375 px); night-mode holds a rehearsal card until 07:00 (recording); docs; changelog.\n\n**Test plan**\n\n* Unit: curve lookup with boundaries, night-mode decision table, report renderer snapshot, crash-loop counter.\n* E2E: staging kill and crash-loop drills; overnight soak with the morning report.\n\n**Demo**\n\nOpen the burn report issue at 07:05 and read the morning report; open `/status.capacity` and see today's target and the night-mode flag off. Under one minute.\n\n**Edge cases**\n\n* Justin's timezone changes (travel): `operator.timezone` in config; night mode follows it.\n* Coolify itself down: the VPS cron `watchdog.sh` restarts Docker services; documented in the runbook.\n* Capacity file invalid: loop keeps the last good curve and logs loudly.\n* Nothing ran overnight (queue empty): the report says so and lists why (blocked chains from the slack table).\n\n**Dependencies**\n\nHard: PAP-283, PAP-98, PAP-288. Soft: PAP-94, PAP-111, PAP-97, PAP-99, r4/pm-linear/orchestrator-promotion-pass.\n\n**Agent**\n\nBuilder: Atlas (Dispatcher) with Forge (Ops Runner). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  },
+  {
+   "key": "r4/pm-linear/pm-model-initiatives-updates-cycles-rollups",
+   "title": "Extend the PM data model with initiatives, project updates and health, cycle assignment rules, estimate roll-ups and SLA fields so the native PM module can replace every Linear feature the pipeline now uses",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "PM module syncs both ways",
+   "dueDate": "2026-09-30",
+   "parent": null,
+   "size": "M",
+   "estimate": 3,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "high",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-100"
+   ],
+   "blocks": [
+    "r4/pm-linear/pm-sync-initiatives-cycles-attachments"
+   ],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / high — Build M\n\n**Goal**\n\nDeferred to v0.2 by round 4 (not claimable before 2026-10-01; NJ-14 can reinstate). PAP-100 mirrors issues, projects, cycles, milestones, comments and labels. Round 4 turns on estimates, cycles, due dates, initiatives, project updates, triage and attachments in Linear, so the cutover promise (\"Linear wins until cutover\") only holds if the PM module can hold those too. This issue extends the schema and procedures; the sync extension is the sibling.\n\n**Scope**\n\n* In: `packages/pm` additions: `pm_initiative`, `pm_initiative_project`, `pm_project_update(health, body, posted_by, at)`, `pm_project.health|lead_id|priority|target_date`, `pm_cycle` auto-assignment rule and `pm_issue.cycle_id` trigger, estimate roll-up view `pm_progress` (points by project, milestone, cycle, state), `pm_issue.triage_state` and `pm_sla_breach`, `pm_attachment` kinds; procedures `pm.initiatives.*`, `pm.projectUpdates.*`, `pm.progress()`, `pm.sla.breaches()`; page specs `specs/pm/initiatives.spec.yaml`, `project-updates.spec.yaml`; `docs/pm/data-model.md` update.\n* Out: the sync (sibling), rendering beyond specs (PAP-102 adds views later), Linear-specific fields (kept in `extra`).\n\n**Spec**\n\n* Initiatives: `pm_initiative(id, tenant_id, name, description, status, target_date, owner_id)` and the join table; health enum `onTrack|atRisk|offTrack` with `health_reason` on projects and updates.\n* Progress: materialised view refreshed on `pm_issue` changes summing `estimate` for leaves (issues without children) by project, milestone, cycle and state type; umbrellas contribute nothing themselves (same rule as the Linear estimates issue).\n* Cycles: `pm_cycle(start, end, number)` per team; trigger assigns `cycle_id` to the active cycle when an issue enters a started state and has none; carry-over count column.\n* Triage: `pm_workflow_state.type` gains `triage`; `pm_issue` intake fields `source`, `source_ref`; SLA table mirrors the orchestrator's `sla_breaches`.\n* Procedures follow PAP-35 conventions with cursor pagination and RLS; every new table has `tenant_id`, uuid v7, timestamps.\n\n**Interface contract**\n\n* Provides: new tables, `pm_progress` view, procedures above, page specs, mapping additions in `mapping.ts` for the sync sibling.\n* Consumes: PAP-100 schema and mapping, PAP-34 RLS, PAP-35 procedures, PAP-114 spec schema, the orchestrator's `sla_breaches` and `issue_slack` shapes.\n\n**Definition of done**\n\n* Migrations apply and roll back; RLS harness green on new tables; `pm_progress` matches a hand count on the seeded team.\n* Procedure tests for initiatives, project updates and progress; two page specs validate; docs; changelog.\n\n**Test plan**\n\n* Unit: roll-up arithmetic with umbrellas, cycle trigger, health enum, mapping completeness against Linear's Initiative and ProjectUpdate types.\n* E2E: none; no UI in this issue.\n\n**Demo**\n\nRun `pnpm api call pm.progress --project quality` and read points by milestone and state; create a project update through `pm.projectUpdates.create` and see `health` on the project. Under one minute.\n\n**Edge cases**\n\n* Estimate changed on a Done issue: roll-up recomputes; history kept in `pm_issue_history`.\n* Cycle boundaries edited: carry-over recount job.\n* Initiative spanning tenants: forbidden; initiatives are per tenant.\n\n**Dependencies**\n\nHard: PAP-100. Soft: PAP-34, PAP-35, PAP-114, PAP-102.\n\n**Agent**\n\nBuilder: Forge (Schema Wright). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nM: one session."
+  },
+  {
+   "key": "r4/pm-linear/pm-sync-initiatives-cycles-attachments",
+   "title": "Linear sync: mirror initiatives, project updates and health, cycles, estimates, due dates, triage state and attachments both ways with the Linear-wins rule",
+   "type": "Build",
+   "phase": "P2",
+   "priority": 4,
+   "surfaces": [
+    "Staff",
+    "Developer"
+   ],
+   "milestone": "PM module syncs both ways",
+   "dueDate": "2026-09-30",
+   "parent": "PAP-101",
+   "size": "S",
+   "estimate": 2,
+   "model": "Sonnet 5",
+   "modelId": "claude-sonnet-5",
+   "effort": "medium",
+   "deferred": true,
+   "blockedBy": [
+    "PAP-372",
+    "PAP-373",
+    "r4/pm-linear/pm-model-initiatives-updates-cycles-rollups"
+   ],
+   "blocks": [],
+   "description": "**Model / Effort:** Sonnet 5 (`claude-sonnet-5`) / medium — Build S\n\n**Goal**\n\nDeferred to v0.2 by round 4 (not claimable before 2026-10-01; NJ-14 can reinstate). The three PAP-101 children sync the entity set PAP-100 defined. Once round 4 enables estimates, cycles, due dates, initiatives, project updates, triage and attachments in Linear and the PM model gains their tables, the sync must carry them or the mirror lies. This child extends backfill, inbound upsert and the outbox for the new fields and entities.\n\n**Scope**\n\n* In: `mapping.ts` entries for `estimate`, `dueDate`, `cycle`, `triage` state type, `Attachment`, `Initiative`, `InitiativeToProject`, `ProjectUpdate` and project `health|lead|priority|targetDate`; backfill queries (PAP-372) for initiatives, project updates and attachments; inbound handlers for `Initiative`, `ProjectUpdate`, `Attachment`, `Cycle` webhooks; outbox ops `initiative`, `projectUpdate`, `attachment` (PAP-373); conflict rule coverage (PAP-374) for the new fields; runbook update.\n* Out: the schema (sibling model issue), UI, PaperOS-originated initiatives before cutover (outbox for initiatives is create-only).\n\n**Spec**\n\n* Field mapping follows Linear's GraphQL types; `estimate` integer, `dueDate` date, `cycle` by external ref, attachments by `url` with `metadata` jsonb; project updates map `health` and `body`, author to principal.\n* Backfill order: cycles and initiatives before projects and issues so references resolve; attachments last; cursor per entity type as in PAP-372.\n* Outbox: estimate, due date and cycle changes on issues flow out as `issueUpdate`; project updates created in PaperOS flow out as `projectUpdateCreate`; attachments as `attachmentCreate` with dedupe by URL (same rule as the attachments issue).\n* Conflicts: Linear wins per field; project `health` set by Atlas's update (round-4 issue) is authoritative until cutover.\n\n**Interface contract**\n\n* Provides: mapping additions, handlers, outbox ops, conflict coverage for the new fields.\n* Consumes: PAP-372 backfill and inbound, PAP-373 outbox, PAP-374 conflict rule, the model sibling, PAP-97 webhook types.\n\n**Definition of done**\n\n* Backfill of PAP includes initiatives, project updates and attachments with matching counts; round trip for estimate, due date and cycle changes in both directions (staging).\n* Conflict test on `estimate`; runbook update; changelog; Linear comment with counts.\n\n**Test plan**\n\n* Unit: mapping for every new field on snapshot fixtures; ordering of backfill; dedupe of attachments.\n* E2E: staging round trip per new entity.\n\n**Demo**\n\nChange an estimate on `/pm/list`, see it in Linear within ten seconds; post a project update in Linear and see it on the project page in PaperOS. Ninety seconds.\n\n**Edge cases**\n\n* Initiative webhook types not delivered by Linear (some entities lack webhooks): nightly backfill covers them; lag shown on the status page.\n* Attachment URL expired in Linear: stored as is; the evidence bundle re-signs MinIO URLs on read.\n* Cycle deleted in Linear: local cycle archived, issues keep the reference for history.\n\n**Dependencies**\n\nHard: PAP-372, PAP-373, r4/pm-linear/pm-model-initiatives-updates-cycles-rollups. Soft: PAP-374, PAP-97, r4/pm-linear/issue-attachments-and-evidence-bundle.\n\n**Agent**\n\nBuilder: Nova (Views Engineer) with Forge (Schema Wright). Reviewer: Sentinel (Code Reviewer).\n\n**Size**\n\nS: half a session."
+  }
+ ],
+ "amendments": [
+  {
+   "identifier": "PAP-281",
+   "section": "Scope",
+   "append": "* Round 4: the promotion work package moves out of this issue into its own child of PAP-96, `Orchestrator: Backlog to Ready for Claude promotion pass` (`r4/pm-linear/orchestrator-promotion-pass`), blocked by this issue and PAP-93. This child keeps the poll loop, claims, transitions, `linearComment()` and tables at Size M; it exposes `loop.registerPass(name, fn)` so the promotion pass (and later the SLA evaluator) plug into the cycle without editing `loop.ts`."
+  },
+  {
+   "identifier": "PAP-96",
+   "section": "Scope",
+   "append": "* Round 4: children are PAP-281 (poll, claim, transitions), PAP-282 (worktree and launch), PAP-283 (deployment, `/status`, runbook) and the new promotion child (`r4/pm-linear/orchestrator-promotion-pass`), which carries the Promotion spec above verbatim; the umbrella's Definition of done keeps the promotion fixture test. Model and effort for launched sessions come from the issue's labels through `resolveModel()` (`r4/pm-linear/session-model-and-effort-routing`), not from `roster.json` alone."
+  },
+  {
+   "identifier": "PAP-282",
+   "section": "Spec",
+   "append": "* Model selection (round 4, aligns with CLAUDE.md): `launchSession` calls `resolveModel(issue, character, 'builder')` from `src/session/model-routing.ts`; precedence is the issue's `Model` and `Effort` labels, then the character's `model` and `effort` in `roster.json`, then Sonnet 5 / medium. The served model reported by the SDK is stored in `sessions.model_served` and the footer; on 529 or 429 storms the fallback chain Fable 5.1 to Opus 5 to Sonnet 5 applies after three attempts, never upward, and a refusal stop never falls back."
+  },
+  {
+   "identifier": "PAP-99",
+   "section": "Spec",
+   "append": "* Eligibility rule alignment (round 4): the branch-start rule is not opt-in. A blocker counts as satisfied when it is `Done`, `Canceled`, `Duplicate`, or `In Review` with an open PR, exactly as PAP-93 `isOpen()` and the promotion pass define it; the `can-start-on-review` label is removed from this spec. `score()` gains `cycleBonus` (active Linear cycle first) and uses `issue_slack.slack_hours` from the due-dates issue as its first key when present."
+  },
+  {
+   "identifier": "PAP-91",
+   "section": "Spec",
+   "append": "* Round 4 additions managed by the same `--check|--apply` script and recorded in `linear-workspace.json`: team settings `issueEstimationType: fibonacci`, `cyclesEnabled: true` (one-week cycles), `triageEnabled: true` with a `Triage` state; initiative ids, template ids per Type, `Pipeline:` view ids and the labels `gates-pending`, `stuck`, `slack-risk`, `critical-path`, `sla:*`, `source:slack`, `triaged`. Team-setting drift is reported as `manual` and only changed with `--apply`. `--check` runs nightly in the orchestrator and posts drift to the Plan audit issue."
+  },
+  {
+   "identifier": "PAP-97",
+   "section": "Spec",
+   "append": "* Attachments (round 4): besides the PR attachment, every gate artefact posted through this receiver is attached to the issue once through `attach()` (`r4/pm-linear/issue-attachments-and-evidence-bundle`) with the kind's title and icon, updated in place on re-runs; the status comment links to the attachments rather than duplicating URLs. When a PR is merged, this receiver sets label `gates-pending` off and emits `pr.merged` for the chunk progress report."
+  },
+  {
+   "identifier": "PAP-98",
+   "section": "Spec",
+   "append": "* Round 4 fields: `usage_events.model` is the served model from `resolveModel()` (labels first), and `usage_events.estimate` carries the issue's Linear estimate so the report shows cost per point; the daily report gains the `Chunk n of 4` section from `r4/pm-linear/chunk-progress-report` and a planned-versus-served model mix line."
+  },
+  {
+   "identifier": "PAP-100",
+   "section": "Edge cases",
+   "append": "* Round 4 (Linear features enabled): `estimate`, `due_date` and `cycle_id` are now populated on the Linear side for every issue, so the mapping document marks them `synced` rather than `stored, not surfaced`; initiatives, project updates, health, triage state, SLA breaches and attachment kinds are v0.2 extensions (`r4/pm-linear/pm-model-initiatives-updates-cycles-rollups`) and are listed in the mapping doc as `not mirrored before cutover`."
+  }
+ ],
+ "crossProjectSuggestions": [
+  {
+   "targetProject": "collab",
+   "title": "Slack decision cards with approve, reject and option buttons for Needs Justin, posting replies back as T1 Linear comments through the orchestrator",
+   "why": "Justin steers from his phone; PAP-325 configures Slack channels for notifications but the PAP-94 reply grammar only works in Linear. Buttons must map to the Linear actor id (PAP-299 T1) so voice or Slack never approves anonymously."
+  },
+  {
+   "targetProject": "growth",
+   "title": "Customer requests intake: link support-inbox conversations (PAP-412) to PM issues as request counts and notify requesters on Done",
+   "why": "Linear's Customer Requests is a Business-plan feature; the support inbox is where PaperOS customers would raise them, and the PM module (PAP-100) can hold the link table."
+  },
+  {
+   "targetProject": "forge",
+   "title": "Branch-name format setting shared by Linear's GitHub integration, PAP-46 policy and the orchestrator's `ensureWorktree`",
+   "why": "Three places define `feat/PAP-n-<slug>`; PAP-46 should export the constant and the lint that PAP-282 and the Linear integration configuration import."
+  },
+  {
+   "targetProject": "app-shell",
+   "title": "`paperos create` wires the new Linear project with estimates, one-week cycles, triage, templates and the `Pipeline:` views from `linear-workspace.json`",
+   "why": "PAP-22 reuses the PAP-91 configure script; round 4 added settings the golden path should apply to every new app project on day one."
+  }
+ ]
+}
