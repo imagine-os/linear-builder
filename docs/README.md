@@ -53,3 +53,16 @@ The Blueprint document in Linear carries the Round 2 and Round 4 sections (the R
 | security (11) | https://linear.app/paperos/document/round-2-pending-issues-security-11-27d8ebfcd8d0 |
 
 The app-shell/data-layer/forge gap issues and the collab/realtime/input pending issues have no Linear document; their historical copies are the files here and the source JSON in `../plan/round2/`, and their live text is the PAP issue named in [`pending/README.md`](pending/README.md).
+
+## Build loop
+
+Documents from the autopilot build loop (from 2026-09-19), kept separate from the planning-round documents above because they record execution, not the plan itself.
+
+| Document | File |
+|---|---|
+| Kickoff prompts and replies | [`prompts/build-2026-09-19.md`](prompts/build-2026-09-19.md) |
+| Decisions index | [`decisions/README.md`](decisions/README.md) |
+| ADR 0001: build pilot operating mode | [`decisions/0001-build-pilot-operating-mode.md`](decisions/0001-build-pilot-operating-mode.md) |
+| Build log index | [`build-log/README.md`](build-log/README.md) |
+| Build log: 2026-09-19 kickoff | [`build-log/2026-09-19.md`](build-log/2026-09-19.md) |
+| Builder brief v1 (handed to every builder session) | [`build-log/builder-brief-v1.md`](build-log/builder-brief-v1.md) |

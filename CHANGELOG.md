@@ -2,6 +2,14 @@
 
 One entry per planning round of the PaperOS Core Platform plan. Linear (team PAP) is the system of record; every mutation named here has a log file with the request and the response. Dates are the days the work landed in Linear.
 
+## Build loop: from 2026-09-19 (autopilot go)
+
+* **Go given**: Justin Massion asked the build loop to build the whole Linear plan on autopilot, "until we run out of credits" (Slack #linear-os, `docs/prompts/build-2026-09-19.md`).
+* **Operating-mode decision** (`docs/decisions/0001-build-pilot-operating-mode.md`): git-only, no PRs (Justin's org policy) — builders integrate to `main` themselves after a green check, and a dedicated review pass moves the issue to Done; the plan's PR-gated deny-list items are suspended for this loop, everything else on the deny list (Linear deletes/archives, PAP-1..PAP-12, labels, views, documents) stands.
+* **Repo mapping**: `paperos-template` = `imagine-os/empty-11`, `paperos-orchestrator` = `imagine-os/empty12` (empty repos Justin provided, to be renamed later); `paperos-infra` (PAP-25) deferred to Needs Justin (NJ-2, Hetzner account) with infra files under `ops/` in the template meanwhile. `imagine-os/paperos` is a different, existing product and is out of scope.
+* **Wave 0 launched**: 16 unblocked Ready-for-Claude issues (PAP-13 as the monorepo-scaffold anchor, plus 15 research/docs/package issues) across Opus 5, Sonnet 5 and Fable 5.1 builders; full list in `docs/build-log/2026-09-19.md`.
+* New docs: `docs/prompts/build-2026-09-19.md`, `docs/decisions/` (index + ADR 0001), `docs/build-log/` (index, `2026-09-19.md`, `builder-brief-v1.md`).
+
 ## Round 4: 2026-09-18 (gap analysis, sub-features, new projects, Linear features)
 
 Justin's ask (Slack, 07:40 CT): "Make the linear plan better and better. Fill in the plan further, use more features of Linear if possible. Get more detailed on sub features, identify any features you missed." Prompts and replies: `docs/prompts/round-4-2026-09-18.md`. Model: Claude Fable 5.1 for the planning session and its workers.
