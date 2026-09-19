@@ -67,3 +67,5 @@ Documents from the autopilot build loop (from 2026-09-19), kept separate from th
 | Build log: 2026-09-19 kickoff | [`build-log/2026-09-19.md`](build-log/2026-09-19.md) |
 | Builder brief v1 (handed to every builder session) | [`build-log/builder-brief-v1.md`](build-log/builder-brief-v1.md) |
 | Builder brief v1.3 (current; v1.1 and v1.2 kept for history) and ADR 0003: integrator owns state moves and rebase landing (02:40 UTC) | [`build-log/builder-brief-v1.3.md`](build-log/builder-brief-v1.3.md), [`decisions/0003-integrator-owns-state-moves-and-rebase-landing.md`](decisions/0003-integrator-owns-state-moves-and-rebase-landing.md) |
+| ADR 0004: stopping point (loop paused, coordinator hotfixes on `fix/*` branches, parked branches stay open; 19:45 UTC) | [`decisions/0004-stopping-point-and-branch-fixes.md`](decisions/0004-stopping-point-and-branch-fixes.md) |
+| Build log, 19:18-20:00 UTC section: credits out at 03:19, takeover, repo and Linear state at 19:30, CI-red diagnosis and fix branch, the 25 parked branches, Pages status, time and usage, one-repo and Pages proposals | [`build-log/2026-09-19.md`](build-log/2026-09-19.md) section "19:18-20:00 UTC" |

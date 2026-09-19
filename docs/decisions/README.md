@@ -7,3 +7,4 @@ Architecture Decision Records (Nygard style: Status, Context, Decision, Conseque
 | 0001 | Build pilot operating mode | 2026-09-19 | [`0001-build-pilot-operating-mode.md`](0001-build-pilot-operating-mode.md) |
 | 0002 | Integrator merge queue | 2026-09-19 | [`0002-integrator-merge-queue.md`](0002-integrator-merge-queue.md) |
 | 0003 | Integrator owns Linear state moves and lands non-clean branches by rebase | 2026-09-19 | [`0003-integrator-owns-state-moves-and-rebase-landing.md`](0003-integrator-owns-state-moves-and-rebase-landing.md) |
+| 0004 | Stopping point: loop paused, coordinator hotfixes on `fix/*` branches, parked branches stay open | 2026-09-19 | [`0004-stopping-point-and-branch-fixes.md`](0004-stopping-point-and-branch-fixes.md) |
