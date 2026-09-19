@@ -5,3 +5,4 @@ Architecture Decision Records (Nygard style: Status, Context, Decision, Conseque
 | # | Title | Date | File |
 |---|---|---|---|
 | 0001 | Build pilot operating mode | 2026-09-19 | [`0001-build-pilot-operating-mode.md`](0001-build-pilot-operating-mode.md) |
+| 0002 | Integrator merge queue | 2026-09-19 | [`0002-integrator-merge-queue.md`](0002-integrator-merge-queue.md) |
